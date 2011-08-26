@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Benjamin Lupton</title>
+	<link href="http://balupton.com/atom.xml" rel="self"/>
+	<link href="http://balupton.com"/>
+	<updated>2011-08-26T03:25:29Z</updated>
+	<id>http://balupton.com</id>
+	<author>
+		<name>Benjamin Lupton</name>
+		<email>b@lupton.cc</email>
+	</author>
+
+	
+		
+	
+		
+	
+		
+	
+</feed>

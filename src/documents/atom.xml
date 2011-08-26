@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Benjamin Lupton</title>
+	<link href="http://balupton.com/atom.xml" rel="self"/>
+	<link href="http://balupton.com"/>
+	<updated><%= @Site.date.toIsoDateString() %></updated>
+	<id>http://balupton.com</id>
+	<author>
+		<name>Benjamin Lupton</name>
+		<email>b@lupton.cc</email>
+	</author>
+
+	<% for Document in @Documents: %>
+		<% if Document.url.indexOf('/blog') == 0: %>
+			<entry>
+				<title><%= Document.title %></title>
+				<link href="http://balupton.com<%= Document.url %>"/>
+				<updated><%= Document.date.toIsoDateString() %></updated>
+				<id>http://balupton.com<%= Document.url %></id>
+				<content type="html"><%= Document.content %></content>
+			</entry>
+		<% end %>
+	<% end %>
+</feed>

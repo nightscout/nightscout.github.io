@@ -1,0 +1,53 @@
+{
+	"name": "bootstrap.docpad",
+	"version": "0.1.0",
+	"description": "Twitter Bootstrap",
+	"homepage": "https://github.com/balupton/bootstrap.docpad",
+	"keywords": [
+		"twitter",
+		"bootstrap",
+		"website",
+		"docpad",
+		"theme"
+	],
+	"author": {
+		"name": "Benjamin Lupton",
+		"email": "b@lupton.cc",
+		"web": "http://balupton.com"
+	},
+	"maintainers": [
+		{
+			"name": "Benjamin Lupton",
+			"email": "b@lupton.cc",
+			"web": "http://balupton.com"
+		}
+	],
+	"contributors": [
+		{
+			"name": "Benjamin Lupton",
+			"email": "b@lupton.cc",
+			"web": "http://balupton.com"
+		}
+	],
+	"bugs": {
+		"web": "https://github.com/balupton/bootstrap.docpad/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://creativecommons.org/licenses/MIT/"
+		}
+	],
+	"repository" : {
+		"type" : "git",
+		"url" : "http://github.com/balupton/bootstrap.docpad.git"
+	},
+	"dependencies": {
+		"coffee-script": ">=1.1.1",
+		"express": ">=2.4.2",
+		"docpad": ">=0.9.17"
+	},
+	"engines" : {
+		"node": ">=0.4.0"
+	}
+}

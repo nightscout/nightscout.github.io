@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lange="en">
+<head>
+	<!-- Standard -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Bootstrap, from Twitter</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="/vendor/bootstrap/bootstrap-1.1.0.css" rel="stylesheet">
+
+	<!-- Icons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+		
+	<!-- jQuery --> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+
+	<!-- History.js -->
+	<script defer src="http://github.com/balupton/history.js/raw/master/scripts/compressed/history.adapter.jquery.js"></script>
+	<script defer src="http://github.com/balupton/history.js/raw/master/scripts/compressed/history.js"></script>
+	<script defer src="http://github.com/balupton/jquery-scrollto/raw/master/scripts/jquery.scrollto.min.js"></script>
+	<script defer src="http://gist.github.com/raw/854622/ajaxify-html5.js"></script>
+</head>
+<body>
+	<div class="topbar">
+		<div class="fill">
+			<div class="container fixed">
+				<h3><a href="/">Project name</a></h3>
+				<ul>
+					<% for Document in @Documents: %>
+						<% if Document.url.indexOf('/pages') == 0: %>
+						<li typeof="sioc:Page" about="<%= Document.url %>" class="<%= @Document.url is Document.url ? 'active' %>">
+							<a href="<%= Document.url %>" property="dc:title"><%= Document.title %></a>
+						</li>
+						<% end %>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="content" class="content">
+			<%- @content %>
+		</div>
+		<footer>
+			<p>&copy; Company 2011</p>
+		</footer>
+	</div><!-- /container -->
+</body>
+</html>
