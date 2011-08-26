@@ -1,7 +1,7 @@
 {
 	"name": "bootstrap.docpad",
 	"version": "0.1.0",
-	"description": "Twitter Bootstrap",
+	"description": "Twitter Bootstrap Skeleton for DocPad",
 	"homepage": "https://github.com/balupton/bootstrap.docpad",
 	"keywords": [
 		"twitter",
