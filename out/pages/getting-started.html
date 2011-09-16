@@ -30,20 +30,64 @@
 			<div class="container fixed">
 				<h3><a href="/">Welcome</a></h3>
 				<ul>
-					<% for Document in @Documents: %>
-						<% if Document.url.indexOf('/pages') == 0: %>
-						<li typeof="sioc:Page" about="<%= Document.url %>" class="<%= 'active'  if @Document.url is Document.url %>">
-							<a href="<%= Document.url %>" property="dc:title"><%= Document.title %></a>
+					
+						
+						<li typeof="sioc:Page" about="/pages/getting-started.html" class="active">
+							<a href="/pages/getting-started.html" property="dc:title">Getting Started</a>
 						</li>
-						<% end %>
-					<% end %>
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
 				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div id="content" class="content">
-			<%- @content %>
+			
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+	<h1>Getting Started</h1>
+	<p>A work in progress...</p>
+</div>
+
+<ul>
+	
+		
+	
+		
+		<li typeof="sioc:Page" about="/markups/haml-example.html" class="">
+			<a href="/markups/haml-example.html" property="dc:title">HAML Example</a>
+		</li>
+		
+	
+		
+		<li typeof="sioc:Page" about="/markups/markdown-example.html" class="">
+			<a href="/markups/markdown-example.html" property="dc:title">Markdown Example</a>
+		</li>
+		
+	
+		
+		<li typeof="sioc:Page" about="/markups/jade-example.html" class="">
+			<a href="/markups/jade-example.html" property="dc:title">Jade Example</a>
+		</li>
+		
+	
+		
+	
+		
+	
+</ul>
 		</div>
 		<footer>
 			<p>&copy; Company 2011</p>

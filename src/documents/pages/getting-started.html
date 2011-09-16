@@ -1,0 +1,20 @@
+---
+layout: 'default'
+title: 'Getting Started'
+---
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+	<h1>Getting Started</h1>
+	<p>A work in progress...</p>
+</div>
+
+<ul>
+	<% for Document in @Documents: %>
+		<% if Document.url.indexOf('/markups') == 0: %>
+		<li typeof="sioc:Page" about="<%= Document.url %>" class="<%= 'active'  if @Document.url is Document.url %>">
+			<a href="<%= Document.url %>" property="dc:title"><%= Document.title %></a>
+		</li>
+		<% end %>
+	<% end %>
+</ul>
