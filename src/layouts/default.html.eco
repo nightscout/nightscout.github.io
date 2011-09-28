@@ -22,9 +22,13 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link href="/vendor/bootstrap/bootstrap-1.1.0.css" rel="stylesheet">
+	<link href="/styles.css" rel="stylesheet">
 </head>
 <body>
+	<!-- Scripts -->
+	<script async src="/scripts.js"></script>
+
+	<!-- Markup -->
 	<div class="topbar">
 		<div class="fill">
 			<div class="container fixed">
