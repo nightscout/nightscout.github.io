@@ -1,0 +1,3 @@
+[submodule "src/files/vendor/bootstrap"]
+	path = src/files/vendor/bootstrap
+	url = https://github.com/twitter/bootstrap.git
