@@ -1,6 +1,6 @@
 {
 	"name": "bootstrap.docpad",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Twitter Bootstrap Skeleton for DocPad",
 	"homepage": "https://github.com/balupton/bootstrap.docpad",
 	"keywords": [
@@ -43,10 +43,10 @@
 		"url" : "http://github.com/balupton/bootstrap.docpad.git"
 	},
 	"dependencies": {
-		"coffee-script": ">=1.1.2",
-		"express": ">=2.4.6",
-		"docpad": ">=1.1.0",
-		"buildr": ">=0.8.0"
+		"coffee-script": "1.1.x",
+		"express": "2.4.x",
+		"docpad": "1.2.x",
+		"buildr": "0.8.x"
 	},
 	"engines" : {
 		"node": ">=0.4.0"
