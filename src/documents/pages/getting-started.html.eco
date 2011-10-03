@@ -9,9 +9,21 @@ title: 'Getting Started'
 	<p>A work in progress...</p>
 </div>
 
+<h2>Markups</h2>
 <ul>
 	<% for Document in @Documents: %>
 		<% if Document.url.indexOf('/markups') == 0: %>
+		<li typeof="sioc:Page" about="<%= Document.url %>" class="<%= 'active'  if @Document.url is Document.url %>">
+			<a href="<%= Document.url %>" property="dc:title"><%= Document.title %></a>
+		</li>
+		<% end %>
+	<% end %>
+</ul>
+
+<h2>Nifties</h2>
+<ul>
+	<% for Document in @Documents: %>
+		<% if Document.url.indexOf('/nifty') == 0: %>
 		<li typeof="sioc:Page" about="<%= Document.url %>" class="<%= 'active'  if @Document.url is Document.url %>">
 			<a href="<%= Document.url %>" property="dc:title"><%= Document.title %></a>
 		</li>

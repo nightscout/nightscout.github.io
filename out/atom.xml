@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Benjamin Lupton</title>
-	<link href="http://balupton.com/atom.xml" rel="self"/>
-	<link href="http://balupton.com"/>
-	<updated>2011-09-30T09:41:01Z</updated>
-	<id>http://balupton.com</id>
-	<author>
-		<name>Benjamin Lupton</name>
-		<email>b@lupton.cc</email>
-	</author>
+    <title>Benjamin Lupton</title>
+    <link href="http://balupton.com/atom.xml" rel="self"/>
+    <link href="http://balupton.com"/>
+    <updated>2011-10-03T10:50:02Z</updated>
+    <id>http://balupton.com</id>
+    <author>
+        <name>Benjamin Lupton</name>
+        <email>b@lupton.cc</email>
+    </author>
 
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
 </feed>
