@@ -74,35 +74,49 @@
     </div>
     <div class="container">
         <div id="content" class="content">
-            
-
-<!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
-    <h1>Welcome to your new site!</h1>
-    <p>
-        We've copied over the
-            <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
-            <a href="https://github.com/balupton/bootstrap.docpad">Skeleton</a>
-        for you already, which is what you're currently viewing.
-
-        Step through the guide below and we'll walk you through the process of working with your first docpad website :-)
-    </p>
-    <p><a class="btn primary large" href="/pages/getting-started.html">Get started &raquo;</a></p>
-</div>
-
-<!-- Example row of columns -->
-<div class="row" style="text-align:center;">
-    <div class="span8">
-        <h2>Docpad</h2>
-        <p>DocPad (like Jekyll) is a static website generator, unlike Jekyll it's written in CoffeeScript+Node.js instead of Ruby, and also allows the template engine complete access to the document model. This means you have unlimited power as a CMS and the simplicity of a notepad.</p>
-        <p><a class="btn" href="https://github.com/balupton/docpad">Visit Website</a></p>
-    </div>
-    <div class="span8">
-        <h2>Twitter Bootstrap</h2>
-        <p>Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-        <p><a class="btn" href="http://twitter.github.com/bootstrap/">Visit Website</a></p>
-    </div>
-</div>
+            <article typeof="sioc:Post" about="/nifty/client-side-editing.html"><h1 property="title">Client-Side Editing</h1><div property="description">You can edit this with content-editable, and it will save automatically. So when you refresh, it'll be what you saved it as.</div><div>/nifty/client-side-editing.html</div></article><script>var __slice = Array.prototype.slice;var __hasProp = Object.prototype.hasOwnProperty;var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };var __extends = function(child, parent) {  for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; }  function ctor() { this.constructor = child; }  ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype;  return child; };var __indexOf = Array.prototype.indexOf || function(item) {  for (var i = 0, l = this.length; i < l; i++) {    if (this[i] === item) return i;  } return -1; };(function () {
+  return $(function() {
+    $('[contenteditable]').live('focus', function() {
+      var $this;
+      $this = $(this);
+      $this.data('before', $this.html());
+      return $this;
+    }).live('blur paste', function() {
+      var $this, before;
+      $this = $(this);
+      before = $this.data('before');
+      if ($this.data('before') !== $this.html()) {
+        $this.data('before', $this.html());
+        $this.trigger('change');
+      }
+      return $this;
+    });
+    return $('[property]').attr('contenteditable', true).live('change', function() {
+      var $article, $field, data, key, url, value;
+      $field = $(this);
+      $article = $field.parents('[typeof="sioc:Post"]:first');
+      if (!$article.length) {
+        return;
+      }
+      url = $article.attr('about');
+      key = $field.attr('property');
+      value = $field.html();
+      data = {};
+      data[key] = value;
+      return $.ajax({
+        url: url,
+        type: 'POST',
+        data: data,
+        success: function(data, textStatus, jqXHR) {
+          return console.log('success:', arguments);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          return console.log('error:', arguments);
+        }
+      });
+    });
+  });
+}).call(this);</script>
         </div>
         <footer>
             <p>&copy; Company 2011</p>

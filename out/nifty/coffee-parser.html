@@ -26,7 +26,8 @@
 </head>
 <body>
     <!-- Scripts -->
-    <script async src="/scripts.js"></script>
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script defer src="/scripts.js"></script>
 
     <!-- Markup -->
     <div class="topbar">
@@ -38,9 +39,13 @@
                         
                     
                         
+                    
+                        
                         <li typeof="sioc:Page" about="/pages/getting-started.html" class="">
                             <a href="/pages/getting-started.html" property="dc:title">Getting Started</a>
                         </li>
+                        
+                    
                         
                     
                         
@@ -71,11 +76,11 @@
         <div id="content" class="content">
             <p>This is a Coffee Parser Example.</p>
 
-<p>The title of this page is: &lt;%- @document.title %></p>
+<p>The title of this page is: Coffee Parser Example</p>
 
-<p>The capitlized title of this page is: &lt;%- @document.capitalize @document.title %></p>
+<p>The capitlized title of this page is: COFFEE PARSER EXAMPLE</p>
 
-<p>The capitlized title of this page is: &lt;%- @document.titleCapitalized %></p>
+<p>The capitlized title of this page is: COFFEE PARSER EXAMPLE</p>
         </div>
         <footer>
             <p>&copy; Company 2011</p>
