@@ -13,24 +13,24 @@
 	"author": {
 		"name": "Benjamin Lupton",
 		"email": "b@lupton.cc",
-		"web": "http://balupton.com"
+		"url": "http://balupton.com"
 	},
 	"maintainers": [
 		{
 			"name": "Benjamin Lupton",
 			"email": "b@lupton.cc",
-			"web": "http://balupton.com"
+			"url": "http://balupton.com"
 		}
 	],
 	"contributors": [
 		{
 			"name": "Benjamin Lupton",
 			"email": "b@lupton.cc",
-			"web": "http://balupton.com"
+			"url": "http://balupton.com"
 		}
 	],
 	"bugs": {
-		"web": "https://github.com/balupton/bootstrap.docpad/issues"
+		"url": "https://github.com/balupton/bootstrap.docpad/issues"
 	},
 	"licenses": [
 		{
@@ -44,9 +44,8 @@
 	},
 	"dependencies": {
 		"coffee-script": "1.1.x",
-		"express": "2.4.x",
-		"docpad": "1.3.x",
-		"buildr": "0.8.x"
+		"express": "2.5.x",
+		"docpad": "2.0.x"
 	},
 	"engines" : {
 		"node": ">=0.4.0"
