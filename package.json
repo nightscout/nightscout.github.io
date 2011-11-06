@@ -49,5 +49,11 @@
 	},
 	"engines" : {
 		"node": ">=0.4.0"
+	},
+	"docpad": {
+		"enabledPlugins": {
+			"admin": true,
+			"rest": true
+		}
 	}
 }

@@ -1,6 +1,6 @@
 ### coffee
 layout: "default"
-title: "Client-Side Editing Sup Sup"
+title: "Client-Side Editing"
 description: "You can edit this with content-editable, and it will save automatically. So when you refresh, it'll be what you saved it as. I can edit this."
 ###
 

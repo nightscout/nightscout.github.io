@@ -23,11 +23,13 @@
 
 	<!-- Styles -->
 	<link href="/styles/style.css" rel="stylesheet">
+	<%- @blocks.styles.join('') %>
 </head>
 <body>
 	<!-- Scripts -->
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script defer src="/scripts/script.js"></script>
+	<script src="/vendor/jquery-1.6.4.min.js"></script>
+	<%- @blocks.scripts.join('') %>
+	<script src="/scripts/script.js"></script>
 
 	<!-- Markup -->
 	<div class="topbar">
