@@ -1,4 +1,4 @@
-# [Twitter Boostrap Skeleton](https://github.com/balupton/bootstrap.docpad) for [DocPad](https://github.com/balupton/docpad)
+# [The Kitchensink Skeleton](https://github.com/balupton/kitchensink.docpad) for [DocPad](https://github.com/balupton/docpad)
 
 Skeleton developed by [Benjamin Lupton](http://balupton.com) and licensed under the [MIT License](http://creativecommons.org/licenses/MIT/)
 

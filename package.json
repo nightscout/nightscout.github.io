@@ -1,8 +1,8 @@
 {
-	"name": "bootstrap.docpad",
-	"version": "0.2.1",
-	"description": "Twitter Bootstrap Skeleton for DocPad",
-	"homepage": "https://github.com/balupton/bootstrap.docpad",
+	"name": "kitchensink.docpad",
+	"version": "0.3.0",
+	"description": "Kitchensink Skeleton for DocPad, based off Twitter's Bootstrap",
+	"homepage": "https://github.com/balupton/kitchensink.docpad",
 	"keywords": [
 		"twitter",
 		"bootstrap",
@@ -30,7 +30,7 @@
 		}
 	],
 	"bugs": {
-		"url": "https://github.com/balupton/bootstrap.docpad/issues"
+		"url": "https://github.com/balupton/kitchensink.docpad/issues"
 	},
 	"licenses": [
 		{
@@ -40,7 +40,7 @@
 	],
 	"repository" : {
 		"type" : "git",
-		"url" : "http://github.com/balupton/bootstrap.docpad.git"
+		"url" : "http://github.com/balupton/kitchensink.docpad.git"
 	},
 	"dependencies": {
 		"coffee-script": "1.1.x",
