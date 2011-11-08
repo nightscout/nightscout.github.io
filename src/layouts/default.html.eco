@@ -54,6 +54,9 @@
 		</div>
 		<footer>
 			<p>&copy; Company 2011</p>
+			<p style="float:right;">
+				This website was generated on <%= @site.date.toIsoDateString() %> and has <%= @site.totalDocuments %> documents
+			</p>
 		</footer>
 	</div><!-- /container -->
 </body>
