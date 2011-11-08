@@ -1,10 +1,9 @@
 # [The Kitchensink Skeleton](https://github.com/balupton/kitchensink.docpad) for [DocPad](https://github.com/balupton/docpad)
 
-## Try it
-
-If you've already got docpad installed, getting this website up and running is as easy as:
+## Give it a go
 
 ``` bash
+npm install -g docpad
 git clone git://github.com/balupton/kitchensink.docpad.git
 cd kitchensink.docpad
 docpad run
