@@ -2,4 +2,4 @@
 title: 'Hello'
 ---
 
-Hello world
+Hello **world**

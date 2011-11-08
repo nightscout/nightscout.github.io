@@ -3,7 +3,7 @@
     <title>Benjamin Lupton</title>
     <link href="http://balupton.com/atom.xml" rel="self"/>
     <link href="http://balupton.com"/>
-    <updated>2011-11-08T11:11:47Z</updated>
+    <updated>2011-11-08T11:37:31Z</updated>
     <id>http://balupton.com</id>
     <author>
         <name>Benjamin Lupton</name>
@@ -13,6 +13,14 @@
     
         
     
+        
+            <entry>
+                <title>Hello</title>
+                <link href="http://balupton.com/posts/hello.html"/>
+                <updated>2011-11-08T11:37:01Z</updated>
+                <id>http://balupton.com/posts/hello.html</id>
+                <content type="html">&lt;p&gt;Hello &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;</content>
+            </entry>
         
     
         

@@ -11,13 +11,13 @@
 	</author>
 
 	<% for Document in @Documents: %>
-		<% if Document.url.indexOf('/blog') == 0: %>
+		<% if Document.url.indexOf('/posts') == 0: %>
 			<entry>
 				<title><%= Document.title %></title>
 				<link href="http://balupton.com<%= Document.url %>"/>
 				<updated><%= Document.date.toIsoDateString() %></updated>
 				<id>http://balupton.com<%= Document.url %></id>
-				<content type="html"><%= Document.content %></content>
+				<content type="html"><%= Document.contentRendered %></content>
 			</entry>
 		<% end %>
 	<% end %>
