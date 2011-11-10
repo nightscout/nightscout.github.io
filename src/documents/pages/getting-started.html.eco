@@ -22,7 +22,6 @@ title: 'Getting Started'
 
 <h2>Nifties</h2>
 <ul>
-	<li><a href="/search?query=coffee">A dynamic search page for <em>"coffee"</em></a></li>
 	<% for document in @documents: %>
 		<% if document.url.indexOf('/nifty') == 0: %>
 		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
@@ -30,4 +29,5 @@ title: 'Getting Started'
 		</li>
 		<% end %>
 	<% end %>
+	<li><a href="/search?query=coffee">A dynamic search page for <em>"coffee"</em></a></li>
 </ul>
