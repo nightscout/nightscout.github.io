@@ -11,10 +11,10 @@ title: 'Getting Started'
 
 <h2>Markups</h2>
 <ul>
-	<% for Document in @Documents: %>
-		<% if Document.url.indexOf('/markups') == 0: %>
-		<li typeof="sioc:Page" about="<%= Document.url %>" class="<%= 'active'  if @Document.url is Document.url %>">
-			<a href="<%= Document.url %>" property="dc:title"><%= Document.title %></a>
+	<% for document in @documents: %>
+		<% if document.url.indexOf('/markups') == 0: %>
+		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
+			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
 		</li>
 		<% end %>
 	<% end %>
@@ -22,10 +22,11 @@ title: 'Getting Started'
 
 <h2>Nifties</h2>
 <ul>
-	<% for Document in @Documents: %>
-		<% if Document.url.indexOf('/nifty') == 0: %>
-		<li typeof="sioc:Page" about="<%= Document.url %>" class="<%= 'active'  if @Document.url is Document.url %>">
-			<a href="<%= Document.url %>" property="dc:title"><%= Document.title %></a>
+	<li><a href="/search?query=coffee">A dynamic search page for <em>"coffee"</em></a></li>
+	<% for document in @documents: %>
+		<% if document.url.indexOf('/nifty') == 0: %>
+		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
+			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
 		</li>
 		<% end %>
 	<% end %>

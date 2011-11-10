@@ -3,21 +3,21 @@
 	<title>Benjamin Lupton</title>
 	<link href="http://balupton.com/atom.xml" rel="self"/>
 	<link href="http://balupton.com"/>
-	<updated><%= @Site.date.toIsoDateString() %></updated>
+	<updated><%= @site.date.toIsoDateString() %></updated>
 	<id>http://balupton.com</id>
 	<author>
 		<name>Benjamin Lupton</name>
 		<email>b@lupton.cc</email>
 	</author>
 
-	<% for Document in @Documents: %>
-		<% if Document.url.indexOf('/posts') == 0: %>
+	<% for document in @documents: %>
+		<% if document.url.indexOf('/posts') == 0: %>
 			<entry>
-				<title><%= Document.title %></title>
-				<link href="http://balupton.com<%= Document.url %>"/>
-				<updated><%= Document.date.toIsoDateString() %></updated>
-				<id>http://balupton.com<%= Document.url %></id>
-				<content type="html"><%= Document.contentRendered %></content>
+				<title><%= document.title %></title>
+				<link href="http://balupton.com<%= document.url %>"/>
+				<updated><%= document.date.toIsoDateString() %></updated>
+				<id>http://balupton.com<%= document.url %></id>
+				<content type="html"><%= document.contentRendered %></content>
 			</entry>
 		<% end %>
 	<% end %>

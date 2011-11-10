@@ -1,4 +1,4 @@
-(function() {
+
   $(function() {
     var $, editMode;
     editMode = false;
@@ -37,9 +37,7 @@
       var $article, $field, data, key, url, value;
       $field = $(this);
       $article = $field.parents('[typeof="sioc:Post"]:first');
-      if (!$article.length) {
-        return;
-      }
+      if (!$article.length) return;
       url = $article.attr('about');
       key = $field.attr('property');
       value = $field.html();
@@ -58,4 +56,3 @@
       });
     });
   });
-}).call(this);
