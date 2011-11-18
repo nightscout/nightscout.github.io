@@ -1,3 +1,6 @@
+# -------------------------------------
+# Configuration
+
 # Requires
 docpad = require 'docpad'
 express = require 'express'
@@ -8,60 +11,43 @@ expiresOffset = oneDay
 
 
 # -------------------------------------
-# Server
+# DocPad Creation
 
 # Configuration
-masterPort = process.env.PORT || 10113
+docpadPort = process.env.DOCPADPORT || process.env.PORT || 10113
 
-# Create Server
-masterServer = express.createServer()
+# Create Servers
+docpadServer = express.createServer()
 
 # Setup DocPad
-docpadPort = masterPort
-docpadServer = masterServer
-docpadInstance = docpad.createInstance {
+docpadInstance = docpad.createInstance
 	port: docpadPort
 	maxAge: expiresOffset
-	server: masterServer
-}
+	server: docpadServer
 
-# -------------------------------------
-# Middlewares
-
-# Configure
-docpadServer.configure ->
-	### Correct Domain Middleware
-	docpadServer.use (req,res,next) ->
-		if req.headers.host in ['www.yourwebsite.com']
-			res.redirect 'http://yourwebsite.com'+req.url, 301
-			res.end()
-		else
-			next()
-	###
-
-	# Static Middleware
-	docpadInstance.serverAction (err) -> throw err  if err
-
-	# Router Middleware
-	docpadServer.use docpadServer.router
-
-	# 404 Middleware
-	docpadServer.use (req,res,next) ->
-		res.send(404)
+# Extract Logger
+logger = docpadInstance.logger
 
 
 # -------------------------------------
-# Start Server
-
-# Start Server
-masterServer.listen masterPort
-console.log 'Express server listening on port %d', masterServer.address().port
+# Server Configuration
 
 # DNS Servers
 # masterServer.use express.vhost 'yourwebsite.*', docpadServer
 
+# Start Server
+docpadInstance.action 'server'
+
 
 # -------------------------------------
-# Redirects
+# Server Extensions
 
-# Place your redirects here
+# Place any custom routing here
+# http://expressjs.com/
+
+
+
+# -------------------------------------
+# Exports
+
+module.exports = docpadServer
