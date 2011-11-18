@@ -45,7 +45,7 @@
 	"dependencies": {
 		"coffee-script": "1.1.x",
 		"express": "2.5.x",
-		"docpad": "2.3.2"
+		"docpad": "2.3.4"
 	},
 	"engines" : {
 		"node": ">=0.4.0"
