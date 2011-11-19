@@ -24,6 +24,9 @@ docpadInstance = docpad.createInstance
 	port: docpadPort
 	maxAge: expiresOffset
 	server: docpadServer
+	plugins:
+		admin: requireAuthentication: true
+		rest: requireAuthentication: true
 
 # Extract Logger
 logger = docpadInstance.logger
@@ -36,7 +39,8 @@ logger = docpadInstance.logger
 # masterServer.use express.vhost 'yourwebsite.*', docpadServer
 
 # Start Server
-docpadInstance.action 'server'
+# docpadInstance.action 'server'
+docpadInstance.action 'server generate' # we need the generate for dynamic documents, if you don't utilise dynamic documents, then you just need the server
 
 
 # -------------------------------------
