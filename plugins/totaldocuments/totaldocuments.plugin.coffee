@@ -14,15 +14,8 @@ class TotalDocumentsPlugin extends DocpadPlugin
 		 
 		# Find documents
 		documents.find {}, (err,docs,length) ->
-			# Cycle through each of our documents
-			# This is synchronous
-			docs.forEach (document) ->
-				# Do our counting
-				++totalDocuments
-			
-			# Apply our new value
 			# Doesn't have to write to the site document, but it certainly could
-			templateData.site.totalDocuments = totalDocuments
+			templateData.site.totalDocuments = length
 			
 			# All done
 			# Continue onto the next plugin
