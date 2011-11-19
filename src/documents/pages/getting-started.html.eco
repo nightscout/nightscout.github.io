@@ -10,21 +10,43 @@ title: 'Getting Started'
 </div>
 
 <h2>Markups</h2>
-<ul>
-	<% for document in @documents: %>
-		<% if document.url.indexOf('/markups') == 0: %>
-		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
-			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
-		</li>
+<table class="bordered-table zebra-striped">
+	<thead>
+		<tr>
+			<th style="width: 50%;">Source File</th>
+			<th style="width: 50%;">Result File</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for document in @database.sort('title':1): %>
+			<% if document.url.indexOf('/markups') == 0: %>
+			<tr typeof="sioc:Page" about="<%= document.url %>">
+				<td colspan="2">
+					<strong><%= document.title %></strong>
+				<td>
+			</tr>
+			<tr typeof="sioc:Page" about="<%= document.url %>">
+				<td>
+					<%= document.filename %>
+					<pre class="prettyprint lang-<%= document.filename.replace(/^.*\./,'') %>"><%= document.content.replace(/^\s+/,'') %></pre>
+				</td>
+				<td>
+					<a href="<%= document.url %>">
+						<%= document.url.replace(/^.*\//,'') %>
+					</a>
+					<pre class="prettyprint lang-<%= document.extension %>"><%= document.contentRendered.replace(/^\s+/,'') %></pre>
+				</td>
+			</tr>
+			<% end %>
 		<% end %>
-	<% end %>
-</ul>
+	</tbody>
+</table>
 
 <h2>Nifties</h2>
 <ul>
 	<% for document in @documents: %>
 		<% if document.url.indexOf('/nifty') == 0: %>
-		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
+		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'	if @document.url is document.url %>">
 			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
 		</li>
 		<% end %>

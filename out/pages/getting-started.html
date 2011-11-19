@@ -22,12 +22,14 @@
     <![endif]-->
 
     <!-- Styles -->
-    <link href="/styles/style.css" rel="stylesheet">
+    <link href="/styles/style.css" rel="stylesheet"/>
+    <link href="/vendor/prettify.css" rel="stylesheet"/>
     
 </head>
 <body>
     <!-- Scripts -->
     <script src="/vendor/jquery-1.6.4.min.js"></script>
+    <script src="/vendor/prettify.js"></script>
     <script src="/_docpad/plugins/admin/scripts/script.js"></script>
     <script src="/scripts/script.js"></script>
 
@@ -43,17 +45,23 @@
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                         <li typeof="sioc:Page" about="/pages/getting-started.html" class="active">
                             <a href="/pages/getting-started.html" property="dc:title">Getting Started</a>
                         </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         
                     
                         
@@ -95,83 +103,394 @@
 </div>
 
 <h2>Markups</h2>
-<ul>
+<table class="bordered-table zebra-striped">
+    <thead>
+        <tr>
+            <th style="width: 50%;">Source File</th>
+            <th style="width: 50%;">Result File</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/coffeekup-to-html.html">
+                <td colspan="2">
+                    <strong>CoffeeKup to HTML</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/coffeekup-to-html.html">
+                <td>
+                    coffeekup-to-html.html.ck
+                    <pre class="prettyprint lang-ck">div class:'awesome', -&gt;
+    h1 'CoffeeKup Example'
+    p 'This page was coded with coffeekup'</pre>
+                </td>
+                <td>
+                    <a href="/markups/coffeekup-to-html.html">
+                        coffeekup-to-html.html
+                    </a>
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;CoffeeKup Example&lt;/h1&gt;&lt;p&gt;This page was coded with coffeekup&lt;/p&gt;&lt;/div&gt;</pre>
+                </td>
+            </tr>
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
+                <td colspan="2">
+                    <strong>CoffeeScript to JavaScript</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
+                <td>
+                    coffeescript-to-javascript.js.coffee
+                    <pre class="prettyprint lang-coffee"># Type here!
+
+math =
+  root:   Math.sqrt
+  square: square
+  cube:   (x) -&gt; x * square x
+
+alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
+                </td>
+                <td>
+                    <a href="/markups/coffeescript-to-javascript.js">
+                        coffeescript-to-javascript.js
+                    </a>
+                    <pre class="prettyprint lang-js">(function() {
+  var math;
+
+  math = {
+    root: Math.sqrt,
+    square: square,
+    cube: function(x) {
+      return x * square(x);
+    }
+  };
+
+  alert(&quot;Three cubed is &quot; + (math.cube(3)));
+
+}).call(this);
+</pre>
+                </td>
+            </tr>
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/haml-to-html.html">
+                <td colspan="2">
+                    <strong>HAML to HTML</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/haml-to-html.html">
+                <td>
+                    haml-to-html.html.haml
+                    <pre class="prettyprint lang-haml">%div.awesome
+  %h1 HAML Example
+  %p This page was coded with HAML.</pre>
+                </td>
+                <td>
+                    <a href="/markups/haml-to-html.html">
+                        haml-to-html.html
+                    </a>
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;HAML Example&lt;/h1&gt;&lt;p&gt;This page was coded with HAML.&lt;/p&gt;&lt;/div&gt;</pre>
+                </td>
+            </tr>
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/html-to-coffeekup-example.ck">
+                <td colspan="2">
+                    <strong>HTML to CoffeeKup</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/html-to-coffeekup-example.ck">
+                <td>
+                    html-to-coffeekup-example.ck.html
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
+    &lt;h1&gt;HTML to CoffeeKup Example&lt;/h1&gt;
+    &lt;p&gt;This page was coded with HTML&lt;/p&gt;
+&lt;/div&gt;</pre>
+                </td>
+                <td>
+                    <a href="/markups/html-to-coffeekup-example.ck">
+                        html-to-coffeekup-example.ck
+                    </a>
+                    <pre class="prettyprint lang-ck">div '.awesome', -&gt;
+  h1 'HTML to CoffeeKup Example'
+  p 'This page was coded with HTML'
+</pre>
+                </td>
+            </tr>
+            
+        
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
+                <td colspan="2">
+                    <strong>Jade to HTML</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
+                <td>
+                    jade-to-html.html.jade
+                    <pre class="prettyprint lang-jade">div.awesome
+    h1 Jade Example
+    p This page was coded with jade.</pre>
+                </td>
+                <td>
+                    <a href="/markups/jade-to-html.html">
+                        jade-to-html.html
+                    </a>
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;Jade Example&lt;/h1&gt;&lt;p&gt;This page was coded with jade.&lt;/p&gt;&lt;/div&gt;</pre>
+                </td>
+            </tr>
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/javascript-to-coffeescript.coffee">
+                <td colspan="2">
+                    <strong>JavaScript to CoffeeScript</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/javascript-to-coffeescript.coffee">
+                <td>
+                    javascript-to-coffeescript.coffee.js
+                    <pre class="prettyprint lang-js">/* Type here! */
+
+(function ($) {
+    $.fn.highlight = function () {
+        $(this).css({ color: 'red', background: 'yellow' });
+        $(this).fadeIn();
+    };
+})(jQuery);</pre>
+                </td>
+                <td>
+                    <a href="/markups/javascript-to-coffeescript.coffee">
+                        javascript-to-coffeescript.coffee
+                    </a>
+                    <pre class="prettyprint lang-coffee">(($) -&gt;
+  $.fn.highlight = -&gt;
+    $(this).css 
+      color: &quot;red&quot;
+      background: &quot;yellow&quot;
     
+    $(this).fadeIn()
+) jQuery</pre>
+                </td>
+            </tr>
+            
         
-        <li typeof="sioc:Page" about="/markups/roy-to-javascript.js" class="">
-            <a href="/markups/roy-to-javascript.js" property="dc:title">roy-to-javascript.js</a>
-        </li>
+            
+            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
+                <td colspan="2">
+                    <strong>LessCSS to CSS</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
+                <td>
+                    less-to-css.css.less
+                    <pre class="prettyprint lang-less">.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
+  @val: @x @y @blur rgba(0, 0, 0, @alpha);
+
+  box-shadow:         @val;
+  -webkit-box-shadow: @val;
+  -moz-box-shadow:    @val;
+}
+.box { @base: #f938ab;
+  color:        saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0, 0, 5px, 0.4) }
+}</pre>
+                </td>
+                <td>
+                    <a href="/markups/less-to-css.css">
+                        less-to-css.css
+                    </a>
+                    <pre class="prettyprint lang-css">.box{color:#fe33ac;border-color:#fdcdea;}.box div{box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
+</pre>
+                </td>
+            </tr>
+            
         
-    
+            
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
+                <td colspan="2">
+                    <strong>Markdown to HTML</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
+                <td>
+                    markdown-to-html.html.md
+                    <pre class="prettyprint lang-md"># Markdown Example
+
+This page was coded with _markdown_.</pre>
+                </td>
+                <td>
+                    <a href="/markups/markdown-to-html.html">
+                        markdown-to-html.html
+                    </a>
+                    <pre class="prettyprint lang-html">&lt;h1&gt;Markdown Example&lt;/h1&gt;
+
+&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
+                </td>
+            </tr>
+            
         
-    
+            
+            <tr typeof="sioc:Page" about="/markups/roy-to-javascript.js">
+                <td colspan="2">
+                    <strong>Roy to JavaScript</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/roy-to-javascript.js">
+                <td>
+                    roy-to-javascript.js.roy
+                    <pre class="prettyprint lang-roy">let gcd a b =
+  if b == 0 then
+    a
+  else
+    gcd b (a % b)
+
+console.log (gcd 49 35)</pre>
+                </td>
+                <td>
+                    <a href="/markups/roy-to-javascript.js">
+                        roy-to-javascript.js
+                    </a>
+                    <pre class="prettyprint lang-js">var gcd = function(a, b) {
+    return (function() {
+        if(b == 0) {
+            return a;
+        } else {
+            return gcd(b, a % b);
+        }
+    })();
+}
+console.log(gcd(49, 35))
+</pre>
+                </td>
+            </tr>
+            
         
-    
+            
+            <tr typeof="sioc:Page" about="/markups/sass-to-css.css">
+                <td colspan="2">
+                    <strong>SASS to CSS</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/sass-to-css.css">
+                <td>
+                    sass-to-css.css.sass
+                    <pre class="prettyprint lang-sass">a
+  :color #fff
+  &amp;:hover
+    :color #000
+  &amp;.active
+    :background #888
+    &amp;:hover
+      :color #fff</pre>
+                </td>
+                <td>
+                    <a href="/markups/sass-to-css.css">
+                        sass-to-css.css
+                    </a>
+                    <pre class="prettyprint lang-css">a {
+  color: #fff;}
+a:hover {
+  color: #000;}
+a.active {
+  background: #888;}
+a.active:hover {
+  color: #fff;}
+</pre>
+                </td>
+            </tr>
+            
         
-    
+            
+            <tr typeof="sioc:Page" about="/markups/stylus-to-css.css">
+                <td colspan="2">
+                    <strong>Stylus to CSS</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/stylus-to-css.css">
+                <td>
+                    stylus-to-css.css.stylus
+                    <pre class="prettyprint lang-stylus">border-radius()
+    -webkit-border-radius arguments
+    -moz-border-radius arguments
+    border-radius arguments
+
+body a
+    font 12px/1.4 &quot;Lucida Grande&quot;, Arial, sans-serif
+    background black
+    color #ccc
+
+form input
+    padding 5px
+    border 1px solid
+    border-radius 5px</pre>
+                </td>
+                <td>
+                    <a href="/markups/stylus-to-css.css">
+                        stylus-to-css.css
+                    </a>
+                    <pre class="prettyprint lang-css">body a{font:12px/1.4 &quot;Lucida Grande&quot;,Arial,sans-serif;background:#000;color:#ccc}
+form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
+</pre>
+                </td>
+            </tr>
+            
         
-    
+            
         
-    
+            
         
-    
+            
+            <tr typeof="sioc:Page" about="/markups/html-to-jade-example.jade">
+                <td colspan="2">
+                    <strong>HTML to Jade</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/html-to-jade-example.jade">
+                <td>
+                    html-to-jade-example.jade.html
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
+    &lt;h1&gt;HTML to Jade Example&lt;/h1&gt;
+    &lt;p&gt;This page was coded with HTML&lt;/p&gt;
+&lt;/div&gt;</pre>
+                </td>
+                <td>
+                    <a href="/markups/html-to-jade-example.jade">
+                        html-to-jade-example.jade
+                    </a>
+                    <pre class="prettyprint lang-jade">html
+  body
+    .awesome
+      h1 HTML to Jade Example
+      p This page was coded with HTML
+</pre>
+                </td>
+            </tr>
+            
         
-    
-        
-    
-        
-    
-        
-        <li typeof="sioc:Page" about="/markups/ccss-to-css.css" class="">
-            <a href="/markups/ccss-to-css.css" property="dc:title">ccss-to-css.css</a>
-        </li>
-        
-    
-        
-    
-        
-        <li typeof="sioc:Page" about="/markups/stylus-to-css.css" class="">
-            <a href="/markups/stylus-to-css.css" property="dc:title">stylus-to-css.css</a>
-        </li>
-        
-    
-        
-        <li typeof="sioc:Page" about="/markups/html-to-coffeekup-example.ck" class="">
-            <a href="/markups/html-to-coffeekup-example.ck" property="dc:title">html-to-coffeekup-example.ck</a>
-        </li>
-        
-    
-        
-        <li typeof="sioc:Page" about="/markups/html-to-jade-example.jade" class="">
-            <a href="/markups/html-to-jade-example.jade" property="dc:title">html-to-jade-example.jade</a>
-        </li>
-        
-    
-        
-        <li typeof="sioc:Page" about="/markups/coffeekup-to-html.html" class="">
-            <a href="/markups/coffeekup-to-html.html" property="dc:title">coffeekup-to-html.html</a>
-        </li>
-        
-    
-        
-        <li typeof="sioc:Page" about="/markups/haml-to-html.html" class="">
-            <a href="/markups/haml-to-html.html" property="dc:title">haml-to-html.html</a>
-        </li>
-        
-    
-        
-        <li typeof="sioc:Page" about="/markups/jade-to-html.html" class="">
-            <a href="/markups/jade-to-html.html" property="dc:title">jade-to-html.html</a>
-        </li>
-        
-    
-        
-        <li typeof="sioc:Page" about="/markups/markdown-to-html.html" class="">
-            <a href="/markups/markdown-to-html.html" property="dc:title">markdown-to-html.html</a>
-        </li>
-        
-    
-</ul>
+    </tbody>
+</table>
 
 <h2>Nifties</h2>
 <ul>
@@ -179,11 +498,35 @@
         
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
         <li typeof="sioc:Page" about="/nifty/client-side-editing.html" class="">
             <a href="/nifty/client-side-editing.html" property="dc:title">Client-Side Editing Wooo!</a>
         </li>
-        
-    
         
     
         
@@ -203,27 +546,9 @@
         
     
         
-    
-        
-    
-        
         <li typeof="sioc:Page" about="/nifty/coffee-parser.html" class="">
             <a href="/nifty/coffee-parser.html" property="dc:title">Coffee Parser Example</a>
         </li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
         
     
     <li><a href="/search?query=coffee">A dynamic search page for <em>"coffee"</em></a></li>
@@ -232,7 +557,7 @@
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2011-11-19T02:19:09Z and has 19 documents
+                This website was generated on 2011-11-19T04:18:55Z and has  documents
             </p>
         </footer>
     </div><!-- /container -->

@@ -1,3 +1,7 @@
+---
+ignore: true
+---
+
 borderRadius = (str) ->
 	WebkitBorderRadius: str
 	MozBorderRadius: str
