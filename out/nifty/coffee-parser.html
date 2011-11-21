@@ -41,13 +41,15 @@
                 <ul>
                     
                         
-                    
-                        
-                    
-                        
                         <li typeof="sioc:Page" about="/pages/getting-started.html" class="">
                             <a href="/pages/getting-started.html" property="dc:title">Getting Started</a>
                         </li>
+                        
+                    
+                        
+                    
+                        
+                    
                         
                     
                         
@@ -93,7 +95,7 @@
         </div>
     </div>
     <div class="container">
-        <div id="content" class="content">
+        <section id="content" class="content">
             <p>This is a Coffee Parser Example.</p>
 
 <p>The title of this page is: Coffee Parser Example</p>
@@ -101,13 +103,41 @@
 <p>The capitlized title of this page is: COFFEE PARSER EXAMPLE</p>
 
 <p>The capitlized title of this page is: COFFEE PARSER EXAMPLE</p>
-        </div>
+        </section>
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2011-11-19T04:53:36Z and has 22 documents
+                This website was generated on 2011-11-21T06:49:12Z and has 23 documents
             </p>
         </footer>
+        <section id="source" class="source">
+            <h3 id="source-header"><a>Click to view this page's source</a></h3>
+            <div id="source-code">
+                <div>src/nifty/coffee-parser.html.md.eco</div>
+                <pre class="prettyprint">--- coffee
+(-&gt;
+    capitalize = (str) -&gt; str.toUpperCase()
+
+    meta =
+        layout: &quot;default&quot;
+        title: &quot;Coffee Parser Example&quot;
+    
+    meta.capitalize = capitalize
+    meta.titleCapitalized = capitalize meta.title
+
+    meta
+)()
+---
+
+This is a Coffee Parser Example.
+
+The title of this page is: &lt;%- @document.title %&gt;
+
+The capitlized title of this page is: &lt;%- @document.capitalize @document.title %&gt;
+
+The capitlized title of this page is: &lt;%- @document.titleCapitalized %&gt;</pre>
+            </div>
+        </section>
     </div><!-- /container -->
 </body>
 </html>

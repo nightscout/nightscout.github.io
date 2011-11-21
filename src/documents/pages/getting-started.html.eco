@@ -42,6 +42,17 @@ title: 'Getting Started'
 	</tbody>
 </table>
 
+<h2>Example Blog Posts</h2>
+<ul>
+	<% for document in @documents: %>
+		<% if document.url.indexOf('/posts') == 0: %>
+		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'	if @document.url is document.url %>">
+			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
+		</li>
+		<% end %>
+	<% end %>
+</ul>
+
 <h2>Nifties</h2>
 <ul>
 	<% for document in @documents: %>

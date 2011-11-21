@@ -51,15 +51,22 @@
 		</div>
 	</div>
 	<div class="container">
-		<div id="content" class="content">
+		<section id="content" class="content">
 			<%- @content %>
-		</div>
+		</section>
 		<footer>
 			<p>&copy; Company 2011</p>
 			<p style="float:right;">
 				This website was generated on <%= @site.date.toIsoDateString() %> and has <%= @site.totalDocuments %> documents
 			</p>
 		</footer>
+		<section id="source" class="source">
+			<h3 id="source-header"><a>Click to view this page's source</a></h3>
+			<div id="source-code">
+				<div><%= 'src/'+@document.relativePath %></div>
+				<pre class="prettyprint"><%= @document.contentRaw %></pre>
+			</div>
+		</section>
 	</div><!-- /container -->
 </body>
 </html>

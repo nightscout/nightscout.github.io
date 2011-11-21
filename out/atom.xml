@@ -3,7 +3,7 @@
     <title>Benjamin Lupton</title>
     <link href="http://balupton.com/atom.xml" rel="self"/>
     <link href="http://balupton.com"/>
-    <updated>2011-11-19T04:53:36Z</updated>
+    <updated>2011-11-21T06:49:12Z</updated>
     <id>http://balupton.com</id>
     <author>
         <name>Benjamin Lupton</name>
@@ -18,43 +18,333 @@
         
     
         
+            <entry>
+                <title>Bonjour</title>
+                <link href="http://balupton.com/posts/bonjour.html"/>
+                <updated>2011-11-20T21:11:38Z</updated>
+                <id>http://balupton.com/posts/bonjour.html</id>
+                <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lange=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;!-- Meta --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+    &lt;title&gt;Bootstrap, from Twitter&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+
+    &lt;!-- Icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;images/apple-touch-icon.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;72x72&quot; href=&quot;images/apple-touch-icon-72x72.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;114x114&quot; href=&quot;images/apple-touch-icon-114x114.png&quot;&gt;
+
+    &lt;!-- Shims: IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+        &lt;script async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link href=&quot;/styles/style.css&quot; rel=&quot;stylesheet&quot;/&gt;
+    &lt;link href=&quot;/vendor/prettify.css&quot; rel=&quot;stylesheet&quot;/&gt;
     
-        
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Scripts --&gt;
+    &lt;script src=&quot;/vendor/jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/_docpad/plugins/admin/scripts/script.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Markup --&gt;
+    &lt;div class=&quot;topbar&quot;&gt;
+        &lt;div class=&quot;fill&quot;&gt;
+            &lt;div class=&quot;container fixed&quot;&gt;
+                &lt;h3&gt;&lt;a href=&quot;/&quot;&gt;Welcome&lt;/a&gt;&lt;/h3&gt;
+                &lt;ul&gt;
+                    
+                        
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/getting-started.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/getting-started.html&quot; property=&quot;dc:title&quot;&gt;Getting Started&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
+            
+
+&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+    &lt;p&gt;Bonjour &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;footer&gt;
     
-        
+    &lt;section id=&quot;related&quot;&gt;
+        &lt;h3&gt;Related Posts&lt;/h3&gt;
+        &lt;nav class=&quot;linklist&quot;&gt;
+            
+                &lt;li&gt;&lt;span&gt;Nov 21 2011&lt;/span&gt;
+                &amp;raquo;
+                &lt;a href=&quot;/posts/hello.html&quot;&gt;Hello&lt;/a&gt;&lt;/li&gt;
+            
+        &lt;/nav&gt;
+    &lt;/section&gt;
     
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+&lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
+            &lt;p style=&quot;float:right;&quot;&gt;
+                This website was generated on 2011-11-21T06:49:12Z and has 23 documents
+            &lt;/p&gt;
+        &lt;/footer&gt;
+        &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
+            &lt;h3 id=&quot;source-header&quot;&gt;&lt;a&gt;Click to view this page's source&lt;/a&gt;&lt;/h3&gt;
+            &lt;div id=&quot;source-code&quot;&gt;
+                &lt;div&gt;src/posts/bonjour.html.md&lt;/div&gt;
+                &lt;pre class=&quot;prettyprint&quot;&gt;---
+title: 'Bonjour'
+layout: 'post'
+tags: ['greeting','french']
+---
+
+Bonjour **world**&lt;/pre&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;&lt;!-- /container --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</content>
+            </entry>
         
     
         
             <entry>
                 <title>Hello</title>
                 <link href="http://balupton.com/posts/hello.html"/>
-                <updated>2011-11-08T11:37:01Z</updated>
+                <updated>2011-11-20T21:11:36Z</updated>
                 <id>http://balupton.com/posts/hello.html</id>
-                <content type="html">&lt;p&gt;Hello &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;</content>
+                <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lange=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;!-- Meta --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+    &lt;title&gt;Bootstrap, from Twitter&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+
+    &lt;!-- Icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;images/apple-touch-icon.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;72x72&quot; href=&quot;images/apple-touch-icon-72x72.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;114x114&quot; href=&quot;images/apple-touch-icon-114x114.png&quot;&gt;
+
+    &lt;!-- Shims: IE6-8 support of HTML5 elements --&gt;
+    &lt;!--[if lt IE 9]&gt;
+        &lt;script async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+    &lt;!-- Styles --&gt;
+    &lt;link href=&quot;/styles/style.css&quot; rel=&quot;stylesheet&quot;/&gt;
+    &lt;link href=&quot;/vendor/prettify.css&quot; rel=&quot;stylesheet&quot;/&gt;
+    
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Scripts --&gt;
+    &lt;script src=&quot;/vendor/jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/_docpad/plugins/admin/scripts/script.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Markup --&gt;
+    &lt;div class=&quot;topbar&quot;&gt;
+        &lt;div class=&quot;fill&quot;&gt;
+            &lt;div class=&quot;container fixed&quot;&gt;
+                &lt;h3&gt;&lt;a href=&quot;/&quot;&gt;Welcome&lt;/a&gt;&lt;/h3&gt;
+                &lt;ul&gt;
+                    
+                        
+                        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/getting-started.html&quot; class=&quot;&quot;&gt;
+                            &lt;a href=&quot;/pages/getting-started.html&quot; property=&quot;dc:title&quot;&gt;Getting Started&lt;/a&gt;
+                        &lt;/li&gt;
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
+            
+
+&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+    &lt;p&gt;Hello &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;footer&gt;
+    
+    &lt;section id=&quot;related&quot;&gt;
+        &lt;h3&gt;Related Posts&lt;/h3&gt;
+        &lt;nav class=&quot;linklist&quot;&gt;
+            
+                &lt;li&gt;&lt;span&gt;Nov 21 2011&lt;/span&gt;
+                &amp;raquo;
+                &lt;a href=&quot;/posts/bonjour.html&quot;&gt;Bonjour&lt;/a&gt;&lt;/li&gt;
+            
+        &lt;/nav&gt;
+    &lt;/section&gt;
+    
+&lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
+            &lt;p style=&quot;float:right;&quot;&gt;
+                This website was generated on 2011-11-21T06:49:12Z and has 23 documents
+            &lt;/p&gt;
+        &lt;/footer&gt;
+        &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
+            &lt;h3 id=&quot;source-header&quot;&gt;&lt;a&gt;Click to view this page's source&lt;/a&gt;&lt;/h3&gt;
+            &lt;div id=&quot;source-code&quot;&gt;
+                &lt;div&gt;src/posts/hello.html.md&lt;/div&gt;
+                &lt;pre class=&quot;prettyprint&quot;&gt;---
+title: 'Hello'
+layout: 'post'
+tags: ['greeting','english']
+---
+
+Hello **world**&lt;/pre&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;&lt;!-- /container --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</content>
             </entry>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
         
     
         

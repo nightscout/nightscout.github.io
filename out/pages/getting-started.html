@@ -41,13 +41,15 @@
                 <ul>
                     
                         
-                    
-                        
-                    
-                        
                         <li typeof="sioc:Page" about="/pages/getting-started.html" class="active">
                             <a href="/pages/getting-started.html" property="dc:title">Getting Started</a>
                         </li>
+                        
+                    
+                        
+                    
+                        
+                    
                         
                     
                         
@@ -93,7 +95,7 @@
         </div>
     </div>
     <div class="container">
-        <div id="content" class="content">
+        <section id="content" class="content">
             
 
 <!-- Main hero unit for a primary marketing message or call to action -->
@@ -111,8 +113,6 @@
         </tr>
     </thead>
     <tbody>
-        
-            
         
             
         
@@ -316,29 +316,37 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             
         
             
-        
-            
-            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
+            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
                 <td colspan="2">
-                    <strong>Markdown to HTML</strong>
+                    <strong>LessCSS to CSS</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
+            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
                 <td>
-                    markdown-to-html.html.md
-                    <pre class="prettyprint lang-md"># Markdown Example
+                    less-to-css.css.less
+                    <pre class="prettyprint lang-less">.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
+  @val: @x @y @blur rgba(0, 0, 0, @alpha);
 
-This page was coded with _markdown_.</pre>
+  box-shadow:         @val;
+  -webkit-box-shadow: @val;
+  -moz-box-shadow:    @val;
+}
+.box { @base: #f938ab;
+  color:        saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0, 0, 5px, 0.4) }
+}</pre>
                 </td>
                 <td>
-                    <a href="/markups/markdown-to-html.html">
-                        markdown-to-html.html
+                    <a href="/markups/less-to-css.css">
+                        less-to-css.css
                     </a>
-                    <pre class="prettyprint lang-html">&lt;h1&gt;Markdown Example&lt;/h1&gt;
-
-&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
+                    <pre class="prettyprint lang-css">.box{color:#fe33ac;border-color:#fdcdea;}.box div{box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
+</pre>
                 </td>
             </tr>
+            
+        
             
         
             
@@ -458,33 +466,29 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
             
         
             
-            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
+        
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
                 <td colspan="2">
-                    <strong>LessCSS to CSS</strong>
+                    <strong>Markdown to HTML</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
                 <td>
-                    less-to-css.css.less
-                    <pre class="prettyprint lang-less">.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
-  @val: @x @y @blur rgba(0, 0, 0, @alpha);
+                    markdown-to-html.html.md
+                    <pre class="prettyprint lang-md"># Markdown Example
 
-  box-shadow:         @val;
-  -webkit-box-shadow: @val;
-  -moz-box-shadow:    @val;
-}
-.box { @base: #f938ab;
-  color:        saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0, 0, 5px, 0.4) }
-}</pre>
+This page was coded with _markdown_.</pre>
                 </td>
                 <td>
-                    <a href="/markups/less-to-css.css">
-                        less-to-css.css
+                    <a href="/markups/markdown-to-html.html">
+                        markdown-to-html.html
                     </a>
-                    <pre class="prettyprint lang-css">.box{color:#fe33ac;border-color:#fdcdea;}.box div{box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
-</pre>
+                    <pre class="prettyprint lang-html">&lt;h1&gt;Markdown Example&lt;/h1&gt;
+
+&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
                 </td>
             </tr>
             
@@ -492,8 +496,73 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
     </tbody>
 </table>
 
+<h2>Example Blog Posts</h2>
+<ul>
+    
+        
+    
+        
+    
+        
+    
+        
+        <li typeof="sioc:Page" about="/posts/bonjour.html" class="">
+            <a href="/posts/bonjour.html" property="dc:title">Bonjour</a>
+        </li>
+        
+    
+        
+        <li typeof="sioc:Page" about="/posts/hello.html" class="">
+            <a href="/posts/hello.html" property="dc:title">Hello</a>
+        </li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
 <h2>Nifties</h2>
 <ul>
+    
+        
+    
+        
+    
+        
     
         
     
@@ -542,10 +611,6 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         
     
         
-    
-        
-    
-        
         <li typeof="sioc:Page" about="/nifty/coffee-parser.html" class="">
             <a href="/nifty/coffee-parser.html" property="dc:title">Coffee Parser Example</a>
         </li>
@@ -553,13 +618,85 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
     
     <li><a href="/search?query=coffee">A dynamic search page for <em>"coffee"</em></a></li>
 </ul>
-        </div>
+        </section>
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2011-11-19T04:53:36Z and has 22 documents
+                This website was generated on 2011-11-21T06:49:12Z and has 23 documents
             </p>
         </footer>
+        <section id="source" class="source">
+            <h3 id="source-header"><a>Click to view this page's source</a></h3>
+            <div id="source-code">
+                <div>src/pages/getting-started.html.eco</div>
+                <pre class="prettyprint">---
+layout: 'default'
+title: 'Getting Started'
+---
+
+&lt;!-- Main hero unit for a primary marketing message or call to action --&gt;
+&lt;div class=&quot;hero-unit&quot;&gt;
+    &lt;h1&gt;Getting Started&lt;/h1&gt;
+    &lt;p&gt;A work in progress...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Markups&lt;/h2&gt;
+&lt;table class=&quot;bordered-table zebra-striped&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th style=&quot;width: 50%;&quot;&gt;Source File&lt;/th&gt;
+            &lt;th style=&quot;width: 50%;&quot;&gt;Result File&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;% for document in @database.sort('title':1): %&gt;
+            &lt;% if document.url.indexOf('/markups') == 0: %&gt;
+            &lt;tr typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot;&gt;
+                &lt;td colspan=&quot;2&quot;&gt;
+                    &lt;strong&gt;&lt;%= document.title %&gt;&lt;/strong&gt;
+                &lt;td&gt;
+            &lt;/tr&gt;
+            &lt;tr typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot;&gt;
+                &lt;td&gt;
+                    &lt;%= document.filename %&gt;
+                    &lt;pre class=&quot;prettyprint lang-&lt;%= document.filename.replace(/^.*\./,'') %&gt;&quot;&gt;&lt;%= document.content.replace(/^\s+/,'') %&gt;&lt;/pre&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;a href=&quot;&lt;%= document.url %&gt;&quot;&gt;
+                        &lt;%= document.url.replace(/^.*\//,'') %&gt;
+                    &lt;/a&gt;
+                    &lt;pre class=&quot;prettyprint lang-&lt;%= document.extension %&gt;&quot;&gt;&lt;%= document.contentRendered.replace(/^\s+/,'') %&gt;&lt;/pre&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;% end %&gt;
+        &lt;% end %&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2&gt;Example Blog Posts&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;% for document in @documents: %&gt;
+        &lt;% if document.url.indexOf('/posts') == 0: %&gt;
+        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot; class=&quot;&lt;%= 'active'    if @document.url is document.url %&gt;&quot;&gt;
+            &lt;a href=&quot;&lt;%= document.url %&gt;&quot; property=&quot;dc:title&quot;&gt;&lt;%= document.title %&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;% end %&gt;
+    &lt;% end %&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Nifties&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;% for document in @documents: %&gt;
+        &lt;% if document.url.indexOf('/nifty') == 0: %&gt;
+        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot; class=&quot;&lt;%= 'active'    if @document.url is document.url %&gt;&quot;&gt;
+            &lt;a href=&quot;&lt;%= document.url %&gt;&quot; property=&quot;dc:title&quot;&gt;&lt;%= document.title %&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;% end %&gt;
+    &lt;% end %&gt;
+    &lt;li&gt;&lt;a href=&quot;/search?query=coffee&quot;&gt;A dynamic search page for &lt;em&gt;&quot;coffee&quot;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+        </section>
     </div><!-- /container -->
 </body>
 </html>
