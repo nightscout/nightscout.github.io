@@ -30,7 +30,23 @@
     <!-- Scripts -->
     <script src="/vendor/jquery-1.6.4.min.js"></script>
     <script src="/vendor/prettify.js"></script>
-    <script src="/_docpad/plugins/admin/scripts/script.js"></script>
+    <script src="/nowjs/now.js"></script>
+<script>
+	// Wait for now
+	window.now.ready(function(){
+		// Handshake
+		window.now.docpadHandshake(
+			// Sync notify
+			function (documentId, state) {
+				document.location.reload();
+			},
+			// Callback
+			function (clientId) {
+				console.log('DocPad AutoUpdate plugin now ready');
+			}
+		);
+	});
+</script><script src="/_docpad/plugins/admin/scripts/script.js"></script>
     <script src="/scripts/script.js"></script>
 
     <!-- Markup -->
@@ -41,11 +57,11 @@
                 <ul>
                     
                         
+                    
+                        
                         <li typeof="sioc:Page" about="/pages/getting-started.html" class="active">
                             <a href="/pages/getting-started.html" property="dc:title">Getting Started</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -138,47 +154,6 @@
                         coffeekup-to-html.html
                     </a>
                     <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;CoffeeKup Example&lt;/h1&gt;&lt;p&gt;This page was coded with coffeekup&lt;/p&gt;&lt;/div&gt;</pre>
-                </td>
-            </tr>
-            
-        
-            
-            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
-                <td colspan="2">
-                    <strong>CoffeeScript to JavaScript</strong>
-                <td>
-            </tr>
-            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
-                <td>
-                    coffeescript-to-javascript.js.coffee
-                    <pre class="prettyprint lang-coffee"># Type here!
-
-math =
-  root:   Math.sqrt
-  square: square
-  cube:   (x) -&gt; x * square x
-
-alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
-                </td>
-                <td>
-                    <a href="/markups/coffeescript-to-javascript.js">
-                        coffeescript-to-javascript.js
-                    </a>
-                    <pre class="prettyprint lang-js">(function() {
-  var math;
-
-  math = {
-    root: Math.sqrt,
-    square: square,
-    cube: function(x) {
-      return x * square(x);
-    }
-  };
-
-  alert(&quot;Three cubed is &quot; + (math.cube(3)));
-
-}).call(this);
-</pre>
                 </td>
             </tr>
             
@@ -348,6 +323,47 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             
         
             
+            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
+                <td colspan="2">
+                    <strong>CoffeeScript to JavaScript</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
+                <td>
+                    coffeescript-to-javascript.js.coffee
+                    <pre class="prettyprint lang-coffee"># Type here!
+
+math =
+  root:   Math.sqrt
+  square: square
+  cube:   (x) -&gt; x * square x
+
+alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
+                </td>
+                <td>
+                    <a href="/markups/coffeescript-to-javascript.js">
+                        coffeescript-to-javascript.js
+                    </a>
+                    <pre class="prettyprint lang-js">(function() {
+  var math;
+
+  math = {
+    root: Math.sqrt,
+    square: square,
+    cube: function(x) {
+      return x * square(x);
+    }
+  };
+
+  alert(&quot;Three cubed is &quot; + (math.cube(3)));
+
+}).call(this);
+</pre>
+                </td>
+            </tr>
+            
+        
+            
         
             
             <tr typeof="sioc:Page" about="/markups/roy-to-javascript.js">
@@ -506,6 +522,8 @@ This page was coded with _markdown_.</pre>
         
     
         
+    
+        
         <li typeof="sioc:Page" about="/posts/bonjour.html" class="">
             <a href="/posts/bonjour.html" property="dc:title">Bonjour</a>
         </li>
@@ -515,8 +533,6 @@ This page was coded with _markdown_.</pre>
         <li typeof="sioc:Page" about="/posts/hello.html" class="">
             <a href="/posts/hello.html" property="dc:title">Hello</a>
         </li>
-        
-    
         
     
         
@@ -593,6 +609,8 @@ This page was coded with _markdown_.</pre>
         
     
         
+    
+        
         <li typeof="sioc:Page" about="/nifty/client-side-editing.html" class="">
             <a href="/nifty/client-side-editing.html" property="dc:title">Client-Side Editing Wooo!</a>
         </li>
@@ -609,8 +627,6 @@ This page was coded with _markdown_.</pre>
         
     
         
-    
-        
         <li typeof="sioc:Page" about="/nifty/coffee-parser.html" class="">
             <a href="/nifty/coffee-parser.html" property="dc:title">Coffee Parser Example</a>
         </li>
@@ -622,7 +638,7 @@ This page was coded with _markdown_.</pre>
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2011-11-21T06:49:12Z and has 23 documents
+                This website was generated on 2011-11-25T13:40:15Z and has 23 documents
             </p>
         </footer>
         <section id="source" class="source">
