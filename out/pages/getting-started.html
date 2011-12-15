@@ -30,23 +30,7 @@
     <!-- Scripts -->
     <script src="/vendor/jquery-1.6.4.min.js"></script>
     <script src="/vendor/prettify.js"></script>
-    <script src="/nowjs/now.js"></script>
-<script>
-	// Wait for now
-	window.now.ready(function(){
-		// Handshake
-		window.now.docpadHandshake(
-			// Sync notify
-			function (documentId, state) {
-				document.location.reload();
-			},
-			// Callback
-			function (clientId) {
-				console.log('DocPad AutoUpdate plugin now ready');
-			}
-		);
-	});
-</script><script src="/_docpad/plugins/admin/scripts/script.js"></script>
+    <script src="/_docpad/plugins/admin/scripts/script.js"></script>
     <script src="/scripts/script.js"></script>
 
     <!-- Markup -->
@@ -153,7 +137,52 @@
                     <a href="/markups/coffeekup-to-html.html">
                         coffeekup-to-html.html
                     </a>
-                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;CoffeeKup Example&lt;/h1&gt;&lt;p&gt;This page was coded with coffeekup&lt;/p&gt;&lt;/div&gt;</pre>
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
+  &lt;h1&gt;CoffeeKup Example&lt;/h1&gt;
+  &lt;p&gt;This page was coded with coffeekup&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+                </td>
+            </tr>
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
+                <td colspan="2">
+                    <strong>CoffeeScript to JavaScript</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
+                <td>
+                    coffeescript-to-javascript.js.coffee
+                    <pre class="prettyprint lang-coffee"># Type here!
+
+math =
+  root:   Math.sqrt
+  square: square
+  cube:   (x) -&gt; x * square x
+
+alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
+                </td>
+                <td>
+                    <a href="/markups/coffeescript-to-javascript.js">
+                        coffeescript-to-javascript.js
+                    </a>
+                    <pre class="prettyprint lang-js">(function() {
+  var math;
+
+  math = {
+    root: Math.sqrt,
+    square: square,
+    cube: function(x) {
+      return x * square(x);
+    }
+  };
+
+  alert(&quot;Three cubed is &quot; + (math.cube(3)));
+
+}).call(this);
+</pre>
                 </td>
             </tr>
             
@@ -224,12 +253,10 @@
                     <a href="/markups/html-to-jade-example.jade">
                         html-to-jade-example.jade
                     </a>
-                    <pre class="prettyprint lang-jade">html
-  body
-    .awesome
-      h1 HTML to Jade Example
-      p This page was coded with HTML
-</pre>
+                    <pre class="prettyprint lang-jade">&lt;div class=&quot;awesome&quot;&gt;
+    &lt;h1&gt;HTML to Jade Example&lt;/h1&gt;
+    &lt;p&gt;This page was coded with HTML&lt;/p&gt;
+&lt;/div&gt;</pre>
                 </td>
             </tr>
             
@@ -317,47 +344,6 @@
                         less-to-css.css
                     </a>
                     <pre class="prettyprint lang-css">.box{color:#fe33ac;border-color:#fdcdea;}.box div{box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
-</pre>
-                </td>
-            </tr>
-            
-        
-            
-            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
-                <td colspan="2">
-                    <strong>CoffeeScript to JavaScript</strong>
-                <td>
-            </tr>
-            <tr typeof="sioc:Page" about="/markups/coffeescript-to-javascript.js">
-                <td>
-                    coffeescript-to-javascript.js.coffee
-                    <pre class="prettyprint lang-coffee"># Type here!
-
-math =
-  root:   Math.sqrt
-  square: square
-  cube:   (x) -&gt; x * square x
-
-alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
-                </td>
-                <td>
-                    <a href="/markups/coffeescript-to-javascript.js">
-                        coffeescript-to-javascript.js
-                    </a>
-                    <pre class="prettyprint lang-js">(function() {
-  var math;
-
-  math = {
-    root: Math.sqrt,
-    square: square,
-    cube: function(x) {
-      return x * square(x);
-    }
-  };
-
-  alert(&quot;Three cubed is &quot; + (math.cube(3)));
-
-}).call(this);
 </pre>
                 </td>
             </tr>
@@ -638,7 +624,7 @@ This page was coded with _markdown_.</pre>
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2011-11-25T13:40:15Z and has 23 documents
+                This website was generated on 2011-12-15T11:03:01Z and has 23 documents
             </p>
         </footer>
         <section id="source" class="source">

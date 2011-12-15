@@ -1,6 +1,6 @@
 {
 	"name": "kitchensink.docpad",
-	"version": "0.4.2",
+	"version": "0.5.0",
 	"description": "Kitchensink Skeleton for DocPad, based off Twitter's Bootstrap",
 	"homepage": "https://github.com/balupton/kitchensink.docpad",
 	"keywords": [
@@ -45,7 +45,7 @@
 	"dependencies": {
 		"coffee-script": "1.1.x",
 		"express": "2.5.x",
-		"docpad": "2.4.0"
+		"docpad": "2.5.0"
 	},
 	"engines" : {
 		"node": ">=0.4.0"
@@ -53,7 +53,18 @@
 	"docpad": {
 		"enabledPlugins": {
 			"admin": true,
-			"rest": true
+			"rest": true,
+			"authenticate": false,
+			"autoupdate": false,
+			"buildr": false,
+			"html2jade": false
+		},
+		"plugins": {
+			"coffee": {
+				"coffeekup": {
+					"format": true
+				}
+			}
 		}
 	}
 }

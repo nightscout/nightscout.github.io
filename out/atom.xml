@@ -3,7 +3,7 @@
     <title>Benjamin Lupton</title>
     <link href="http://balupton.com/atom.xml" rel="self"/>
     <link href="http://balupton.com"/>
-    <updated>2011-11-25T13:40:15Z</updated>
+    <updated>2011-12-15T11:03:01Z</updated>
     <id>http://balupton.com</id>
     <author>
         <name>Benjamin Lupton</name>
@@ -57,23 +57,7 @@
     &lt;!-- Scripts --&gt;
     &lt;script src=&quot;/vendor/jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/nowjs/now.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-	// Wait for now
-	window.now.ready(function(){
-		// Handshake
-		window.now.docpadHandshake(
-			// Sync notify
-			function (documentId, state) {
-				document.location.reload();
-			},
-			// Callback
-			function (clientId) {
-				console.log('DocPad AutoUpdate plugin now ready');
-			}
-		);
-	});
-&lt;/script&gt;&lt;script src=&quot;/_docpad/plugins/admin/scripts/script.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/_docpad/plugins/admin/scripts/script.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 
     &lt;!-- Markup --&gt;
@@ -163,7 +147,7 @@
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2011-11-25T13:40:15Z and has 23 documents
+                This website was generated on 2011-12-15T11:03:01Z and has 23 documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
@@ -223,23 +207,7 @@ Bonjour **world**&lt;/pre&gt;
     &lt;!-- Scripts --&gt;
     &lt;script src=&quot;/vendor/jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/nowjs/now.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-	// Wait for now
-	window.now.ready(function(){
-		// Handshake
-		window.now.docpadHandshake(
-			// Sync notify
-			function (documentId, state) {
-				document.location.reload();
-			},
-			// Callback
-			function (clientId) {
-				console.log('DocPad AutoUpdate plugin now ready');
-			}
-		);
-	});
-&lt;/script&gt;&lt;script src=&quot;/_docpad/plugins/admin/scripts/script.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/_docpad/plugins/admin/scripts/script.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 
     &lt;!-- Markup --&gt;
@@ -329,7 +297,7 @@ Bonjour **world**&lt;/pre&gt;
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2011-11-25T13:40:15Z and has 23 documents
+                This website was generated on 2011-12-15T11:03:01Z and has 23 documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;

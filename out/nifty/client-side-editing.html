@@ -30,23 +30,7 @@
     <!-- Scripts -->
     <script src="/vendor/jquery-1.6.4.min.js"></script>
     <script src="/vendor/prettify.js"></script>
-    <script src="/nowjs/now.js"></script>
-<script>
-	// Wait for now
-	window.now.ready(function(){
-		// Handshake
-		window.now.docpadHandshake(
-			// Sync notify
-			function (documentId, state) {
-				document.location.reload();
-			},
-			// Callback
-			function (clientId) {
-				console.log('DocPad AutoUpdate plugin now ready');
-			}
-		);
-	});
-</script><script src="/_docpad/plugins/admin/scripts/script.js"></script>
+    <script src="/_docpad/plugins/admin/scripts/script.js"></script>
     <script src="/scripts/script.js"></script>
 
     <!-- Markup -->
@@ -112,12 +96,20 @@
     </div>
     <div class="container">
         <section id="content" class="content">
-            <article typeof="sioc:Post" about="/nifty/client-side-editing.html"><h1 property="title">Client-Side Editing Wooo!</h1><div property="description">You can edit this with content-editable, and it will save automatically. So when you refresh, it'll be what you saved it as.<div><br></div><div>To edit it. Press alt+shift+e or ctrl+shift+e (it must be in that order, can't be e first for example). Pressing that will toggle edit mode. When in edit more, just place your mouse cursor over the content you want to edit, and it will edit it for you.When you leave the field, it will perform an AJAX request, save the changes, and regenerate your website.</div></div></article>
+            <article typeof="sioc:Post" about="/nifty/client-side-editing.html">
+  <h1 property="title">
+    Client-Side Editing Wooo!
+  </h1>
+  <div property="description">
+    You can edit this with content-editable, and it will save automatically. So when you refresh, it'll be what you saved it as.<div><br></div><div>To edit it. Press alt+shift+e or ctrl+shift+e (it must be in that order, can't be e first for example). Pressing that will toggle edit mode. When in edit more, just place your mouse cursor over the content you want to edit, and it will edit it for you.When you leave the field, it will perform an AJAX request, save the changes, and regenerate your website.</div>
+  </div>
+</article>
+
         </section>
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2011-11-25T13:40:15Z and has 23 documents
+                This website was generated on 2011-12-15T11:03:01Z and has 23 documents
             </p>
         </footer>
         <section id="source" class="source">
