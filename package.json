@@ -1,8 +1,8 @@
 {
 	"name": "kitchensink.docpad",
-	"version": "0.5.0",
+	"version": "0.6.0",
 	"description": "Kitchensink Skeleton for DocPad, based off Twitter's Bootstrap",
-	"homepage": "https://github.com/balupton/kitchensink.docpad",
+	"homepage": "https://github.com/bevry/kitchensink.docpad",
 	"keywords": [
 		"twitter",
 		"bootstrap",
@@ -11,9 +11,9 @@
 		"theme"
 	],
 	"author": {
-		"name": "Benjamin Lupton",
-		"email": "b@lupton.cc",
-		"url": "http://balupton.com"
+		"name": "Bevry Pty Ltd",
+		"email": "us@bevry.me",
+		"url": "http://bevry.me"
 	},
 	"maintainers": [
 		{
@@ -30,22 +30,22 @@
 		}
 	],
 	"bugs": {
-		"url": "https://github.com/balupton/kitchensink.docpad/issues"
+		"url": "https://github.com/bevry/kitchensink.docpad/issues"
 	},
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "http://creativecommons.org/licenses/MIT/"
+			"url": "https://github.com/bevry/kitchensink.docpad/blob/master/LICENSE.txt"
 		}
 	],
 	"repository" : {
 		"type" : "git",
-		"url" : "http://github.com/balupton/kitchensink.docpad.git"
+		"url" : "http://github.com/bevry/kitchensink.docpad.git"
 	},
 	"dependencies": {
-		"coffee-script": "1.1.x",
+		"coffee-script": "1.2.x",
 		"express": "2.5.x",
-		"docpad": "2.5.0"
+		"docpad": "2.6.1"
 	},
 	"engines" : {
 		"node": ">=0.4.0"

@@ -1,3 +1,4 @@
+(function() {
 
   $(function() {
     var $source, $sourceCode, $sourceHeader;
@@ -9,3 +10,5 @@
     });
     return $sourceHeader.trigger('click');
   });
+
+}).call(this);

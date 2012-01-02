@@ -1,3 +1,4 @@
+(function() {
 
   $(function() {
     var $, editMode;
@@ -56,3 +57,5 @@
       });
     });
   });
+
+}).call(this);
