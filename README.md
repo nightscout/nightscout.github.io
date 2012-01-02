@@ -1,4 +1,4 @@
-# [The Kitchensink Skeleton](https://github.com/bevry/kitchensink.docpad) for [DocPad](https://github.com/balupton/docpad)
+# [The Kitchensink Skeleton](https://github.com/bevry/kitchensink.docpad) for [DocPad](https://github.com/bevry/docpad)
 
 
 ## Give it a go
