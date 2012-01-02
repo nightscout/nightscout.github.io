@@ -13,7 +13,7 @@ docpad run
 
 ## Credits
 
-Kitchensink Skeleton is developed by [Benjamin Lupton](http://balupton.com) and licensed under the [MIT License](https://github.com/bevry/kitchensink.docpad/blob/master/LICENSE.txt/)
+[The Kitchensink Skeleton](https://github.com/bevry/kitchensink.docpad) is developed by [Benjamin Lupton](http://balupton.com) and licensed under the [MIT License](https://github.com/bevry/kitchensink.docpad/blob/master/LICENSE.txt/)
 
 [Twitter Bootstrap](http://twitter.github.com/bootstrap/) is developed by [Twitter](https://dev.twitter.com/blog/bootstrap-twitter) and licensed under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
