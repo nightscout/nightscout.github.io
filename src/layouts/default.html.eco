@@ -24,6 +24,7 @@
 	<!-- Styles -->
 	<link href="/styles/style.css" rel="stylesheet"/>
 	<link href="/vendor/prettify.css" rel="stylesheet"/>
+	<link href="/vendor/responsive.min.css" rel="stylesheet"/>
 	<%- @blocks.styles.join('') %>
 </head>
 <body>
