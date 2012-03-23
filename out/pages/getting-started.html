@@ -41,45 +41,45 @@
                 <ul class="nav">
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
                         <li typeof="sioc:Page" about="/pages/getting-started.html" class="active">
                             <a href="/pages/getting-started.html" property="dc:title">Getting Started</a>
                         </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         
                     
                         
@@ -103,7 +103,7 @@
 </div>
 
 <h2>Markups</h2>
-<table class="bordered-table zebra-striped">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th style="width: 50%;">Source File</th>
@@ -208,6 +208,28 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             
         
             
+            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
+                <td colspan="2">
+                    <strong>Jade to HTML</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
+                <td>
+                    jade-to-html.html.jade
+                    <pre class="prettyprint lang-jade">div.awesome
+    h1 Jade Example
+    p This page was coded with jade.</pre>
+                </td>
+                <td>
+                    <a href="/markups/jade-to-html.html">
+                        jade-to-html.html
+                    </a>
+                    <pre class="prettyprint lang-jade">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;Jade Example&lt;/h1&gt;&lt;p&gt;This page was coded with jade.&lt;/p&gt;&lt;/div&gt;</pre>
+                </td>
+            </tr>
+            
+        
+            
             <tr typeof="sioc:Page" about="/markups/html-to-coffeekup-example.ck">
                 <td colspan="2">
                     <strong>HTML to CoffeeKup</strong>
@@ -260,28 +282,6 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             
         
             
-            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
-                <td colspan="2">
-                    <strong>Jade to HTML</strong>
-                <td>
-            </tr>
-            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
-                <td>
-                    jade-to-html.html.jade
-                    <pre class="prettyprint lang-jade">div.awesome
-    h1 Jade Example
-    p This page was coded with jade.</pre>
-                </td>
-                <td>
-                    <a href="/markups/jade-to-html.html">
-                        jade-to-html.html
-                    </a>
-                    <pre class="prettyprint lang-jade">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;Jade Example&lt;/h1&gt;&lt;p&gt;This page was coded with jade.&lt;/p&gt;&lt;/div&gt;</pre>
-                </td>
-            </tr>
-            
-        
-            
             <tr typeof="sioc:Page" about="/markups/javascript-to-coffeescript.coffee">
                 <td colspan="2">
                     <strong>JavaScript to CoffeeScript</strong>
@@ -313,40 +313,6 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
 ) jQuery</pre>
                 </td>
             </tr>
-            
-        
-            
-            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
-                <td colspan="2">
-                    <strong>LessCSS to CSS</strong>
-                <td>
-            </tr>
-            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
-                <td>
-                    less-to-css.css.less
-                    <pre class="prettyprint lang-less">.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
-  @val: @x @y @blur rgba(0, 0, 0, @alpha);
-
-  box-shadow:         @val;
-  -webkit-box-shadow: @val;
-  -moz-box-shadow:    @val;
-}
-.box { @base: #f938ab;
-  color:        saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0, 0, 5px, 0.4) }
-}</pre>
-                </td>
-                <td>
-                    <a href="/markups/less-to-css.css">
-                        less-to-css.css
-                    </a>
-                    <pre class="prettyprint lang-less">.box{color:#fe33ac;border-color:#fdcdea;}.box div{box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
-</pre>
-                </td>
-            </tr>
-            
-        
             
         
             
@@ -388,39 +354,6 @@ console.log((gcd(49, 35)));
             
         
             
-            <tr typeof="sioc:Page" about="/markups/sass-to-css.css">
-                <td colspan="2">
-                    <strong>SASS to CSS</strong>
-                <td>
-            </tr>
-            <tr typeof="sioc:Page" about="/markups/sass-to-css.css">
-                <td>
-                    sass-to-css.css.sass
-                    <pre class="prettyprint lang-sass">a
-  :color #fff
-  &amp;:hover
-    :color #000
-  &amp;.active
-    :background #888
-    &amp;:hover
-      :color #fff</pre>
-                </td>
-                <td>
-                    <a href="/markups/sass-to-css.css">
-                        sass-to-css.css
-                    </a>
-                    <pre class="prettyprint lang-sass">a {
-  color: #fff;}
-a:hover {
-  color: #000;}
-a.active {
-  background: #888;}
-a.active:hover {
-  color: #fff;}
-</pre>
-                </td>
-            </tr>
-            
         
             
             <tr typeof="sioc:Page" about="/markups/stylus-to-css.css">
@@ -458,20 +391,6 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
             <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
                 <td colspan="2">
                     <strong>Markdown to HTML</strong>
@@ -491,6 +410,87 @@ This page was coded with _markdown_.</pre>
                     <pre class="prettyprint lang-md">&lt;h1&gt;Markdown Example&lt;/h1&gt;
 
 &lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
+                </td>
+            </tr>
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/sass-to-css.css">
+                <td colspan="2">
+                    <strong>SASS to CSS</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/sass-to-css.css">
+                <td>
+                    sass-to-css.css.sass
+                    <pre class="prettyprint lang-sass">a
+  :color #fff
+  &amp;:hover
+    :color #000
+  &amp;.active
+    :background #888
+    &amp;:hover
+      :color #fff</pre>
+                </td>
+                <td>
+                    <a href="/markups/sass-to-css.css">
+                        sass-to-css.css
+                    </a>
+                    <pre class="prettyprint lang-sass">a {
+  color: #fff;}
+a:hover {
+  color: #000;}
+a.active {
+  background: #888;}
+a.active:hover {
+  color: #fff;}
+</pre>
+                </td>
+            </tr>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
+                <td colspan="2">
+                    <strong>LessCSS to CSS</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
+                <td>
+                    less-to-css.css.less
+                    <pre class="prettyprint lang-less">.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
+  @val: @x @y @blur rgba(0, 0, 0, @alpha);
+
+  box-shadow:         @val;
+  -webkit-box-shadow: @val;
+  -moz-box-shadow:    @val;
+}
+.box { @base: #f938ab;
+  color:        saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0, 0, 5px, 0.4) }
+}</pre>
+                </td>
+                <td>
+                    <a href="/markups/less-to-css.css">
+                        less-to-css.css
+                    </a>
+                    <pre class="prettyprint lang-less">.box{color:#fe33ac;border-color:#fdcdea;}.box div{box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
+</pre>
                 </td>
             </tr>
             
@@ -546,11 +546,11 @@ This page was coded with _markdown_.</pre>
         
     
         
-    
-        
         <li typeof="sioc:Page" about="/posts/hello.html" class="">
             <a href="/posts/hello.html" property="dc:title">Hello</a>
         </li>
+        
+    
         
     
         
@@ -591,14 +591,14 @@ This page was coded with _markdown_.</pre>
         
     
         
-        <li typeof="sioc:Page" about="/nifty/client-side-editing.html" class="">
-            <a href="/nifty/client-side-editing.html" property="dc:title">Client-Side Editing Wooo!</a>
+        <li typeof="sioc:Page" about="/nifty/coffee-parser.html" class="">
+            <a href="/nifty/coffee-parser.html" property="dc:title">Coffee Parser Example</a>
         </li>
         
     
         
-        <li typeof="sioc:Page" about="/nifty/coffee-parser.html" class="">
-            <a href="/nifty/coffee-parser.html" property="dc:title">Coffee Parser Example</a>
+        <li typeof="sioc:Page" about="/nifty/client-side-editing.html" class="">
+            <a href="/nifty/client-side-editing.html" property="dc:title">Client-Side Editing Wooo!</a>
         </li>
         
     
@@ -624,7 +624,7 @@ This page was coded with _markdown_.</pre>
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2012-03-23T13:00:04Z and has 23 documents
+                This website was generated on 2012-03-23T15:13:00Z and has 23 documents
             </p>
         </footer>
         <section id="source" class="source">
@@ -643,7 +643,7 @@ title: 'Getting Started'
 &lt;/div&gt;
 
 &lt;h2&gt;Markups&lt;/h2&gt;
-&lt;table class=&quot;bordered-table zebra-striped&quot;&gt;
+&lt;table class=&quot;table table-bordered table-striped&quot;&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th style=&quot;width: 50%;&quot;&gt;Source File&lt;/th&gt;

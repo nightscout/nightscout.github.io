@@ -10,7 +10,7 @@ title: 'Getting Started'
 </div>
 
 <h2>Markups</h2>
-<table class="bordered-table zebra-striped">
+<table class="table table-bordered table-striped">
 	<thead>
 		<tr>
 			<th style="width: 50%;">Source File</th>
