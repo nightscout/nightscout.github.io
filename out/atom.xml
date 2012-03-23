@@ -3,7 +3,7 @@
     <title>Benjamin Lupton</title>
     <link href="http://balupton.com/atom.xml" rel="self"/>
     <link href="http://balupton.com"/>
-    <updated>2012-01-02T06:24:57Z</updated>
+    <updated>2012-03-23T12:24:40Z</updated>
     <id>http://balupton.com</id>
     <author>
         <name>Benjamin Lupton</name>
@@ -20,10 +20,40 @@
         
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
             <entry>
                 <title>Bonjour</title>
                 <link href="http://balupton.com/posts/bonjour.html"/>
-                <updated>2011-11-20T21:11:38Z</updated>
+                <updated>2012-03-23T11:21:16Z</updated>
                 <id>http://balupton.com/posts/bonjour.html</id>
                 <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lange=&quot;en&quot;&gt;
@@ -61,11 +91,45 @@
     &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 
     &lt;!-- Markup --&gt;
-    &lt;div class=&quot;topbar&quot;&gt;
-        &lt;div class=&quot;fill&quot;&gt;
-            &lt;div class=&quot;container fixed&quot;&gt;
-                &lt;h3&gt;&lt;a href=&quot;/&quot;&gt;Welcome&lt;/a&gt;&lt;/h3&gt;
-                &lt;ul&gt;
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                         
                     
@@ -83,49 +147,13 @@
                     
                         
                     
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
                 &lt;/ul&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;container&quot;&gt;
         &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
-            
-
-&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+            &lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
     &lt;p&gt;Bonjour &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -135,7 +163,7 @@
         &lt;h3&gt;Related Posts&lt;/h3&gt;
         &lt;nav class=&quot;linklist&quot;&gt;
             
-                &lt;li&gt;&lt;span&gt;Nov 21 2011&lt;/span&gt;
+                &lt;li&gt;&lt;span&gt;Mar 23 2012&lt;/span&gt;
                 &amp;raquo;
                 &lt;a href=&quot;/posts/hello.html&quot;&gt;Hello&lt;/a&gt;&lt;/li&gt;
             
@@ -147,20 +175,14 @@
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2012-01-02T06:24:57Z and has 23 documents
+                This website was generated on 2012-03-23T12:24:39Z and has  documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
             &lt;h3 id=&quot;source-header&quot;&gt;&lt;a&gt;Click to view this page's source&lt;/a&gt;&lt;/h3&gt;
             &lt;div id=&quot;source-code&quot;&gt;
                 &lt;div&gt;src/posts/bonjour.html.md&lt;/div&gt;
-                &lt;pre class=&quot;prettyprint&quot;&gt;---
-title: 'Bonjour'
-layout: 'post'
-tags: ['greeting','french']
----
-
-Bonjour **world**&lt;/pre&gt;
+                &lt;pre class=&quot;prettyprint&quot;&gt;&lt;/pre&gt;
             &lt;/div&gt;
         &lt;/section&gt;
     &lt;/div&gt;&lt;!-- /container --&gt;
@@ -173,7 +195,7 @@ Bonjour **world**&lt;/pre&gt;
             <entry>
                 <title>Hello</title>
                 <link href="http://balupton.com/posts/hello.html"/>
-                <updated>2011-11-20T21:11:36Z</updated>
+                <updated>2012-03-23T11:21:16Z</updated>
                 <id>http://balupton.com/posts/hello.html</id>
                 <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lange=&quot;en&quot;&gt;
@@ -211,11 +233,45 @@ Bonjour **world**&lt;/pre&gt;
     &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 
     &lt;!-- Markup --&gt;
-    &lt;div class=&quot;topbar&quot;&gt;
-        &lt;div class=&quot;fill&quot;&gt;
-            &lt;div class=&quot;container fixed&quot;&gt;
-                &lt;h3&gt;&lt;a href=&quot;/&quot;&gt;Welcome&lt;/a&gt;&lt;/h3&gt;
-                &lt;ul&gt;
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                         
                     
@@ -233,49 +289,13 @@ Bonjour **world**&lt;/pre&gt;
                     
                         
                     
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
                 &lt;/ul&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;container&quot;&gt;
         &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
-            
-
-&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+            &lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
     &lt;p&gt;Hello &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -285,7 +305,7 @@ Bonjour **world**&lt;/pre&gt;
         &lt;h3&gt;Related Posts&lt;/h3&gt;
         &lt;nav class=&quot;linklist&quot;&gt;
             
-                &lt;li&gt;&lt;span&gt;Nov 21 2011&lt;/span&gt;
+                &lt;li&gt;&lt;span&gt;Mar 23 2012&lt;/span&gt;
                 &amp;raquo;
                 &lt;a href=&quot;/posts/bonjour.html&quot;&gt;Bonjour&lt;/a&gt;&lt;/li&gt;
             
@@ -297,56 +317,20 @@ Bonjour **world**&lt;/pre&gt;
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2012-01-02T06:24:57Z and has 23 documents
+                This website was generated on 2012-03-23T12:24:39Z and has  documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
             &lt;h3 id=&quot;source-header&quot;&gt;&lt;a&gt;Click to view this page's source&lt;/a&gt;&lt;/h3&gt;
             &lt;div id=&quot;source-code&quot;&gt;
                 &lt;div&gt;src/posts/hello.html.md&lt;/div&gt;
-                &lt;pre class=&quot;prettyprint&quot;&gt;---
-title: 'Hello'
-layout: 'post'
-tags: ['greeting','english']
----
-
-Hello **world**&lt;/pre&gt;
+                &lt;pre class=&quot;prettyprint&quot;&gt;&lt;/pre&gt;
             &lt;/div&gt;
         &lt;/section&gt;
     &lt;/div&gt;&lt;!-- /container --&gt;
 &lt;/body&gt;
 &lt;/html&gt;</content>
             </entry>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
         
     
         

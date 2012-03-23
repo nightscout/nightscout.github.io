@@ -1,8 +1,8 @@
 (($) ->
   $.fn.highlight = ->
-    $(this).css 
+    $(this).css
       color: "red"
       background: "yellow"
-    
+
     $(this).fadeIn()
 ) jQuery

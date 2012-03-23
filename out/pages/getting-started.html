@@ -34,11 +34,45 @@
     <script src="/scripts/script.js"></script>
 
     <!-- Markup -->
-    <div class="topbar">
-        <div class="fill">
-            <div class="container fixed">
-                <h3><a href="/">Welcome</a></h3>
-                <ul>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/">Welcome</a>
+                <ul class="nav">
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                         
                     
@@ -56,49 +90,13 @@
                     
                         
                     
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
                 </ul>
             </div>
         </div>
     </div>
     <div class="container">
         <section id="content" class="content">
-            
-
-<!-- Main hero unit for a primary marketing message or call to action -->
+            <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
     <h1>Getting Started</h1>
     <p>A work in progress...</p>
@@ -113,10 +111,6 @@
         </tr>
     </thead>
     <tbody>
-        
-            
-        
-            
         
             
         
@@ -141,7 +135,7 @@
                     <a href="/markups/coffeekup-to-html.html">
                         coffeekup-to-html.html
                     </a>
-                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
+                    <pre class="prettyprint lang-ck">&lt;div class=&quot;awesome&quot;&gt;
   &lt;h1&gt;CoffeeKup Example&lt;/h1&gt;
   &lt;p&gt;This page was coded with coffeekup&lt;/p&gt;
 &lt;/div&gt;
@@ -172,7 +166,7 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
                     <a href="/markups/coffeescript-to-javascript.js">
                         coffeescript-to-javascript.js
                     </a>
-                    <pre class="prettyprint lang-js">(function() {
+                    <pre class="prettyprint lang-coffee">(function() {
   var math;
 
   math = {
@@ -208,7 +202,7 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
                     <a href="/markups/haml-to-html.html">
                         haml-to-html.html
                     </a>
-                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;HAML Example&lt;/h1&gt;&lt;p&gt;This page was coded with HAML.&lt;/p&gt;&lt;/div&gt;</pre>
+                    <pre class="prettyprint lang-haml">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;HAML Example&lt;/h1&gt;&lt;p&gt;This page was coded with HAML.&lt;/p&gt;&lt;/div&gt;</pre>
                 </td>
             </tr>
             
@@ -231,10 +225,32 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
                     <a href="/markups/html-to-coffeekup-example.ck">
                         html-to-coffeekup-example.ck
                     </a>
-                    <pre class="prettyprint lang-ck">div '.awesome', -&gt;
+                    <pre class="prettyprint lang-html">div '.awesome', -&gt;
   h1 'HTML to CoffeeKup Example'
   p 'This page was coded with HTML'
 </pre>
+                </td>
+            </tr>
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
+                <td colspan="2">
+                    <strong>Jade to HTML</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
+                <td>
+                    jade-to-html.html.jade
+                    <pre class="prettyprint lang-jade">div.awesome
+    h1 Jade Example
+    p This page was coded with jade.</pre>
+                </td>
+                <td>
+                    <a href="/markups/jade-to-html.html">
+                        jade-to-html.html
+                    </a>
+                    <pre class="prettyprint lang-jade">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;Jade Example&lt;/h1&gt;&lt;p&gt;This page was coded with jade.&lt;/p&gt;&lt;/div&gt;</pre>
                 </td>
             </tr>
             
@@ -257,7 +273,7 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
                     <a href="/markups/html-to-jade-example.jade">
                         html-to-jade-example.jade
                     </a>
-                    <pre class="prettyprint lang-jade">&lt;div class=&quot;awesome&quot;&gt;
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
     &lt;h1&gt;HTML to Jade Example&lt;/h1&gt;
     &lt;p&gt;This page was coded with HTML&lt;/p&gt;
 &lt;/div&gt;</pre>
@@ -287,12 +303,12 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
                     <a href="/markups/javascript-to-coffeescript.coffee">
                         javascript-to-coffeescript.coffee
                     </a>
-                    <pre class="prettyprint lang-coffee">(($) -&gt;
+                    <pre class="prettyprint lang-js">(($) -&gt;
   $.fn.highlight = -&gt;
-    $(this).css 
+    $(this).css
       color: &quot;red&quot;
       background: &quot;yellow&quot;
-    
+
     $(this).fadeIn()
 ) jQuery</pre>
                 </td>
@@ -300,51 +316,37 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             
         
             
-        
-            
-            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
+            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
                 <td colspan="2">
-                    <strong>Markdown to HTML</strong>
+                    <strong>LessCSS to CSS</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
+            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
                 <td>
-                    markdown-to-html.html.md
-                    <pre class="prettyprint lang-md"># Markdown Example
+                    less-to-css.css.less
+                    <pre class="prettyprint lang-less">.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
+  @val: @x @y @blur rgba(0, 0, 0, @alpha);
 
-This page was coded with _markdown_.</pre>
+  box-shadow:         @val;
+  -webkit-box-shadow: @val;
+  -moz-box-shadow:    @val;
+}
+.box { @base: #f938ab;
+  color:        saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0, 0, 5px, 0.4) }
+}</pre>
                 </td>
                 <td>
-                    <a href="/markups/markdown-to-html.html">
-                        markdown-to-html.html
+                    <a href="/markups/less-to-css.css">
+                        less-to-css.css
                     </a>
-                    <pre class="prettyprint lang-html">&lt;h1&gt;Markdown Example&lt;/h1&gt;
-
-&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
+                    <pre class="prettyprint lang-less">.box{color:#fe33ac;border-color:#fdcdea;}.box div{box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
+</pre>
                 </td>
             </tr>
             
         
-            
-            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
-                <td colspan="2">
-                    <strong>Jade to HTML</strong>
-                <td>
-            </tr>
-            <tr typeof="sioc:Page" about="/markups/jade-to-html.html">
-                <td>
-                    jade-to-html.html.jade
-                    <pre class="prettyprint lang-jade">div.awesome
-    h1 Jade Example
-    p This page was coded with jade.</pre>
-                </td>
-                <td>
-                    <a href="/markups/jade-to-html.html">
-                        jade-to-html.html
-                    </a>
-                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;Jade Example&lt;/h1&gt;&lt;p&gt;This page was coded with jade.&lt;/p&gt;&lt;/div&gt;</pre>
-                </td>
-            </tr>
             
         
             
@@ -368,16 +370,18 @@ console.log (gcd 49 35)</pre>
                     <a href="/markups/roy-to-javascript.js">
                         roy-to-javascript.js
                     </a>
-                    <pre class="prettyprint lang-js">var gcd = function(a, b) {
+                    <pre class="prettyprint lang-roy">(function() {
+var gcd = function(a, b) {
     return (function() {
         if(b == 0) {
             return a;
         } else {
-            return gcd(b, a % b);
+            return gcd(b, (a % b));
         }
     })();
-}
-console.log(gcd(49, 35))
+};
+console.log((gcd(49, 35)));
+})();
 </pre>
                 </td>
             </tr>
@@ -405,7 +409,7 @@ console.log(gcd(49, 35))
                     <a href="/markups/sass-to-css.css">
                         sass-to-css.css
                     </a>
-                    <pre class="prettyprint lang-css">a {
+                    <pre class="prettyprint lang-sass">a {
   color: #fff;}
 a:hover {
   color: #000;}
@@ -446,7 +450,7 @@ form input
                     <a href="/markups/stylus-to-css.css">
                         stylus-to-css.css
                     </a>
-                    <pre class="prettyprint lang-css">body a{font:12px/1.4 &quot;Lucida Grande&quot;,Arial,sans-serif;background:#000;color:#ccc}
+                    <pre class="prettyprint lang-stylus">body a{font:12px/1.4 &quot;Lucida Grande&quot;,Arial,sans-serif;background:#000;color:#ccc}
 form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}
 </pre>
                 </td>
@@ -464,33 +468,29 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
             
         
             
-            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
+        
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
                 <td colspan="2">
-                    <strong>LessCSS to CSS</strong>
+                    <strong>Markdown to HTML</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/less-to-css.css">
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
                 <td>
-                    less-to-css.css.less
-                    <pre class="prettyprint lang-less">.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
-  @val: @x @y @blur rgba(0, 0, 0, @alpha);
+                    markdown-to-html.html.md
+                    <pre class="prettyprint lang-md"># Markdown Example
 
-  box-shadow:         @val;
-  -webkit-box-shadow: @val;
-  -moz-box-shadow:    @val;
-}
-.box { @base: #f938ab;
-  color:        saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0, 0, 5px, 0.4) }
-}</pre>
+This page was coded with _markdown_.</pre>
                 </td>
                 <td>
-                    <a href="/markups/less-to-css.css">
-                        less-to-css.css
+                    <a href="/markups/markdown-to-html.html">
+                        markdown-to-html.html
                     </a>
-                    <pre class="prettyprint lang-css">.box{color:#fe33ac;border-color:#fdcdea;}.box div{box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.4);}
-</pre>
+                    <pre class="prettyprint lang-md">&lt;h1&gt;Markdown Example&lt;/h1&gt;
+
+&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
                 </td>
             </tr>
             
@@ -510,6 +510,36 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
         <li typeof="sioc:Page" about="/posts/bonjour.html" class="">
             <a href="/posts/bonjour.html" property="dc:title">Bonjour</a>
         </li>
@@ -519,36 +549,6 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         <li typeof="sioc:Page" about="/posts/hello.html" class="">
             <a href="/posts/hello.html" property="dc:title">Hello</a>
         </li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
         
     
         
@@ -591,24 +591,8 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         
     
         
-    
-        
-    
-        
-    
-        
         <li typeof="sioc:Page" about="/nifty/client-side-editing.html" class="">
             <a href="/nifty/client-side-editing.html" property="dc:title">Client-Side Editing Wooo!</a>
-        </li>
-        
-    
-        
-    
-        
-    
-        
-        <li typeof="sioc:Page" about="/nifty/dynamic.html" class="">
-            <a href="/nifty/dynamic.html" property="dc:title">Dynamic Content Example</a>
         </li>
         
     
@@ -618,85 +602,36 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         </li>
         
     
+        
+        <li typeof="sioc:Page" about="/nifty/dynamic.html" class="">
+            <a href="/nifty/dynamic.html" property="dc:title">Dynamic Content Example</a>
+        </li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
     <li><a href="/search?query=coffee">A dynamic search page for <em>"coffee"</em></a></li>
 </ul>
         </section>
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2012-01-02T06:24:57Z and has 23 documents
+                This website was generated on 2012-03-23T12:24:40Z and has  documents
             </p>
         </footer>
         <section id="source" class="source">
             <h3 id="source-header"><a>Click to view this page's source</a></h3>
             <div id="source-code">
                 <div>src/pages/getting-started.html.eco</div>
-                <pre class="prettyprint">---
-layout: 'default'
-title: 'Getting Started'
----
-
-&lt;!-- Main hero unit for a primary marketing message or call to action --&gt;
-&lt;div class=&quot;hero-unit&quot;&gt;
-    &lt;h1&gt;Getting Started&lt;/h1&gt;
-    &lt;p&gt;A work in progress...&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Markups&lt;/h2&gt;
-&lt;table class=&quot;bordered-table zebra-striped&quot;&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th style=&quot;width: 50%;&quot;&gt;Source File&lt;/th&gt;
-            &lt;th style=&quot;width: 50%;&quot;&gt;Result File&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;% for document in @database.sort('title':1): %&gt;
-            &lt;% if document.url.indexOf('/markups') == 0: %&gt;
-            &lt;tr typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot;&gt;
-                &lt;td colspan=&quot;2&quot;&gt;
-                    &lt;strong&gt;&lt;%= document.title %&gt;&lt;/strong&gt;
-                &lt;td&gt;
-            &lt;/tr&gt;
-            &lt;tr typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot;&gt;
-                &lt;td&gt;
-                    &lt;%= document.filename %&gt;
-                    &lt;pre class=&quot;prettyprint lang-&lt;%= document.filename.replace(/^.*\./,'') %&gt;&quot;&gt;&lt;%= document.content.replace(/^\s+/,'') %&gt;&lt;/pre&gt;
-                &lt;/td&gt;
-                &lt;td&gt;
-                    &lt;a href=&quot;&lt;%= document.url %&gt;&quot;&gt;
-                        &lt;%= document.url.replace(/^.*\//,'') %&gt;
-                    &lt;/a&gt;
-                    &lt;pre class=&quot;prettyprint lang-&lt;%= document.extension %&gt;&quot;&gt;&lt;%= document.contentRendered.replace(/^\s+/,'') %&gt;&lt;/pre&gt;
-                &lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;% end %&gt;
-        &lt;% end %&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2&gt;Example Blog Posts&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;% for document in @documents: %&gt;
-        &lt;% if document.url.indexOf('/posts') == 0: %&gt;
-        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot; class=&quot;&lt;%= 'active'    if @document.url is document.url %&gt;&quot;&gt;
-            &lt;a href=&quot;&lt;%= document.url %&gt;&quot; property=&quot;dc:title&quot;&gt;&lt;%= document.title %&gt;&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;% end %&gt;
-    &lt;% end %&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Nifties&lt;/h2&gt;
-&lt;ul&gt;
-    &lt;% for document in @documents: %&gt;
-        &lt;% if document.url.indexOf('/nifty') == 0: %&gt;
-        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot; class=&quot;&lt;%= 'active'    if @document.url is document.url %&gt;&quot;&gt;
-            &lt;a href=&quot;&lt;%= document.url %&gt;&quot; property=&quot;dc:title&quot;&gt;&lt;%= document.title %&gt;&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;% end %&gt;
-    &lt;% end %&gt;
-    &lt;li&gt;&lt;a href=&quot;/search?query=coffee&quot;&gt;A dynamic search page for &lt;em&gt;&quot;coffee&quot;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+                <pre class="prettyprint"></pre>
             </div>
         </section>
     </div><!-- /container -->
