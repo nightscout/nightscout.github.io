@@ -624,14 +624,79 @@ This page was coded with _markdown_.</pre>
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2012-03-23T12:27:59Z and has  documents
+                This website was generated on 2012-03-23T12:42:57Z and has  documents
             </p>
         </footer>
         <section id="source" class="source">
             <h3 id="source-header"><a>Click to view this page's source</a></h3>
             <div id="source-code">
                 <div>src/pages/getting-started.html.eco</div>
-                <pre class="prettyprint"></pre>
+                <pre class="prettyprint">---
+layout: 'default'
+title: 'Getting Started'
+---
+
+&lt;!-- Main hero unit for a primary marketing message or call to action --&gt;
+&lt;div class=&quot;hero-unit&quot;&gt;
+    &lt;h1&gt;Getting Started&lt;/h1&gt;
+    &lt;p&gt;A work in progress...&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Markups&lt;/h2&gt;
+&lt;table class=&quot;bordered-table zebra-striped&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th style=&quot;width: 50%;&quot;&gt;Source File&lt;/th&gt;
+            &lt;th style=&quot;width: 50%;&quot;&gt;Result File&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;% for document in @database.sort('title':1): %&gt;
+            &lt;% if document.url.indexOf('/markups') == 0: %&gt;
+            &lt;tr typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot;&gt;
+                &lt;td colspan=&quot;2&quot;&gt;
+                    &lt;strong&gt;&lt;%= document.title %&gt;&lt;/strong&gt;
+                &lt;td&gt;
+            &lt;/tr&gt;
+            &lt;tr typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot;&gt;
+                &lt;td&gt;
+                    &lt;%= document.filename %&gt;
+                    &lt;pre class=&quot;prettyprint lang-&lt;%= document.filename.replace(/^.*\./,'') %&gt;&quot;&gt;&lt;%= document.content.replace(/^\s+/,'') %&gt;&lt;/pre&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;a href=&quot;&lt;%= document.url %&gt;&quot;&gt;
+                        &lt;%= document.url.replace(/^.*\//,'') %&gt;
+                    &lt;/a&gt;
+                    &lt;pre class=&quot;prettyprint lang-&lt;%= document.extension %&gt;&quot;&gt;&lt;%= document.contentRendered.replace(/^\s+/,'') %&gt;&lt;/pre&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;% end %&gt;
+        &lt;% end %&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2&gt;Example Blog Posts&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;% for document in @documents: %&gt;
+        &lt;% if document.url.indexOf('/posts') == 0: %&gt;
+        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot; class=&quot;&lt;%= 'active'    if @document.url is document.url %&gt;&quot;&gt;
+            &lt;a href=&quot;&lt;%= document.url %&gt;&quot; property=&quot;dc:title&quot;&gt;&lt;%= document.title %&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;% end %&gt;
+    &lt;% end %&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Nifties&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;% for document in @documents: %&gt;
+        &lt;% if document.url.indexOf('/nifty') == 0: %&gt;
+        &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&lt;%= document.url %&gt;&quot; class=&quot;&lt;%= 'active'    if @document.url is document.url %&gt;&quot;&gt;
+            &lt;a href=&quot;&lt;%= document.url %&gt;&quot; property=&quot;dc:title&quot;&gt;&lt;%= document.title %&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;% end %&gt;
+    &lt;% end %&gt;
+    &lt;li&gt;&lt;a href=&quot;/search?query=coffee&quot;&gt;A dynamic search page for &lt;em&gt;&quot;coffee&quot;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
             </div>
         </section>
     </div><!-- /container -->

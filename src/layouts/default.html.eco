@@ -64,7 +64,7 @@
 			<h3 id="source-header"><a>Click to view this page's source</a></h3>
 			<div id="source-code">
 				<div><%= 'src/'+@document.relativePath %></div>
-				<pre class="prettyprint"><%= @document.contentRaw %></pre>
+				<pre class="prettyprint"><%= @document.data %></pre>
 			</div>
 		</section>
 	</div><!-- /container -->
