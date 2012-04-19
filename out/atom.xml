@@ -3,7 +3,7 @@
     <title>Benjamin Lupton</title>
     <link href="http://balupton.com/atom.xml" rel="self"/>
     <link href="http://balupton.com"/>
-    <updated>2012-01-02T06:24:57Z</updated>
+    <updated>2012-03-23T17:49:55Z</updated>
     <id>http://balupton.com</id>
     <author>
         <name>Benjamin Lupton</name>
@@ -20,10 +20,40 @@
         
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
             <entry>
                 <title>Bonjour</title>
                 <link href="http://balupton.com/posts/bonjour.html"/>
-                <updated>2011-11-20T21:11:38Z</updated>
+                <updated>2012-03-23T11:21:16Z</updated>
                 <id>http://balupton.com/posts/bonjour.html</id>
                 <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lange=&quot;en&quot;&gt;
@@ -51,6 +81,7 @@
     &lt;!-- Styles --&gt;
     &lt;link href=&quot;/styles/style.css&quot; rel=&quot;stylesheet&quot;/&gt;
     &lt;link href=&quot;/vendor/prettify.css&quot; rel=&quot;stylesheet&quot;/&gt;
+    &lt;link href=&quot;/vendor/responsive.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
     
 &lt;/head&gt;
 &lt;body&gt;
@@ -61,18 +92,18 @@
     &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 
     &lt;!-- Markup --&gt;
-    &lt;div class=&quot;topbar&quot;&gt;
-        &lt;div class=&quot;fill&quot;&gt;
-            &lt;div class=&quot;container fixed&quot;&gt;
-                &lt;h3&gt;&lt;a href=&quot;/&quot;&gt;Welcome&lt;/a&gt;&lt;/h3&gt;
-                &lt;ul&gt;
-                    
-                        
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
                     
                         
                         &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/getting-started.html&quot; class=&quot;&quot;&gt;
                             &lt;a href=&quot;/pages/getting-started.html&quot; property=&quot;dc:title&quot;&gt;Getting Started&lt;/a&gt;
                         &lt;/li&gt;
+                        
+                    
                         
                     
                         
@@ -123,9 +154,7 @@
     &lt;/div&gt;
     &lt;div class=&quot;container&quot;&gt;
         &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
-            
-
-&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+            &lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
     &lt;p&gt;Bonjour &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -135,7 +164,7 @@
         &lt;h3&gt;Related Posts&lt;/h3&gt;
         &lt;nav class=&quot;linklist&quot;&gt;
             
-                &lt;li&gt;&lt;span&gt;Nov 21 2011&lt;/span&gt;
+                &lt;li&gt;&lt;span&gt;Mar 23 2012&lt;/span&gt;
                 &amp;raquo;
                 &lt;a href=&quot;/posts/hello.html&quot;&gt;Hello&lt;/a&gt;&lt;/li&gt;
             
@@ -147,7 +176,7 @@
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2012-01-02T06:24:57Z and has 23 documents
+                This website was generated on 2012-03-23T17:49:54Z and has 23 documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
@@ -165,15 +194,18 @@ Bonjour **world**&lt;/pre&gt;
         &lt;/section&gt;
     &lt;/div&gt;&lt;!-- /container --&gt;
 &lt;/body&gt;
-&lt;/html&gt;</content>
+&lt;/html&gt;
+</content>
             </entry>
+        
+    
         
     
         
             <entry>
                 <title>Hello</title>
                 <link href="http://balupton.com/posts/hello.html"/>
-                <updated>2011-11-20T21:11:36Z</updated>
+                <updated>2012-03-23T11:21:16Z</updated>
                 <id>http://balupton.com/posts/hello.html</id>
                 <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lange=&quot;en&quot;&gt;
@@ -201,6 +233,7 @@ Bonjour **world**&lt;/pre&gt;
     &lt;!-- Styles --&gt;
     &lt;link href=&quot;/styles/style.css&quot; rel=&quot;stylesheet&quot;/&gt;
     &lt;link href=&quot;/vendor/prettify.css&quot; rel=&quot;stylesheet&quot;/&gt;
+    &lt;link href=&quot;/vendor/responsive.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
     
 &lt;/head&gt;
 &lt;body&gt;
@@ -211,18 +244,18 @@ Bonjour **world**&lt;/pre&gt;
     &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 
     &lt;!-- Markup --&gt;
-    &lt;div class=&quot;topbar&quot;&gt;
-        &lt;div class=&quot;fill&quot;&gt;
-            &lt;div class=&quot;container fixed&quot;&gt;
-                &lt;h3&gt;&lt;a href=&quot;/&quot;&gt;Welcome&lt;/a&gt;&lt;/h3&gt;
-                &lt;ul&gt;
-                    
-                        
+    &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Welcome&lt;/a&gt;
+                &lt;ul class=&quot;nav&quot;&gt;
                     
                         
                         &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/getting-started.html&quot; class=&quot;&quot;&gt;
                             &lt;a href=&quot;/pages/getting-started.html&quot; property=&quot;dc:title&quot;&gt;Getting Started&lt;/a&gt;
                         &lt;/li&gt;
+                        
+                    
                         
                     
                         
@@ -273,9 +306,7 @@ Bonjour **world**&lt;/pre&gt;
     &lt;/div&gt;
     &lt;div class=&quot;container&quot;&gt;
         &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
-            
-
-&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+            &lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
     &lt;p&gt;Hello &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -285,7 +316,7 @@ Bonjour **world**&lt;/pre&gt;
         &lt;h3&gt;Related Posts&lt;/h3&gt;
         &lt;nav class=&quot;linklist&quot;&gt;
             
-                &lt;li&gt;&lt;span&gt;Nov 21 2011&lt;/span&gt;
+                &lt;li&gt;&lt;span&gt;Mar 23 2012&lt;/span&gt;
                 &amp;raquo;
                 &lt;a href=&quot;/posts/bonjour.html&quot;&gt;Bonjour&lt;/a&gt;&lt;/li&gt;
             
@@ -297,7 +328,7 @@ Bonjour **world**&lt;/pre&gt;
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2012-01-02T06:24:57Z and has 23 documents
+                This website was generated on 2012-03-23T17:49:54Z and has 23 documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
@@ -315,40 +346,9 @@ Hello **world**&lt;/pre&gt;
         &lt;/section&gt;
     &lt;/div&gt;&lt;!-- /container --&gt;
 &lt;/body&gt;
-&lt;/html&gt;</content>
+&lt;/html&gt;
+</content>
             </entry>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
         
     
         

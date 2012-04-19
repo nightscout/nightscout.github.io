@@ -24,6 +24,7 @@
 	<!-- Styles -->
 	<link href="/styles/style.css" rel="stylesheet"/>
 	<link href="/vendor/prettify.css" rel="stylesheet"/>
+	<link href="/vendor/responsive.min.css" rel="stylesheet"/>
 	<%- @blocks.styles.join('') %>
 </head>
 <body>
@@ -34,11 +35,11 @@
 	<script src="/scripts/script.js"></script>
 
 	<!-- Markup -->
-	<div class="topbar">
-		<div class="fill">
-			<div class="container fixed">
-				<h3><a href="/">Welcome</a></h3>
-				<ul>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="/">Welcome</a>
+				<ul class="nav">
 					<% for document in @documents: %>
 						<% if document.url.indexOf('/pages') == 0: %>
 						<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
@@ -64,7 +65,7 @@
 			<h3 id="source-header"><a>Click to view this page's source</a></h3>
 			<div id="source-code">
 				<div><%= 'src/'+@document.relativePath %></div>
-				<pre class="prettyprint"><%= @document.contentRaw %></pre>
+				<pre class="prettyprint"><%= @document.data %></pre>
 			</div>
 		</section>
 	</div><!-- /container -->

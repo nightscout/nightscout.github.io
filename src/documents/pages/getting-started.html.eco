@@ -3,14 +3,25 @@ layout: 'default'
 title: 'Getting Started'
 ---
 
-<!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
-	<h1>Getting Started</h1>
-	<p>A work in progress...</p>
+<h1>Getting Started</h1>
+
+<div class="well">
+  <ul class="nav nav-list">
+    <li class="nav-header"><a href="#markups">Markups</a></li>
+    <% for document in @database.sort('title':1): %>
+    <% if document.url.indexOf('/markups') == 0: %>
+    <li><a href="#<%= document.filename %>"><%= document.title %></a></li>
+    <% end %>
+    <% end %>
+    <li class="nav-header"><a href="#blog">Example Blog Posts</a></li>
+    <li class="nav-header"><a href="#blog">Nifties</a></li>
+    <li class="nav-header"><a href="#blog">View page source</a></li>
+  </ul>
 </div>
 
-<h2>Markups</h2>
-<table class="bordered-table zebra-striped">
+
+<h2 id="markups">Markups</h2>
+<table class="table table-bordered table-striped">
 	<thead>
 		<tr>
 			<th style="width: 50%;">Source File</th>
@@ -20,7 +31,7 @@ title: 'Getting Started'
 	<tbody>
 		<% for document in @database.sort('title':1): %>
 			<% if document.url.indexOf('/markups') == 0: %>
-			<tr typeof="sioc:Page" about="<%= document.url %>">
+			<tr typeof="sioc:Page" about="<%= document.url %>" id="<%= document.filename %>">
 				<td colspan="2">
 					<strong><%= document.title %></strong>
 				<td>
@@ -42,7 +53,7 @@ title: 'Getting Started'
 	</tbody>
 </table>
 
-<h2>Example Blog Posts</h2>
+<h2 id="blog">Example Blog Posts</h2>
 <ul>
 	<% for document in @documents: %>
 		<% if document.url.indexOf('/posts') == 0: %>
@@ -53,7 +64,7 @@ title: 'Getting Started'
 	<% end %>
 </ul>
 
-<h2>Nifties</h2>
+<h2 id="nifties">Nifties</h2>
 <ul>
 	<% for document in @documents: %>
 		<% if document.url.indexOf('/nifty') == 0: %>
