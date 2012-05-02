@@ -1,57 +1,78 @@
-# -------------------------------------
-# Configuration
-
 # Requires
-docpad = require 'docpad'
-express = require 'express'
-
-# Variables
-oneDay = 86400000
-expiresOffset = oneDay
+docpad = require('docpad')
+express = require('express')
 
 
-# -------------------------------------
-# DocPad Creation
-
+# =====================================
 # Configuration
-docpadPort = process.env.DOCPADPORT || process.env.PORT || 10113
+
+# Port
+# Check our environment for our port number otherwise use a default port
+# Usually, node.js webservers will set the process.env.PORT variable to the port we should use
+# The process.env.WEBSITEPORT variable can be customised by our parent application if this site is only a module
+docpadPort = process.env.WEBSITEPORT || process.env.PORT || 10113
 
 # Create Servers
+# Create our webserver to be used with DocPad
 docpadServer = express.createServer()
 
-# Setup DocPad
-docpadInstance = docpad.createInstance
+# Prepare our DocPad configuration
+docpadConfig =
+	checkVersion: false
 	port: docpadPort
-	maxAge: expiresOffset
+	maxAge: 86400000  # one day
 	server: docpadServer
-	plugins:
-		admin: requireAuthentication: true
-		rest: requireAuthentication: true
-
-# Extract Logger
-logger = docpadInstance.logger
 
 
-# -------------------------------------
-# Server Configuration
+# =====================================
+# Start & Extend DocPad
 
-# DNS Servers
-# masterServer.use express.vhost 'yourwebsite.*', docpadServer
-
-# Start Server
-# docpadInstance.action 'server'
-docpadInstance.action 'server generate' # we need the generate for dynamic documents, if you don't utilise dynamic documents, then you just need the server
-
-
-# -------------------------------------
-# Server Extensions
-
-# Place any custom routing here
-# http://expressjs.com/
+# Create DocPad with our configuration, and wait for it to load
+docpadInstance = docpad.createInstance docpadConfig, (err) ->
+	# Prepare
+	throw err  if err
+	logger = docpadInstance.logger
 
 
+	# ---------------------------------
+	# Server Configuration
 
-# -------------------------------------
+	# Redirect Middleware
+	# Used to redirect from serveral other locations our website is accessible from
+	# to another location
+	docpadServer.use (req,res,next) ->
+		if req.headers.host in ['www.website.com','website.herokuapp.com']  # from location
+			res.redirect('http://website.com'+req.url, 301)  # to location
+		else
+			next()
+
+	# Start our server, and perform an initial generation
+	docpadInstance.action('server generate')
+
+
+	# ---------------------------------
+	# Server Extensions
+
+	# Redirect /madewith to http://docpad.io
+	# feel free to remove this if you don't think it is an awesome idea
+	docpadServer.get /^madewith$/, (req, res) ->
+		project = req.params[0]
+		res.redirect('http://docpad.io/', 301)
+
+
+	# ---------------------------------
+	# DocPad Extensions
+
+	# Regenerate every hour
+	# this is used so our cachr feeds stay alive and up-to-date
+	setInterval(
+		-> docpadInstance.action 'generate'
+		1000*60*60  # one hour
+	)
+
+
+# =====================================
 # Exports
 
+# Export the DocPad Server we created
 module.exports = docpadServer

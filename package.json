@@ -4,67 +4,48 @@
 	"description": "Kitchensink Skeleton for DocPad, based off Twitter's Bootstrap",
 	"homepage": "https://github.com/bevry/kitchensink.docpad",
 	"keywords": [
-		"twitter",
-		"bootstrap",
-		"website",
+		"docpad-skeleton",
 		"docpad",
-		"theme"
+		"website",
+		"initializr",
+		"html5 boiler plate",
+		"h5bp",
+		"bootstrap",
+		"twitter bootstrap"
 	],
-	"author": {
-		"name": "Bevry Pty Ltd",
-		"email": "us@bevry.me",
-		"url": "http://bevry.me"
-	},
-	"maintainers": [
-		{
-			"name": "Benjamin Lupton",
-			"email": "b@lupton.cc",
-			"url": "http://balupton.com"
-		}
-	],
-	"contributors": [
-		{
-			"name": "Benjamin Lupton",
-			"email": "b@lupton.cc",
-			"url": "http://balupton.com"
-		}
-	],
+    "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+    "maintainers": [
+        "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+    ],
+    "contributors": [
+        "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+    ],
 	"bugs": {
 		"url": "https://github.com/bevry/kitchensink.docpad/issues"
 	},
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "https://github.com/bevry/kitchensink.docpad/blob/master/LICENSE.txt"
-		}
-	],
 	"repository" : {
 		"type" : "git",
 		"url" : "http://github.com/bevry/kitchensink.docpad.git"
 	},
 	"dependencies": {
-		"coffee-script": "1.2.x",
+		"coffee-script": "1.3.x",
 		"express": "2.5.x",
-		"docpad": "2.6.1"
+		"docpad": "5.1.x",
+		"docpad-plugin-cachr": "1.0.x",
+		"docpad-plugin-cleanurls": "1.0.x",
+		"docpad-plugin-coffee": "1.0.x",
+		"docpad-plugin-eco": "1.0.x",
+		"docpad-plugin-feedr": "1.0.x",
+		"docpad-plugin-jade": "1.0.x",
+		"docpad-plugin-less": "1.0.x",
+		"docpad-plugin-markdown": "1.0.x",
+		"docpad-plugin-partials": "1.0.x",
+		"docpad-plugin-roy": "1.0.x",
+		"docpad-plugin-sass": "1.0.x",
+		"docpad-plugin-stylus": "1.0.x"
 	},
 	"engines" : {
-		"node": ">=0.4.0"
-	},
-	"docpad": {
-		"enabledPlugins": {
-			"admin": true,
-			"rest": true,
-			"authenticate": false,
-			"autoupdate": false,
-			"buildr": false,
-			"html2jade": false
-		},
-		"plugins": {
-			"coffee": {
-				"coffeekup": {
-					"format": true
-				}
-			}
-		}
+		"node": ">=0.4.0",
+		"docpad": "5.x"
 	}
 }

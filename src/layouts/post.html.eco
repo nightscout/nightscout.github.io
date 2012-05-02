@@ -7,7 +7,7 @@ layout: 'default'
 </div>
 
 <footer>
-	<% if @document.relatedDocuments.length: %>
+	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
 	<section id="related">
 		<h3>Related Posts</h3>
 		<nav class="linklist">

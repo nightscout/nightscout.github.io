@@ -8,7 +8,7 @@ title: 'Getting Started'
 <div class="well">
   <ul class="nav nav-list">
     <li class="nav-header"><a href="#markups">Markups</a></li>
-    <% for document in @database.sort('title':1): %>
+    <% for document in @database.sortArray('title':1): %>
     <% if document.url.indexOf('/markups') == 0: %>
     <li><a href="#<%= document.filename %>"><%= document.title %></a></li>
     <% end %>
@@ -29,7 +29,7 @@ title: 'Getting Started'
 		</tr>
 	</thead>
 	<tbody>
-		<% for document in @database.sort('title':1): %>
+		<% for document in @database.sortArray('title':1): %>
 			<% if document.url.indexOf('/markups') == 0: %>
 			<tr typeof="sioc:Page" about="<%= document.url %>" id="<%= document.filename %>">
 				<td colspan="2">
