@@ -7,15 +7,15 @@ title: 'Getting Started'
 
 <div class="well">
   <ul class="nav nav-list">
-    <li class="nav-header"><a href="#markups">Markups</a></li>
-    <% for document in @database.sortArray('title':1): %>
-    <% if document.url.indexOf('/markups') == 0: %>
-    <li><a href="#<%= document.filename %>"><%= document.title %></a></li>
-    <% end %>
-    <% end %>
-    <li class="nav-header"><a href="#blog">Example Blog Posts</a></li>
-    <li class="nav-header"><a href="#blog">Nifties</a></li>
-    <li class="nav-header"><a href="#blog">View page source</a></li>
+	<li class="nav-header"><a href="#markups">Markups</a></li>
+	<% for document in @database.sortArray('title':1): %>
+	<% if document.url.indexOf('/markups') == 0: %>
+	<li><a href="#<%= document.filename %>"><%= document.title %></a></li>
+	<% end %>
+	<% end %>
+	<li class="nav-header"><a href="#blog">Example Blog Posts</a></li>
+	<li class="nav-header"><a href="#blog">Nifties</a></li>
+	<li class="nav-header"><a href="#blog">View page source</a></li>
   </ul>
 </div>
 
@@ -39,7 +39,7 @@ title: 'Getting Started'
 			<tr typeof="sioc:Page" about="<%= document.url %>">
 				<td>
 					<%= document.filename %>
-					<pre class="prettyprint lang-<%= document.filename.replace(/^.*\./,'') %>"><%= document.content.replace(/^\s+/,'') %></pre>
+					<pre class="prettyprint lang-<%= document.filename.replace(/^.*\./,'') %>"><%= (document.content or '').replace(/^\s+/,'') %></pre>
 				</td>
 				<td>
 					<a href="<%= document.url %>">
