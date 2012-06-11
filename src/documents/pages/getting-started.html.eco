@@ -8,10 +8,10 @@ title: 'Getting Started'
 <div class="well">
   <ul class="nav nav-list">
 	<li class="nav-header"><a href="#markups">Markups</a></li>
-	<% for document in @database.sortArray('title':1): %>
-	<% if document.url.indexOf('/markups') == 0: %>
-	<li><a href="#<%= document.filename %>"><%= document.title %></a></li>
-	<% end %>
+	<% for document in @getCollection('documents').sortArray('title':1): %>
+		<% if document.url.indexOf('/markups') == 0: %>
+		<li><a href="#<%= document.filename %>"><%= document.title %></a></li>
+		<% end %>
 	<% end %>
 	<li class="nav-header"><a href="#blog">Example Blog Posts</a></li>
 	<li class="nav-header"><a href="#blog">Nifties</a></li>
@@ -29,7 +29,7 @@ title: 'Getting Started'
 		</tr>
 	</thead>
 	<tbody>
-		<% for document in @database.sortArray('title':1): %>
+		<% for document in @getCollection('documents').sortArray('title':1): %>
 			<% if document.url.indexOf('/markups') == 0: %>
 			<tr typeof="sioc:Page" about="<%= document.url %>" id="<%= document.filename %>">
 				<td colspan="2">
@@ -45,7 +45,7 @@ title: 'Getting Started'
 					<a href="<%= document.url %>">
 						<%= document.url.replace(/^.*\//,'') %>
 					</a>
-					<pre class="prettyprint lang-<%= document.extension %>"><%= document.contentRendered.replace(/^\s+/,'') %></pre>
+					<pre class="prettyprint lang-<%= document.extension %>"><%= (document.contentRendered or '').replace(/^\s+/,'') %></pre>
 				</td>
 			</tr>
 			<% end %>
@@ -55,7 +55,7 @@ title: 'Getting Started'
 
 <h2 id="blog">Example Blog Posts</h2>
 <ul>
-	<% for document in @documents: %>
+	<% for document in @getCollection('documents').toJSON(): %>
 		<% if document.url.indexOf('/posts') == 0: %>
 		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'	if @document.url is document.url %>">
 			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
@@ -66,7 +66,7 @@ title: 'Getting Started'
 
 <h2 id="nifties">Nifties</h2>
 <ul>
-	<% for document in @documents: %>
+	<% for document in @getCollection('documents').toJSON(): %>
 		<% if document.url.indexOf('/nifty') == 0: %>
 		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'	if @document.url is document.url %>">
 			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>

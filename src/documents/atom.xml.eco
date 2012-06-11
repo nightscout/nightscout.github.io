@@ -3,19 +3,19 @@
 	<title>Benjamin Lupton</title>
 	<link href="http://balupton.com/atom.xml" rel="self"/>
 	<link href="http://balupton.com"/>
-	<updated><%= @site.date.toIsoDateString() %></updated>
+	<updated><%= @site.date.toISOString() %></updated>
 	<id>http://balupton.com</id>
 	<author>
 		<name>Benjamin Lupton</name>
 		<email>b@lupton.cc</email>
 	</author>
 
-	<% for document in @documents: %>
+	<% for document in @getCollection('documents').toJSON(): %>
 		<% if document.url.indexOf('/posts') == 0: %>
 			<entry>
 				<title><%= document.title %></title>
 				<link href="http://balupton.com<%= document.url %>"/>
-				<updated><%= document.date.toIsoDateString() %></updated>
+				<updated><%= document.date.toISOString() %></updated>
 				<id>http://balupton.com<%= document.url %></id>
 				<content type="html"><%= document.contentRendered %></content>
 			</entry>

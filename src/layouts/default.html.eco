@@ -9,6 +9,7 @@
 	<title>Bootstrap, from Twitter</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<%- @getBlock('meta').toHTML() %>
 
 	<!-- Icons -->
 	<link rel="shortcut icon" href="images/favicon.ico">
@@ -25,13 +26,13 @@
 	<link href="/styles/style.css" rel="stylesheet"/>
 	<link href="/vendor/prettify.css" rel="stylesheet"/>
 	<link href="/vendor/responsive.min.css" rel="stylesheet"/>
-	<%- @blocks.styles.join('') %>
+	<%- @getBlock('styles').toHTML() %>
 </head>
 <body>
 	<!-- Scripts -->
 	<script src="/vendor/jquery-1.6.4.min.js"></script>
 	<script src="/vendor/prettify.js"></script>
-	<%- @blocks.scripts.join('') %>
+	<%- @getBlock('scripts').toHTML() %>
 	<script src="/scripts/script.js"></script>
 
 	<!-- Markup -->
@@ -40,7 +41,7 @@
 			<div class="container">
 				<a class="brand" href="/">Welcome</a>
 				<ul class="nav">
-					<% for document in @documents: %>
+					<% for document in @getCollection('documents').toJSON(): %>
 						<% if document.url.indexOf('/pages') == 0: %>
 						<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
 							<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
@@ -58,7 +59,7 @@
 		<footer>
 			<p>&copy; Company 2011</p>
 			<p style="float:right;">
-				This website was generated on <%= @site.date.toIsoDateString() %> and has <%= @site.totalDocuments %> documents
+				This website was generated on <%= @site.date.toISOString() %> and has <%= @site.totalDocuments %> documents
 			</p>
 		</footer>
 		<section id="source" class="source">
