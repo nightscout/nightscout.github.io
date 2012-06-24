@@ -3,7 +3,7 @@
     <title>Benjamin Lupton</title>
     <link href="http://balupton.com/atom.xml" rel="self"/>
     <link href="http://balupton.com"/>
-    <updated>2012-06-24T08:17:56.642Z</updated>
+    <updated>2012-06-24T08:28:03.867Z</updated>
     <id>http://balupton.com</id>
     <author>
         <name>Benjamin Lupton</name>
@@ -59,9 +59,10 @@
     &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
     &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
-    &lt;title&gt;Bootstrap, from Twitter&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-    &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+    &lt;title&gt;Bonjour | Kitchensink Skeleton for DocPad&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using Twitter Bootstrap.&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot; /&gt;
     
 
     &lt;!-- Icons --&gt;
@@ -76,18 +77,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Styles --&gt;
-    &lt;link href=&quot;/styles/style.css&quot; rel=&quot;stylesheet&quot;/&gt;
-    &lt;link href=&quot;/vendor/prettify.css&quot; rel=&quot;stylesheet&quot;/&gt;
-    &lt;link href=&quot;/vendor/responsive.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
-    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/responsive.min.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;!-- Scripts --&gt;
-    &lt;script src=&quot;/vendor/jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;
-    
-    &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
-
     &lt;!-- Markup --&gt;
     &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
         &lt;div class=&quot;navbar-inner&quot;&gt;
@@ -160,7 +152,7 @@
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2012-06-24T08:17:56.642Z and has  documents
+                This website was generated on 2012-06-24T08:28:03.867Z and has  documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
@@ -177,6 +169,9 @@ Bonjour **world**&lt;/pre&gt;
             &lt;/div&gt;
         &lt;/section&gt;
     &lt;/div&gt;&lt;!-- /container --&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script defer=&quot;defer&quot; src=&quot;/vendor/jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot; src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot; src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -197,9 +192,10 @@ Bonjour **world**&lt;/pre&gt;
     &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
     &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
-    &lt;title&gt;Bootstrap, from Twitter&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
-    &lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+    &lt;title&gt;Hello | Kitchensink Skeleton for DocPad&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using Twitter Bootstrap.&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;&quot; /&gt;
     
 
     &lt;!-- Icons --&gt;
@@ -214,18 +210,9 @@ Bonjour **world**&lt;/pre&gt;
     &lt;![endif]--&gt;
 
     &lt;!-- Styles --&gt;
-    &lt;link href=&quot;/styles/style.css&quot; rel=&quot;stylesheet&quot;/&gt;
-    &lt;link href=&quot;/vendor/prettify.css&quot; rel=&quot;stylesheet&quot;/&gt;
-    &lt;link href=&quot;/vendor/responsive.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
-    
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/vendor/responsive.min.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;!-- Scripts --&gt;
-    &lt;script src=&quot;/vendor/jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;
-    
-    &lt;script src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
-
     &lt;!-- Markup --&gt;
     &lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;
         &lt;div class=&quot;navbar-inner&quot;&gt;
@@ -298,7 +285,7 @@ Bonjour **world**&lt;/pre&gt;
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2012-06-24T08:17:56.642Z and has  documents
+                This website was generated on 2012-06-24T08:28:03.867Z and has  documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
@@ -315,6 +302,9 @@ Hello **world**&lt;/pre&gt;
             &lt;/div&gt;
         &lt;/section&gt;
     &lt;/div&gt;&lt;!-- /container --&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script defer=&quot;defer&quot; src=&quot;/vendor/jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot; src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot; src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -322,17 +312,17 @@ Hello **world**&lt;/pre&gt;
         
     
         
-    
-        
-    
-        
             <entry>
                 <title>Read More</title>
                 <link href="http://balupton.com/posts/readmore"/>
-                <updated>2012-06-24T08:17:55.000Z</updated>
+                <updated>2012-06-24T08:18:48.000Z</updated>
                 <id>http://balupton.com/posts/readmore</id>
                 <content type="html"></content>
             </entry>
+        
+    
+        
+    
         
     
 </feed>

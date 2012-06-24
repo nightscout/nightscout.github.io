@@ -1,7 +1,7 @@
 {
 	"name": "kitchensink.docpad",
-	"version": "0.6.0",
-	"description": "Kitchensink Skeleton for DocPad, based off Twitter's Bootstrap",
+	"version": "0.7.0",
+	"description": "A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using Twitter Bootstrap.",
 	"homepage": "https://github.com/bevry/kitchensink.docpad",
 	"keywords": [
 		"docpad-skeleton",

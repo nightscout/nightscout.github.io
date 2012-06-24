@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width">
-    <title>Bootstrap, from Twitter</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Getting Started | Kitchensink Skeleton for DocPad</title>
+    <meta name="description" content="A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using Twitter Bootstrap." />
+    <meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website" />
+    <meta name="author" content="" />
     
 
     <!-- Icons -->
@@ -23,18 +24,9 @@
     <![endif]-->
 
     <!-- Styles -->
-    <link href="/styles/style.css" rel="stylesheet"/>
-    <link href="/vendor/prettify.css" rel="stylesheet"/>
-    <link href="/vendor/responsive.min.css" rel="stylesheet"/>
-    
+    <link rel="stylesheet" href="/styles/style.css" /><link rel="stylesheet" href="/vendor/prettify.css" /><link rel="stylesheet" href="/vendor/responsive.min.css" />
 </head>
 <body>
-    <!-- Scripts -->
-    <script src="/vendor/jquery-1.6.4.min.js"></script>
-    <script src="/vendor/prettify.js"></script>
-    
-    <script src="/scripts/script.js"></script>
-
     <!-- Markup -->
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -103,7 +95,7 @@
     <li class="nav-header"><a href="#markups">Markups</a></li>
     
         
-        <li><a href="#markdown-to-html.html.md">Markdown to HTML</a></li>
+        <li><a href="#sass-to-css.css.sass">SASS to CSS</a></li>
         
     
         
@@ -139,7 +131,7 @@
         
     
         
-        <li><a href="#sass-to-css.css.sass">SASS to CSS</a></li>
+        <li><a href="#markdown-to-html.html.md">Markdown to HTML</a></li>
         
     
         
@@ -184,25 +176,36 @@
     <tbody>
         
             
-            <tr typeof="sioc:Page" about="/markups/markdown-to-html" id="markdown-to-html.html.md">
+            <tr typeof="sioc:Page" about="/markups/sass-to-css.css" id="sass-to-css.css.sass">
                 <td colspan="2">
-                    <strong>Markdown to HTML</strong>
+                    <strong>SASS to CSS</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/markdown-to-html">
+            <tr typeof="sioc:Page" about="/markups/sass-to-css.css">
                 <td>
-                    markdown-to-html.html.md
-                    <pre class="prettyprint lang-md"># Markdown Example
-
-This page was coded with _markdown_.</pre>
+                    sass-to-css.css.sass
+                    <pre class="prettyprint lang-sass">a
+  :color #fff
+  &amp;:hover
+    :color #000
+  &amp;.active
+    :background #888
+    &amp;:hover
+      :color #fff</pre>
                 </td>
                 <td>
-                    <a href="/markups/markdown-to-html">
-                        markdown-to-html
+                    <a href="/markups/sass-to-css.css">
+                        sass-to-css.css
                     </a>
-                    <pre class="prettyprint lang-md">&lt;h1&gt;Markdown Example&lt;/h1&gt;
-
-&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
+                    <pre class="prettyprint lang-sass">a {
+  color: #fff;}
+a:hover {
+  color: #000;}
+a.active {
+  background: #888;}
+a.active:hover {
+  color: #fff;}
+</pre>
                 </td>
             </tr>
             
@@ -415,36 +418,25 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             
         
             
-            <tr typeof="sioc:Page" about="/markups/sass-to-css.css" id="sass-to-css.css.sass">
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html" id="markdown-to-html.html.md">
                 <td colspan="2">
-                    <strong>SASS to CSS</strong>
+                    <strong>Markdown to HTML</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/sass-to-css.css">
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html">
                 <td>
-                    sass-to-css.css.sass
-                    <pre class="prettyprint lang-sass">a
-  :color #fff
-  &amp;:hover
-    :color #000
-  &amp;.active
-    :background #888
-    &amp;:hover
-      :color #fff</pre>
+                    markdown-to-html.html.md
+                    <pre class="prettyprint lang-md"># Markdown Example
+
+This page was coded with _markdown_.</pre>
                 </td>
                 <td>
-                    <a href="/markups/sass-to-css.css">
-                        sass-to-css.css
+                    <a href="/markups/markdown-to-html">
+                        markdown-to-html
                     </a>
-                    <pre class="prettyprint lang-sass">a {
-  color: #fff;}
-a:hover {
-  color: #000;}
-a.active {
-  background: #888;}
-a.active:hover {
-  color: #fff;}
-</pre>
+                    <pre class="prettyprint lang-md">&lt;h1&gt;Markdown Example&lt;/h1&gt;
+
+&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
                 </td>
             </tr>
             
@@ -557,13 +549,13 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         
     
         
-    
-        
-    
-        
         <li typeof="sioc:Page" about="/posts/readmore" class="">
             <a href="/posts/readmore" property="dc:title">Read More</a>
         </li>
+        
+    
+        
+    
         
     
 </ul>
@@ -633,7 +625,7 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2012-06-24T08:17:56.642Z and has  documents
+                This website was generated on 2012-06-24T08:28:03.867Z and has  documents
             </p>
         </footer>
         <section id="source" class="source">
@@ -720,5 +712,8 @@ title: 'Getting Started'
             </div>
         </section>
     </div><!-- /container -->
+
+    <!-- Scripts -->
+    <script defer="defer" src="/vendor/jquery-1.6.4.min.js"></script><script defer="defer" src="/vendor/prettify.js"></script><script defer="defer" src="/scripts/script.js"></script>
 </body>
 </html>

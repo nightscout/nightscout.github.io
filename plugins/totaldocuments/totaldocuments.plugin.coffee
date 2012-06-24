@@ -7,16 +7,9 @@ module.exports = (BasePlugin) ->
 		name: 'totaldocuments'
 
 		# Ammend our Template Data
-		renderBefore: ({templateData}, next) ->
+		renderBefore: ({templateData}) ->
 			# Prepare
-			documents = @docpad.documents
-			totalDocuments = 0
-			 
-			# Find documents
-			documents.find {}, (err,docs,length) ->
-				# Doesn't have to write to the site document, but it certainly could
-				templateData.site.totalDocuments = length
-				
-				# All done
-				# Continue onto the next plugin
-				next()
+			database = @docpad.getDatabase()
+			
+			# Apply to the global templateData
+			templateData.site.totalDocuments = database.length
