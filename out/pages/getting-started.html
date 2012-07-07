@@ -45,39 +45,39 @@
                         
                     
                         
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li typeof="sioc:Page" about="/pages/getting-started.html" class="active">
-                            <a href="/pages/getting-started.html" property="dc:title">Getting Started</a>
+                        <li typeof="sioc:Page" about="/pages/getting-started" class="active">
+                            <a href="/pages/getting-started" property="dc:title">Getting Started</a>
                         </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
                         
                     
                         
@@ -101,7 +101,13 @@
     <li class="nav-header"><a href="#markups">Markups</a></li>
     
         
-        <li><a href="#markdown-to-html.html.md">Markdown to HTML</a></li>
+    
+        
+    
+        
+        <li><a href="#html-to-jade-example.jade.html">HTML to Jade</a></li>
+        
+    
         
     
         
@@ -117,15 +123,17 @@
         
     
         
+    
+        
         <li><a href="#haml-to-html.html.haml">HAML to HTML</a></li>
+        
+    
         
     
         
         <li><a href="#html-to-coffeekup-example.coffee.html">HTML to CoffeeKup</a></li>
         
     
-        
-        <li><a href="#html-to-jade-example.jade.html">HTML to Jade</a></li>
         
     
         
@@ -137,29 +145,21 @@
         
     
         
+        <li><a href="#markdown-to-html.html.md">Markdown to HTML</a></li>
+        
     
         
         <li><a href="#sass-to-css.css.sass">SASS to CSS</a></li>
         
     
         
+    
+        
+    
+        
+    
+        
         <li><a href="#stylus-to-css.css.stylus">Stylus to CSS</a></li>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
         
     
     <li class="nav-header"><a href="#blog">Example Blog Posts</a></li>
@@ -180,25 +180,31 @@
     <tbody>
         
             
-            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html" id="markdown-to-html.html.md">
+        
+            
+        
+            
+            <tr typeof="sioc:Page" about="/markups/html-to-jade-example.jade" id="html-to-jade-example.jade.html">
                 <td colspan="2">
-                    <strong>Markdown to HTML</strong>
+                    <strong>HTML to Jade</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/markdown-to-html.html">
+            <tr typeof="sioc:Page" about="/markups/html-to-jade-example.jade">
                 <td>
-                    markdown-to-html.html.md
-                    <pre class="prettyprint lang-md"># Markdown Example
-
-This page was coded with _markdown_.</pre>
+                    html-to-jade-example.jade.html
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
+    &lt;h1&gt;HTML to Jade Example&lt;/h1&gt;
+    &lt;p&gt;This page was coded with HTML&lt;/p&gt;
+&lt;/div&gt;</pre>
                 </td>
                 <td>
-                    <a href="/markups/markdown-to-html.html">
-                        markdown-to-html.html
+                    <a href="/markups/html-to-jade-example.jade">
+                        html-to-jade-example.jade
                     </a>
-                    <pre class="prettyprint lang-md">&lt;h1&gt;Markdown Example&lt;/h1&gt;
-
-&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
+                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
+    &lt;h1&gt;HTML to Jade Example&lt;/h1&gt;
+    &lt;p&gt;This page was coded with HTML&lt;/p&gt;
+&lt;/div&gt;</pre>
                 </td>
             </tr>
             
@@ -208,12 +214,14 @@ This page was coded with _markdown_.</pre>
             
         
             
-            <tr typeof="sioc:Page" about="/markups/coffeekup-to-html.html" id="coffeekup-to-html.html.coffee">
+        
+            
+            <tr typeof="sioc:Page" about="/markups/coffeekup-to-html" id="coffeekup-to-html.html.coffee">
                 <td colspan="2">
                     <strong>CoffeeKup to HTML</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/coffeekup-to-html.html">
+            <tr typeof="sioc:Page" about="/markups/coffeekup-to-html">
                 <td>
                     coffeekup-to-html.html.coffee
                     <pre class="prettyprint lang-coffee">div class:'awesome', -&gt;
@@ -221,8 +229,8 @@ This page was coded with _markdown_.</pre>
     p 'This page was coded with coffeekup'</pre>
                 </td>
                 <td>
-                    <a href="/markups/coffeekup-to-html.html">
-                        coffeekup-to-html.html
+                    <a href="/markups/coffeekup-to-html">
+                        coffeekup-to-html
                     </a>
                     <pre class="prettyprint lang-coffee">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;CoffeeKup Example&lt;/h1&gt;&lt;p&gt;This page was coded with coffeekup&lt;/p&gt;&lt;/div&gt;</pre>
                 </td>
@@ -271,12 +279,14 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             
         
             
-            <tr typeof="sioc:Page" about="/markups/haml-to-html.html" id="haml-to-html.html.haml">
+        
+            
+            <tr typeof="sioc:Page" about="/markups/haml-to-html" id="haml-to-html.html.haml">
                 <td colspan="2">
                     <strong>HAML to HTML</strong>
                 <td>
             </tr>
-            <tr typeof="sioc:Page" about="/markups/haml-to-html.html">
+            <tr typeof="sioc:Page" about="/markups/haml-to-html">
                 <td>
                     haml-to-html.html.haml
                     <pre class="prettyprint lang-haml">%div.awesome
@@ -284,12 +294,14 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
   %p This page was coded with HAML.</pre>
                 </td>
                 <td>
-                    <a href="/markups/haml-to-html.html">
-                        haml-to-html.html
+                    <a href="/markups/haml-to-html">
+                        haml-to-html
                     </a>
                     <pre class="prettyprint lang-haml">&lt;div class=&quot;awesome&quot;&gt;&lt;h1&gt;HAML Example&lt;/h1&gt;&lt;p&gt;This page was coded with HAML.&lt;/p&gt;&lt;/div&gt;</pre>
                 </td>
             </tr>
+            
+        
             
         
             
@@ -318,30 +330,6 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             </tr>
             
         
-            
-            <tr typeof="sioc:Page" about="/markups/html-to-jade-example.jade" id="html-to-jade-example.jade.html">
-                <td colspan="2">
-                    <strong>HTML to Jade</strong>
-                <td>
-            </tr>
-            <tr typeof="sioc:Page" about="/markups/html-to-jade-example.jade">
-                <td>
-                    html-to-jade-example.jade.html
-                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
-    &lt;h1&gt;HTML to Jade Example&lt;/h1&gt;
-    &lt;p&gt;This page was coded with HTML&lt;/p&gt;
-&lt;/div&gt;</pre>
-                </td>
-                <td>
-                    <a href="/markups/html-to-jade-example.jade">
-                        html-to-jade-example.jade
-                    </a>
-                    <pre class="prettyprint lang-html">&lt;div class=&quot;awesome&quot;&gt;
-    &lt;h1&gt;HTML to Jade Example&lt;/h1&gt;
-    &lt;p&gt;This page was coded with HTML&lt;/p&gt;
-&lt;/div&gt;</pre>
-                </td>
-            </tr>
             
         
             
@@ -411,6 +399,28 @@ alert &quot;Three cubed is #{math.cube 3}&quot;</pre>
             
         
             
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html" id="markdown-to-html.html.md">
+                <td colspan="2">
+                    <strong>Markdown to HTML</strong>
+                <td>
+            </tr>
+            <tr typeof="sioc:Page" about="/markups/markdown-to-html">
+                <td>
+                    markdown-to-html.html.md
+                    <pre class="prettyprint lang-md"># Markdown Example
+
+This page was coded with _markdown_.</pre>
+                </td>
+                <td>
+                    <a href="/markups/markdown-to-html">
+                        markdown-to-html
+                    </a>
+                    <pre class="prettyprint lang-md">&lt;h1&gt;Markdown Example&lt;/h1&gt;
+
+&lt;p&gt;This page was coded with &lt;em&gt;markdown&lt;/em&gt;.&lt;/p&gt;</pre>
+                </td>
+            </tr>
+            
         
             
             <tr typeof="sioc:Page" about="/markups/sass-to-css.css" id="sass-to-css.css.sass">
@@ -448,6 +458,12 @@ a.active:hover {
             
         
             
+        
+            
+        
+            
+        
+            
             <tr typeof="sioc:Page" about="/markups/stylus-to-css.css" id="stylus-to-css.css.stylus">
                 <td colspan="2">
                     <strong>Stylus to CSS</strong>
@@ -482,22 +498,6 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
             </tr>
             
         
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
     </tbody>
 </table>
 
@@ -511,43 +511,43 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <li typeof="sioc:Page" about="/posts/bonjour.html" class="">
-            <a href="/posts/bonjour.html" property="dc:title">Bonjour</a>
+        <li typeof="sioc:Page" about="/posts/bonjour" class="">
+            <a href="/posts/bonjour" property="dc:title">Bonjour</a>
         </li>
         
     
         
-        <li typeof="sioc:Page" about="/posts/hello.html" class="">
-            <a href="/posts/hello.html" property="dc:title">Hello</a>
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <li typeof="sioc:Page" about="/posts/hello" class="">
+            <a href="/posts/hello" property="dc:title">Hello</a>
         </li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
         
     
         
@@ -568,39 +568,39 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-        <li typeof="sioc:Page" about="/nifty/client-side-editing.html" class="">
-            <a href="/nifty/client-side-editing.html" property="dc:title">Client-Side Editing Wooo!</a>
+        <li typeof="sioc:Page" about="/nifty/client-side-editing" class="">
+            <a href="/nifty/client-side-editing" property="dc:title">Client-Side Editing Wooo!</a>
         </li>
         
     
         
-        <li typeof="sioc:Page" about="/nifty/coffee-parser.html" class="">
-            <a href="/nifty/coffee-parser.html" property="dc:title">Coffee Parser Example</a>
+        <li typeof="sioc:Page" about="/nifty/coffee-parser" class="">
+            <a href="/nifty/coffee-parser" property="dc:title">Coffee Parser Example</a>
         </li>
         
     
         
-        <li typeof="sioc:Page" about="/nifty/dynamic.html" class="">
-            <a href="/nifty/dynamic.html" property="dc:title">Dynamic Content Example</a>
+    
+        
+    
+        
+        <li typeof="sioc:Page" about="/nifty/dynamic" class="">
+            <a href="/nifty/dynamic" property="dc:title">Dynamic Content Example</a>
         </li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
         
     
         
@@ -619,7 +619,7 @@ form input{padding:5px;border:1px solid;-webkit-border-radius:5px;-moz-border-ra
         <footer>
             <p>&copy; Company 2011</p>
             <p style="float:right;">
-                This website was generated on 2012-06-19T11:29:42.323Z and has  documents
+                This website was generated on 2012-07-07T19:08:09.414Z and has  documents
             </p>
         </footer>
         <section id="source" class="source">
