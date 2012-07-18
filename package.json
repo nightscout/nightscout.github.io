@@ -31,13 +31,18 @@
 	"dependencies": {
 		"docpad": "6.x",
 		"docpad-plugin-cleanurls": "2.x",
-		"docpad-plugin-coffee": "2.x",
+		"docpad-plugin-coffeescript": "2.x",
+		"docpad-plugin-coffeekup": "2.x",
 		"docpad-plugin-eco": "2.x",
 		"docpad-plugin-haml": "2.x",
+		"docpad-plugin-html2coffee": "2.x",
 		"docpad-plugin-jade": "2.x",
+		"docpad-plugin-js2coffee": "2.x",
 		"docpad-plugin-less": "2.x",
+		"docpad-plugin-livereload": "2.x",
 		"docpad-plugin-markdown": "2.x",
 		"docpad-plugin-partials": "2.x",
 		"docpad-plugin-stylus": "2.x"
-	}
+	},
+	"main": "node_modules/docpad/bin/docpad-server"
 }
