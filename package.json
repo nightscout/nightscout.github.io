@@ -39,10 +39,12 @@
 		"docpad-plugin-jade": "2.x",
 		"docpad-plugin-js2coffee": "2.x",
 		"docpad-plugin-less": "2.x",
-		"docpad-plugin-livereload": "2.x",
 		"docpad-plugin-markdown": "2.x",
 		"docpad-plugin-partials": "2.x",
 		"docpad-plugin-stylus": "2.x"
+	},
+	"devDependencies": {
+		"docpad-plugin-livereload": "2.x"
 	},
 	"main": "node_modules/docpad/bin/docpad-server"
 }
