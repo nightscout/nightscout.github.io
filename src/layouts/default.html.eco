@@ -49,16 +49,16 @@
 			<%- @content %>
 		</section>
 		<footer>
-			<p>&copy; Company 2011</p>
+			<p>&copy; Company 2012</p>
 			<p style="float:right;">
-				This website was generated on <%= @site.date.toISOString() %> and has <%= @site.totalDocuments %> documents
+				This website was last updated at <%= @site.date.toISOString() %>
 			</p>
 		</footer>
 		<section id="source" class="source">
 			<h3 id="source-header"><a>Click to view this page's source</a></h3>
 			<div id="source-code">
 				<div><%= 'src/'+@document.relativePath %></div>
-				<pre class="prettyprint"><%= @document.data %></pre>
+				<pre class="prettyprint"><%= @document.source %></pre>
 			</div>
 		</section>
 	</div><!-- /container -->
