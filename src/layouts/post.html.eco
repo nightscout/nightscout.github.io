@@ -1,10 +1,11 @@
 ---
-layout: 'default'
+layout: default
 ---
 
-<div id="post" class="post">
-	<%- @content %>
-</div>
+<article id="post" class="post">
+	<h1><%= @document.title %></h1>
+	<div class="post-content"><%- @content %></div>
+</article>
 
 <footer>
 	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>

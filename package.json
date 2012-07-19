@@ -1,8 +1,8 @@
 {
-	"name": "kitchensink.docpad",
-	"version": "0.8.1",
-	"description": "A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using Twitter Bootstrap.",
-	"homepage": "https://github.com/bevry/kitchensink.docpad",
+	"name": "twitter-bootstrap.docpad",
+	"version": "0.9.0",
+	"description": "Twitter Bootstrap skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
+	"homepage": "https://github.com/bevry/twitter-bootstrap.docpad",
 	"keywords": [
 		"docpad-skeleton",
 		"docpad",
@@ -18,11 +18,11 @@
 		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
 	],
 	"bugs": {
-		"url": "https://github.com/bevry/kitchensink.docpad/issues"
+		"url": "https://github.com/docpad/twitter-bootstrap.docpad/issues"
 	},
 	"repository" : {
 		"type" : "git",
-		"url" : "http://github.com/bevry/kitchensink.docpad.git"
+		"url" : "http://github.com/docpad/twitter-bootstrap.docpad.git"
 	},
 	"engines" : {
 		"node": "0.8.x",
@@ -32,16 +32,12 @@
 		"docpad": "6.x",
 		"docpad-plugin-cleanurls": "2.x",
 		"docpad-plugin-coffeescript": "2.x",
-		"docpad-plugin-coffeekup": "2.x",
 		"docpad-plugin-eco": "2.x",
-		"docpad-plugin-haml": "2.x",
-		"docpad-plugin-html2coffee": "2.x",
-		"docpad-plugin-jade": "2.x",
-		"docpad-plugin-js2coffee": "2.x",
 		"docpad-plugin-less": "2.x",
 		"docpad-plugin-markdown": "2.x",
 		"docpad-plugin-partials": "2.x",
-		"docpad-plugin-stylus": "2.x"
+		"docpad-plugin-stylus": "2.x",
+		"docpad-plugin-text": "2.x"
 	},
 	"devDependencies": {
 		"docpad-plugin-livereload": "2.x"

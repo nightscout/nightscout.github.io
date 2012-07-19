@@ -1,7 +1,7 @@
 ---
-title: 'Hello'
-layout: 'post'
-tags: ['greeting','english']
+title: This is a Blog Post
+layout: post
+tags: ['intro','post']
 ---
 
-Hello **world**
+This is a **blog post**

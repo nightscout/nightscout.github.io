@@ -21,17 +21,24 @@ docpadConfig = {
 			]
 
 			# The default title of our website
-			title: "Kitchensink Skeleton for DocPad"
+			title: "Your Website"
 
 			# The website description (for SEO)
 			description: """
-				A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using Twitter Bootstrap.
+				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
 				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
 				"""
+
+			# The website author's name
+			author: "Your Name"
+
+			# The website author's email
+			email: "your@email.com"
+
 
 
 		# -----------------------------
@@ -57,6 +64,20 @@ docpadConfig = {
 		getPreparedKeywords: ->
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
+
+
+	# =================================
+	# Collections
+	# These are special collections that our website makes available to us
+
+	collections:
+		# For instance, this one will fetch in all documents that have pageOrder set within their meta data
+		pages: (database) ->
+			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+
+		# This one, will fetch in all documents that have the tag "post" specified in their meta data
+		posts: (database) ->
+			database.findAllLive({relativeOutDirPath:'posts'},[date:-1])
 
 
 	# =================================

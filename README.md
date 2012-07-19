@@ -1,6 +1,5 @@
-# The Kitchensink Skeleton, for [DocPad](https://github.com/bevry/docpad)
-
-A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using [Twitter Bootstrap](http://twitter.github.com/bootstrap/) .
+# [Twitter Bootstrap](http://twitter.github.com/bootstrap/) skeleton for [DocPad](https://github.com/bevry/docpad)
+Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.
 
 
 ## Getting Started
@@ -10,20 +9,20 @@ A DocPad Skeleton useful for showcasing different features and functionality of 
 1. Clone the project and run the server
 
 	``` bash
-	git clone git://github.com/bevry/website.docpad.git
-	cd website.docpad
+	git clone git://github.com/docpad/twitter-bootstrap.docpad.git
+	cd html5-boilerplate.docpad
 	npm install
-	coffee server.coffee
+	docpad run
 	```
 
-1. [Open http://localhost:10113/](http://localhost:10113/)
+1. [Open http://localhost:9778/](http://localhost:9778/)
 
 1. Start hacking away by modifying the `src` directory
 
 
 ## License
 
-The Kitchensink Skeleton for DocPad is made ["public domain"](http://en.wikipedia.org/wiki/Public_domain) using the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/), as such before you publish your website you should place your desired license here and within the `LICENSE.md` file.
+This skeleton is made ["public domain"](http://en.wikipedia.org/wiki/Public_domain) using the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/), as such before you publish your website you should place your desired license here and within the `LICENSE.md` file.
 
 If you are wanting to open-source your website, we suggest using the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) for content and the [MIT License](http://creativecommons.org/licenses/MIT/) for code. In which case you'd probably want to use the following as your license:
 
@@ -31,8 +30,7 @@ If you are wanting to open-source your website, we suggest using the [Creative C
 
 If you are wanting to close-source your website, we'd suggest using the following:
 
-	Copyright Name (website) <email>
-	All rights reserved
+	Copyright [Your Name](http://your.website). All rights reserved.
 
 Other included things such as themes and libraries are likely already licensed by their own invidual licenses, so be sure to respect their licenses too.
 

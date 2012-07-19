@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Benjamin Lupton</title>
-	<link href="http://balupton.com/atom.xml" rel="self"/>
-	<link href="http://balupton.com"/>
+	<title><%= @site.title %></title>
+	<link href="<%= @site.url %>/atom.xml" rel="self"/>
+	<link href="<%= @site.url %>"/>
 	<updated><%= @site.date.toISOString() %></updated>
-	<id>http://balupton.com</id>
+	<id><%= @site.url %></id>
 	<author>
-		<name>Benjamin Lupton</name>
-		<email>b@lupton.cc</email>
+		<name><%= @site.author %></name>
+		<email><%= @site.email %></email>
 	</author>
 
-	<% for document in @getCollection('documents').toJSON(): %>
-		<% if document.url.indexOf('/posts') == 0: %>
-			<entry>
-				<title><%= document.title %></title>
-				<link href="http://balupton.com<%= document.url %>"/>
-				<updated><%= document.date.toISOString() %></updated>
-				<id>http://balupton.com<%= document.url %></id>
-				<content type="html"><%= document.contentRendered %></content>
-			</entry>
-		<% end %>
+	<% for document in @getCollection('posts').toJSON(): %>
+		<entry>
+			<title><%= document.title %></title>
+			<link href="<%= @site.url+'/'+document.url %>"/>
+			<updated><%= document.date.toISOString() %></updated>
+			<id><%= @site.url+'/'+document.url %></id>
+			<content type="html"><%= document.contentRendered %></content>
+		</entry>
 	<% end %>
 </feed>

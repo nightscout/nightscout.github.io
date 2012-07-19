@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+<article id="page" class="page">
+	<h1><%= @document.title %></h1>
+	<div class="page-content"><%- @content %></div>
+</article>
