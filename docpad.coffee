@@ -77,7 +77,7 @@ docpadConfig = {
 
 		# This one, will fetch in all documents that have the tag "post" specified in their meta data
 		posts: (database) ->
-			database.findAllLive({tags: $has: ['post']}}, [date:-1])
+			database.findAllLive({tags: $has: ['post']}, [date:-1])
 
 
 	# =================================
