@@ -1,1 +1,3 @@
 $ ->
+  $('pre').addClass('prettyprint')
+  prettyPrint()
