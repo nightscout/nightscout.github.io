@@ -13,6 +13,6 @@ footer
       nav.linklist
         each doc in document.relatedDocuments
           li
-            span= doc.date.toShortDateString()
+            span= doc.date.toDateString()
             |  &raquo;&nbsp;
             a(href=doc.url)= doc.title
