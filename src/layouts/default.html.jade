@@ -10,7 +10,7 @@
 
 //- Bootstrap
 - scripts.add(["/vendor/twitter-bootstrap/js/bootstrap.js"])
-- styles.add(["/vendor/twitter-bootstrap/css/bootstrap.css","/vendor/twitter-bootstrap/css/bootstrap-responsive.css"])
+- styles.add(["/vendor/twitter-bootstrap/css/bootstrap.css"])
 
 //- Other Scripts
 - scripts.add(["/vendor/log.js","/vendor/modernizr.js"])
@@ -61,15 +61,15 @@ html(lang="en")
   body
 
     // Markup
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          a.brand(href="/") Welcome
-          ul.nav
-            each doc in getCollection('pages').toJSON()
-              - clazz = (document.url === doc.url) ? 'active' : null
-              li(typeof="sioc:Page", about=doc.url, class=clazz)
-                a(href=doc.url, property="dc:title")= doc.title
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href="/") Welcome
+        ul.nav.navbar-nav
+          each doc in getCollection('pages').toJSON()
+            - clazz = (document.url === doc.url) ? 'active' : null
+            li(typeof="sioc:Page", about=doc.url, class=clazz)
+              a(href=doc.url, property="dc:title")= doc.title
     .container
       section#content.content!= content
       hr
