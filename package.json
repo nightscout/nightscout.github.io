@@ -48,6 +48,6 @@
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
-    "postinstall": "node_modules/bower/bin/bower install"
+    "postinstall": "node node_modules/bower/bin/bower install"
   }
 }
