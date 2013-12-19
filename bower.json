@@ -1,0 +1,6 @@
+{
+  "name": "twitter-bootstrap-jade.docpad",
+  "dependencies": {
+    "components-bootstrap": "~3.0.3"
+  }
+}
