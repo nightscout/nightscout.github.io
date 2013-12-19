@@ -1,49 +1,53 @@
 {
-	"name": "twitter-bootstrap.docpad",
-	"version": "0.9.0",
-	"description": "Twitter Bootstrap skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
-	"homepage": "https://github.com/bevry/twitter-bootstrap.docpad",
-	"keywords": [
-		"docpad-skeleton",
-		"docpad",
-		"website",
-		"bootstrap",
-		"twitter bootstrap"
-	],
-	"author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
-	"maintainers": [
-		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
-	],
-	"contributors": [
-		"Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
-	],
-	"bugs": {
-		"url": "https://github.com/docpad/twitter-bootstrap.docpad/issues"
-	},
-	"repository" : {
-		"type" : "git",
-		"url" : "http://github.com/docpad/twitter-bootstrap.docpad.git"
-	},
-	"engines" : {
-		"node": "0.8.x",
-		"npm": "1.1.x"
-	},
-	"dependencies": {
-		"docpad": "6.x",
-		"docpad-plugin-cleanurls": "2.x",
-		"docpad-plugin-coffeescript": "2.x",
-		"docpad-plugin-eco": "2.x",
-		"docpad-plugin-less": "2.x",
-		"docpad-plugin-marked": "2.x",
-		"docpad-plugin-partials": "2.x",
-		"docpad-plugin-stylus": "2.x",
-		"docpad-plugin-text": "2.x",
-		"docpad-plugin-jade": "2.x",
-		"docpad-plugin-related": "2.x",
+  "name": "twitter-bootstrap.docpad",
+  "version": "0.9.0",
+  "description": "Twitter Bootstrap skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
+  "homepage": "https://github.com/bevry/twitter-bootstrap.docpad",
+  "keywords": [
+    "docpad-skeleton",
+    "docpad",
+    "website",
+    "bootstrap",
+    "twitter bootstrap"
+  ],
+  "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+  "maintainers": [
+    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+  ],
+  "contributors": [
+    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
+  ],
+  "bugs": {
+    "url": "https://github.com/docpad/twitter-bootstrap.docpad/issues"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/docpad/twitter-bootstrap.docpad.git"
+  },
+  "engines" : {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "dependencies": {
+    "docpad": "6.x",
+    "docpad-plugin-cleanurls": "2.x",
+    "docpad-plugin-coffeescript": "2.x",
+    "docpad-plugin-eco": "2.x",
+    "docpad-plugin-less": "2.x",
+    "docpad-plugin-marked": "2.x",
+    "docpad-plugin-partials": "2.x",
+    "docpad-plugin-stylus": "2.x",
+    "docpad-plugin-text": "2.x",
+    "docpad-plugin-jade": "2.x",
+    "docpad-plugin-related": "2.x",
     "marked": "*"
-	},
-	"devDependencies": {
-		"docpad-plugin-livereload": "2.x"
-	},
-	"main": "node_modules/docpad/bin/docpad-server"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "2.x",
+    "bower": "~1"
+  },
+  "main": "node_modules/docpad/bin/docpad-server",
+  "scripts": {
+    "postinstall": "node_modules/bower/bin/bower install"
+  }
 }
