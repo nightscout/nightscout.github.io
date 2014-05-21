@@ -17,6 +17,9 @@ one might use Nightscout.
 > Please review the LICENSE found within each repository for further
 details. Do not use the information or code to make medical decisions.
 
+Most likely, you will find yourself with a broken Dexcom receiver.
+The reciever's USB port was not intended to be used often.  Even
+careful users report broken USB ports.
 
 ## Basic Concept of Operations
 
