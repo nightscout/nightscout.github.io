@@ -1,0 +1,12 @@
+branches:
+  only:
+  - source
+language: node_js
+script:
+- make travis
+env:
+  global:
+  - FOO="BAR"
+  - GH_REPO="nightscout/nightscout.github.io"
+  - secure: yFo//teMuac3gkSBBiK/Gs9uaxuJZ93PXViE9fQbg/MerbcsaKnjNcUhId17fHGXm8j5G3AZ9sfpzB6ISlJllxujiBovgNF45yRx3xDHIi+vuluxBIpMlM+rRO/nsm3VE3Hr96SM5WiMv+1bHoUUYWXeMcI96nTvVdzTrwxzb00=
+  - secure: EI+cb+MYloj6imzQ7vQA1FYLJYqIJBDWnbwG6HinRIYl+jiKWmzrK/aemT22uyHT22hP03cndO5/b1aTkktl/KFuF1FfkEIyRemVQPOKc9/p5g1qsty7jcllJcM2NWVuakOjKPkUpGAJpIJULTy9294yvBaKfu+cdsD3AibYv7k=
