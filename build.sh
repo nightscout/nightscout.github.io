@@ -6,12 +6,16 @@ function replace_token ( ) {
 
 rm -Rf out
 # mkdir out
+export GIT_EMAIL=$GIT_EMAIL
+export GIT_NAME=$GIT_NAME
 GIT_REMOTE=$(git config remote.origin.url)
 NEW_REMOTE=$(replace_token $GIT_REMOTE)
 ( git clone -q -b master $NEW_REMOTE out ) 2>&1 > /dev/null
 ls out
 (
   cd out;
+  git config user.email $GIT_EMAIL
+  git config user.name $GIT_NAME
   git rm -r -q ./*
   ls
 
