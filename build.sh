@@ -6,7 +6,7 @@ export GIT_EMAIL=$GIT_EMAIL
 export GIT_NAME=$GIT_NAME
 echo $FOO $BAR
 GIT_REMOTE=$(git config remote.origin.url)
-export NEW_REMOTE="${GH_TOKEN}@github.com:${GH_REPO}.git"
+export NEW_REMOTE="https://${GH_TOKEN}@github.com/${GH_REPO}.git"
 ( git clone -q -b master "$NEW_REMOTE" out ) 2>&1 > /dev/null
 ls out
 (
