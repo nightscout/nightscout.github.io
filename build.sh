@@ -1,17 +1,13 @@
 #! /bin/bash -eu
 
-function replace_token ( ) {
-  echo $1 | sed -e "s/git@/$GH_TOKEN@/g"
-}
-
 rm -Rf out
 # mkdir out
 export GIT_EMAIL=$GIT_EMAIL
 export GIT_NAME=$GIT_NAME
 echo $FOO $BAR
 GIT_REMOTE=$(git config remote.origin.url)
-NEW_REMOTE=$(replace_token $GIT_REMOTE)
-( git clone -q -b master $NEW_REMOTE out ) 2>&1 > /dev/null
+export NEW_REMOTE="${GH_TOKEN}@github.com:${GH_REPO}.git"
+( git clone -q -b master "$NEW_REMOTE" out ) 2>&1 > /dev/null
 ls out
 (
   cd out;
