@@ -4,7 +4,7 @@ function replace_token ( ) {
   echo $1 | sed -e "s/git@/$GH_TOKEN@/g"
 }
 
-rm -f out
+rm -Rf out
 # mkdir out
 GIT_REMOTE=$(git config remote.origin.url)
 NEW_REMOTE=$(replace_token $GIT_REMOTE)
