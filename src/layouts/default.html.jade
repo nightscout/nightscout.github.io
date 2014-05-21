@@ -62,12 +62,13 @@ html(lang="en")
 
     // Markup
     // For now hide the navbar, single page site
-    nav.navbar.navbar-default.navbar-fixed-top(style="display: none")
+    - showNav = document.HideNav ? "display: none" :  ""
+    nav.navbar.navbar-default.navbar-fixed-top(style=showNav)
       .container
         .navbar-header
           a.navbar-brand(href="/") Welcome
         ul.nav.navbar-nav
-          each doc in getCollection('pages').toJSON()
+          each doc in getCollection('posts').toJSON()
             - clazz = (document.url === doc.url) ? 'active' : null
             li(typeof="sioc:Page", about=doc.url, class=clazz)
               a(href=doc.url, property="dc:title")= doc.title
