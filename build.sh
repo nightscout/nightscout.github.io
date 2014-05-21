@@ -19,10 +19,13 @@ ls out
 msg="build from $(git rev-parse HEAD)"
 (
   cd out;
+  cp ../.travis.yml .
   touch .nojekyll
   git config --local user.email "$GIT_EMAIL"
   git config --local user.name "$GIT_NAME"
-  git add ./
+  git add .
+  git add .travis.yml
+  git add .nojekyll
   git status
   git commit -avm "$msg"
   # gh-pages uses master branch on user/org repos
