@@ -4,6 +4,6 @@ out: src
 
 
 travis: out
-	./build.sh
+	env ./build.sh
 
 .PHONY: travis
