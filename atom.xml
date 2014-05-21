@@ -3,7 +3,7 @@
   <title>Nightscout, open source, DIY CGM in the cloud</title>
   <link href="http://nightscout.github.io//atom.xml" rel="self"/>
   <link href="http://nightscout.github.io/"/>
-  <updated>2014-05-21T21:35:56.152Z</updated>
+  <updated>2014-05-21T22:54:38.855Z</updated>
   <id>http://nightscout.github.io/</id>
   <author>
     <name>Nightscout contributors</name>
@@ -12,13 +12,207 @@
 
   
     <entry>
-      <title>This is a Blog Post</title>
-      <link href="http://nightscout.github.io//posts/hello"/>
-      <updated>2014-05-21T21:34:20.000Z</updated>
-      <id>http://nightscout.github.io//posts/hello</id>
-      <content type="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;!-- Meta--&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;title&gt;This is a Blog Post | Nightscout, open source, DIY CGM in the cloud&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;We are not waiting!  How to build Nightscout CGM in the cloud.&quot;&gt;&lt;meta name=&quot;keywords&quot; content=&quot;Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time&quot;&gt;&lt;meta name=&quot;author&quot; content=&quot;Nightscout contributors&quot;&gt;&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.65.0&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;&lt;!-- Icons--&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/ico/favicon.ico&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/ico/apple-touch-icon-144-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/ico/apple-touch-icon-114-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;/ico/apple-touch-icon-72-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/ico/apple-touch-icon-57-precomposed.png&quot;&gt;&lt;!--if lt IE 9script(async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;)
---&gt;&lt;!-- Styles--&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/components-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- Markup--&gt;&lt;!-- For now hide the navbar, single page site--&gt;&lt;nav style=&quot;display: none&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;navbar-brand&quot;&gt;Welcome&lt;/a&gt;&lt;/div&gt;&lt;ul class=&quot;nav navbar-nav&quot;&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/hello&quot;&gt;&lt;a href=&quot;/pages/hello&quot; property=&quot;dc:title&quot;&gt;This is a Page&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Posts&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container&quot;&gt;&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;&lt;h1&gt;This is a Blog Post&lt;/h1&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;This is a &lt;strong&gt;blog post&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Wed May 21 2014 21:35:56 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
+      <title>Nightscout Quickstart Guide, Draft</title>
+      <link href="http://nightscout.github.io//posts/01-quickstart"/>
+      <updated>2014-05-21T22:53:26.000Z</updated>
+      <id>http://nightscout.github.io//posts/01-quickstart</id>
+      <content type="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;!-- Meta--&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;title&gt;Nightscout Quickstart Guide, Draft | Nightscout, open source, DIY CGM in the cloud&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;We are not waiting!  How to build Nightscout CGM in the cloud.&quot;&gt;&lt;meta name=&quot;keywords&quot; content=&quot;Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time&quot;&gt;&lt;meta name=&quot;author&quot; content=&quot;Nightscout contributors&quot;&gt;&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.65.0&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;&lt;!-- Icons--&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/ico/favicon.ico&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/ico/apple-touch-icon-144-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/ico/apple-touch-icon-114-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;/ico/apple-touch-icon-72-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/ico/apple-touch-icon-57-precomposed.png&quot;&gt;&lt;!--if lt IE 9script(async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;)
+--&gt;&lt;!-- Styles--&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/components-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- Markup--&gt;&lt;!-- For now hide the navbar, single page site--&gt;&lt;nav style=&quot;&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;navbar-brand&quot;&gt;Welcome&lt;/a&gt;&lt;/div&gt;&lt;ul class=&quot;nav navbar-nav&quot;&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/01-quickstart&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;/posts/01-quickstart&quot; property=&quot;dc:title&quot;&gt;Nightscout Quickstart Guide, Draft&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container&quot;&gt;&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;&lt;h1&gt;Nightscout Quickstart Guide, Draft&lt;/h1&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;Nightscout is educational source code for monitoring estimated glucose
+values from a Dexcom G4 Receiver.  The following steps describe how
+one might use Nightscout.&lt;/p&gt;
+&lt;h3 id=&quot;-disclaimer-&quot;&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;All information, thought, and code described here is intended for
+informational and educational purposes only. Use of code from
+github.com/rnpenguin is without warranty or support of any kind.
+Please review the LICENSE found within each repository for further
+details. Do not use the information or code to make medical decisions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;basic-concept-of-operations&quot;&gt;Basic Concept of Operations&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Dexcom G4 Sensor / Transmitter sends wireless signal to Dexcom G4
+Receiver&lt;/li&gt;
+&lt;li&gt;Dexcom G4 Receiver is connected via USB OTG (On The Go) cable to
+an Android Uploader Device&lt;/li&gt;
+&lt;li&gt;Android Uploader Device sends data to MongoDB database somewhere
+in the Cloud&lt;/li&gt;
+&lt;li&gt;Cloud Service hosts a Node.js server, which serves pages to
+endpoint devices&lt;/li&gt;
+&lt;li&gt;Endpoint devices display glucose information and generate audible
+alerts&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;specific-instructions&quot;&gt;Specific Instructions&lt;/h2&gt;
+&lt;p&gt;It will be easier to follow along if you print these instructions.
+This document describes the steps to deploy Nightscout on the
+following hardware / services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dexcom G4 Receiver&lt;/li&gt;
+&lt;li&gt;Moto G phone (for uploading from the Dexcom)&lt;/li&gt;
+&lt;li&gt;Mongolab (for storing data on the cloud)&lt;/li&gt;
+&lt;li&gt;Microsoft Azure (for serving web pages)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Setup should take about an hour.  Don’t skip steps, and please see
+instructions at the end if you have any suggestions for improving the
+clarity / correctness of these instructions.&lt;/p&gt;
+&lt;h3 id=&quot;dexcom-g4-receiver&quot;&gt;Dexcom G4 Receiver&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Important: the USB jack is very fragile.&lt;/strong&gt;
+Many people have broken their jack. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If a cable is plugged into the jack and the receiver is dropped
+it may break&lt;/li&gt;
+&lt;li&gt;Repeated plugging / unplugging may cause it to break&lt;/li&gt;
+&lt;li&gt;Various hacks (styrofoam, fishing tackle cases, person game
+system cases, pouches) have been used to protect the cable
+connection.  Drilling a hole in the case above the jack and
+filling it with 5 minute epoxy may provide additional mechanical
+strength.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;moto-g-phone-get-a-phone-unlock-it-and-root-it&quot;&gt;Moto G phone – get a phone, unlock it, and root it&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Buy the version of the phone which will work with your preferred
+cellular provider&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep in mind this phone’s primary purpose is an uploader.
+Because it must remain connected to the Dexcom receiver which
+has a fragile USB connection, it is best to minimize its use an
+actual phone.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The phone will need to be unlocked and “rooted” for the software
+to turn the USB power off between uploads (otherwise the Dexcom
+will charge, draining the phone’s battery)
+Following the unlocking and rooting instructions here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://androidadvices.com/root-moto-g-android-phone-firmware-guide/#.U1cii_ldWCk&quot;&gt;http://androidadvices.com/root-moto-g-android-phone-firmware-guide/#.U1cii_ldWCk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-b&quot;&gt;https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-b&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.technewscentral.co.uk/how-to-enable-usb-debugging-and-developer-options-in-android-4-2-and-higher-android-4-2android-4-3android-4-4/id_7250&quot;&gt;http://www.technewscentral.co.uk/how-to-enable-usb-debugging-and-developer-options-in-android-4-2-and-higher-android-4-2android-4-3android-4-4/id_7250&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.swedroid.se/forum/showthread.php?t=106595&quot;&gt;http://www.swedroid.se/forum/showthread.php?t=106595&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://forum.xda-developers.com/showthread.php?t=2585755&quot;&gt;http://forum.xda-developers.com/showthread.php?t=2585755&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Set up web access (wifi, cellular)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Put the phone aside for a moment, and set up MongoLab&lt;/li&gt;
+&lt;li&gt;Do not upgrade the Android OS or return it to factory defaults,
+or the phone will need to be re-rooted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;mongolab&quot;&gt;MongoLab&lt;/h3&gt;
+&lt;p&gt;Sign up for a free account at &lt;a href=&quot;http://www.mongolab.com&quot;&gt;http://www.mongolab.com&lt;/a&gt; and&lt;/p&gt;
+&lt;p&gt;record the information you provide:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;       account name: _______
+       username: _______
+       email: _______
+       password: _______
+       database user: _______ (e.g. sallyuser)
+       database user password: _______ (e.g. sallypassword)
+       Cloud Provider: _______ (e.g. amazon webservices)
+       Location: ____________ (e.g. Amazon’s US East (Virginia) Region
+       (us-east-1)
+       Plan: Single-node (development), Sandbox
+       New destination database name: _________ (e.g. nightscout)
+       Add a collection: _______ (e.g. sally)
+       Once all has been configured, on the Database summary page,
+       copy the link under “To connect using a driver via the standard
+       URI”, as this will be used to configure both the Android App
+       and the Node.js server.  It will look something like this:
+       mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The 500MB free tier should be enough to store 10 years of data&lt;/p&gt;
+&lt;h3 id=&quot;moto-g&quot;&gt;Moto G&lt;/h3&gt;
+&lt;p&gt;Compile and Install the uploader&lt;/p&gt;
+&lt;h4 id=&quot;setup&quot;&gt;setup&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://developer.android.com/sdk/installing/studio.html&quot;&gt;Download and install Android Studio&lt;/a&gt;,
+along with any updates,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Through the rooting procedure on the Moto G, &lt;a href=&quot;http://developer.android.com/tools/device.html&quot;&gt;usb debugging should
+  already be enabled&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;start-a-new-project&quot;&gt;Start a new project&lt;/h4&gt;
+&lt;p&gt;Start a new project, and &lt;code&gt;git&lt;/code&gt; the &lt;a href=&quot;https://github.com/rnpenguin/dexcom-uploader.git&quot;&gt;source
+code&lt;/a&gt; In
+UploadHelper.java, near the very top, enter the URI information
+from the Mongolab setup above.  It will look something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;private String
+DB_URI=&amp;quot;mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout&amp;quot;;
+private String DB_COLLECTION = &amp;quot;sally&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;compile-and-install&quot;&gt;Compile, and install&lt;/h4&gt;
+&lt;p&gt;Connect the Moto G with a USB cable, and click &lt;strong&gt;Run&lt;/strong&gt; to install the
+application on the Moto G.&lt;/p&gt;
+&lt;p&gt;With Mongolab now set up, the application should be able to start
+uploading.  Connect the Dexcom receiver to the Moto G.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;: when connecting the phone to the Dexcom, the OTG cable
+plugs into the phone, and the regular USB cable plugs into the
+Dexcom.  It will not work the other way, because OTG cables have
+pins 4 and 5 shorted on the microusb connector, the indication to
+the phone that an OTG device is connected.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;During the initial connection, there may be a pop-up asking if the app
+should have permission to run / access services.  Select yes.  The app
+should load, and data should start flowing to Mongolab.
+Using Mongolab credentials from above, verify that data is flowing
+into the database.&lt;/p&gt;
+&lt;p&gt;Android Studio also provides a way to “package” the app as an apk,
+which can then be attached to an email.  On Android devices, the gmail
+app is smart enough to install apps which are attached to emails.  In
+this way, it is very easy to deploy the app to other devices such as
+tablets or micro pcs.  These are especially useful for bedside
+monitoring, since they have their own source of external power.  For
+more information, see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.android.com/tools/publishing/publishing_overview.html&quot;&gt;http://developer.android.com/tools/publishing/publishing_overview.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;microsoft-azure-cloud-service-to-host-website-free-&quot;&gt;Microsoft Azure – cloud service to host website (free)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Visit &lt;a href=&quot;http://azure.microsoft.com&quot;&gt;http://azure.microsoft.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Click “Try for free”&lt;/li&gt;
+&lt;li&gt;Enter or create username: &lt;code&gt;_________&lt;/code&gt; (e.g. sally@outlook.com)&lt;/li&gt;
+&lt;li&gt;Enter or create password: &lt;code&gt;_________&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Enter credit card information (will not be billed, ever, without
+your permission)  &lt;/li&gt;
+&lt;li&gt;Install Microsoft Webmatrix 3 (requires Windows PC); can also be done
+with Eclipse&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;From Webmatrix, select “Open”, “Source Control”, then “Open site from
+GIT” Provide Remote URL:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rnpenguin/cgm-remote-monitor.git&quot;&gt;https://github.com/rnpenguin/cgm-remote-monitor.git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Choose a Site Name: &lt;strong&gt;&lt;strong&gt;_&lt;/strong&gt;&lt;/strong&gt;.azurewebsites.net 
+(e.g.  &lt;code&gt;nightscoutss.azurewebsites.net&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Modify database_configuration.json by providing the MongoLab URI
+information from above.  It will look something like:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;
+ &amp;quot;url&amp;quot;: &amp;quot;
+ mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout
+ &amp;quot;,         
+  &amp;quot;collection&amp;quot;: &amp;quot;sally&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;install bower:  from a command prompt type npm install -g bower
+from the directory where the files were downloaded, open a command
+prompt and type bower install&lt;/li&gt;
+&lt;li&gt;From the Home ribbon, click “Run” to test the site locally.  If all
+is ok, click “Publish” to start the site on Azure.&lt;/li&gt;
+&lt;li&gt;Verify operation by visiting the site, e.g.
+nightscoutss.azurewebsites.net.&lt;/li&gt;
+&lt;li&gt;If blood glucose reaches a dangerous level, an alarm will sound and
+the blood glucose value in the upper right hand corner will turn
+into a red button.  Press the button to silence / acknowledge the
+alarm.  This will also silence the alarm for anyone else who is
+looking at the website.&lt;/li&gt;
+&lt;li&gt;For support, determine your Azure ftp username / password for azure
+website access by following these instructions:
+&lt;a href=&quot;http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx&quot;&gt;http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;-pay-it-forward-&quot;&gt;&lt;strong&gt;Pay it forward&lt;/strong&gt;.&lt;/h2&gt;
+&lt;p&gt;Help a friend.  Enhance Nightscout by providing feedback, ideas,
+bug-fixes, and enhancements&lt;/p&gt;
+&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Wed May 21 2014 22:54:38 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
     </entry>
   
 </feed>
