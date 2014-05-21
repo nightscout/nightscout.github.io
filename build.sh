@@ -24,8 +24,8 @@ msg="build from $(git rev-parse HEAD)"
 (
   cd out;
   touch .nojekyll
-  git config --local user.email $GIT_EMAIL
-  git config --local user.name $GIT_NAME
+  git config --local user.email "$GIT_EMAIL"
+  git config --local user.name "$GIT_NAME"
   git add ./
   git status
   git commit -avm "$msg"
