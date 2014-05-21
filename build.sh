@@ -17,12 +17,12 @@ ls out
 
 )
 ./node_modules/.bin/docpad generate --env static
+msg="build from $(git rev-parse HEAD)"
 (
   cd out;
   touch .nojekyll
   git add ./
   git status
-  msg="build from $((cd ../; git rev-parse HEAD))"
   git commit -avm "$msg"
   # gh-pages uses master branch on user/org repos
   ( git push -q origin master:master
