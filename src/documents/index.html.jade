@@ -3,21 +3,50 @@ layout: 'default'
 title: 'Home'
 ---
 
-// Main hero unit for a primary marketing message or call to action.
 .jumbotron
-  h1 Welcome to your new site!
-  p: :markdown
-    We've copied over the [Twitter Bootstrap Skeleton](https://github.com/docpad/twitter-bootstrap.docpad) for you already, which is what you're currently viewing.
-    <br>
-    Step through the guide below and we'll walk you through the process of working with your first docpad website :-)
+    h1 Nightscout aka, CGM in the Cloud
+    p.intro: :markdown
+      We are not waiting to put our CGMs in the cloud.
+      
+      This is a website run by a community of `DIY`ers to put their
+      Dexcom CGM in the cloud.
+
+      * **Highly experimental.**
+      * **Not intended for therapy.**
+      * **Intended only as an investigational and educational tool to
+        learn about this technology.**
+
 
 // Example row of columns.
 .row
   .col-md-6
-    h2 Docpad
-    p DocPad takes that good ol' simple approach of writing files and wraps it with the best modern innovations, providing an awesome intuitive, liberating and empowering solution for HTML5 web development.</p>
-    p: a.btn.btn-default(href="https://github.com/bevry/docpad") Visit Website
+    div: :markdown
+      ## Guides
+    a.btn.btn-default(href="https://github.com/rnpenguin/cgm-remote-monitor/wiki") Visit wiki 
   .col-md-6
-    h2 Twitter Bootstrap
-    p Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-    p: a.btn.btn-default(href="http://twitter.github.com/bootstrap/") Visit Website
+    div: :markdown
+      ## Groups
+      *  [Facebook group](https://www.facebook.com/groups/cgminthecloud/)
+         See Facebook group for community of other people attempting
+         building their own nightscout rigs.
+      *  [#wearenotwaiting](http://www.diabetesmine.com/we-are-not-waiting)
+  .col-md-6
+    div: :markdown
+      ## Github (the code)
+      Suite of projects that compose Nightscout.
+      * [dexcom-uploader](https://github.com/rnpenguin/dexcom-uploader)
+      * [cgm-remote-monitor](https://github.com/rnpenguin/cgm-remote-monitor)
+      * [pebble-cgm](https://github.com/jasoncalabrese/cgm-pebble)
+      * [project-glu](https://github.com/jasoncalabrese/project-glu)
+      * [This website](https://github.com/nightscout/nightscout.github.io)
+  .col-md-6
+    div: :markdown
+      ## Guides and Docs
+      Nighscout is an open source, community project, which depends on
+      contributions from people like you.
+      Confused? [File an issue!](https://github.com/nightscout/nightscout.github.io/issues)
+      * [wiki](https://github.com/rnpenguin/cgm-remote-monitor/wiki)
+      * [cgm in cloud info from FB](/pdfs/CGM-in-the-Cloud-Info-Sheet-FB.pdf)
+      * [Android Devices with workable usb host](/pdfs/Android-Devices-with-workable-usb-host-FB.pdf)
+      * [Pebble info from FB](/pdfs/CGM-Pebble-App-Install-Tutorial-FB.pdf)
+    p
