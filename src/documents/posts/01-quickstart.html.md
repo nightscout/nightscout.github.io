@@ -250,7 +250,7 @@ Make sure the phone is running in the Pebble App in developer mode.
 
 * Visit the settings menu on the phone and enter the address of your
   `cgm-remote-monitor` from earlier.
-  ![pebble settings app](http://i.imgur.com/SXUcxeU.png)
+  ![pebble settings app](http://i.imgur.com/IOoupMR.png)
   ![pebble config step one](http://i.imgur.com/Pb2DwMh.png)
   ![pebble config step two](http://i.imgur.com/YC64Sh0.png)
 
