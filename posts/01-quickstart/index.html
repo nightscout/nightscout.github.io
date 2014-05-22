@@ -150,51 +150,56 @@ more information, see:</p>
 </ul>
 <h3 id="microsoft-azure-cloud-service-to-host-website-free-">Microsoft Azure – cloud service to host website (free)</h3>
 <ul>
-<li>Visit <a href="http://azure.microsoft.com">http://azure.microsoft.com</a></li>
+<li><a href="https://github.com/">Sign into Github.com</a> with a free account.</li>
+<li><p><a href="https://github.com/nightscout/cgm-remote-monitor/fork"><img src="http://i.imgur.com/gR4wJ24.png" alt="fork"> the cgm-remote-monitor</a></p>
+</li>
+<li><p>Visit <a href="http://azure.microsoft.com">http://azure.microsoft.com</a></p>
+</li>
 <li>Click “Try for free”</li>
 <li>Enter or create username: <code>_________</code> (e.g. sally@outlook.com)</li>
 <li>Enter or create password: <code>_________</code></li>
 <li>Enter credit card information (will not be billed, ever, without
 your permission)  </li>
-<li>Install Microsoft Webmatrix 3 (requires Windows PC); can also be done
-with Eclipse</li>
-<li><p>From Webmatrix, select “Open”, “Source Control”, then “Open site from
-GIT” Provide Remote URL:</p>
-<ul>
-<li><a href="https://github.com/rnpenguin/cgm-remote-monitor.git">https://github.com/rnpenguin/cgm-remote-monitor.git</a></li>
+<li>Go to the <a href="https://manage.windowsazure.com">Azure Portal</a>
+  Create a new Azure site</li>
+<li>Choose a Site Name: <code>_________</code> <code>.azurewebsites.net</code>
+(e.g. <strong><code>nightscoutss</code></strong><code>.azurewebsites.net</code>)</li>
+<li><p>Configure connection strings
+Find the configure tab
+<img src="http://i.imgur.com/dIPRHjt.png" alt="go to configure tab"></p>
+<p>Find the connection strings:
+<img src="http://i.imgur.com/PZjxkjE.png" alt="connection strings"></p>
+<p>Enter your mongo details from before, using the <code>Custom</code> type, for
+<code>mongo</code> and <code>mongo_collection</code> keys.
+<img src="http://i.imgur.com/YKVGcIP.png" alt="configure connection strings">
+The <code>mongo</code> key should be the <code>mongo://</code> url from the Android App.
+The <code>mongo_collection</code> key should match the collection.</p>
+</li>
 </ul>
-</li>
-<li><p>Choose a Site Name: <strong><strong>_</strong></strong>.azurewebsites.net 
-(e.g.  <code>nightscoutss.azurewebsites.net</code>)</p>
-</li>
-<li><p>Modify database_configuration.json by providing the MongoLab URI
-information from above.  It will look something like:</p>
-</li>
-</ul>
-<pre><code class="lang-javascript">
- &quot;url&quot;: &quot;
- mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout
- &quot;,         
-  &quot;collection&quot;: &quot;sally&quot;
-</code></pre>
 <ul>
-<li>install bower:  from a command prompt type npm install -g bower
-from the directory where the files were downloaded, open a command
-prompt and type bower install</li>
-<li>From the Home ribbon, click “Run” to test the site locally.  If all
-is ok, click “Publish” to start the site on Azure.</li>
-<li>Verify operation by visiting the site, e.g.
-nightscoutss.azurewebsites.net.</li>
-<li>If blood glucose reaches a dangerous level, an alarm will sound and
+<li>Find setup deployment from the <code>Dashboard</code> tab of the project.
+<img src="http://i.imgur.com/6UnzWd4.png" alt="find setup deployment "></li>
+<li>Select Github <img src="http://i.imgur.com/iczHBW6.png" alt="select github"></li>
+<li>Authorize Github/Azure access.</li>
+<li><p>Find <code>cgm-remote-monitor</code>:
+<img src="http://i.imgur.com/KbhyIcx.png" alt="find cgm-remote-monitor repo"></p>
+</li>
+<li><p>Confirm, watch the site deploy, it should deploy automatically.</p>
+</li>
+<li><p>Verify operation by visiting the site, e.g.
+<code>http://nightscoutss.azurewebsites.net</code>.</p>
+</li>
+<li><p>If blood glucose reaches a dangerous level, an alarm may sound and
 the blood glucose value in the upper right hand corner will turn
 into a red button.  Press the button to silence / acknowledge the
 alarm.  This will also silence the alarm for anyone else who is
-looking at the website.</li>
+looking at the website.</p>
+</li>
 <li>For support, determine your Azure ftp username / password for azure
 website access by following these instructions:
 <a href="http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx">http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx</a></li>
 </ul>
-<h2 id="-pay-it-forward-"><strong>Pay it forward</strong>.</h2>
+<h2 id="-pay-it-forward-"><strong>Pay it forward</strong></h2>
 <p>Help a friend.  Enhance Nightscout by providing feedback, ideas,
-bug-fixes, and enhancements</p>
-</div></article><footer></footer></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu May 22 2014 00:19:48 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+bug-fixes, and enhancements.</p>
+</div></article><footer></footer></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu May 22 2014 01:31:40 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

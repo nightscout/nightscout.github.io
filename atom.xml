@@ -3,7 +3,7 @@
   <title>Nightscout, open source, DIY CGM in the cloud</title>
   <link href="http://nightscout.github.io//atom.xml" rel="self"/>
   <link href="http://nightscout.github.io/"/>
-  <updated>2014-05-22T00:19:48.256Z</updated>
+  <updated>2014-05-22T01:31:40.678Z</updated>
   <id>http://nightscout.github.io/</id>
   <author>
     <name>Nightscout contributors</name>
@@ -14,7 +14,7 @@
     <entry>
       <title>Nightscout Quickstart Guide, Draft</title>
       <link href="http://nightscout.github.io//posts/01-quickstart"/>
-      <updated>2014-05-22T00:17:55.000Z</updated>
+      <updated>2014-05-22T01:30:24.000Z</updated>
       <id>http://nightscout.github.io//posts/01-quickstart</id>
       <content type="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;!-- Meta--&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;title&gt;Nightscout Quickstart Guide, Draft | Nightscout, open source, DIY CGM in the cloud&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;We are not waiting!  How to build Nightscout CGM in the cloud.&quot;&gt;&lt;meta name=&quot;keywords&quot; content=&quot;Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time&quot;&gt;&lt;meta name=&quot;author&quot; content=&quot;Nightscout contributors&quot;&gt;&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.65.0&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;&lt;!-- Icons--&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/ico/favicon.ico&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/ico/apple-touch-icon-144-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/ico/apple-touch-icon-114-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;/ico/apple-touch-icon-72-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/ico/apple-touch-icon-57-precomposed.png&quot;&gt;&lt;!--if lt IE 9script(async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;)
 --&gt;&lt;!-- Styles--&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/components-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- Markup--&gt;&lt;!-- For now hide the navbar, single page site--&gt;&lt;nav style=&quot;&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;navbar-brand&quot;&gt;Welcome&lt;/a&gt;&lt;/div&gt;&lt;ul class=&quot;nav navbar-nav&quot;&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/01-quickstart&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;/posts/01-quickstart&quot; property=&quot;dc:title&quot;&gt;Nightscout Quickstart Guide, Draft&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container&quot;&gt;&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;&lt;h1&gt;Nightscout Quickstart Guide, Draft&lt;/h1&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;Nightscout is educational source code for monitoring estimated glucose
@@ -168,54 +168,59 @@ more information, see:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;microsoft-azure-cloud-service-to-host-website-free-&quot;&gt;Microsoft Azure – cloud service to host website (free)&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Visit &lt;a href=&quot;http://azure.microsoft.com&quot;&gt;http://azure.microsoft.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/&quot;&gt;Sign into Github.com&lt;/a&gt; with a free account.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/nightscout/cgm-remote-monitor/fork&quot;&gt;&lt;img src=&quot;http://i.imgur.com/gR4wJ24.png&quot; alt=&quot;fork&quot;&gt; the cgm-remote-monitor&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Visit &lt;a href=&quot;http://azure.microsoft.com&quot;&gt;http://azure.microsoft.com&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;Click “Try for free”&lt;/li&gt;
 &lt;li&gt;Enter or create username: &lt;code&gt;_________&lt;/code&gt; (e.g. sally@outlook.com)&lt;/li&gt;
 &lt;li&gt;Enter or create password: &lt;code&gt;_________&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Enter credit card information (will not be billed, ever, without
 your permission)  &lt;/li&gt;
-&lt;li&gt;Install Microsoft Webmatrix 3 (requires Windows PC); can also be done
-with Eclipse&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;From Webmatrix, select “Open”, “Source Control”, then “Open site from
-GIT” Provide Remote URL:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/rnpenguin/cgm-remote-monitor.git&quot;&gt;https://github.com/rnpenguin/cgm-remote-monitor.git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Go to the &lt;a href=&quot;https://manage.windowsazure.com&quot;&gt;Azure Portal&lt;/a&gt;
+  Create a new Azure site&lt;/li&gt;
+&lt;li&gt;Choose a Site Name: &lt;code&gt;_________&lt;/code&gt; &lt;code&gt;.azurewebsites.net&lt;/code&gt;
+(e.g. &lt;strong&gt;&lt;code&gt;nightscoutss&lt;/code&gt;&lt;/strong&gt;&lt;code&gt;.azurewebsites.net&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Configure connection strings
+Find the configure tab
+&lt;img src=&quot;http://i.imgur.com/dIPRHjt.png&quot; alt=&quot;go to configure tab&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Find the connection strings:
+&lt;img src=&quot;http://i.imgur.com/PZjxkjE.png&quot; alt=&quot;connection strings&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Enter your mongo details from before, using the &lt;code&gt;Custom&lt;/code&gt; type, for
+&lt;code&gt;mongo&lt;/code&gt; and &lt;code&gt;mongo_collection&lt;/code&gt; keys.
+&lt;img src=&quot;http://i.imgur.com/YKVGcIP.png&quot; alt=&quot;configure connection strings&quot;&gt;
+The &lt;code&gt;mongo&lt;/code&gt; key should be the &lt;code&gt;mongo://&lt;/code&gt; url from the Android App.
+The &lt;code&gt;mongo_collection&lt;/code&gt; key should match the collection.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Choose a Site Name: &lt;strong&gt;&lt;strong&gt;_&lt;/strong&gt;&lt;/strong&gt;.azurewebsites.net 
-(e.g.  &lt;code&gt;nightscoutss.azurewebsites.net&lt;/code&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Modify database_configuration.json by providing the MongoLab URI
-information from above.  It will look something like:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;
- &amp;quot;url&amp;quot;: &amp;quot;
- mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout
- &amp;quot;,         
-  &amp;quot;collection&amp;quot;: &amp;quot;sally&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;install bower:  from a command prompt type npm install -g bower
-from the directory where the files were downloaded, open a command
-prompt and type bower install&lt;/li&gt;
-&lt;li&gt;From the Home ribbon, click “Run” to test the site locally.  If all
-is ok, click “Publish” to start the site on Azure.&lt;/li&gt;
-&lt;li&gt;Verify operation by visiting the site, e.g.
-nightscoutss.azurewebsites.net.&lt;/li&gt;
-&lt;li&gt;If blood glucose reaches a dangerous level, an alarm will sound and
+&lt;li&gt;Find setup deployment from the &lt;code&gt;Dashboard&lt;/code&gt; tab of the project.
+&lt;img src=&quot;http://i.imgur.com/6UnzWd4.png&quot; alt=&quot;find setup deployment &quot;&gt;&lt;/li&gt;
+&lt;li&gt;Select Github &lt;img src=&quot;http://i.imgur.com/iczHBW6.png&quot; alt=&quot;select github&quot;&gt;&lt;/li&gt;
+&lt;li&gt;Authorize Github/Azure access.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Find &lt;code&gt;cgm-remote-monitor&lt;/code&gt;:
+&lt;img src=&quot;http://i.imgur.com/KbhyIcx.png&quot; alt=&quot;find cgm-remote-monitor repo&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Confirm, watch the site deploy, it should deploy automatically.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Verify operation by visiting the site, e.g.
+&lt;code&gt;http://nightscoutss.azurewebsites.net&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If blood glucose reaches a dangerous level, an alarm may sound and
 the blood glucose value in the upper right hand corner will turn
 into a red button.  Press the button to silence / acknowledge the
 alarm.  This will also silence the alarm for anyone else who is
-looking at the website.&lt;/li&gt;
+looking at the website.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;For support, determine your Azure ftp username / password for azure
 website access by following these instructions:
 &lt;a href=&quot;http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx&quot;&gt;http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;-pay-it-forward-&quot;&gt;&lt;strong&gt;Pay it forward&lt;/strong&gt;.&lt;/h2&gt;
+&lt;h2 id=&quot;-pay-it-forward-&quot;&gt;&lt;strong&gt;Pay it forward&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Help a friend.  Enhance Nightscout by providing feedback, ideas,
-bug-fixes, and enhancements&lt;/p&gt;
-&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Thu May 22 2014 00:19:48 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
+bug-fixes, and enhancements.&lt;/p&gt;
+&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Thu May 22 2014 01:31:40 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
     </entry>
   
 </feed>
