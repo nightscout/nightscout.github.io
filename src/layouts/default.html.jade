@@ -1,5 +1,6 @@
 - var scripts = getBlock('scripts')
 - var styles = getBlock('styles')
+- var urls = getMetaUrls( )
 
 //- Prettify Syntax Highlighting
 - scripts.add(["/vendor/prettify.js"])
@@ -62,7 +63,7 @@ html(lang="en")
 
     // Markup
     // For now hide the navbar, single page site
-    - showNav = document.HideNav ? "display: none" :  ""
+    - var showNav = document.HideNav ? "display: none" :  ""
     nav.navbar.navbar-default.navbar-fixed-top(style=showNav)
       .container
         .navbar-header
@@ -76,6 +77,12 @@ html(lang="en")
       section#content.content!= content
       hr
       footer
+        div
+          h5 Contribute
+          ul
+            li: a.edit.github(href=urls.edit) Edit on github.com
+            li: a.view.github(href=urls.view) View on github.com
+            li: a.edit.prose(href=urls.prose) Edit on prose.io
         div= site.copyright
         div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}
 

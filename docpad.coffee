@@ -68,6 +68,21 @@ docpadConfig =
       # Merge the document keywords with the site keywords
       @site.keywords.concat(@document.keywords or []).join(', ')
 
+    getMetaUrls: ->
+      project = 'nightscout/nightscout.github.io'
+      base = 'https:/github.com/' + project
+      view = 'blob/source'
+      edit = 'edit/source'
+      prose_head = 'http://prose.io'
+      prose_middle = '#' + project + '/edit/source'
+      path_to = 'src/documents'
+      path = @document.relativePath
+      return (
+        repo: base
+        view: [base, view, path_to, path].join('/')
+        edit: [base, edit, path_to, path].join('/')
+        prose: [prose_head, prose_middle, path_to, path].join('/')
+      )
 
   # Collections
   # ===========
