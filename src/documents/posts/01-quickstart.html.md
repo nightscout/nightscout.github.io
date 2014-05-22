@@ -8,7 +8,6 @@ Nightscout is educational source code for monitoring estimated glucose
 values from a Dexcom G4 Receiver.  The following steps describe how
 one might use Nightscout.
 
-
 ### **Disclaimer**
 
 > All information, thought, and code described here is intended for
@@ -94,28 +93,27 @@ Sign up for a free account at http://www.mongolab.com and
 
 record the information you provide:
 
-```
-       account name: _______
-       username: _______
-       email: _______
-       password: _______
-       database user: _______ (e.g. sallyuser)
-       database user password: _______ (e.g. sallypassword)
-       Cloud Provider: _______ (e.g. amazon webservices)
-       Location: ____________ (e.g. Amazon’s US East (Virginia) Region
-       (us-east-1)
-       Plan: Single-node (development), Sandbox
-       New destination database name: _________ (e.g. nightscout)
-       Add a collection: _______ (e.g. sally)
-       Once all has been configured, on the Database summary page,
-       copy the link under “To connect using a driver via the standard
-       URI”, as this will be used to configure both the Android App
-       and the Node.js server.  It will look something like this:
-       mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout
+      account name: _______
+      username: _______
+      email: _______
+      password: _______
+      database user: _______ (e.g. sallyuser)
+      database user password: _______ (e.g. sallypassword)
+      Cloud Provider: _______ (e.g. amazon webservices)
+      Location: ____________ (e.g. Amazon’s US East (Virginia) Region
+      (us-east-1)
+      Plan: Single-node (development), Sandbox
+      New destination database name: _________ (e.g. nightscout)
+      Add a collection: _______ (e.g. sally)
 
-```
 
-The 500MB free tier should be enough to store 10 years of data
+Once all has been configured, on the `Database summary page`,
+copy the link under `To connect using a driver via the standard
+URI`, as this will be used to configure both the Android App
+and the Node.js server.  It will look something like this:
+`mongodb://sallyuser:sallypassword@aabb22.mongolab.com:11111/nightscout`
+
+The 500MB free tier should be enough to store 10 years of data.
 
 ### Moto G
 
@@ -260,6 +258,5 @@ Make sure the phone is running in the Pebble App in developer mode.
 
 Help a friend.  Enhance Nightscout by providing feedback, ideas,
 bug-fixes, and enhancements.
-
 
 
