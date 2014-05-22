@@ -171,6 +171,8 @@ more information, see:
 * http://developer.android.com/tools/publishing/publishing_overview.html
  
 ### Microsoft Azure – cloud service to host website (free)
+  * [Sign into Github.com](https://github.com/) with a free account.
+  * [![fork](http://i.imgur.com/gR4wJ24.png) the cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor/fork)
 
   * Visit http://azure.microsoft.com
   * Click “Try for free”
@@ -178,35 +180,37 @@ more information, see:
   * Enter or create password: `_________`
   * Enter credit card information (will not be billed, ever, without
     your permission)  
-  * Install Microsoft Webmatrix 3 (requires Windows PC); can also be done
-    with Eclipse
-  * From Webmatrix, select “Open”, “Source Control”, then “Open site from
-    GIT” Provide Remote URL:
+  * Go to the [Azure Portal](https://manage.windowsazure.com)
+      Create a new Azure site
+  * Choose a Site Name: `_________` `.azurewebsites.net`
+    (e.g. **`nightscoutss`**`.azurewebsites.net`)
+  * Configure connection strings
+    Find the configure tab
+    ![go to configure tab](http://i.imgur.com/dIPRHjt.png)
 
-    * https://github.com/rnpenguin/cgm-remote-monitor.git
+    Find the connection strings:
+    ![connection strings](http://i.imgur.com/PZjxkjE.png)
 
-  * Choose a Site Name: _________.azurewebsites.net 
-    (e.g.  `nightscoutss.azurewebsites.net`)
+    Enter your mongo details from before, using the `Custom` type, for
+    `mongo` and `mongo_collection` keys.
+    ![configure connection strings](http://i.imgur.com/YKVGcIP.png)
+    The `mongo` key should be the `mongo://` url from the Android App.
+    The `mongo_collection` key should match the collection.
 
-  * Modify database_configuration.json by providing the MongoLab URI
-    information from above.  It will look something like:
 
-```javascript
+  * Find setup deployment from the `Dashboard` tab of the project.
+    ![find setup deployment ](http://i.imgur.com/6UnzWd4.png)
+  * Select Github ![select github](http://i.imgur.com/iczHBW6.png)
+  * Authorize Github/Azure access.
+  * Find `cgm-remote-monitor`:
+    ![find cgm-remote-monitor repo](http://i.imgur.com/KbhyIcx.png)
 
- "url": "
- mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout
- ",         
-  "collection": "sally"
-```
+  * Confirm, watch the site deploy, it should deploy automatically.
 
-  * install bower:  from a command prompt type npm install -g bower
-    from the directory where the files were downloaded, open a command
-    prompt and type bower install
-  * From the Home ribbon, click “Run” to test the site locally.  If all
-    is ok, click “Publish” to start the site on Azure.
   * Verify operation by visiting the site, e.g.
-    nightscoutss.azurewebsites.net.
-  * If blood glucose reaches a dangerous level, an alarm will sound and
+    `http://nightscoutss.azurewebsites.net`.
+
+  * If blood glucose reaches a dangerous level, an alarm may sound and
     the blood glucose value in the upper right hand corner will turn
     into a red button.  Press the button to silence / acknowledge the
     alarm.  This will also silence the alarm for anyone else who is
@@ -215,10 +219,10 @@ more information, see:
     website access by following these instructions:
     http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx
 
-## **Pay it forward**.
+## **Pay it forward**
 
 Help a friend.  Enhance Nightscout by providing feedback, ideas,
-bug-fixes, and enhancements 
+bug-fixes, and enhancements.
 
 
 
