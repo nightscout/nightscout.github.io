@@ -222,7 +222,15 @@ more information, see:
 The Pebble works with your main phone, eg, your iPhone.
 After getting a pebble watch, install the official Pebble App.
 
-* You should be able to [install this pbw](/CGM.pbw)
+#### Easy method
+
+* Search **Watchfaces** for `Nightscout cgm` and install from Pebble
+  App
+
+#### Medium/Hard
+
+If it says `Coming Soon`, you can _sideload_ the `pbw`
+* [install this pbw](/CGM.pbw)
 
 If you cannot here is how to compile a new one for yourself:
 
@@ -239,11 +247,15 @@ IMPORT!
 ```
 
 Make sure the phone is running in the Pebble App in developer mode.
+To enable developer mode, go to
+`settings -> Pebble -> Enable developer mode`.
+Then open the pebble app, and enable developer mode.
 
 * Go to Compilation tab
-* Hit Run Build
+* Hit **Run Build**
+
 * If your phone is in developer mode and everything is working,
-  install and run:
+  your phone will show up in a list, select the install and run:
   ![install and run](http://i.imgur.com/WYIMaAk.png)
 
 * Visit the settings menu on the phone and enter the address of your
