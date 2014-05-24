@@ -92,6 +92,8 @@ Many people have broken their jack.
 Sign up for a free account at http://www.mongolab.com and
 
 record the information you provide:
+Create a **`user`**, a **`database`** and a **`collection`**.
+Save this information:
 
       account name: _______
       username: _______
@@ -108,10 +110,21 @@ record the information you provide:
 
 
 Once all has been configured, on the `Database summary page`,
-copy the link under `To connect using a driver via the standard
-URI`, as this will be used to configure both the Android App
-and the Node.js server.  It will look something like this:
-`mongodb://sallyuser:sallypassword@aabb22.mongolab.com:11111/nightscout`
+**copy the link** under `To connect using a driver via the standard
+URI`, as this will be used to configure both the Android App and the
+Node.js server.  **Copy and paste this string.**  You will use it
+several times below.
+We will refer to it as your **`mongo connection uri`**.
+It will look something like these examples:
+
+```
+  mongodb://<user>:<password>@aabbb.mongolab.com:11111/<database>`
+  mongodb://sallyuser:sallypassword@aabb22.mongolab.com:11111/nightscout`
+```
+
+Make sure you have easy access to your `mongo connection uri` and
+`collection` for the following steps.
+
 
 The 500MB free tier should be enough to store 10 years of data.
 
@@ -131,6 +144,15 @@ Start a new project, and `git` the [source
 code](https://github.com/rnpenguin/dexcom-uploader.git) In
 UploadHelper.java, near the very top, enter the URI information
 from the Mongolab setup above.  It will look something like:
+
+```java
+private String
+DB_URI="";
+private String DB_COLLECTION = "";
+```
+
+**Copy and paste** your `mongo connection uri` from above.
+After, it will look something like this:
 
 ```java
 private String
@@ -192,9 +214,12 @@ more information, see:
     Create two new **Custom** rows.  Enter your mongo details from
     before, using the **`Custom`** type, for
     `mongo` and `mongo_collection` keys.
+    **Copy and paste** your `mongo connection uri` from above in the
+    new `mongo  <mongo connection uri>  Custom` row.
     ![configure connection strings](http://i.imgur.com/YKVGcIP.png)
     The `mongo` key should be the `mongo://` url from the Android App.
-    The `mongo_collection` key should match the collection.
+    The `mongo_collection` key should match the collection from the
+    MongoLab setup.
 
 
   * Find setup deployment from the `Dashboard` tab of the project.
