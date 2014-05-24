@@ -189,7 +189,8 @@ more information, see:
     Find the connection strings:
     ![connection strings](http://i.imgur.com/PZjxkjE.png)
 
-    Enter your mongo details from before, using the `Custom` type, for
+    Create two new **Custom** rows.  Enter your mongo details from
+    before, using the **`Custom`** type, for
     `mongo` and `mongo_collection` keys.
     ![configure connection strings](http://i.imgur.com/YKVGcIP.png)
     The `mongo` key should be the `mongo://` url from the Android App.
