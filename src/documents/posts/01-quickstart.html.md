@@ -168,7 +168,7 @@ more information, see:
 
 * http://developer.android.com/tools/publishing/publishing_overview.html
  
-### Microsoft Azure – cloud service to host website (free)
+### Microsoft Azure – cloud service to host website free
   * [Sign into Github.com](https://github.com/) with a free account.
   * [![fork](http://i.imgur.com/gR4wJ24.png) the cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor/fork)
 
