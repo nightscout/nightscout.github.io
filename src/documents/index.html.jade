@@ -56,3 +56,13 @@ HideNav: true
       * [Android Devices with workable usb host](/pdfs/Android-Devices-with-workable-usb-host-FB.pdf)
       * [Pebble info from FB](/pdfs/CGM-Pebble-App-Install-Tutorial-FB.pdf)
     p
+  .col-md-6
+    div: :markdown
+      ## Posts
+    ul
+      each doc in getCollection('posts').toJSON()
+        li
+          span= doc.date.toDateString()
+          |  &raquo;&nbsp;
+          a(href=doc.url)= doc.title
+
