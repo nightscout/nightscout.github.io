@@ -63,7 +63,7 @@ please drop your favorite Nightscout contributor an email and we'll
 figure it out.
 
 
-## How do free trials work?
+## How do free trials work?  Why did it expire?
 
 The free trial for Azure lasts a month.  Sometime before the trial
 ends, the subscription needs to be converted over to "pay as you go"
@@ -76,7 +76,7 @@ Once the free trial is over, we need to subscribe to some other kind
 of "subscription."  We will choose `pay as we go` and aim to keep our
 usage under the Free watermark for usage.
 
-### Credit card for my free trial vs pay as we go?
+### Credit card for my free use?
 
 Don't be concerned about credit card bills - this will still stay free
 unless you start hosting a big data machine learning competition on
@@ -93,6 +93,8 @@ at every alarm).
 
 ## Pay as you go?
 
+Sometimes this is called, eg by Amazon, "micro-payments", we will aim
+to keep our usage low enough to stay in the free tier.
 Once again don't be concerned about credit card bills - this will
 still stay free unless you start hosting a big data machine learning
 competition on azure.  Little 'ole Nightscout doesn't use much
