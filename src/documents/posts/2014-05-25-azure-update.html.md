@@ -15,6 +15,19 @@ services, circa `2014-05-25`.
 
 There are other providers as well, also with free accounts.
 
+#### Quick takeaway
+
+Your Azure service, even free usage, is paid for using something
+Microsoft calls a **"subscription"**.  The
+[Nightscout quickstart](./01-quickstart/) gets you going with a free
+introductory subscription.  That only lasts about a month.  Before it
+ends, you should transition to the pay-as-you-go subscription.  Our
+usage aims to be at the free "scale" inside the pay-as-you-go
+paradigm.
+
+Even though our usage remains within Microsoft's freebie policy, their
+subscription model requires having a credit card on file.
+
 ## Is Azure free account working?
 
 Nightscout probably just stopped working for you.  Here's why:
