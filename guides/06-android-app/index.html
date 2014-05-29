@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Android App | Nightscout, open source, DIY CGM in the cloud</title><meta name="description" content="We are not waiting!  How to build Nightscout CGM in the cloud."><meta name="keywords" content="Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time"><meta name="author" content="Nightscout contributors"><meta name="generator" content="DocPad v6.66.0" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><!-- For now hide the navbar, single page site--><nav style="" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a href="/" class="navbar-brand">Welcome</a></div><ul class="nav navbar-nav"><li typeof="sioc:Page" about="/posts/01-quickstart"><a href="/posts/01-quickstart" property="dc:title">Nightscout Quickstart Guide, Draft</a></li><li typeof="sioc:Page" about="/posts/2014-05-25-azure-update"><a href="/posts/2014-05-25-azure-update" property="dc:title">Azure free account management</a></li></ul></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><div class="navlinks">
+  <a href="/guides/05-backend-mongolab" title="Previous Post: Configure Data Backend" class="navlinks-prev">&laquo; Configure Data Backend</a>
+  <a href="/guides/07-web-monitor" title="Next Post: Monitor CGM on the web" class="navlinks-next">Monitor CGM on the web &raquo;</a>
+</div><h1>Android App</h1><div class="page-content"><h3 id="moto-g">Moto G</h3>
+<p>Compile and Install the uploader</p>
+<h4 id="setup">setup</h4>
+<p><a href="http://developer.android.com/sdk/installing/studio.html">Download and install Android Studio</a>,
+along with any updates,</p>
+<blockquote>
+<p>Through the rooting procedure on the Moto G, <a href="http://developer.android.com/tools/device.html">usb debugging should
+  already be enabled</a>.</p>
+</blockquote>
+<h4 id="start-a-new-project">Start a new project</h4>
+<p>Start a new project, and <code>git</code> the <a href="https://github.com/rnpenguin/dexcom-uploader.git">source
+code</a> In
+UploadHelper.java, near the very top, enter the URI information
+from the Mongolab setup above.  It will look something like:</p>
+<pre><code class="lang-java">private String
+DB_URI=&quot;&quot;;
+private String DB_COLLECTION = &quot;&quot;;
+</code></pre>
+<p><strong>Copy and paste</strong> your <code>mongo connection uri</code> from above.
+After, it will look something like this:</p>
+<pre><code class="lang-java">private String
+DB_URI=&quot;mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout&quot;;
+private String DB_COLLECTION = &quot;sally&quot;;
+</code></pre>
+<h4 id="compile-and-install">Compile, and install</h4>
+<p>Connect the Moto G with a USB cable, and click <strong>Run</strong> to install the
+application on the Moto G.</p>
+<p>With Mongolab now set up, the application should be able to start
+uploading.  Connect the Dexcom receiver to the Moto G.</p>
+<blockquote>
+<p><strong>Important</strong>: when connecting the phone to the Dexcom, the OTG cable
+plugs into the phone, and the regular USB cable plugs into the
+Dexcom.  It will not work the other way, because OTG cables have
+pins 4 and 5 shorted on the microusb connector, the indication to
+the phone that an OTG device is connected.</p>
+</blockquote>
+<p>During the initial connection, there may be a pop-up asking if the app
+should have permission to run / access services.  Select yes.  The app
+should load, and data should start flowing to Mongolab.
+Using Mongolab credentials from above, verify that data is flowing
+into the database.</p>
+<p>Android Studio also provides a way to “package” the app as an apk,
+which can then be attached to an email.  On Android devices, the gmail
+app is smart enough to install apps which are attached to emails.  In
+this way, it is very easy to deploy the app to other devices such as
+tablets or micro pcs.  These are especially useful for bedside
+monitoring, since they have their own source of external power.  For
+more information, see:</p>
+<ul>
+<li><a href="http://developer.android.com/tools/publishing/publishing_overview.html">http://developer.android.com/tools/publishing/publishing_overview.html</a></li>
+</ul>
+</div></article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/guides/06-android-app.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu May 29 2014 22:49:22 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

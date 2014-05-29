@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Monitor CGM on the web | Nightscout, open source, DIY CGM in the cloud</title><meta name="description" content="We are not waiting!  How to build Nightscout CGM in the cloud."><meta name="keywords" content="Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time"><meta name="author" content="Nightscout contributors"><meta name="generator" content="DocPad v6.66.0" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><!-- For now hide the navbar, single page site--><nav style="" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a href="/" class="navbar-brand">Welcome</a></div><ul class="nav navbar-nav"><li typeof="sioc:Page" about="/posts/01-quickstart"><a href="/posts/01-quickstart" property="dc:title">Nightscout Quickstart Guide, Draft</a></li><li typeof="sioc:Page" about="/posts/2014-05-25-azure-update"><a href="/posts/2014-05-25-azure-update" property="dc:title">Azure free account management</a></li></ul></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><div class="navlinks">
+  <a href="/guides/06-android-app" title="Previous Post: Android App" class="navlinks-prev">&laquo; Android App</a>
+  <a href="/guides/08-smartwatch" title="Next Post: Pebble Smartwatch" class="navlinks-next">Pebble Smartwatch &raquo;</a>
+</div><h1>Monitor CGM on the web</h1><div class="page-content"><h3 id="microsoft-azure-cloud-service-to-host-website-free">Microsoft Azure – cloud service to host website free</h3>
+<ul>
+<li><a href="https://github.com/">Sign into Github.com</a> with a free account.</li>
+<li><p><a href="https://github.com/nightscout/cgm-remote-monitor/fork"><img src="http://i.imgur.com/gR4wJ24.png" alt="fork"> the cgm-remote-monitor</a></p>
+</li>
+<li><p>Visit <a href="http://azure.microsoft.com">http://azure.microsoft.com</a></p>
+</li>
+<li>Click “Try for free”</li>
+<li>Enter or create username: <code>_________</code> (e.g. sally@outlook.com)</li>
+<li>Enter or create password: <code>_________</code></li>
+<li>Enter credit card information (will not be billed, ever, without
+your permission)  </li>
+<li>Go to the <a href="https://manage.windowsazure.com">Azure Portal</a>
+  Create a new Azure site</li>
+<li>Choose a Site Name: <code>_________</code> <code>.azurewebsites.net</code>
+(e.g. <strong><code>nightscoutss</code></strong><code>.azurewebsites.net</code>)</li>
+<li><p>Configure connection strings
+Find the configure tab
+<img src="http://i.imgur.com/dIPRHjt.png" alt="go to configure tab"></p>
+<p>Find the connection strings:
+<img src="http://i.imgur.com/PZjxkjE.png" alt="connection strings"></p>
+<p>Create two new <strong>Custom</strong> rows.  Enter your mongo details from
+before, using the <strong><code>Custom</code></strong> type, for
+<code>mongo</code> and <code>mongo_collection</code> keys.
+<strong>Copy and paste</strong> your <code>mongo connection uri</code> from above in the
+new <code>mongo  &lt;mongo connection uri&gt;  Custom</code> row.
+<img src="http://i.imgur.com/YKVGcIP.png" alt="configure connection strings">
+The <code>mongo</code> key should be the <code>mongo://</code> url from the Android App.
+The <code>mongo_collection</code> key should match the collection from the
+MongoLab setup.</p>
+</li>
+</ul>
+<ul>
+<li>Find setup deployment from the <code>Dashboard</code> tab of the project.
+<img src="http://i.imgur.com/6UnzWd4.png" alt="find setup deployment "></li>
+<li>Select Github <img src="http://i.imgur.com/iczHBW6.png" alt="select github"></li>
+<li>Authorize Github/Azure access.</li>
+<li><p>Find <code>cgm-remote-monitor</code>:
+<img src="http://i.imgur.com/KbhyIcx.png" alt="find cgm-remote-monitor repo"></p>
+</li>
+<li><p>Confirm, watch the site deploy, it should deploy automatically.</p>
+</li>
+<li><p>Verify operation by visiting the site, e.g.
+<code>http://nightscoutss.azurewebsites.net</code>.</p>
+</li>
+<li><p>If blood glucose reaches a dangerous level, an alarm may sound and
+the blood glucose value in the upper right hand corner will turn
+into a red button.  Press the button to silence / acknowledge the
+alarm.  This will also silence the alarm for anyone else who is
+looking at the website.</p>
+</li>
+<li>For support, determine your Azure ftp username / password for azure
+website access by following these instructions:
+<a href="http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx">http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx</a></li>
+</ul>
+</div></article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/guides/07-web-monitor.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/guides/07-web-monitor.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/guides/07-web-monitor.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu May 29 2014 22:49:22 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
