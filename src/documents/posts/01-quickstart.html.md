@@ -1,7 +1,8 @@
 ---
 title: Nightscout Quickstart Guide, Draft
-layout: post
-tags: ['guide','quickstart','post']
+layout: quickstart
+tags: ['guide','post']
+guide: quickstart
 ---
 
 Nightscout is educational source code for monitoring estimated glucose

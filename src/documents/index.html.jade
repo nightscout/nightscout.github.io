@@ -66,4 +66,13 @@ HideNav: true
           span= doc.date.toDateString()
           |  &raquo;&nbsp;
           a(href=doc.url)= doc.title
+  .col-md-6
+    div: :markdown
+      ## Quickstart
+    ul
+      each doc in getCollection('quickstart').toJSON()
+        li
+          span= doc.date.toDateString()
+          |  &raquo;&nbsp;
+          a(href=doc.url)= doc.title
 

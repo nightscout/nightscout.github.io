@@ -7,3 +7,4 @@ src/files/vendor/components-bootstrap
 src/files/vendor/jquery
 .docpad.db
 .*.sw?
+src/files/vendor/

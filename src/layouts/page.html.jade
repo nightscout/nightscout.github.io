@@ -2,6 +2,8 @@
 layout: default
 ---
 
-article#page.page
+- var guide = document.guide || "Another Nightscout Guide"
+
+article#guide.page.guide
   h1= document.title
   .page-content!= content
