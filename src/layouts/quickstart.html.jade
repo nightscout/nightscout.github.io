@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+article#page.page
+  h1= document.title
+  .page-content!= content
+  = partial('disclaimer.html.jade', { })
+  for x in getCollection(document.guide || 'quickstart').toJSON( )
+    = partial('block.html.jade', { content: x.contentRenderedWithoutLayouts, navlinks: x.navlinks, url: x.url, tags: x.tags, name: x.name, title: x.title, date: x.date, header: x.header, slug: x.slug })
+  = partial('pay-it-forward.html.md', { })

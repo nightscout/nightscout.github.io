@@ -20,11 +20,11 @@
   "bugs": {
     "url": "https://github.com/docpad/twitter-bootstrap.docpad/issues"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/docpad/twitter-bootstrap.docpad.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/docpad/twitter-bootstrap.docpad.git"
   },
-  "engines" : {
+  "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
   },
@@ -40,7 +40,8 @@
     "docpad-plugin-text": "2.x",
     "docpad-plugin-jade": "2.x",
     "docpad-plugin-related": "2.x",
-    "marked": "*"
+    "marked": "*",
+    "docpad-plugin-navlinks": "~2.0.4"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x",

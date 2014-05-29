@@ -38,7 +38,7 @@ docpadConfig =
       author: "Nightscout contributors"
 
       # The website author's email
-      email: "bewest+nightscout@gmail.com"
+      email: "nightscout.core@gmail.com"
 
       # Your company's name
       copyright: "© Nightscout contributors 2014"
@@ -84,6 +84,15 @@ docpadConfig =
         prose: [prose_head, prose_middle, path_to, path].join('/')
       )
 
+  # Plugins
+  # =======
+  plugins:
+    navlinks:
+      collections:
+        posts: -1
+        pages: 1
+        quickstart: 1
+        guides: 1
   # Collections
   # ===========
   # These are special collections that our website makes available to us
@@ -96,6 +105,12 @@ docpadConfig =
     # This one, will fetch in all documents that will be outputted to the posts directory
     posts: (database) ->
       database.findAllLive({relativeOutDirPath:'posts'},[date:-1])
+    guides: (database) ->
+      database.findAllLive({relativeOutDirPath:'guides', tags: {'$in': 'guide' }},[pageOrder:1, date:-1])
+
+    quickstart: (database) ->
+      database.findAllLive({relativeOutDirPath:'guides', tags: {'$in': 'quickstart' }},[pageOrder:1, date:-1])
+
 
   # DocPad Events
   # =============

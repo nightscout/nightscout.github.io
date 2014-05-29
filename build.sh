@@ -20,6 +20,7 @@ msg="build from $(git rev-parse HEAD)"
 (
   cd out;
   cp ../master.travis .travis.yml
+  cp ../CNAME CNAME
   touch .nojekyll
   git config --local user.email "$GIT_EMAIL"
   git config --local user.name "$GIT_NAME"
