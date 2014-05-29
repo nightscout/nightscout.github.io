@@ -1,14 +1,7 @@
 ---
 title: Welcome
 layout: guide
-pageOrder: 1
+pageOrder: 0
 tags: ['guide','quickstart','post']
 ---
-
-## my special content
-Here it is.
-
-* one
-* two
-* three
 

@@ -6,10 +6,4 @@ pageOrder: 1
 tags: ['guide','quickstart','post']
 ---
 
-## my special content
-Here it is.
-
-* one
-* two
-* three
-
+Nightscout is a project composed of several parts.
