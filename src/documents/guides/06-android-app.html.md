@@ -16,30 +16,18 @@ along with any updates,
   already be enabled](http://developer.android.com/tools/device.html).
 
 #### Start a new project
-Start a new project, and `git` the [source
-code](https://github.com/rnpenguin/dexcom-uploader.git) In
-UploadHelper.java, near the very top, enter the URI information
-from the Mongolab setup above.  It will look something like:
+Start a new project, and `git` the
+[source code](https://github.com/nightscout/dexcom-uploader.git)
 
-```java
-private String
-DB_URI="";
-private String DB_COLLECTION = "";
-```
-
-**Copy and paste** your `mongo connection uri` from above.
-After, it will look something like this:
-
-```java
-private String
-DB_URI="mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout";
-private String DB_COLLECTION = "sally";
-```
 
 #### Compile, and install
 
 Connect the Moto G with a USB cable, and click **Run** to install the
 application on the Moto G.
+
+##### Configure preferences
+Go into the settings menu in the CGM android app.  It is in the upper right
+corner.  **Copy and paste** your `mongo connection uri` from above.
 
 With Mongolab now set up, the application should be able to start
 uploading.  Connect the Dexcom receiver to the Moto G.
@@ -54,7 +42,8 @@ During the initial connection, there may be a pop-up asking if the app
 should have permission to run / access services.  Select yes.  The app
 should load, and data should start flowing to Mongolab.
 Using Mongolab credentials from above, verify that data is flowing
-into the database.
+into the database by logging into MongoLab, and inspecting the collection you
+created for any documents.
 
 Android Studio also provides a way to “package” the app as an apk,
 which can then be attached to an email.  On Android devices, the gmail
