@@ -12,23 +12,14 @@ along with any updates,</p>
   already be enabled</a>.</p>
 </blockquote>
 <h4 id="start-a-new-project">Start a new project</h4>
-<p>Start a new project, and <code>git</code> the <a href="https://github.com/rnpenguin/dexcom-uploader.git">source
-code</a> In
-UploadHelper.java, near the very top, enter the URI information
-from the Mongolab setup above.  It will look something like:</p>
-<pre><code class="lang-java">private String
-DB_URI=&quot;&quot;;
-private String DB_COLLECTION = &quot;&quot;;
-</code></pre>
-<p><strong>Copy and paste</strong> your <code>mongo connection uri</code> from above.
-After, it will look something like this:</p>
-<pre><code class="lang-java">private String
-DB_URI=&quot;mongodb://sallyuser:sallypassword@ds011111.mongolab.com:11111/nightscout&quot;;
-private String DB_COLLECTION = &quot;sally&quot;;
-</code></pre>
+<p>Start a new project, and <code>git</code> the
+<a href="https://github.com/nightscout/dexcom-uploader.git">source code</a></p>
 <h4 id="compile-and-install">Compile, and install</h4>
 <p>Connect the Moto G with a USB cable, and click <strong>Run</strong> to install the
 application on the Moto G.</p>
+<h5 id="configure-preferences">Configure preferences</h5>
+<p>Go into the settings menu in the CGM android app.  It is in the upper right
+corner.  <strong>Copy and paste</strong> your <code>mongo connection uri</code> from above.</p>
 <p>With Mongolab now set up, the application should be able to start
 uploading.  Connect the Dexcom receiver to the Moto G.</p>
 <blockquote>
@@ -42,7 +33,8 @@ the phone that an OTG device is connected.</p>
 should have permission to run / access services.  Select yes.  The app
 should load, and data should start flowing to Mongolab.
 Using Mongolab credentials from above, verify that data is flowing
-into the database.</p>
+into the database by logging into MongoLab, and inspecting the collection you
+created for any documents.</p>
 <p>Android Studio also provides a way to “package” the app as an apk,
 which can then be attached to an email.  On Android devices, the gmail
 app is smart enough to install apps which are attached to emails.  In
@@ -53,4 +45,4 @@ more information, see:</p>
 <ul>
 <li><a href="http://developer.android.com/tools/publishing/publishing_overview.html">http://developer.android.com/tools/publishing/publishing_overview.html</a></li>
 </ul>
-</div></article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/guides/06-android-app.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Sat May 31 2014 18:29:39 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/guides/06-android-app.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Sat May 31 2014 20:28:27 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
