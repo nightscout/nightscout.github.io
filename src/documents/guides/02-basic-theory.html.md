@@ -18,10 +18,11 @@ tags: ['guide','quickstart','post']
   1. Endpoint devices display glucose information and generate audible
      alerts
 
-
+### Overview
 ![cgm in the cloud system](http://i.imgur.com/qrrq27j.jpg)
 
 ### OTG Cable
+<iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/XRnU8/embed"></iframe>
 
 Normally, mobile phones act as usb slaves.  This allows them to draw
 power from the connected master, and allows the master to control
