@@ -19,11 +19,19 @@ along with any updates,
 Start a new project, and `git` the
 [source code](https://github.com/nightscout/dexcom-uploader.git)
 
+One way to do that: is to visit https://github.com/nightscout/dexcom-uploader
+![visit github](http://i.imgur.com/7QXcK4s.jpg)
+And download the zip file directly from github.
+
+Then import that zip file as a new project:
+![import project](http://i.imgur.com/m4HN47j.jpg)
+Select the zip file you just downloaded.
 
 #### Compile, and install
+Plug your phone into the computer, and select `Run`:
+![run app](http://i.imgur.com/TxLrp6f.jpg)
+These pictures were taken on a Mac.
 
-Connect the Moto G with a USB cable, and click **Run** to install the
-application on the Moto G.
 
 ##### Configure preferences
 Go into the settings menu in the CGM android app.  It is in the upper right
