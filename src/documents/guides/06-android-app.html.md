@@ -35,7 +35,7 @@ These pictures were taken on a Mac.
 
 ##### Configure preferences
 Go into the settings menu in the CGM android app.  It is in the upper right
-corner.  Use your your **`mongo connection uri`** from above.
+corner or it might be accessed by pressing the menu button to the left of the home button of the smartphone.  Use your your **`mongo connection uri`** from above and fill in your collection name where requested.
 <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/gVYWC/embed"></iframe>
 With Mongolab now set up, the application should be able to start
 uploading.  Connect the Dexcom receiver to the Moto G.
