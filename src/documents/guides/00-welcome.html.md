@@ -45,25 +45,40 @@ upgraded.
 
 ## What is required?
 
-A **Dexcom receiver**, and a **smartphone supporting USB
-OTG** support.  A special **USB OTG cable** allows the smartphone to
-read and report Dexcom readings to the cloud.  The Dexcom USB port is
-fragile and will break if you are not very very careful.  If you want
-the uploading to work everywhere, the smartphone will need a cell data
+A **Dexcom receiver**, and a [**smartphone supporting USB
+OTG** support](https://www.youtube.com/watch?v=KIyBpl6Z7iM).
+A special **USB OTG cable** allows the 
+[smartphone to read and report Dexcom readings](https://www.youtube.com/watch?v=G_8c8d43mI8)
+to the cloud.  The
+[Dexcom USB port is fragile](https://www.youtube.com/watch?v=bSGF4kQj7ck)
+and will break if you are not very very careful.  If you want the
+uploading to work everywhere, the smartphone will need a cell data
 plan.  The smartphone must support USB OTG.
 
 The combination of the smartphone + Dexcom allows data to go to **a
-website, which you (or a friend?) will set up and manage**.  It will be
-your responsibility to make sure it continues to run.  Several details
-need to be synchronized, using configuration menus in the UI, in order
-for the system to work.  The website will display the data from the
-cloud
+website, which you** (or a friend?) **will set up and manage**.  It
+will be your responsibility to make sure it continues to run.  Several
+details need to be synchronized, using configuration menus in the UI
+in several different applications, in order for the system to work.
+The website will display the data from the cloud using a this website,
+many devices will be able to access this website.
 
-So the minimum phone is a website managed by you, a smartphone, and a
-Dexcom.  With these components, the CGM levels can be monitored from
-anywhere in the world.  The website works on many other mobile
-devices, tablets, laptops; the sole purpose is to display the data.
+There is no privacy or security provided by these tools, all data you
+upload will be publically available for anyone on the internet to
+read.
+
+So the minimum requirements for a Nightscout rig are: a website
+managed by you, a smartphone, and a Dexcom.  With these components,
+the CGM levels can be monitored from anywhere in the world.  The
+website works on many other mobile devices, tablets, laptops; the sole
+purpose is to display the data.  Due to the caveats mentioned and for
+many other reasons, it is important to
+[not rely on this for therapy](https://www.youtube.com/watch?v=1wqwFCjobBo) .
+.
 
 Following the step by step guides should help prepare you for putting
 everything together and learning how to use the system.
+
+<iframe class="imgur-album" width="100%" height="550" frameborder="0"
+src="http://imgur.com/a/XRnU8/embed"></iframe>
 
