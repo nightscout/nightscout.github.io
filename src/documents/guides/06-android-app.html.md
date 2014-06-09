@@ -28,7 +28,7 @@ Then import that zip file as a new project:
 Select the zip file you just downloaded.
 
 #### Compile, and install
-Plug your phone into the computer, and select `Run`:
+Plug your phone into the computer, and select `Run`:  Troubleshooting tip: If the app does not install on your phone, double check the target device by selecting "Edit Configurations" under the Run tab of Android Studio.  Ensure that USB device is selcted as the target device, not Emulator.  
 ![run app](http://i.imgur.com/TxLrp6f.jpg)
 These pictures were taken on a Mac.
 
