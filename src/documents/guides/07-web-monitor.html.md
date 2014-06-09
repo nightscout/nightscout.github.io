@@ -2,7 +2,11 @@
 title: Monitor CGM on the web
 layout: guide
 pageOrder: 7
-tags: ['guide','quickstart','post']
+tags: 
+  - guide
+  - quickstart
+  - post
+published: true
 ---
 
 ### Microsoft Azure – cloud service to host website free
@@ -20,28 +24,41 @@ tags: ['guide','quickstart','post']
   * Choose a Site Name: `_________` `.azurewebsites.net`
     (e.g. **`nightscoutss`**`.azurewebsites.net`)
   * Configure connection strings
-    Find the configure tab
+    
+    FIrst, find and click on the configure tab at the top of the page.
     ![go to configure tab](http://i.imgur.com/dIPRHjt.png)
 
-    Find the connection strings:
+    Next, scroll down the page until you find the **connection strings** (it will be over three quarters of the way down the page.  You will see this:
     ![connection strings](http://i.imgur.com/PZjxkjE.png)
 
-    Create two new **Custom** rows.  Enter your mongo details from
-    before, using the **`Custom`** type, for
-    `mongo` and `mongo_collection` keys.
-    **Copy and paste** your `mongo connection uri` from above in the
-    new `mongo  <mongo connection uri>  Custom` row.
-    ![configure connection strings](http://i.imgur.com/YKVGcIP.png)
-    The `mongo` key should be the `mongo://` url from the Android App.
-    The `mongo_collection` key should match the collection from the
-    MongoLab setup - from the Mongolab example above, the mongo_collection key would be "sally".
+    Create two rows.  At the end of each row, it will initially say SQL 	Database.  Click on the arrow and select **Custom**  for both rows.  You now have two new **Custom** rows.  
+    
+    Each row now needs a name and a value.
+    
+    Name the first row mongo.  For this row's value, copy and paste your `mongo connection uri` from above into the value section of this row, e.g. mongodb://sallyuser:sallypassword@aabb22.mongolab.com:11111/nightscout
+    
+    Name the second row mongo_collection.  For this row's value, enter the name of your collection.  If you followed the example, the name of your collection might be one work, e.g. sally.
+    
+    When finished, the section will look like this:
+    
+       ![configure connection strings](http://i.imgur.com/YKVGcIP.png)
+    
+    If you click Show Connection Strings, you will see something like this (with your own information, of course):
+    
+    ![alt text](http://i.imgur.com/NLc1Cjo.png)   
+ Finally, click **Save** at the bottom of the page.  This ends the work with the Configure tab.  The next is deployment and it uses the Dashboard tab.
 
-
-  * Find setup deployment from the `Dashboard` tab of the project.
+  * Click on the **Dashboard** tab at the top of the page.
+  
+  <a href="http://imgur.com/iqCK34n"><img src="http://i.imgur.com/iqCK34n.png" title="Hosted by imgur.com"/></a>
+  
+  Find setup deployment from source control under quick glance .
     ![find setup deployment ](http://i.imgur.com/6UnzWd4.png)
-  * Select Github ![select github](http://i.imgur.com/iczHBW6.png)
+  * Select Github 
+  ![select github](http://i.imgur.com/iczHBW6.png)
   * Authorize Github/Azure access.
   * Find `cgm-remote-monitor`:
+  
     ![find cgm-remote-monitor repo](http://i.imgur.com/KbhyIcx.png)
 
   * Confirm, watch the site deploy, it should deploy automatically.
@@ -57,4 +74,3 @@ tags: ['guide','quickstart','post']
   * For support, determine your Azure ftp username / password for azure
     website access by following these instructions:
     http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx
-
