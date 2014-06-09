@@ -37,7 +37,7 @@ published: true
     
     Name the first row mongo.  For this row's value, copy and paste your `mongo connection uri` from above into the value section of this row, e.g. mongodb://sallyuser:sallypassword@aabb22.mongolab.com:11111/nightscout
     
-    Name the second row mongo_collection.  For this row's value, enter the name of your collection.  If you followed the example, the name of your collection might be one work, e.g. sally.
+    Name the second row mongo_collection.  For this row's value, enter the name of your collection.  If you followed the example, the name of your collection might be one word, e.g. sally.
     
     When finished, the section will look like this:
     
@@ -46,7 +46,7 @@ published: true
     If you click Show Connection Strings, you will see something like this (with your own information, of course):
     
     ![alt text](http://i.imgur.com/NLc1Cjo.png)   
- Finally, click **Save** at the bottom of the page.  This ends the work with the Configure tab.  The next is deployment and it uses the Dashboard tab.
+ Finally, click **Save** at the bottom of the page.  This ends the work with the Configure tab.  The next step is deployment and it uses the Dashboard tab.
 
   * Click on the **Dashboard** tab at the top of the page.
   
