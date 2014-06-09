@@ -34,7 +34,7 @@ tags: ['guide','quickstart','post']
     ![configure connection strings](http://i.imgur.com/YKVGcIP.png)
     The `mongo` key should be the `mongo://` url from the Android App.
     The `mongo_collection` key should match the collection from the
-    MongoLab setup.
+    MongoLab setup - from the Mongolab example above, the mongo_collection key would be "sally".
 
 
   * Find setup deployment from the `Dashboard` tab of the project.
