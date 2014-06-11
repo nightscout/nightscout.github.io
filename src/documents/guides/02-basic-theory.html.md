@@ -27,11 +27,11 @@ tags: ['guide','quickstart','post']
 Normally, mobile phones act as usb slaves.  This allows them to draw
 power from the connected master, and allows the master to control
 exchanging data such as music, pictures, and other files.
-![normal-usb-slave](http://i.imgur.com/1MNdt83.jpg)
+![normal-usb-slave](http://i.imgur.com/xvKULj3.jpg)
 
 The USB `OTG` cable allows the phone to switch roles, becoming the
 master side of the connection.
-![mobile-otg-usb-master](http://i.imgur.com/xvKULj3.jpg)
+![mobile-otg-usb-master](http://i.imgur.com/1MNdt83.jpg)
 This allows the mobile phone to control the Dexcom and provide power,
 just like a laptop.
 
