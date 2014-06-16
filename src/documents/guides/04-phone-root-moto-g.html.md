@@ -2,8 +2,24 @@
 title: Root mobile upload device
 layout: guide
 pageOrder: 4
-tags: ['guide','quickstart','post']
+tags: 
+  - guide
+  - quickstart
+  - post
+published: true
 ---
+
+## Rooting is OPTIONAL
+
+Most phones will work perfectly fine without rooting. Rooting (also known as "jailbreaking" in the iPhone world) voids your warranty, but the advantages include the ability to:
+
+* Disable charging of the Dexcom receiver.
+* Disable software that will use your Internet connection unnecessarily.
+* Disable software that your kids might use to download games.
+
+If you would like to read a novice's guide to Rooting, please read this article on Lifehacker entitled "[Everything You Need to Know About Rooting Your Android Phone](http://lifehacker.com/5789397/the-always-up-to-date-guide-to-rooting-any-android-phone)". This article includes links to where to find guides to rooting your phone.
+
+Below are instructions for rooting a Motorola Moto G phone. If you have another phone, please see the "Where to Find Rooting Methods and Tools" section of the Lifehacker article mentioned above.
 
 ### Moto G phone – get a phone, unlock it, and root it
 
@@ -31,4 +47,3 @@ tags: ['guide','quickstart','post']
      * Put the phone aside for a moment, and set up MongoLab
      * Do not upgrade the Android OS or return it to factory defaults,
        or the phone will need to be re-rooted.
-
