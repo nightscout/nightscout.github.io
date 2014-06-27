@@ -17,7 +17,7 @@ After getting a pebble watch, install the official Pebble App.
 
 #### Medium/Hard
 
-If it says `Coming Soon`, you can _sideload_ the `pbw`
+If it says `Coming Soon`, you can _sideload_ the `pbw` by clicking on the link in your mobile browser
 * [install this pbw](/CGM.pbw)
 
 If you cannot here is how to compile a new one for yourself:
