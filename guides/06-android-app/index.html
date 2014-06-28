@@ -38,10 +38,8 @@ the phone that an OTG device is connected.</p>
 </blockquote>
 <p>During the initial connection, there may be a pop-up asking if the app
 should have permission to run / access services.  Select yes.  The app
-should load, and data should start flowing to Mongolab.
-Using Mongolab credentials from above, verify that data is flowing
-into the database by logging into MongoLab, and inspecting the collection you
-created for any documents.</p>
+should load, and data should start flowing to Mongolab.</p>
+<h4 id="-optional-creating-an-apk-"><strong>Optional: Creating an apk</strong></h4>
 <p>Android Studio also provides a way to “package” the app as an apk,
 which can then be attached to an email.  On Android devices, the gmail
 app is smart enough to install apps which are attached to emails.  In
@@ -52,4 +50,15 @@ more information, see:</p>
 <ul>
 <li><a href="http://developer.android.com/tools/publishing/publishing_overview.html">http://developer.android.com/tools/publishing/publishing_overview.html</a></li>
 </ul>
-</div></article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/guides/06-android-app.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Jun 27 2014 04:43:44 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+<h4 id="-important-verify-data-flowing-to-mongolab-"><strong>IMPORTANT: Verify Data Flowing to Mongolab</strong></h4>
+<p>Before moving to the next step, you must verify that the data is flowing to Mongolab.  </p>
+<p>First, ensure your Dexcom receiver is connected to your uploader device and that the app is uploading data (the dexcom blood glucose number and the uploader device&#39;s blood glucose number should match).  </p>
+<p>With the app running, log into your Mongolab account.  On the home screen, you will see something like this:
+<img src="http://i.imgur.com/gzfIvKJ.png" alt="Alt text"></p>
+<p>If the data is reaching Mongolab, the number under the documents column will not be zero.</p>
+<p>For more detailed information and troubleshooting, click on the database (anywhere in the gray bar of information) to locate your collection.  The next screen will look like this:
+<img src="http://i.imgur.com/l08MATw.png" alt="Alt text"></p>
+<p>To view the actual documents/packets of information received including the date and time that Mongolab receives data, click on the collection name (blocked out on the screen shot) and you will see something like this:
+<img src="http://i.imgur.com/McIiYk5.png" alt="Alt text"></p>
+<p>Once you have documents in your Mongolab collection, move on to the next step of setting up your Azure site which will allow you to monitor the cgm on the web.</p>
+</div></article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/guides/06-android-app.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Sat Jun 28 2014 04:32:55 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
