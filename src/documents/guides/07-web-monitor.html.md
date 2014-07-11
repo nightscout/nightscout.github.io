@@ -74,3 +74,10 @@ published: true
   * For support, determine your Azure ftp username / password for azure
     website access by following these instructions:
     http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx
+
+## (Optional) Creating a Widget to View Azure Site on an Android Phone
+
+If you plan on viewing the azure website on an Android phone, you can create a widget which will refresh the data and place it on one of the home screens.  One widget creator that works well is WebSnap.  It is available from the Google Play store, but you will need to purchase the donate version ($2.99) if you want the widget to auto update every 5 minutes (free version will update every 15 minutes).  WebSnap offers a variety of widget sizes, including a scrolling version of the entire webpage.  Below is an example of a 4 x 2 widget of Nightscout:
+    ![widget](http://i.imgur.com/UuNqiXd.png?1)
+
+
