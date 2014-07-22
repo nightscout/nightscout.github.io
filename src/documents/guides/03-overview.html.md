@@ -17,7 +17,8 @@ following hardware / services:
 
 Setup should take about an hour.  Don’t skip steps, and please see
 instructions at the end if you have any suggestions for improving the
-clarity / correctness of these instructions.
+clarity / correctness of these instructions.  If you have issues
+check our wiki!
 
 ### Dexcom G4 Receiver
 
