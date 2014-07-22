@@ -53,3 +53,5 @@ Then open the pebble app, and enable developer mode.
   ![pebble config step two](http://i.imgur.com/YC64Sh0.png)
 
 ![with watch](http://i.imgur.com/tPFMMPl.png)
+
+* If you have issues check out our wiki https://github.com/nightscout/nightscout.github.io/wiki
