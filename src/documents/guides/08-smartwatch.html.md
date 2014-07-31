@@ -17,7 +17,7 @@ After getting a pebble watch, install the official Pebble App.
 
 #### Medium/Hard
 
-If it says `Coming Soon`, you can _sideload_ the `pbw`
+If it says `Coming Soon`, you can _sideload_ the `pbw` by clicking on the link in your mobile browser
 * [install this pbw](/CGM.pbw)
 
 If you cannot here is how to compile a new one for yourself:
@@ -53,3 +53,5 @@ Then open the pebble app, and enable developer mode.
   ![pebble config step two](http://i.imgur.com/YC64Sh0.png)
 
 ![with watch](http://i.imgur.com/tPFMMPl.png)
+
+* If you have issues check out our wiki https://github.com/nightscout/nightscout.github.io/wiki

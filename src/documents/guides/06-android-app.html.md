@@ -49,10 +49,9 @@ uploading.  Connect the Dexcom receiver to the Moto G.
 During the initial connection, there may be a pop-up asking if the app
 should have permission to run / access services.  Select yes.  The app
 should load, and data should start flowing to Mongolab.
-Using Mongolab credentials from above, verify that data is flowing
-into the database by logging into MongoLab, and inspecting the collection you
-created for any documents.
 
+
+#### **Optional: Creating an apk**
 Android Studio also provides a way to “package” the app as an apk,
 which can then be attached to an email.  On Android devices, the gmail
 app is smart enough to install apps which are attached to emails.  In
@@ -62,3 +61,24 @@ monitoring, since they have their own source of external power.  For
 more information, see:
 
 * http://developer.android.com/tools/publishing/publishing_overview.html
+
+
+
+#### **IMPORTANT: Verify Data Flowing to Mongolab**
+Before moving to the next step, you must verify that the data is flowing to Mongolab.  
+
+First, ensure your Dexcom receiver is connected to your uploader device and that the app is uploading data (the dexcom blood glucose number and the uploader device's blood glucose number should match).  
+
+With the app running, log into your Mongolab account.  On the home screen, you will see something like this:
+![Alt text](http://i.imgur.com/gzfIvKJ.png)
+
+If the data is reaching Mongolab, the number under the documents column will not be zero.
+
+For more detailed information and troubleshooting, click on the database (anywhere in the gray bar of information) to locate your collection.  The next screen will look like this:
+![Alt text](http://i.imgur.com/l08MATw.png)
+
+To view the actual documents/packets of information received including the date and time that Mongolab receives data, click on the collection name (blocked out on the screen shot) and you will see something like this:
+![Alt text](http://i.imgur.com/McIiYk5.png)
+
+Once you have documents in your Mongolab collection, move on to the next step of setting up your Azure site which will allow you to monitor the cgm on the web.
+
