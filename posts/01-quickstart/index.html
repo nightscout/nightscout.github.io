@@ -13,7 +13,46 @@ details. Do not use the information or code to make medical decisions.</p>
 <p>Most likely, you will find yourself with a broken Dexcom receiver.
 The reciever&#39;s USB port was not intended to be used often.  Even
 careful users report broken USB ports.</p>
-<section class="block"><a id="guides-05-backend-mongolab_start"></a><div class="yielded"><h2><a href="/guides/05-backend-mongolab" class="doc-link">Configure Data Backend</a></h2><h3 id="mongolab">MongoLab</h3>
+<section class="block"><a id="guides-04-phone-root-moto-g_start"></a><div class="yielded"><h2><a href="/guides/04-phone-root-moto-g" class="doc-link">Root mobile upload device</a></h2><h2 id="rooting-is-optional">Rooting is OPTIONAL</h2>
+<p>Most phones will work perfectly fine without rooting. Rooting (also known as &quot;jailbreaking&quot; in the iPhone world) voids your warranty, but the advantages include the ability to:</p>
+<ul>
+<li>Disable charging of the Dexcom receiver.</li>
+<li>Disable software that will use your Internet connection unnecessarily.</li>
+<li>Disable software that your kids might use to download games.</li>
+</ul>
+<p>If you would like to read a novice&#39;s guide to Rooting, please read this article on Lifehacker entitled &quot;<a href="http://lifehacker.com/5789397/the-always-up-to-date-guide-to-rooting-any-android-phone">Everything You Need to Know About Rooting Your Android Phone</a>&quot;. This article includes links to where to find guides to rooting your phone.</p>
+<p>Below are instructions for rooting a Motorola Moto G phone. If you have another phone, please see the &quot;Where to Find Rooting Methods and Tools&quot; section of the Lifehacker article mentioned above.</p>
+<h3 id="moto-g-phone-get-a-phone-unlock-it-and-root-it">Moto G phone – get a phone, unlock it, and root it</h3>
+<ol>
+<li><p>Buy the version of the phone which will work with your preferred
+cellular provider</p>
+<ul>
+<li>Keep in mind this phone’s primary purpose is an uploader.
+Because it must remain connected to the Dexcom receiver which
+has a fragile USB connection, it is best to minimize its use an
+actual phone.</li>
+</ul>
+<p>The phone will need to be unlocked and “rooted” for the software
+to turn the USB power off between uploads (otherwise the Dexcom
+will charge, draining the phone’s battery)
+Following the unlocking and rooting instructions here:</p>
+<ul>
+<li><a href="http://androidadvices.com/root-moto-g-android-phone-firmware-guide/#.U1cii_ldWCk">http://androidadvices.com/root-moto-g-android-phone-firmware-guide/#.U1cii_ldWCk</a></li>
+<li><a href="https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-b">https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-b</a></li>
+<li><a href="http://www.technewscentral.co.uk/how-to-enable-usb-debugging-and-developer-options-in-android-4-2-and-higher-android-4-2android-4-3android-4-4/id_7250">http://www.technewscentral.co.uk/how-to-enable-usb-debugging-and-developer-options-in-android-4-2-and-higher-android-4-2android-4-3android-4-4/id_7250</a></li>
+<li><a href="http://www.swedroid.se/forum/showthread.php?t=106595">http://www.swedroid.se/forum/showthread.php?t=106595</a></li>
+<li><a href="http://forum.xda-developers.com/showthread.php?t=2585755">http://forum.xda-developers.com/showthread.php?t=2585755</a>  </li>
+</ul>
+</li>
+<li><p>Set up web access (wifi, cellular)</p>
+<ul>
+<li>Put the phone aside for a moment, and set up MongoLab</li>
+<li>Do not upgrade the Android OS or return it to factory defaults,
+or the phone will need to be re-rooted.</li>
+</ul>
+</li>
+</ol>
+</div><a id="guides-04-phone-root-moto-g_end"></a></section><section class="block"><a id="guides-05-backend-mongolab_start"></a><div class="yielded"><h2><a href="/guides/05-backend-mongolab" class="doc-link">Configure Data Backend</a></h2><h3 id="mongolab">MongoLab</h3>
 <p>Sign up for a free account at <a href="http://www.mongolab.com">http://www.mongolab.com</a> and</p>
 <p>record the information you provide:
 Create a <strong><code>user</code></strong>, a <strong><code>database</code></strong> and a <strong><code>collection</code></strong>.
@@ -212,4 +251,4 @@ your phone will show up in a list, select the install and run:
 </div><a id="guides-08-smartwatch_end"></a></section><h2 id="-pay-it-forward-"><strong>Pay it forward</strong></h2>
 <p>Help a friend.  Enhance Nightscout by providing feedback, ideas,
 bug-fixes, and enhancements.</p>
-</article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Aug 12 2014 19:11:44 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Aug 12 2014 19:13:20 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

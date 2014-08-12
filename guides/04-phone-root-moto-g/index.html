@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Root mobile upload device | Nightscout, open source, DIY CGM in the cloud</title><meta name="description" content="We are not waiting!  How to build Nightscout CGM in the cloud."><meta name="keywords" content="Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time"><meta name="author" content="Nightscout contributors"><meta name="generator" content="DocPad v6.69.0" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><!-- For now hide the navbar, single page site--><nav style="" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a href="/" class="navbar-brand">Welcome</a></div><ul class="nav navbar-nav"><li typeof="sioc:Page" about="/posts/01-quickstart"><a href="/posts/01-quickstart" property="dc:title">Nightscout Quickstart Guide, Draft</a></li><li typeof="sioc:Page" about="/posts/2014-05-25-azure-update"><a href="/posts/2014-05-25-azure-update" property="dc:title">Azure free account management</a></li><li typeof="sioc:Page" about="/posts/colors-subdued-is-safer"><a href="/posts/colors-subdued-is-safer" property="dc:title">Color choices for Nightscout: Subdued is Safer</a></li></ul></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><div class="navlinks">
+  
+  <a href="/guides/05-backend-mongolab" title="Next Post: Configure Data Backend" class="navlinks-next">Configure Data Backend &raquo;</a>
+</div><h1>Root mobile upload device</h1><div class="page-content"><h2 id="rooting-is-optional">Rooting is OPTIONAL</h2>
+<p>Most phones will work perfectly fine without rooting. Rooting (also known as &quot;jailbreaking&quot; in the iPhone world) voids your warranty, but the advantages include the ability to:</p>
+<ul>
+<li>Disable charging of the Dexcom receiver.</li>
+<li>Disable software that will use your Internet connection unnecessarily.</li>
+<li>Disable software that your kids might use to download games.</li>
+</ul>
+<p>If you would like to read a novice&#39;s guide to Rooting, please read this article on Lifehacker entitled &quot;<a href="http://lifehacker.com/5789397/the-always-up-to-date-guide-to-rooting-any-android-phone">Everything You Need to Know About Rooting Your Android Phone</a>&quot;. This article includes links to where to find guides to rooting your phone.</p>
+<p>Below are instructions for rooting a Motorola Moto G phone. If you have another phone, please see the &quot;Where to Find Rooting Methods and Tools&quot; section of the Lifehacker article mentioned above.</p>
+<h3 id="moto-g-phone-get-a-phone-unlock-it-and-root-it">Moto G phone – get a phone, unlock it, and root it</h3>
+<ol>
+<li><p>Buy the version of the phone which will work with your preferred
+cellular provider</p>
+<ul>
+<li>Keep in mind this phone’s primary purpose is an uploader.
+Because it must remain connected to the Dexcom receiver which
+has a fragile USB connection, it is best to minimize its use an
+actual phone.</li>
+</ul>
+<p>The phone will need to be unlocked and “rooted” for the software
+to turn the USB power off between uploads (otherwise the Dexcom
+will charge, draining the phone’s battery)
+Following the unlocking and rooting instructions here:</p>
+<ul>
+<li><a href="http://androidadvices.com/root-moto-g-android-phone-firmware-guide/#.U1cii_ldWCk">http://androidadvices.com/root-moto-g-android-phone-firmware-guide/#.U1cii_ldWCk</a></li>
+<li><a href="https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-b">https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-b</a></li>
+<li><a href="http://www.technewscentral.co.uk/how-to-enable-usb-debugging-and-developer-options-in-android-4-2-and-higher-android-4-2android-4-3android-4-4/id_7250">http://www.technewscentral.co.uk/how-to-enable-usb-debugging-and-developer-options-in-android-4-2-and-higher-android-4-2android-4-3android-4-4/id_7250</a></li>
+<li><a href="http://www.swedroid.se/forum/showthread.php?t=106595">http://www.swedroid.se/forum/showthread.php?t=106595</a></li>
+<li><a href="http://forum.xda-developers.com/showthread.php?t=2585755">http://forum.xda-developers.com/showthread.php?t=2585755</a>  </li>
+</ul>
+</li>
+<li><p>Set up web access (wifi, cellular)</p>
+<ul>
+<li>Put the phone aside for a moment, and set up MongoLab</li>
+<li>Do not upgrade the Android OS or return it to factory defaults,
+or the phone will need to be re-rooted.</li>
+</ul>
+</li>
+</ol>
+</div></article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/guides/04-phone-root-moto-g.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/guides/04-phone-root-moto-g.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/guides/04-phone-root-moto-g.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Aug 12 2014 19:13:20 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
