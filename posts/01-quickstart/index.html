@@ -13,119 +13,7 @@ details. Do not use the information or code to make medical decisions.</p>
 <p>Most likely, you will find yourself with a broken Dexcom receiver.
 The reciever&#39;s USB port was not intended to be used often.  Even
 careful users report broken USB ports.</p>
-<section class="block"><a id="guides-01-starting_start"></a><div class="yielded"><h2><a href="/guides/01-starting" class="doc-link">Getting started</a></h2><h3 id="what-do-we-need-">What do we need?</h3>
-<p>Nightscout is a project composed of several parts.</p>
-<p>From a place of caution, the first place to start is that you acquire 2 Dexcom receivers.
-The use of a CGM brings significant diabetes management advantage and it would be our first
-priority not to lose any data. The CGM in the Cloud system is a very useful extension of that
-data but the assembly has the disadvantage of potentially breaking the receiver charging port
-if not protected well or handled roughly. Better to have a second receiver, so there is never
-a time where you are without the CGM if one should break.</p>
-<p>Next is the choice of android phone or tablet and cell data service provider and plan. Consider
-what your main goals are and select equipment and service to minimize hassle and be successful.</p>
-<p>Cords can be purchased online or locally. Check the Info sheet for specifics, it can be slightly
-confusing when if selecting online.</p>
-<p>Lastly, determine if you are DIY for the programming part. This group has fantastic support and
-very knowledgeable members to reach out to for assistance. If you are not a DIY person and want
-to have more assistance, that is possible through these wonderful group members as well.</p>
-<p>The pebble watch is the last piece in this puzzle. It is optional and some find it very valuable
-but without all of the previous pieces it will not work. </p>
-<p>Good Luck!</p>
-<p><img src="http://i.imgur.com/4PP1wS9.png" alt="dexcom otg cable and smartphone laid out"></p>
-</div><a id="guides-01-starting_end"></a></section><section class="block"><a id="guides-02-basic-theory_start"></a><div class="yielded"><h2><a href="/guides/02-basic-theory" class="doc-link">Basic Theory</a></h2><h2 id="basic-concept-of-operations">Basic Concept of Operations</h2>
-<ol>
-<li>Dexcom G4 Sensor / Transmitter sends wireless signal to Dexcom G4
-Receiver</li>
-<li>Dexcom G4 Receiver is connected via USB OTG (On The Go) cable to
-an Android Uploader Device</li>
-<li>Android Uploader Device sends data to MongoDB database somewhere
-in the Cloud</li>
-<li>Cloud Service hosts a Node.js server, which serves pages to
-endpoint devices</li>
-<li>Endpoint devices display glucose information and generate audible
-alerts</li>
-</ol>
-<h3 id="overview">Overview</h3>
-<p><img src="http://i.imgur.com/qrrq27j.jpg" alt="cgm in the cloud system"></p>
-<h3 id="otg-cable">OTG Cable</h3>
-<iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/XRnU8/embed"></iframe>
-
-<p>Normally, mobile phones act as usb slaves.  This allows them to draw
-power from the connected master, and allows the master to control
-exchanging data such as music, pictures, and other files.
-<img src="http://i.imgur.com/xvKULj3.jpg" alt="normal-usb-slave"></p>
-<p>The USB <code>OTG</code> cable allows the phone to switch roles, becoming the
-master side of the connection.
-<img src="http://i.imgur.com/1MNdt83.jpg" alt="mobile-otg-usb-master">
-This allows the mobile phone to control the Dexcom and provide power,
-just like a laptop.</p>
-</div><a id="guides-02-basic-theory_end"></a></section><section class="block"><a id="guides-03-overview_start"></a><div class="yielded"><h2><a href="/guides/03-overview" class="doc-link">Quick Overview</a></h2><h2 id="specific-instructions">Specific Instructions</h2>
-<p>It will be easier to follow along if you print these instructions.
-This document describes the steps to deploy Nightscout on the
-following hardware / services:</p>
-<ul>
-<li>Dexcom G4 Receiver</li>
-<li>Moto G phone (for uploading from the Dexcom)</li>
-<li>Mongolab (for storing data on the cloud)</li>
-<li>Microsoft Azure (for serving web pages)</li>
-</ul>
-<p>Setup should take about an hour.  Don’t skip steps, and please see
-instructions at the end if you have any suggestions for improving the
-clarity / correctness of these instructions.  If you have issues
-check our wiki!</p>
-<h3 id="dexcom-g4-receiver">Dexcom G4 Receiver</h3>
-<p><strong>Important: the USB jack is very fragile.</strong>
-Many people have broken their jack. </p>
-<ol>
-<li>If a cable is plugged into the jack and the receiver is dropped
-it may break</li>
-<li>Repeated plugging / unplugging may cause it to break</li>
-<li>Various hacks (styrofoam, fishing tackle cases, person game
-system cases, pouches) have been used to protect the cable
-connection.  Drilling a hole in the case above the jack and
-filling it with 5 minute epoxy may provide additional mechanical
-strength.</li>
-</ol>
-</div><a id="guides-03-overview_end"></a></section><section class="block"><a id="guides-04-phone-root-moto-g_start"></a><div class="yielded"><h2><a href="/guides/04-phone-root-moto-g" class="doc-link">Root mobile upload device</a></h2><h2 id="rooting-is-optional">Rooting is OPTIONAL</h2>
-<p>Most phones will work perfectly fine without rooting. Rooting (also known as &quot;jailbreaking&quot; in the iPhone world) voids your warranty, but the advantages include the ability to:</p>
-<ul>
-<li>Disable charging of the Dexcom receiver.</li>
-<li>Disable software that will use your Internet connection unnecessarily.</li>
-<li>Disable software that your kids might use to download games.</li>
-</ul>
-<p>If you would like to read a novice&#39;s guide to Rooting, please read this article on Lifehacker entitled &quot;<a href="http://lifehacker.com/5789397/the-always-up-to-date-guide-to-rooting-any-android-phone">Everything You Need to Know About Rooting Your Android Phone</a>&quot;. This article includes links to where to find guides to rooting your phone.</p>
-<p>Below are instructions for rooting a Motorola Moto G phone. If you have another phone, please see the &quot;Where to Find Rooting Methods and Tools&quot; section of the Lifehacker article mentioned above.</p>
-<h3 id="moto-g-phone-get-a-phone-unlock-it-and-root-it">Moto G phone – get a phone, unlock it, and root it</h3>
-<ol>
-<li><p>Buy the version of the phone which will work with your preferred
-cellular provider</p>
-<ul>
-<li>Keep in mind this phone’s primary purpose is an uploader.
-Because it must remain connected to the Dexcom receiver which
-has a fragile USB connection, it is best to minimize its use an
-actual phone.</li>
-</ul>
-<p>The phone will need to be unlocked and “rooted” for the software
-to turn the USB power off between uploads (otherwise the Dexcom
-will charge, draining the phone’s battery)
-Following the unlocking and rooting instructions here:</p>
-<ul>
-<li><a href="http://androidadvices.com/root-moto-g-android-phone-firmware-guide/#.U1cii_ldWCk">http://androidadvices.com/root-moto-g-android-phone-firmware-guide/#.U1cii_ldWCk</a></li>
-<li><a href="https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-b">https://motorola-global-portal.custhelp.com/app/standalone/bootloader/unlock-your-device-b</a></li>
-<li><a href="http://www.technewscentral.co.uk/how-to-enable-usb-debugging-and-developer-options-in-android-4-2-and-higher-android-4-2android-4-3android-4-4/id_7250">http://www.technewscentral.co.uk/how-to-enable-usb-debugging-and-developer-options-in-android-4-2-and-higher-android-4-2android-4-3android-4-4/id_7250</a></li>
-<li><a href="http://www.swedroid.se/forum/showthread.php?t=106595">http://www.swedroid.se/forum/showthread.php?t=106595</a></li>
-<li><a href="http://forum.xda-developers.com/showthread.php?t=2585755">http://forum.xda-developers.com/showthread.php?t=2585755</a>  </li>
-</ul>
-</li>
-<li><p>Set up web access (wifi, cellular)</p>
-<ul>
-<li>Put the phone aside for a moment, and set up MongoLab</li>
-<li>Do not upgrade the Android OS or return it to factory defaults,
-or the phone will need to be re-rooted.</li>
-</ul>
-</li>
-</ol>
-</div><a id="guides-04-phone-root-moto-g_end"></a></section><section class="block"><a id="guides-05-backend-mongolab_start"></a><div class="yielded"><h2><a href="/guides/05-backend-mongolab" class="doc-link">Configure Data Backend</a></h2><h3 id="mongolab">MongoLab</h3>
+<section class="block"><a id="guides-05-backend-mongolab_start"></a><div class="yielded"><h2><a href="/guides/05-backend-mongolab" class="doc-link">Configure Data Backend</a></h2><h3 id="mongolab">MongoLab</h3>
 <p>Sign up for a free account at <a href="http://www.mongolab.com">http://www.mongolab.com</a> and</p>
 <p>record the information you provide:
 Create a <strong><code>user</code></strong>, a <strong><code>database</code></strong> and a <strong><code>collection</code></strong>.
@@ -324,4 +212,4 @@ your phone will show up in a list, select the install and run:
 </div><a id="guides-08-smartwatch_end"></a></section><h2 id="-pay-it-forward-"><strong>Pay it forward</strong></h2>
 <p>Help a friend.  Enhance Nightscout by providing feedback, ideas,
 bug-fixes, and enhancements.</p>
-</article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Aug 12 2014 19:11:15 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Aug 12 2014 19:11:44 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
