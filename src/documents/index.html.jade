@@ -24,8 +24,8 @@ HideNav: true
   .col-md-6
     div: :markdown
       ## Guides
-    a.btn.btn-default(href="posts/01-quickstart") Quickstart
-    a.btn.btn-default(href="https://github.com/nightscout/nightscout.github.io/wiki") Visit wiki 
+    a.btn.btn-default(href="http://go.nightscout.info") Guides
+    a.btn.btn-default(href="http://www.nightscout.info/wiki/welcome") Visit wiki 
   .col-md-6
     div: :markdown
       ## Groups
@@ -56,27 +56,3 @@ HideNav: true
       Confused? [File an issue!](https://github.com/nightscout/nightscout.github.io/issues)
       * [Videos-How To](https://www.youtube.com/channel/UChgmRw-YYFCtLbRVFDlSMHA)
       * [Wiki-For Technical knowledge Sharing](https://github.com/nightscout/nightscout.github.io/wiki)
-      * [NightScout Uploader Devices](https://github.com/nightscout/nightscout.github.io/wiki/NightscoutUploaders): Phones, Tablets, Set Top Boxes
-      * [Carriers](https://github.com/nightscout/nightscout.github.io/wiki/Carriers)
-      
-      
-    p
-  .col-md-6
-    div: :markdown
-      ## Posts
-    ul
-      each doc in getCollection('posts').toJSON()
-        li
-          span= doc.date.toDateString()
-          |  &raquo;&nbsp;
-          a(href=doc.url)= doc.title
-  .col-md-6
-    div: :markdown
-      ## Quickstart
-    ul
-      each doc in getCollection('quickstart').toJSON()
-        li
-          span= doc.date.toDateString()
-          |  &raquo;&nbsp;
-          a(href=doc.url)= doc.title
-
