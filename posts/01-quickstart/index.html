@@ -13,7 +13,125 @@ details. Do not use the information or code to make medical decisions.</p>
 <p>Most likely, you will find yourself with a broken Dexcom receiver.
 The reciever&#39;s USB port was not intended to be used often.  Even
 careful users report broken USB ports.</p>
-<section class="block"><a id="guides-08-smartwatch_start"></a><div class="yielded"><h2><a href="/guides/08-smartwatch" class="doc-link">Pebble Smartwatch</a></h2><h3 id="pebble-">Pebble!</h3>
+<section class="block"><a id="guides-06-android-app_start"></a><div class="yielded"><h2><a href="/guides/06-android-app" class="doc-link">Android App</a></h2><h3 id="moto-g">Moto G</h3>
+<p>Compile and Install the uploader</p>
+<h4 id="setup">setup</h4>
+<p><a href="http://developer.android.com/sdk/installing/studio.html">Download and install Android Studio</a>,
+along with any updates,</p>
+<blockquote>
+<p>Through the rooting procedure on the Moto G, <a href="http://developer.android.com/tools/device.html">usb debugging should
+  already be enabled</a>.</p>
+</blockquote>
+<h4 id="start-a-new-project">Start a new project</h4>
+<p>Start a new project, and <code>git</code> the
+<a href="https://github.com/nightscout/dexcom-uploader.git">source code</a></p>
+<p>One way to do that: is to visit <a href="https://github.com/nightscout/dexcom-uploader">https://github.com/nightscout/dexcom-uploader</a>
+<img src="http://i.imgur.com/7QXcK4s.jpg" alt="visit github">
+And download the zip file directly from github.</p>
+<p>Then import that zip file as a new project:
+<img src="http://i.imgur.com/m4HN47j.jpg" alt="import project">
+Select the zip file you just downloaded.</p>
+<h4 id="compile-and-install">Compile, and install</h4>
+<p>Plug your phone into the computer, and select <code>Run</code>:  Troubleshooting tip: If the app does not install on your phone, double check the target device by selecting &quot;Edit Configurations&quot; under the Run tab of Android Studio.  Ensure that USB device is selcted as the target device, not Emulator.<br><img src="http://i.imgur.com/TxLrp6f.jpg" alt="run app">
+These pictures were taken on a Mac.</p>
+<h5 id="configure-preferences">Configure preferences</h5>
+<p>Go into the settings menu in the CGM android app.  It is in the upper right
+corner or it might be accessed by pressing the menu button to the left of the home button of the smartphone.  Use your your <strong><code>mongo connection uri</code></strong> from above and fill in your collection name where requested.</p>
+<p><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/gVYWC/embed"></iframe>
+With Mongolab now set up, the application should be able to start
+uploading.  Connect the Dexcom receiver to the Moto G.</p>
+<blockquote>
+<p><strong>Important</strong>: when connecting the phone to the Dexcom, the OTG cable
+plugs into the phone, and the regular USB cable plugs into the
+Dexcom.  It will not work the other way, because OTG cables have
+pins 4 and 5 shorted on the microusb connector, the indication to
+the phone that an OTG device is connected.</p>
+</blockquote>
+<p>During the initial connection, there may be a pop-up asking if the app
+should have permission to run / access services.  Select yes.  The app
+should load, and data should start flowing to Mongolab.</p>
+<h4 id="-optional-creating-an-apk-"><strong>Optional: Creating an apk</strong></h4>
+<p>Android Studio also provides a way to “package” the app as an apk,
+which can then be attached to an email.  On Android devices, the gmail
+app is smart enough to install apps which are attached to emails.  In
+this way, it is very easy to deploy the app to other devices such as
+tablets or micro pcs.  These are especially useful for bedside
+monitoring, since they have their own source of external power.  For
+more information, see:</p>
+<ul>
+<li><a href="http://developer.android.com/tools/publishing/publishing_overview.html">http://developer.android.com/tools/publishing/publishing_overview.html</a></li>
+</ul>
+<h4 id="-important-verify-data-flowing-to-mongolab-"><strong>IMPORTANT: Verify Data Flowing to Mongolab</strong></h4>
+<p>Before moving to the next step, you must verify that the data is flowing to Mongolab.  </p>
+<p>First, ensure your Dexcom receiver is connected to your uploader device and that the app is uploading data (the dexcom blood glucose number and the uploader device&#39;s blood glucose number should match).  </p>
+<p>With the app running, log into your Mongolab account.  On the home screen, you will see something like this:
+<img src="http://i.imgur.com/gzfIvKJ.png" alt="Alt text"></p>
+<p>If the data is reaching Mongolab, the number under the documents column will not be zero.</p>
+<p>For more detailed information and troubleshooting, click on the database (anywhere in the gray bar of information) to locate your collection.  The next screen will look like this:
+<img src="http://i.imgur.com/l08MATw.png" alt="Alt text"></p>
+<p>To view the actual documents/packets of information received including the date and time that Mongolab receives data, click on the collection name (blocked out on the screen shot) and you will see something like this:
+<img src="http://i.imgur.com/McIiYk5.png" alt="Alt text"></p>
+<p>Once you have documents in your Mongolab collection, move on to the next step of setting up your Azure site which will allow you to monitor the cgm on the web.</p>
+</div><a id="guides-06-android-app_end"></a></section><section class="block"><a id="guides-07-web-monitor_start"></a><div class="yielded"><h2><a href="/guides/07-web-monitor" class="doc-link">Monitor CGM on the web</a></h2><h3 id="microsoft-azure-cloud-service-to-host-website-free">Microsoft Azure – cloud service to host website free</h3>
+<ul>
+<li><a href="https://github.com/">Sign into Github.com</a> with a free account.</li>
+<li><p><a href="https://github.com/nightscout/cgm-remote-monitor/fork"><img src="http://i.imgur.com/gR4wJ24.png" alt="fork"> the cgm-remote-monitor</a></p>
+</li>
+<li><p>Visit <a href="http://azure.microsoft.com">http://azure.microsoft.com</a></p>
+</li>
+<li>Click “Try for free”</li>
+<li>Enter or create username: <code>_________</code> (e.g. sally@outlook.com)</li>
+<li>Enter or create password: <code>_________</code></li>
+<li>Enter credit card information (will not be billed, ever, without
+your permission)  </li>
+<li>Go to the <a href="https://manage.windowsazure.com">Azure Portal</a>
+  Create a new Azure site</li>
+<li>Choose a Site Name: <code>_________</code> <code>.azurewebsites.net</code>
+(e.g. <strong><code>nightscoutss</code></strong><code>.azurewebsites.net</code>)</li>
+<li><p>Configure connection strings</p>
+<p>FIrst, find and click on the configure tab at the top of the page.
+<img src="http://i.imgur.com/dIPRHjt.png" alt="go to configure tab"></p>
+<p>Next, scroll down the page until you find the <strong>connection strings</strong> (it will be over three quarters of the way down the page.  You will see this:
+<img src="http://i.imgur.com/PZjxkjE.png" alt="connection strings"></p>
+<p>Create two rows.  At the end of each row, it will initially say SQL     Database.  Click on the arrow and select <strong>Custom</strong>  for both rows.  You now have two new <strong>Custom</strong> rows.  </p>
+<p>Each row now needs a name and a value.</p>
+<p>Name the first row mongo.  For this row&#39;s value, copy and paste your <code>mongo connection uri</code> from above into the value section of this row, e.g. mongodb://sallyuser:sallypassword@aabb22.mongolab.com:11111/nightscout</p>
+<p>Name the second row mongo_collection.  For this row&#39;s value, enter the name of your collection.  If you followed the example, the name of your collection might be one word, e.g. sally.</p>
+<p>When finished, the section will look like this:</p>
+<p>   <img src="http://i.imgur.com/YKVGcIP.png" alt="configure connection strings"></p>
+<p>If you click Show Connection Strings, you will see something like this (with your own information, of course):</p>
+<p><img src="http://i.imgur.com/NLc1Cjo.png" alt="alt text"><br>Finally, click <strong>Save</strong> at the bottom of the page.  This ends the work with the Configure tab.  The next step is deployment and it uses the Dashboard tab.</p>
+</li>
+<li><p>Click on the <strong>Dashboard</strong> tab at the top of the page.</p>
+<p><a href="http://imgur.com/iqCK34n"><img src="http://i.imgur.com/iqCK34n.png" title="Hosted by imgur.com"/></a></p>
+<p>Find setup deployment from source control under quick glance .
+<img src="http://i.imgur.com/6UnzWd4.png" alt="find setup deployment "></p>
+</li>
+<li>Select Github 
+<img src="http://i.imgur.com/iczHBW6.png" alt="select github"></li>
+<li>Authorize Github/Azure access.</li>
+<li><p>Find <code>cgm-remote-monitor</code>:</p>
+<p><img src="http://i.imgur.com/KbhyIcx.png" alt="find cgm-remote-monitor repo"></p>
+</li>
+<li><p>Confirm, watch the site deploy, it should deploy automatically.</p>
+</li>
+<li><p>Verify operation by visiting the site, e.g.
+<code>http://nightscoutss.azurewebsites.net</code>.</p>
+</li>
+<li><p>If blood glucose reaches a dangerous level, an alarm may sound and
+the blood glucose value in the upper right hand corner will turn
+into a red button.  Press the button to silence / acknowledge the
+alarm.  This will also silence the alarm for anyone else who is
+looking at the website.</p>
+</li>
+<li>For support, determine your Azure ftp username / password for azure
+website access by following these instructions:
+<a href="http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx">http://weblogs.asp.net/bleroy/archive/2012/06/12/azure-web-sites-ftp-credentials.aspx</a></li>
+</ul>
+<h2 id="-optional-creating-a-widget-to-view-azure-site-on-an-android-phone">(Optional) Creating a Widget to View Azure Site on an Android Phone</h2>
+<p>If you plan on viewing the azure website on an Android phone, you can create a widget which will refresh the data and place it on one of the home screens.  One widget creator that works well is WebSnap.  It is available from the Google Play store, but you will need to purchase the donate version ($2.99) if you want the widget to auto update every 5 minutes (free version will update every 15 minutes).  WebSnap offers a variety of widget sizes, including a scrolling version of the entire webpage.<br>To the right is an example of a 4 x 2 widget of Nightscout:
+    <img src="http://i.imgur.com/UuNqiXd.png?1" alt="widget"></p>
+</div><a id="guides-07-web-monitor_end"></a></section><section class="block"><a id="guides-08-smartwatch_start"></a><div class="yielded"><h2><a href="/guides/08-smartwatch" class="doc-link">Pebble Smartwatch</a></h2><h3 id="pebble-">Pebble!</h3>
 <p>The Pebble works with your main phone, eg, your iPhone.
 After getting a pebble watch, install the official Pebble App.</p>
 <h4 id="easy-method">Easy method</h4>
@@ -65,4 +183,4 @@ your phone will show up in a list, select the install and run:
 </div><a id="guides-08-smartwatch_end"></a></section><h2 id="-pay-it-forward-"><strong>Pay it forward</strong></h2>
 <p>Help a friend.  Enhance Nightscout by providing feedback, ideas,
 bug-fixes, and enhancements.</p>
-</article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Aug 12 2014 19:18:14 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/01-quickstart.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/01-quickstart.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Aug 12 2014 19:18:41 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>

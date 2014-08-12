@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Android App | Nightscout, open source, DIY CGM in the cloud</title><meta name="description" content="We are not waiting!  How to build Nightscout CGM in the cloud."><meta name="keywords" content="Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time"><meta name="author" content="Nightscout contributors"><meta name="generator" content="DocPad v6.69.0" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><!-- For now hide the navbar, single page site--><nav style="" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a href="/" class="navbar-brand">Welcome</a></div><ul class="nav navbar-nav"><li typeof="sioc:Page" about="/posts/01-quickstart"><a href="/posts/01-quickstart" property="dc:title">Nightscout Quickstart Guide, Draft</a></li><li typeof="sioc:Page" about="/posts/2014-05-25-azure-update"><a href="/posts/2014-05-25-azure-update" property="dc:title">Azure free account management</a></li><li typeof="sioc:Page" about="/posts/colors-subdued-is-safer"><a href="/posts/colors-subdued-is-safer" property="dc:title">Color choices for Nightscout: Subdued is Safer</a></li></ul></div></nav><div class="container"><section id="content" class="content"><article id="page" class="page"><div class="navlinks">
+  
+  <a href="/guides/07-web-monitor" title="Next Post: Monitor CGM on the web" class="navlinks-next">Monitor CGM on the web &raquo;</a>
+</div><h1>Android App</h1><div class="page-content"><h3 id="moto-g">Moto G</h3>
+<p>Compile and Install the uploader</p>
+<h4 id="setup">setup</h4>
+<p><a href="http://developer.android.com/sdk/installing/studio.html">Download and install Android Studio</a>,
+along with any updates,</p>
+<blockquote>
+<p>Through the rooting procedure on the Moto G, <a href="http://developer.android.com/tools/device.html">usb debugging should
+  already be enabled</a>.</p>
+</blockquote>
+<h4 id="start-a-new-project">Start a new project</h4>
+<p>Start a new project, and <code>git</code> the
+<a href="https://github.com/nightscout/dexcom-uploader.git">source code</a></p>
+<p>One way to do that: is to visit <a href="https://github.com/nightscout/dexcom-uploader">https://github.com/nightscout/dexcom-uploader</a>
+<img src="http://i.imgur.com/7QXcK4s.jpg" alt="visit github">
+And download the zip file directly from github.</p>
+<p>Then import that zip file as a new project:
+<img src="http://i.imgur.com/m4HN47j.jpg" alt="import project">
+Select the zip file you just downloaded.</p>
+<h4 id="compile-and-install">Compile, and install</h4>
+<p>Plug your phone into the computer, and select <code>Run</code>:  Troubleshooting tip: If the app does not install on your phone, double check the target device by selecting &quot;Edit Configurations&quot; under the Run tab of Android Studio.  Ensure that USB device is selcted as the target device, not Emulator.<br><img src="http://i.imgur.com/TxLrp6f.jpg" alt="run app">
+These pictures were taken on a Mac.</p>
+<h5 id="configure-preferences">Configure preferences</h5>
+<p>Go into the settings menu in the CGM android app.  It is in the upper right
+corner or it might be accessed by pressing the menu button to the left of the home button of the smartphone.  Use your your <strong><code>mongo connection uri</code></strong> from above and fill in your collection name where requested.</p>
+<p><iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/gVYWC/embed"></iframe>
+With Mongolab now set up, the application should be able to start
+uploading.  Connect the Dexcom receiver to the Moto G.</p>
+<blockquote>
+<p><strong>Important</strong>: when connecting the phone to the Dexcom, the OTG cable
+plugs into the phone, and the regular USB cable plugs into the
+Dexcom.  It will not work the other way, because OTG cables have
+pins 4 and 5 shorted on the microusb connector, the indication to
+the phone that an OTG device is connected.</p>
+</blockquote>
+<p>During the initial connection, there may be a pop-up asking if the app
+should have permission to run / access services.  Select yes.  The app
+should load, and data should start flowing to Mongolab.</p>
+<h4 id="-optional-creating-an-apk-"><strong>Optional: Creating an apk</strong></h4>
+<p>Android Studio also provides a way to “package” the app as an apk,
+which can then be attached to an email.  On Android devices, the gmail
+app is smart enough to install apps which are attached to emails.  In
+this way, it is very easy to deploy the app to other devices such as
+tablets or micro pcs.  These are especially useful for bedside
+monitoring, since they have their own source of external power.  For
+more information, see:</p>
+<ul>
+<li><a href="http://developer.android.com/tools/publishing/publishing_overview.html">http://developer.android.com/tools/publishing/publishing_overview.html</a></li>
+</ul>
+<h4 id="-important-verify-data-flowing-to-mongolab-"><strong>IMPORTANT: Verify Data Flowing to Mongolab</strong></h4>
+<p>Before moving to the next step, you must verify that the data is flowing to Mongolab.  </p>
+<p>First, ensure your Dexcom receiver is connected to your uploader device and that the app is uploading data (the dexcom blood glucose number and the uploader device&#39;s blood glucose number should match).  </p>
+<p>With the app running, log into your Mongolab account.  On the home screen, you will see something like this:
+<img src="http://i.imgur.com/gzfIvKJ.png" alt="Alt text"></p>
+<p>If the data is reaching Mongolab, the number under the documents column will not be zero.</p>
+<p>For more detailed information and troubleshooting, click on the database (anywhere in the gray bar of information) to locate your collection.  The next screen will look like this:
+<img src="http://i.imgur.com/l08MATw.png" alt="Alt text"></p>
+<p>To view the actual documents/packets of information received including the date and time that Mongolab receives data, click on the collection name (blocked out on the screen shot) and you will see something like this:
+<img src="http://i.imgur.com/McIiYk5.png" alt="Alt text"></p>
+<p>Once you have documents in your Mongolab collection, move on to the next step of setting up your Azure site which will allow you to monitor the cgm on the web.</p>
+</div></article></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/guides/06-android-app.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/guides/06-android-app.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Tue Aug 12 2014 19:18:41 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
