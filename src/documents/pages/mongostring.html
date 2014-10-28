@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What's my mongodb URI?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+  </head>
+  <body>
+    <div id="workflow">
+      <form id="inputs" action="#" method="GET">
+        <legend><h1>What is my MONGODB URI?</h1></legend>
+        <fieldset class="values">
+          <p>
+          </p>
+          <input type="disabled" disabled="disabled" name="prefix" class="v prefix" value="mongodb://"/>
+          <input type="text" name="user" class="v user"
+            placeholder="user"/>
+          <tt class="v interstitial">:</tt>
+          <input type="password" name="pass" class="v pass"
+            placeholder="passw0rd" />
+          <tt class="v interstitial">@</tt>
+          <input type="text" name="hostname" class="v hostname"
+            placeholder="hostname:port" />
+          <tt class="v interstitial">/</tt>
+          <input type="text" name="db" class="v db"
+            placeholder="db" />
+          <button type="button" class="btn btn-primary btn-lg format" name="format"
+              value="format">Format</button>
+          <button type="reset" class="btn btn-warning reset clear" name="clear"
+              value="Clear">Clear</button>
+        </fieldset>
+
+      </form>
+      <div id="output">
+        <p>
+          <tt id="uri"></tt>
+        </p>
+        <div id="qrcode"> </div>
+      </div>
+    </div>
+
+    <div id="dependencies">
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+      </script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js">
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </div>
+    <div id="js">
+      <!-- Latest compiled and minified JavaScript -->
+      <script type="text/javascript">
+        function do_format (ev) {
+          console.log(ev);
+          var base = $(ev.data.base);
+          var parts = base.find('.v');
+          var out = [ ];
+          if ($(ev.target).is('.reset')) {
+            console.log('CLEAR');
+            base.find(':input').not(':disabled').val('');
+          }
+          parts.each(function iter (i) {
+            var v = $(this);
+            var r = '';
+            if (v.is(':input') && v.val && v.val.call) {
+              r = v.val( );
+            } else {
+              r = v.text( );
+            }
+            out.push(r.trim( ));
+
+          });
+          var uri = out.join('').trim( );
+          base.find(ev.data.uri).text(uri);
+          base.find(ev.data.qrcode).empty( ).qrcode(uri);
+        }
+
+        var config = {
+          base: '#workflow'
+        , inputs: '#inputs'
+        , output: '#output'
+        , uri: '#output #uri'
+        , qrcode: '#qrcode'
+        };
+        function init (ev) {
+          $(config.base).on('change', config, do_format);
+          $(config.base + ' button.btn').on('click', config, do_format);
+          console.log('hello');
+          do_format.apply(this, arguments);
+          // $(config.base).on('submit', config, do_format)
+        }
+        $(document).on('ready', config, init);
+      </script>
+    </div>
+  </body>
+</html>
