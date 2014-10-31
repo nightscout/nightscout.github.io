@@ -104,7 +104,7 @@
           var name = workflow.find('.v.user').val( );
           var prev = workflow.data('user');
           workflow.data('user', name);
-          if (prev != name)
+          if (prev != name) {
             workflow.removeClass('step1 step2 step3 updated');
             workflow.addClass('step1');
             find_user(name);
