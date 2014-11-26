@@ -189,8 +189,18 @@
 
 
             if (scheme && netloc && parts.length === 0) {
-              if (scheme.indexOf('http') === 0) {
-                if (secret.length > 11) {
+              if (secret.length > 11) {
+                el.find('.form-group.has-feedback .restsecret')
+                  .find('.glyphicon-question-sign')
+                  .removeClass('glyphicon-question-sign')
+                  .addClass('glyphicon-ok');
+                if (scheme.indexOf('http') === 0) {
+                  el.find('.form-group.has-feedback')
+                    .removeClass('has-error').addClass('has-success');
+                  el.find('.form-group.has-feedback .restlocation')
+                    .find('.glyphicon-question-sign')
+                    .removeClass('glyphicon-question-sign')
+                    .addClass('glyphicon-ok');
                   url = [ scheme, sep, secret, '@', netloc ].join('');
                   return url;
                 }
