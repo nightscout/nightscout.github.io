@@ -27,7 +27,7 @@
         -->
         <fieldset id="rest_api" class="values has-feedback">
           <legend>Rest API
-            <button class="btn">
+            <button class="btn" id="add_rest">
               <span class="glyphicon glyphicon-plus"></span>
             </button>
           </legend>
@@ -203,7 +203,7 @@
           var uris = base.find('#rest_api .rest.template')
             .not('.skeleton')
             .map(valid_rest_uri);
-          return uris.get( ).join(' ');
+          return uris.get( );
         }
 
         function render (ev) {
@@ -295,6 +295,10 @@
           return clone;
         }
 
+        function add_rest (ev) {
+          clone_rest_api(ev.data);
+        }
+
         function cancel (ev) {
           ev.preventDefault( );
           return false;
@@ -309,6 +313,7 @@
           clone_rest_api(ev.data);
           // console.log('hello');
           do_format.apply(this, arguments);
+          $(config.base).on('click', '#add_rest', ev.data, add_rest);
           $(config.base).on('submit', 'FORM', ev.data, cancel);
         }
         $(document).on('ready', config, init);
