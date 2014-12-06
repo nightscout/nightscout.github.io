@@ -172,10 +172,17 @@
           });
           var uri = out.join('').trim( );
           var apis = get_rest_uris(opts);
-          return {
+          var data = {
             mongo: { uri: uri }
           , rest: { endpoint: apis }
           };
+          if (data.mongo.uri == 'mongodb://:@/') {
+            delete data.mongo;
+          }
+          if (!apis.length > 0) {
+            delete data.rest;
+          }
+          return data;
         }
 
         function valid_rest_uri (i, v) {
