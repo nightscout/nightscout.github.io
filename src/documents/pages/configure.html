@@ -17,6 +17,19 @@
     <div id="workflow" class="container">
       <form id="inputs" action="#" method="GET" class="form-inline" role="form">
         <legend><h1>How do we configure Nightscout?</h1></legend>
+        <div role="tabpanel">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#REST_APIs" aria-controls="REST" role=tab" data-toggle="tab">Rest API</a>
+            </li>
+            <li role="presentation" class="">
+              <a href="#MONGODB" aria-controls="MONGO" role=tab" data-toggle="tab">MONGO</a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="REST_APIs">
+              REST API
         <!--
         <fieldset id="new_choices" class="values has-feedback">
           <div id="choices">
@@ -25,65 +38,67 @@
           </div>
         </fieldset>
         -->
-        <fieldset id="rest_api" class="values has-feedback">
-          <legend>Rest API
-            <button class="btn" id="add_rest">
-              <span class="glyphicon glyphicon-plus"></span>
-            </button>
-          </legend>
-          <div class="hide template skeleton rest">
-            <div class="form-group has-error has-feedback">
-              <label class="restsecret control-label"><tt>API_SECRET</tt>:
-                <input type="text" name="api_secret" class="v api_secret form-control"
-                  placeholder="atleast12characterslong" />
-                <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
-              </label>
-              <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
-            </div>
+              <fieldset id="rest_api" class="values has-feedback">
+                <legend>Rest API
+                  <button class="btn" id="add_rest">
+                    <span class="glyphicon glyphicon-plus"></span>
+                  </button>
+                </legend>
+                <div class="hide template skeleton rest">
+                  <div class="form-group has-error has-feedback">
+                    <label class="restsecret control-label"><tt>API_SECRET</tt>:
+                      <input type="text" name="api_secret" class="v api_secret form-control"
+                        placeholder="atleast12characterslong" />
+                      <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
+                    </label>
+                    <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
+                  </div>
 
-            <br/>
+                  <br/>
+                  <div class="form-group has-error has-feedback">
+                    <label class="restlocation control-label">Azure site:
+                      <input type="text" name="resturi" class="v resturi form-control"
+                        placeholder="https://foobar.azurewebsites.net" />
+                      <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
+                    </label>
+                    <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="MONGODB">
+          <fieldset id="stage1" class="values has-feedback">
+            <legend>Create database</legend>
+            <h2>Step 1: Sign up for an account to manage your database</h2>
+            <p>
+            <a href="https://mongolab.com/">Mongolab</a> has a free sign up.
+            </p>
+            <h2>Step 2: Create a database</h2>
             <div class="form-group has-error has-feedback">
-              <label class="restlocation control-label">Azure site:
-                <input type="text" name="resturi" class="v resturi form-control"
-                  placeholder="https://foobar.azurewebsites.net" />
+              <label class="mongolocation control-label">Create a database
+                <input type="text" name="netloc" class="v netloc form-control"
+                  placeholder="sub023405.mongolab.com:23405/cgmdb" />
                 <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
               </label>
               <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
             </div>
-          </div>
-        </fieldset>
-        <fieldset id="stage1" class="values has-feedback">
-          <legend>Create database</legend>
-          <h2>Step 1: Sign up for an account to manage your database</h2>
-          <p>
-          <a href="https://mongolab.com/">Mongolab</a> has a free sign up.
-          </p>
-          <h2>Step 2: Create a database</h2>
-          <div class="form-group has-error has-feedback">
-            <label class="mongolocation control-label">Create a database
-              <input type="text" name="netloc" class="v netloc form-control"
-                placeholder="sub023405.mongolab.com:23405/cgmdb" />
-              <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
-            </label>
-            <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
-          </div>
-        </fieldset>
-        <fieldset id="stage2" class="values has-feedback">
-          <h2>Step 3: Create a user for your new database</h2>
-          <legend>Create a user for the database</legend>
-          <div class="form-group has-error has-feedback">
-            <label><tt>Username:</tt>
-              <input type="text" name="user" class="v user form-control"
-                placeholder="user"/>
-            </label>
-          </div>
-          <div class="form-group has-error has-feedback">
-            <label><tt>Password</tt>
-            <input type="password" name="pass" class="v pass form-control"
-              placeholder="passw0rd" />
-            </label>
-          </div>
-        </fieldset>
+          </fieldset>
+          <fieldset id="stage2" class="values has-feedback">
+            <h2>Step 3: Create a user for your new database</h2>
+            <legend>Create a user for the database</legend>
+            <div class="form-group has-error has-feedback">
+              <label><tt>Username:</tt>
+                <input type="text" name="user" class="v user form-control"
+                  placeholder="user"/>
+              </label>
+            </div>
+            <div class="form-group has-error has-feedback">
+              <label><tt>Password</tt>
+              <input type="password" name="pass" class="v pass form-control"
+                placeholder="passw0rd" />
+              </label>
+            </div>
+          </fieldset>
         <fieldset id="finish" class="values">
           <p>
           </p>
@@ -104,6 +119,10 @@
           <button type="reset" class="btn btn-warning reset clear" name="clear"
               value="Clear">Clear</button>
         </fieldset>
+
+            </div>
+          </div>
+        </div>
 
       </form>
       <div id="output" class="jumbotron">
@@ -230,7 +249,9 @@
             console.log('CLEAR');
             base.find(':input').not(':disabled').val('');
           }
-          base.find(ev.data.uri).text(conf.mongo.uri);
+          if (conf.mongo && conf.mongo.uri) {
+            base.find(ev.data.uri).text(conf.mongo.uri);
+          }
           base.find(ev.data.qrcode).empty( ).qrcode(JSON.stringify(conf));
           base.find('#json').text(JSON.stringify(conf));
 
@@ -324,7 +345,7 @@
         function init (ev) {
           $(config.base).on('change keyup', '#stage1', ev.data, stage1);
           $(config.base).on('change keyup', '#stage2', ev.data, stage2);
-          $(config.base).on('change', ev.data, do_format);
+          $(config.base).on('change keyup', ev.data, do_format);
           $(config.base).on('render', ev.data, render);
           $(config.base + ' button.btn').on('click', ev.data, do_format);
           clone_rest_api(ev.data);
