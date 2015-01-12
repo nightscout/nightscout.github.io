@@ -19,6 +19,9 @@
         <legend><h1>How do we configure Nightscout?</h1></legend>
         <div role="tabpanel">
           <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="">
+              <a href="#MQTT" aria-controls="MQTT" role=tab" data-toggle="tab">MQTT</a>
+            </li>
             <li role="presentation" class="active">
               <a href="#REST_APIs" aria-controls="REST" role=tab" data-toggle="tab">Rest API</a>
             </li>
@@ -28,6 +31,43 @@
           </ul>
 
           <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" id="MQTT">
+              <fieldset id="mqtt_apis" class="values has-feedback">
+                <legend>Create mqtt server</legend>
+                <p>
+                  <a href="http://cloudmqtt.com">CloudMQTT.com</a> has free
+                  accounts that work.
+                </p>
+              </fieldset>
+              <fieldset class="mqtt-values mqtt-creds container">
+                <div class="row form-group has-error has-feedback">
+                  <label class="mqtt-host control-label">MQTT Host
+                    <input type="text" name="host" class="v host form-control"
+                      placeholder="m01.cloudmqtt.com" />
+                    <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
+                  </label>
+                  <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+                <div class="row form-group has-error has-feedback">
+                  <label><tt>Username:</tt>
+                    <input type="text" name="user" class="v user form-control"
+                      placeholder="user"/>
+                  </label>
+                </div>
+                <div class="row form-group has-error has-feedback">
+                  <label><tt>Password</tt>
+                  <input type="password" name="pass" class="v pass form-control"
+                    placeholder="passw0rd" />
+                  </label>
+                </div>
+                <div class="row form-group has-error has-feedback">
+                  <label><tt>Port</tt>
+                  <input type="text" name="port" class="v port form-control"
+                    placeholder="12424" />
+                  </label>
+                </div>
+              </fieldset>
+            </div>
             <div role="tabpanel" class="tab-pane active" id="REST_APIs">
               <fieldset id="rest_api" class="values has-feedback">
                 <legend>Rest API
@@ -182,10 +222,14 @@
           });
           var uri = out.join('').trim( );
           var apis = get_rest_uris(opts);
+          var mqtt = get_mqtt_uri(opts);
           var data = {
             mongo: { uri: uri }
           , rest: { endpoint: apis }
           };
+          if (mqtt != 'tcp://:@:') {
+            data.mqtt = { uri: mqtt };
+          }
           if (data.mongo.uri == 'mongodb://:@/') {
             delete data.mongo;
           }
@@ -231,6 +275,19 @@
             .not('.skeleton')
             .map(valid_rest_uri);
           return uris.get( );
+        }
+
+        function get_mqtt_uri (opts) {
+          var base = $(opts.base);
+          var controls = base.find('#MQTT');
+          var prefix = 'tcp://'
+          var host = controls.find('.v.host').val( );
+          var user = controls.find('.v.user').val( );
+          var pass = controls.find('.v.pass').val( );
+          var port = controls.find('.v.port').val( );
+          var uri = [ prefix, [user, pass].join(':')
+                    , '@', [host, port].join(':') ].join('');
+          return uri;
         }
 
         function render (ev) {
@@ -332,10 +389,47 @@
           ev.preventDefault( );
           return false;
         }
+        
+        function prep_mqtt (ev) {
+          var base = $(ev.data.base);
+          var uri = get_mqtt_uri(ev.data);
+          console.log('rendering', uri);
+          base.trigger('render');
+          var pieces = uri.split('@');
+          var tail = pieces.pop( );
+          var head = pieces.pop( );
+          console.log('one', pieces);
+          if (tail && head && pieces.length == 0) {
+            pieces = head.split(':')
+            var pass = pieces.pop( );
+            var user = pieces.pop( );
+            var scheme = pieces.pop( );
+            console.log('two', pieces);
+            if (user.length > 2 && pass.length > 0 && scheme == 'tcp' && pieces.length == 0) {
+              pieces = tail.split(':');
+              var port = pieces.pop( );
+              var host = pieces.pop( );
+              console.log('three', pieces);
+              if (pieces.length == 0 && port.length > 0 && host.length > 0) {
+                console.log('four', pieces);
+                base.find('#MQTT .glygphicon-question-sign')
+                  .removeClass('glygphicon-question-sign')
+                  .addClass('glygphicon-ok')
+                  ;
+                base.find('#MQTT .has-feedback')
+                  .removeClass('has-error has-warning')
+                  .addClass('has-success')
+                  ;
+              }
+            }
+          }
+          
+        }
 
         function init (ev) {
           $(config.base).on('change keyup', '#stage1', ev.data, stage1);
           $(config.base).on('change keyup', '#stage2', ev.data, stage2);
+          $(config.base).on('change keyup', '#MQTT', ev.data, prep_mqtt);
           $(config.base).on('change keyup', ev.data, do_format);
           $(config.base).on('render', ev.data, render);
           $(config.base + ' button.btn').on('click', ev.data, do_format);
