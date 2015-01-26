@@ -28,6 +28,9 @@
             <li role="presentation" class="">
               <a href="#MONGODB" aria-controls="MONGO" role=tab" data-toggle="tab">MONGO</a>
             </li>
+            <li role="presentation" class="">
+              <a href="#WebApp" aria-controls="WebApp" role=tab" data-toggle="tab">WebApp</a>
+            </li>
           </ul>
 
           <div class="tab-content">
@@ -40,7 +43,7 @@
                 </p>
               </fieldset>
               <fieldset class="mqtt-values mqtt-creds container">
-                <div class="row form-group has-error has-feedback">
+                <div class="column form-group has-error has-feedback">
                   <label class="mqtt-host control-label">MQTT Host
                     <input type="text" name="host" class="v host form-control"
                       placeholder="m01.cloudmqtt.com" />
@@ -48,23 +51,25 @@
                   </label>
                   <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
                 </div>
-                <div class="row form-group has-error has-feedback">
+                <div class="column form-group has-error has-feedback">
+                  <label><tt>Port</tt>
+                  <input type="text" name="port" class="v port form-control"
+                    placeholder="12424" />
+                  </label>
+                </div>
+                <div class="row">
+                <div class="column form-group has-error has-feedback">
                   <label><tt>Username:</tt>
                     <input type="text" name="user" class="v user form-control"
                       placeholder="user"/>
                   </label>
                 </div>
-                <div class="row form-group has-error has-feedback">
+                <div class="column form-group has-error has-feedback">
                   <label><tt>Password</tt>
                   <input type="password" name="pass" class="v pass form-control"
                     placeholder="passw0rd" />
                   </label>
                 </div>
-                <div class="row form-group has-error has-feedback">
-                  <label><tt>Port</tt>
-                  <input type="text" name="port" class="v port form-control"
-                    placeholder="12424" />
-                  </label>
                 </div>
               </fieldset>
             </div>
@@ -76,7 +81,7 @@
                   </button>
                 </legend>
                 <div class="hide template skeleton rest">
-                  <div class="form-group has-error has-feedback">
+                  <div class="form-group has-error has-feedback" title="If set must be at least 12 characters long.">
                     <label class="restsecret control-label"><tt>API_SECRET</tt>:
                       <input type="text" name="api_secret" class="v api_secret form-control"
                         placeholder="atleast12characterslong" />
@@ -151,6 +156,136 @@
               value="Clear">Clear</button>
         </fieldset>
 
+            </div>
+            <div role="tabpanel" class="tab-pane" id="WebApp">
+              <table id="web_config">
+                <tr>
+                  <th colspan="3">
+                    <h4>Required</h4>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                  <code>MONGO_CONNECTION</code>
+                  </td>
+                  <td>
+                    <code class="env var mongo"></code>
+                  </td>
+                  <td> <tt>Custom</tt>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="3">
+                    <h4>Recommended</h4>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                  <code>API_SECRET</code>
+                  </td>
+                  <td>
+                    <code class="env var api_secret"></code>
+                  </td>
+                  <td> <tt>Custom</tt>
+                  </td>
+                </tr>
+<!--
+                <tr>
+                  <th colspan="3">
+                    <h4>Labs</h4>
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                  <code>ENABLE</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <code>POST</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <code>BG_HIGH</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <code>BG_TARGET_TOP</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <code>BG_TARGET_BOTTOM</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <code>BG_LOW</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <code>ALARM_TYPES</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <code>PUSHOVER_API_TOKEN</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <code>PUSHOVER_USER_KEY</code>
+                  </td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="3">
+                    <h4>Core</h4>
+                  </th>
+                </tr>
+-->
+              </table>
+
+              <div class="well">
+              </div>
             </div>
           </div>
         </div>
@@ -299,6 +434,11 @@
           }
           if (conf.mongo && conf.mongo.uri) {
             base.find(ev.data.uri).text(conf.mongo.uri);
+            base.find('.env.var.mongo').text(conf.mongo.uri)
+          }
+          if (conf.rest && conf.rest.endpoint) {
+            var api_secret = base.find('.template').not('.skeleton').filter(':first').find('.v.api_secret:first').val( );
+            base.find('.env.var.api_secret').text(api_secret)
           }
           base.find(ev.data.qrcode).empty( ).qrcode(JSON.stringify(conf));
           base.find('#json').text(JSON.stringify(conf));
