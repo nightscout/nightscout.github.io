@@ -63,7 +63,7 @@ Facebook, or [send us a tweet][nightscout-twitter].
 
 [question-string]: https://github.com/nightscout/android-uploader/blob/6e4ceddc672cd27eaa61fccd597d541dee829c11/app/src/main/res/values/strings.xml#L36
 [designing-android-dialogue]: https://github.com/nightscout/android-uploader/issues/129
-[nightscout-twitter]: http://i.imgur.com/oXM9G4E.png
+[nightscout-twitter]: https://twitter.com/nightscoutproj
 
 
 
