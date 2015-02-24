@@ -61,5 +61,13 @@ HideNav: true
       * [Wiki-For Technical knowledge Sharing](https://github.com/nightscout/nightscout.github.io/wiki)
       * [Install Guide Printable Format](https://github.com/nightscout/nightscout.github.io/blob/source/src/files/pdfs/Install%20Guide%202014.pdf)
       
- 
+  .col-md-6
+    div
+      h2 Posts
+      ul
+        each doc in getCollection('posts').toJSON()
+          - clazz = (document.url === doc.url) ? 'active' : null
+          li(typeof="sioc:Page", about=doc.url, class=clazz)
+            a(href=doc.url, property="dc:title")= doc.title
+
 
