@@ -397,7 +397,7 @@
                     .find('.glyphicon-question-sign')
                     .removeClass('glyphicon-question-sign')
                     .addClass('glyphicon-ok');
-                  url = [ scheme, sep, secret, '@', netloc ].join('');
+                  url = [ scheme, sep, encodeURIComponent(secret), '@', netloc ].join('');
                   return url;
                 }
               }
