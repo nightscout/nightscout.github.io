@@ -12,7 +12,8 @@ A typical Nightscout display might look a bit like this:
 ![Nightscout testimonial with screenshot][screenshot-nightscout]
 
 What if you wanted a way to look at more than one Nightscout at the
-same time?  That's where [nightscout-aggregator] comes into play.
+same time?  That's where
+[nightscout-aggregator][nightscout-aggregator] comes into play.
 Originally designed to help create screenshots for a presentation, it
 has become a useful starting point for a couple of interesting use
 cases:
