@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Towards Aggregating Nightscouten | Nightscout, open source, DIY CGM in the cloud</title><meta name="description" content="We are not waiting!  How to build Nightscout CGM in the cloud."><meta name="keywords" content="Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time"><meta name="author" content="Nightscout contributors"><meta name="generator" content="DocPad v6.73.5" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><!-- For now hide the navbar, single page site--><nav style="" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a href="/" class="navbar-brand">Welcome</a></div><ul class="nav navbar-nav"><li typeof="sioc:Page" about="/posts/2015-02-22-donate-data-with-ga"><a href="/posts/2015-02-22-donate-data-with-ga" property="dc:title">Release of data</a></li><li typeof="sioc:Page" about="/posts/2015-02-26-towards-aggregating" class="active"><a href="/posts/2015-02-26-towards-aggregating" property="dc:title">Towards Aggregating Nightscouten</a></li><li typeof="sioc:Page" about="/posts/colors-subdued-is-safer"><a href="/posts/colors-subdued-is-safer" property="dc:title">Color choices for Nightscout: Subdued is Safer</a></li></ul></div></nav><div class="container"><section id="content" class="content"><article id="post" class="post"><h1>Towards Aggregating Nightscouten</h1><div class="post-content"><h1 id="nightscout">Nightscout</h1>
+<p>A typical Nightscout display might look a bit like this:</p>
+<p><img src="http://bewest.github.io/ns-ms-present/images/03-why/drop-like-a-rock.png" alt="Nightscout testimonial with screenshot"></p>
+<p>What if you wanted a way to look at more than one Nightscout at the
+same time?  That&#39;s where [nightscout-aggregator] comes into play.
+Originally designed to help create screenshots for a presentation, it
+has become a useful starting point for a couple of interesting use
+cases:</p>
+<ul>
+<li><p>Compare and contrast results from multiple glucose estimation
+instruments: (eg, compare your Dexdrip/DexBridge against Dexcom).</p>
+</li>
+<li><p>Watch a glycemia across a population of users.</p>
+</li>
+</ul>
+<h2 id="design">Design</h2>
+<h3 id="viewing-additional-nightscouten">Viewing additional Nightscouten</h3>
+<p>By default, the UI has a <code>settings</code> button with a form for users to
+subscribe new Nightscout addressess to the monitoring service.</p>
+<p><img src="http://i.imgur.com/G4E3OhF.png?1" alt="By default settings button in upper left"></p>
+<p>Clicking the button should reveal a form for the user to subscribe a
+Nightscout to your monitoring service.  Proposals for creating a
+better work flow here to &quot;release the data&quot; properly are welcome.</p>
+<p><img src="http://i.imgur.com/sinmnrp.png" alt="Enter a Nightscout address to monitor"></p>
+<p><img src="http://i.imgur.com/KSJwzkB.png" alt="Use the sync button to enroll."></p>
+<h2 id="usage">Usage</h2>
+<p>Originally conceieved as a tool to help with demos at presentations,
+this has become a useful way to quickly get an idea of what is
+happening with a population of Nightscout users, without really
+revealing whose data belongs to whom.  In the short term, this tool
+has been a useful way to build empathy in terms of understanding
+therapy for type 1 diabetes.</p>
+<p><img src="http://bewest.github.io/ns-ms-present/images/04-aggregate/halloween-05.png" alt="Screenshot"></p>
+<h2 id="how-it-works">How it works</h2>
+<p>Each Nightscout is kept in a list in the webserver.  The webserver
+itself enrolls in the Nightscout&#39;s websocket.  The websocket&#39;s address
+is paired internally with a unique random color six hex-digit hash.
+Currently no data is stored, the lens merely allows viewing all the
+data passing through the server in an ephemeral fashion.<br>No matter how many people visit your aggregator, the
+server itself is multiplexing the connections, there is only one
+connection to the monitored Nightscout URLs, no matter how many
+clients connect to this server.  </p>
+<p>The UI avoids showing any details other than the color hash, the time,
+and the glucose values.</p>
+<h2 id="halloween">Halloween</h2>
+<p>Here are some screenshots from Halloween, 2014.</p>
+<iframe class="imgur-album" width="100%" height="550" frameborder="0"
+src="//imgur.com/a/avUf6/embed"></iframe>
+
+
+<h2 id="future-plans">Future plans</h2>
+<p>While there is an explicit &quot;opt-in&quot; workflow, our initial work with
+researchers is that this area needs some work in order to
+appropriately release the data for publishable research use.  We will
+accept designs and patches to help with these concerns.
+What data might be released by this tool?  The tool is designed to
+preserve the anonymity of the people contributing source data.</p>
+<p>This is the rough plan for which data to potentially archive for
+public consumption:</p>
+<ul>
+<li>Random 6 digit color-hash.  The unique random hash id is associated
+internally with a Nightscout address, but we intend on keeping this
+mapping secret.</li>
+<li>Timestamp</li>
+<li>Glucose</li>
+</ul>
+<h4 id="what-might-an-example-record-look-like-">What might an example record look like:</h4>
+<p>This is what the archived, proposed records would look like, they only
+contain a randomly assigned hash, the date and time, and the basic
+information about glucose, trend, and noise.</p>
+<p>We propose exporting slices of data like this for permanent
+publication, donation to open science.</p>
+<pre><code class="lang-csv">hash,datetime,glucose,trend,noise
+7eba1d,2015-01-01T10:03:38,158,None,4
+3fd8a,2015-01-01T10:03:35,128,None,4
+04c64a,2015-01-01T10:02:29,178,None,4
+7eba1d,2015-01-01T10:08:38,156,None,4
+3fd8a,2015-01-01T10:08:35,126,None,3
+04c64a,2015-01-01T10:07:29,180,None,3
+7eba1d,2015-01-01T10:13:38,156,None,4
+3fd8a,2015-01-01T10:13:35,126,None,3
+04c64a,2015-01-01T10:12:29,182,None,3
+7eba1d,2015-01-01T10:18:38,155,None,4
+3fd8a,2015-01-01T10:18:35,125,None,2
+04c64a,2015-01-01T10:17:28,182,None,2
+7eba1d,2015-01-01T10:23:38,156,None,4
+3fd8a,2015-01-01T10:23:35,126,None,2
+04c64a,2015-01-01T10:22:28,190,None,2
+7eba1d,2015-01-01T10:28:38,155,None,4
+3fd8a,2015-01-01T10:28:35,125,None,2
+04c64a,2015-01-01T10:27:28,194,None,2
+7eba1d,2015-01-01T10:33:38,154,None,4
+3fd8a,2015-01-01T10:33:35,124,None,1
+04c64a,2015-01-01T10:32:29,199,None,1
+</code></pre>
+<p>See <a href="http://nightscout.github.io/posts/2015-02-22-donate-data-with-ga/">http://nightscout.github.io/posts/2015-02-22-donate-data-with-ga/</a>
+for more details on the impetus behind this effort.</p>
+</div></article><footer></footer></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu Feb 26 2015 23:19:08 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
