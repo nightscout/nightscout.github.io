@@ -88,11 +88,11 @@ src="//imgur.com/a/avUf6/embed"></iframe>
 ## Future plans
 
 While there is an explicit "opt-in" workflow, our initial work with
-researchers is that this area needs some work in order to
+researchers indicates that this area needs some work in order to
 appropriately release the data for publishable research use.  We will
-accept designs and patches to help with these concerns.
-What data might be released by this tool?  The tool is designed to
-preserve the anonymity of the people contributing source data.
+accept designs and patches to help with these concerns.  What data
+might be released by this tool?  The tool is designed to preserve the
+anonymity of the people contributing source data.
 
 This is the rough plan for which data to potentially archive for
 public consumption:
@@ -110,7 +110,17 @@ contain a randomly assigned hash, the date and time, and the basic
 information about glucose, trend, and noise.
 
 We propose exporting slices of data like this for permanent
-publication, donation to open science.
+publication, donation to open science.  In this fictitious sample,
+there are three individuals over 40 minutes.
+
+The individuals have the following hashes associated, researchers can
+isolate data, but because these identifiers are random, and
+regenerated randomly, there is no way to associate the data here with
+any identifiable information.
+
+* `7eba1d`
+* `3fd8a`
+* `04c64a`
 
 ```csv
 hash,datetime,glucose,trend,noise
@@ -136,6 +146,10 @@ hash,datetime,glucose,trend,noise
 3fd8a,2015-01-01T10:33:35,124,None,1
 04c64a,2015-01-01T10:32:29,199,None,1
 ```
+
+If this proves insufficient, we can also time-shift slices, eg
+randomly time shift the data to ten or twenty years ago, to provide
+additional noise to the data which would not affect analysis.
 
 See http://nightscout.github.io/posts/2015-02-22-donate-data-with-ga/
 for more details on the impetus behind this effort.
