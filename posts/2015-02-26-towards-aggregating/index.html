@@ -52,11 +52,11 @@ src="//imgur.com/a/avUf6/embed"></iframe>
 
 <h2 id="future-plans">Future plans</h2>
 <p>While there is an explicit &quot;opt-in&quot; workflow, our initial work with
-researchers is that this area needs some work in order to
+researchers indicates that this area needs some work in order to
 appropriately release the data for publishable research use.  We will
-accept designs and patches to help with these concerns.
-What data might be released by this tool?  The tool is designed to
-preserve the anonymity of the people contributing source data.</p>
+accept designs and patches to help with these concerns.  What data
+might be released by this tool?  The tool is designed to preserve the
+anonymity of the people contributing source data.</p>
 <p>This is the rough plan for which data to potentially archive for
 public consumption:</p>
 <ul>
@@ -71,7 +71,17 @@ mapping secret.</li>
 contain a randomly assigned hash, the date and time, and the basic
 information about glucose, trend, and noise.</p>
 <p>We propose exporting slices of data like this for permanent
-publication, donation to open science.</p>
+publication, donation to open science.  In this fictitious sample,
+there are three individuals over 40 minutes.</p>
+<p>The individuals have the following hashes associated, researchers can
+isolate data, but because these identifiers are random, and
+regenerated randomly, there is no way to associate the data here with
+any identifiable information.</p>
+<ul>
+<li><code>7eba1d</code></li>
+<li><code>3fd8a</code></li>
+<li><code>04c64a</code></li>
+</ul>
 <pre><code class="lang-csv">hash,datetime,glucose,trend,noise
 7eba1d,2015-01-01T10:03:38,158,None,4
 3fd8a,2015-01-01T10:03:35,128,None,4
@@ -95,6 +105,9 @@ publication, donation to open science.</p>
 3fd8a,2015-01-01T10:33:35,124,None,1
 04c64a,2015-01-01T10:32:29,199,None,1
 </code></pre>
+<p>If this proves insufficient, we can also time-shift slices, eg
+randomly time shift the data to ten or twenty years ago, to provide
+additional noise to the data which would not affect analysis.</p>
 <p>See <a href="http://nightscout.github.io/posts/2015-02-22-donate-data-with-ga/">http://nightscout.github.io/posts/2015-02-22-donate-data-with-ga/</a>
 for more details on the impetus behind this effort.</p>
-</div></article><footer></footer></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu Feb 26 2015 23:49:58 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></article><footer></footer></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Fri Feb 27 2015 01:00:12 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
