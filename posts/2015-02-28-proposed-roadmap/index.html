@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Proposed Roadmap | Nightscout, open source, DIY CGM in the cloud</title><meta name="description" content="We are not waiting!  How to build Nightscout CGM in the cloud."><meta name="keywords" content="Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time"><meta name="author" content="Nightscout contributors"><meta name="generator" content="DocPad v6.73.5" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><!-- For now hide the navbar, single page site--><nav style="" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a href="/" class="navbar-brand">Welcome</a></div><ul class="nav navbar-nav"><li typeof="sioc:Page" about="/posts/2015-02-22-donate-data-with-ga"><a href="/posts/2015-02-22-donate-data-with-ga" property="dc:title">Release of data</a></li><li typeof="sioc:Page" about="/posts/2015-02-26-towards-aggregating"><a href="/posts/2015-02-26-towards-aggregating" property="dc:title">Towards Aggregating Nightscouten</a></li><li typeof="sioc:Page" about="/posts/2015-02-28-proposed-roadmap" class="active"><a href="/posts/2015-02-28-proposed-roadmap" property="dc:title">Proposed Roadmap</a></li><li typeof="sioc:Page" about="/posts/colors-subdued-is-safer"><a href="/posts/colors-subdued-is-safer" property="dc:title">Color choices for Nightscout: Subdued is Safer</a></li></ul></div></nav><div class="container"><section id="content" class="content"><article id="post" class="post"><h1>Proposed Roadmap</h1><div class="post-content"><h1 id="nightscout-roadmap-and-identity">Nightscout Roadmap and Identity</h1>
+<p>Nightscout is a combination of community, comprised of people, with
+technology, comprised of open source software and hardware.  Open
+source software develops in a diverse &quot;Bazaar&quot;, a community of people
+with diverse experiences and talents.  A theme that unites the
+decentralized efforts and the diverse perspectives is is an
+overwhelming desire to do everything possible to make &quot;Diabetes&quot; a
+common enemy.  By making diabetes the common enemy, the community
+provides a venue for beneficial collaborations to take place,
+accelerating and improving diabetes therapy.</p>
+<h3 id="designing-nightscout">Designing Nightscout</h3>
+<p>Nightscout&#39;s design reflects the needs of the people who use
+it because the users are co-developers and designers of the software.
+Social media provides a way for everyone in the community to enhance
+the software, and the community itself, making everyone safer in the process.</p>
+<p>After interviewing developers, users, support, advocates of
+Nightscout, surveying Facebook, Twitter, Reddit, IRC, Github, among
+other social networks, and working extensively over the FDA over the
+past year, I&#39;m proposing a roadmap intended to provide some oversight
+and transparency for where Nightscout is likely headed.  Hopefully
+this will also help people ascertain how and where they can help.
+Jason Calabrese actually provided simple 3 step outline that
+seems to represent the intentions of many community members in the
+future:</p>
+<h3 id="proposed-roadmap">Proposed Roadmap</h3>
+<ol>
+<li><p><strong>Monitoring</strong> - Nightscout as-is</p>
+<ul>
+<li>FDA approved, open source <del>class III</del> de novo medical device!,<ul>
+<li>safe and effective</li>
+<li>can promote use</li>
+<li>can re-use work</li>
+<li>will provide legitimacy, allow relationships, legalized growth</li>
+<li>can publish to science journals, allow researchers to discover new
+therapies</li>
+</ul>
+</li>
+<li>establishes groundwork IDE/IRB for researchers, new devices, can
+re-submit previous FDA work for re-use! (eg provides re-usable
+work to discuss DexDrip, MMCommander, DexBridge and others with
+public, researchers, FDA)</li>
+<li>Improving fidelity of therapy: allow predicting, targeting, and
+reproducing desired A1C&#39;s, reducing hypoglycemias, increasing time
+in range, restoring family dynamics, reduced burden through
+ubiquitous, persistent, glanceable displays.</li>
+<li>enabling multiuser/auth</li>
+</ul>
+</li>
+<li><p><strong>Predictors</strong>, towards an AP</p>
+<ul>
+<li>understand, prove through prediction how glycemia works,
+mathematically modeling influences on glucose.</li>
+<li>create tools for optimizing, understanding basal rates, <code>I:C</code> and
+<code>ISF</code> ratios and other related metrics.</li>
+<li>working with clinics/doctors, Dr and patient work together with NS</li>
+<li>educational focus</li>
+<li>enabling multiuser/auth</li>
+<li>Improving fidelity of care: improving accuracy of insulin dosing.</li>
+</ul>
+</li>
+<li><p><strong>OpenAPs</strong></p>
+<ul>
+<li>IDE with FDA, re-using established process</li>
+<li>Automating previous work through suggestions</li>
+<li>Making open source AP easy to use, accessible</li>
+<li>Dosing insulin properly using new, conservative, reviewed, safe
+techniques</li>
+<li>de novo FDA approval?, first class III open source device,
+reviewable, understandable, by and for the world.  High fidelity
+therapy.</li>
+<li>dynamic basal</li>
+<li>calendar, location integration</li>
+</ul>
+</li>
+</ol>
+<h3 id="-wearenotwaiting-"><code>#wearenotwaiting</code></h3>
+<p>What does <code>#wearenotwaiting</code> mean?  Will we wait for vendors to
+integrate to Medtronic pumps with Dexcom Sensors?  Will we trust an
+algorithm that we cannot improve and test ourselves?  Will we accept
+arbitrary limits of 5 <code>&#39;Sharers</code>?  Will we take advantage of the
+opportunities to work with vendors and FDA to improve the safety and
+efficacy of our care?</p>
+<p>The users and developers will adapt the technology to continue to meet
+our needs.  Nightscout wasn&#39;t created out of a love for phones and
+cables, it was created out of a desire to increase and promote safety.
+We hope this roadmap helps provide some insight on how Nightscout
+might change over time, and what to expect, as well as how to help.</p>
+</div></article><footer></footer></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Sat Feb 28 2015 23:18:22 GMT+0000 (UTC)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
