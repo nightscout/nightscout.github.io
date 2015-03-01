@@ -40,6 +40,10 @@ future:
 ### Proposed Roadmap
 
 1. **Monitoring** - Nightscout as-is
+  * Improving fidelity of therapy: allow predicting, targeting, and
+    reproducing desired A1C's, reducing hypoglycemias, increasing time
+    in range, restoring family dynamics, reduced burden through
+    ubiquitous, persistent, glanceable displays.
   * FDA approved, open source ~~class III~~ de novo medical device!,
     * safe and effective
     * can promote use
@@ -51,25 +55,20 @@ future:
     re-submit previous FDA work for re-use! (eg provides re-usable
     work to discuss DexDrip, MMCommander, DexBridge and others with
     public, researchers, FDA)
-  * Improving fidelity of therapy: allow predicting, targeting, and
-    reproducing desired A1C's, reducing hypoglycemias, increasing time
-    in range, restoring family dynamics, reduced burden through
-    ubiquitous, persistent, glanceable displays.
   * enabling multiuser/auth
 
 1. **Predictors**, towards an AP
+  * Improving fidelity of care: improving accuracy of insulin dosing.
   * understand, prove through prediction how glycemia works,
     mathematically modeling influences on glucose.
   * create tools for optimizing, understanding basal rates, `I:C` and
     `ISF` ratios and other related metrics.
   * working with clinics/doctors, Dr and patient work together with NS
   * educational focus
-  * enabling multiuser/auth
-  * Improving fidelity of care: improving accuracy of insulin dosing.
 
 1. **OpenAPs**
+  * Automating previous work through suggestions, high fidelity care.
   * IDE with FDA, re-using established process
-  * Automating previous work through suggestions
   * Making open source AP easy to use, accessible
   * Dosing insulin properly using new, conservative, reviewed, safe
     techniques
