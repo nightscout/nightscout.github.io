@@ -91,7 +91,13 @@ The users and developers will adapt the technology to continue to meet
 our needs.  Nightscout wasn't created out of a love for phones and
 cables, it was created out of a desire to increase and promote safety.
 We hope this roadmap helps provide some insight on how Nightscout
-might change over time, and what to expect, as well as how to help.
+might change over time, what to expect in the future from the
+community, as well as how to help.
+Give us your feedback by commenting on the
+[process-controls issue for the proposed roadmap][issue]
+or [tweeting @NightscoutProj][tweet-nightscout].
 
 
+[issue]: https://github.com/nightscout/process-controls/issues/3
+[tweet-nightscout]: https://twitter.com/nightscoutproj
 
