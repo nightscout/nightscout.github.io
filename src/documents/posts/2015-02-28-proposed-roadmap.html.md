@@ -28,7 +28,7 @@ the software, and the community itself, making everyone safer in the process.
 
 After interviewing developers, users, support, advocates of
 Nightscout, surveying Facebook, Twitter, Reddit, IRC, Github, among
-other social networks, and working extensively over the FDA over the
+other social networks, and working extensively with the FDA over the
 past year, I'm proposing a roadmap intended to provide some oversight
 and transparency for where Nightscout is likely headed.  Hopefully
 this will also help people ascertain how and where they can help.
