@@ -83,7 +83,7 @@ future:
 What does `#wearenotwaiting` mean?  Will we wait for vendors to
 integrate to Medtronic pumps with Dexcom Sensors?  Will we trust an
 algorithm that we cannot improve and test ourselves?  Will we accept
-arbitrary limits of 5 `'Sharers`?  Will we take advantage of the
+arbitrary limits of 5 `'Sharers'`?  Will we take advantage of the
 opportunities to work with vendors and FDA to improve the safety and
 efficacy of our care?
 
