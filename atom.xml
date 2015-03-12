@@ -3,7 +3,7 @@
   <title>Nightscout, open source, DIY CGM in the cloud</title>
   <link href="http://nightscout.github.io//atom.xml" rel="self"/>
   <link href="http://nightscout.github.io/"/>
-  <updated>2015-03-11T00:27:50.423Z</updated>
+  <updated>2015-03-12T19:04:15.211Z</updated>
   <id>http://nightscout.github.io/</id>
   <author>
     <name>Nightscout contributors</name>
@@ -14,7 +14,7 @@
     <entry>
       <title>Release of data</title>
       <link href="http://nightscout.github.io//posts/2015-02-22-donate-data-with-ga"/>
-      <updated>2015-03-11T00:26:17.000Z</updated>
+      <updated>2015-03-12T19:02:08.000Z</updated>
       <id>http://nightscout.github.io//posts/2015-02-22-donate-data-with-ga</id>
       <content type="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;!-- Meta--&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;title&gt;Release of data | Nightscout, open source, DIY CGM in the cloud&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;We are not waiting!  How to build Nightscout CGM in the cloud.&quot;&gt;&lt;meta name=&quot;keywords&quot; content=&quot;Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time&quot;&gt;&lt;meta name=&quot;author&quot; content=&quot;Nightscout contributors&quot;&gt;&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.73.5&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;&lt;!-- Icons--&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/ico/favicon.ico&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/ico/apple-touch-icon-144-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/ico/apple-touch-icon-114-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;/ico/apple-touch-icon-72-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/ico/apple-touch-icon-57-precomposed.png&quot;&gt;&lt;!--if lt IE 9script(async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;)
 --&gt;&lt;!-- Styles--&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/components-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- Markup--&gt;&lt;!-- For now hide the navbar, single page site--&gt;&lt;nav style=&quot;&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;navbar-brand&quot;&gt;Welcome&lt;/a&gt;&lt;/div&gt;&lt;ul class=&quot;nav navbar-nav&quot;&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-22-donate-data-with-ga&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;/posts/2015-02-22-donate-data-with-ga&quot; property=&quot;dc:title&quot;&gt;Release of data&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-26-towards-aggregating&quot;&gt;&lt;a href=&quot;/posts/2015-02-26-towards-aggregating&quot; property=&quot;dc:title&quot;&gt;Towards Aggregating Nightscouten&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-28-proposed-roadmap&quot;&gt;&lt;a href=&quot;/posts/2015-02-28-proposed-roadmap&quot; property=&quot;dc:title&quot;&gt;Proposed Roadmap&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/colors-subdued-is-safer&quot;&gt;&lt;a href=&quot;/posts/colors-subdued-is-safer&quot; property=&quot;dc:title&quot;&gt;Color choices for Nightscout: Subdued is Safer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container&quot;&gt;&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;&lt;h1&gt;Release of data&lt;/h1&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;h1 id=&quot;nightscout-and-data&quot;&gt;Nightscout and data&lt;/h1&gt;
@@ -60,13 +60,13 @@ exactly how data donation might work.  If you have ideas on how you
 can help, or the kinds of things you&amp;#39;d want to know,
 &lt;a href=&quot;https://github.com/nightscout/android-uploader/issues/129&quot;&gt;give us feedback&lt;/a&gt;, let us know on
 Facebook, or &lt;a href=&quot;https://twitter.com/nightscoutproj&quot;&gt;send us a tweet&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-22-donate-data-with-ga.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-22-donate-data-with-ga.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-22-donate-data-with-ga.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Wed Mar 11 2015 00:27:50 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/autolink_heading.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
+&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-22-donate-data-with-ga.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-22-donate-data-with-ga.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-22-donate-data-with-ga.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Thu Mar 12 2015 19:04:15 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/autolink_heading.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
     </entry>
   
     <entry>
       <title>Towards Aggregating Nightscouten</title>
       <link href="http://nightscout.github.io//posts/2015-02-26-towards-aggregating"/>
-      <updated>2015-03-11T00:26:17.000Z</updated>
+      <updated>2015-03-12T19:02:08.000Z</updated>
       <id>http://nightscout.github.io//posts/2015-02-26-towards-aggregating</id>
       <content type="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;!-- Meta--&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;title&gt;Towards Aggregating Nightscouten | Nightscout, open source, DIY CGM in the cloud&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;We are not waiting!  How to build Nightscout CGM in the cloud.&quot;&gt;&lt;meta name=&quot;keywords&quot; content=&quot;Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time&quot;&gt;&lt;meta name=&quot;author&quot; content=&quot;Nightscout contributors&quot;&gt;&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.73.5&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;&lt;!-- Icons--&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/ico/favicon.ico&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/ico/apple-touch-icon-144-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/ico/apple-touch-icon-114-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;/ico/apple-touch-icon-72-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/ico/apple-touch-icon-57-precomposed.png&quot;&gt;&lt;!--if lt IE 9script(async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;)
 --&gt;&lt;!-- Styles--&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/components-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- Markup--&gt;&lt;!-- For now hide the navbar, single page site--&gt;&lt;nav style=&quot;&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;navbar-brand&quot;&gt;Welcome&lt;/a&gt;&lt;/div&gt;&lt;ul class=&quot;nav navbar-nav&quot;&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-22-donate-data-with-ga&quot;&gt;&lt;a href=&quot;/posts/2015-02-22-donate-data-with-ga&quot; property=&quot;dc:title&quot;&gt;Release of data&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-26-towards-aggregating&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;/posts/2015-02-26-towards-aggregating&quot; property=&quot;dc:title&quot;&gt;Towards Aggregating Nightscouten&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-28-proposed-roadmap&quot;&gt;&lt;a href=&quot;/posts/2015-02-28-proposed-roadmap&quot; property=&quot;dc:title&quot;&gt;Proposed Roadmap&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/colors-subdued-is-safer&quot;&gt;&lt;a href=&quot;/posts/colors-subdued-is-safer&quot; property=&quot;dc:title&quot;&gt;Color choices for Nightscout: Subdued is Safer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container&quot;&gt;&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;&lt;h1&gt;Towards Aggregating Nightscouten&lt;/h1&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;h1 id=&quot;nightscout&quot;&gt;Nightscout&lt;/h1&gt;
@@ -180,16 +180,19 @@ randomly time shift the data to ten or twenty years ago, to provide
 additional noise to the data which would not affect analysis.&lt;/p&gt;
 &lt;p&gt;See &lt;a href=&quot;http://nightscout.github.io/posts/2015-02-22-donate-data-with-ga/&quot;&gt;http://nightscout.github.io/posts/2015-02-22-donate-data-with-ga/&lt;/a&gt;
 for more details on the impetus behind this effort.&lt;/p&gt;
-&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-26-towards-aggregating.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Wed Mar 11 2015 00:27:50 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/autolink_heading.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
+&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-26-towards-aggregating.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-26-towards-aggregating.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Thu Mar 12 2015 19:04:15 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/autolink_heading.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
     </entry>
   
     <entry>
       <title>Proposed Roadmap</title>
       <link href="http://nightscout.github.io//posts/2015-02-28-proposed-roadmap"/>
-      <updated>2015-03-11T00:26:17.000Z</updated>
+      <updated>2015-03-12T19:02:08.000Z</updated>
       <id>http://nightscout.github.io//posts/2015-02-28-proposed-roadmap</id>
       <content type="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;!-- Meta--&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;title&gt;Proposed Roadmap | Nightscout, open source, DIY CGM in the cloud&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;We are not waiting!  How to build Nightscout CGM in the cloud.&quot;&gt;&lt;meta name=&quot;keywords&quot; content=&quot;Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time&quot;&gt;&lt;meta name=&quot;author&quot; content=&quot;Nightscout contributors&quot;&gt;&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.73.5&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;&lt;!-- Icons--&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/ico/favicon.ico&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/ico/apple-touch-icon-144-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/ico/apple-touch-icon-114-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;/ico/apple-touch-icon-72-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/ico/apple-touch-icon-57-precomposed.png&quot;&gt;&lt;!--if lt IE 9script(async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;)
 --&gt;&lt;!-- Styles--&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/components-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- Markup--&gt;&lt;!-- For now hide the navbar, single page site--&gt;&lt;nav style=&quot;&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;navbar-brand&quot;&gt;Welcome&lt;/a&gt;&lt;/div&gt;&lt;ul class=&quot;nav navbar-nav&quot;&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-22-donate-data-with-ga&quot;&gt;&lt;a href=&quot;/posts/2015-02-22-donate-data-with-ga&quot; property=&quot;dc:title&quot;&gt;Release of data&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-26-towards-aggregating&quot;&gt;&lt;a href=&quot;/posts/2015-02-26-towards-aggregating&quot; property=&quot;dc:title&quot;&gt;Towards Aggregating Nightscouten&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-28-proposed-roadmap&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;/posts/2015-02-28-proposed-roadmap&quot; property=&quot;dc:title&quot;&gt;Proposed Roadmap&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/colors-subdued-is-safer&quot;&gt;&lt;a href=&quot;/posts/colors-subdued-is-safer&quot; property=&quot;dc:title&quot;&gt;Color choices for Nightscout: Subdued is Safer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container&quot;&gt;&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;&lt;h1&gt;Proposed Roadmap&lt;/h1&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;h1 id=&quot;nightscout-roadmap-and-identity&quot;&gt;Nightscout Roadmap and Identity&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Diabetes is the enemy.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Nightscout is a combination of community, comprised of people, with
 technology, comprised of open source software and hardware.  Open
 source software develops in a diverse &amp;quot;Bazaar&amp;quot;, a community of people
@@ -200,10 +203,27 @@ common enemy.  By making diabetes the common enemy, the community
 provides a venue for beneficial collaborations to take place,
 accelerating and improving diabetes therapy.&lt;/p&gt;
 &lt;h3 id=&quot;designing-nightscout&quot;&gt;Designing Nightscout&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Paving the cowpaths, filling the gaps.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Nightscout&amp;#39;s design reflects the needs of the people who use
 it because the users are co-developers and designers of the software.
 Social media provides a way for everyone in the community to enhance
-the software, and the community itself, making everyone safer in the process.&lt;/p&gt;
+the software, and the community itself, making everyone safer in the process.
+Here are common questions that led the creation of Nightscout, and
+continue to drive development:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why do the buttons fall off? Why can&amp;#39;t any of my family correctly
+understand how to read the device? Why does
+everyone I&amp;#39;ve tested incorrectly interpret the alarm screens? Why
+does the usb port break? Why won&amp;#39;t this device be quiet when needed
+for two hours? Why do I need to care for and maintain so many
+devices? Why can&amp;#39;t I get decent therapy with the &amp;quot;best&amp;quot; devices? If
+therapy is so &amp;quot;safe&amp;quot; why do I get so many highs and lows? Why can&amp;#39;t
+I even get access to the supplies I need? Why is this device
+preventing me from working and sleeping? Why allow technology so
+much political control over our lives?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;After interviewing developers, users, support, advocates of
 Nightscout, surveying Facebook, Twitter, Reddit, IRC, Github, among
 other social networks, and working extensively with the FDA over the
@@ -215,61 +235,68 @@ seems to represent the intentions of many community members in the
 future:&lt;/p&gt;
 &lt;h3 id=&quot;proposed-roadmap&quot;&gt;Proposed Roadmap&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - Nightscout as-is&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Monitoring&lt;/strong&gt; - &lt;em&gt;Nightscout Today&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Improving fidelity of therapy: allow predicting, targeting, and
 reproducing desired A1C&amp;#39;s, reducing hypoglycemias, increasing time
 in range, restoring family dynamics, reduced burden through
 ubiquitous, persistent, glanceable displays.&lt;/li&gt;
-&lt;li&gt;FDA approved, open source &lt;del&gt;class III&lt;/del&gt; de novo medical device!,&lt;ul&gt;
-&lt;li&gt;safe and effective&lt;/li&gt;
-&lt;li&gt;can promote use&lt;/li&gt;
-&lt;li&gt;can re-use work&lt;/li&gt;
-&lt;li&gt;will provide legitimacy, allow relationships, legalized growth&lt;/li&gt;
-&lt;li&gt;can publish to science journals, allow researchers to discover new
+&lt;li&gt;&lt;p&gt;FDA approved, open source class &lt;del&gt;III&lt;/del&gt; II de novo medical device provides
+these benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Safe and effective&lt;/li&gt;
+&lt;li&gt;Can promote use&lt;/li&gt;
+&lt;li&gt;Can re-use work&lt;/li&gt;
+&lt;li&gt;Will provide legitimacy, allow relationships, legalized growth&lt;/li&gt;
+&lt;li&gt;Can publish to science journals, allow researchers to discover new
 therapies&lt;/li&gt;
+&lt;li&gt;Provides re-usable work to discuss other projects that have branched off
+from Nightscout with the public, researchers, and the FDA)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;establishes groundwork IDE/IRB for researchers, new devices, can
-re-submit previous FDA work for re-use! (eg provides re-usable
-work to discuss DexDrip, MMCommander, DexBridge and others with
-public, researchers, FDA)&lt;/li&gt;
-&lt;li&gt;enabling multiuser/auth&lt;/li&gt;
+&lt;li&gt;Enabling multiuser and Authorization modes for secure access to data based
+on role, time, or selection&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Predictors&lt;/strong&gt;, towards an AP&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Predict&lt;/strong&gt;, &lt;em&gt;Moving Towards an Intellegent Future&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Improving fidelity of care: improving accuracy of insulin dosing.&lt;/li&gt;
-&lt;li&gt;understand, prove through prediction how glycemia works,
+&lt;li&gt;Understand, prove through prediction how glycemia works,
 mathematically modeling influences on glucose.&lt;/li&gt;
-&lt;li&gt;create tools for optimizing, understanding basal rates, &lt;code&gt;I:C&lt;/code&gt; and
+&lt;li&gt;Create tools for optimizing, understanding basal rates, &lt;code&gt;I:C&lt;/code&gt; and
 &lt;code&gt;ISF&lt;/code&gt; ratios and other related metrics.&lt;/li&gt;
-&lt;li&gt;working with clinics/doctors, Dr and patient work together with NS&lt;/li&gt;
-&lt;li&gt;educational focus&lt;/li&gt;
+&lt;li&gt;Working with clinics/doctors, Dr and patient work together with NS
+as a common view of relevant activity.&lt;/li&gt;
+&lt;li&gt;Educational Focus, eg &amp;quot;Here are possible ways your body may respond to
+planned activity over time&amp;quot;.  Contrasting observed therapy with planned
+therapy to show the gaps.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;OpenAPs&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Control&lt;/strong&gt;, &lt;em&gt;Closing the Loop in a Safe and Open Manner&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Automating previous work through suggestions, high fidelity care.&lt;/li&gt;
 &lt;li&gt;IDE with FDA, re-using established process&lt;/li&gt;
-&lt;li&gt;Making open source AP easy to use, accessible&lt;/li&gt;
+&lt;li&gt;Making open source AP easy to use, accessible&lt;ul&gt;
 &lt;li&gt;Dosing insulin properly using new, conservative, reviewed, safe
 techniques&lt;/li&gt;
-&lt;li&gt;de novo FDA approval?, first class III open source device,
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;De novo FDA approval, first class III open source device,
 reviewable, understandable, by and for the world.  High fidelity
 therapy.&lt;/li&gt;
-&lt;li&gt;dynamic basal&lt;/li&gt;
-&lt;li&gt;calendar, location integration&lt;/li&gt;
+&lt;li&gt;Dynamic basal&lt;/li&gt;
+&lt;li&gt;Calendar, location integration&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;-wearenotwaiting-&quot;&gt;&lt;code&gt;#wearenotwaiting&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;What does &lt;code&gt;#wearenotwaiting&lt;/code&gt; mean?  Will we wait for vendors to
-integrate to Medtronic pumps with Dexcom Sensors?  Will we trust an
-algorithm that we cannot improve and test ourselves?  Will we accept
-arbitrary limits of 5 &lt;code&gt;&amp;#39;Sharers&amp;#39;&lt;/code&gt;?  Will we take advantage of the
+&lt;p&gt;What does &lt;code&gt;#wearenotwaiting&lt;/code&gt; mean?  Will we wait for vendors who disagree to
+integrate the hardware we need into forms we can use?  Will we trust an
+algorithm that we cannot improve and test ourselves?  Will we accept arbitrary
+limits on how with whom we can share data our?  Will we take advantage of the
 opportunities to work with vendors and FDA to improve the safety and
-efficacy of our care?&lt;/p&gt;
+efficacy of our care?  What role should our community have in helping
+the next generation of products?&lt;/p&gt;
 &lt;p&gt;The users and developers will adapt the technology to continue to meet
 our needs.  Nightscout wasn&amp;#39;t created out of a love for phones and
 cables, it was created out of a desire to increase and promote safety.
@@ -279,13 +306,21 @@ community, as well as how to help.
 Give us your feedback by commenting on the
 &lt;a href=&quot;https://github.com/nightscout/process-controls/issues/3&quot;&gt;process-controls issue for the proposed roadmap&lt;/a&gt;
 or &lt;a href=&quot;https://twitter.com/nightscoutproj&quot;&gt;tweeting @NightscoutProj&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Wed Mar 11 2015 00:27:50 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/autolink_heading.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
+&lt;h3 id=&quot;status-quo&quot;&gt;Status-Quo&lt;/h3&gt;
+&lt;p&gt;Who owns the responsibility for for therapy?  In some countries,
+devices are not allowed to advertise as providing therapy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Devices don&amp;#39;t give therapy, people do.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We hope the industry will embrace respect for the dangers patients
+face, and engage us in making the world a safer place.&lt;/p&gt;
+&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/2015-02-28-proposed-roadmap.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Thu Mar 12 2015 19:04:15 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/autolink_heading.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
     </entry>
   
     <entry>
       <title>Color choices for Nightscout: Subdued is Safer</title>
       <link href="http://nightscout.github.io//posts/colors-subdued-is-safer"/>
-      <updated>2015-03-11T00:26:17.000Z</updated>
+      <updated>2015-03-12T19:02:08.000Z</updated>
       <id>http://nightscout.github.io//posts/colors-subdued-is-safer</id>
       <content type="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;!-- Meta--&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;title&gt;Color choices for Nightscout: Subdued is Safer | Nightscout, open source, DIY CGM in the cloud&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;We are not waiting!  How to build Nightscout CGM in the cloud.&quot;&gt;&lt;meta name=&quot;keywords&quot; content=&quot;Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time&quot;&gt;&lt;meta name=&quot;author&quot; content=&quot;Nightscout contributors&quot;&gt;&lt;meta name=&quot;generator&quot; content=&quot;DocPad v6.73.5&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;&lt;!-- Icons--&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/ico/favicon.ico&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;/ico/apple-touch-icon-144-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;/ico/apple-touch-icon-114-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;/ico/apple-touch-icon-72-precomposed.png&quot;&gt;&lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;/ico/apple-touch-icon-57-precomposed.png&quot;&gt;&lt;!--if lt IE 9script(async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;)
 --&gt;&lt;!-- Styles--&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/prettify.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/components-bootstrap/css/bootstrap.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- Markup--&gt;&lt;!-- For now hide the navbar, single page site--&gt;&lt;nav style=&quot;&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;navbar-brand&quot;&gt;Welcome&lt;/a&gt;&lt;/div&gt;&lt;ul class=&quot;nav navbar-nav&quot;&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-22-donate-data-with-ga&quot;&gt;&lt;a href=&quot;/posts/2015-02-22-donate-data-with-ga&quot; property=&quot;dc:title&quot;&gt;Release of data&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-26-towards-aggregating&quot;&gt;&lt;a href=&quot;/posts/2015-02-26-towards-aggregating&quot; property=&quot;dc:title&quot;&gt;Towards Aggregating Nightscouten&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/2015-02-28-proposed-roadmap&quot;&gt;&lt;a href=&quot;/posts/2015-02-28-proposed-roadmap&quot; property=&quot;dc:title&quot;&gt;Proposed Roadmap&lt;/a&gt;&lt;/li&gt;&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/posts/colors-subdued-is-safer&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;/posts/colors-subdued-is-safer&quot; property=&quot;dc:title&quot;&gt;Color choices for Nightscout: Subdued is Safer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;div class=&quot;container&quot;&gt;&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;&lt;h1&gt;Color choices for Nightscout: Subdued is Safer&lt;/h1&gt;&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Mb1FKhL.png&quot; alt=&quot;find the dangerous blood glucose quickly&quot;&gt;&lt;/p&gt;
@@ -326,7 +361,7 @@ Honeywell and Nova Chemicals:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.applyhcs.com/our-publications/#hmi-design&quot;&gt;http://www.applyhcs.com/our-publications/#hmi-design&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.asmconsortium.net/Pages/default.aspx&quot;&gt;http://www.asmconsortium.net/Pages/default.aspx&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/colors-subdued-is-safer.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/colors-subdued-is-safer.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/colors-subdued-is-safer.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Wed Mar 11 2015 00:27:50 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/autolink_heading.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
+&lt;/div&gt;&lt;/article&gt;&lt;footer&gt;&lt;/footer&gt;&lt;/section&gt;&lt;hr&gt;&lt;footer&gt;&lt;div&gt;&lt;h5&gt;Contribute&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/posts/colors-subdued-is-safer.html.md&quot; class=&quot;edit github&quot;&gt;Edit on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/posts/colors-subdued-is-safer.html.md&quot; class=&quot;view github&quot;&gt;View on github.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/posts/colors-subdued-is-safer.html.md&quot; class=&quot;edit prose&quot;&gt;Edit on prose.io&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;© Nightscout contributors 2014&lt;/div&gt;&lt;div style=&quot;font-style:italic; font-size: 12px&quot;&gt;This website was last updated at Thu Mar 12 2015 19:04:15 GMT+0000 (UTC)&lt;/div&gt;&lt;/footer&gt;&lt;/div&gt;&lt;!-- Scripts--&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/prettify.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/components-bootstrap/js/bootstrap.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/log.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/modernizr.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/autolink_heading.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</content>
     </entry>
   
 </feed>
