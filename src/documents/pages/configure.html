@@ -23,7 +23,7 @@
               <a href="#MQTT" aria-controls="MQTT" role=tab" data-toggle="tab">MQTT</a>
             </li>
             <li role="presentation" class="active">
-              <a href="#REST_APIs" aria-controls="REST" role=tab" data-toggle="tab">Rest API</a>
+              <a href="#REST_APIs" aria-controls="REST" role=tab" data-toggle="tab">REST API</a>
             </li>
             <li role="presentation" class="">
               <a href="#MONGODB" aria-controls="MONGO" role=tab" data-toggle="tab">MONGO</a>
@@ -36,15 +36,14 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane" id="MQTT">
               <fieldset id="mqtt_apis" class="values has-feedback">
-                <legend>Create mqtt server</legend>
-                <p>
-                  <a href="http://cloudmqtt.com">CloudMQTT.com</a> has free
-                  accounts that work.
-                </p>
+                <legend></legend>
+                <h3>Step 1: Sign up for an account at CloudMQTT</h3>
+                <p><a href="http://cloudmqtt.com">Click here</a> to sign up and create your MQTT server</p> 
+                <h3>Step 2: Enter your MQTT server information below
               </fieldset>
               <fieldset class="mqtt-values mqtt-creds container">
                 <div class="column form-group has-error has-feedback">
-                  <label class="mqtt-host control-label">MQTT Host
+                  <label class="mqtt-host control-label"><tt>MQTT Host:</tt>
                     <input type="text" name="host" class="v host form-control"
                       placeholder="m01.cloudmqtt.com" />
                     <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
@@ -52,7 +51,7 @@
                   <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
                 </div>
                 <div class="column form-group has-error has-feedback">
-                  <label><tt>Port</tt>
+                  <label><tt>Port:</tt>
                   <input type="text" name="port" class="v port form-control"
                     placeholder="12424" />
                   </label>
@@ -65,7 +64,7 @@
                   </label>
                 </div>
                 <div class="column form-group has-error has-feedback">
-                  <label><tt>Password</tt>
+                  <label><tt>Password:</tt>
                   <input type="password" name="pass" class="v pass form-control"
                     placeholder="passw0rd" />
                   </label>
@@ -75,14 +74,18 @@
             </div>
             <div role="tabpanel" class="tab-pane active" id="REST_APIs">
               <fieldset id="rest_api" class="values has-feedback">
-                <legend>Rest API
+                <legend>REST API
                   <button class="btn" id="add_rest">
                     <span class="glyphicon glyphicon-plus"></span>
                   </button>
                 </legend>
+                <h3>Enter your API_SECRET and REST API URL below.</h3>
+                <p>Your API_SECRET must be 12 characters or more</p>
+                <p>Your REST API URL format should be https://foobar.azurewebsites.net/api/v1</p>
+                <p>Change foobar to your personal site name, and don't forget to add /api/v1 to the end of the URL.</p>
                 <div class="hide template skeleton rest">
                   <div class="form-group has-error has-feedback" title="If set must be at least 12 characters long.">
-                    <label class="restsecret control-label"><tt>API_SECRET</tt>:
+                    <label class="restsecret control-label"><tt>API_SECRET:</tt>
                       <input type="text" name="api_secret" class="v api_secret form-control"
                         placeholder="atleast12characterslong" />
                       <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
@@ -92,9 +95,9 @@
 
                   <br/>
                   <div class="form-group has-error has-feedback">
-                    <label class="restlocation control-label">Azure site:
+                    <label class="restlocation control-label"><tt>REST API URL:</tt>
                       <input type="text" name="resturi" class="v resturi form-control"
-                        placeholder="https://foobar.azurewebsites.net" />
+                        placeholder="https://foobar.azurewebsites.net/api/v1" />
                       <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
                     </label>
                     <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
@@ -104,24 +107,25 @@
             </div>
             <div role="tabpanel" class="tab-pane" id="MONGODB">
           <fieldset id="stage1" class="values has-feedback">
-            <legend>Create database</legend>
-            <h2>Step 1: Sign up for an account to manage your database</h2>
+            <legend></legend>
+            <h3>Step 1: Sign up for a Mongolab account and create a database</h3>
             <p>
-            <a href="https://mongolab.com/">Mongolab</a> has a free sign up.
+            Detailed instructions are available at <a href="http://www.nightscout.info/wiki/welcome/configuring-the-data-backend" target="_blank">nightscout.info</a>.  If you already have a Mongo database for Nightscout, skip this step.
             </p>
-            <h2>Step 2: Create a database</h2>
+            <h3>Step 2: Enter your Mongo server, port and database name</h3>
+            <p>For example: ds012345.mongolab.com:12345/databasename</p>
             <div class="form-group has-error has-feedback">
-              <label class="mongolocation control-label">Create a database
+              <label class="mongolocation control-label">Mongo server, port, and db:
                 <input type="text" name="netloc" class="v netloc form-control"
-                  placeholder="sub023405.mongolab.com:23405/cgmdb" />
+                  placeholder="ds012345.mongolab.com:12345/cgmdb" />
                 <span class="icon glyphicon glyphicon-question-sign form-control-feedback"></span>
               </label>
               <span class="hide glyphicon glyphicon-ok form-control-feedback"></span>
             </div>
           </fieldset>
           <fieldset id="stage2" class="values has-feedback">
-            <h2>Step 3: Create a user for your new database</h2>
-            <legend>Create a user for the database</legend>
+            <h3>Step 3: Enter the db username and password for your database</h3>
+            <legend></legend>
             <div class="form-group has-error has-feedback">
               <label><tt>Username:</tt>
                 <input type="text" name="user" class="v user form-control"
@@ -129,7 +133,7 @@
               </label>
             </div>
             <div class="form-group has-error has-feedback">
-              <label><tt>Password</tt>
+              <label><tt>Password:</tt>
               <input type="password" name="pass" class="v pass form-control"
                 placeholder="passw0rd" />
               </label>
@@ -161,7 +165,7 @@
               <table id="web_config">
                 <tr>
                   <th colspan="3">
-                    <h4>Required</h4>
+                    <h3>Required</h3>
                   </th>
                 </tr>
                 <tr>
@@ -176,7 +180,7 @@
                 </tr>
                 <tr>
                   <th colspan="3">
-                    <h4>Recommended</h4>
+                    <h3>Required for REST API </h3>
                   </th>
                 </tr>
                 <tr>
@@ -362,7 +366,7 @@
             mongo: { uri: uri }
           , rest: { endpoint: apis }
           };
-          if (mqtt != 'tcp://:@:') {
+          if (mqtt != 'ssl://:@:') {
             data.mqtt = { uri: mqtt };
           }
           if (data.mongo.uri == 'mongodb://:@/') {
@@ -415,7 +419,7 @@
         function get_mqtt_uri (opts) {
           var base = $(opts.base);
           var controls = base.find('#MQTT');
-          var prefix = 'tcp://'
+          var prefix = 'ssl://'
           var host = controls.find('.v.host').val( );
           var user = controls.find('.v.user').val( );
           var pass = controls.find('.v.pass').val( );
