@@ -14,11 +14,15 @@
       #step3 {
         margin-top: 3ex;
       }
-      #updated {
+      #updated, #boom {
         display: none;
       }
-      .updated #updated {
+      .updated #updated, .boom #boom {
         display: block;
+        padding: 20px
+      }
+      #boom h4 {
+        color: red;
       }
       #workflow.updated #step3 {
         display: none;
@@ -45,10 +49,10 @@
         <div class="span2" id="step1">
         <fieldset class="values row">
           <p>
-          <label>Github username:
-          <input type="text" name="user" class="v user"
-            placeholder="user" required autofocus/>
-          </label>
+            <label>Github username:
+              <input type="text" name="user" class="v user"
+                     placeholder="user" required autofocus/>
+            </label>
           </p>
           <div class="span2">
           <button type="button" class="btn format" name="format"
@@ -76,6 +80,15 @@
           <h4>Repo is up to date</h4>
           <img src="http://opensourcebridge.org/wp-content/uploads/2009/04/ce16006_f.gif">
         </div>
+        <div id='boom'>
+          <h4>There was an error</h4>
+
+          <p>
+            Make sure you username is typed correctly, you're logged into your github account (in this browsers)
+          </p>
+
+          <div class="details"></div>
+        </div>
 
         </div>
       </form>
@@ -97,11 +110,16 @@
         function find_user (name) {
           var octo = new Octokat( );
           octo.users(name).fetch(function (err, user) {
-            $('A.g.url').attr('href', user.html.url);
-            $('.g.user.name').text(user.name || user.login);
-            $('.g.login').text(user.login);
-            $('#workflow').trigger('user', user);
-
+            if (err || !user) {
+              $('#boom .details').text(err);
+              $('#workflow').addClass('boom');
+            } else {
+              $('#workflow').removeClass('boom');
+              $('A.g.url').attr('href', user.html.url);
+              $('.g.user.name').text(user.name || user.login);
+              $('.g.login').text(user.login);
+              $('#workflow').trigger('update', user);
+            }
           });
         }
 
@@ -135,14 +153,20 @@
           octo.repos(r).compare(comp).fetch(function (err, diff) {
             $('#workflow').addClass('step3');
             console.log('DIFF', diff);
-            var subject = ['update', comp].join(' ');
-            $('.compare.url').attr('href', diff.html.url).text(subject);
-            $('.compare.aheadBy').text(diff.aheadBy);
-            $('.compare.behindBy').text(diff.behindBy);
-            $('.compare.status').text(diff.status);
-            $('.compare.totalCommits').text(diff.totalCommits);
-            if (diff.totalCommits == 0) {
-              $('#workflow').addClass('updated');
+            if (err || !diff) {
+              $('#boom .details').text(err);
+              $('#workflow').addClass('boom');
+            } else {
+              $('#workflow').removeClass('boom');
+              var subject = ['update', comp].join(' ');
+              $('.compare.url').attr('href', diff.html.url).text(subject);
+              $('.compare.aheadBy').text(diff.aheadBy);
+              $('.compare.behindBy').text(diff.behindBy);
+              $('.compare.status').text(diff.status);
+              $('.compare.totalCommits').text(diff.totalCommits);
+              if (diff.totalCommits == 0) {
+                $('#workflow').addClass('updated');
+              }
             }
           });
         }
@@ -158,7 +182,7 @@
             .on('change', ':input, FORM', config, do_stuff)
             .on('click', 'button', config, do_stuff)
             .on('submit', 'FORM', config, do_stuff)
-            .on('user', config, format_links)
+            .on('update', config, format_links)
             ;
         }
         $(document).on('ready', init);
