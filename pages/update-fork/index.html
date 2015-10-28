@@ -54,6 +54,12 @@
                      placeholder="user" required autofocus/>
             </label>
           </p>
+          <p>
+            <label>Branch to update:
+              <input type="text" name="branch" class="v branch"
+                     value="master" required/>
+            </label>
+          </p>
           <div class="span2">
           <button type="button" class="btn format" name="format"
               value="format">Format</button>
@@ -84,7 +90,8 @@
           <h4>There was an error</h4>
 
           <p>
-            Make sure you username is typed correctly, you're logged into your github account (in this browsers)
+            Make sure you username is typed correctly, you're logged into your github account (in this browsers),
+            and you have a branch in you're repository matching the <b>"Branch to update"</b> above
           </p>
 
           <div class="details"></div>
@@ -127,9 +134,11 @@
           var workflow = $(ev.data.workflow);
 
           var name = workflow.find('.v.user').val( );
+          var branch = workflow.find('.v.branch').val( );
           var prev = workflow.data('user');
+          var prevBranch = workflow.data('branch');
           workflow.data('user', name);
-          if (prev != name) {
+          if (prev != name || prevBranch != branch) {
             workflow.removeClass('step1 step2 step3 updated');
             workflow.addClass('step1');
             find_user(name);
@@ -141,10 +150,11 @@
         }
 
         function format_links (ev, user) {
+          var branch = $(ev.data.workflow).find('.v.branch').val( );
           var octo = new Octokat( );
           var r = [ 'nightscout', 'cgm-remote-monitor' ].join('/');
-          var base = [user.login, 'master'].join(':');
-          var head = ['nightscout', 'master'].join(':');
+          var base = [user.login, branch].join(':');
+          var head = ['nightscout', branch].join(':');
           $('#workflow').addClass('step2');
           console.log('should format', r, user);
           var url = '';
