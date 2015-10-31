@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Upate my FORK</title>
+    <title>Update your Nightscout site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha256-IsefKVCcMUlgpXQgIMRsqbIqC6aP153JkybxTa7W7/8= sha512-mCNEsmR1i3vWAq8hnHfbCCpc6V5fP9t0N1fEZ1wgEPF/IKteFOYZ2uk7ApzMXkT71sDJ00f9+rVMyMyBFwsaQg==" crossorigin="anonymous">
 
     <style type="text/css">
+      .jumbotron {
+        text-align: center;
+      }
       #step3 {
         margin-top: 3ex;
       }
@@ -24,169 +23,197 @@
       #boom h4 {
         color: red;
       }
-      #workflow.updated #step3 {
+      .step {
         display: none;
       }
-      .updated#workflow #step3 {
-        display: none;
-        
+      #workflow {
+        padding-bottom: 200px;
+      }
+      #workflow.step2 #step2 {
+        display: block;
+      }
+      #workflow.step3 #step3 {
+        display: block;
+      }
+      #step3 strong {
+        color: #00bc8c;
+      }
+      #step3 .well {
+        margin-top: 15px;
+      }
+      #step3 div.text-center {
+        line-height: 100px;
       }
     </style>
 
 
   </head>
   <body>
-    <div id="workflow" class="container">
-      <form id="inputs" action="#" method="GET">
-        <legend><h1>How do I update my Nightscout fork?</h1></legend>
-        <div class="row-fluid">
-        <div class="well">
-          <span class="label label-info">Log in first</span>
-          Make sure to log into
-          <a href="https://github.com/">github.com</a>
-          first.
-        </div>
-        <div class="span2" id="step1">
-        <fieldset class="values row">
-          <p>
-            <label>Github username:
-              <input type="text" name="user" class="v user"
-                     placeholder="user" required autofocus/>
-            </label>
-          </p>
-          <div class="span2">
-          <button type="button" class="btn format" name="format"
-              value="format">Format</button>
-          <button type="reset" class="btn btn-warning reset clear" name="clear"
-              value="Clear">Clear</button>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Time to update Nightscout?</h1>
+        <p>This tool is designed to help you upgrade your Nightscout site to the latest release.</p>
+      </div>
+
+      <div class="alert alert-dismissible alert-info">
+        First make sure to log into <a href="https://github.com/login" target="_blank">github.com</a>, then pick a good and safe time to update, there's no rush, you own your site!
+      </div>
+
+      <div id="workflow" class="container">
+        <form id="inputs" action="#" method="GET">
+          <div class="row-fluid">
+
+            <div class="row" id="step1">
+              <div class="form-group col-sm-10">
+                <label for="user" class="col-sm-3 control-label">Github username</label>
+                <div class="col-sm-7">
+                  <input type="text" id="user" name="user" class="form-control v user" placeholder="username" autocomplete="off">
+                </div>
+              </div>
+
+              <div class="form-group col-sm-10">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-7">
+                  <button type="button" class="btn btn-primary format" name="format" value="format">Check for updates</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row step col-sm-10" id="step2">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-7 text-center">
+                <strong>Github user located!</strong> - <span class="g user name"></span> (<span class="g login"></span>)
+              </div>
+            </div>
+
+            <div class="row step" id="step3">
+              <div class="well">
+                <h2>Now follow the <strong>Green</strong> buttons :)</h2>
+                <p>
+                  By using the <strong>Create Pull Request</strong> button below you'll be taken to the exact location on the Github site for you to create a Pull Request to update your Github repository.
+                </p>
+                <p>
+                  Merging the Pull Request that you create will automatically redeploy your site if you're running Azure,
+                  if you're using Heroku you will need to to push the <b>Deploy Branch</b> button, in the Manual deploy section of the Deploy page.
+                </p>
+                <div class="text-center">
+                  <a class="g btn-lg btn-success compare url">Create Pull Request</a>
+                </div>
+              </div>
+            </div>
+            <div id='updated'>
+              <h4>Repo is up to date</h4>
+              <img src="http://opensourcebridge.org/wp-content/uploads/2009/04/ce16006_f.gif">
+            </div>
+            <div id='boom'>
+              <h4>There was an error</h4>
+
+              <p>
+                Make sure you username is typed correctly, you're logged into your github account (in this browsers)
+              </p>
+
+              <div class="details"></div>
+            </div>
+
           </div>
-        </fieldset>
-        </div>
-        <div class="span3" id="step2">
-        <div>
-          <div class="g bio"></div>
-          <div class="g url"></div>
-          <div class="g login"></div>
-          <a class="g url user name"></a>
-        </div>
-        </div>
-
-        <div class="span4" id="step3">
-          <p>
-            <a class="g btn-lg btn-primary compare url"></a>
-          </p>
-        </div>
-        <div id='updated'>
-          <h4>Repo is up to date</h4>
-          <img src="http://opensourcebridge.org/wp-content/uploads/2009/04/ce16006_f.gif">
-        </div>
-        <div id='boom'>
-          <h4>There was an error</h4>
-
-          <p>
-            Make sure you username is typed correctly, you're logged into your github account (in this browsers)
-          </p>
-
-          <div class="details"></div>
-        </div>
-
-        </div>
-      </form>
-    </div>
-    <div id="dependencies">
-      <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
-      </script>
-      <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js">
-      </script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-      <script type="text/javascript"
-        src="/vendor/octokat/dist/octokat.js">
-      </script>
-    </div>
-    <div id="js">
-      <script type="text/javascript">
-        function find_user (name) {
-          var octo = new Octokat( );
-          octo.users(name).fetch(function (err, user) {
-            if (err || !user) {
-              $('#boom .details').text(err);
-              $('#workflow').addClass('boom');
-            } else {
-              $('#workflow').removeClass('boom');
-              $('A.g.url').attr('href', user.html.url);
-              $('.g.user.name').text(user.name || user.login);
-              $('.g.login').text(user.login);
-              $('#workflow').trigger('update', user);
-            }
-          });
-        }
-
-        function do_stuff (ev) {
-          var workflow = $(ev.data.workflow);
-
-          var name = workflow.find('.v.user').val( );
-          var prev = workflow.data('user');
-          workflow.data('user', name);
-          if (prev != name) {
-            workflow.removeClass('step1 step2 step3 updated');
-            workflow.addClass('step1');
-            find_user(name);
-          }
-          if (ev.type == 'submit') {
-            ev.preventDefault( );
-            return false;
-          }
-        }
-
-        function format_links (ev, user) {
-          var octo = new Octokat( );
-          var r = [ 'nightscout', 'cgm-remote-monitor' ].join('/');
-          var base = [user.login, 'master'].join(':');
-          var head = ['nightscout', 'master'].join(':');
-          $('#workflow').addClass('step2');
-          console.log('should format', r, user);
-          var url = '';
-          var comp = [base, head].join('...');
-          console.log("COMPARE", comp);
-          octo.repos(r).compare(comp).fetch(function (err, diff) {
-            $('#workflow').addClass('step3');
-            console.log('DIFF', diff);
-            if (err || !diff) {
-              $('#boom .details').text(err);
-              $('#workflow').addClass('boom');
-            } else {
-              $('#workflow').removeClass('boom');
-              var subject = ['update', comp].join(' ');
-              $('.compare.url').attr('href', diff.html.url).text(subject);
-              $('.compare.aheadBy').text(diff.aheadBy);
-              $('.compare.behindBy').text(diff.behindBy);
-              $('.compare.status').text(diff.status);
-              $('.compare.totalCommits').text(diff.totalCommits);
-              if (diff.totalCommits == 0) {
-                $('#workflow').addClass('updated');
+        </form>
+      </div>
+      <div id="dependencies">
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+        </script>
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript"
+          src="/vendor/octokat/dist/octokat.js">
+        </script>
+      </div>
+      <div id="js">
+        <script type="text/javascript">
+          function find_user (name) {
+            var octo = new Octokat( );
+            octo.users(name).fetch(function (err, user) {
+              if (err || !user) {
+                $('#boom .details').text(err);
+                $('#workflow').addClass('boom');
+              } else {
+                $('#workflow').removeClass('boom');
+                $('A.g.url').attr('href', user.html.url);
+                $('.g.user.name').text(user.name || user.login);
+                $('.g.login').text(user.login);
+                $('#workflow').trigger('update', user);
               }
+            });
+          }
+
+          function do_stuff (ev) {
+            var workflow = $(ev.data.workflow);
+
+            var name = workflow.find('.v.user').val( );
+            var prev = workflow.data('user');
+            workflow.data('user', name);
+            if (prev != name) {
+              workflow.removeClass('step1 step2 step3 updated');
+              workflow.addClass('step1');
+              find_user(name);
             }
-          });
-        }
+            if (ev.type == 'submit') {
+              ev.preventDefault( );
+              return false;
+            }
+          }
+
+          function format_links (ev, user) {
+            var octo = new Octokat( );
+            var r = [ 'nightscout', 'cgm-remote-monitor' ].join('/');
+            var base = [user.login, 'master'].join(':');
+            var head = ['nightscout', 'master'].join(':');
+            $('#workflow').addClass('step2');
+            console.log('should format', r, user);
+            var url = '';
+            var comp = [base, head].join('...');
+            console.log("COMPARE", comp);
+            octo.repos(r).compare(comp).fetch(function (err, diff) {
+              console.log('DIFF', diff);
+              if (err || !diff) {
+                $('#boom .details').text(err);
+                $('#workflow').addClass('boom');
+              } else {
+                $('#workflow').removeClass('boom');
+                var subject = ['update', comp].join(' ');
+                $('.compare.url').attr('href', diff.html.url);
+                $('.compare.aheadBy').text(diff.aheadBy);
+                $('.compare.behindBy').text(diff.behindBy);
+                $('.compare.status').text(diff.status);
+                $('.compare.totalCommits').text(diff.totalCommits);
+                if (diff.totalCommits == 0) {
+                  $('#workflow').addClass('updated');
+                } else {
+                  $('#workflow').addClass('step3');
+                }
+              }
+            });
+          }
 
 
-        var config = {
-          workflow : '#workflow'
-        };
-        function init (ev) {
-          console.log('hello');
-          // octo.user( );
-          $('#workflow')
-            .on('change', ':input, FORM', config, do_stuff)
-            .on('click', 'button', config, do_stuff)
-            .on('submit', 'FORM', config, do_stuff)
-            .on('update', config, format_links)
-            ;
-        }
-        $(document).on('ready', init);
-      </script>
+          var config = {
+            workflow : '#workflow'
+          };
+          function init (ev) {
+            console.log('hello');
+            // octo.user( );
+            $('#workflow')
+              .on('change', ':input, FORM', config, do_stuff)
+              .on('click', 'button', config, do_stuff)
+              .on('submit', 'FORM', config, do_stuff)
+              .on('update', config, format_links)
+              ;
+          }
+          $(document).on('ready', init);
+        </script>
+      </div>
     </div>
   </body>
 </html>
