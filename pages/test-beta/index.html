@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Test a Beta Release</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha256-IsefKVCcMUlgpXQgIMRsqbIqC6aP153JkybxTa7W7/8= sha512-mCNEsmR1i3vWAq8hnHfbCCpc6V5fP9t0N1fEZ1wgEPF/IKteFOYZ2uk7ApzMXkT71sDJ00f9+rVMyMyBFwsaQg==" crossorigin="anonymous">
+
+    <style type="text/css">
+      .container {
+        padding-top: 15px;
+      }
+      .panel-body {
+        margin-bottom: 20px;
+      }
+      #step3 {
+        margin-top: 3ex;
+      }
+      #updated, #boom {
+        display: none;
+      }
+      .updated #updated, .boom #boom {
+        display: block;
+        padding: 20px
+      }
+      #boom h4 {
+        color: red;
+      }
+      #workflow {
+        display: none;
+        padding-bottom: 100px;
+      }
+      .step {
+        display: none;
+      }
+      #workflow.step2 #step2 {
+        display: block;
+      }
+      #workflow.step3 #step3 {
+        display: block;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome to the Beta Test tool</h1>
+        <p>This tool is designed to make it easy and safe for anyone to help test the next release.</p>
+        <p>
+          It works by generating a Pull Request to the <b>dev</b> branch of your Github repository.
+        </p>
+        <p><a class="btn btn-primary btn-lg ready">I'm Ready!</a></p>
+      </div>
+
+      <div id="workflow" class="well well-lg">
+        <h1>Lets get started</h1>
+
+        <p>
+          The most effective way to use this tool is to setup a test Nightscout site using the <b>dev</b> branch and the same database as the primary site.
+          Then you'll use this tool to create a Pull Request and then merge it from the Github site. <i>(Look for the big green buttons, you may have to scroll)</i>
+        </p>
+
+        <p>
+          Doing the merge will automatically deploy your test site.
+        </p>
+
+        <p>
+          Note: If you're using Heroku you will need to to push the <strong>Deploy Branch</strong> button, in the Manual deploy section of the Deploy page.
+        </p>
+
+        <div class="alert alert-dismissible alert-info">
+          Make sure to log into <a href="https://github.com/login" target="_blank">github.com</a> first.
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-body">
+            <form id="inputs" action="#" method="GET">
+
+              <div class="row" id="step1">
+                <div class="form-group col-lg-12">
+                  <label for="user" class="col-lg-2 control-label">Github username</label>
+                  <div class="col-lg-10">
+                    <input type="text" id="user" name="user" class="form-control v user" placeholder="username" autocomplete="off">
+                  </div>
+                </div>
+
+                <div class="form-group col-lg-12">
+                  <label for="branch" class="col-lg-2 control-label">Beta Branch</label>
+                  <div class="col-lg-10">
+                    <input type="text" id="branch" name="branch" class="form-control v branch" placeholder="branch name" autocomplete="off">
+                  </div>
+                </div>
+
+                <div class="form-group col-lg-12">
+                  <div class="col-lg-2"></div>
+                  <div class="col-lg-10">
+                    <button type="button" class="btn btn-primary format" name="format" value="format">Check for updates</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row step" id="step2">
+                <div class="col-lg-8">
+                  <h4>Github user located!</h4>
+                  <span class="g user name"></span> (<span class="g login"></span>)
+                </div>
+              </div>
+
+              <div class="row step" id="step3">
+                <div class="col-lg-8">
+                  <a class="g btn-lg btn-success compare url"></a>
+                </div>
+              </div>
+
+              <div class="row" id='updated'>
+                <div class="col-lg-8">
+                  <h4>Repo is up to date</h4>
+                  <img src="http://opensourcebridge.org/wp-content/uploads/2009/04/ce16006_f.gif">
+                </div>
+              </div>
+
+              <div class="row" id='boom'>
+                <div class="col-lg-8">
+                  <h4>There was an error</h4>
+
+                  <p>
+                    Make sure you username is typed correctly, and that you're logged into your github account (in this browsers)
+                  </p>
+
+                  <div class="details"></div>
+                 </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dependencies">
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+      </script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js">
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script type="text/javascript"
+        src="/vendor/octokat/dist/octokat.js">
+      </script>
+    </div>
+
+    <div id="js">
+      <script type="text/javascript">
+        function find_user (name) {
+          var octo = new Octokat( );
+          octo.users(name).fetch(function (err, user) {
+            if (err || !user) {
+              $('#boom .details').text(err);
+              $('#workflow').addClass('boom').removeClass('step2 step3 updated');
+            } else {
+              $('#workflow').addClass('step2').removeClass('boom');
+              $('A.g.url').attr('href', user.html.url);
+              $('.g.user.name').text(user.name || user.login);
+              $('.g.login').text(user.login);
+              $('#workflow').trigger('update', user);
+            }
+          });
+        }
+
+        function do_stuff (ev) {
+          var workflow = $(ev.data.workflow);
+          workflow.removeClass('step1 step2 step3 updated');
+
+          var name = workflow.find('.v.user').val( );
+          var prev = workflow.data('user');
+          workflow.data('user', name);
+          if (prev != name) {
+            workflow.addClass('step1');
+            find_user(name);
+          }
+          if (ev.type == 'submit') {
+            ev.preventDefault( );
+            return false;
+          }
+        }
+
+        function format_links (ev, user) {
+          var octo = new Octokat( );
+          var r = [ 'nightscout', 'cgm-remote-monitor' ].join('/');
+          var branch = $('#branch').val();
+          var base = [user.login, 'dev'].join(':');
+          var head = ['nightscout', branch].join(':');
+          var workflow = $('#workflow');
+          workflow.addClass('step2');
+          console.log('should format', r, user);
+          var url = '';
+          var comp = [base, head].join('...');
+          console.log("COMPARE", comp);
+          octo.repos(r).compare(comp).fetch(function (err, diff) {
+            console.log('DIFF', diff);
+            if (err || !diff) {
+              $('#boom .details').text(err);
+              workflow.addClass('boom').removeClass('step2 step3');
+            } else {
+              workflow.removeClass('boom').addClass('step2 step3');
+              $('.compare.url').attr('href', diff.html.url).text('Create Pull Request').scrollTop();
+              $('.compare.aheadBy').text(diff.aheadBy);
+              $('.compare.behindBy').text(diff.behindBy);
+              $('.compare.status').text(diff.status);
+              $('.compare.totalCommits').text(diff.totalCommits);
+              if (diff.totalCommits == 0) {
+                $('#workflow').addClass('updated').scrollTop();
+              }
+            }
+          });
+        }
+
+
+        var config = {
+          workflow : '#workflow'
+        };
+
+        function queryParams ()  {
+          var params = {};
+          if (window.location.search) {
+            window.location.search.substr(1).split('&').forEach(function(item) {
+              params[item.split('=')[0]] = item.split('=')[1].replace(/[_\+]/g, ' ');
+            });
+          }
+          return params;
+        }
+
+        function init (ev) {
+          console.log('hello');
+          // octo.user( );
+
+          if (queryParams().branch) {
+            $('#branch').val(queryParams().branch);
+          }
+
+          var workflow = $('#workflow');
+          workflow
+            .on('change', ':input, FORM', config, do_stuff)
+            .on('click', 'button', config, do_stuff)
+            .on('submit', 'FORM', config, do_stuff)
+            .on('update', config, format_links)
+            ;
+
+          $('.jumbotron .ready').click(function (event) {
+            console.info('Got click');
+            workflow.show().scrollTop();
+            $(event.target).hide();
+          })
+        }
+
+        $(document).on('ready', init);
+      </script>
+    </div>
+  </body>
+</html>
