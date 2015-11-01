@@ -88,16 +88,17 @@
 
             <div class="row step" id="step3">
               <div class="well">
-                <h2>Now follow the <strong>Green</strong> buttons :)</h2>
+                <h1>An Update is Available!</h1>
+                <h2>Now follow the <strong>Green</strong> buttons until you reach the purple merged icon.</h2>
                 <p>
-                  By using the <strong>Create Pull Request</strong> button below you'll be taken to the exact location on the Github site for you to create a Pull Request to update your Github repository.
+                  After clicking the <strong>Continue updating at GitHub</strong> button below you'll be taken to the exact location on the Github site for you to create a Pull Request to update your Github repository.
                 </p>
                 <p>
                   Merging the Pull Request that you create will automatically redeploy your site if you're running Azure,
                   if you're using Heroku you will need to to push the <b>Deploy Branch</b> button, in the Manual deploy section of the Deploy page.
                 </p>
                 <div class="text-center">
-                  <a class="g btn-lg btn-success compare url">Create Pull Request</a>
+                  <a id="create-pr" class="g btn-lg btn-success compare url">Continue updating at GitHub</a>
                 </div>
               </div>
             </div>
@@ -210,6 +211,18 @@
               .on('submit', 'FORM', config, do_stuff)
               .on('update', config, format_links)
               ;
+
+            $('#create-pr').click(function () {
+              window.alert(
+                'You\'re about to leave the Nightscout update tool, continue with the following steps at GitHub:' +
+                '\n' +
+                '1. Click the green "Create pull request" button and name it anything you want.' +
+                '\n' +
+                '2. After creating the pull request scroll to the bottom of the page, and click the green "Merge pull request" button.' +
+                '\n' +
+                '3. When you see the purple "Merged" button, Azure will auto redeploy, Heroku needs you to push the "Deploy Branch" button, in the Manual deploy section of the Deploy page.'
+              )
+            });
           }
           $(document).on('ready', init);
         </script>
