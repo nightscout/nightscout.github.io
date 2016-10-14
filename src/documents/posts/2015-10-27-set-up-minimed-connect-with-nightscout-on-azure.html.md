@@ -59,16 +59,13 @@ Your "Connection Strings" section should look like this (sensitive information r
 
 ## Step 3: Show pump data in Nightscout (optional)
 
-**IMPORTANT:** As of this writing (2016-09-19), you must be running the dev branch of Nightscout to enable the following features. The dev branch is where new features are developed, but as a result, it is less stable than the master branch. If this worries you, it's best to set up a second Nightscout site running the dev branch, configured to use the same mLab database as your main Nightscout site. This is necessary until the [latest release](https://github.com/nightscout/cgm-remote-monitor/releases) of Nightscout is 0.9 or later.
-
-* To update your existing Nightscout site to use the dev branch, use the [Beta Test Tool](http://nightscout.github.io/pages/test-beta/?branch=dev) to update your dev branch on GitHub, then go to Azure/Heroku and set the deployed branch to be `dev` instead of `master`.
-* To set up a new Nightscout site running the dev branch, follow the standard Nightscout setup guide, but substitute `dev` any time you see `master`.
+**IMPORTANT:** You must be running at least version 0.9 (Grilled Cheese) of Nightscout for these features.
 
 ### Showing pump IOB in Nightscout
 
 ![](http://i.imgur.com/4ziiUlx.png)
 
-* Make sure you have a Nightscout site running the dev branch (see above).
+* Make sure you have a Nightscout site running at least version 0.9 (see "Set up Nightscout" above).
 * Add `iob` to your `ENABLE` environment variable (the same place you added `mmconnect` earlier).
 * Add a new environment variable `DEVICESTATUS_ADVANCED` with the value `true`
 * Restart or redeploy your Nightscout site.
@@ -88,15 +85,13 @@ Your "Connection Strings" section should look like this (sensitive information r
 
 After following the steps above, any Nightscout watchface capable of showing IOB will show pump IOB from MiniMed Connect. Each watchface has its own particular way of enabling IOB. You'll do this in the "Settings" screen on the Pebble app. For example, [Urchin](https://github.com/mddub/urchin-cgm/) has an "Insulin on board" option for the status bar. Some other watchfaces require you to type "IOB" in the "T1 name" field.
 
-*Note: if you are using a second Nightscout site to run the dev branch, make sure you configure the watchface to use that site and not your primary one.*
-
 ### Getting pump notifications from Nightscout
 
 Nightscout can send you a notification for certain pump events: low reservoir, low battery, time since last data logged from the pump. These are generally sent to your phone via Pushover.
 
 * If you haven't already, set up Pushover by following [this guide](http://www.nightscout.info/wiki/labs/pushover-in-funnel-cake).
 * Add a new environment variable `PUMP_ENABLE_ALERTS=true`.
-* Use [this list of environment variables for the pump plugin](https://github.com/nightscout/cgm-remote-monitor/tree/dev#pump-pump-monitoring) to tweak the conditions under which you want to receive notifications. For example, if you want a "warning" notification when the reservoir is below 30 units, add the environment variable `PUMP_WARN_RES=30`.
+* Use [this list of environment variables for the pump plugin](https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring) to tweak the conditions under which you want to receive notifications. For example, if you want a "warning" notification when the reservoir is below 30 units, add the environment variable `PUMP_WARN_RES=30`.
 * If you don't set a particular environment variable, it will use the default. You can see the defaults listed in the list of environment variables, in parentheses. For example, default is to warn when reservoir is below 10 units, battery is below 30%, or the pump data hasn't been logged for 30 minutes.
 
 [CareLink]: https://carelink.minimed.com/
