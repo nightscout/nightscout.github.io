@@ -5,7 +5,7 @@ author: Mark Wilson
 layout: post
 tags: ['guide','post']
 ---
-
+# This guide is no longer current — please follow [this guide][newguide] instead
 # Set up MiniMed Connect with Nightscout on Azure
 
 This setup guide will enable you to bridge data from the MiniMed Connect into a Nightscout site running on Azure. If you use a Medtronic Enlite CGM, you will be able to view the numbers and trends from the CGM in Nightscout. If you use a Medtronic insulin pump compatible with the Connect, you will be able to pump status data such as active insulin in Nightscout.
@@ -94,6 +94,7 @@ Nightscout can send you a notification for certain pump events: low reservoir, l
 * Use [this list of environment variables for the pump plugin](https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring) to tweak the conditions under which you want to receive notifications. For example, if you want a "warning" notification when the reservoir is below 30 units, add the environment variable `PUMP_WARN_RES=30`.
 * If you don't set a particular environment variable, it will use the default. You can see the defaults listed in the list of environment variables, in parentheses. For example, default is to warn when reservoir is below 10 units, battery is below 30%, or the pump data hasn't been logged for 30 minutes.
 
+[newguide]: http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku
 [CareLink]: https://carelink.minimed.com/
 [Nightscout with iOS and Dexcom Share Bridge]: http://www.nightscout.info/wiki/welcome/nightscout-with-ios-and-dexcom-share
 [Nightscout Update Fork Tool]: http://nightscout.github.io/pages/update-fork/
