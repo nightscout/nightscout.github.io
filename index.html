@@ -1,46 +1,70 @@
 <!DOCTYPE html><html lang="en"><head><!-- Meta--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Home | Nightscout, open source, DIY CGM in the cloud</title><meta name="description" content="We are not waiting!  How to build Nightscout CGM in the cloud."><meta name="keywords" content="Dexcom, CGM, cloud, nightscout, wearenotwaiting, hypo, monitor, DIY, opensource, singlepaneofglass, glucose, real-time"><meta name="author" content="Nightscout contributors"><meta name="generator" content="DocPad v6.74.0" /><meta name="viewport" content="width=device-width"><!-- Icons--><link rel="shortcut icon" href="/ico/favicon.ico"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png"><!--if lt IE 9script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
---><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><!-- For now hide the navbar, single page site--><nav style="display: none" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a href="/" class="navbar-brand">Welcome</a></div><ul class="nav navbar-nav"><li typeof="sioc:Page" about="/posts/2015-02-28-proposed-roadmap"><a href="/posts/2015-02-28-proposed-roadmap" property="dc:title">Proposed Roadmap</a></li><li typeof="sioc:Page" about="/posts/2015-10-27-set-up-minimed-connect-with-nightscout-on-azure"><a href="/posts/2015-10-27-set-up-minimed-connect-with-nightscout-on-azure" property="dc:title">Set up MiniMed Connect with Nightscout on Azure</a></li><li typeof="sioc:Page" about="/posts/colors-subdued-is-safer"><a href="/posts/colors-subdued-is-safer" property="dc:title">Color choices for Nightscout: Subdued is Safer</a></li><li typeof="sioc:Page" about="/posts/2015-02-22-donate-data-with-ga"><a href="/posts/2015-02-22-donate-data-with-ga" property="dc:title">Release of data</a></li><li typeof="sioc:Page" about="/posts/2015-02-26-towards-aggregating"><a href="/posts/2015-02-26-towards-aggregating" property="dc:title">Towards Aggregating Nightscouten</a></li></ul></div></nav><div class="container"><section id="content" class="content"><div class="jumbotron"><h1>Nightscout aka, CGM in the Cloud</h1><p class="intro"><p>We are not waiting to put our CGMs in the cloud.</p>
+--><!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/components-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/styles/style.css" /></head><body><!-- Markup--><!-- For now hide the navbar, single page site--><nav style="display: none" class="navbar navbar-default navbar-fixed-top"><div class="container"><div class="navbar-header"><a href="/" class="navbar-brand">Welcome</a></div><ul class="nav navbar-nav"><li typeof="sioc:Page" about="/posts/2015-02-28-proposed-roadmap"><a href="/posts/2015-02-28-proposed-roadmap" property="dc:title">Proposed Roadmap</a></li><li typeof="sioc:Page" about="/posts/2015-10-27-set-up-minimed-connect-with-nightscout-on-azure"><a href="/posts/2015-10-27-set-up-minimed-connect-with-nightscout-on-azure" property="dc:title">Set up MiniMed Connect with Nightscout on Azure</a></li><li typeof="sioc:Page" about="/posts/colors-subdued-is-safer"><a href="/posts/colors-subdued-is-safer" property="dc:title">Color choices for Nightscout: Subdued is Safer</a></li><li typeof="sioc:Page" about="/posts/2015-02-22-donate-data-with-ga"><a href="/posts/2015-02-22-donate-data-with-ga" property="dc:title">Release of data</a></li><li typeof="sioc:Page" about="/posts/2015-02-26-towards-aggregating"><a href="/posts/2015-02-26-towards-aggregating" property="dc:title">Towards Aggregating Nightscouten</a></li></ul></div></nav><div class="container"><section id="content" class="content"><div class="jumbotron"><h1>Nightscout aka, CGM in the Cloud</h1><p class="intro"><p>We are not waiting to put our CGMs in the cloud and monitor our devices.</p>
 <p>This is a website run by a community of <code>DIY</code>ers to put their
-Dexcom CGM in the cloud.</p>
+CGMs and insulin pumps in the cloud.</p>
 <ul>
-<li><strong>Highly experimental.</strong></li>
-<li><strong>Not intended for therapy.</strong></li>
+<li><strong>Highly experimental and not intended for therapy.</strong></li>
 <li><strong>Use at your own risk.</strong></li>
 <li><strong>Intended only as an investigational and educational tool to
 learn about this technology.</strong></li>
 </ul>
-</p></div><!-- Example row of columns.--><div class="row"><div class="col-md-6"><div><h2 id="guides">Guides</h2>
-</div><a href="http://go.nightscout.info" class="btn btn-default">Guides</a><a href="http://www.nightscout.info/wiki/welcome" class="btn btn-default">Visit wiki </a><a href="/projects/" class="btn btn-default">Ongoing projects and experiments</a></div><div class="col-md-6"><div><h2 id="groups">Groups</h2>
+</p></div><!-- Example row of columns.--><div class="row"><div class="col-md-6"><div><h2 id="what-is-nightscout">What is Nightscout?</h2>
+<p>  Nightscout is a cloud application, which you can install yourself using free hosting from various
+  cloud service providers. Once installed, Nightscout
+  acts as a central repository of blood glucose and insulin dosing data for a single person,
+  allowing you to view the CGM graph and other data anywhere using a web browser.</p>
+<p>  The CGM data is sent to Nightscout using an <em>uploader application</em> such as xDrip+ or Spike,
+  running on a mobile phone carried by the person being monitored. The application you&#39;ll need
+  for uploading the data depends on which CGM device you&#39;re using.</p>
+<p>  In addition to viewing the data using a web browser, there are several
+  applications available for mobile devices and smart watches, which allow you alternate
+  ways to view the information.</p>
+<p>  Once you have Nightscout up and running, you&#39;ll get a view that looks something like this:</p>
+<p>  <img src="/images/nightscout.jpg" alt="Nightscout">     </p>
+</div></div><div class="col-md-6"><div><h2 id="how-can-i-get-nightscout">How can I get Nightscout?</h2>
+<p>Every Nightscout user installs the service for themselves (and yes, even non-technical people
+can do this). See below for links to installation guides and peer support.</p>
 <ul>
+<li><a href="http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku">Installation guide</a>
+Read the installation and configuration guides at Nightscout.info</li>
+<li><a href="https://www.youtube.com/watch?v=sUf8ie65fqg&amp;t=494s">Installation video</a>
+The installation process as a video guide, to help deciper the documentation</li>
 <li><a href="https://www.facebook.com/groups/cgminthecloud/">Facebook group</a>
-See Facebook group for community of other people attempting
-building their own nightscout rigs.</li>
-<li><a href="https://twitter.com/hashtag/wearenotwaiting?src=hash">#wearenotwaiting</a></li>
-<li><a href="http://www.diabetesmine.com/we-are-not-waiting">DiabetesMine</a></li>
-<li><a href="http://www.nightscout.info/forum/">User Discussion Forums For Install Questions etc</a></li>
-<li><a href="https://www.healthyoutcomes.com/register/Step1.aspx">Our Friends: Healthy Outcomes</a></li>
+Visit the Facebook group for peer support on installation and troubleshooting.</li>
+<li><a href="https://gitter.im/nightscout/public">Gitter support chat</a></li>
+</ul>
+</div></div><div class="col-md-6"><div><h2 id="projects-we-love">Projects we love</h2>
+<ul>
+<li><a href="https://github.com/NightscoutFoundation/xDrip">xDrip+</a>
+ xDrip+ is an Android application, with the ability to capture CGM data from a
+ wide variety of Bluetooth sources and upload the data to Nightscout.</li>
+<li><a href="https://spike-app.com">Spike</a>
+ Spike is an iOS application, with the ability to capture CGM data from a
+ wide variety of Bluetooth sources and upload the data to Nightscout.</li>
+<li><a href="http://pazaan.github.io/600SeriesAndroidUploader/">640GAndroidUploader</a>
+ An Android uploader application for Medtronic 600-series insulin pump users.</li>
+<li><a href="https://openaps.org">OpenAPS</a>
+OpenAPS is a DIY Artificial Pancreas. See their site for excellent writeups on the design
+of the system for safety and ideal treatment outcomes.</li>
+<li><a href="https://androidaps.readthedocs.io/en/latest/EN/">AndroidAPS</a>
+ AndroidAPS is an Android application, which implements the OpenAPS oref0/oref1
+ algorithm, along with a host of other features.</li>
+<li><a href="https://loopkit.github.io/loopdocs/">Loop</a>
+ Loop is an iOS based DIY artificial pancreas, based on it&#39;s own algorithm.</li>
+</ul>
+</div></div><div class="col-md-6"><div><h2 id="other">Other</h2>
+<p>Suite of projects that compose Nightscout.</p>
+<ul>
+<li><a href="pages/update-fork/">Nightscout update tool</a></li>
+<li><a href="https://github.com/nightscout/cgm-remote-monitor">cgm-remote-monitor</a></li>
+<li><a href="https://github.com/nightscout/android-uploader">Android-Uploader</a></li>
+<li><a href="https://github.com/jasoncalabrese/cgm-pebble">pebble-cgm</a></li>
+<li><a href="https://github.com/nightscout/nightscout.github.io">This website</a></li>
+</ul>
+<p>Social media / friends</p>
+<ul>
+<li><a href="https://twitter.com/hashtag/wearenotwaiting?src=hash">#wearenotwaiting @ Twitter</a></li>
 <li><a href="https://tidepool.org/">Our Friends: Tidepool</a></li>
 <li>[Our Friends for Life: Children with Diabetes] (<a href="http://www.childrenwithdiabetes.com/">http://www.childrenwithdiabetes.com/</a>)</li>
 </ul>
-</div></div><div class="col-md-6"><div><h2 id="github-the-code">Github (the code)</h2>
-<p>Suite of projects that compose Nightscout.</p>
-<ul>
-<li><a href="https://github.com/nightscout/android-uploader">Android-Uploader</a></li>
-<li><a href="https://github.com/nightscout/cgm-remote-monitor">cgm-remote-monitor</a></li>
-<li><a href="https://github.com/jasoncalabrese/cgm-pebble">pebble-cgm</a></li>
-<li><a href="https://github.com/jasoncalabrese/project-glu">project-glu</a> - Our
-experiments using <code>REST</code> api.</li>
-<li><a href="https://github.com/nightscout/nightscout.github.io">This website</a></li>
-<li><a href="https://trello.com/b/AL0kioCf/wearenotwaiting-core-dev">trello</a></li>
-<li><a href="http://hackingtype1.com/">#hackingtype1</a> - Some background on why.</li>
-</ul>
-</div></div><div class="col-md-6"><div><h2 id="docs-and-videos">Docs and Videos</h2>
-<p>Nightscout is an open source, community project, which depends on
-contributions from people like you.
-Confused? <a href="https://github.com/nightscout/nightscout.github.io/issues">File an issue!</a></p>
-<ul>
-<li><a href="https://www.youtube.com/channel/UChgmRw-YYFCtLbRVFDlSMHA">Videos-How To</a></li>
-<li><a href="https://github.com/nightscout/nightscout.github.io/wiki">Wiki-For Technical knowledge Sharing</a></li>
-<li><a href="https://github.com/nightscout/nightscout.github.io/blob/source/src/files/pdfs/Install%20Guide%202014.pdf">Install Guide Printable Format</a></li>
-</ul>
-</div></div><div class="col-md-6"><div><h2>Posts</h2><ul><li typeof="sioc:Page" about="/posts/2015-02-28-proposed-roadmap"><a href="/posts/2015-02-28-proposed-roadmap" property="dc:title">Proposed Roadmap</a></li><li typeof="sioc:Page" about="/posts/2015-10-27-set-up-minimed-connect-with-nightscout-on-azure"><a href="/posts/2015-10-27-set-up-minimed-connect-with-nightscout-on-azure" property="dc:title">Set up MiniMed Connect with Nightscout on Azure</a></li><li typeof="sioc:Page" about="/posts/colors-subdued-is-safer"><a href="/posts/colors-subdued-is-safer" property="dc:title">Color choices for Nightscout: Subdued is Safer</a></li><li typeof="sioc:Page" about="/posts/2015-02-22-donate-data-with-ga"><a href="/posts/2015-02-22-donate-data-with-ga" property="dc:title">Release of data</a></li><li typeof="sioc:Page" about="/posts/2015-02-26-towards-aggregating"><a href="/posts/2015-02-26-towards-aggregating" property="dc:title">Towards Aggregating Nightscouten</a></li></ul></div></div></div></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/index.html.jade" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/index.html.jade" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/index.html.jade" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu Jul 18 2019 09:02:24 GMT+0300 (Eastern European Summer Time)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
+</div></div></div></section><hr><footer><div><h5>Contribute</h5><ul><li><a href="https:/github.com/nightscout/nightscout.github.io/edit/source/src/documents/index.html.jade" class="edit github">Edit on github.com</a></li><li><a href="https:/github.com/nightscout/nightscout.github.io/blob/source/src/documents/index.html.jade" class="view github">View on github.com</a></li><li><a href="http://prose.io/#nightscout/nightscout.github.io/edit/source/src/documents/index.html.jade" class="edit prose">Edit on prose.io</a></li></ul></div><div>© Nightscout contributors 2014</div><div style="font-style:italic; font-size: 12px">This website was last updated at Thu Jul 18 2019 11:21:29 GMT+0300 (Eastern European Summer Time)</div></footer></div><!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery/dist/jquery.js"></script><script defer="defer"  src="/vendor/components-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/autolink_heading.js"></script><script defer="defer"  src="/scripts/script.js"></script></body></html>
