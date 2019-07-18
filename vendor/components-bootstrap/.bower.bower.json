@@ -23,7 +23,7 @@
     "tag": "3.0.3",
     "commit": "ed686e60f966ba415e34f8825fad454993afac4b"
   },
-  "_source": "git://github.com/components/bootstrap.git",
+  "_source": "https://github.com/components/bootstrap.git",
   "_target": "~3.0.3",
   "_originalSource": "components-bootstrap"
 }
