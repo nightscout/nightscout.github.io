@@ -1,6 +1,6 @@
 # The meta project aggregator for Nightscout
 
-Visit http://nightscout.github.io/ for more details.
+Please visit http://nightscout.github.io/ for more details.
 
 This is the source code for that site.
 See project wiki's for more details.
