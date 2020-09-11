@@ -6,6 +6,8 @@ This is the repo that contains the source files for the [Nightscout Docs](https:
 
 To suggest changes, fork this repository, edit the files, and submit your changes as a pull request.
 
+The developer discussion of Nightscout happens on our Discord channel at https://discord.gg/zg7CvCQ
+
 ### Previewing Changes
 To preview your work as you edit you must set up two python packages that are used to create this site using [MkDocs](http://www.mkdocs.org/). They are `mkdocs`, and `mkdocs-bootswatch`.
 
