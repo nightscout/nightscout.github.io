@@ -1,0 +1,53 @@
+{
+  "name": "octokat",
+  "version": "0.2.3",
+  "description": "Javascript GitHub client for NodeJS or a browser using promises or callbacks",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "bower install",
+    "test": "VCR_MODE=cache grunt test --verbose",
+    "dist": "grunt dist --verbose",
+    "update": "bower update",
+    "blanket": {
+      "pattern": [
+        "octokat.js"
+      ]
+    }
+  },
+  "dependencies": {
+    "coffee-script": "^1.8.0",
+    "es6-promise": "0.1.2",
+    "xmlhttprequest": "~1.6.0"
+  },
+  "devDependencies": {
+    "browserify": "^5.11.0",
+    "chai": "~1.8.1",
+    "coffeeify": "^0.7.0",
+    "grunt": "~0.4.2",
+    "grunt-browserify": "^3.0.1",
+    "grunt-bump": "~0.0.10",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-contrib-clean": "~0.5",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-mocha-phantomjs": "~0.5.0",
+    "grunt-mocha-test": "~0.8.0",
+    "jamjs": "~0.2.17",
+    "mocha": "~1.14.0",
+    "sepia": "~1.0.3",
+    "sepia-js": "git://github.com/philschatz/sepia.js",
+    "watchify": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philschatz/octokat.js.git"
+  },
+  "keywords": [
+    "javascript",
+    "github",
+    "client",
+    "promise",
+    "ender"
+  ],
+  "author": "Philip Schatz"
+}
