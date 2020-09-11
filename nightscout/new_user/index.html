@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Brand New NS - Nightscout</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link href="../../css/admonitions.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Nightscout</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nightscout <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../overview/">Overview</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Brand New NS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../update_user/">Retrofit Existing NS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../troublehoot/">Setup Troubleshooting</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../mlab_cleanup/">NS Stopped Working</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../remote-overrides/">Remote Overrides</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../ifttt/">IFTTT</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../pebble/">Pebble</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../pushover/">Remote Notifications</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../reports/">Reports</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../overview/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../update_user/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#new-nightscout-users">New Nightscout Users</a></li>
+        
+            <li><a href="#t1pal-paid-service">T1Pal (paid service)</a></li>
+        
+            <li><a href="#traditional-diy-free-do-it-yourself">Traditional DIY (free, do-it-yourself)</a></li>
+        
+            <li><a href="#step-1-heroku-account">Step 1: Heroku Account</a></li>
+        
+            <li><a href="#step-2-create-an-account-at-github">Step 2: Create an account at GitHub</a></li>
+        
+            <li><a href="#step-3-fork-and-deploy-cgm-remote-monitor">Step 3: Fork and deploy cgm-remote-monitor</a></li>
+        
+            <li><a href="#step-4-setup-your-heroku-nightscout-app">Step 4: Setup your Heroku Nightscout app</a></li>
+        
+            <li><a href="#step-5-additional-variables">Step 5: Additional Variables</a></li>
+        
+            <li><a href="#step-6-setup-profile">Step 6: Setup Profile</a></li>
+        
+            <li><a href="#step-7-nightscout-settings">Step 7: Nightscout Settings</a></li>
+        
+            <li><a href="#step-8-loop-settings">Step 8: Loop Settings</a></li>
+        
+            <li><a href="#diy-troubleshooting">DIY Troubleshooting</a></li>
+        
+            <li><a href="#future-warning-for-diy-users">Future warning (for DIY users)</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="new-nightscout-users">New Nightscout Users<a class="headerlink" href="#new-nightscout-users" title="Permanent link">⌁</a></h1>
+<p>There are two options for setting up Nightscout; one option requires a small fee but automates both the setup and periodic updating/cleaning database, the other option is free but requires your effort to build and update. You choose which works best for you. Isn't it nice to have options?</p>
+<h2 id="t1pal-paid-service">T1Pal (paid service)<a class="headerlink" href="#t1pal-paid-service" title="Permanent link">⌁</a></h2>
+<p><a href="https://t1pal.com/">T1Pal is only dedicated NS hosting</a> company.  There is a hosting fee required which is used to help ensure Nightscout runs without limits and receives improvements.  Setup is simple and loop plugins are configured automatically during the setup guide.</p>
+<ul>
+<li>Select <a href="https://www.t1pal.com/getting-started/starting/home">Get Started</a> to register an account at <a href="https://www.t1pal.com/">T1Pal</a>.  You will need to enter your credit card, which helps ensure Nightscout is running correctly.</li>
+<li>Select "visualize treatments" in the setup menu and select "loop."</li>
+</ul>
+<p align="center">
+<img src="../img/t1pal_configure.png" width="450">
+</p>
+
+<h2 id="traditional-diy-free-do-it-yourself">Traditional DIY (free, do-it-yourself)<a class="headerlink" href="#traditional-diy-free-do-it-yourself" title="Permanent link">⌁</a></h2>
+<p>Two options exist for easy DIY hosting of NS; Azure or Heroku. Both hosting services are free.  However,  Azure has data quotas monthly and shorter-term CPU quotas.  If you exceed those quotas, you may be facing a monthly data-use bill or being locked out of NS for about 12 hours until the quotas reset.  As you start to use NS more intensively for alarms, pebble watches, etc…it is possible that you may exceed your monthly data cap on Azure.  Many Loop users have transitioned their old sites from Azure over to Heroku and have found the hosting change to be beneficial.  Heroku also has some memory limits, but those limits have been more than adequate for Loop users.  Therefore, we recommend new users start with Heroku.</p>
+<p>If you are the person who enjoys videos...here's a YouTube video that you can use to walk-through with these directions. Just give it a click.</p>
+<p align="center">
+<a href="https://youtu.be/5WREY465eII" target="_blank"><img src="../img/thumbnail.png" width="650" title="How to build a Nightscout site: Loop Users" /></a>
+</p>
+
+<p>If you don't enjoy videos, then here is a step-by-step guide for completing your own Nightscout site DIY style.</p>
+<h2 id="step-1-heroku-account">Step 1: Heroku Account<a class="headerlink" href="#step-1-heroku-account" title="Permanent link">⌁</a></h2>
+<p>Create an account at <a href="https://signup.heroku.com/login" target="_blank">Heroku's signup page</a>. </p>
+<p>Enter your name, email address, role ("Hobbyist" is fine) and choose "Node.js" as the Primary Development Language.  When you get all those entered, confirm that you are not a robot and click the blue "Create Free Account" button</p>
+<p align="center">
+<img src="../img/heroku1.png" width="450">
+</p>
+
+<p>Now follow the directions and check your email to confirm your Heroku account. You'll be asked to create a password...save that password somewhere. You'll likely be logging into Heroku as part of Looping in the future, so this is a good password to save.</p>
+<p>When you finish creating the password, you'll see a screen like below.</p>
+<p align="center">
+<img src="../img/heroku2.png" width="450">
+</p>
+
+<p>We have to complete one last step...adding a credit card to your Heroku account. Don't worry, Heroku is still free...but it's only free if you leave a credit card on file. I've used Heroku for 6 years now and never been charged.</p>
+<p>To add your credit card, click on the icon of a little ninja person in the upper right corner of the Heroku site, and then select Account Settings and then Billing...or <a href="https://dashboard.heroku.com/account/billing" target="_blank">this should take you right to the billing page for your account</a>. Then click the purple "Add credit card" button. Finish the steps to add a credit card.</p>
+<p align="center">
+<img src="../img/heroku3.png" width="450">
+</p>
+
+<p>Once you finish that, you can just leave that page/tab alone and move on down to the next step below. </p>
+<h2 id="step-2-create-an-account-at-github">Step 2: Create an account at GitHub<a class="headerlink" href="#step-2-create-an-account-at-github" title="Permanent link">⌁</a></h2>
+<p>Go to <a href="https://github.com/join" target="_blank">GitHub's signup page</a>. Fill out the information to create your own unique username (write it down), email address, and password (also write this one down). Verify that you are a real person by tossing an animal's image around until it is upright...and then you'll be able to click the green "create an account" at the bottom of the page</p>
+<p align="center">
+<img src="../img/github1.png" width="450">
+</p>
+
+<p>Github will then ask if you want the Free Account (duh, yes). Confirm that (and unclick the Newsletter subscription if you don't want spam).</p>
+<p>Finally, Github will ask you a little about your programming experience and what you are going to use GitHub for...you can answer those or choose the "skip this step" option at the bottom of the screen.</p>
+<p>Finally, you'll be sent the email to verify your new account. Go to your emails and click the link sent to you.</p>
+<h2 id="step-3-fork-and-deploy-cgm-remote-monitor">Step 3: Fork and deploy cgm-remote-monitor<a class="headerlink" href="#step-3-fork-and-deploy-cgm-remote-monitor" title="Permanent link">⌁</a></h2>
+<p>Now go to the <a href="https://github.com/nightscout/cgm-remote-monitor" target="_blank">Nightscout cgm-remote-monitor repository</a>. This is where the Nightscout developer's store their code that we are going to borrow a copy of. A copy of code in Github is called a "fork". In the upper right corner, you'll find a little button labeled <code>Fork</code>.  Click that button and you'll see a message that GitHub is cloning/forking a copy of that code to your GitHub account.  That is a good thing.  Don't worry it only takes a few seconds.</p>
+<p align="center">
+<img src="../img/ns_fork.jpg" width="550">
+</p>
+
+<p></br></br>
+Once the forking is done, scroll down (below all those folder and file names) until you see the purple <code>Deploy to Heroku</code> button. Click that button.
+</br></br></p>
+<p align="center">
+<img src="../img/deploy_heroku.jpg" width="650">
+</p>
+
+<p></br></br>
+Pretty quickly, you should see a Heroku screen popup for "Create New App".  If you see that, you're good to go onto the next step to start setting up the Heroku Nightscout app.
+</br></br></p>
+<h2 id="step-4-setup-your-heroku-nightscout-app">Step 4: Setup your Heroku Nightscout app<a class="headerlink" href="#step-4-setup-your-heroku-nightscout-app" title="Permanent link">⌁</a></h2>
+<p>Heroku calls the code that you just deployed an "app"...but probably easier for most people to imagine it as a website. </p>
+<p>The first step is to give your "app" a name, this will be the prefix of your soon-to-be-created Nightscout site’s URL. For example, if you enter "janehasthesugars" then your Nightscout site's URL will be <code>https://janehasthesugars.herokuapp.com</code></p>
+<p align="center">
+<img src="../img/heroku4.png" width="650">
+</p>
+
+<p>Now scroll down a bit and we are going to fill out the information lines in the <code>Config Vars</code> section (circled in red above) of that page. There are many variables listed in that section, but we will only <em><b>need</em></b> to edit a few of them right now to get started. You can always go back later and edit the default values of your BG alarms and other defaults (or do it now, if you'd like). The variables listed below though do need you to make some edits/entries or review that the default settings work for your situation.</p>
+<table>
+<thead>
+<tr>
+<th>VARIABLE</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>API_SECRET</th>
+<td>Create your own API_SECRET…this is like the password to your NS site.  Please write it down somewhere safe or commit it to memory, you will be using it in the future.  It needs to be at least 12 characters long and should NOT use the @ or ! symbols.</td>
+</tr>
+<tr>
+<th>DISPLAY_UNITS</th>
+<td>default is mg/dl, you'll need to change to mmol if that's what you use</td>
+</tr>
+<tr>
+<th>ENABLE</th>
+<td>bridge loop pump iob cob basal careportal sage cage bage openaps override</br></br>(Enter all of the words above without commas.  Just add a single space between each word. Make sure autocorrect does not add space between careportal. Typically, the words basal and careportal will already be there waiting for you.)</td>
+</tr>
+<tr>
+<th>BRIDGE_USER_NAME</th>
+<td>Enter your Dexcom Share Account login name. This is not an email address. This should be the same account name used in the Looper's Dexcom app.</td>
+</tr>
+<tr>
+<th>BRIDGE_PASSWORD</th>
+<td>Enter your Dexcom Share Account password.</td>
+</tr>
+<tr>
+<th>BRIDGE_SERVER</th>
+<td>The default assumes the Dexcom user is using a US Dexcom account. <b><u>If you are outside the US, you need to change this entry to EU.</b></u></td>
+</tr>
+</tbody>
+</table>
+
+<p></br></p>
+<div class="admonition info">
+<p class="admonition-title">MOST COMMON ERRORS</p>
+<p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The <code>BRIDGE_USER_NAME</code> is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to <a href="https://clarity.dexcom.com" target="_blank">Dexcom's Clarity</a> page and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.</p>
+</div>
+<div class="admonition info">
+<p>If you are using Dexcom Share outside the United States, you will need to make sure you have EU in the BRIDGE_SERVER.
+</br>
+<table>
+<thead>
+<tr>
+<th>KEY</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>BRIDGE_SERVER</th>
+<p alighn="left"><td>EU</td>
+</tr>
+</tbody>
+</table></p>
+</div>
+<p>Now that we have all the variables fixed up, click the purple <code>Deploy</code> button at the bottom of screen
+</br></br>
+<p align="center">
+<img src="../img/deploy_button.jpg" width="650">
+</p> 
+</br></br>
+Wait about 5 minutes while Heroku builds your Nightscout app. You’ll see some text scroll by in the Build App box, and then finally, you will have a message that the app was successfully deployed.
+</br></br>
+<p align="center">
+<img src="../img/deploy_success.jpg" width="650">
+</p> 
+</br></br></p>
+<p>Click on the <code>Manage App</code> button and then we will move onto the next step.</p>
+<h2 id="step-5-additional-variables">Step 5: Additional Variables<a class="headerlink" href="#step-5-additional-variables" title="Permanent link">⌁</a></h2>
+<p>Select the <code>Settings</code> tab near the top of the screen on your Heroku app. Click on <code>Reveal Config  Vars</code> button that will be partway down the page. </p>
+<p align="center">
+<img src="../img/heroku5.png" width="650">
+</p>
+
+<p></br></br>
+Scroll down to the bottom of the variables list until you find the last blank one. 
+</br></br></p>
+<p align="center">
+<img src="../img/add_vars.jpg" width="650">
+</p>
+
+<p></br></br>
+You are going to add several additional lines of variables specifically for Loop use; the <code>DEVICESTATUS_ADVANCED</code> is a required line, the others just make Nightscout more useful when Looping.
+</br></br>
+<table>
+<thead>
+<tr>
+<th>KEY</th>
+<th>VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>DEVICESTATUS_ADVANCED</th>
+<td>true</td>
+</tr>
+<tr>
+<th>PUMP_FIELDS</th>
+<td>battery reservoir clock status</td>
+</tr>
+<tr>
+<th>PUMP_RETRO_FIELDS</th>
+<td>battery reservoir clock status</td>
+</tr>
+<tr>
+<th>SHOW_FORECAST</th>
+<td>loop</td>
+</tr>
+<tr>
+<th>SHOW_PLUGINS</th>
+<td>loop pump cob iob sage cage careportal basal</td>
+</tr>
+<tr>
+<th>LOOP_ENABLE_ALERTS</th>
+<td>true</td>
+</tr>
+<tr>
+<th>LOOP_WARN</th>
+<td>20</br></br>(This is the minutes since Loop last successfully looped, the t1d will have a similar notification at this time through the Loop app.  This will be a yellow alert in NS.)</td>
+</tr>
+<tr>
+<th>LOOP_URGENT</th>
+<td>60</br></br>(Same as the alert above, but will be red in color and have a shorter snooze option.)</td>
+</tr>
+<tr>
+<th>BASAL_RENDER</th>
+<td>default</td>
+</tr>
+</tbody>
+</table>
+</br></br>
+Finally, I recommend deleting the <code>PAPERTRAIL_API_TOKEN</code> line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really offers only confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, and really doesn't provide useful info for Nightscout users anyways...so best to just delete that line and never have to get the useless email in the first place.</p>
+<h2 id="step-6-setup-profile">Step 6: Setup Profile<a class="headerlink" href="#step-6-setup-profile" title="Permanent link">⌁</a></h2>
+<p>Now that we have finished all the variable setup, scroll up to the top of the page and click on the <code>Open App</code> button in the top right corner of your Heroku site.</p>
+<p align="center">
+<img src="../img/open_app.jpg" width="650">
+</p>
+
+<p>You will see black site with a profile warning at the top of the screen. Confirm to redirect to a profile set-up page.  (If it doesn't redirect automatically, refresh your webpage...might have to push the button a few times).  </p>
+<p align="center">
+<img src="../img/no_profile.jpg" width="450">
+</p>
+
+<p>You do not have to enter all the information in the profile if you are using Loop (since Loop will be providing the information for IOB and COB rather than letting NS calculate them), but you do have to fill out the <code>TimeZone</code>. That one is non-negotiable. I highly recommend also filling in the <code>Insulin to carb ratio</code>, <code>Insulin Sensitivity Factor</code>, and <code>Basal Rates</code> so that your information is properly displayed in Nightscout. To be clear, those values you enter in the Profile will not affect your Loop in any way, because Loop will not read them from Nightscout. New versions of Loop will also update these values in this Profile if you change the corresponding settings in Loop. So really, this is just a one-time setup and after that Loop will do the work of updating these values. </p>
+<p>Click <code>Save</code> when you have entered the information.  You will be prompted to authenticate, if it is the first time you’ve used the device to make changes in your profile.  Click on the <code>Authenticate</code> link at the bottom of the site, and enter your API_SECRET to complete the authentication.</p>
+<p align="center">
+<img src="../img/profile.jpg" width="650">
+</p>
+
+<p></br></br></p>
+<p>Close out of the Profile Editor to return to the main Nightscout page and configure your NS settings.</p>
+<h2 id="step-7-nightscout-settings">Step 7: Nightscout Settings<a class="headerlink" href="#step-7-nightscout-settings" title="Permanent link">⌁</a></h2>
+<p>The last step is to finish your Nightscout's settings. Click on the settings (those three horizontal lines in upper right corner).  Now check that you have everything displaying correctly:</p>
+<ul>
+<li><code>Render Basal</code> is set to either default or icicle (totally personal preference for how the temp basals show as blue lines in NS site)</li>
+<li>Theme is set to Colors</li>
+<li>Check the boxes that you’d like display pills in the SHOW PLUGINS (usually all of them except Openaps) section.</li>
+</ul>
+<p align="center">
+<img src="../img/settings_ns.jpg" width="650">
+</p>
+
+<p>Save the settings changes and you'll be on your way! Congrats!!</p>
+<h2 id="step-8-loop-settings">Step 8: Loop Settings<a class="headerlink" href="#step-8-loop-settings" title="Permanent link">⌁</a></h2>
+<p>Don't forget to enter your new Nightscout site into your Loop settings! That way Loop can upload all the juicy great info directly to your Nightscout site (except CGM data...that is all handled by that BRIDGE info you put in earlier)</p>
+<p>Directions <a href="https://loopkit.github.io/loopdocs/operation/loop-settings/services/#nightscout">here</a> as well as warnings about the two most common errors when people add the URL to Loop settings. (Hint hint hint)</p>
+<h2 id="diy-troubleshooting">DIY Troubleshooting<a class="headerlink" href="#diy-troubleshooting" title="Permanent link">⌁</a></h2>
+<p>If your site is not showing CGM (and Loop, if you are Looping) data within about 10 minutes of finishing your setup, then please follow these steps <a href="https://loopkit.github.io/loopdocs/nightscout/troublehoot/">here</a> to troubleshoot.</p>
+<h2 id="future-warning-for-diy-users">Future warning (for DIY users)<a class="headerlink" href="#future-warning-for-diy-users" title="Permanent link">⌁</a></h2>
+<p>At some point in the future months, your Nightscout site will likely stop in some quirky way...like CGM data won't be showing is the most common. This won't affect Looping, but it might be kind of annoying if you are a parent using Nightscout for remote info. The reason? The database Heroku gives us for free has some size limitations. After several months of Looping, you'll likely fill up that free amount of space and we will need to cleanout in order to make room.</p>
+<p>So...keep it in your head that if you see something odd with your NS site (like no CGM even though Dexcom is working), then please check <a href="https://loopkit.github.io/loopdocs/nightscout/mlab_cleanup/">this page to learn how you can cleanout the database</a>. It is easy and fast...no worries.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

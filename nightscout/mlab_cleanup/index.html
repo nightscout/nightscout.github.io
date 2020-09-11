@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>NS Stopped Working - Nightscout</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link href="../../css/admonitions.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Nightscout</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nightscout <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../overview/">Overview</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../new_user/">Brand New NS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../update_user/">Retrofit Existing NS</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../troublehoot/">Setup Troubleshooting</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">NS Stopped Working</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../remote-overrides/">Remote Overrides</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../ifttt/">IFTTT</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../pebble/">Pebble</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../pushover/">Remote Notifications</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../reports/">Reports</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                <li >
+                    <a rel="next" href="../troublehoot/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../remote-overrides/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#nightscout-issues">Nightscout Issues</a></li>
+        
+            <li><a href="#mlab-cleanup">mLab Cleanup</a></li>
+        
+            <li><a href="#step-1-delete-data">Step 1: Delete Data</a></li>
+        
+            <li><a href="#step-2-repair-database">Step 2: Repair Database</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="nightscout-issues">Nightscout Issues<a class="headerlink" href="#nightscout-issues" title="Permanent link">⌁</a></h1>
+<p>The free Nightscout we use also depends on a free database from mLab.  The free database only has so much room...500 MB to be specific.  After a period of time (it will vary, but usually on the order of months), your mLab database could reach its free limits.  When that happens, your NS site may stop showing data properly.  For example, you may notice your Share Bridge will not pull data and your site will be “stale”.</p>
+<p>The good news?  Loop can still run just fine until you repair your mLab database.  The bad news?  You just won’t be able to remotely monitor Loop through NS until you clear up some storage space in mLab.</p>
+<div class="admonition info">
+<p>These steps <strong>WILL BE NEEDED BY EVERYONE AT SOME POINT IN TIME</strong>...so please don't ignore these troubleshooting steps. If you see anything suddenly strange about your NS site after it had been working fine, start with these steps below. </p>
+</div>
+<h2 id="mlab-cleanup">mLab Cleanup<a class="headerlink" href="#mlab-cleanup" title="Permanent link">⌁</a></h2>
+<p>There are two steps to getting your Nightscout site running again. You will need to do both steps.  The first step clears out some space in your database.  The second step consolidates the remaining data into a more compact space, and therefore makes the data take up less room overall in your database. You need to do both steps to help keep your NS humming along.</p>
+<p>If you'd like a video demonstration of the steps needed to do this...here ya go. The video uses just a slightly different way to do Step 1...either way is totally fine. Click the image or click this <a href="https://youtu.be/_ifis2G11qs">Nightscout Cleanup link</a>...you'll end up at the same place.</br></p>
+<p align="center">
+<a href="https://youtu.be/_ifis2G11qs" target="_blank"><img src="../img/cleanup-video.jpg"  title="Nightscout Cleanup" /></a>
+</p>
+
+<h2 id="step-1-delete-data">Step 1: Delete Data<a class="headerlink" href="#step-1-delete-data" title="Permanent link">⌁</a></h2>
+<p>Go to your Nightscout site's settings (the three horizontal bars in the upper right of your Nightscout site) and open your Admin Tools for the site.  Click on the buttons to "Delete all documents" in your Clean Mongo status database section of the Admin Tools.  For good measure, also click on the buttons for removing future items as well.  </p>
+<p align="center">
+<img src="../img/ns_clean.jpeg" width="250">
+</p>
+
+<h2 id="step-2-repair-database">Step 2: Repair Database<a class="headerlink" href="#step-2-repair-database" title="Permanent link">⌁</a></h2>
+<p>Now that you cleared out some database space, we can now make the database more efficient by "repairing" the database.</p>
+<p>To begin the repair process, click on the mlab link in your Heroku site control panel.</p>
+<p align="center">
+<img src="../img/mlab_link.jpg" width="750">
+</p>
+
+<p>Then click on the <code>Tools</code> tab in the screen that opens.  Click on the <code>commands</code> button and then select the <code>repairDatabase</code> from the dropdown menu of available commands.  At the bottom of the screen, select the <code>Run Command</code> button. </p>
+<p align="center">
+<img src="../img/mlab_compact2.png" width="650">
+</p>
+
+<p>After a short time, you should get a return message of "ok" at the bottom of the command menu box.  If you failed to clear out your Mongo status database before running this command, you will likely not get a successful repair and instead your pointer wheel will just keep spinning.  Make sure you first clean out the database section as described above with your Nightscout Admin Tools.</p>
+<p>You can verify that your database housekeeping was successful by returning to your NS site and waiting for the next Loop upload.  You should see all your information back in with the next Loop run.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
