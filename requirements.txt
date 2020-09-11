@@ -1,0 +1,5 @@
+# python installation requirements for loopdocs
+# install by running: pip install -r requirements.txt
+
+mkdocs<0.17
+mkdocs-bootswatch==0.4.0
