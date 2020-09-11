@@ -9,3 +9,4 @@ src/files/vendor/jquery
 .*.sw?
 src/files/vendor/
 docs/build
+site/
