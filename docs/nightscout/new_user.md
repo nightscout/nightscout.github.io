@@ -4,10 +4,9 @@ There are two options for setting up Nightscout; one option requires a small fee
 
 ## T1Pal (paid service)
 
-[T1Pal is only dedicated NS hosting](https://t1pal.com/) company.  There is a hosting fee required which is used to help ensure Nightscout runs without limits and receives improvements.  Setup is simple and loop plugins are configured automatically during the setup guide.
+[T1Pal is only dedicated NS hosting](https://t1pal.com/) company.  There is a hosting fee required which is used to help ensure Nightscout runs without limits and receives improvements.  Setup is simple and plugins are configured automatically during the setup guide.
 
 * Select [Get Started](https://www.t1pal.com/getting-started/starting/home) to register an account at [T1Pal](https://www.t1pal.com/).  You will need to enter your credit card, which helps ensure Nightscout is running correctly.
-* Select "visualize treatments" in the setup menu and select "loop."
 
 <p align="center">
 <img src="../img/t1pal_configure.png" width="450">
@@ -15,7 +14,7 @@ There are two options for setting up Nightscout; one option requires a small fee
 
 ## Traditional DIY (free, do-it-yourself)
 
-Two options exist for easy DIY hosting of NS; Azure or Heroku. Both hosting services are free.  However,  Azure has data quotas monthly and shorter-term CPU quotas.  If you exceed those quotas, you may be facing a monthly data-use bill or being locked out of NS for about 12 hours until the quotas reset.  As you start to use NS more intensively for alarms, pebble watches, etc…it is possible that you may exceed your monthly data cap on Azure.  Many Loop users have transitioned their old sites from Azure over to Heroku and have found the hosting change to be beneficial.  Heroku also has some memory limits, but those limits have been more than adequate for Loop users.  Therefore, we recommend new users start with Heroku.
+Two options exist for easy DIY hosting of NS; Azure or Heroku. Both hosting services are free. However, Azure has data quotas monthly and shorter-term CPU quotas, so you're very likely to hit problems with Azure and we recommend choosing Heroku. If you host at Azure and exceed those quotas, you may be facing a monthly data-use bill or being locked out of NS for about 12 hours until the quotas reset. As you start to use NS more intensively for alarms, pebble watches, etc…it is possible that you may exceed your monthly data cap on Azure. Many users have transitioned their old sites from Azure over to Heroku and have found the hosting change to be beneficial. Therefore, we recommend new users start with Heroku.
 
 If you are the person who enjoys videos...here's a YouTube video that you can use to walk-through with these directions. Just give it a click.
 
@@ -35,7 +34,7 @@ Enter your name, email address, role ("Hobbyist" is fine) and choose "Node.js" a
 <img src="../img/heroku1.png" width="450">
 </p> 
 
-Now follow the directions and check your email to confirm your Heroku account. You'll be asked to create a password...save that password somewhere. You'll likely be logging into Heroku as part of Looping in the future, so this is a good password to save.
+Now follow the directions and check your email to confirm your Heroku account. You'll be asked to create a password...save that password somewhere secure! You'll likely be logging into Heroku in the future, so this is a good password to save. If you're not using a password manager yet, we recommend getting one - this makes it much easier to use safe passwords that are unique across sites. Our favorite password manager is 1Password, which is both secure and very easy to use.
 
 When you finish creating the password, you'll see a screen like below.
 
@@ -116,11 +115,11 @@ Now scroll down a bit and we are going to fill out the information lines in the 
 </tr>
 <tr>
 <th>ENABLE</th>
-<td>bridge loop pump iob cob basal careportal sage cage bage openaps override</br></br>(Enter all of the words above without commas.  Just add a single space between each word. Make sure autocorrect does not add space between careportal. Typically, the words basal and careportal will already be there waiting for you.)</td>
+<td>bridge pump iob cob basal careportal sage cage bage override</br></br>(Enter all of the words above without commas.  Just add a single space between each word. Make sure autocorrect does not add space between careportal. Typically, the words basal and careportal will already be there waiting for you.)</td>
 </tr>
 <tr>
 <th>BRIDGE_USER_NAME</th>
-<td>Enter your Dexcom Share Account login name. This is not an email address. This should be the same account name used in the Looper's Dexcom app.</td>
+<td>This setting is only needed if you're using Dexcom Share. Enter your Dexcom Share Account login name. This is not an email address. This should be the same account name used in the Dexcom app.</td>
 </tr>
 <tr>
 <th>BRIDGE_PASSWORD</th>
@@ -185,7 +184,7 @@ Scroll down to the bottom of the variables list until you find the last blank on
 <img src="../img/add_vars.jpg" width="650">
 </p> 
 </br></br>
-You are going to add several additional lines of variables specifically for Loop use; the `DEVICESTATUS_ADVANCED` is a required line, the others just make Nightscout more useful when Looping.
+You are going to add several additional lines of variables specifically for Loop use; the `DEVICESTATUS_ADVANCED` is a required line, the others just make Nightscout more useful.
 </br></br>
 <table>
 <thead>
@@ -216,25 +215,13 @@ You are going to add several additional lines of variables specifically for Loop
 <td>loop pump cob iob sage cage careportal basal</td>
 </tr>
 <tr>
-<th>LOOP_ENABLE_ALERTS</th>
-<td>true</td>
-</tr>
-<tr>
-<th>LOOP_WARN</th>
-<td>20</br></br>(This is the minutes since Loop last successfully looped, the t1d will have a similar notification at this time through the Loop app.  This will be a yellow alert in NS.)</td>
-</tr>
-<tr>
-<th>LOOP_URGENT</th>
-<td>60</br></br>(Same as the alert above, but will be red in color and have a shorter snooze option.)</td>
-</tr>
-<tr>
 <th>BASAL_RENDER</th>
 <td>default</td>
 </tr>
 </tbody>
 </table>
 </br></br>
-Finally, I recommend deleting the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really offers only confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, and really doesn't provide useful info for Nightscout users anyways...so best to just delete that line and never have to get the useless email in the first place.
+Finally, you might want to delete the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really offers only confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, and really doesn't provide useful info for Nightscout users anyways...so best to just delete that line and never have to get the useless email in the first place.
 
 ## Step 6: Setup Profile
 
@@ -250,7 +237,7 @@ You will see black site with a profile warning at the top of the screen. Confirm
 <img src="../img/no_profile.jpg" width="450">
 </p> 
 
-You do not have to enter all the information in the profile if you are using Loop (since Loop will be providing the information for IOB and COB rather than letting NS calculate them), but you do have to fill out the `TimeZone`. That one is non-negotiable. I highly recommend also filling in the `Insulin to carb ratio`, `Insulin Sensitivity Factor`, and `Basal Rates` so that your information is properly displayed in Nightscout. To be clear, those values you enter in the Profile will not affect your Loop in any way, because Loop will not read them from Nightscout. New versions of Loop will also update these values in this Profile if you change the corresponding settings in Loop. So really, this is just a one-time setup and after that Loop will do the work of updating these values. 
+You do not have to enter all the information in the profile if you are using Loop or OpenAPS or AndroidAPS (since those will be providing the information for IOB and COB rather than letting NS calculate them), but you do have to fill out the `TimeZone`. That one is non-negotiable. I highly recommend also filling in the `Insulin to carb ratio`, `Insulin Sensitivity Factor`, and `Basal Rates` so that your information is properly displayed in Nightscout. To be clear, those values you enter in the Profile will not affect your pump or other dosing in any way, because your pump will not read them from Nightscout. It's recommened you later keep these numbers up to date if you change the dosing and you're not using a system that automatically pushes changes to the profile to Nightscout.
 
 Click `Save` when you have entered the information.  You will be prompted to authenticate, if it is the first time you’ve used the device to make changes in your profile.  Click on the `Authenticate` link at the bottom of the site, and enter your API_SECRET to complete the authentication.
 
@@ -275,15 +262,11 @@ The last step is to finish your Nightscout's settings. Click on the settings (th
 
 Save the settings changes and you'll be on your way! Congrats!!
 
-## Step 8: Loop Settings
+## Step 8: Uploader Settings
 
-Don't forget to enter your new Nightscout site into your Loop settings! That way Loop can upload all the juicy great info directly to your Nightscout site (except CGM data...that is all handled by that BRIDGE info you put in earlier)
+Don't forget to enter your new Nightscout site into your uploader settings!
 
-Directions [here](https://loopkit.github.io/loopdocs/operation/loop-settings/services/#nightscout) as well as warnings about the two most common errors when people add the URL to Loop settings. (Hint hint hint)
-
-## DIY Troubleshooting
-
-If your site is not showing CGM (and Loop, if you are Looping) data within about 10 minutes of finishing your setup, then please follow these steps [here](https://loopkit.github.io/loopdocs/nightscout/troublehoot/) to troubleshoot.
+* TODO: add uploader samples
 
 ## Future warning (for DIY users)
 

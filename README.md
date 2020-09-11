@@ -14,13 +14,13 @@ Review [Properly Installing Python](http://docs.python-guide.org/en/latest/start
 * Install python modules
 
 ```bash
-$ cd <loopdocs project location>
+$ cd <nightscout docs location>
 $ pip install -r requirements.txt
 ```
 
 * Run mkdocs server locally
 ```bash
-$ cd <loopdocs project location>
+$ cd <nightscout docs location>
 $ mkdocs serve
 ```
 
