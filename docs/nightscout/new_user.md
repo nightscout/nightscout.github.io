@@ -24,7 +24,77 @@ If you are the person who enjoys videos...here's a YouTube video that you can us
 
 If you don't enjoy videos, then here is a step-by-step guide for completing your own Nightscout site DIY style.
 
-## Step 1: Heroku Account
+
+## Step 1: MongoDB Atlas Account
+
+Create an account at <a href="https://www.mongodb.com/cloud/atlas/register" target="_blank">MongoDB Atlas's signup page</a>.
+
+You are creating this account for your personal use and not for a company so you can use your name in the Company Name field. The same applies for the Work Email field. Click on the "Get Started Free" button.
+
+
+<p align="center">
+<img src="../img/atlas1.png" width="450">
+</p>
+
+Now, you want to create a free shared cluster. Do that by clicking on the "Create a cluster" button under "Shared Clusters".
+
+<p align="center">
+<img src="../img/atlas2.png" width="450">
+</p>
+
+During this step, you are now asked to configure the Cloud Provider and Region for your new cluster. Leaving the defaults is fine. Do not change these settings. The selected Cluster Tier should be "M0 Sandbox". This is is the Free tier.
+
+<p align="center">
+<img src="../img/atlas3.png" width="450">
+</p>
+
+Now, at the bottom of the page, you may name your cluster. Leaving the default is okay, but feel free to rename it to "nightscout" to make things clearer and avoid errors in the future.
+
+<p align="center">
+<img src="../img/atlas4.png" width="450">
+</p>
+
+Finally, you can click on the "Create Cluster" buttom at the bottom right of the page.
+
+<p align="center">
+<img src="../img/atlas5.png" width="450">
+</p>
+
+You will be brought to a page with a lot of information about your cluster. At first, it should say "Your cluster is being created...". We cannot continue until this is done, so lets wait a little bit.
+
+<p align="center">
+<img src="../img/atlas6.png" width="450">
+</p>
+
+Once cluster creation is complete, click on the small "Connect" button. This will bring up a new form.
+
+<p align="center">
+<img src="../img/atlas7.png" width="450">
+</p>
+
+The first thing you need to do is to allow access to your cluster from anywhere. Do that by clicking on "Allow Access from Anywhere". Then, leave the defaults and click on "Add IP Address".
+
+<p align="center">
+<img src="../img/atlas8.png" width="450">
+</p>
+
+Now, you need to create a database user for Nightscout to access your cluster. Do that by entering a username and password in the form below. Feel free to use "nightscout" as a username. Please use a secure password. You may use click on "Autogenerate Secure Password" to generate one for you. **Make sure to note down the username and password that you have entered.** They will be required when setting up your Nightscout site.
+
+<p align="center">
+<img src="../img/atlas9.png" width="450">
+</p>
+
+Now, click on "Choose a connection method" at the bottom of the form. Then, click on "Connect your application". Leave the default Driver and version and copy the displayed string. You can copy the string by clicking on the "Copy" button. This is is the last piece of information that we need from MongoDB Atlas.
+
+Before doing anything else, you need to replace some information in the string and note it down.
+
+<p align="center">
+<img src="../img/atlas10.png" width="450">
+</p>
+
+For example, my string was ``mongodb+srv://nightscout:<password>@nightscout.ztlke.mongodb.net/<dbname>?retryWrites=true&w=majority``. I need to change ``<password>`` to my password and ``<dbname>`` to anything I like. The final result would be ``mongodb+srv://nightscout:password123@nightscout.ztlke.mongodb.net/nightscout?retryWrites=true&w=majority``. This string contains all the information that Nightscout needs to connect to your newly connected cluster. Note it down and it will be required during the Heroku setup. This will be known as your **MONGODB_URI**.
+
+## Step 2: Heroku Account
 
 Create an account at <a href="https://signup.heroku.com/login" target="_blank">Heroku's signup page</a>. 
 
@@ -52,7 +122,7 @@ To add your credit card, click on the icon of a little ninja person in the upper
 
 Once you finish that, you can just leave that page/tab alone and move on down to the next step below. 
 
-## Step 2: Create an account at GitHub
+## Step 3: Create an account at GitHub
 
 Go to <a href="https://github.com/join" target="_blank">GitHub's signup page</a>. Fill out the information to create your own unique username (write it down), email address, and password (also write this one down). Verify that you are a real person by tossing an animal's image around until it is upright...and then you'll be able to click the green "create an account" at the bottom of the page
 
@@ -66,7 +136,7 @@ Finally, Github will ask you a little about your programming experience and what
 
 Finally, you'll be sent the email to verify your new account. Go to your emails and click the link sent to you.
 
-## Step 3: Fork and deploy cgm-remote-monitor
+## Step 4: Fork and deploy cgm-remote-monitor
 
 Now go to the <a href="https://github.com/nightscout/cgm-remote-monitor" target="_blank">Nightscout cgm-remote-monitor repository</a>. This is where the Nightscout developer's store their code that we are going to borrow a copy of. A copy of code in Github is called a "fork". In the upper right corner, you'll find a little button labeled `Fork`.  Click that button and you'll see a message that GitHub is cloning/forking a copy of that code to your GitHub account.  That is a good thing.  Don't worry it only takes a few seconds.
 
@@ -84,8 +154,7 @@ Once the forking is done, scroll down (below all those folder and file names) un
 Pretty quickly, you should see a Heroku screen popup for "Create New App".  If you see that, you're good to go onto the next step to start setting up the Heroku Nightscout app.
 </br></br>
 
-
-## Step 4: Setup your Heroku Nightscout app
+## Step 5: Setup your Heroku Nightscout app
 
 Heroku calls the code that you just deployed an "app"...but probably easier for most people to imagine it as a website. 
 
@@ -108,6 +177,10 @@ Now scroll down a bit and we are going to fill out the information lines in the 
 <tr>
 <th>API_SECRET</th>
 <td>Create your own API_SECRET…this is like the password to your NS site.  Please write it down somewhere safe or commit it to memory, you will be using it in the future.  It needs to be at least 12 characters long and should NOT use the @ or ! symbols.</td>
+</tr>
+<tr>
+<th>MONGODB_URI</th>
+<td>The MONGODB_URI that you have obtained at the end of the MongoDB Atlas setup. This is required for Nightscout to connect to your MongoDB cluster.
 </tr>
 <tr>
 <th>DISPLAY_UNITS</th>
@@ -169,7 +242,7 @@ Wait about 5 minutes while Heroku builds your Nightscout app. You’ll see some 
 
 Click on the `Manage App` button and then we will move onto the next step.
 
-## Step 5: Additional Variables
+## Step 6: Additional Variables
 
 Select the `Settings` tab near the top of the screen on your Heroku app. Click on `Reveal Config  Vars` button that will be partway down the page. 
 
@@ -223,7 +296,7 @@ You are going to add several additional lines of variables specifically for Loop
 </br></br>
 Finally, you might want to delete the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really offers only confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, and really doesn't provide useful info for Nightscout users anyways...so best to just delete that line and never have to get the useless email in the first place.
 
-## Step 6: Setup Profile
+## Step 7: Setup Profile
 
 Now that we have finished all the variable setup, scroll up to the top of the page and click on the `Open App` button in the top right corner of your Heroku site.
 
@@ -249,7 +322,7 @@ Click `Save` when you have entered the information.  You will be prompted to aut
 
 Close out of the Profile Editor to return to the main Nightscout page and configure your NS settings.
 
-## Step 7: Nightscout Settings
+## Step 8: Nightscout Settings
 The last step is to finish your Nightscout's settings. Click on the settings (those three horizontal lines in upper right corner).  Now check that you have everything displaying correctly:
 
 * `Render Basal` is set to either default or icicle (totally personal preference for how the temp basals show as blue lines in NS site)
@@ -262,7 +335,7 @@ The last step is to finish your Nightscout's settings. Click on the settings (th
 
 Save the settings changes and you'll be on your way! Congrats!!
 
-## Step 8: Uploader Settings
+## Step 9: Uploader Settings
 
 Don't forget to enter your new Nightscout site into your uploader settings!
 
