@@ -257,7 +257,8 @@ Scroll down to the bottom of the variables list until you find the last blank on
 <img src="../img/add_vars.jpg" width="650">
 </p> 
 </br></br>
-You are going to add several additional lines of variables specifically for Loop use; the `DEVICESTATUS_ADVANCED` is a required line, the others just make Nightscout more useful.
+If you're setting up Nightscout for use with Loop, OpenAPS or AndroidAPS, you should refer
+to the documentation of these systems for additional recommended configuration. For loopers, you probably want to set something like the following:
 </br></br>
 <table>
 <thead>
@@ -280,12 +281,8 @@ You are going to add several additional lines of variables specifically for Loop
 <td>battery reservoir clock status</td>
 </tr>
 <tr>
-<th>SHOW_FORECAST</th>
-<td>loop</td>
-</tr>
-<tr>
 <th>SHOW_PLUGINS</th>
-<td>loop pump cob iob sage cage careportal basal</td>
+<td>pump cob iob sage cage careportal basal</td>
 </tr>
 <tr>
 <th>BASAL_RENDER</th>
