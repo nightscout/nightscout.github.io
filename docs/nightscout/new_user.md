@@ -338,6 +338,18 @@ Don't forget to enter your new Nightscout site into your uploader settings!
 
 * TODO: add uploader samples
 
+## Step 10: Uptime robot
+
+In order for your site to stay active 24/7, you’ll need to set up a free <a href="https://uptimerobot.com/">Uptime Robot</a> . The constant pings from this status-checking service will keep your Nightscout app awake.
+
+Create a new account, and verify it with the email you get.
+Log in, and click the + Monitor button.
+Choose HTTP(s) for the Monitor Type, pick any Friendly Name, and enter your site URL as the URL (https://your-app-name.herokuapp.com). 
+Leave the rest as-is, and click Create Monitor.
+
+<!Source: http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku)
+, with only minor formating changes>
+
 ## Future warning (for DIY users)
 
 At some point in the future months, your Nightscout site will likely stop in some quirky way...like CGM data won't be showing is the most common. This won't affect Looping, but it might be kind of annoying if you are a parent using Nightscout for remote info. The reason? The database Heroku gives us for free has some size limitations. After several months of Looping, you'll likely fill up that free amount of space and we will need to cleanout in order to make room.
