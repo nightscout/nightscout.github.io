@@ -348,7 +348,7 @@ Choose HTTP(s) for the Monitor Type, pick any Friendly Name, and enter your site
 Leave the rest as-is, and click Create Monitor.
 
 <!Source: http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku)
-, with only minor formating changes>
+, with only minor formatting changes>
 
 ## Future warning (for DIY users)
 
