@@ -20,3 +20,5 @@ pages:
     - 'Pebble': 'nightscout/pebble.md'
     - 'Remote Notifications': 'nightscout/pushover.md'
     - 'Reports': 'nightscout/reports.md'
+- Update:
+    - 'Updating your site': 'update/update.md'
