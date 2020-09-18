@@ -164,7 +164,7 @@ The first step is to give your "app" a name, this will be the prefix of your soo
 <img src="../img/heroku4.png" width="650">
 </p> 
 
-Now scroll down a bit and we are going to fill out the information lines in the `Config Vars` section (circled in red above) of that page. There are many variables listed in that section, but we will only *<b>need*</b> to edit a few of them right now to get started. You can always go back later and edit the default values of your BG alarms and other defaults (or do it now, if you'd like). The variables listed below though do need you to make some edits/entries or review that the default settings work for your situation.
+Now scroll down a bit and we are going to fill out the information lines in the `Config Vars` section (circled in red above) of that page. There are many variables listed in that section, but we will only *need* to edit a few of them right now to get started. You can always go back later and edit the default values of your BG alarms and other defaults (or do it now, if you'd like). The variables listed below though do need you to make some edits/entries or review that the default settings work for your situation.
 
 <table>
 <thead>
@@ -184,11 +184,11 @@ Now scroll down a bit and we are going to fill out the information lines in the 
 </tr>
 <tr>
 <th>DISPLAY_UNITS</th>
-<td>default is mg/dl, you'll need to change to mmol if that's what you use</td>
+    <td>The default is *mg/dL*, you'll need to change this to *mmol* if you use mmol/L.</td>
 </tr>
 <tr>
 <th>ENABLE</th>
-<td>bridge pump iob cob basal careportal sage cage bage override</br></br>(Enter all of the words above without commas.  Just add a single space between each word. Make sure autocorrect does not add space between careportal. Typically, the words basal and careportal will already be there waiting for you.)</td>
+<td>bridge pump iob cob basal careportal sage cage bage override</br></br>(Enter all of the words above without commas. Just add a single space between each word. Make sure autocorrect does not add space between careportal. Typically, the words basal and careportal will already be there waiting for you.)</td>
 </tr>
 <tr>
 <th>BRIDGE_USER_NAME</th>
@@ -207,7 +207,7 @@ Now scroll down a bit and we are going to fill out the information lines in the 
 </br>
 
 !!!info "MOST COMMON ERRORS"
-    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to <a href="https://clarity.dexcom.com" target="_blank">Dexcom's Clarity</a> page and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.
+    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity website and try logging into your Dexcom account. Please note that US accounts can only log in at the <a href="https://clarity.dexcom.com" target="_blank">Clarity US</a> page and that all other accounts must log in at the <a href="https://clarity.dexcom.eu/" target="_blank">Clarity EU</a> page. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.
 
 !!!info ""
     If you are using Dexcom Share outside the United States, you will need to make sure you have EU in the BRIDGE_SERVER.
