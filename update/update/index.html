@@ -137,31 +137,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#short-background-on-git" class="nav-link">Short background on git</a>
+            <li class="nav-item" data-level="2"><a href="#step1-update-your-repository-in-github" class="nav-link">Step1: Update your repository in GitHub</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#short-background-on-heroku" class="nav-link">Short background on Heroku</a>
+            <li class="nav-item" data-level="2"><a href="#step2-deploy-in-heroku" class="nav-link">Step2: Deploy in Heroku</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#directions" class="nav-link">Directions</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#deploying-your-branch" class="nav-link">Deploying your branch</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#troubleshooting" class="nav-link">Troubleshooting</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#uploader-app" class="nav-link">Uploader App</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#release-details" class="nav-link">Release Details</a>
+            <li class="nav-item" data-level="2"><a href="#alternative-method" class="nav-link">Alternative method</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -173,8 +157,11 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="updating-your-site-to-the-latest-version">Updating Your Site to the Latest Version<a class="headerlink" href="#updating-your-site-to-the-latest-version" title="Permanent link">⌁</a></h1>
-<p>Updating your website to the newest version (currently 14.0.2, nicknamed Liquorice) is easy with the update tool linked below.</p>
+<p>Updating your website to the latest version (see here which is the current released version https://github.com/nightscout/cgm-remote-monitor/releases) is easy with the update tool linked below.</p>
+<p></br></p>
+<p></br></p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">⌁</a></h2>
+<p></br></p>
 <p>This version of Nightscout will probably not run on anything older than these versions/platforms:</p>
 <ul>
 <li>Android 4</li>
@@ -186,112 +173,255 @@
 <li>Opera 54</li>
 <li>Internet Explorer: none</li>
 </ul>
-<p>If you want to run a Nightscout site on a device that doesn’t meet these minimum requirements, see this guide on how to deploy an older version of Nightscout.</p>
+<p></br></p>
+<p></br></p>
 <h2 id="azure-users">Azure Users<a class="headerlink" href="#azure-users" title="Permanent link">⌁</a></h2>
-<p>As of 0.12, Nightscout no longer readily supports the free Azure platform. If you really want to keep using Azure, don’t update to this version.</p>
-<h2 id="short-background-on-git">Short background on git<a class="headerlink" href="#short-background-on-git" title="Permanent link">⌁</a></h2>
-<p>Nigthscout uses Github for storing it's source code. Github is a cloud service, which provides the git versioning system for free to it's users. The essential service provided by git is allowing multiple people to have their own copies of a set of files and services to copy changes over between the different copies.</p>
-<p>Back when you originally installeed Nightscout, you've made a <em>fork</em> of Nightscout, which is what git calls you having made your own copy of the set of files that comprised the released version of the Nightscout sources at the time. You've probably also heard the term <em>branch</em> - a branch is also just a copy of the sources made a some point in time. A <em>fork</em> is a set of <em>branches</em>, that is, one or more sets of copies of the Nightscout sources.</p>
-<p>Each git branch is named. We develop the software in a branch called <em>dev</em> and when we make a release, we copy the ready to publish files from <em>dev</em> to a branch called <em>master</em>. What you're about to do is, tell git to take the changes we've published to our <em>master</em> copy and update the copy of <em>master</em> you made earlier to have the same changes.</p>
-<p>There's one more term you should know: the <em>pull request</em>. A pull request is a request to copy changes from one set of files in git to another set of files. In this case, from the official master copy to your master copy. The instructions below show you how to create this request and then approve it, thus telling git to copy the changes between the files.</p>
-<h2 id="short-background-on-heroku">Short background on Heroku<a class="headerlink" href="#short-background-on-heroku" title="Permanent link">⌁</a></h2>
-<p>Heroku is a service that runs applications in the cloud. And that's just a fancy way of saying they have computers somewhere connected to the Internet and you can run apps on their computers. To get an app running on their computer, it needs to be <em>deployed</em> on their computer. This is another IT term and really just means Heroku is making yet another copy of the files that make up for the Nightscout server app to install and configure it to run it. The instructions below will show you how to tell Heroku to update their copy of Nightscout to match the copy of Nightscout you've made, so they'll run the updated version of the app.</p>
-<h2 id="directions">Directions<a class="headerlink" href="#directions" title="Permanent link">⌁</a></h2>
-<p>Ok let's do this!</p>
-<ol>
-<li>
-<p><a href="https://github.com/login">Log in at GitHub</a></p>
-<p>WAIT: Make sure you’re actually signed into your GitHub account — look in the upper right corner of the page to verify. You cannot do this step later. Do it now. 🙂</p>
-</li>
-<li>
-<p><a href="http://nightscout.github.io/pages/update-fork/" target="_new">Click here to open the update tool in a new tab</a>.</p>
-</li>
-<li>
-<p>Enter your GitHub username and click the blue button that says Check for updates. (Note: your username is not an email address.)</p>
-<p><img src="../img/Untitled.jpg"></p>
-</li>
-<li>
-<p>If an update is available, the tool will tell you that, provide directions, and give you a button that will take you to GitHub to finish the process.</p>
-<p><img src="../img/updatePRnew.png"></p>
-</li>
-<li>
-<p>Click the <strong>Continue updating</strong> at GitHub button. Review the directions on the screen that pops up, and continue.</p>
-</li>
-<li>
-<p>Click the green <strong>Create pull request</strong> button.</p>
-<p><img src="../img/Screen-Shot-2019-07-20-at-12.57.23-AM-1.png"></p>
-</li>
-<li>
-<p>Give your pull request a name (like “Update” or Liquorice Update” — doesn’t really matter what this is).</p>
-<p><img src="../img/Screen-Shot-2019-07-20-at-12.58.04-AM.png"></p>
-</li>
-<li>
-<p>Click the green <strong>Create pull request</strong> button.</p>
-<p><img src="../img/Screen-Shot-2019-07-20-at-12.57.23-AM.png"></p>
-</li>
-<li>
-<p>Scroll down until you see the green <strong>Merge pull request</strong> button, and click it.</p>
-<p><img src="../img/Screen-Shot-2019-07-20-at-12.58.39-AM.png"></p>
-</li>
-<li>
-<p>Click the green <strong>Confirm merge</strong> button.</p>
-<p><img src="../img/Screen-Shot-2019-07-20-at-12.58.55-AM.png"></p>
-</li>
-<li>
-<p>Scroll to the top of the page, and you should see a purple icon indicating the merge is complete.</p>
-<p><img src="../img/update-merged.png"></p>
-<p>(Note: if you do not see one of the buttons described above, continue to follow the green buttons until you reach the purple “merged” icon. If anything else unexpected happens, post in the <a href="https://www.facebook.com/groups/cgminthecloud/">Facebook group</a> with details about what you tried and how far you got.)</p>
-</li>
-<li>
-<p>If you’re on Azure, or you’re on Heroku and have Automatic Deploys enabled, you’re done! If you’re on Heroku and don’t have Automatic Deploys on yet, or aren’t sure, run through the following Deployment steps.</p>
-</li>
-</ol>
-<h2 id="deploying-your-branch">Deploying your branch<a class="headerlink" href="#deploying-your-branch" title="Permanent link">⌁</a></h2>
-<ol>
-<li>
-<p>Head to your <a href="https://dashboard.heroku.com/">Heroku dashboard</a> and log in if you need to.</p>
-</li>
-<li>
-<p>Go to the <strong>Deploy</strong> section.</p>
-</li>
-<li>
-<p>In the middle bit, click on the GitHub button if it isn’t already showing as connected. It will ask you to authorize the connection if you’re doing it for the first time.</p>
-</li>
-</ol>
-<p><img src="../img/Screen-Shot-2019-07-20-at-1.30.45-AM.png"></p>
-<ol>
-<li>
-<p>Type “cgm” into the repo-name search box, and click <strong>Search</strong>.</p>
-</li>
-<li>
-<p>Click the Connect button once it finds your cgm-remote-monitor repository. You should now be connected:</p>
-</li>
-</ol>
-<p><img src="../img/Screen-Shot-2019-07-20-at-1.31.17-AM.png"></p>
-<ol>
-<li>To let your site finish updating itself as soon as you update your fork in the future with another Pull Request, enable Automatic Deploys here (from the master branch):</li>
-</ol>
-<p><img src="../img/Screen-Shot-2019-07-20-at-1.31.28-AM.png"></p>
-<ol>
-<li>If your Automatic Deploys were already on, then your site already has the new code from your fork update, and you’re done. If you’ve just turned the Automatic thing on, you’ll need to manually do the first deploy — make sure the branch is on master, and click the Deploy Branch button:</li>
-</ol>
-<p><img src="../img/Screen-Shot-2019-07-20-at-1.31.39-AM.png"></p>
-<ol>
-<li>You’ll see a bunch of build progress notes scroll by — when it says it’s done, you’re done! (And now you don’t have to do this Heroku step next time; just updating your fork with a merged Pull Request will trigger this part automatically.)</li>
-</ol>
-<p>To verify that your site has updated, load your website in a browser. If your website is already open, reload it. Click the menu icon in the upper right and look toward the bottom of the settings panel to see the version number.</p>
-<p>Please note, it may take a few minutes before your site updates after updating the fork. Be patient!</p>
-<p>Some new features, updates, or bug fixes may require that you clear your browser cache before you will see the changes take effect.</p>
-<p>If you did not have any errors using the “Update My Version” link above, and your website is not showing that it’s at the current version, see these troubleshooting steps.</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<p>As of 0.12, Nightscout no longer readily supports the free Azure platform. If you really want to keep using Azure, don’t update to this version. Read this <a href="https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ">https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ</a></p>
+<p></br></p>
+<p></br></p>
+<h2 id="step1-update-your-repository-in-github">Step1: Update your repository in GitHub<a class="headerlink" href="#step1-update-your-repository-in-github" title="Permanent link">⌁</a></h2>
+<p></br></p>
 <ul>
-<li><a href="http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie/update-my-fork-troubleshooting-part-1">Troubleshooting updates part 1</a></li>
-<li><a href="http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie/update-my-fork-troubleshooting-part-2">Troubleshooting updates part 2</a></li>
+<li>Click here to log in at GitHub: <a href="https://github.com/login">https://github.com/login</a>.</li>
+<li>Enter your username or email and your password. Click <code>Sign in</code></li>
 </ul>
-<h2 id="uploader-app">Uploader App<a class="headerlink" href="#uploader-app" title="Permanent link">⌁</a></h2>
-<p>You're probably using an app of some description to upload data to Nightscout. This is a good time to check if there's an update available to the app as well!</p>
-<h2 id="release-details">Release Details<a class="headerlink" href="#release-details" title="Permanent link">⌁</a></h2>
-<p>To learn more about changes in each Nightscout release, you can find information in the <a href="https://github.com/nightscout/cgm-remote-monitor/releases">Nightscout releases page</a>.</p></div>
+<p><img src="../img/UpdateNS00.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Select your own <code>cgm-remote-monitor</code> project (not <code>nightscout/cgm-remote-monitor</code>)</li>
+</ul>
+<p><img src="../img/UpdateNS01.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Your repository will open, note your GitHub username (hidden below in yellow).</li>
+<li>Scroll down until you see the Nightscout logo. </li>
+</ul>
+<p><img src="../img/UpdateNS02.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Click <code>Update your site</code> </li>
+</ul>
+<p><img src="../img/UpdateNS03.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Enter your GitHub username and click <code>Check for updates</code> </li>
+</ul>
+<p><img src="../img/UpdateNS04.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If an update is available click <code>Continue updating at GitHub</code> </li>
+<li>Make sure you see <code>GitHub user located!</code> else check your username.</li>
+<li>If you know an update is available but you see <code>Repo is Up to date</code>, try the alternative method.</li>
+</ul>
+<p><img src="../img/UpdateNS05.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>A pop-up will open, just click OK (you can read the contents if you want, but this is explained below, so just click OK)</li>
+</ul>
+<p><img src="../img/UpdateNS06.png" style="zoom:75%;" ></p>
+<p></br></p>
+<ul>
+<li>Now comes the tricky part. Make sure the left hand side repository is yours (name hidden in yellow) and the right hand side is  <code>nightscout/cgm-remote-monitor</code>, and click <code>Create pull request</code>.</li>
+</ul>
+<p><img src="../img/UpdateNS07.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>A pull request opens. Last chance to check the left hand side repository is yours (name hidden in yellow) and right hand side is  <code>nightscout/cgm-remote-monitor</code>, write a comment in the field (example Update or whatever you like) </li>
+</ul>
+<p><img src="../img/UpdateNS08.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Scroll down and click <code>Create pull request</code> </li>
+</ul>
+<p><img src="../img/UpdateNS09.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Scroll all the way down (it might be far away) and click <code>Merge pull request</code> </li>
+</ul>
+<p><img src="../img/UpdateNS10.png" style="zoom:80%;" ></p>
+<p><img src="../img/UpdateNS11.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Click <code>Confirm merge</code> </li>
+</ul>
+<p><img src="../img/UpdateNS12.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>A new line will appear in the pull requests log showing merge succeeded </li>
+</ul>
+<p><img src="../img/UpdateNS13.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Your GitHub repository will show you're one commit ahead of the released version </li>
+</ul>
+<p><img src="../img/UpdateNS14.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>You have successfully updated your GitHub repository, now let's deploy it in Heroku.</li>
+</ul>
+<p></br></p>
+<p></br></p>
+<h2 id="step2-deploy-in-heroku">Step2: Deploy in Heroku<a class="headerlink" href="#step2-deploy-in-heroku" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<ul>
+<li>Log in Heroku https://id.heroku.com/login </li>
+</ul>
+<p><img src="../img/UpdateNS15.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Select your app (hidden in yellow)</li>
+<li>Note: see this mLab message? Time to migrate to Atlas, it's mandatory! </li>
+</ul>
+<p><img src="../img/UpdateNS16.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Click on <code>Deploy</code></li>
+</ul>
+<p><img src="../img/UpdateNS17.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Verify Heroku is connected to GitHub, if not, click <code>Connect to GitHub</code></li>
+</ul>
+<p><img src="../img/UpdateNS18.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If Heroku is not connected to GitHub, scroll down and click <code>Connect to GitHub</code>, if a popup window opens and requires authorization, click <code>Authorize Heroku</code></li>
+</ul>
+<p><img src="../img/UpdateNS19.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Verify your app <code>cgm-remote-monitor</code> is connected to GitHub</li>
+</ul>
+<p><img src="../img/UpdateNS20.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If it isn't, In <code>Connect to GitHub</code>, type <code>cgm-remote-monitor</code> and click  <code>Search</code> then click <code>Connect</code></li>
+</ul>
+<p><img src="../img/UpdateNS21.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If you have trouble connecting your app, click <code>Disconnect</code> and reconnect it as shown above</li>
+</ul>
+<p><img src="../img/UpdateNS22.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Scroll down to the bottom of the page, select the <code>master</code> branch and click <code>Deploy Branch</code> </li>
+</ul>
+<p><img src="../img/UpdateNS23.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Build will start and information will scroll in the log window. Do not leave the page, do not interfere and wait for completion. It might take more than 10 minutes. Interrupting the process will lead to a broken site and you'll need to restart deployment.</li>
+</ul>
+<p><img src="../img/UpdateNS24.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Wait until the deploy process completes and click <code>View</code></li>
+</ul>
+<p><img src="../img/UpdateNS25.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Your site will open and should be at the latest version. You're done!</li>
+<li>Else, if you ran into trouble, try the alternative method below.</li>
+</ul>
+<p></br></p>
+<p></br></p>
+<h2 id="alternative-method">Alternative method<a class="headerlink" href="#alternative-method" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<ul>
+<li>Click here to log in at GitHub: <a href="https://github.com/login">https://github.com/login</a>.</li>
+<li>Enter your username or email and your password. Click <code>Sign in</code></li>
+</ul>
+<p><img src="../img/UpdateNS00.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Select your own <code>cgm-remote-monitor</code> project (not <code>nightscout/cgm-remote-monitor</code>)</li>
+</ul>
+<p><img src="../img/UpdateNS01.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>Click <code>Settings</code></p>
+<p><img src="../img/UpdateNS26.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>Scroll down to <code>Danger zone</code> and click <code>Delete this repository</code></p>
+<p><img src="../img/UpdateNS27.png" style="zoom:80%;" ></p>
+<p></br></p>
+<p>Copy and paste your full repository name to confirm then click <code>I understand...</code></p>
+<p><img src="../img/UpdateNS28.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>
+<p>Click this link to go to the official repository: <a href="https://github.com/nightscout/cgm-remote-monitor">https://github.com/nightscout/cgm-remote-monitor</a></p>
+</li>
+<li>
+<p>Click on <code>Fork</code></p>
+</li>
+</ul>
+<p><img src="../img/UpdateNS29.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Wait for completion then leave GitHub open.</li>
+</ul>
+<p><img src="../img/UpdateNS30.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Log in Heroku https://id.heroku.com/login </li>
+</ul>
+<p><img src="../img/UpdateNS15.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Select your app (hidden in yellow)</li>
+<li>Note: see this mLab message? Time to migrate to Atlas, it's mandatory! </li>
+</ul>
+<p><img src="../img/UpdateNS16.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Click on <code>Deploy</code></li>
+</ul>
+<p><img src="../img/UpdateNS17.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Verify Heroku is connected to GitHub, if not, click <code>Connect to GitHub</code></li>
+</ul>
+<p><img src="../img/UpdateNS18.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If Heroku is not connected to GitHub, scroll down and click <code>Connect to GitHub</code>, if a popup window opens and requires authorization, click <code>Authorize Heroku</code></li>
+</ul>
+<p><img src="../img/UpdateNS19.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Type <code>cgm-remote-monitor</code> and click  <code>Search</code> then click <code>Connect</code></li>
+</ul>
+<p><img src="../img/UpdateNS21.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>If you have trouble connecting your app, click <code>Disconnect</code> and reconnect it as shown above</li>
+</ul>
+<p><img src="../img/UpdateNS22.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Scroll down to the bottom of the page, select the <code>master</code> branch and click <code>Deploy Branch</code> </li>
+</ul>
+<p><img src="../img/UpdateNS23.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Build will start and information will scroll in the log window. Do not leave the page, do not interfere and wait for completion. It might take more than 10 minutes. Interrupting the process will lead to a broken site and you'll need to restart deployment.</li>
+</ul>
+<p><img src="../img/UpdateNS24.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Wait until the deploy process completes and click <code>View</code></li>
+</ul>
+<p><img src="../img/UpdateNS25.png" style="zoom:80%;" ></p>
+<p></br></p>
+<ul>
+<li>Your site will open and should be at the latest version. You're done!</li>
+</ul>
+<p></br></p>
+<p></br></p>
+<p></br></p>
+<p></br></p>
+<p></br></p></div>
             </div>
         </div>
 
