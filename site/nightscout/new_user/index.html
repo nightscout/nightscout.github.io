@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Brand New NS - Nightscout</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <link href="../../css/admonitions.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Nightscout</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nightscout <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Brand New NS</a>
+</li>
+                                    
+<li>
+    <a href="../update_user/" class="dropdown-item">Retrofit Existing NS</a>
+</li>
+                                    
+<li>
+    <a href="../troublehoot/" class="dropdown-item">Setup Troubleshooting</a>
+</li>
+                                    
+<li>
+    <a href="../mlab_cleanup/" class="dropdown-item">NS Stopped Working</a>
+</li>
+                                    
+<li>
+    <a href="../remote-overrides/" class="dropdown-item">Remote Overrides</a>
+</li>
+                                    
+<li>
+    <a href="../ifttt/" class="dropdown-item">IFTTT</a>
+</li>
+                                    
+<li>
+    <a href="../pebble/" class="dropdown-item">Pebble</a>
+</li>
+                                    
+<li>
+    <a href="../pushover/" class="dropdown-item">Remote Notifications</a>
+</li>
+                                    
+<li>
+    <a href="../reports/" class="dropdown-item">Reports</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Update <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../update/update/" class="dropdown-item">Updating your site</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../overview/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../update_user/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#new-nightscout-users" class="nav-link">New Nightscout Users</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#step-1-create-a-github-account" class="nav-link">Step 1: Create a GitHub account</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#step-2-create-a-heroku-account" class="nav-link">Step 2: Create a Heroku account</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#step-3-create-an-atlas-account" class="nav-link">Step 3: Create an Atlas account</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#step-4-fork-and-deploy-cgm-remote-monitor" class="nav-link">Step 4: Fork and deploy cgm-remote-monitor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#step-7-additional-variables" class="nav-link">Step 7: Additional Variables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#step-6-uploader-setup" class="nav-link">Step 6: Uploader setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="new-nightscout-users">New Nightscout Users<a class="headerlink" href="#new-nightscout-users" title="Permanent link">⌁</a></h1>
+<p></br></p>
+<p>Nightscout is DIY, if you don’t feel confident you’ll have necessary skills, give it a try, you’ll find open heart people ready to help you building it in many Facebook groups. For free. Paying it forward.</p>
+<p>Here is a step-by-step guide for completing your own Nightscout site DIY style.</p>
+<p></br></p>
+<p>Create your Heroku, GitHub and Atlas accounts from a computer.</p>
+<p>Do not change device/computer/browser during the creation process!</p>
+<p>If you have issues with your current browser try another one.</br></br></p>
+<h2 id="step-1-create-a-github-account">Step 1: Create a GitHub account<a class="headerlink" href="#step-1-create-a-github-account" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<ul>
+<li>Click this link to create a GitHub account: <a href="https://github.com/">https://github.com/</a></li>
+<li>Enter a username (anything you want and that is accepted, not very important), email, and password.</li>
+<li>Then click <code>Sign up for GitHub</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS00.png" /></p>
+<p></br></p>
+<ul>
+<li>Play and solve the puzzle then click <code>Join a free plan</code>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS01.png" /></p>
+<p></br></p>
+<ul>
+<li>Select whatever choices (not important) then click <code>Complete setup</code>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS02.png" /></p>
+<p></br></p>
+<ul>
+<li>GitHub will send you a verification email, open your mailbox and check for it (look into spam also).</li>
+</ul>
+<p><img alt="" src="..\img\NewNS03.png" /></p>
+<p></br></p>
+<ul>
+<li>On the received email, click <code>Verify email address</code>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS04.png" /></p>
+<p></br></p>
+<ul>
+<li>A new page will open in your browser, click <code>Skip this for now</code>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS05.png" /></p>
+<p></br></p>
+<ul>
+<li>Leave the page open as it is.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS06.png" /></p>
+<p></br></br></p>
+<h2 id="step-2-create-a-heroku-account">Step 2: Create a Heroku account<a class="headerlink" href="#step-2-create-a-heroku-account" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<ul>
+<li>
+<p>Click this link to create an Heroku account: <a href="https://signup.heroku.com/login">https://signup.heroku.com/login</a></p>
+</li>
+<li>
+<p>Enter mandatory data (*) and click <code>CREATE FREE ACCOUNT</code></p>
+</li>
+</ul>
+<p><img alt="" src="..\img\NewNS07.png" /></p>
+<p></br></p>
+<ul>
+<li>Heroku will send a confirmation email, open your mailbox and look for it (also check spam folder).</li>
+</ul>
+<p><img alt="" src="..\img\NewNS09.png" /></p>
+<p></br></p>
+<ul>
+<li>Click on the activation link</li>
+</ul>
+<p><img alt="" src="..\img\NewNS10.png" /></p>
+<p></br></p>
+<ul>
+<li>Create a password an write it down. Click <code>SET PASSWORD AND LOG IN</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS11.png" /></p>
+<p></br></p>
+<ul>
+<li>Click <code>CLICK HERE TO PROCEED</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS12.png" /></p>
+<p></br></p>
+<ul>
+<li>Your Heroku page will open, click on your profile picture top right and select <code>Account Settings</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS13.png" /></p>
+<p></br></p>
+<ul>
+<li>Click on <code>Billing</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS14.png" /></p>
+<p></br></p>
+<ul>
+<li>Click <code>Add credit card</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS15.png" /></p>
+<p></br></p>
+<ul>
+<li>Enter a valid credit card information and click <code>Save Details</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless you voluntarily select billable features, your credit card information is only used for verifications and you will not be charged anything. Worst case you’ll be charged $0.00</br></p>
+</div>
+<p><img alt="" src="..\img\NewNS16.png" /></p>
+<p></br></p>
+<ul>
+<li>You should now have 2 pages open: Heroku and GitHub. Leave them open.</br></br></li>
+</ul>
+<h2 id="step-3-create-an-atlas-account">Step 3: Create an Atlas account<a class="headerlink" href="#step-3-create-an-atlas-account" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<ul>
+<li>Open another tab at: <a href="https://www.mongodb.com/cloud/atlas">https://www.mongodb.com/cloud/atlas</a> and click <code>Start Free</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS17.png" /></p>
+<p></br></p>
+<ul>
+<li>Enter information then click <code>Get Started Free</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS18.png" /></p>
+<p></br></p>
+<ul>
+<li>Select <code>Create a cluster in Shared Clusters (FREE)</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS19.png" /></p>
+<p></br></p>
+<ul>
+<li>Leave all default values and click <code>Create Cluster</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS20.png" /></p>
+<p></br></p>
+<p>Atlas will create your default cluster, wait until completion… (can take more than 3 minutes)</p>
+<p><img alt="" src="..\img\NewNS21.png" /></p>
+<p></br></p>
+<ul>
+<li>Click on <code>CONNECT</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS22.png" /></p>
+<p></br></p>
+<ul>
+<li>Click on <code>Allow Access from Anywhere</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS23.png" /></p>
+<p></br></p>
+<ul>
+<li>Click on <code>Add IP Address</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS24.png" /></p>
+<p></br></p>
+<ul>
+<li>Add a username (for example nightscout) and a password. Write down this information, you’ll need it later.</li>
+<li>Then click <code>Create Database User</code>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS25.png" /></p>
+<p></br></p>
+<ul>
+<li>Click on <code>Choose a connection method</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS26.png" /></p>
+<p></br></p>
+<ul>
+<li>Select <code>Connect your application</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS27.png" /></p>
+<p></br></p>
+<ul>
+<li>Copy the connection string: click <code>Copy</code> and paste it somewhere to edit it (like Notepad).</li>
+</ul>
+<p><img alt="" src="..\img\NewNS28.png" /></p>
+<p></br></p>
+<ul>
+<li>Modify the connection string:</li>
+</ul>
+<p>It should be similar to this (<code>xxxxx</code> will be different):</p>
+<p><code>mongodb+srv://nightscout:&lt;password&gt;@cluster0.xxxxx.mongodb.net/&lt;dbname&gt;?retryWrites=true&amp;w=majority</code></p>
+<ul>
+<li>Replace <password> with your password as noted previously and <dbname> by any text you want, say mycgmic for example. The result will be like this:</li>
+</ul>
+<p><code>mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&amp;w=majority</code></p>
+<p>Note: there are no &lt; and &gt; characters in the final string, neither for password and database name.</p>
+<p>Keep this string safely aside, it is called your <code>MONGODB_URI</code></p>
+<p></br></br></p>
+<h2 id="step-4-fork-and-deploy-cgm-remote-monitor">Step 4: Fork and deploy cgm-remote-monitor<a class="headerlink" href="#step-4-fork-and-deploy-cgm-remote-monitor" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<ul>
+<li>
+<p>You should now have three pages opened in your browser: Heroku, Atlas and Github, make sur each one is logged in
+   (i.e. not asking you to login) before you continue.</p>
+</li>
+<li>
+<p>Click this link <a href="https://github.com/nightscout/cgm-remote-monitor">https://github.com/nightscout/cgm-remote-monitor</a>, a new GitHub page will open. Click on <code>Fork</code></p>
+</li>
+</ul>
+<p><img alt="" src="..\img\NewNS29.png" /></p>
+<p></br></p>
+<ul>
+<li>Wait a moment</li>
+</ul>
+<p><img alt="" src="..\img\NewNS30.png" /></p>
+<p></br></p>
+<ul>
+<li>Scroll down and click <code>Deploy to Heroku</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS31.png" /></p>
+<p><img alt="" src="..\img\NewNS32.png" /></p>
+<p></br></p>
+<ul>
+<li>
+<p>Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Check the name is available.</p>
+</li>
+<li>
+<p>Don’t change the region.</p>
+</li>
+</ul>
+<p><img alt="" src="..\img\NewNS33.png" /></p>
+<p></br></p>
+<p>Scroll down and setup the following variables:</p>
+<p></br></p>
+<ul>
+<li><code>API_SECRET</code> will be your Nightscout site password, it needs to be at least 12 characters long and should <strong>NOT use spaces and @ or ! symbols</strong>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS34.png" /></p>
+<p></br></p>
+<ul>
+<li>If you want to link your Dexcom Share account as a data source, compile the following lines:</li>
+</ul>
+<p><img alt="" src="..\img\NewNS35.png" /></p>
+<p></br></p>
+<div class="admonition info">
+<p class="admonition-title">MOST COMMON ERRORS</p>
+</div>
+<p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The <code>BRIDGE_USER_NAME</code> is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to <a href="https://clarity.dexcom.com" target="_blank"><a href="">Dexcom's</a> Clarity</a> page and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.</p>
+<p></br></p>
+<ul>
+<li>If you want to link your CareLink account as a data source, compile the following lines:</li>
+</ul>
+<p><img alt="" src="..\img\NewNS36.png" /></p>
+<p></br></p>
+<ul>
+<li>Select the units you’re using in <code>DISPLAY_UNIT</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS37.png" /></p>
+<p></br></p>
+<ul>
+<li>In <code>ENABLE</code> copy and paste the following words (PS: better too many than not enough):</li>
+</ul>
+<p><code>pump</code> <code>iob</code> <code>cob</code> <code>basal</code> <code>careportal</code> <code>sage</code> <code>cage</code> <code>bage</code> <code>boluscalc</code> <code>dbsize</code> <code>mmconnect</code> <code>bridge</code> </p>
+<p><img alt="" src="..\img\NewNS38.png" /></p>
+<p></br></p>
+<ul>
+<li>Now you need that connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the <code>MONGODB_URI</code> variable field.</li>
+</ul>
+<p><code>mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&amp;w=majority</code></p>
+<p><img alt="" src="..\img\NewNS39.png" /></p>
+<p></br></p>
+<ul>
+<li>Browse down to the end of the list and click <code>Deploy app</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS40.png" /></p>
+<p></br></p>
+<ul>
+<li><strong>WAIT</strong> until completion (will take some time). Do not interfere with the process until it's complete.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS41.png" /></p>
+<p></br></p>
+<ul>
+<li>Then click <code>View</code></li>
+</ul>
+<p><img alt="" src="..\img\NewNS42.png" /></p>
+<p></br></p>
+<ul>
+<li>Your Nightscout site should open, click on the hamburger menu top right and select <code>Profile Editor</code>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS43.png" /></p>
+<p></br></p>
+<ul>
+<li>Setup your <code>Time zone</code> and eventually all other fields. Do not leave empty fields. If you don't know which value you should use, just leave default. You can change them later.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS44.png" /></p>
+<p></br></p>
+<ul>
+<li>Browse down to <code>Authentication status</code> and click <code>Authenticate</code>. Enter your API secret. Click <code>Update</code>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS45.png" /></p>
+<p></br></p>
+<ul>
+<li>Click <code>Save</code>.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS46.png" /></p>
+<p></br></p>
+<ul>
+<li>If the following pop-up shows up click <code>OK</code>, and check status (upper right of the window).</li>
+</ul>
+<p><img alt="" src="..\img\NewNS47.png" /></p>
+<p></br></p>
+<ul>
+<li>Dexcom Share and CareLink users should see data flowing in after some minutes, other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.</li>
+</ul>
+<p><img alt="" src="..\img\NewNS48.png" /></p>
+<p></br></br></p>
+<h2 id="step-7-additional-variables">Step 7: Additional Variables<a class="headerlink" href="#step-7-additional-variables" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<p>You will find more information on the variables here: https://github.com/nightscout/cgm-remote-monitor#environment</p>
+<p></br>
+Finally, you might want to modify the <code>PAPERTRAIL_API_TOKEN</code> line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add <code>DISABLED</code> at the end, so that you can recover the function should you need it.</p>
+<p><img alt="" src="..\img\NewNS49.png" /></p>
+<p></br></br></p>
+<h2 id="step-6-uploader-setup">Step 6: Uploader setup<a class="headerlink" href="#step-6-uploader-setup" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<p>Most uploaders require your Nightscout URL and the API secret.</p>
+<p>For xDrip+ you need to put the URL in this format:</p>
+<p><code>https://APISecret@SiteURL.herokuapp.com/api/v1</code></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

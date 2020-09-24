@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Overview - Nightscout</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <link href="../../css/admonitions.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Nightscout</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nightscout <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../new_user/" class="dropdown-item">Brand New NS</a>
+</li>
+                                    
+<li>
+    <a href="../update_user/" class="dropdown-item">Retrofit Existing NS</a>
+</li>
+                                    
+<li>
+    <a href="../troublehoot/" class="dropdown-item">Setup Troubleshooting</a>
+</li>
+                                    
+<li>
+    <a href="../mlab_cleanup/" class="dropdown-item">NS Stopped Working</a>
+</li>
+                                    
+<li>
+    <a href="../remote-overrides/" class="dropdown-item">Remote Overrides</a>
+</li>
+                                    
+<li>
+    <a href="../ifttt/" class="dropdown-item">IFTTT</a>
+</li>
+                                    
+<li>
+    <a href="../pebble/" class="dropdown-item">Pebble</a>
+</li>
+                                    
+<li>
+    <a href="../pushover/" class="dropdown-item">Remote Notifications</a>
+</li>
+                                    
+<li>
+    <a href="../reports/" class="dropdown-item">Reports</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Update <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../update/update/" class="dropdown-item">Updating your site</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../new_user/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#blood-glucose" class="nav-link">Blood Glucose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sage-cage-bage-pills" class="nav-link">SAGE, CAGE, BAGE pills</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#carbs" class="nav-link">Carbs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#boluses" class="nav-link">Boluses</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#temp-basals" class="nav-link">Temp Basals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#predicted-bg" class="nav-link">Predicted BG</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#loop-pill" class="nav-link">Loop pill</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">⌁</a></h1>
+<p>Nightscout (NS) is an excellent tool for remotely viewing Loop's actions.  It allows for easy remote monitoring of Loop activities, troubleshooting of Loop errors, history of CGM, carbs, boluses, &amp; temp basals, reports analyzing data trends and patterns. There is a Nightscout app in your iPhone App Store, or you can use a web browser to view the data.  Setting up Nightscout is free and fairly quick.  Once set up, the site can be accessed by anyone that you share your unique Nightscout URL with.  </p>
+<p>Nightscout is highly recommended for Loop users, especially those using Loop as caregivers to t1ds.  Nightscout displays are often the easiest way to troubleshoot Loop settings, if you are having problems and seeking input from others.  Below is some discussion about the general Nightscout display, as well as some Loop-specific display information.</p>
+<p align="center">
+<img src="../img/example.jpg" width="600">
+</p>
+
+<p></br>
+<dl></p>
+<h2 id="blood-glucose"><dt>Blood Glucose</dt><a class="headerlink" href="#blood-glucose" title="Permanent link">⌁</a></h2>
+<p><dd>Your blood glucose (BG) readings from your CGM are shown in green, yellow, or red in the main graph area of NS.  You can adjust your high and low BG targets in NS (when NS alerts will start for high/low BGs), but those will not affect your Loop performance.  Loop only uses the BG targets given in the Loop app settings.  The main screen of BGs is displaying the time duration you have selected (in the example above, 12 hours of BG history).  The bottom of the screen shows the last 48-hours of BG trends.  You can scan backward by dragging the bottom timeline to the left, if you want to review specific Loop actions or data in the last two days. </dd>
+</br></p>
+<h2 id="sage-cage-bage-pills"><dt>SAGE, CAGE, BAGE pills</dt><a class="headerlink" href="#sage-cage-bage-pills" title="Permanent link">⌁</a></h2>
+<p><dd>The SAGE, CAGE, and BAGE pills are for Sensor Age, Cannula Age, and (pump) Battery Age.  These optional pills track the time since your CGM sensor, Pump site, and Pump battery were last changed.  You can set up custom alerts to remind you when it is time to change the devices, or simply use the visuals to keep track of your particular timing for site/sensor changes. These fields will not auto-update from pump or CGM devices, instead you will have to update them using Nightscout Careportal so that the pill information is accurate.</dd>
+</br></p>
+<h2 id="carbs"><dt>Carbs</dt><a class="headerlink" href="#carbs" title="Permanent link">⌁</a></h2>
+<p><dd>Carbs are automatically uploaded to NS by the Loop app.  The amount of carbs on board (active carbs or COB) can be seen by clicking the Loop pill.  The size of a white carb dot on the graph is proportional to the amount of carbs entered...bigger meals get bigger dots. Loop does not read carbs from NS for use in looping calculations, it only uploads carbs to NS that have been entered in the Loop app.</dd>
+</br></p>
+<h2 id="boluses"><dt>Boluses</dt><a class="headerlink" href="#boluses" title="Permanent link">⌁</a></h2>
+<p><dd>Insulin boluses are also automatically uploaded to NS by the Loop app.  The bolus is shown as a filled-in blue lower-half of the dot, and the specific amount of the bolus is also shown.  There may be a slight delay between when the carbs for a meal are uploaded to NS to when the meal bolus appears.  This is because depending on the pump model and size of bolus, the bolus may take a few minutes to actually be administered then Loop has to perform a pump read to verify the reservoir volume has decreased (i.e., the bolus was given).  As shown in the example above, the meal carbs have been uploaded, but the bolus delivery is still in progress.  Insulin on board (active insulin or IOB) is also shown in the Loop pill.</dd>
+</br></p>
+<h2 id="temp-basals"><dt>Temp Basals</dt><a class="headerlink" href="#temp-basals" title="Permanent link">⌁</a></h2>
+<p><dd>Within your NS profile, you will enter in the scheduled basal for your Loop user.  This is not automatically updated when you update the Loop app or your pump; you will have to manually update your basal profile in your NS site if you change your basal profile in Loop and/or pump. (Note: The dev branch does now update NS with the basal schedule from Loop, but dev is considered generally less stable than the master branch).   If you don't update the NS basal profile, it doesn't cause any problems in Loop function...you simply won't have accurate VISUAL representation of high/low temp basals within NS. The dashed blue line represents the scheduled basal profile (as entered in your NS profile).  The solid blue lines indicate the actual basal amounts set for a given time...so as Loop sets temp basals higher or lower than your scheduled basal rate, the solid blue line will jump above or below your dashed blue line.  There is a slight delay (up to 2-5 minutes) in the rendering of basal changes on the blue lines, so if you want the accurate current basal rate, you can check the Loop pill.</dd>
+</br></p>
+<h2 id="predicted-bg"><dt>Predicted BG</dt><a class="headerlink" href="#predicted-bg" title="Permanent link">⌁</a></h2>
+<p><dd>The purple line to the right of the BG is Loop's predicted BG.  Watching the behavior of that purple line can help you understand why Loop is making decisions regarding high or low temps.  You can read more on that topic in the Algorithm section of these docs.</dd>
+</br></p>
+<h2 id="loop-pill"><dt>Loop pill</dt><a class="headerlink" href="#loop-pill" title="Permanent link">⌁</a></h2>
+<p><dd>The Loop pill is the little display box which when hovered over, or clicked, will provide additional information about recent Loop activities and status.  Information included is the last time Loop ran, the temp basal set, IOB, and COB.  Looking at the Loop pill is a quick method for assessing if you loop is currently active, as well.</br></p>
+<div class="admonition info">
+<p class="admonition-title">Loop Pill status indicator symbols</p>
+<p><font style='font-size: 1.2em;'>X</font> &nbsp;
+Error in Loop</p>
+<p><font style='font-size: 1.4em;'>ϕ</font> &nbsp;
+Recommending basal, but not enacting (open loop or pump suspended)</p>
+<p><font style='font-size: 2em;'>⌁</font> &nbsp;
+Enacted a new temp basal</p>
+<p><font style='font-size: 1.5em;'>↻</font> &nbsp;
+Loop is continuing with last temp basal, no change</p>
+<p><font style='font-size: 1.5em;'>⚠</font> &nbsp;
+Warning indicating Loop is either red or has failed to upload to Nightscout for a longer period of time.</p>
+</div>
+<p>Mouseover or Touch the Loop pill to view a tool tip containing one or more of the latest status messages. The most up-to-date NS also includes information in the Loop pill for the minimum and maximum predicted BG, eventual and predicted BG.</p>
+<p><img src="../img/loop_pill_message.png" width="750"></dd></p>
+</dl></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
