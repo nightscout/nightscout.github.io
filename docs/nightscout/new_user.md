@@ -1,345 +1,410 @@
+
+
 # New Nightscout Users
 
-There are two options for setting up Nightscout; one option requires a small fee but automates both the setup and periodic updating/cleaning database, the other option is free but requires your effort to build and update. You choose which works best for you. Isn't it nice to have options?
+</br>
 
-## T1Pal (paid service)
+Nightscout is DIY, if you don’t feel confident you’ll have necessary skills, give it a try, you’ll find open heart people ready to help you building it in many Facebook groups. For free. Paying it forward.
 
-[T1Pal is only dedicated NS hosting](https://t1pal.com/) company.  There is a hosting fee required which is used to help ensure Nightscout runs without limits and receives improvements.  Setup is simple and plugins are configured automatically during the setup guide.
+Here is a step-by-step guide for completing your own Nightscout site DIY style.
 
-* Select [Get Started](https://www.t1pal.com/getting-started/starting/home) to register an account at [T1Pal](https://www.t1pal.com/).  You will need to enter your credit card, which helps ensure Nightscout is running correctly.
+</br>
 
-<p align="center">
-<img src="../img/t1pal_configure.png" width="450">
-</p>
+Create your Heroku, GitHub and Atlas accounts from a computer.
 
-## Traditional DIY (free, do-it-yourself)
+Do not change device/computer/browser during the creation process!
 
-Two options exist for easy DIY hosting of NS; Azure or Heroku. Both hosting services are free. However, Azure has data quotas monthly and shorter-term CPU quotas, so you're very likely to hit problems with Azure and we recommend choosing Heroku. If you host at Azure and exceed those quotas, you may be facing a monthly data-use bill or being locked out of NS for about 12 hours until the quotas reset. As you start to use NS more intensively for alarms, pebble watches, etc…it is possible that you may exceed your monthly data cap on Azure. Many users have transitioned their old sites from Azure over to Heroku and have found the hosting change to be beneficial. Therefore, we recommend new users start with Heroku.
-
-If you are the person who enjoys videos...here's a YouTube video that you can use to walk-through with these directions. Just give it a click.
-
-<p align="center">
-<a href="https://youtu.be/5WREY465eII" target="_blank"><img src="../img/thumbnail.png" width="650" title="How to build a Nightscout site: Loop Users" /></a>
-</p>
-
-If you don't enjoy videos, then here is a step-by-step guide for completing your own Nightscout site DIY style.
+If you have issues with your current browser try another one.</br></br>
 
 
-## Step 1: MongoDB Atlas Account
+## Step 1: Create a GitHub account
 
-Create an account at <a href="https://www.mongodb.com/cloud/atlas/register" target="_blank">MongoDB Atlas's signup page</a>.
+</br>
 
-You are creating this account for your personal use and not for a company so you can use your name in the Company Name field. The same applies for the Work Email field. Click on the "Get Started Free" button.
+- Click this link to create a GitHub account: [https://github.com/](https://github.com/)
+- Enter a username (anything you want and that is accepted, not very important), email, and password.
+- Then click `Sign up for GitHub`
+
+![](..\img\NewNS00.png)
+
+</br>
+
+- Play and solve the puzzle then click `Join a free plan`.
+
+![](..\img\NewNS01.png)
+
+</br>
+
+- Select whatever choices (not important) then click `Complete setup`.
 
 
-<p align="center">
-<img src="../img/atlas1.png" width="450">
-</p>
 
-Now, you want to create a free shared cluster. Do that by clicking on the "Create a cluster" button under "Shared Clusters".
+![](..\img\NewNS02.png)
 
-<p align="center">
-<img src="../img/atlas2.png" width="450">
-</p>
+</br>
 
-During this step, you are now asked to configure the Cloud Provider and Region for your new cluster. Leaving the defaults is fine. Do not change these settings. The selected Cluster Tier should be "M0 Sandbox". This is is the Free tier.
+- GitHub will send you a verification email, open your mailbox and check for it (look into spam also).
 
-<p align="center">
-<img src="../img/atlas3.png" width="450">
-</p>
+![](..\img\NewNS03.png)
 
-Now, at the bottom of the page, you may name your cluster. Leaving the default is okay, but feel free to rename it to "nightscout" to make things clearer and avoid errors in the future.
+</br>
 
-<p align="center">
-<img src="../img/atlas4.png" width="450">
-</p>
+- On the received email, click `Verify email address`.
 
-Finally, you can click on the "Create Cluster" buttom at the bottom right of the page.
+![](..\img\NewNS04.png)
 
-<p align="center">
-<img src="../img/atlas5.png" width="450">
-</p>
+</br>
 
-You will be brought to a page with a lot of information about your cluster. At first, it should say "Your cluster is being created...". We cannot continue until this is done, so lets wait a little bit.
 
-<p align="center">
-<img src="../img/atlas6.png" width="450">
-</p>
 
-Once cluster creation is complete, click on the small "Connect" button. This will bring up a new form.
+- A new page will open in your browser, click `Skip this for now`.
 
-<p align="center">
-<img src="../img/atlas7.png" width="450">
-</p>
+![](..\img\NewNS05.png)
 
-The first thing you need to do is to allow access to your cluster from anywhere. Do that by clicking on "Allow Access from Anywhere". Then, leave the defaults and click on "Add IP Address".
+</br>
 
-<p align="center">
-<img src="../img/atlas8.png" width="450">
-</p>
+- Leave the page open as it is.
 
-Now, you need to create a database user for Nightscout to access your cluster. Do that by entering a username and password in the form below. Feel free to use "nightscout" as a username. Please use a secure password. You may use click on "Autogenerate Secure Password" to generate one for you. **Make sure to note down the username and password that you have entered.** They will be required when setting up your Nightscout site.
+![](..\img\NewNS06.png)
 
-<p align="center">
-<img src="../img/atlas9.png" width="450">
-</p>
+</br></br>
 
-Now, click on "Choose a connection method" at the bottom of the form. Then, click on "Connect your application". Leave the default Driver and version and copy the displayed string. You can copy the string by clicking on the "Copy" button. This is is the last piece of information that we need from MongoDB Atlas.
+## Step 2: Create a Heroku account
 
-Before doing anything else, you need to replace some information in the string and note it down.
+</br>
 
-<p align="center">
-<img src="../img/atlas10.png" width="450">
-</p>
+- Click this link to create an Heroku account: [https://signup.heroku.com/login](https://signup.heroku.com/login)
 
-For example, my string was ``mongodb+srv://nightscout:<password>@nightscout.ztlke.mongodb.net/<dbname>?retryWrites=true&w=majority``. I need to change ``<password>`` to my password and ``<dbname>`` to anything I like. The final result would be ``mongodb+srv://nightscout:password123@nightscout.ztlke.mongodb.net/nightscout?retryWrites=true&w=majority``. This string contains all the information that Nightscout needs to connect to your newly connected cluster. Note it down and it will be required during the Heroku setup. This will be known as your **MONGODB_URI**.
+- Enter mandatory data (*) and click `CREATE FREE ACCOUNT`
 
-## Step 2: Heroku Account
+![](..\img\NewNS07.png)
 
-Create an account at <a href="https://signup.heroku.com/login" target="_blank">Heroku's signup page</a>. 
+</br>
 
-Enter your name, email address, role ("Hobbyist" is fine) and choose "Node.js" as the Primary Development Language.  When you get all those entered, confirm that you are not a robot and click the blue "Create Free Account" button
+- Heroku will send a confirmation email, open your mailbox and look for it (also check spam folder).
 
-<p align="center">
-<img src="../img/heroku1.png" width="450">
-</p> 
+![](..\img\NewNS09.png)
 
-Now follow the directions and check your email to confirm your Heroku account. You'll be asked to create a password...save that password somewhere secure! You'll likely be logging into Heroku in the future, so this is a good password to save. If you're not using a password manager yet, we recommend getting one - this makes it much easier to use safe passwords that are unique across sites. Our favorite password manager is 1Password, which is both secure and very easy to use.
+</br>
 
-When you finish creating the password, you'll see a screen like below.
+- Click on the activation link
 
-<p align="center">
-<img src="../img/heroku2.png" width="450">
-</p> 
+![](..\img\NewNS10.png)
 
-We have to complete one last step...adding a credit card to your Heroku account. Don't worry, Heroku is still free...but it's only free if you leave a credit card on file. I've used Heroku for 6 years now and never been charged.
+</br>
 
-To add your credit card, click on the icon of a little ninja person in the upper right corner of the Heroku site, and then select Account Settings and then Billing...or <a href="https://dashboard.heroku.com/account/billing" target="_blank">this should take you right to the billing page for your account</a>. Then click the purple "Add credit card" button. Finish the steps to add a credit card.
+- Create a password an write it down. Click `SET PASSWORD AND LOG IN`
 
-<p align="center">
-<img src="../img/heroku3.png" width="450">
-</p> 
+![](..\img\NewNS11.png)
 
-Once you finish that, you can just leave that page/tab alone and move on down to the next step below. 
+</br>
 
-## Step 3: Create an account at GitHub
+- Click `CLICK HERE TO PROCEED`
 
-Go to <a href="https://github.com/join" target="_blank">GitHub's signup page</a>. Fill out the information to create your own unique username (write it down), email address, and password (also write this one down). Verify that you are a real person by tossing an animal's image around until it is upright...and then you'll be able to click the green "create an account" at the bottom of the page
+![](..\img\NewNS12.png)
 
-<p align="center">
-<img src="../img/github1.png" width="450">
-</p> 
+</br>
 
-Github will then ask if you want the Free Account (duh, yes). Confirm that (and unclick the Newsletter subscription if you don't want spam).
+- Your Heroku page will open, click on your profile picture top right and select `Account Settings`
 
-Finally, Github will ask you a little about your programming experience and what you are going to use GitHub for...you can answer those or choose the "skip this step" option at the bottom of the screen.
+![](..\img\NewNS13.png)
 
-Finally, you'll be sent the email to verify your new account. Go to your emails and click the link sent to you.
+</br>
+
+- Click on `Billing`
+
+![](..\img\NewNS14.png)
+
+</br>
+
+- Click `Add credit card`
+
+![](..\img\NewNS15.png)
+
+</br>
+
+- Enter a valid credit card information and click `Save Details`
+
+!!! note "Note"
+    Unless you voluntarily select billable features, your credit card information is only used for verifications and you will not be charged anything. Worst case you’ll be charged $0.00</br>
+
+![](..\img\NewNS16.png)
+
+</br>
+
+- You should now have 2 pages open: Heroku and GitHub. Leave them open.</br></br>
+
+## Step 3: Create an Atlas account
+
+</br>
+
+- Open another tab at: [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas) and click `Start Free`
+
+
+
+![](..\img\NewNS17.png)
+
+</br>
+
+- Enter information then click `Get Started Free`
+
+![](..\img\NewNS18.png)
+
+</br>
+
+- Select `Create a cluster in Shared Clusters (FREE)`
+
+![](..\img\NewNS19.png)
+
+</br>
+
+- Leave all default values and click `Create Cluster`
+
+![](..\img\NewNS20.png)
+
+</br>
+
+Atlas will create your default cluster, wait until completion… (can take more than 3 minutes)
+
+![](..\img\NewNS21.png)
+
+</br>
+
+- Click on `CONNECT`
+
+![](..\img\NewNS22.png)
+
+</br>
+
+- Click on `Allow Access from Anywhere`
+
+![](..\img\NewNS23.png)
+
+</br>
+
+- Click on `Add IP Address`
+
+![](..\img\NewNS24.png)
+
+</br>
+
+- Add a username (for example nightscout) and a password. Write down this information, you’ll need it later.
+- Then click `Create Database User`.
+
+![](..\img\NewNS25.png)
+
+</br>
+
+- Click on `Choose a connection method`
+
+![](..\img\NewNS26.png)
+
+</br>
+
+- Select `Connect your application`
+
+![](..\img\NewNS27.png)
+
+</br>
+
+- Copy the connection string: click `Copy` and paste it somewhere to edit it (like Notepad).
+
+![](..\img\NewNS28.png)
+
+</br>
+
+- Modify the connection string:
+
+ It should be similar to this (`xxxxx` will be different):
+
+
+
+`mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
+
+- Replace <password> with your password as noted previously and <dbname> by any text you want, say mycgmic for example. The result will be like this:
+
+`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
+
+ 
+
+Note: there are no < and > characters in the final string, neither for password and database name.
+
+Keep this string safely aside, it is called your `MONGODB_URI`
+
+</br></br>
+
+
 
 ## Step 4: Fork and deploy cgm-remote-monitor
 
-Now go to the <a href="https://github.com/nightscout/cgm-remote-monitor" target="_blank">Nightscout cgm-remote-monitor repository</a>. This is where the Nightscout developer's store their code that we are going to borrow a copy of. A copy of code in Github is called a "fork". In the upper right corner, you'll find a little button labeled `Fork`.  Click that button and you'll see a message that GitHub is cloning/forking a copy of that code to your GitHub account.  That is a good thing.  Don't worry it only takes a few seconds.
+</br>
 
-<p align="center">
-<img src="../img/ns_fork.jpg" width="550">
-</p> 
-</br></br>
-Once the forking is done, scroll down (below all those folder and file names) until you see the purple `Deploy to Heroku` button. Click that button.
-</br></br>
+- You should now have three pages opened in your browser: Heroku, Atlas and Github, make sur each one is logged in
+   (i.e. not asking you to login) before you continue.
 
-<p align="center">
-<img src="../img/deploy_heroku.jpg" width="650">
-</p> 
-</br></br>
-Pretty quickly, you should see a Heroku screen popup for "Create New App".  If you see that, you're good to go onto the next step to start setting up the Heroku Nightscout app.
-</br></br>
+- Click this link [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor), a new GitHub page will open. Click on `Fork`
 
-## Step 5: Setup your Heroku Nightscout app
+  
 
-Heroku calls the code that you just deployed an "app"...but probably easier for most people to imagine it as a website. 
+  ![](..\img\NewNS29.png)
 
-The first step is to give your "app" a name, this will be the prefix of your soon-to-be-created Nightscout site’s URL. For example, if you enter "janehasthesugars" then your Nightscout site's URL will be `https://janehasthesugars.herokuapp.com`
+  </br>
 
-<p align="center">
-<img src="../img/heroku4.png" width="650">
-</p> 
+- Wait a moment
 
-Now scroll down a bit and we are going to fill out the information lines in the `Config Vars` section (circled in red above) of that page. There are many variables listed in that section, but we will only *<b>need*</b> to edit a few of them right now to get started. You can always go back later and edit the default values of your BG alarms and other defaults (or do it now, if you'd like). The variables listed below though do need you to make some edits/entries or review that the default settings work for your situation.
+![](..\img\NewNS30.png)
 
-<table>
-<thead>
-<tr>
-<th>VARIABLE</th>
-<th>VALUE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>API_SECRET</th>
-<td>Create your own API_SECRET…this is like the password to your NS site.  Please write it down somewhere safe or commit it to memory, you will be using it in the future.  It needs to be at least 12 characters long and should NOT use the @ or ! symbols.</td>
-</tr>
-<tr>
-<th>MONGODB_URI</th>
-<td>The MONGODB_URI that you have obtained at the end of the MongoDB Atlas setup. This is required for Nightscout to connect to your MongoDB cluster.
-</tr>
-<tr>
-<th>DISPLAY_UNITS</th>
-<td>default is mg/dl, you'll need to change to mmol if that's what you use</td>
-</tr>
-<tr>
-<th>ENABLE</th>
-<td>bridge pump iob cob basal careportal sage cage bage override</br></br>(Enter all of the words above without commas.  Just add a single space between each word. Make sure autocorrect does not add space between careportal. Typically, the words basal and careportal will already be there waiting for you.)</td>
-</tr>
-<tr>
-<th>BRIDGE_USER_NAME</th>
-<td>This setting is only needed if you're using Dexcom Share. Enter your Dexcom Share Account login name. This is not an email address. This should be the same account name used in the Dexcom app.</td>
-</tr>
-<tr>
-<th>BRIDGE_PASSWORD</th>
-<td>Enter your Dexcom Share Account password.</td>
-</tr>
-<tr>
-<th>BRIDGE_SERVER</th>
-<td>The default assumes the Dexcom user is using a US Dexcom account. <b><u>If you are outside the US, you need to change this entry to EU.</b></u></td>
-</tr>
-</tbody>
-</table>
+</br>
+
+- Scroll down and click `Deploy to Heroku`
+
+![](..\img\NewNS31.png)
+
+![](..\img\NewNS32.png)
+
+</br>
+
+- Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Check the name is available.
+
+- Don’t change the region.
+
+![](..\img\NewNS33.png)
+
+</br>
+
+Scroll down and setup the following variables:
+
+ </br>
+
+- `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and should **NOT use spaces and @ or ! symbols**.
+
+![](..\img\NewNS34.png)
+
+</br>
+
+- If you want to link your Dexcom Share account as a data source, compile the following lines:
+
+![](..\img\NewNS35.png)
+
 </br>
 
 !!!info "MOST COMMON ERRORS"
-    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to <a href="https://clarity.dexcom.com" target="_blank">Dexcom's Clarity</a> page and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.
+The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to <a href="https://clarity.dexcom.com" target="_blank">[Dexcom's]() Clarity</a> page and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.
 
-!!!info ""
-    If you are using Dexcom Share outside the United States, you will need to make sure you have EU in the BRIDGE_SERVER.
-    </br>
-    <table>
-    <thead>
-    <tr>
-    <th>KEY</th>
-    <th>VALUE</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <th>BRIDGE_SERVER</th>
-    <p alighn="left"><td>EU</td>
-    </tr>
-    </tbody>
-    </table>
+</br>
 
-Now that we have all the variables fixed up, click the purple `Deploy` button at the bottom of screen
-</br></br>
-<p align="center">
-<img src="../img/deploy_button.jpg" width="650">
-</p> 
-</br></br>
-Wait about 5 minutes while Heroku builds your Nightscout app. You’ll see some text scroll by in the Build App box, and then finally, you will have a message that the app was successfully deployed.
-</br></br>
-<p align="center">
-<img src="../img/deploy_success.jpg" width="650">
-</p> 
-</br></br>
+- If you want to link your CareLink account as a data source, compile the following lines:
 
-Click on the `Manage App` button and then we will move onto the next step.
+![](..\img\NewNS36.png)
 
-## Step 6: Additional Variables
+</br>
 
-Select the `Settings` tab near the top of the screen on your Heroku app. Click on `Reveal Config  Vars` button that will be partway down the page. 
+- Select the units you’re using in `DISPLAY_UNIT`
 
-<p align="center">
-<img src="../img/heroku5.png" width="650">
-</p> 
-</br></br>
-Scroll down to the bottom of the variables list until you find the last blank one. 
-</br></br>
+![](..\img\NewNS37.png)
 
-<p align="center">
-<img src="../img/add_vars.jpg" width="650">
-</p> 
-</br></br>
-If you're setting up Nightscout for use with Loop, OpenAPS or AndroidAPS, you should refer
-to the documentation of these systems for additional recommended configuration. For loopers, you probably want to set something like the following:
-</br></br>
-<table>
-<thead>
-<tr>
-<th>KEY</th>
-<th>VALUE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>DEVICESTATUS_ADVANCED</th>
-<td>true</td>
-</tr>
-<tr>
-<th>PUMP_FIELDS</th>
-<td>battery reservoir clock status</td>
-</tr>
-<tr>
-<th>PUMP_RETRO_FIELDS</th>
-<td>battery reservoir clock status</td>
-</tr>
-<tr>
-<th>SHOW_PLUGINS</th>
-<td>pump cob iob sage cage careportal basal</td>
-</tr>
-<tr>
-<th>BASAL_RENDER</th>
-<td>default</td>
-</tr>
-</tbody>
-</table>
-</br></br>
-Finally, you might want to delete the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really offers only confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, and really doesn't provide useful info for Nightscout users anyways...so best to just delete that line and never have to get the useless email in the first place.
+</br>
 
-## Step 7: Setup Profile
+- In `ENABLE` copy and paste the following words (PS: better too many than not enough):
 
-Now that we have finished all the variable setup, scroll up to the top of the page and click on the `Open App` button in the top right corner of your Heroku site.
+`pump` `iob` `cob` `basal` `careportal` `sage` `cage` `bage` `boluscalc` `dbsize` `mmconnect` `bridge` 
 
-<p align="center">
-<img src="../img/open_app.jpg" width="650">
-</p> 
+![](..\img\NewNS38.png)
 
-You will see black site with a profile warning at the top of the screen. Confirm to redirect to a profile set-up page.  (If it doesn't redirect automatically, refresh your webpage...might have to push the button a few times).  
+</br>
 
-<p align="center">
-<img src="../img/no_profile.jpg" width="450">
-</p> 
+- Now you need that connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
 
-You do not have to enter all the information in the profile if you are using Loop or OpenAPS or AndroidAPS (since those will be providing the information for IOB and COB rather than letting NS calculate them), but you do have to fill out the `TimeZone`. That one is non-negotiable. I highly recommend also filling in the `Insulin to carb ratio`, `Insulin Sensitivity Factor`, and `Basal Rates` so that your information is properly displayed in Nightscout. To be clear, those values you enter in the Profile will not affect your pump or other dosing in any way, because your pump will not read them from Nightscout. It's recommened you later keep these numbers up to date if you change the dosing and you're not using a system that automatically pushes changes to the profile to Nightscout.
+ 
 
-Click `Save` when you have entered the information.  You will be prompted to authenticate, if it is the first time you’ve used the device to make changes in your profile.  Click on the `Authenticate` link at the bottom of the site, and enter your API_SECRET to complete the authentication.
+`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
-<p align="center">
-<img src="../img/profile.jpg" width="650">
-</p> 
+![](..\img\NewNS39.png)
+
+</br>
+
+- Browse down to the end of the list and click `Deploy app`
+
+![](..\img\NewNS40.png)
+
+</br>
+
+- **WAIT** until completion (will take some time). Do not interfere with the process until it's complete.
+
+![](..\img\NewNS41.png)
+
+</br>
+
+- Then click `View`
+
+![](..\img\NewNS42.png)
+
+</br>
+
+- Your Nightscout site should open, click on the hamburger menu top right and select `Profile Editor`.
+
+![](..\img\NewNS43.png)
+
+</br>
+
+- Setup your `Time zone` and eventually all other fields. Do not leave empty fields. If you don't know which value you should use, just leave default. You can change them later.
+
+![](..\img\NewNS44.png)
+
+</br>
+
+- Browse down to `Authentication status` and click `Authenticate`. Enter your API secret. Click `Update`.
+
+![](..\img\NewNS45.png)
+
+</br>
+
+- Click `Save`.
+
+![](..\img\NewNS46.png)
+
+</br>
+
+- If the following pop-up shows up click `OK`, and check status (upper right of the window).
+
+![](..\img\NewNS47.png)
+
+</br>
+
+- Dexcom Share and CareLink users should see data flowing in after some minutes, other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
+
+![](..\img\NewNS48.png)
+
+
 
 </br></br>
 
-Close out of the Profile Editor to return to the main Nightscout page and configure your NS settings.
 
-## Step 8: Nightscout Settings
-The last step is to finish your Nightscout's settings. Click on the settings (those three horizontal lines in upper right corner).  Now check that you have everything displaying correctly:
 
-* `Render Basal` is set to either default or icicle (totally personal preference for how the temp basals show as blue lines in NS site)
-* Theme is set to Colors
-* Check the boxes that you’d like display pills in the SHOW PLUGINS (usually all of them except Openaps) section.
+## Step 7: Additional Variables
 
-<p align="center">
-<img src="../img/settings_ns.jpg" width="650">
-</p>
+</br>
 
-Save the settings changes and you'll be on your way! Congrats!!
+You will find more information on the variables here: https://github.com/nightscout/cgm-remote-monitor#environment
 
-## Step 9: Uploader Settings
+</br>
+Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function should you need it.
 
-Don't forget to enter your new Nightscout site into your uploader settings!
+![](..\img\NewNS49.png)
 
-* TODO: add uploader samples
+</br></br>
 
-## Future warning (for DIY users)
 
-At some point in the future months, your Nightscout site will likely stop in some quirky way...like CGM data won't be showing is the most common. This won't affect Looping, but it might be kind of annoying if you are a parent using Nightscout for remote info. The reason? The database Heroku gives us for free has some size limitations. After several months of Looping, you'll likely fill up that free amount of space and we will need to cleanout in order to make room.
 
-So...keep it in your head that if you see something odd with your NS site (like no CGM even though Dexcom is working), then please check [this page to learn how you can cleanout the database](https://loopkit.github.io/loopdocs/nightscout/mlab_cleanup/). It is easy and fast...no worries.
+## Step 6: Uploader setup
+
+</br>
+
+Most uploaders require your Nightscout URL and the API secret.
+
+For xDrip+ you need to put the URL in this format:
+
+`https://APISecret@SiteURL.herokuapp.com/api/v1`
+
+
+
