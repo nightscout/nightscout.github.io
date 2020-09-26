@@ -264,6 +264,11 @@ Keep this string safely aside, it is called your `MONGODB_URI`
 
 </br>
 
+!!! note "You're getting into the core setup of your site"
+    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](..\setup_variables)
+
+</br>
+
 - Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Check the name is available.
 
 - Don’t change the region.
@@ -289,7 +294,10 @@ Scroll down and setup the following variables:
 </br>
 
 !!!info "MOST COMMON ERRORS"
-The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to <a href="https://clarity.dexcom.com" target="_blank">[Dexcom's]() Clarity</a> page and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.
+    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.
+
+!!! note "Password"
+    *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
 
 </br>
 
@@ -299,23 +307,24 @@ The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your De
 
 </br>
 
-- Select the units you’re using in `DISPLAY_UNIT`
+- Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
 
 ![](..\img\NewNS37.png)
 
 </br>
 
-- In `ENABLE` copy and paste the following words (PS: better too many than not enough):
+- In `ENABLE` copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
-`pump` `iob` `cob` `basal` `careportal` `sage` `cage` `bage` `boluscalc` `dbsize` `mmconnect` `bridge` 
+`careportal` `basal` `dbsize` `rawbg` `iob` `maker` `bridge` `cob` `bwp` `cage` `iage` `sage` `boluscalc` `pushover` `treatmentnotify` `mmconnect` `loop` `pump` `profile` `food` `openaps` `bage` `alexa` `override`
 
 ![](..\img\NewNS38.png)
+
+!!! note "More on `ENABLE` words"
+    If you want to know more about them, look here: [Setup](..\setup_variables)
 
 </br>
 
 - Now you need that connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
-
- 
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
@@ -375,20 +384,9 @@ The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your De
 
 ![](..\img\NewNS48.png)
 
-
-
-</br></br>
-
-
-
-## Step 7: Additional Variables
-
 </br>
 
-You will find more information on the variables here: https://github.com/nightscout/cgm-remote-monitor#environment
-
-</br>
-Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function should you need it.
+- Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function should you need it.
 
 ![](..\img\NewNS49.png)
 
@@ -396,7 +394,7 @@ Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers
 
 
 
-## Step 6: Uploader setup
+## Step 5: Uploader setup
 
 </br>
 
