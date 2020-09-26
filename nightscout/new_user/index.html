@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Brand New NS - Nightscout</title>
+        <title>Create your Nightscout site - Nightscout</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -42,27 +42,27 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../overview/" class="dropdown-item">Overview</a>
+    <a href="../overview/" class="dropdown-item">Nightscout Overview</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Brand New NS</a>
+    <a href="./" class="dropdown-item active">Create your Nightscout site</a>
 </li>
                                     
 <li>
-    <a href="../update_user/" class="dropdown-item">Retrofit Existing NS</a>
+    <a href="../setup_variables/" class="dropdown-item">Setup your Nighscout</a>
 </li>
                                     
 <li>
-    <a href="../troublehoot/" class="dropdown-item">Setup Troubleshooting</a>
+    <a href="../update_user/" class="dropdown-item">Update your Nighscout</a>
 </li>
                                     
 <li>
-    <a href="../mlab_cleanup/" class="dropdown-item">NS Stopped Working</a>
+    <a href="../troublehoot/" class="dropdown-item">Troubleshooting</a>
 </li>
                                     
 <li>
-    <a href="../remote-overrides/" class="dropdown-item">Remote Overrides</a>
+    <a href="../mlab_cleanup/" class="dropdown-item">Nightscout stopped working</a>
 </li>
                                     
 <li>
@@ -80,6 +80,10 @@
 <li>
     <a href="../reports/" class="dropdown-item">Reports</a>
 </li>
+                                    
+<li>
+    <a href="../remote-overrides/" class="dropdown-item">Remote Overrides</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -88,6 +92,14 @@
                                     
 <li>
     <a href="../../update/update/" class="dropdown-item">Updating your site</a>
+</li>
+                                    
+<li>
+    <a href="../../update/migrate_heroku/" class="dropdown-item">Migrating to Atlas</a>
+</li>
+                                    
+<li>
+    <a href="../../update/migrate_azure/" class="dropdown-item">Migrating from Azure</a>
 </li>
                                 </ul>
                             </li>
@@ -105,7 +117,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../update_user/" class="nav-link">
+                                <a rel="next" href="../setup_variables/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -145,11 +157,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#step-7-additional-variables" class="nav-link">Step 7: Additional Variables</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#step-6-uploader-setup" class="nav-link">Step 6: Uploader setup</a>
+            <li class="nav-item" data-level="2"><a href="#step-5-uploader-setup" class="nav-link">Step 5: Uploader setup</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -363,6 +371,11 @@
 <p><img alt="" src="..\img\NewNS31.png" /></p>
 <p><img alt="" src="..\img\NewNS32.png" /></p>
 <p></br></p>
+<div class="admonition note">
+<p class="admonition-title">You're getting into the core setup of your site</p>
+<p>Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: <a href="..\setup_variables">Setup</a></p>
+</div>
+<p></br></p>
 <ul>
 <li>
 <p>Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Check the name is available.</p>
@@ -387,8 +400,12 @@
 <p></br></p>
 <div class="admonition info">
 <p class="admonition-title">MOST COMMON ERRORS</p>
+<p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The <code>BRIDGE_USER_NAME</code> is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.</p>
 </div>
-<p>The <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The <code>BRIDGE_USER_NAME</code> is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to <a href="https://clarity.dexcom.com" target="_blank"><a href="">Dexcom's</a> Clarity</a> page and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.</p>
+<div class="admonition note">
+<p class="admonition-title">Password</p>
+<p><em>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</em></p>
+</div>
 <p></br></p>
 <ul>
 <li>If you want to link your CareLink account as a data source, compile the following lines:</li>
@@ -396,15 +413,19 @@
 <p><img alt="" src="..\img\NewNS36.png" /></p>
 <p></br></p>
 <ul>
-<li>Select the units you’re using in <code>DISPLAY_UNIT</code></li>
+<li>Select the units you’re using in <code>DISPLAY_UNITS</code> acceptable choices are <code>mg/dl</code> or <code>mmol/L</code> (or just <code>mmol</code>).</li>
 </ul>
 <p><img alt="" src="..\img\NewNS37.png" /></p>
 <p></br></p>
 <ul>
-<li>In <code>ENABLE</code> copy and paste the following words (PS: better too many than not enough):</li>
+<li>In <code>ENABLE</code> copy and paste the following words (separated by a space) so that won't have to think about which you want now:</li>
 </ul>
-<p><code>pump</code> <code>iob</code> <code>cob</code> <code>basal</code> <code>careportal</code> <code>sage</code> <code>cage</code> <code>bage</code> <code>boluscalc</code> <code>dbsize</code> <code>mmconnect</code> <code>bridge</code> </p>
+<p><code>careportal</code> <code>basal</code> <code>dbsize</code> <code>rawbg</code> <code>iob</code> <code>maker</code> <code>bridge</code> <code>cob</code> <code>bwp</code> <code>cage</code> <code>iage</code> <code>sage</code> <code>boluscalc</code> <code>pushover</code> <code>treatmentnotify</code> <code>mmconnect</code> <code>loop</code> <code>pump</code> <code>profile</code> <code>food</code> <code>openaps</code> <code>bage</code> <code>alexa</code> <code>override</code></p>
 <p><img alt="" src="..\img\NewNS38.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">More on <code>ENABLE</code> words</p>
+<p>If you want to know more about them, look here: <a href="..\setup_variables">Setup</a></p>
+</div>
 <p></br></p>
 <ul>
 <li>Now you need that connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the <code>MONGODB_URI</code> variable field.</li>
@@ -456,15 +477,13 @@
 <li>Dexcom Share and CareLink users should see data flowing in after some minutes, other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.</li>
 </ul>
 <p><img alt="" src="..\img\NewNS48.png" /></p>
-<p></br></br></p>
-<h2 id="step-7-additional-variables">Step 7: Additional Variables<a class="headerlink" href="#step-7-additional-variables" title="Permanent link">⌁</a></h2>
 <p></br></p>
-<p>You will find more information on the variables here: https://github.com/nightscout/cgm-remote-monitor#environment</p>
-<p></br>
-Finally, you might want to modify the <code>PAPERTRAIL_API_TOKEN</code> line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add <code>DISABLED</code> at the end, so that you can recover the function should you need it.</p>
+<ul>
+<li>Finally, you might want to modify the <code>PAPERTRAIL_API_TOKEN</code> line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add <code>DISABLED</code> at the end, so that you can recover the function should you need it.</li>
+</ul>
 <p><img alt="" src="..\img\NewNS49.png" /></p>
 <p></br></br></p>
-<h2 id="step-6-uploader-setup">Step 6: Uploader setup<a class="headerlink" href="#step-6-uploader-setup" title="Permanent link">⌁</a></h2>
+<h2 id="step-5-uploader-setup">Step 5: Uploader setup<a class="headerlink" href="#step-5-uploader-setup" title="Permanent link">⌁</a></h2>
 <p></br></p>
 <p>Most uploaders require your Nightscout URL and the API secret.</p>
 <p>For xDrip+ you need to put the URL in this format:</p>

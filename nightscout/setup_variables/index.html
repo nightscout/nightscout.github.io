@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Setup your Nighscout - Nightscout</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <link href="../../css/admonitions.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Nightscout</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nightscout <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../overview/" class="dropdown-item">Nightscout Overview</a>
+</li>
+                                    
+<li>
+    <a href="../new_user/" class="dropdown-item">Create your Nightscout site</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Setup your Nighscout</a>
+</li>
+                                    
+<li>
+    <a href="../update_user/" class="dropdown-item">Update your Nighscout</a>
+</li>
+                                    
+<li>
+    <a href="../troublehoot/" class="dropdown-item">Troubleshooting</a>
+</li>
+                                    
+<li>
+    <a href="../mlab_cleanup/" class="dropdown-item">Nightscout stopped working</a>
+</li>
+                                    
+<li>
+    <a href="../ifttt/" class="dropdown-item">IFTTT</a>
+</li>
+                                    
+<li>
+    <a href="../pebble/" class="dropdown-item">Pebble</a>
+</li>
+                                    
+<li>
+    <a href="../pushover/" class="dropdown-item">Remote Notifications</a>
+</li>
+                                    
+<li>
+    <a href="../reports/" class="dropdown-item">Reports</a>
+</li>
+                                    
+<li>
+    <a href="../remote-overrides/" class="dropdown-item">Remote Overrides</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Update <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../update/update/" class="dropdown-item">Updating your site</a>
+</li>
+                                    
+<li>
+    <a href="../../update/migrate_heroku/" class="dropdown-item">Migrating to Atlas</a>
+</li>
+                                    
+<li>
+    <a href="../../update/migrate_azure/" class="dropdown-item">Migrating from Azure</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../new_user/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../update_user/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#nightscout-configuration" class="nav-link">Nightscout Configuration</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#nightscout-core-config-vars" class="nav-link">Nightscout core Config Vars</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#editing-config-vars-in-heroku" class="nav-link">Editing Config Vars in Heroku</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#plugins" class="nav-link">Plugins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="nightscout-configuration">Nightscout Configuration<a class="headerlink" href="#nightscout-configuration" title="Permanent link">⌁</a></h1>
+<p></br></p>
+<p>A complete list and description is available here: <a href="https://github.com/nightscout/cgm-remote-monitor#environment">https://github.com/nightscout/cgm-remote-monitor#environment</a></p>
+<p></br></p>
+<h2 id="nightscout-core-config-vars">Nightscout core Config Vars<a class="headerlink" href="#nightscout-core-config-vars" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<p>When deploying Nightscout for the first time you are required to setup core config variables that are mandatory to the site functioning.</p>
+<p>You will see them in the same order they appear when setting up a new site.</p>
+<p>If you need to modify them later, you'll find them in <a href="../setup_variables#editing-config-vars-in-heroku">Heroku</a>.</p>
+<hr />
+<h3 id="alarms">Alarms<a class="headerlink" href="#alarms" title="Permanent link">⌁</a></h3>
+<div class="admonition note">
+<p class="admonition-title">ALARMS</p>
+<p>You can setup alarms, so that when your Nightscout page is open and the alarm enabled, above (HIGH) or below (LOW) a certain threshold, a sound might play.</p>
+</div>
+<p><strong>ALARM_HIGH</strong></p>
+<p>Default setting for new browser views, for the High alarm (triggered when BG crosses BG_TARGET_TOP). ('on' or 'off')</p>
+<pre><code>on
+</code></pre>
+
+<p><strong>ALARM_LOW</strong></p>
+<p>Default setting for new browser views, for the Low alarm (triggered when BG crosses BG_TARGET_BOTTOM). ('on' or 'off')</p>
+<pre><code>on
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">TIMEAGO</p>
+<p>Missing data alarms can also be setup, so that when your Nightscout page is open and the alarm enabled, after a certain time without receiveing BG, a sound might play.</p>
+</div>
+<p><strong>ALARM_TIMEAGO_URGENT</strong></p>
+<p>Default setting for new browser views, for an urgent alarm when CGM data hasn't been received in the number of minutes set in ALARM_TIMEAGO_URGENT_MINS. ('on' or 'off')</p>
+<pre><code>on
+</code></pre>
+
+<p><strong>ALARM_TIMEAGO_URGENT_MINS</strong></p>
+<p>Default setting for new browser views, for the number of minutes since the last CGM reading to trigger an ALARM_TIMEAGO_URGENT alarm.</p>
+<pre><code>30
+</code></pre>
+
+<p><strong>ALARM_TIMEAGO_WARN</strong></p>
+<p>Default setting for new browser views, for a warning alarm when CGM data hasn't been received in the number of minutes set in ALARM_TIMEAGO_WARN_MINS. ('on' or 'off')</p>
+<pre><code>on
+</code></pre>
+
+<p><strong>ALARM_TIMEAGO_WARN_MINS</strong></p>
+<p>Default setting for new browser views, for the number of minutes since the last CGM reading to trigger an ALARM_TIMEAGO_WARN alarm.</p>
+<pre><code>15
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">TYPES</p>
+<p>Keep the simple type so that the <code>BG_</code> parameters (setup below) will be used. </p>
+</div>
+<p><strong>ALARM_TYPES</strong></p>
+<p>'simple' and/or 'predict'. Simple alarms trigger when BG crosses the various thresholds set below. Predict alarms use a formula that forecasts where the BG is going based on its trend. You will <em>not</em> get warnings when crossing the BG thresholds set below when using the predict type.</p>
+<pre><code>simple
+</code></pre>
+
+<p><strong>ALARM_URGENT_HIGH</strong></p>
+<p>Default setting for new browser views, for the Urgent High alarm (triggered when BG crosses BG_HIGH). ('on' or 'off')</p>
+<pre><code>on
+</code></pre>
+
+<p><strong>ALARM_URGENT_LOW</strong></p>
+<p>Default setting for new browser views, for the Urgent Low alarm (triggered when BG crosses BG_LOW). ('on' or 'off')</p>
+<pre><code>on
+</code></pre>
+
+<hr />
+<div class="admonition note">
+<p class="admonition-title">API Secret</p>
+<p>This is the passcode that will be required by the uploader app (if any) to send data to your site, and that will allow you to modify your site parameters from the web interface. Keep it secret, only share it with trusted people, change it if you believe it's been exposed publicly. Minimum length is 12 characters, don't make it too long and do not put special characters in it (better stick to letters and numbers). It is case sensitive. </p>
+</div>
+<p><strong>API_SECRET <code>Required</code></strong></p>
+<p>A passphrase that must be at least 12 characters long. Avoid 'special' characters, which can cause problems in some cases.</p>
+<pre><code>MyV3ry53cr37
+</code></pre>
+
+<hr />
+<div class="admonition note">
+<p class="admonition-title">BG Thresholds</p>
+<p>These values are the ones that will trigger the alarms defined above. They are expressed in the unit you will select below with <code>DISPLAY_UNITS</code>.</p>
+</div>
+<p><strong>BG_HIGH</strong></p>
+<p>Urgent High BG threshold, triggers the ALARM_URGENT_HIGH alarm. Set in mg/dL or mmol/L, as set in DISPLAY_UNITS variable.</p>
+<p><strong>BG_LOW</strong></p>
+<p>Urgent Low BG threshold, triggers the ALARM_URGENT_LOW alarm. Set in mg/dL or mmol/L, as set in DISPLAY_UNITS variable.</p>
+<p><strong>BG_TARGET_BOTTOM</strong></p>
+<p>Low BG threshold, triggers the ALARM_LOW alarm. Set in mg/dL or mmol/L, as set in DISPLAY_UNITS variable.</p>
+<p><strong>BG_TARGET_TOP</strong></p>
+<p>High BG threshold, triggers the ALARM_HIGH alarm. Set in mg/dL or mmol/L, as set in DISPLAY_UNITS variable.</p>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Dexcom Bridge</p>
+<p>Entering a <code>BRIDGE_PASSWORD</code> and <code>BRIDGE_USER_NAME</code> will allow you to receive your BG directly from Dexcom Share if you have a Dexcom sensor connected to a device that uploads it to the internet. This is possible with the Dexcom G5 and G6 apps on a mobile phone. For Dexcom G4 you need the original Nightscout project uploader with the receiver.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Username and Password</p>
+<p>To test your username and password, go to Dexcom's Clarity page (check <a href="https://clarity.dexcom.com">here for USA accounts</a> and <a href="https://clarity.dexcom.eu">here for the others</a>) and try logging into your Dexcom account. <em>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</em></p>
+</div>
+<p><strong>BRIDGE_PASSWORD</strong></p>
+<p>Your Dexcom account password, to receive CGM data from the Dexcom Share service. Also make sure to include 'bridge' in your ENABLE line.</p>
+<div class="admonition warning">
+<p class="admonition-title">Make sure you select the right country code!</p>
+</div>
+<p><strong>BRIDGE_SERVER</strong></p>
+<p>If you are bridging from the Dexcom Share service, and are anywhere <em>outside</em> the US, change this to EU. ('US' or 'EU')</p>
+<pre><code>US
+</code></pre>
+
+<pre><code>EU
+</code></pre>
+
+<p><strong>BRIDGE_USER_NAME</strong></p>
+<p>Your Dexcom account username, to receive CGM data from the Dexcom Share service. Also make sure to include 'bridge' in your ENABLE line.</p>
+<p></br></p>
+<div class="admonition info">
+<p class="admonition-title">More variables for <code>BRIDGE</code> are available <a href="https://github.com/nightscout/cgm-remote-monitor#bridge-share2nightscout-bridge">here</a> for you to add and edit in  <a href="../setup_variables#editing-config-vars-in-heroku">Heroku</a>.</p>
+</div>
+<hr />
+<p><strong>CUSTOM_TITLE</strong></p>
+<div class="admonition note">
+<p class="admonition-title">This will change your Nightscout displayed name (top left) from default.</p>
+</div>
+<p>The display name for the Nightscout site. Appears in the upper left of the main view. Often set to the name of the CGM wearer.</p>
+<p><img src="..\img\SetupNS05.png" style="zoom:80%;" /></p>
+<hr />
+<p><strong>DISPLAY_UNITS <code>Required</code></strong></p>
+<p>Preferred BG units for the site: 'mg/dl' or 'mmol/L' (or just 'mmol').</p>
+<pre><code>mg/dl
+</code></pre>
+
+<pre><code>mmol
+</code></pre>
+
+<hr />
+<p><strong>ENABLE</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Select the right plugins! Better too many than not enough.</p>
+</div>
+<p>Plugins to enable for your site. Must be a space-delimited, lower-case list. </p>
+<pre><code>careportal basal dbsize
+</code></pre>
+
+<p>Include the word 'bridge' here if you are receiving data from the Dexcom Share service.</p>
+<pre><code>careportal basal dbsize bridge
+</code></pre>
+
+<p>Include 'mmconnect' if you are bridging from the MiniMed CareLink service.</p>
+<pre><code>careportal basal dbsize mmconnect
+</code></pre>
+
+<p>If you don't want to decide, add all the followings, you can disable them if you don't need them:</p>
+<p><code>careportal</code> <code>basal</code> <code>dbsize</code> <code>rawbg</code> <code>iob</code> <code>maker</code> <code>bridge</code> <code>cob</code> <code>bwp</code> <code>cage</code> <code>iage</code> <code>sage</code> <code>boluscalc</code> <code>pushover</code> <code>treatmentnotify</code> <code>mmconnect</code> <code>loop</code> <code>pump</code> <code>profile</code> <code>food</code> <code>openaps</code> <code>bage</code> <code>alexa</code> <code>override</code></p>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">CareLink MMConnect</p>
+<p>Entering a <code>MMCONNECT_PASSWORD</code> and <code>MMCONNECT_USER_NAME</code> will allow you to receive your BG directly from CareLink if you have a Medtronic sensor connected to a device that uploads it to the internet. Connecting Nightscout to a Medtronic pump requires an uploader system as detailed <a href="https://github.com/pazaan/600SeriesAndroidUploader/wiki">here</a>.</p>
+</div>
+<p><strong>MMCONNECT_PASSWORD</strong></p>
+<p>Your CareLink account password, to receive CGM data from the CareLink service. Also make sure to include 'mmconnect' in your ENABLE line.</p>
+<div class="admonition warning">
+<p class="admonition-title">Make sure you select the right country code!</p>
+</div>
+<p><strong>MMCONNECT_SERVER</strong></p>
+<p>If you are bridging from the CareLink service, and are anywhere <em>outside</em> the US, change this to EU. ('US' or 'EU')</p>
+<pre><code>US
+</code></pre>
+
+<pre><code>EU
+</code></pre>
+
+<p><strong>MMCONNECT_USER_NAME</strong></p>
+<p>Your CareLink account username, to receive CGM data from the CareLink service. Also make sure to include 'mmconnect' in your ENABLE line.</p>
+<p></br></p>
+<div class="admonition info">
+<p class="admonition-title">More variables for <code>MMCONNECT</code> are available <a href="https://github.com/nightscout/cgm-remote-monitor#mmconnect-minimed-connect-bridge">here</a> for you to add and edit in <a href="../setup_variables#editing-config-vars-in-heroku">Heroku</a>. </p>
+</div>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">This string is vital to your Nightscout functioning: it is the link that will allow access to the database where all your data is stored in the cloud. A wrong connection string will prevent your site to open and your data to upload in Nightscout</p>
+</div>
+<p>An Atlas database string will look like this:</p>
+<p><code>mongodb+srv://nightscout:&lt;password&gt;@cluster0.xxxxx.mongodb.net/&lt;dbname&gt;?retryWrites=true&amp;w=majority</code></p>
+<p><strong>MONGO_COLLECTION <code>Required</code></strong></p>
+<p>The Mongo collection where CGM data is stored.</p>
+<hr />
+<p><strong>NIGHT_MODE</strong></p>
+<p>Default setting for new browser views, for whether Night Mode should be enabled. ('on' or 'off')</p>
+<pre><code>off
+</code></pre>
+
+<hr />
+<p><strong>SHOW_PLUGINS</strong></p>
+<p>Default setting for whether or not these plugins are checked (active) by default, not merely enabled. Include plugins here as in the ENABLE line; space-separated and lower-case.</p>
+<hr />
+<p><strong>SHOW_RAWBG</strong></p>
+<p>Default setting for new browser views, for the display of raw CGM data (if available). ('always', 'never', or 'noise')</p>
+<hr />
+<p><strong>THEME</strong></p>
+<p>Default setting for new browser views, for the color theme of the CGM graph. ('default', 'colors', or 'colorblindfriendly')</p>
+<p>Default</p>
+<p><img src="..\img\SetupNS06.png" style="zoom:80%;" /></p>
+<p>Colors</p>
+<p><img src="..\img\SetupNS07.png" style="zoom:80%;" /></p>
+<p>Colorblind-friendly colors</p>
+<p><img src="..\img\SetupNS08.png" style="zoom:80%;" /></p>
+<hr />
+<p><strong>TIME_FORMAT</strong></p>
+<p>Default setting for new browser views, for the time mode. ('12' or '24')</p>
+<pre><code>12
+</code></pre>
+
+<pre><code>24
+</code></pre>
+
+<p></br></p>
+<h2 id="editing-config-vars-in-heroku">Editing Config Vars in Heroku<a class="headerlink" href="#editing-config-vars-in-heroku" title="Permanent link">⌁</a></h2>
+<p></br></p>
+<p>Once Nightscout deployed, you can access your variables from <a href="https://id.heroku.com/login">Heroku</a>.</p>
+<ul>
+<li>Select your app</li>
+</ul>
+<p><img src="..\img\SetupNS00.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Click <code>Settings</code></li>
+</ul>
+<p><img src="..\img\SetupNS01.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Scroll down and click <code>Reveal Config Vars</code></li>
+</ul>
+<p><img src="..\img\SetupNS02.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>You can modify the values clicking on the pen icon</li>
+</ul>
+<p><img src="..\img\SetupNS03.png" style="zoom:80%;" /></p>
+<p></br></p>
+<ul>
+<li>Change the contents of <code>Value</code>  as needed then click <code>Save Changes</code></li>
+</ul>
+<p><img src="..\img\SetupNS04.png" style="zoom:80%;" /></p>
+<p></br></p>
+<p>Some variables changes might require you to restart all Dynos.</p>
+<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">⌁</a></h2>
+<p>Work in progress...</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
