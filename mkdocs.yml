@@ -10,15 +10,16 @@ markdown_extensions:
 pages:
 - Home: 'index.md'
 - Nightscout:
-    - 'Overview': 'nightscout/overview.md'
-    - 'Brand New NS': 'nightscout/new_user.md'
-    - 'Retrofit Existing NS': 'nightscout/update_user.md'
-    - 'Setup Troubleshooting': 'nightscout/troublehoot.md'
-    - 'NS Stopped Working': 'nightscout/mlab_cleanup.md'
-    - 'Remote Overrides': 'nightscout/remote-overrides.md'
+    - 'Nightscout Overview': 'nightscout/overview.md'
+    - 'Create your Nightscout site': 'nightscout/new_user.md'
+    - 'Setup your Nighscout': 'nightscout/setup_variables.md'
+    - 'Troubleshooting': 'nightscout/troublehoot.md'
+    - 'Nightscout stopped working': 'nightscout/mlab_cleanup.md'
     - 'IFTTT': 'nightscout/ifttt.md'
     - 'Pebble': 'nightscout/pebble.md'
     - 'Remote Notifications': 'nightscout/pushover.md'
     - 'Reports': 'nightscout/reports.md'
 - Update:
     - 'Updating your site': 'update/update.md'
+    - 'Migrating to Atlas': 'update/migrate_heroku.md'
+    - 'Migrating from Azure': 'update/migrate_azure.md'

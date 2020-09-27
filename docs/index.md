@@ -1,3 +1,7 @@
+![](.\img\cropped-Header2.png)
+
+</br>
+
 # Welcome to Nightscout
 
 ## Introduction
@@ -15,17 +19,17 @@ Once you have Nightscout up and running, you'll get a view that looks something 
 !!!warning "Important"
 
     Please understand that this project:
-
+    
     - Is highly experimental
     - Is not approved for therapy
-
+    
       **You take full responsibility for building and running this system and do so at your own risk.**
 
 ## Looking to install Nightscout?
 
 Start with the [Overview](/nightscout/overview/).
 
-## Looking to update to latest reelease?
+## Looking to update to latest release?
 
 Go to the [Update instructions](/update/update/).
 
