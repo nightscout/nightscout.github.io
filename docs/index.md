@@ -25,14 +25,6 @@ Once you have Nightscout up and running, you'll get a view that looks something 
     
       **You take full responsibility for building and running this system and do so at your own risk.**
 
-## Looking to install Nightscout?
-
-Start with the [Overview](/nightscout/overview/).
-
-## Looking to update to latest release?
-
-Go to the [Update instructions](/update/update/).
-
 ## Development History
 
 Nightscout has been developed as an open-source, shared project.

@@ -27,27 +27,5 @@ Nightscout is highly recommended for Loop users, especially those using Loop as 
 </br>
 ##<dt>Predicted BG</dt>
 <dd>The purple line to the right of the BG is Loop's predicted BG.  Watching the behavior of that purple line can help you understand why Loop is making decisions regarding high or low temps.  You can read more on that topic in the Algorithm section of these docs.</dd>
-</br>
-##<dt>Loop pill</dt>
-<dd>The Loop pill is the little display box which when hovered over, or clicked, will provide additional information about recent Loop activities and status.  Information included is the last time Loop ran, the temp basal set, IOB, and COB.  Looking at the Loop pill is a quick method for assessing if you loop is currently active, as well.</br>
-
-!!! info "Loop Pill status indicator symbols"
-    <font style='font-size: 1.2em;'>X</font> &nbsp;
-    Error in Loop
-
-    <font style='font-size: 1.4em;'>ϕ</font> &nbsp;
-    Recommending basal, but not enacting (open loop or pump suspended)
-
-    <font style='font-size: 2em;'>⌁</font> &nbsp;
-    Enacted a new temp basal
-
-    <font style='font-size: 1.5em;'>↻</font> &nbsp;
-    Loop is continuing with last temp basal, no change
-
-    <font style='font-size: 1.5em;'>⚠</font> &nbsp;
-    Warning indicating Loop is either red or has failed to upload to Nightscout for a longer period of time.
-Mouseover or Touch the Loop pill to view a tool tip containing one or more of the latest status messages. The most up-to-date NS also includes information in the Loop pill for the minimum and maximum predicted BG, eventual and predicted BG.
-
-<img src="../img/loop_pill_message.png" width="750"></dd>
 
 </dl>
