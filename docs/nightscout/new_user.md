@@ -25,13 +25,13 @@ If you have issues with your current browser try another one.</br></br>
 - Enter a username (anything you want and that is accepted, not very important), email, and password.
 - Then click `Sign up for GitHub`
 
-![](..\img\NewNS00.png)
+<img src="..\img\NewNS00.png" style="zoom:80%;" />
 
 </br>
 
 - Play and solve the puzzle then click `Join a free plan`.
 
-![](..\img\NewNS01.png)
+<img src="..\img\NewNS01.png" style="zoom:80%;" />
 
 </br>
 
@@ -39,19 +39,19 @@ If you have issues with your current browser try another one.</br></br>
 
 
 
-![](..\img\NewNS02.png)
+<img src="..\img\NewNS02.png" style="zoom:80%;" />
 
 </br>
 
 - GitHub will send you a verification email, open your mailbox and check for it (look into spam also).
 
-![](..\img\NewNS03.png)
+<img src="..\img\NewNS03.png" style="zoom:80%;" />
 
 </br>
 
 - On the received email, click `Verify email address`.
 
-![](..\img\NewNS04.png)
+<img src="..\img\NewNS04.png" style="zoom:80%;" />
 
 </br>
 
@@ -59,13 +59,13 @@ If you have issues with your current browser try another one.</br></br>
 
 - A new page will open in your browser, click `Skip this for now`.
 
-![](..\img\NewNS05.png)
+<img src="..\img\NewNS05.png" style="zoom:80%;" />
 
 </br>
 
 - Leave the page open as it is.
 
-![](..\img\NewNS06.png)
+<img src="..\img\NewNS06.png" style="zoom:80%;" />
 
 </br></br>
 
@@ -77,49 +77,49 @@ If you have issues with your current browser try another one.</br></br>
 
 - Enter mandatory data (*) and click `CREATE FREE ACCOUNT`
 
-![](..\img\NewNS07.png)
+<img src="..\img\NewNS07.png" style="zoom:80%;" />
 
 </br>
 
 - Heroku will send a confirmation email, open your mailbox and look for it (also check spam folder).
 
-![](..\img\NewNS09.png)
+<img src="..\img\NewNS09.png" style="zoom:70%;" />
 
 </br>
 
 - Click on the activation link
 
-![](..\img\NewNS10.png)
+<img src="..\img\NewNS10.png" style="zoom:80%;" />
 
 </br>
 
 - Create a password an write it down. Click `SET PASSWORD AND LOG IN`
 
-![](..\img\NewNS11.png)
+<img src="..\img\NewNS11.png" style="zoom:80%;" />
 
 </br>
 
 - Click `CLICK HERE TO PROCEED`
 
-![](..\img\NewNS12.png)
+<img src="..\img\NewNS12.png" style="zoom:70%;" />
 
 </br>
 
 - Your Heroku page will open, click on your profile picture top right and select `Account Settings`
 
-![](..\img\NewNS13.png)
+<img src="..\img\NewNS13.png" style="zoom:80%;" />
 
 </br>
 
 - Click on `Billing`
 
-![](..\img\NewNS14.png)
+<img src="..\img\NewNS14.png" style="zoom:80%;" />
 
 </br>
 
 - Click `Add credit card`
 
-![](..\img\NewNS15.png)
+<img src="..\img\NewNS15.png" style="zoom:80%;" />
 
 </br>
 
@@ -128,7 +128,7 @@ If you have issues with your current browser try another one.</br></br>
 !!! note "Note"
     Unless you voluntarily select billable features, your credit card information is only used for verifications and you will not be charged anything. Worst case you’ll be charged $0.00</br>
 
-![](..\img\NewNS16.png)
+<img src="..\img\NewNS16.png" style="zoom:80%;" />
 
 </br>
 
@@ -142,74 +142,74 @@ If you have issues with your current browser try another one.</br></br>
 
 
 
-![](..\img\NewNS17.png)
+<img src="..\img\NewNS17.png" style="zoom:70%;" />
 
 </br>
 
 - Enter information then click `Get Started Free`
 
-![](..\img\NewNS18.png)
+<img src="..\img\NewNS18.png" style="zoom:80%;" />
 
 </br>
 
 - Select `Create a cluster in Shared Clusters (FREE)`
 
-![](..\img\NewNS19.png)
+<img src="..\img\NewNS19.png" style="zoom:80%;" />
 
 </br>
 
 - Leave all default values and click `Create Cluster`
 
-![](..\img\NewNS20.png)
+<img src="..\img\NewNS20.png" style="zoom:80%;" />
 
 </br>
 
 Atlas will create your default cluster, wait until completion… (can take more than 3 minutes)
 
-![](..\img\NewNS21.png)
+<img src="..\img\NewNS21.png" style="zoom:80%;" />
 
 </br>
 
 - Click on `CONNECT`
 
-![](..\img\NewNS22.png)
+<img src="..\img\NewNS22.png" style="zoom:100%;" />
 
 </br>
 
 - Click on `Allow Access from Anywhere`
 
-![](..\img\NewNS23.png)
+<img src="..\img\NewNS23.png" style="zoom:80%;" />
 
 </br>
 
 - Click on `Add IP Address`
 
-![](..\img\NewNS24.png)
+<img src="..\img\NewNS24.png" style="zoom:80%;" />
 
 </br>
 
 - Add a username (for example nightscout) and a password. Write down this information, you’ll need it later.
 - Then click `Create Database User`.
 
-![](..\img\NewNS25.png)
+<img src="..\img\NewNS25.png" style="zoom:80%;" />
 
 </br>
 
 - Click on `Choose a connection method`
 
-![](..\img\NewNS26.png)
+<img src="..\img\NewNS26.png" style="zoom:80%;" />
 
 </br>
 
 - Select `Connect your application`
 
-![](..\img\NewNS27.png)
+<img src="..\img\NewNS27.png" style="zoom:80%;" />
 
 </br>
 
 - Copy the connection string: click `Copy` and paste it somewhere to edit it (like Notepad).
 
-![](..\img\NewNS28.png)
+<img src="..\img\NewNS28.png" style="zoom:100%;" />
 
 </br>
 
@@ -246,21 +246,26 @@ Keep this string safely aside, it is called your `MONGODB_URI`
 
   
 
-  ![](..\img\NewNS29.png)
+  <img src="..\img\NewNS29.png" style="zoom:80%;" />
 
   </br>
 
 - Wait a moment
 
-![](..\img\NewNS30.png)
+<img src="..\img\NewNS30.png" style="zoom:80%;" />
 
 </br>
 
 - Scroll down and click `Deploy to Heroku`
 
-![](..\img\NewNS31.png)
+<img src="..\img\NewNS31.png" style="zoom:80%;" />
 
-![](..\img\NewNS32.png)
+<img src="..\img\NewNS32.png" style="zoom:80%;" />
+
+</br>
+
+!!! note "You're getting into the core setup of your site"
+    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](..\setup_variables)
 
 </br>
 
@@ -273,7 +278,7 @@ Keep this string safely aside, it is called your `MONGODB_URI`
 
 - Don’t change the region.
 
-![](..\img\NewNS33.png)
+<img src="..\img\NewNS33.png" style="zoom:80%;" />
 
 </br>
 
@@ -283,13 +288,13 @@ Scroll down and setup the following variables:
 
 - `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and should **NOT use spaces and @ or ! symbols**.
 
-![](..\img\NewNS34.png)
+<img src="..\img\NewNS34.png" style="zoom:80%;" />
 
 </br>
 
 - If you want to link your Dexcom Share account as a data source, compile the following lines:
 
-![](..\img\NewNS35.png)
+<img src="..\img\NewNS35.png" style="zoom:80%;" />
 
 </br>
 
@@ -303,13 +308,13 @@ Scroll down and setup the following variables:
 
 - If you want to link your CareLink account as a data source, compile the following lines:
 
-![](..\img\NewNS36.png)
+<img src="..\img\NewNS36.png" style="zoom:80%;" />
 
 </br>
 
 - Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
 
-![](..\img\NewNS37.png)
+<img src="..\img\NewNS37.png" style="zoom:80%;" />
 
 </br>
 
@@ -317,7 +322,10 @@ Scroll down and setup the following variables:
 
 `careportal` `basal` `dbsize` `rawbg` `iob` `maker` `bridge` `cob` `bwp` `cage` `iage` `sage` `boluscalc` `pushover` `treatmentnotify` `mmconnect` `loop` `pump` `profile` `food` `openaps` `bage` `alexa` `override`
 
-![](..\img\NewNS38.png)
+<img src="..\img\NewNS38.png" style="zoom:80%;" />
+
+!!! note "More on `ENABLE` words"
+    If you want to know more about them, look here: [Setup](..\setup_variables)
 
 !!! note "More on `ENABLE` words"
     If you want to know more about them, look here: [Setup](..\setup_variables)
@@ -328,67 +336,67 @@ Scroll down and setup the following variables:
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
-![](..\img\NewNS39.png)
+<img src="..\img\NewNS39.png" style="zoom:80%;" />
 
 </br>
 
 - Browse down to the end of the list and click `Deploy app`
 
-![](..\img\NewNS40.png)
+<img src="..\img\NewNS40.png" style="zoom:80%;" />
 
 </br>
 
 - **WAIT** until completion (will take some time). Do not interfere with the process until it's complete.
 
-![](..\img\NewNS41.png)
+<img src="..\img\NewNS41.png" style="zoom:80%;" />
 
 </br>
 
 - Then click `View`
 
-![](..\img\NewNS42.png)
+<img src="..\img\NewNS42.png" style="zoom:80%;" />
 
 </br>
 
 - Your Nightscout site should open, click on the hamburger menu top right and select `Profile Editor`.
 
-![](..\img\NewNS43.png)
+<img src="..\img\NewNS43.png" style="zoom:80%;" />
 
 </br>
 
 - Setup your `Time zone` and eventually all other fields. Do not leave empty fields. If you don't know which value you should use, just leave default. You can change them later.
 
-![](..\img\NewNS44.png)
+<img src="..\img\NewNS44.png" style="zoom:80%;" />
 
 </br>
 
 - Browse down to `Authentication status` and click `Authenticate`. Enter your API secret. Click `Update`.
 
-![](..\img\NewNS45.png)
+<img src="..\img\NewNS45.png" style="zoom:80%;" />
 
 </br>
 
 - Click `Save`.
 
-![](..\img\NewNS46.png)
+<img src="..\img\NewNS46.png" style="zoom:80%;" />
 
 </br>
 
 - If the following pop-up shows up click `OK`, and check status (upper right of the window).
 
-![](..\img\NewNS47.png)
+<img src="..\img\NewNS47.png" style="zoom:80%;" />
 
 </br>
 
 - Dexcom Share and CareLink users should see data flowing in after some minutes, other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
 
-![](..\img\NewNS48.png)
+<img src="..\img\NewNS48.png" style="zoom:80%;" />
 
 </br>
 
 - Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function should you need it.
 
-![](..\img\NewNS49.png)
+<img src="..\img\NewNS49.png" style="zoom:80%;" />
 
 </br></br>
 
