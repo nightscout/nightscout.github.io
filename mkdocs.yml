@@ -8,9 +8,7 @@ markdown_extensions:
         permalink: ⌁
 
 pages:
-- What is it?:
-    - 'Index': 'index.md'
-    - 'Overview': 'nightscout/overview.md'
+- What is it?: 'index.md'
 - Install: 'nightscout/new_user.md'
 - Update:
     - 'Updating your site': 'update/update.md'
