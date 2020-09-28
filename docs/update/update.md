@@ -144,7 +144,7 @@ As of 0.12, Nightscout no longer readily supports the free Azure platform. If yo
 </br>
 
 - Select your app (hidden in yellow)
-- Note: see this mLab message? Time to migrate to Atlas, it's mandatory! 
+- Note: see this mLab message? Time to [migrate](../migrate_heroku) to Atlas, it's mandatory! 
 
 <img src="../img/UpdateNS16.png" style="zoom:80%;" >
 
