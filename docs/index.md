@@ -16,7 +16,7 @@ In addition to viewing the data using a web browser, there are several applicati
 
 </br>
 
-<img src="img/cloud.png">
+<img src="./img/nscloud.png" width="800px">
 
 </br>
 
@@ -24,7 +24,9 @@ Once you have Nightscout up and running, you'll get a view that looks something 
 
 </br>
 
- <img src="img/nightscout.jpg">
+ <img src="./img/nightscout.jpg" width="600px">
+
+</br>
 
 </br>
 
