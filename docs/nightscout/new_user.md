@@ -14,7 +14,8 @@ Create your Heroku, GitHub and Atlas accounts from a computer.
 
 Do not change device/computer/browser during the creation process!
 
-If you have issues with your current browser try another one.</br></br>
+!!! note
+    If you have unexpected issues whilst creating your site restart with another browser.</br></br>
 
 
 ## Step 1: Create a GitHub account
@@ -406,11 +407,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-Most uploaders require your Nightscout URL and the API secret.
-
-For xDrip+ you need to put the URL in this format:
-
-`https://APISecret@SiteURL.herokuapp.com/api/v1`
+[Configure your uploader](..\uploader\setup.md).
 
 
 

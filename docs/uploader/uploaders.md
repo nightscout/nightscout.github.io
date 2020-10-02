@@ -43,6 +43,8 @@ Non Bluetooth Libre sensors need an additional transmitter device to send readin
 
 All proprietary apps should support upload to Nightscout (LinkBluCon, Tomato, Diabox, eDroplet, ...).
 
+[Setup your uploader](./setup.md).
+
 Open source apps xDrip+, Spike and xDrip4iOS support some of these devices.
 
 For using a Libre 2 sensor (EU only) without an additional transmitter: more information [here](https://androidaps.readthedocs.io/en/latest/EN/Hardware/Libre2.html).

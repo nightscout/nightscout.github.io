@@ -59,7 +59,7 @@ The online services and accounts needed to run a Nightscout site are free for mo
 
 A CGM sensor: Dexcom, Medtronic, Libre (plus an additional transmitter) or Eversense.
 
-An [uploader](./nightscout/uploaders.md): a mobile phone with the matching app.
+An [uploader](./uploader/uploaders.md): a mobile phone with the matching app.
 
 </br>
 

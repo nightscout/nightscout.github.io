@@ -111,7 +111,7 @@ Go back to Heroku and select `Settings`
 
 Now let’s create an Atlas account.
 
-**Do NOT close Heroku and mLab tabs, they MUST remain opened until the end of the migration.**
+!!! warning "**Do NOT close Heroku and mLab tabs, they MUST remain opened until the end of the migration.**"
 
 Open another tab at: [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas) and click `Start Free`
 
