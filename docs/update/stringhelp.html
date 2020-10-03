@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 style="font-size:2vw">Atlas migration connection string utility</h1>
+</br>
+Step 1: Copy your original mLab connection string below: </br>
+It should look like: mongodb://dbuser:dbpassword@mlabuser.mlab.com:port/dbuser </br>
+<input type="text" id="myMongo" value="" size="100">
+</br>
+Step 2: Click validate to verify the string.
+<button onclick="ValidatemLab()">Validate</button>
+<br>
+<p id="validmLab"></p>
+<p id="user"></p>
+<p id="pwd"></p>
+</br>
+Step 3: Copy your new Atlas connection string below: </br>
+It should look like mongodb+srv://dbuser:&lt;password&gt;@cluster0.zzzzz.mongodb.net/dbuser?retryWrites=true&w=majority</br>
+<input type="text" id="myAtlas" value="" size="150">
+</br>
+Step 4: Click validate to verify the string.
+<button onclick="ValidateAtlas()">Validate</button>
+<p id="validAtlas"></p>
+<p id="auser"></p>
+</br>
+<p>Step 5: Click Convert</p>
+<button onclick="Generate()">Convert</button>
+<p style="font-size:30px" id="result"></p>
+Step 6: Copy the resulting connection string in Heroku
+<script>
+
+var bmLAB =  0;
+var bAtlas = 0;
+var sUsr, sPwd, sAusr;
+var sFinalString = "Not defined yet";
+  
+function ValidatemLab()
+{
+  bmLab=0;
+  var sString = "Looks good! Verify your mLab user name and password below:";
+  var sMongo = document.getElementById("myMongo").value;
+  var iS = sMongo.search("://");
+  if(iS!=7) { sString = "MONGODB_URI should start with mongodb://"; }
+  else
+  {
+    sMongo = sMongo.substring(2);
+    var iE = sMongo.search("@");
+    if(iE!=-1)
+    {
+      var sUsr = sMongo.substring(iS, iE);
+	  var iM = sUsr.search(":");
+	  if(iM!=-1)
+	  {
+	    sPwd = sUsr.substring(iM + 1);
+	    sUsr = sUsr.substring(1,iM);
+        bmLab=1;
+      }
+	  else sString = "MONGODB_URI should contain : between user and password";
+    }
+    else sString = "MONGODB_URI should contain @ after the password";
+  }
+  document.getElementById("validmLab").innerHTML = sString;
+  if(bmLab==1)
+  {
+    document.getElementById("user").innerHTML = sUsr;
+    document.getElementById("pwd").innerHTML = sPwd;
+  }
+}
+
+function ValidateAtlas()
+{
+  bAtlas=0;
+  var sString = "Looks good! Verify your Atlas user name below:";
+  var sAtlas = document.getElementById("myAtlas").value;
+  var sdB = document.getElementById("myAtlas").value;
+  var iAS = sAtlas.search("://");
+  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
+  else
+  {
+    var iAP = sAtlas.search("<password>");
+    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
+    else
+    {
+      sString = sAtlas.substring(0,iAP);
+      sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10));
+      bAtlas=1;
+    }
+  }
+  
+  if(bAtlas==1)
+  {
+    sAusr = sAtlas.substring(14, iAP-1);
+    document.getElementById("auser").innerHTML = sAusr;
+  }
+  document.getElementById("validAtlas").innerHTML = "Looks good! Verify your Atlas user name below is the same than mLab:";
+}
+
+function Generate()
+{
+  var sString = sFinalString;
+  ValidatemLab();
+  ValidateAtlas();
+  if(bmLab==0) {sString = "Validate mLab string first";}
+  else if(bAtlas==0) {sString = "Validate Atlas string first";}
+  document.getElementById("result").innerHTML = sString;
+}
+</script>
+
+</body>
+</html>
