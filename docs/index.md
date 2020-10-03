@@ -10,7 +10,7 @@
 
 Nightscout (CGM in the Cloud) is an open source, DIY project cloud application, which you can install yourself using free hosting from various cloud service providers. Once installed, Nightscout acts as a central repository of blood glucose and insulin dosing data for a single person, allowing you to view the CGM graph and other data anywhere using a web browser.
 
-The CGM data is sent to Nightscout using an uploader application such as xDrip+, Spike and Medtronic uploader, running on a mobile phone carried by the person being monitored, or directly from your Dexcom or CareLink account. The application you'll need for uploading the data depends on which CGM device you're using.
+The CGM data is sent to Nightscout using an uploader application such as xDrip+, Spike or Medtronic uploader, running on a mobile phone carried by the person being monitored, or directly from your Dexcom or CareLink account. The application you'll need for uploading the data depends on which CGM device you're using.
 
 In addition to viewing the data using a web browser, there are several applications available for mobile devices and smart watches, which allow you alternate ways to view the information.
 

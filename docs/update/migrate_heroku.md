@@ -73,6 +73,9 @@ This new key will be inserted at the bottom of the list.
 
 <img src="..\img\MigrateNS07.png" style="zoom:80%;" /> 
 
+!!! info
+    If you want, open this [helper link](./stringhelp.html) in another tab, paste this string in the first field then `Validate` it.
+
 Another one…
 
 Scroll down Config Vars until you’ll see `KEY` and `VALUE`
@@ -229,6 +232,9 @@ Click on the `Copy` button.
 !!! warning "Don’t lose it"
     We’ll need it in Heroku later!
 
+!!! info
+    If you opened the helper link above, paste this string in the second field and `Validate` it.
+
 <img src="..\img\MigrateNS40.png" style="zoom:80%;" /> 
 
 Click `Confirm And Continue`
@@ -292,6 +298,9 @@ Copy the contents of your Notepad in a line below your Atlas string.
 
 !!!warning "The following operation is critical."
     You must insert the mLab password in your Atlas string.
+
+!!! info
+    If you used the helper link above, copy the resulting string obtained by pressing the `Convert` button.
 
 In Notepad you have two strings with this format (not these values).
 
