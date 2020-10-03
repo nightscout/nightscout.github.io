@@ -29,5 +29,5 @@ pages:
     - 'Pebble': 'nightscout/pebble.md'
     - 'Remote Notifications': 'nightscout/pushover.md'
 - Troubleshoot:
-    - 'Troubleshooting': 'nightscout/troublehoot.md'
+    - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Nightscout stopped working': 'nightscout/mlab_cleanup.md'
