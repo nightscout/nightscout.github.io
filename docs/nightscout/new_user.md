@@ -222,13 +222,15 @@ Atlas will create your default cluster, wait until completion… (can take more 
 
 `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
-- Replace `<password>` with your password as noted previously and `<dbname>` by any text you want, say mycgmic for example. The result will be like this:
+!!!info "Helper page"
+    Open [this helper page](./stringhelp.html) in another tab and insert the original connection string and both your database password and the name you decided for your database name (not important), then click `Generate` to get the final string (leave the page open).
+
+- If you want to do it manually: replace `<password>` with your password as noted previously (in the example below `soo5ecret`) and `<dbname>` by any text you want, say `mycgmic` for example. The result will be like this:
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
- 
-
-Note: there are no < and > characters in the final string, neither for password and database name.
+!!! note
+    There are no < and > characters in the final string, neither for password and database name.
 
 Keep this string safely aside, it is called your `MONGODB_URI`
 
@@ -336,6 +338,9 @@ Scroll down and setup the following variables:
 - Now you need that connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
+
+!!! note
+    This is the string generated in the helper page if you decided to use it.
 
 <img src="..\img\NewNS39.png" style="zoom:80%;" />
 
