@@ -1,70 +1,151 @@
-# Site creation/update issues
+# GitHub and Heroku
 
-## GitHub and Heroku
+</br>
 
-A valid GitHub Directory could not be found.
+## A valid GitHub Directory could not be found.
 
-<img src="../img/TShoot00.png" style="zoom:80%;" >
+</br>
 
-Recommended approach: change browser and retry.
+When trying to deploy a new Nightscout site, this message appears when clicking `Deploy to Heroku`.
 
-# Setup Troubleshooting
+<img src="../img/TShoot00.png" style="zoom:70%;" >
 
-If you have just tried to set up your Nightscout site and have problems with seeing all your data, please check out the information below.
+- Change browser and retry.
 
-## Dexcom data not showing
+</br>
 
-If you are using a Dexcom system, and your data is not appearing in Nightscout, there are only a limited number of reasons for that. You should check your (1) Heroku settings and (2) Dexcom Share.
+## Cannot find cgm-remote-monitor in Heroku / No GitHub source visible
 
-NOTE: The #1 reason why BGs aren't showing is that you have mismatched password and user names in Heroku settings and Dexcom. Please see blue box below for that error.
+</br>
 
-### Heroku Settings
+When updating Nightscout, `cgm-remote-monitor` doesn't appear automatically in Heroku under your repository name.
 
-Login to your Heroku account and from within Heroku settings, click on the  `Reveal Config Vars`
+<img src="../img/TShoot01.png" style="zoom:80%;" >
 
-<p align="center">
-<img src="../img/config-vars.png" width="800">
-</p> 
+When updating Nightscout, your repository name doesn't appear in `Manual Deploy` so that you can't select the `master` branch.
 
-Now from the `Config Vars` area, check the following (see screenshot below for reference):
+<img src="../img/TShoot04.png" style="zoom:80%;" >
 
-1. You must use the same `BRIDGE_PASSWORD` or `BRIDGE_USER_NAME` that your Dexcom mobile app is using.
-2. You must have `bridge` and `careportal` on the `ENABLE` line (you can have other values there...but don't forget these two).
-3. If you are outside the USA, you must add `BRIDGE_SERVER` set to `EU` in Heroku settings.
-4. Your `careportal` must be one word in the `ENABLE` line, sometimes autocorrect makes it two words.
-5. If using `mmol`, make sure you have spelled that value correctly in the `DISPLAY_UNITS`.
+- `Disconnect` and re-`Connect` like this:
 
-<p align="center">
-<img src="../img/bridge-settings.jpg" width="600">
-</p> 
+<img src="../../update/img/UpdateNS22.png" style="zoom:80%;" >
 
-One thing that can happen if you have an incorrect Dexcom login/password in Loop's CGM Share account settings and/or in your Nightscout BRIDGE settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. 
+<img src="../../update/img/UpdateNS21.png" style="zoom:80%;" >
 
-<p align="center">
-<img src="../img/heroku-logs.png" width="800">
-</p> 
+- If it doesn't help try to re-authorize as explained below:
 
+</br>
 
-Do your logs have "SSO authentication errors" like in the red box highlighted above? If you do, then:
+## Cannot find cgm-remote-monitor in Heroku: Item cannot be retrieved
 
-1. Delete your share account entry from your Loop's CGM account settings...like you should have NO ENTRY in your share account settings WITHIN LOOP CGM SETTINGS.
+</br>
 
-2. Delete your BRIDGE entries within Heroku settings.  Don't delete the rows, just delete the entries within BRIDGE_PASSWORD and BRIDGE_USER_NAME.
+When updating Nightscout, `cgm-remote-monitor` doesn't appear automatically in Heroku under your repository name and an error message appears when you try to connect to GitHub.
 
-3. Wait 15 minutes and then follow the directions in the blue box below. It is important to wait the 15 minutes...the reason you can't log in right now is that your Dexcom account has a temporary lock from one of the passwords in step 1 or 2 being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you'll just keep prolonging the issue.
+<img src="../img/TShoot02.png" style="zoom:80%;" >
 
+- In Heroku, go to `Account Settings`
 
-!!!info "About your Bridge password and user name"
-    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom mobile app or online account. The values of them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. If you have double-checked everything else that could be incorrect and BGs still aren't showing in Nightscout, then you likely have those Bridge values incorrect. To fix that, delete your Dexcom app (don't stop the session before deleting the app...just keep it going). Download the app again from the iPhone's App Store and login to the freshly-downloaded Dexcom app. **Take note** that deleting the app will not stop your session, your session will pick right back up once the transmitter pairs again. The `BRIDGE_USER_NAME` is not an email address. Use that exact same login now in your Heroku settings. You can leave your Loop's Share account info blank...you just need the transmitter ID going forward.
-    
+<img src="../../nightscout/img/NewNS13.png" style="zoom:80%;" >
 
-### Dexcom Share
-Make sure you have Dexcom Share turned ON in your Dexcom app. In the Dexcom app's main screen, find the triangle made of dots. If the dots are grey, you do not have Share turned on. Tap the triangle, and follow the directions to add a follower (yourself if you don't have someone else you'd like to invite) and turn on Share.
+- Select `Applications` and click `Re-authorize`
 
-<p align="center">
-<img src="../img/sharing.jpg" width="250">
-</p>
+<img src="../img/TShoot03.png" style="zoom:80%;" >
 
-## Loop data not showing
+- Click `Authorize GitHub` in the pop-up.
 
-If your BG data is showing, but Loop data is not (like Loop pill is empty and carbs and boluses are not showing), please delete your Nightscout account in Loop settings area. Enter the information in freshly. Make sure to use `https://` to start the site URL. Make sure there is no trailing slash at the end of the URL. Make sure you have `loop` on the ENABLE line in Heroku settings.
+</br>
+
+# Nightscout crash
+
+</br>
+
+## Application Error
+
+</br>
+
+<img src="../img/TShoot05.png" style="zoom:80%;" >
+
+- [Update Nightscout to latest release](../update/update.md).
+- It might not fix your issue but it will help find a solution.
+
+</br>
+
+## Boot Error - Unable to connect to Mongo
+
+</br>
+
+The database Heroku is pointing to is not available (like mLab after Nov 10th 2020)
+
+Your Atlas connection string is incorrect
+
+<img src="../img/TShoot06.png" style="zoom:80%;" >
+
+- Open Heroku and `Reveal Config Vars` in `Settings`
+
+<img src="../../update/img/MigrateNS03.png" style="zoom:80%;" >
+
+- Search for a variable called `MONGODB_URI` or `MONGO_CONNECTION`
+- Verify it is looking like this (without < and > characters)
+
+`mongodb+srv://atlasusername:atlaspassword@cluster0.zzzzz.mongodb.net/dbname?retryWrites=true&w=majority`
+
+- If you've just migrated to Atlas, try to use [this help page](../../update/stringhelp.html) to verify or recreate it.
+- If you've just created a new site, try to use [this help page](../../nightscout/stringhelp.html) to verify or recreate it.
+- To recover your connection string log into [Atlas](https://cloud.mongodb.com/)
+- Click `Connect` on your cluster
+
+<img src="../img/TShoot07.png" style="zoom:80%;" >
+
+- Click `Connect your application`
+
+<img src="../img/TShoot09.png" style="zoom:80%;" >
+
+- Click `Copy` then `Close`
+
+<img src="../img/TShoot10.png" style="zoom:80%;" >
+
+- Open the [the help page](../../nightscout/stringhelp.html) in a new tab and paste the string in the first field.
+- If you don't remember your password invent a new one.
+- Copy the resulting string in your Heroku variable `MONGODB_URI` or `MONGO_CONNECTION`
+- If you changed the password in the string you need to change it in the database too:
+- Click `Database Access`
+
+<img src="../img/TShoot11.png" style="zoom:80%;" >
+
+- At the end of the line, click `Edit`
+
+<img src="../img/TShoot08.png" style="zoom:80%;" >
+
+- In `Password` click `Edit Password`
+
+<img src="../img/TShoot12.png" style="zoom:80%;" >
+
+- Write down your new password make it the same than the one in your connection string
+
+<img src="../img/TShoot13.png" style="zoom:80%;" >
+
+- Click `Update User`
+
+<img src="../img/TShoot14.png" style="zoom:80%;" >
+
+- Refresh your Nightscout web page display
+
+</br>
+
+# No data in Nightscout
+
+</br>
+
+## Just after migrating from mLab to Atlas
+
+</br>
+
+- If not already done, [Update Nightscout to latest release](../update/update.md).
+- Verify your Atlas database is not read only, if migration went well on the first time it should be like this, else click `Edit`
+
+<img src="../img/TShoot15.png" style="zoom:80%;" >
+
+- Change the permissions to `Atlas Admin` and `Update User`
+
+<img src="../img/TShoot16.png" style="zoom:80%;" >
