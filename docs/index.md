@@ -63,6 +63,14 @@ An [uploader](./uploader/uploaders.md): a mobile phone with the matching app.
 
 </br>
 
+## I would prefer to pay to get it done...
+
+Then [T1Pal](https://t1pal.com/) is what you need.
+
+T1Pal has been designed by Ben West, a member of the original CGM in the Cloud team and a an original lead core developer for the Nightscout Project.
+
+</br>
+
 ## How to Use These Docs
 
 * Use the navigation menu at the top of the screen to find the info you are looking for.

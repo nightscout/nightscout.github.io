@@ -16,7 +16,11 @@ You will see them in the same order they appear when setting up a new site.
 
 If you need to modify them later, you'll find them in [Heroku](../setup_variables#editing-config-vars-in-heroku).
 
+From `Settings`, click on the  `Reveal Config Vars`
 
+<img src="../img/config-vars.png" width="800">
+
+</br>
 
 ------
 

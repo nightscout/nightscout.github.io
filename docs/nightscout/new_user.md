@@ -307,6 +307,9 @@ Scroll down and setup the following variables:
 !!! note "Password"
     *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
 
+!!! info
+    You need to have at least one follower to use Dexcom Share. See [here](../../uploader/setup/#dexcom).
+
 </br>
 
 - If you want to link your CareLink account as a data source, compile the following lines:
