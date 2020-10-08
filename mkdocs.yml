@@ -9,16 +9,19 @@ markdown_extensions:
 
 pages:
 - What is it?:
-    - 'Index': 'index.md'
-    - 'Overview': 'nightscout/overview.md'
-- Install: 'nightscout/new_user.md'
+    - 'Nightscout': 'index.md'
+    - 'How does it work?': 'nightscout/insights.md'
+    - 'Uploaders': 'uploader/uploaders.md'
+- Install:
+    - 'New Nightscout': 'nightscout/new_user.md'
 - Update:
     - 'Updating your site': 'update/update.md'
+    - 'Redeploying': 'update/redeploy.md'
     - 'Migrating to Atlas': 'update/migrate_heroku.md'
     - 'Migrating from Azure': 'update/migrate_azure.md'
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
-    - 'Uploaders': 'nightscout/uploaders.md'
+    - 'Setup the uploader': 'uploader/setup.md'
     - 'Close the loop': 'nightscout/close_loop.md'
 - Use:
     - 'Reports': 'nightscout/reports.md'
@@ -26,5 +29,5 @@ pages:
     - 'Pebble': 'nightscout/pebble.md'
     - 'Remote Notifications': 'nightscout/pushover.md'
 - Troubleshoot:
-    - 'Troubleshooting': 'nightscout/troublehoot.md'
+    - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Nightscout stopped working': 'nightscout/mlab_cleanup.md'

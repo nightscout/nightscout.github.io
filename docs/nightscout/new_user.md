@@ -14,7 +14,8 @@ Create your Heroku, GitHub and Atlas accounts from a computer.
 
 Do not change device/computer/browser during the creation process!
 
-If you have issues with your current browser try another one.</br></br>
+!!! note
+    If you have unexpected issues whilst creating your site restart with another browser.</br></br>
 
 
 ## Step 1: Create a GitHub account
@@ -221,13 +222,15 @@ Atlas will create your default cluster, wait until completion… (can take more 
 
 `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
-- Replace <password> with your password as noted previously and <dbname> by any text you want, say mycgmic for example. The result will be like this:
+!!!info "Helper page"
+    Open [this helper page](./stringhelp.html) in another tab and insert the original connection string and both your database password and the name you decided for your database name (not important), then click `Generate` to get the final string (leave the page open).
+
+- If you want to do it manually: replace `<password>` with your password as noted previously (in the example below `soo5ecret`) and `<dbname>` by any text you want, say `mycgmic` for example. The result will be like this:
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
- 
-
-Note: there are no < and > characters in the final string, neither for password and database name.
+!!! note
+    There are no < and > characters in the final string, neither for password and database name.
 
 Keep this string safely aside, it is called your `MONGODB_URI`
 
@@ -336,6 +339,9 @@ Scroll down and setup the following variables:
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
+!!! note
+    This is the string generated in the helper page if you decided to use it.
+
 <img src="..\img\NewNS39.png" style="zoom:80%;" />
 
 </br>
@@ -406,11 +412,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-Most uploaders require your Nightscout URL and the API secret.
-
-For xDrip+ you need to put the URL in this format:
-
-`https://APISecret@SiteURL.herokuapp.com/api/v1`
+[Configure your uploader](..\uploader\setup.md).
 
 
 
