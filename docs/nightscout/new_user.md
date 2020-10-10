@@ -272,11 +272,6 @@ Keep this string safely aside, it is called your `MONGODB_URI`
 
 </br>
 
-!!! note "You're getting into the core setup of your site"
-    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](..\setup_variables)
-
-</br>
-
 - Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Check the name is available.
 
 - Don’t change the region.
@@ -329,9 +324,6 @@ Scroll down and setup the following variables:
 `careportal` `basal` `dbsize` `rawbg` `iob` `maker` `bridge` `cob` `bwp` `cage` `iage` `sage` `boluscalc` `pushover` `treatmentnotify` `mmconnect` `loop` `pump` `profile` `food` `openaps` `bage` `alexa` `override`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
-
-!!! note "More on `ENABLE` words"
-    If you want to know more about them, look here: [Setup](..\setup_variables)
 
 !!! note "More on `ENABLE` words"
     If you want to know more about them, look here: [Setup](..\setup_variables)
