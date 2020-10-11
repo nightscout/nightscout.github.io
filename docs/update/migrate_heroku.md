@@ -89,10 +89,60 @@ This new key will be inserted at the bottom of the list.
 
  </br>
 
-!!! info
-    If you want, open this [helper link](./stringhelp.html) in another tab, paste this string in the first field then `Validate` it.
+#### MONGODB_URI
 
-Another one…
+**Also copy the value in the box below:**
+
+<input type="text" id="myMongo" value="" size="100">
+
+<button onclick="ValidatemLab()">Validate</button>
+
+<p id="validmLab">Click the Validate button above to verify your string</p>
+<p id="user">Click validate</p>
+<p id="pwd">Click validate</p>
+
+<script>
+var bmLAB =  0;
+var sUsr, sPwd;
+var sFinalString = "Not defined yet";
+
+function ValidatemLab()
+{
+  bmLab=0;
+  var sString = "Looks good! Verify your mLab user name and password below:";
+  var sMongo = document.getElementById("myMongo").value;
+  var iS = sMongo.search("://");
+  if(iS!=7) { sString = "MONGODB_URI should start with mongodb://"; }
+  else
+  {
+    sMongo = sMongo.substring(2);
+    var iE = sMongo.search("@");
+    if(iE!=-1)
+    {
+      var sUsr = sMongo.substring(iS, iE);
+	  var iM = sUsr.search(":");
+	  if(iM!=-1)
+	  {
+	    sPwd = sUsr.substring(iM + 1);
+	    sUsr = sUsr.substring(1,iM);
+        bmLab=1;
+      }
+	  else sString = "MONGODB_URI should contain : between user and password";
+    }
+    else sString = "MONGODB_URI should contain @ after the password";
+  }
+  document.getElementById("validmLab").innerHTML = sString;
+  if(bmLab==1)
+  {
+    document.getElementById("user").innerHTML = sUsr;
+    document.getElementById("pwd").innerHTML = sPwd;
+  }
+}
+</script>
+
+</br>
+
+All good? Then create a last entry:
 
 Scroll down Config Vars until you’ll see `KEY` and `VALUE`
 
@@ -293,7 +343,7 @@ When available, click `Confirm Connectivity`
  </br>
 
 !!! warning "Next step is critical"
-    Copy the new Atlas string and paste it in a Notepad to avoid losing it.
+    Copy the new Atlas string and paste it in a safe place to avoid losing it.
 
 Click on the `Copy` button.
 
@@ -304,16 +354,55 @@ Click on the `Copy` button.
 !!! warning "Don’t lose it"
     We’ll need it in Heroku later!
 
-!!! info
-    If you opened the helper link above, paste this string in the second field and `Validate` it.
-
 </br>
 
-Paste this Atlas string into a notepad.
+#### MONGO_CONNECTION
 
-<img src="..\img\MigrateNS40.png" style="zoom:80%;" /> 
+**Also copy the Atlas string in the box below:** 
 
- </br>
+<input type="text" id="myAtlas" value="" size="150">
+
+<button onclick="ValidateAtlas()">Validate</button>
+
+<p id="validAtlas">Click the Validate button above to verify your string</p>
+<p id="auser">This is your username</p>
+
+<script>
+var bAtlas =  0;
+var sAusr;
+
+function ValidateAtlas()
+{
+
+  bAtlas=0;
+  var sString = "Looks good! Verify your Atlas user name below:";
+  var sAtlas = document.getElementById("myAtlas").value;
+  var sdB = document.getElementById("myAtlas").value;
+  var iAS = sAtlas.search("://");
+  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
+  else
+  {
+    var iAP = sAtlas.search("<password>");
+    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
+    else
+    {
+      sString = sAtlas.substring(0,iAP);
+      sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10));
+      bAtlas=1;
+    }
+  }
+
+  if(bAtlas==1)
+  {
+    sAusr = sAtlas.substring(14, iAP-1);
+    document.getElementById("auser").innerHTML = sAusr;
+  }
+  document.getElementById("validAtlas").innerHTML = "Looks good! Verify your Atlas user name below is the same than mLab:";
+}
+
+</script>
+
+</br>
 
 Click `Confirm And Continue`
 
@@ -337,7 +426,7 @@ Click `Review Process and Begin`
 
  </br>
 
- Select `I understand …` and click `Begin Migration`
+ Select `I understand …` and click `Begin Migration` (be patient and wait for migration to complete, won't be long)
 
 <img src="..\img\MigrateNS44.png" style="zoom:80%;" /> 
 
@@ -381,25 +470,54 @@ Click `Reveal Config Vars`
 
  </br>
 
+Click `Generate` to show the string you will need to copy in `MONGO_CONNECTION`.
+
+<button onclick="Generate()">Generate</button>
+
+<p value="..." style="font-size:25px" id="result"></p>
+
+</br>
+
+<script>
+function Generate()
+{
+  var sString = sFinalString;
+  ValidatemLab();
+  ValidateAtlas();
+  if(bmLab==0) {sString = "Validate the mLab string first";}
+  else if(bAtlas==0) {sString = "Validate the Atlas string first";}
+  document.getElementById("result").innerHTML = sString;
+}
+</script>
+
+!!! note
+    If you see `Validate the mLab string first` you need to go back [there](../migrate_heroku/#mongodb_uri).
+
+!!! note
+    If you see `Validate the Atlas string first` you need to go back [there](../migrate_heroku/#mongo_connection).
+
+</br>
+
+**If you successfully generated the connection string, copy it and skip to [here](../migrate_heroku/#connection-string).**
+
+</br>
+
+**If you didn't manage to generate the connection string you can try the helper page [here](../update/stringhelp.html).**
+
+</br>
+
+**If you didn't manage to generate the connection string or you want to do it manually:**
+
 Scroll down to `MONGO_TEMP`.
 
 <img src="..\img\MigrateNS51.png" style="zoom:80%;" /> 
 
  </br>
 
-Copy the value of the variable in your Notepad one line below your Atlas string.
-
-<img src="..\img\MigrateNS52.png" /> 
-
- </br>
-
 !!!warning "The following operation is critical."
     You must insert the mLab password in your Atlas string.
 
-!!! info
-    If you used the helper link above, copy the resulting string obtained by pressing the `Convert` button.
-
-In Notepad you have two strings with this format (not these values).
+You have now two strings with this format (not these values).
 
 `mongodb+srv://heroku_zzzzzzzz:<password>@cluster-zzzzzzzz.xxxxx.mongodb.net/heroku_zzzzzzzz?retryWrites=true&w=majority`
 
@@ -413,6 +531,10 @@ In the first string you should replace `<password>`, with your real password so 
 
 !!!note
     there are no < and > remaining in this string!
+
+</br>
+
+#### Connection string
 
 Now find and edit the `MONGO_CONNECTION` variable (click the pen to edit it)
 
@@ -434,15 +556,9 @@ Confirm with `Delete Config Var`
 
  </br>
 
-Scroll up to the page top, still in `Settings`, click `More`, select `Restart all dynos`
-
-<img src="..\img\MigrateNS57.png" style="zoom:80%;" /> 
-
- </br>
-
 Congratulations, you completed migration from mLab to Atlas.
 
-Browse to your Nightscout site and wait 5/10 minutes for it to restart (make sure readings are sent to it).
+Browse to your Nightscout site and wait 5 minutes for a new value to show up (make sure readings are sent to it).
 
 </br>
 
