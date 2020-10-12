@@ -1,3 +1,27 @@
+# Overall third party services
+
+</br>
+
+## Before troubleshooting
+
+</br>
+
+Check the services you're using.
+
+Dexcom: [https://status.dexcom.com/](https://status.dexcom.com/)
+
+Carelink US: [https://carelink.minimed.com/](https://carelink.minimed.com/)
+
+Carelink non-US: [https://carelink.minimed.eu/app/login](https://carelink.minimed.eu/app/login)
+
+GitHub: [https://www.githubstatus.com/](https://www.githubstatus.com/)
+
+Heroku: [https://status.heroku.com/](https://status.heroku.com/)
+
+Atlas: [https://status.cloud.mongodb.com/](https://status.cloud.mongodb.com/)
+
+</br>
+
 # GitHub and Heroku
 
 </br>

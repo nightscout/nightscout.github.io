@@ -8,7 +8,7 @@
 
 ## Introduction
 
-Nightscout (CGM in the Cloud) is an open source cloud application, which you can install yourself using free hosting from various cloud service providers. You might also need of prefer to use paid hosting services for your database needs and to avoid the difficulties in building and maintaining your site. Once setup, Nightscout acts as a central repository of blood glucose and insulin dosing data for a single person, allowing you to view the CGM graph and other data anywhere using a web browser.
+Nightscout (CGM in the Cloud) is an open source cloud application, which you can install yourself using free hosting from various cloud service providers. You might also need or prefer to use paid hosting services for your database size needs or to avoid the difficulties in building and maintaining your site. Once setup, Nightscout acts as a central repository of blood glucose and insulin dosing data for a single person, allowing you to view the CGM graph and other data anywhere using a web browser.
 
 The CGM data is sent to Nightscout using an uploader application such as xDrip+, Spike or Medtronic uploader, running on a mobile phone carried by the person being monitored, or directly from your Dexcom or CareLink account. The application you'll need for uploading the data depends on which CGM device you're using.
 
@@ -48,7 +48,7 @@ Once you have Nightscout up and running, you'll get a view that looks something 
     - Do not rely only on it
     - Make sure you're ready to cope with an unexpected failure
     
-      **You are building your own Nightscout site and will be sole responsible for it functioning and its useage**
+      **You are building your own Nightscout site and will be sole responsible for its functioning and its use.**
 
 </br>
 
@@ -62,11 +62,11 @@ Nightscout was developed by parents of children with Type 1 Diabetes and has con
 
 Cost varies based on the setup you will need.
 
-You can build your Nightscout site and operate it entirely for free but you might suffer some limitations.
+You can build your Nightscout site and operate it **entirely for free but you might experience some limitations.**
 
-Keep in mind free hosting services will require you to maintain them yourself.
+Keep in mind free hosting services will require you to maintain them.
 
-Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
+Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
 
 Heroku Free dynos plan will not prevent your app to fall asleep in certain cases and you might need to setup an Uptime robot to prevent this. You can also make it always available upgrading to a Hobby plan. 
 
@@ -94,9 +94,9 @@ Main Facebook group: [https://www.facebook.com/groups/cgminthecloud/](https://ww
 
 !!!warning "Regarding support"
 
-    This project is DIY and supported by volunteers. Whilst you most probably will find someone wanting to help, for free, building your own Nightscout site doesn't entitle you to any form of support.
-    Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not supporting users.
-    If you'd like something to be modified for you in Nightscout, don't expect it to be done unless it's severely impacting global operations.
+    This project is DIY and supported by volunteers. Whilst you most probably will find someone ready to help for free, building your own Nightscout site doesn't entitle you to any form of support.
+    
+    Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not only supporting users.
 
 </br>
 
