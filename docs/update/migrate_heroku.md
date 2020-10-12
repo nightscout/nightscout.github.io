@@ -91,7 +91,7 @@ This new key will be inserted at the bottom of the list.
 
 #### MONGODB_URI
 
-**Also copy the value in the box below:**
+**Also paste the value in the box below:**
 
 <input type="text" id="myMongo" value="" size="100">
 
@@ -358,7 +358,7 @@ Click on the `Copy` button.
 
 #### MONGO_CONNECTION
 
-**Also copy the Atlas string in the box below:** 
+**Also paste the Atlas string in the box below:** 
 
 <input type="text" id="myAtlas" value="" size="150">
 
@@ -558,7 +558,7 @@ Confirm with `Delete Config Var`
 
 Congratulations, you completed migration from mLab to Atlas.
 
-Browse to your Nightscout site and wait 5 minutes for a new value to show up (make sure readings are sent to it).
+Browse to your Nightscout site and wait 5 minutes for a new value to show up (make sure your uploader is sending data).
 
 </br>
 
