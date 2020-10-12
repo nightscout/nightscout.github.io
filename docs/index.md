@@ -8,7 +8,7 @@
 
 ## Introduction
 
-Nightscout (CGM in the Cloud) is an open source, DIY project cloud application, which you can install yourself using free hosting from various cloud service providers. Once installed, Nightscout acts as a central repository of blood glucose and insulin dosing data for a single person, allowing you to view the CGM graph and other data anywhere using a web browser.
+Nightscout (CGM in the Cloud) is an open source cloud application, which you can install yourself using free hosting from various cloud service providers. You might also need of prefer to use paid hosting services for your database needs and to avoid the difficulties in building and maintaining your site. Once setup, Nightscout acts as a central repository of blood glucose and insulin dosing data for a single person, allowing you to view the CGM graph and other data anywhere using a web browser.
 
 The CGM data is sent to Nightscout using an uploader application such as xDrip+, Spike or Medtronic uploader, running on a mobile phone carried by the person being monitored, or directly from your Dexcom or CareLink account. The application you'll need for uploading the data depends on which CGM device you're using.
 
@@ -30,7 +30,7 @@ Once you have Nightscout up and running, you'll get a view that looks something 
 
 </br>
 
-!!!warning "Important"
+!!!warning "IMPORTANT"
 
     Please understand that this project:
     
@@ -38,6 +38,17 @@ Once you have Nightscout up and running, you'll get a view that looks something 
     - Is not approved for therapy
     
       **You take full responsibility for building and running this system and do so at your own risk.**
+
+</br>
+
+!!!warning "SAFETY"
+
+    This project requires internet availability and third party cloud services availability.
+    
+    - Do not rely only on it
+    - Make sure you're ready to cope with an unexpected failure
+    
+      **You are building your own Nightscout site and will be sole responsible for it functioning and its useage**
 
 </br>
 
@@ -49,9 +60,17 @@ Nightscout was developed by parents of children with Type 1 Diabetes and has con
 
 ## What Does It Cost?
 
-Cost varies based on the setup you will be using.
+Cost varies based on the setup you will need.
 
-The online services and accounts needed to run a Nightscout site are free for most users.
+You can build your Nightscout site and operate it entirely for free but you might suffer some limitations.
+
+Keep in mind free hosting services will require you to maintain them yourself.
+
+Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
+
+Heroku Free dynos plan will not prevent your app to fall asleep in certain cases and you might need to setup an Uptime robot to prevent this. You can also make it always available upgrading to a Hobby plan. 
+
+You can opt for a paid service if you prefer.
 
 </br>
 
@@ -61,9 +80,27 @@ A CGM sensor: Dexcom, Medtronic, Libre (plus an additional transmitter) or Evers
 
 An [uploader](./uploader/uploaders.md): a mobile phone with the matching app.
 
+Internet access.
+
+Basic skills in using a computer and following a procedure.
+
 </br>
 
-## I would prefer to pay to get it done...
+## Who Will Help Me?
+
+You will find open heart people in many Facebook groups, there are many Nightscout communities and most probably you'll find one in your own country and language.
+
+Main Facebook group: [https://www.facebook.com/groups/cgminthecloud/](https://www.facebook.com/groups/cgminthecloud/)
+
+!!!warning "Regarding support"
+
+    This project is DIY and supported by volunteers. Whilst you most probably will find someone wanting to help, for free, building your own Nightscout site doesn't entitle you to any form of support.
+    Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not supporting users.
+    If you'd like something to be modified for you in Nightscout, don't expect it to be done unless it's severely impacting global operations.
+
+</br>
+
+## I would prefer to pay someone else to manage it for me...
 
 Then [T1Pal](https://t1pal.com/) is what you need.
 
