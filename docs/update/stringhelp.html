@@ -3,7 +3,7 @@
 <body>
 <h1 style="font-size:2vw">Atlas migration connection string utility</h1>
 </br>
-Step 1: Copy your original mLab connection string below: </br>
+Step 1: Copy your original mLab MONGODB_URI connection string below: </br>
 It should look like: mongodb://dbuser:dbpassword@mlabuser.mlab.com:port/dbuser </br>
 <input type="text" id="myMongo" value="" size="100">
 </br>
@@ -26,7 +26,7 @@ Step 4: Click validate to verify the string.
 <p>Step 5: Click Convert</p>
 <button onclick="Generate()">Convert</button>
 <p style="font-size:30px" id="result"></p>
-Step 6: Copy the resulting connection string in Heroku
+Step 6: Copy the resulting connection string in the Heroku variable MONGO_CONNECTION
 <script>
 
 var bmLAB =  0;

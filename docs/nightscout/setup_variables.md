@@ -16,7 +16,11 @@ You will see them in the same order they appear when setting up a new site.
 
 If you need to modify them later, you'll find them in [Heroku](../setup_variables#editing-config-vars-in-heroku).
 
+From `Settings`, click on the  `Reveal Config Vars`
 
+<img src="../img/config-vars.png" width="800">
+
+</br>
 
 ------
 
@@ -254,21 +258,19 @@ EU
 
 Your CareLink account username, to receive CGM data from the CareLink service. Also make sure to include 'mmconnect' in your ENABLE line.
 
-</br>
-
 !!! info "More variables for `MMCONNECT` are available [here](https://github.com/nightscout/cgm-remote-monitor#mmconnect-minimed-connect-bridge) for you to add and edit in [Heroku](../setup_variables#editing-config-vars-in-heroku). "
 
 ------
+
+**MONGO_COLLECTION `Required`**
+
+The Mongo collection where CGM data is stored.
 
 !!! warning "This string is vital to your Nightscout functioning: it is the link that will allow access to the database where all your data is stored in the cloud. A wrong connection string will prevent your site to open and your data to upload in Nightscout"
 
 An Atlas database string will look like this:
 
 `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
-
-**MONGO_COLLECTION `Required`**
-
-The Mongo collection where CGM data is stored.
 
 ------
 

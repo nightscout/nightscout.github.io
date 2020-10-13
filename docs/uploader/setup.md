@@ -11,6 +11,14 @@
 
 In order to use the Dexcom Share servers to upload to Nightscout, you need to setup (and if not present add) the following variables in Heroku:
 
+From `Settings`, click on the  `Reveal Config Vars`
+
+<img src="../../nightscout/img/config-vars.png" width="800">
+
+</br>
+
+Verify, update or add these variables:
+
 <img src="../../nightscout/img/NewNS35.png" style="zoom:80%;" />
 
 </br>
@@ -29,7 +37,23 @@ You need to add `bridge` in the `ENABLE` variable. Do not delete other entries, 
 
 </br>
 
+You need at least one follower to use Dexcom Share.
+
+On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.
+
+<img src="..\img\UploadCFG09.png" style="zoom:60%;" />
+
+</br>
+
 ## Medtronic CareLink
+
+Log in Heroku.
+
+From `Settings`, click on the  `Reveal Config Vars`
+
+<img src="../../nightscout/img/config-vars.png" width="800">
+
+</br>
 
 You need to add `mmconnect` in the `ENABLE` variable. Do not delete other entries, just add `bridge` after a space.
 

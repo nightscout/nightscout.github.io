@@ -2,6 +2,10 @@
 
 </br>
 
+If you prefer videos look at [this one](https://youtu.be/C0edTQhO21g) from Katie DiSimone.
+
+<br>
+
 ## Step 1. Cleanup Github
 
 </br>

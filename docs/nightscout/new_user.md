@@ -214,13 +214,72 @@ Atlas will create your default cluster, wait until completion… (can take more 
 
 </br>
 
-- Modify the connection string:
+- Paste the string in the box below:
+
+<input type="text" id="myAtlas" value="" size="100">
+</br>
+
+- Enter your new Atlas database password and database name in the boxes below:
+
+Password: <input type="text" id="myPwd" value="soo5ecret" size="20">
+          Name: <input type="text" id="mydB" value="mycgmic" size="20">
+</br>
+
+- Click the `Generate` button:
+
+<button onclick="Generate()">Generate</button>
+
+<p style="font-size:25px" id="result">The connection string will appear here</p>
+
+<script>
+var bAtlas;
+var sdB, sPwd;
+var sFinalString = "Not defined yet";
+
+function Generate()
+{
+  var sString = sFinalString;
+
+  bAtlas=0;
+  var sString = "Looks good!";
+  var sAtlas = document.getElementById("myAtlas").value;
+  sPwd = document.getElementById("myPwd").value;
+  sdB = document.getElementById("mydB").value;
+  var iAS = sAtlas.search("://");
+  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
+  else
+  {
+    var iAP = sAtlas.search("<password>");
+    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
+    else
+    {
+      var iAD = sAtlas.search("<dbname>");
+      if(iAD==-1) { sString = "Atlas URI should contain &lt;dbname&gt;"; }
+      else
+      {
+      	bAtlas=1;
+        sString = sAtlas.substring(0,iAP);
+        sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
+        sString = sAtlas.substring(iAP+10, iAD);
+        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+8));
+      }
+    }
+  }
+
+  if(bAtlas) document.getElementById("result").innerHTML = sFinalString;
+  else document.getElementById("result").innerHTML = sString;
+}
+</script>
 
  It should be similar to this (`xxxxx` will be different):
 
-
-
 `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
+
+Keep this string safely aside, it is called your `MONGODB_URI`
+
+</br>
+
+**If you didn't manage to get the string with the automated script:** (else proceed to Step 4)
 
 !!!info "Helper page"
     Open [this helper page](./stringhelp.html) in another tab and insert the original connection string and both your database password and the name you decided for your database name (not important), then click `Generate` to get the final string (leave the page open).
@@ -231,8 +290,6 @@ Atlas will create your default cluster, wait until completion… (can take more 
 
 !!! note
     There are no < and > characters in the final string, neither for password and database name.
-
-Keep this string safely aside, it is called your `MONGODB_URI`
 
 </br></br>
 
@@ -272,11 +329,6 @@ Keep this string safely aside, it is called your `MONGODB_URI`
 
 </br>
 
-!!! note "You're getting into the core setup of your site"
-    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](..\setup_variables)
-
-</br>
-
 - Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Check the name is available.
 
 - Don’t change the region.
@@ -307,6 +359,9 @@ Scroll down and setup the following variables:
 !!! note "Password"
     *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
 
+!!! info
+    You need to have at least one follower to use Dexcom Share. See [here](../../uploader/setup/#dexcom).
+
 </br>
 
 - If you want to link your CareLink account as a data source, compile the following lines:
@@ -326,9 +381,6 @@ Scroll down and setup the following variables:
 `careportal` `basal` `dbsize` `rawbg` `iob` `maker` `bridge` `cob` `bwp` `cage` `iage` `sage` `boluscalc` `pushover` `treatmentnotify` `mmconnect` `loop` `pump` `profile` `food` `openaps` `bage` `alexa` `override`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
-
-!!! note "More on `ENABLE` words"
-    If you want to know more about them, look here: [Setup](..\setup_variables)
 
 !!! note "More on `ENABLE` words"
     If you want to know more about them, look here: [Setup](..\setup_variables)

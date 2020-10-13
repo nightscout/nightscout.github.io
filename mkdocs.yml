@@ -12,8 +12,7 @@ pages:
     - 'Nightscout': 'index.md'
     - 'How does it work?': 'nightscout/insights.md'
     - 'Uploaders': 'uploader/uploaders.md'
-- Install:
-    - 'New Nightscout': 'nightscout/new_user.md'
+- Install: 'nightscout/new_user.md'
 - Update:
     - 'Updating your site': 'update/update.md'
     - 'Redeploying': 'update/redeploy.md'

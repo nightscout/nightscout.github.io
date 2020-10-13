@@ -35,6 +35,8 @@ As of 0.12, Nightscout no longer readily supports the free Azure platform. If yo
 
 </br>
 
+It is recommended that you [migrate to Heroku+Atlas](./migrate_azure.md).
+
 </br>
 
 ## Step1: Update your repository in GitHub
@@ -87,7 +89,13 @@ As of 0.12, Nightscout no longer readily supports the free Azure platform. If yo
 
 </br>
 
-- Now comes the tricky part. Make sure the left hand side repository is yours (name hidden in yellow) and the right hand side is  `nightscout/cgm-remote-monitor`, and click `Create pull request`.
+- Now comes the tricky part.
+
+!!! warning "Don't try to update cgm-remote-monitor with your own project!"
+    Make sure the left hand side repository is yours (name hidden in yellow)
+    and the right hand side is  `nightscout/cgm-remote-monitor`.
+
+Click `Create pull request`.
 
 <img src="../img/UpdateNS07.png" style="zoom:80%;" >
 
