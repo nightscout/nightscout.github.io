@@ -151,61 +151,7 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 </br>
 
-The database Heroku is pointing to is not available (like mLab after Nov 10th 2020)
-
-Your Atlas connection string is incorrect
-
-<img src="../img/TShoot06.png" style="zoom:80%;" >
-
-- Open Heroku and `Reveal Config Vars` in `Settings`
-
-<img src="../../update/img/MigrateNS03.png" style="zoom:80%;" >
-
-- Search for a variable called `MONGODB_URI` or `MONGO_CONNECTION`
-- Verify it is looking like this (without < and > characters)
-
-`mongodb+srv://atlasusername:atlaspassword@cluster0.zzzzz.mongodb.net/dbname?retryWrites=true&w=majority`
-
-- If you've just migrated to Atlas, try to use [this help page](../../update/stringhelp.html) to verify or recreate it.
-- If you've just created a new site, try to use [this help page](../../nightscout/stringhelp.html) to verify or recreate it.
-- To recover your connection string log into [Atlas](https://cloud.mongodb.com/)
-- Click `Connect` on your cluster
-
-<img src="../img/TShoot07.png" style="zoom:80%;" >
-
-- Click `Connect your application`
-
-<img src="../img/TShoot09.png" style="zoom:80%;" >
-
-- Click `Copy` then `Close`
-
-<img src="../img/TShoot10.png" style="zoom:80%;" >
-
-- Open the [the help page](../../nightscout/stringhelp.html) in a new tab and paste the string in the first field.
-- If you don't remember your password invent a new one.
-- Copy the resulting string in your Heroku variable `MONGODB_URI` or `MONGO_CONNECTION`
-- If you changed the password in the string you need to change it in the database too:
-- Click `Database Access`
-
-<img src="../img/TShoot11.png" style="zoom:80%;" >
-
-- At the end of the line, click `Edit`
-
-<img src="../img/TShoot08.png" style="zoom:80%;" >
-
-- In `Password` click `Edit Password`
-
-<img src="../img/TShoot12.png" style="zoom:80%;" >
-
-- Write down your new password make it the same than the one in your connection string
-
-<img src="../img/TShoot13.png" style="zoom:80%;" >
-
-- Click `Update User`
-
-<img src="../img/TShoot14.png" style="zoom:80%;" >
-
-- Refresh your Nightscout web page display
+Look at this [dedicated page](./connection_string.md).
 
 </br>
 
