@@ -178,13 +178,21 @@ Look at this [dedicated page](./connection_string.md).
 
 </br>
 
+### Dexcom Share
+
+Make sure you have Dexcom Share turned ON in your Dexcom app. In the Dexcom app's main screen, find the triangle made of dots. If the dots are grey, you do not have Share turned on. Tap the triangle, and follow the directions to add a follower (yourself if you don't have someone else you'd like to invite) and turn on Share.
+
+<img src="../../nightscout/img/sharing.jpg" width="250">
+
+</br>
+
 If you are using a Dexcom system, and your data is not appearing in Nightscout, there are only a limited number of reasons for that. You should check your (1) Heroku settings and (2) Dexcom Share.
 
-NOTE: The #1 reason why BGs aren't showing is that you have mismatched password and user names in Heroku settings and Dexcom. Please see blue box below for that error.
+NOTE: The #1 reason why BGs aren't showing is that you have mismatched password and user names in Heroku settings and Dexcom.
 
 ### Heroku Settings
 
-Login to your Heroku account and from within Heroku `Settings`, click on the  `Reveal Config Vars`
+Login to your [Heroku](https://www.heroku.com/) account and from within Heroku `Settings`, click on the  `Reveal Config Vars`
 
 <img src="../../nightscout/img/config-vars.png" width="800">
 
@@ -204,7 +212,7 @@ Now from the `Config Vars` area, check the following (see screenshot below for r
 </br>
 
 
-One thing that can happen if you have an incorrect Dexcom login/password in Loop's CGM Share account settings and/or in your Nightscout BRIDGE settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. 
+One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout BRIDGE settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. 
 
 <img src="../../nightscout/img/heroku-logs.png">
 
@@ -212,19 +220,94 @@ One thing that can happen if you have an incorrect Dexcom login/password in Loop
 
 Do your logs have "SSO authentication errors" like in the red box highlighted above? If you do, then:
 
-1. Delete your share account entry from your Loop's CGM account settings...like you should have NO ENTRY in your share account settings WITHIN LOOP CGM SETTINGS.
+1. Delete your BRIDGE entries within Heroku settings.  Don't delete the variables, just delete the values of BRIDGE_PASSWORD and BRIDGE_USER_NAME.
+3. Wait 15 minutes and then follow the directions below. It is important to wait 15 minutes: the reason you can't log in right now is that your Dexcom account has a temporary lock from the passwords in the step above being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you'll just keep prolonging the issue.
 
-2. Delete your BRIDGE entries within Heroku settings.  Don't delete the rows, just delete the entries within BRIDGE_PASSWORD and BRIDGE_USER_NAME.
-
-3. Wait 15 minutes and then follow the directions in the blue box below. It is important to wait the 15 minutes...the reason you can't log in right now is that your Dexcom account has a temporary lock from one of the passwords in step 1 or 2 being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you'll just keep prolonging the issue.
-
+When you change these variables, Heroku restarts Nightscout. So now everything should work.
 
 !!!info "About your Bridge password and user name"
     The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom mobile app or online account. The values of them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. If you have double-checked everything else that could be incorrect and BGs still aren't showing in Nightscout, then you likely have those Bridge values incorrect. To fix that, delete your Dexcom app (don't stop the session before deleting the app...just keep it going). Download the app again from the iPhone's App Store and login to the freshly-downloaded Dexcom app. **Take note** that deleting the app will not stop your session, your session will pick right back up once the transmitter pairs again. The `BRIDGE_USER_NAME` is not an email address. Use that exact same login now in your Heroku settings. You can leave your Loop's Share account info blank...you just need the transmitter ID going forward.
     
 
-### Dexcom Share
+### Dexcom username issue
 
-Make sure you have Dexcom Share turned ON in your Dexcom app. In the Dexcom app's main screen, find the triangle made of dots. If the dots are grey, you do not have Share turned on. Tap the triangle, and follow the directions to add a follower (yourself if you don't have someone else you'd like to invite) and turn on Share.
+It seems that Dexcom share somewhere in its systems is not capable of using the username other than ordinary letters.
 
-<img src="../../nightscout/img/sharing.jpg" width="250">
+By changing the username, this has been solved for everyone who has tried so far. If that doesn't work for you, please report it at [https://github.com/nightscout/cgm-remote-monitor/issues/5608](https://github.com/nightscout/cgm-remote-monitor/issues/5608) or if you can comment on any Facebook post that linked to this site.
+
+#### Change username
+
+Unfortunately, it is not possible to change the username of a Dexcom account. You have to create a whole new account.
+
+#### Create new account
+
+Go to [https://www.dexcom.com](https://www.dexcom.com/) and look for where to create account. Follow the instructions to create a new account. You can only associate an email address with one Dexcom account. Make sure to use another email for the new account. The alternative is to delete the old account. But do **not** do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period . underscore `_` and at `@` characters creates problems, but we do not know which other characters can create problems.
+
+#### Reinstall Dexcom Transmitter app
+
+When you install the Dexcom app, it is linked to a Dexcom account. Unfortunately, there is no way to switch accounts. What you have to do is simply uninstall the app and reinstall it. In principle, it is the same procedure as changing phone. Of course, this time you should log in with the new account.
+
+- Write down the current Transmitter ID. You can find the ID if you look in settings in the Dexcom app.
+- Uninstall the Dexcom app
+- Reinstall the Dexcom app
+- Log in with your new account
+- Follow the instructions in the app.
+- For G6 do not select sensor code. The sensor code is already saved on your old transmitter.
+- Enter the transmitter ID and wait for pairing
+- Answer yes to the question "have you inserted sensor"
+
+You then have to re-invite your followers.
+
+#### Nightscout
+
+Check your Heroku settings match your new credentials (see above)
+
+</br>
+
+## Dexcom or CareLink data stopping after a while
+
+</br>
+
+First verify you can see your BG in Clarity or CareLink.
+
+If data is present open Heroku and check you app didn't fall asleep.
+
+<img src="../img/TShoot25.png" style="zoom:80%;" >
+
+</br>
+
+A sleeping might be due to your Heroku free plan: a Hobby plan makes the app never sleep. [https://www.heroku.com/pricing](https://www.heroku.com/pricing) 
+
+If this is the case you will need to setup an uptime robot. [https://uptimerobot.com/](https://uptimerobot.com/)
+
+Select `Register for FREE` and create an account.
+
+<img src="../img/TShoot26.png" style="zoom:80%;" >
+
+</br>
+
+Check your email (also check the spam folder) and activate your account.
+
+Your dashboard will open, click `+ Add New Monitor`
+
+<img src="../img/TShoot27.png" style="zoom:80%;" >
+
+</br>
+
+In `Monitor Type` select  `HTTP(s)`
+
+<img src="../img/TShoot28.png" style="zoom:80%;" >
+
+</br>
+
+Add a `Friendly Name` (any), type your Nightscout site page then click `Create Monitor`
+
+You can enable your email address as an alert contact to inform you if your site goes down.
+
+<img src="../img/TShoot29.png" style="zoom:80%;" >
+
+</br>
+
+After a moment your monitored site will show 100% up.
+
+This will keep your Heroku app active, but should the data source go down, it will not help getting data into it.
