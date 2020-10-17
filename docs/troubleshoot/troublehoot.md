@@ -241,7 +241,7 @@ Unfortunately, it is not possible to change the username of a Dexcom account. Yo
 
 #### Create new account
 
-Go to [https://www.dexcom.com](https://www.dexcom.com/) and look for where to create account. Follow the instructions to create a new account. You can only associate an email address with one Dexcom account. Make sure to use another email for the new account. The alternative is to delete the old account. But do **not** do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period . underscore `_` and at `@` characters creates problems, but we do not know which other characters can create problems.
+You can only associate one email address with a Dexcom account, so it might be a good idea to create a new email address and associate it to your current account so that you can use your current email with the new account. Go to [https://www.dexcom.com](https://www.dexcom.com/) and look for where to create accounts. Follow the instructions to create a new account.  The alternative is to delete the old account. But do **not** do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period . underscore `_` and at `@` characters creates problems, but we do not know which other characters can create problems.
 
 #### Reinstall Dexcom Transmitter app
 
