@@ -77,6 +77,7 @@ When updating Nightscout, `cgm-remote-monitor` doesn't appear automatically in H
 <img src="../img/TShoot03.png" style="zoom:80%;" >
 
 - Click `Authorize GitHub` in the pop-up.
+- If it doesn't help, you can also try to `Revoke access`... before going back to Re-`Connect` your GitHub account. This is necessary if someone else did setup Nightscout for you and left his own GitHub connected to your Heroku account.
 
 </br>
 
@@ -311,3 +312,86 @@ You can enable your email address as an alert contact to inform you if your site
 After a moment your monitored site will show 100% up.
 
 This will keep your Heroku app active, but should the data source go down, it will not help getting data into it.
+
+</br>
+
+# Data timing issues
+
+</br>
+
+## Basal is shifted in time
+
+</br>
+
+- Check the time zone is correct for your currently active profile in your Nightscout `Profile editor`.
+
+<img src="../img/TShoot30.png" style="zoom:75%;" >
+
+</br>
+
+## Data in the future
+
+</br>
+
+- Check you don't have data in the future with the `Admin tools`. Remove them if existing.
+
+<img src="../img/TShoot31.png" style="zoom:75%;" >
+
+</br>
+
+- If this isn't working, or shows no future data, check in [Atlas](https://account.mongodb.com/account/login)
+- Open your Nightscout cluster and select `Collections`
+
+<img src="../img/TShoot32.png" style="zoom:80%;" >
+
+</br>
+
+- In `Entries` type `{date:-1}` and click `Find`
+
+<img src="../img/TShoot33.png" style="zoom:80%;" >
+
+</br>
+
+- Delete the entries in the future (manually) with the bin icon
+
+<img src="../img/TShoot34.png" style="zoom:80%;" >
+
+</br>
+
+# Database full
+
+</br>
+
+Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
+
+- Make sure your Nightscout site has `Database Size` enabled to monitor database capacity
+
+<img src="../img/TShoot35.png" style="zoom:80%;" >
+
+</br>
+
+- Check in [Atlas](https://account.mongodb.com/account/login)
+- Open your Nightscout cluster and select `Collections`
+
+<img src="../img/TShoot32.png" style="zoom:80%;" >
+
+</br>
+
+- Click your database name (hidden left). Check the`DATABASE SIZE` is indeed close to or at the limit then look at these three collections `Documents size`: `devicestatus`, `entries` and `treatments`.
+
+<img src="../img/TShoot36.png" style="zoom:80%;" >
+
+- Open Nightscout  `Admin tools`.
+- Depending on the collection you identified above, choose which of the following you want to cleanup:
+
+You can cleanup (enter the number of days to keep) or delete your devices status:
+
+<img src="../img/TShoot37.png" style="zoom:80%;" >
+
+Same for `Treatments`:
+
+<img src="../img/TShoot38.png" style="zoom:80%;" >
+
+And `Glucose entries`. If you are reluctant to lose historical data you should consider opting for a paid database solution.
+
+<img src="../img/TShoot39.png" style="zoom:80%;" >
