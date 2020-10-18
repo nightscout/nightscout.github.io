@@ -218,27 +218,17 @@ Scroll down and click `Dismiss`
 
  </br>
 
-Click your name, top right, and select `View All Organizations`.
 
-<img src="..\img\MigrateNS19.png" style="zoom:80%;" /> 
-
- </br>
-
-Click on your organization name
-
-<img src="..\img\MigrateNS20.png" style="zoom:80%;" /> 
-
- </br>
-
-Click `Settings`.
-
-<img src="..\img\MigrateNS21.png" style="zoom:80%;" /> 
-
-</br>
 
 ## Step 3: mLab migration
 
 </br>
+
+Top left, click on the cog icon.
+
+<img src="..\img\MigrateNS19.png" style="zoom:80%;" /> 
+
+ </br>
 
 Check the mLab tab is still opened. If it’s on a login window, reopen it from Heroku.
 

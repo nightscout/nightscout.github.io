@@ -29,4 +29,4 @@ pages:
     - 'Remote Notifications': 'nightscout/pushover.md'
 - Troubleshoot:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
-    - 'Nightscout stopped working': 'nightscout/mlab_cleanup.md'
+    - 'Connection failure': 'troubleshoot/connection_string.md'
