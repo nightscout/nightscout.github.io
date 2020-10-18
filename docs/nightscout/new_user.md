@@ -22,6 +22,11 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
+!!! warning "If you already have a GitHub account and previously forked cgm-remote-monitor"
+    Make sure you delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github).
+
+</br>
+
 - Click this link to create a GitHub account: [https://github.com/](https://github.com/)
 - Enter a username (anything you want and that is accepted, not very important), email, and password.
 - Then click `Sign up for GitHub`
@@ -298,6 +303,9 @@ Keep this string safely aside, it is called your `MONGODB_URI`
 ## Step 4: Fork and deploy cgm-remote-monitor
 
 </br>
+
+!!! warning "If you previously forked cgm-remote-monitor before reaching this step, you should delete the existing cgm-remote-monitor repository before proceeding"
+    Delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github). </br>
 
 - You should now have three pages opened in your browser: Heroku, Atlas and Github, make sur each one is logged in
    (i.e. not asking you to login) before you continue.

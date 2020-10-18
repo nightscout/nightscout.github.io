@@ -157,6 +157,9 @@ function Analyze()
 
 </script>
 
+!!! note
+    If you migrated from mLab your username and database name should be identical.
+
 </br>
 
 - If you've just migrated to Atlas, try to use [this help page](../../update/stringhelp.html) to verify or recreate it.

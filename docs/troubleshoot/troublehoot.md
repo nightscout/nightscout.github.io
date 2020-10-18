@@ -26,7 +26,7 @@ Atlas: [https://status.cloud.mongodb.com/](https://status.cloud.mongodb.com/)
 
 </br>
 
-## A valid GitHub Directory could not be found.
+### A valid GitHub Directory could not be found.
 
 </br>
 
@@ -38,7 +38,7 @@ When trying to deploy a new Nightscout site, this message appears when clicking 
 
 </br>
 
-## Cannot find cgm-remote-monitor in Heroku / No GitHub source visible
+### Cannot find cgm-remote-monitor in Heroku / No GitHub source visible
 
 </br>
 
@@ -60,7 +60,7 @@ When updating Nightscout, your repository name doesn't appear in `Manual Deploy`
 
 </br>
 
-## Cannot find cgm-remote-monitor in Heroku: Item cannot be retrieved
+### Cannot find cgm-remote-monitor in Heroku: Item cannot be retrieved
 
 </br>
 
@@ -85,7 +85,7 @@ When updating Nightscout, `cgm-remote-monitor` doesn't appear automatically in H
 
 </br>
 
-## Limit of one free cluster.
+### Limit of one free cluster.
 
 </br>
 
@@ -131,7 +131,7 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 </br>
 
-## Application Error
+### Application Error
 
 </br>
 
@@ -148,7 +148,7 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 </br>
 
-## Boot Error - Unable to connect to Mongo
+### Boot Error - Unable to connect to Mongo
 
 </br>
 
@@ -160,7 +160,7 @@ Look at this [dedicated page](./connection_string.md).
 
 </br>
 
-## Just after migrating from mLab to Atlas
+### Just after migrating from mLab to Atlas
 
 </br>
 
@@ -175,11 +175,11 @@ Look at this [dedicated page](./connection_string.md).
 
 </br>
 
-## Dexcom data not showing
+### Dexcom data not showing
 
 </br>
 
-### Dexcom Share
+#### Dexcom Share
 
 Make sure you have Dexcom Share turned ON in your Dexcom app. In the Dexcom app's main screen, find the triangle made of dots. If the dots are grey, you do not have Share turned on. Tap the triangle, and follow the directions to add a follower (yourself if you don't have someone else you'd like to invite) and turn on Share.
 
@@ -191,7 +191,7 @@ If you are using a Dexcom system, and your data is not appearing in Nightscout, 
 
 NOTE: The #1 reason why BGs aren't showing is that you have mismatched password and user names in Heroku settings and Dexcom.
 
-### Heroku Settings
+#### Heroku Settings
 
 Login to your [Heroku](https://www.heroku.com/) account and from within Heroku `Settings`, click on the  `Reveal Config Vars`
 
@@ -265,7 +265,7 @@ Check your Heroku settings match your new credentials (see above)
 
 </br>
 
-## Dexcom or CareLink data stopping after a while
+### Dexcom or CareLink data stopping after a while
 
 </br>
 
@@ -319,7 +319,7 @@ This will keep your Heroku app active, but should the data source go down, it wi
 
 </br>
 
-## Basal is shifted in time
+### Basal is shifted in time
 
 </br>
 
@@ -329,7 +329,7 @@ This will keep your Heroku app active, but should the data source go down, it wi
 
 </br>
 
-## Data in the future
+### Data in the future
 
 </br>
 
@@ -364,7 +364,7 @@ This will keep your Heroku app active, but should the data source go down, it wi
 
 Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
 
-- Make sure your Nightscout site has `Database Size` enabled to monitor database capacity
+- Make sure your Nightscout site has `Database Size` enabled to monitor database capacity. Look [here](https://github.com/nightscout/cgm-remote-monitor#dbsize-database-size) for more information on this plugin.
 
 <img src="../img/TShoot35.png" style="zoom:80%;" >
 

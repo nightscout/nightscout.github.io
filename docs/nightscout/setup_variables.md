@@ -6,6 +6,42 @@ A complete list and description is available here: [https://github.com/nightscou
 
 </br>
 
+## Editing Config Vars in Heroku
+
+</br>
+
+Once Nightscout deployed, you can access your variables from [Heroku](https://id.heroku.com/login).
+
+- Select your app
+
+<img src="..\img\SetupNS00.png" style="zoom:80%;" />
+
+</br>
+
+- Click `Settings`
+
+<img src="..\img\SetupNS01.png" style="zoom:80%;" />
+
+</br>
+
+- Scroll down and click `Reveal Config Vars`
+
+<img src="..\img\SetupNS02.png" style="zoom:80%;" />
+
+</br>
+
+- You can modify the values clicking on the pen icon
+
+<img src="..\img\SetupNS03.png" style="zoom:80%;" />
+
+</br>
+
+- Change the contents of `Value`  as needed then click `Save Changes`
+
+<img src="..\img\SetupNS04.png" style="zoom:80%;" />
+
+</br>
+
 ## Nightscout core Config Vars
 
 </br>
@@ -330,47 +366,65 @@ Default setting for new browser views, for the time mode. ('12' or '24')
 
 </br>
 
-## Editing Config Vars in Heroku
+## Default Plugins
+
+Plugins are used to extend the way information is displayed, how notifications are sent, alarms are triggered, and more.
+
+If you want the `ENABLE`'d plugins to show by default on any browser, you should put them in the `SHOW_PLUGINS` variable.
+
+If you want to specifically disable a plugin (mainly a default plugin) you should place it in the `DISABLE` variable.
+
+You also can enable them manually on your Nightscout view from the hamburger menu. `Authenticate` and `Save` the settings on your browser.
+
+<img src="..\img\SetupNS09.png" style="zoom:80%;" />
 
 </br>
 
-Once Nightscout deployed, you can access your variables from [Heroku](https://id.heroku.com/login).
+Below some default plugins: `timeago`, `upbat`, `direction` and `delta`.
 
-- Select your app
-
-<img src="..\img\SetupNS00.png" style="zoom:80%;" />
+<img src="..\img\SetupNS11.png" style="zoom:80%;" />
 
 </br>
 
-- Click `Settings`
+`AR2` forecasting can be enabled/disabled from `... ` more about it [here](https://github.com/nightscout/nightscout.github.io/wiki/Forecasting).
 
-<img src="..\img\SetupNS01.png" style="zoom:80%;" />
-
-</br>
-
-- Scroll down and click `Reveal Config Vars`
-
-<img src="..\img\SetupNS02.png" style="zoom:80%;" />
+<img src="..\img\SetupNS10.png" style="zoom:80%;" />
 
 </br>
 
-- You can modify the values clicking on the pen icon
+Simple alarms are enabled by default if one of the `BG_HIGH`, `BG_TARGET_TOP`, `BG_TARGET_BOTTOM`, `BG_LOW` thresholds is set or `ALARM_TYPES` includes `simple`.
 
-<img src="..\img\SetupNS03.png" style="zoom:80%;" />
+You'll find the plugin in the hamburger menu. You can change thresholds in `Profile editor`.
 
-</br>
+You can click the loudspeaker icon to test the alarms volume or to snooze an active alarm.
 
-- Change the contents of `Value`  as needed then click `Save Changes`
-
-<img src="..\img\SetupNS04.png" style="zoom:80%;" />
+<img src="..\img\SetupNS12.png"/>
 
 </br>
 
-Some variables changes might require you to restart all Dynos.
+Profile editor is available from the hamburger menu with the default variable `profile`.
 
+<img src="..\img\SetupNS13.png"/>
 
+</br>
 
-## Plugins
+Database size allows you to monitor your free tier database size with the variable `dbsize`. The indication will not be accurate for other sizes than 512MiB unless you set it up correctly. See [here](https://github.com/nightscout/cgm-remote-monitor#dbsize-database-size).
 
-Work in progress...
+<img src="..\img\SetupNS15.png"/>
+
+</br>
+
+## Advanced Plugins
+
+Care Portal plugin is an important plugin that gives access to the `Log a treatment` interface. Unlock it entering your API secret with the lock icon top right, then use the `+` icon to log a treatment. The variable required to enable it is `careportal`. 
+
+<img src="..\img\SetupNS14.png" style="zoom:80%;" />
+
+</br>
+
+Bolus Wizard plugin gives access to the `Bolus Wizard` interface. You can access it with the calculator icon top right. The variable required to enable it is `boluscalc`. 
+
+<img src="..\img\SetupNS16.png" style="zoom:80%;" />
+
+</br>
 

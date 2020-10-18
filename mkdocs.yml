@@ -30,4 +30,3 @@ pages:
 - Troubleshoot:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Connection failure': 'troubleshoot/connection_string.md'
-    - 'Nightscout stopped working': 'nightscout/mlab_cleanup.md'
