@@ -67,7 +67,7 @@ function Analyze()
   iAS = sAtlas.search("<password>");
   if(iAS!=-1 && !bErr)
   { 
-    sString = "You should replace &lt;password&gt; with your actual Atlas database passwowrd in the Atlas string";
+    sString = "You should replace &lt;password&gt; with your actual Atlas database password in the Atlas string";
     bErr = 1;
   }
 
@@ -164,6 +164,12 @@ function Analyze()
 
 - If you've just migrated to Atlas, try to use [this help page](../../update/stringhelp.html) to verify or recreate it.
 - If you've just created a new site, try to use [this help page](../../nightscout/stringhelp.html) to verify or recreate it.
+- If you're still in trouble change your database password:
+
+</br>
+
+## Change your Atlas database password
+
 - To recover your connection string log into [Atlas](https://cloud.mongodb.com/)
 - Click `Connect` on your cluster
 
@@ -184,8 +190,12 @@ function Analyze()
 </br>
 
 - Open the [the help page](../../nightscout/stringhelp.html) in a new tab and paste the string in the first field.
+
+!!! warning "If you migrated from mLab and Heroku (not Azure)"
+    **Your database name should be identical to your database user name!** (Unless you modified it) "
+
 - If you don't remember your password invent a new one.
-- Copy the resulting string in your Heroku variable `MONGODB_URI` or `MONGO_CONNECTION`
+- Copy the resulting string in your Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration)
 - If you changed the password in the string you need to change it in the database too:
 - Click `Database Access`
 

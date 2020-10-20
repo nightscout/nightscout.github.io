@@ -105,7 +105,6 @@ This new key will be inserted at the bottom of the list.
 var bmLAB =  0;
 var sUsr, sPwd;
 var sFinalString = "Not defined yet";
-
 function ValidatemLab()
 {
   bmLab=0;
@@ -355,29 +354,36 @@ Click on the `Copy` button.
 <button onclick="ValidateAtlas()">Validate</button>
 
 <p id="validAtlas">Click the Validate button above to verify your string</p>
-<p id="auser">This is your username</p>
+<p id="auser">This is your Atlas database username</p>
+<p id="muser">This is your mLab database username</p>
 
 <script>
-var bAtlas =  0;
-var sAusr;
 
 function ValidateAtlas()
 {
 
   bAtlas=0;
-  var sString = "Looks good! Verify your Atlas user name below:";
+  var iAS, iAP;
+  var sString = "Undefined";
   var sAtlas = document.getElementById("myAtlas").value;
-  var sdB = document.getElementById("myAtlas").value;
-  var iAS = sAtlas.search("://");
-  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
+
+  iAS = sAtlas.search("://");
+  if(iAS!=11)
+  {
+    sString = "Atlas URI should start with mongodb+srv://";
+  }
   else
   {
-    var iAP = sAtlas.search("<password>");
-    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
+    iAP = sAtlas.search("<password>");
+    if(iAP==-1)
+    {
+      sString = "Atlas URI should contain &lt;password&gt;"; 
+    }
     else
     {
       sString = sAtlas.substring(0,iAP);
       sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10));
+      sString = "Looks good! Verify your Atlas database username below is the same as mLab database username:";
       bAtlas=1;
     }
   }
@@ -386,8 +392,10 @@ function ValidateAtlas()
   {
     sAusr = sAtlas.substring(14, iAP-1);
     document.getElementById("auser").innerHTML = sAusr;
+    document.getElementById("muser").innerHTML = document.getElementById("user").innerHTML;
+    document.getElementById("validAtlas").innerHTML 
   }
-  document.getElementById("validAtlas").innerHTML = "Looks good! Verify your Atlas user name below is the same than mLab:";
+  document.getElementById("validAtlas").innerHTML = sString;
 }
 
 </script>
@@ -471,14 +479,15 @@ Click `Generate` to show the string you will need to copy in `MONGO_CONNECTION`.
 <script>
 function Generate()
 {
-  var sString = sFinalString;
   ValidatemLab();
   ValidateAtlas();
+  var sString = sFinalString;
   if(bmLab==0) {sString = "Validate the mLab string first";}
   else if(bAtlas==0) {sString = "Validate the Atlas string first";}
   document.getElementById("result").innerHTML = sString;
 }
 </script>
+
 
 !!! note
     If you see `Validate the mLab string first` you need to go back [there](../migrate_heroku/#mongodb_uri).
