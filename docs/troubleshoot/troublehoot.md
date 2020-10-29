@@ -148,6 +148,20 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 </br>
 
+### Nightscout stopped working after a few weeks
+
+</br>
+
+Same screen than above but you received a mail from Heroku telling you you're out of dyno hours...
+
+- Check your remaining dyno hours in Heroku, click on your profile picture top right and select `Account Settings`, then `Billing`.
+
+- An account without credit card information has 550 free dyno hours, with credit card information 1000.
+
+<img src="../img/TShoot42.png" style="zoom:80%;" >
+
+</br>
+
 ### Boot Error - Unable to connect to Mongo
 
 </br>
@@ -315,6 +329,25 @@ This will keep your Heroku app active, but should the data source go down, it wi
 
 </br>
 
+### Error code instead of a BG value
+
+</br>
+
+Nightscout implements Dexcom error codes as listed below:
+
+| Code  | Corresponding error   |
+| ----- | --------------------- |
+| `?SN` | Sensor not active     |
+| `?MD` | Minimal deviation     |
+| `?NA` | No antenna            |
+| `?NC` | Sensor not calibrated |
+| `?CD` | Counts deviation      |
+| `?AD` | Absolute deviation    |
+| `???` | Power deviation       |
+| `?RF` | Bad RF                |
+
+</br>
+
 # Data timing issues
 
 </br>
@@ -364,7 +397,7 @@ This will keep your Heroku app active, but should the data source go down, it wi
 
 Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
 
-- Make sure your Nightscout site has `Database Size` enabled to monitor database capacity. Look [here](https://github.com/nightscout/cgm-remote-monitor#dbsize-database-size) for more information on this plugin.
+- Make sure your Nightscout site has `Database Size` enabled to monitor database capacity. Look [here](../../nightscout/setup_variables/#dbsize-database-size) for more information on this plugin.
 
 <img src="../img/TShoot35.png" style="zoom:80%;" >
 
@@ -383,6 +416,8 @@ Free databases like M0 Sandbox provided by Atlas will only hold a limited amount
 
 - Open Nightscout  `Admin tools`.
 - Depending on the collection you identified above, choose which of the following you want to cleanup:
+
+##### Cleanup:
 
 You can cleanup (enter the number of days to keep) or delete your devices status:
 

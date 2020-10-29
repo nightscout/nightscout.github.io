@@ -160,6 +160,8 @@ function Analyze()
 !!! note
     If you migrated from mLab your username and database name should be identical.
 
+<img src="../img/TShoot41.png" style="zoom:80%;" >
+
 </br>
 
 - If you've just migrated to Atlas, try to use [this help page](../../update/stringhelp.html) to verify or recreate it.

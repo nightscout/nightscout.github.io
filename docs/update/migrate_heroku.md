@@ -27,7 +27,15 @@ Access your Heroku account from a computer. Do not change device/computer/browse
 
 </br>
 
-[**Update your Nightscout to latest release!**](.\update.md)
+#### [**Update your Nightscout to latest release!**](.\update.md)
+
+</br>
+
+Enable dbsize and **check your sandbox database size is within 512MiB**.
+
+In the case it's oversize, [cleanup](../../troubleshoot/troublehoot/#cleanup) your database **before** migrating to Atlas.
+
+<img src="..\img\MigrateNS63.png" />
 
  </br>
 
@@ -527,6 +535,12 @@ Your password (do not copy it from this guide) is made of **26 characters** (if 
 In the first string you should replace `<password>`, with your real password so that it will look like this:
 
 `mongodb+srv://heroku_zzzzzzzz:hfo7fbh6h3dummy6o60kvjojg0@cluster-zzzzzzzz.xxxxx.mongodb.net/heroku_zzzzzzzz?retryWrites=true&w=majority`
+
+</br>
+
+<img src="..\..\troubleshoot\img\TShoot41.png" style="zoom:80%;" /> 
+
+</br>
 
 !!!note
     there are no < and > remaining in this string!
