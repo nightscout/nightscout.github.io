@@ -183,11 +183,7 @@ Once done, exit the edit mode by de-selecting it (white on black background). <i
 
 </br>
 
-## Drawer Menu
 
-For values still present on your display (last 48 hours), you can use Edit to move or delete bolus and correction treatments.
-
-<img src="..\img\UseNS17.png" /> 
 
 *More to come soon...*
 
