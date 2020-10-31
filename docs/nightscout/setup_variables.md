@@ -558,7 +558,7 @@ If you want the `ENABLE`'d plugins to **show by default on any browser**, you sh
 
 If you want to specifically disable a plugin (mainly a default plugin) you should place it in the `DISABLE` variable.
 
-You also can enable them manually on your Nightscout view from the drawer menu. `Authenticate` and `Save` the settings on your browser. Heroku variables will not be modified and only default view will be seen on a new browser window.
+You also can decide to visualize them or not on your Nightscout view with the drawer menu. `Authenticate` and `Save` the settings on your browser. Heroku variables will not be modified and only default view will be seen on a new browser window.
 
 <img src="..\img\SetupNS09.png" style="zoom:80%;" />
 
@@ -702,7 +702,7 @@ Extended settings available:
 
 ------
 
-#### Advanced Plugins:
+## Advanced Plugins:
 
 ##### `careportal` (Careportal)
 
