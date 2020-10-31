@@ -2,7 +2,7 @@
 
 </br>
 
-It should look very similar to this when your uploader has added some data.
+It should look very similar to this when your [uploader](../../uploader/setup/) has added some data.
 
 <img src="..\img\UseNS00.png" style="zoom:80%;" />
 
@@ -142,7 +142,7 @@ Logging these events will help you remember various expirations dates and will u
 
 ##### Temp Basal Stop
 
-You can indicate temporary basal rate changes using either a percentage change or the absolute rate. You need basal to be enabled to visualize it.
+You can indicate temporary basal rate changes using either a percentage change in `Percent` or the absolute rate in `Basal value`. You need [basal](../setup_variables/#basal-basal-profile) to be enabled to visualize it.
 
 <img src="..\img\UseNS15.png" style="zoom:80%;" />
 
@@ -150,11 +150,19 @@ You can indicate temporary basal rate changes using either a percentage change o
 
 ##### Profile Switch
 
-If you have more than one profile store, you can switch profile to keep your profile parameters synchronized.
+If you have more than one profile stored, you can switch profile to keep your profile parameters synchronized.
 
 For a temporary switch (like for physical activities) you can select the duration.
 
 <img src="..\img\UseNS16.png" style="zoom:80%;" />
+
+</br>
+
+##### D.A.D. Alert
+
+Log a Diabetic Alert Dog event.
+
+<img src="..\img\UseNS20.png" style="zoom:80%;" />
 
 </br>
 
@@ -174,6 +182,12 @@ Once done, exit the edit mode by de-selecting it (white on black background). <i
 <img src="..\img\UseNS19.png"/>
 
 </br>
+
+## Drawer Menu
+
+For values still present on your display (last 48 hours), you can use Edit to move or delete bolus and correction treatments.
+
+<img src="..\img\UseNS17.png" /> 
 
 *More to come soon...*
 

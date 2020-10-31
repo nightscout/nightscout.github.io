@@ -2,7 +2,7 @@
 
 </br>
 
-!!! warning "You must migrate your existing mLab MongoDB, where all your Nightscout data are stored, to MongoDB Atlas **before November 2020**."
+!!! warning "You must migrate your existing mLab MongoDB, where all your Nightscout data are stored, to MongoDB Atlas **before November 10th 2020**."
     This is essential to keep your Nightscout functioning.
 
 </br> 
@@ -15,7 +15,12 @@ To migrate your database you can use the video provided by mLab:
 
 [https://docs.mlab.com/how-to-migrate-nightscout-sandbox-heroku-addons-to-atlas/](https://docs.mlab.com/how-to-migrate-nightscout-sandbox-heroku-addons-to-atlas/)
 
-</br> 
+</br>
+
+!!!warning "If you want to migrate your site but **you don't want to keep your historical data**"
+    Follow [this easy video guide](https://www.youtube.com/watch?v=hXSLBACjYQo) from Katie DiSimone.
+
+</br>
 
 Access your Heroku account from a computer. Do not change device/computer/browser during the upgrade!
 
