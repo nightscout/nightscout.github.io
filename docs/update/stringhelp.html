@@ -32,7 +32,7 @@ Step 6: Copy the resulting connection string in the Heroku variable MONGO_CONNEC
 var bmLAB =  0;
 var bAtlas = 0;
 var sUsr, sPwd, sAusr;
-var sFinalString = "Not defined yet";
+var sFinalString = "Ooops something went wrong. Click Convert again...";
   
 function ValidatemLab()
 {
@@ -70,7 +70,7 @@ function ValidatemLab()
 function ValidateAtlas()
 {
   bAtlas=0;
-  var sString = "Looks good! Verify your Atlas user name below:";
+  var sString = "";
   var sAtlas = document.getElementById("myAtlas").value;
   var sdB = document.getElementById("myAtlas").value;
   var iAS = sAtlas.search("://");
@@ -91,8 +91,10 @@ function ValidateAtlas()
   {
     sAusr = sAtlas.substring(14, iAP-1);
     document.getElementById("auser").innerHTML = sAusr;
+    document.getElementById("validAtlas").innerHTML = "Looks good! Verify your Atlas user name below is the same than mLab:";
   }
-  document.getElementById("validAtlas").innerHTML = "Looks good! Verify your Atlas user name below is the same than mLab:";
+  else document.getElementById("validAtlas").innerHTML = sString;
+  
 }
 
 function Generate()
@@ -102,7 +104,9 @@ function Generate()
   ValidateAtlas();
   if(bmLab==0) {sString = "Validate mLab string first";}
   else if(bAtlas==0) {sString = "Validate Atlas string first";}
-  document.getElementById("result").innerHTML = sString;
+  if(sString.search(":undefined@")!=-1) sString = "Ooops something went wrong. Click Convert again...";
+  
+  document.getElementById("result").innerHTML = sString; 
 }
 </script>
 

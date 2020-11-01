@@ -23,6 +23,7 @@ pages:
     - 'Setup the uploader': 'uploader/setup.md'
     - 'Close the loop': 'nightscout/close_loop.md'
 - Use:
+    - 'Discover your site': 'nightscout/discover.md'
     - 'Reports': 'nightscout/reports.md'
     - 'IF This Then That': 'nightscout/ifttt.md'
     - 'Pebble': 'nightscout/pebble.md'

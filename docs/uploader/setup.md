@@ -3,7 +3,7 @@
 </br>
 
 !!! note
-    You usually should express the Nightscout URL in secure **https://**, not only http. 
+    You usually should express the Nightscout URL in secure **https://**, not only http://.  (Unless you set `INSECURE_USE_HTTP` to `true`)
 
 </br>
 
@@ -78,7 +78,7 @@ You might want to setup [additional fields](https://github.com/nightscout/cgm-re
 ## xDrip+
 
 !!! info "Mind the syntax!"
-    **https://APISecret@SiteURL.herokuapp.com/api/v1/**
+    **`https://APISecret@SiteURL.herokuapp.com/api/v1/`**
 
 <img src="..\img\UploadCFG00.png" style="zoom:80%;" />
 

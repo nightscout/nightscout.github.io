@@ -386,7 +386,7 @@ Scroll down and setup the following variables:
 
 - In `ENABLE` copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
-`careportal` `basal` `dbsize` `rawbg` `iob` `maker` `bridge` `cob` `bwp` `cage` `iage` `sage` `boluscalc` `pushover` `treatmentnotify` `mmconnect` `loop` `pump` `profile` `food` `openaps` `bage` `alexa` `override`
+`careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
 

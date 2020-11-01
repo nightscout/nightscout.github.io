@@ -113,3 +113,11 @@ T1Pal has been designed by Ben West, a member of the original CGM in the Cloud t
 * Use the navigation menu at the top of the screen to find the info you are looking for.
 * A Table of Contents for the current page is always displayed on the left side of the screen.
 * You can search the Nightscout Docs site by clicking the <img src="img/search_icon.png" width="50px"> icon.
+
+</br>
+
+## Feedback on this documentation
+
+You'll find the source repository here [https://github.com/nightscout/nightscout.github.io](https://github.com/nightscout/nightscout.github.io), don't hesitate to create a pull request!
+
+You're welcome to contribute or report any error, unclear explanation, typos, broken links, ... by opening an [issue](https://github.com/nightscout/nightscout.github.io/issues) in GitHub.

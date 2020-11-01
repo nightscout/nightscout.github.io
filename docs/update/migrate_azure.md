@@ -97,7 +97,6 @@ Access your accounts from a computer. Do not change device/computer/browser duri
 var bmLAB =  0;
 var sUsr, sPwd;
 var sFinalString = "Not defined yet";
-
 function ValidatemLab()
 {
   bmLab=0;
@@ -357,7 +356,8 @@ Click on the `Copy` button.
 <button onclick="ValidateAtlas()">Validate</button>
 
 <p id="validAtlas">Click the Validate button above to verify your string</p>
-<p id="auser">This is your username</p>
+<p id="auser">This is your Atlas database username</p>
+<p id="muser">This is your mLab database username</p>
 
 <script>
 var bAtlas =  0;
@@ -384,13 +384,18 @@ function ValidateAtlas()
       bAtlas=1;
     }
   }
-
+  if(bmLab!=1)
+  {
+    document.getElementById("auser").innerHTML = "Validate mLab first";
+  }
   if(bAtlas==1)
   {
     sAusr = sAtlas.substring(14, iAP-1);
     document.getElementById("auser").innerHTML = sAusr;
+    document.getElementById("muser").innerHTML = document.getElementById("user").innerHTML;
+    document.getElementById("validAtlas").innerHTML = "Looks good! Verify your Atlas database username below is the same as mLab database username:";
   }
-  document.getElementById("validAtlas").innerHTML = "Looks good! Verify your Atlas user name below is the same than mLab:";
+  else document.getElementById("validAtlas").innerHTML = sString; 
 }
 
 </script>
@@ -482,6 +487,9 @@ function Generate()
   document.getElementById("result").innerHTML = sString;
 }
 </script>
+If you have your connection string skip the next instructions and [**continue here**](../migrate_azure/#connection-string).
+
+</br>
 
 !!! note
     If you see `Validate the mLab string first` you need to go back [there](../migrate_azure/#mongodb_uri).
@@ -533,9 +541,25 @@ Paste the resulting string and click `Save changes`
 
  </br>
 
+Find the variable named `MONGODB_URI` or `MONGOLAB_URI` that you identified at the beginning and click the cross to delete it.
+
+If the original variable was already named `MONGO_CONNECTION` it's been updated now, don't delete it.
+
+<img src="..\img\MigrateNS54.png" style="zoom:80%;" /> 
+
+ </br>
+
+Confirm with `Delete Config Var`
+
+<img src="..\img\MigrateNS55.png" style="zoom:80%;" /> 
+
+ </br>
+
 Congratulations, you completed migration from Azure to Heroku and Atlas.
 
 Browse to your Nightscout site and wait 5 minutes for a new value to show up (make sure your uploader is sending data).
+
+If you have connection errors and your site doesn't start, proceed to [troubleshooting](../../troubleshoot/connection_string).
 
 </br>
 
