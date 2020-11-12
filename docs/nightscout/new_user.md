@@ -224,7 +224,7 @@ Atlas will create your default cluster, wait until completion… (can take more 
 <input type="text" id="myAtlas" value="" size="100">
 </br>
 
-- Enter your new Atlas database password and database name in the boxes below:
+- Enter your new Atlas database password and database name (only letters and numbers) in the boxes below:
 
 Password: <input type="text" id="myPwd" value="soo5ecret" size="20">
           Name: <input type="text" id="mydB" value="mycgmic" size="20">

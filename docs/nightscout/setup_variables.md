@@ -433,7 +433,7 @@ The `log-dynamic` is similar to the default `log` options, but uses the same dyn
 
 ##### **EDIT_MODE** (`on`)
 
-Possible values `on` or `off`. Enables the icon allowing for editing of treatments in the main view.
+Possible values `on` or `off`. Enables the icon allowing for editing of treatments in the main view. More about edit [here](../discover/#edit-mode-edit).
 
 <img src="..\img\SetupNS42.png" style="zoom:80%;" />
 
@@ -474,47 +474,6 @@ Add Content Security Policy headers. Possible values `false`, or `true`.
 ##### **SECURE_CSP_REPORT_ONLY** (`false`)
 
 If set to `true` allows to experiment with policies by monitoring (but not enforcing) their effects. Possible values `false`, or `true`.
-
-</br>
-
-------
-
-### Views
-
-There are a few simple default views available from the main menu:
-
-<img src="..\img\SetupNS31.png" style="zoom:80%;" />
-
-- `Clock` - Shows current BG, trend arrow, and time of day. Grey text on a black background.
-
-<img src="..\img\SetupNS32.png" style="zoom:40%;" />
-
-- `Color` - Shows current BG and trend arrow. White text on a color background.
-
-<img src="..\img\SetupNS33.png" style="zoom:40%;" />
-
-- `Simple` - Shows current BG. Grey text on a black background.
-
-- `[+]` -  Create custom, simplified views using a predefined set of elements.
-
-<img src="..\img\SetupNS34.png" style="zoom:80%;" />
-
-</br>
-
-List of available items:
-
-- `SGV` - Sensor Glucose Value
-- `SGV age` - time since the last SGV read
-- `SGV delta` - change of SGV in the last 5 minutes
-- `Trend arrow` - icon of the SG trend
-- `Time` - current time
-- `Line break` - invisible item that will move following items to the next line (by default all are showing on the same level)
-
-All visible items have `Size` property which allows to customize the view even more. Also, all items may appear multiple times on the view.
-
-Apart from adding items, it is possible to customize other aspects of the views, like selecting `Color` or `Black` background. The first one will indicate current BG threshold (green = in range; blue = below range; yellow = above range; red = urgent below/above). `Show SGV age` option will make `SGV age` item appear `Always` or only if the predefined threshold is reached: `Only after threshold`. Breaching `SGV age threshold` will also make `Color` background turn grey and strike through `SGV`. `Clock view configurator` will generate an URL (available under `Open my clock view!` link) that could be bookmarked.
-
-If you launch one of these views in a fullscreen view in iOS, you can use a left-to-right swipe gesture to exit the view.
 
 </br>
 
@@ -655,7 +614,7 @@ Generates alarms based on forecasted values. See [Forecasting using AR2 algorith
 
   You'll find the plugin in the drawer menu. You can change thresholds in `Profile editor`.
 
-  You can click the loudspeaker icon to test the alarms volume or to snooze an active alarm.
+  You can click the loudspeaker icon to test the alarms volume or to snooze an active alarm. If you want to use sound alarms, you should click the icon to enable playback at least once after opening your Nightscout page in order to allow the browser to play it.
 
 <img src="..\img\SetupNS12.png"/>
 
@@ -674,11 +633,13 @@ More variables of your profile will be used by Nightscout plugins like treatment
 
 </br>
 
+##### `dbsize` (Database Size)
+
+Show size of Nightscout Database, as a percentage of declared available space or in MiB.
+
 <img src="..\img\SetupNS15.png"/>
 
 </br>
-
-Show size of Nightscout Database, as a percentage of declared available space or in MiB.
 
 Many deployments of Nightscout use free tier of MongoDB Atlas on Heroku, which is limited in size to 512MiB. After some time, as volume of stored data grows, it may happen that this limit is reached and system is unable to store new data. This plugin provides pill that indicates size of Database and shows (when configured) alarms regarding reaching space limit.
 
@@ -708,7 +669,7 @@ Extended settings available:
 
 An optional form to enter treatments.
 
-Care Portal is an important plugin that gives access to the `Log a treatment` interface. Unlock it entering your API secret with the lock icon top right, then use the `+` icon to log a treatment. 
+Care Portal is an important plugin that gives access to the `Log a treatment` interface. Unlock it entering your API secret with the lock icon top right, then use the `+` icon to log a treatment.  More information [here](../discover/#add-a-treatment-careportal).
 
 <img src="..\img\SetupNS14.png" style="zoom:80%;" />
 
@@ -729,8 +690,6 @@ Custom Foods enabled by the variable `food` allows to to customize your food dat
 <img src="..\img\SetupNS17.png" style="zoom:80%;" />
 
 </br>
-
-##### `rawbg` (Raw BG)
 
 ##### `rawbg` (Raw BG)
 

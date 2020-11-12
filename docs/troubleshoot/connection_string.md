@@ -196,7 +196,7 @@ function Analyze()
 !!! warning "If you migrated from mLab and Heroku (not Azure)"
     **Your database name should be identical to your database user name!** (Unless you modified it) "
 
-- If you don't remember your password invent a new one.
+- If you don't remember your password invent a new one (only letters and numbers).
 - Copy the resulting string in your Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration)
 - If you changed the password in the string you need to change it in the database too:
 - Click `Database Access`

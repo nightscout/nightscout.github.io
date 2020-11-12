@@ -183,7 +183,110 @@ Once done, exit the edit mode by de-selecting it (white on black background). <i
 
 </br>
 
+## Drawer Menu
 
+You'll find many features in the drawer menu like access to advanced plugins and customizations of your web page (local view only, in order to modify the default view look into your Heroku variables [here](../setup_variables/)).
 
-*More to come soon...*
+<img src="..\img\UseNS21.png" /> 
+
+`Reports` will drive you to a powerful reporting toolset detailed [here](../reports/).
+
+`Profile Editor` will allow you to modify and add profiles, see [here](../profile_editor/).
+
+`Food Editor` handles your customized [food database](../setup_variables/#food-custom-foods).
+
+`Admin Tools` gives you access control and database tools, see [here](../admin_tools).
+
+</br>
+
+### Simple views:
+
+<img src="..\img\UseNS22.png" /> 
+
+</br>
+
+- `Clock` - Shows current BG, trend arrow, and time of day. Grey text on a black background.
+
+<img src="../img/SetupNS32.png" style="zoom:40%;" />
+
+- `Color` - Shows current BG and trend arrow. White text on a color background.
+
+<img src="../img/SetupNS33.png" style="zoom:40%;" />
+
+- `Simple` - Shows current BG. Grey text on a black background.
+
+- `[+]` -  Create custom, simplified views using a predefined set of elements.
+
+<img src="../img/SetupNS34.png" style="zoom:80%;" />
+
+</br>
+
+List of available items:
+
+- `SGV` - Sensor Glucose Value
+- `SGV age` - time since the last SGV read
+- `SGV delta` - change of SGV in the last 5 minutes
+- `Trend arrow` - icon of the SG trend
+- `Time` - current time
+- `Line break` - invisible item that will move following items to the next line (by default all are showing on the same level)
+
+All visible items have `Size` property which allows to customize the view even more. Also, all items may appear multiple times on the view.
+
+Apart from adding items, it is possible to customize other aspects of the views, like selecting `Color` or `Black` background. The first one will indicate current BG threshold (green = in range; blue = below range; yellow = above range; red = urgent below/above). `Show SGV age` option will make `SGV age` item appear `Always` or only if the predefined threshold is reached: `Only after threshold`. Breaching `SGV age threshold` will also make `Color` background turn grey and strike through `SGV`. `Clock view configurator` will generate an URL (available under `Open my clock view!` link) that could be bookmarked.
+
+If you launch one of these views in a fullscreen view in iOS, you can use a left-to-right swipe gesture to exit the view.
+
+</br>
+
+### Settings:
+
+<img src="..\img\UseNS23.png" /> 
+
+</br>
+
+You can customize your view using Settings. Changes will only be applied to your current browser view, if you want to make these settings default for any browser you need to change directly the corresponding [system variables](../setup_variables) indicated below and add the corresponding plugins in [`SHOW_PLUGINS`](../setup_variables/#plugins).
+
+You need to [authenticate](../discover/#authenticate_yourself) to save your settings. 
+
+##### [**Units `DISPLAY_UNITS`**](../setup_variables/#display_units)
+
+##### [**Date Format `TIME_FORMAT`**](../setup_variables/#time_format-12)
+
+##### [**Language `LANGUAGE`**](../setup_variables/#language-en)
+
+##### [**Scale `SCALE_Y`**](../setup_variables/#scale_y-log)
+
+##### [**Render Basal `BASAL_RENDER`**](../setup_variables/#basal-basal-profile)
+
+##### [**Render Bolus Amount `BOLUS_RENDER_OVER`**](../setup_variables/#bolus_render_over-1)
+
+##### [**Alarms `ALARM`**](../setup_variables/#alarms)
+
+</br>
+
+<img src="..\img\UseNS24.png" /> 
+
+</br>
+
+[**Edit Mode `EDIT`**](../discover/#edit-mode-edit)
+
+[**Show Raw BG Data `rawbg`**](../setup_variables/#rawbg-raw-bg)
+
+[**Custom Title `CUSTOM_TITLE`**](../setup_variables/#custom_title-nightscout)
+
+[**Theme `THEME`**](../setup_variables/#theme-colors)
+
+[**Show Plugins `SHOW_PLUGINS`**](../setup_variables/#plugins)
+
+</br>
+
+<img src="..\img\UseNS25.png" /> 
+
+</br>
+
+In order to `Save` your changes you need to Authenticate, click `Authenticate` and enter your [API Secret](../setup_variables/#api_secret).
+
+`Reset, and use defaults` will reverse your changes to defaults from your Heroku [config variables](../setup_variables/#nightscout-config-vars).
+
+In `About` you'll see your current Nightscout version.
 

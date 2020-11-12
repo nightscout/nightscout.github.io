@@ -137,8 +137,9 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 <img src="../img/TShoot05.png" style="zoom:80%;" >
 
-- [Update Nightscout to latest release](../update/update.md).
-- It might not fix your issue but it will help find a solution.
+- [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
+- If you didn't migrate from mLab to Heroku go there.
+- If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and [deploy](../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor) again after [checking](../connection_string/#change-your-atlas-database-password) the Atlas connection string is correct.
 
 </br>
 

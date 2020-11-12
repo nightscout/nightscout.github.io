@@ -25,6 +25,7 @@ pages:
 - Use:
     - 'Discover your site': 'nightscout/discover.md'
     - 'Reports': 'nightscout/reports.md'
+    - 'Profile Editor': 'nightscout/profile_editor.md'
     - 'IF This Then That': 'nightscout/ifttt.md'
     - 'Pebble': 'nightscout/pebble.md'
     - 'Remote Notifications': 'nightscout/pushover.md'
