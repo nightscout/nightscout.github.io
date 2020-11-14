@@ -55,7 +55,7 @@ From `Settings`, click on the  `Reveal Config Vars`
 
 </br>
 
-You need to add `mmconnect` in the `ENABLE` variable. Do not delete other entries, just add `bridge` after a space.
+You need to add `mmconnect` in the `ENABLE` variable. Do not delete other entries, just add `mmconnect` after a space.
 
 <img src="../../nightscout/img/NewNS38.png" style="zoom:80%;" />
 

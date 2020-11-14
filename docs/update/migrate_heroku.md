@@ -2,8 +2,8 @@
 
 </br>
 
-!!! warning "You must migrate your existing mLab MongoDB, where all your Nightscout data are stored, to MongoDB Atlas **before November 10th 2020**."
-    This is essential to keep your Nightscout functioning.
+!!! warning "You should have migrated your existing mLab MongoDB, where all your Nightscout data are stored, to MongoDB Atlas **before November 10th 2020**."
+    This was essential to keep your Nightscout functioning and now you can't access your add-on from Heroku as it's been deleted. If you absolutely need your historical data, you still have a possibility to do so **until December 8th 2020**. mLab will then shut down, migration is **mandatory**.
 
 </br> 
 
@@ -11,14 +11,14 @@ Read this:
 
 [https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ](https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ)
 
-To migrate your database you can use the video provided by mLab:
+</br>
 
-[https://docs.mlab.com/how-to-migrate-nightscout-sandbox-heroku-addons-to-atlas/](https://docs.mlab.com/how-to-migrate-nightscout-sandbox-heroku-addons-to-atlas/)
+!!!warning "If you want to recover your site (not the data)"
+    Follow [this easy video guide](https://www.youtube.com/watch?v=hXSLBACjYQo) from Katie DiSimone. Make sure to use only letters and numbers in database name and password. 
 
 </br>
 
-!!!warning "If you want to migrate your site but **you don't want to keep your historical data**"
-    Follow [this easy video guide](https://www.youtube.com/watch?v=hXSLBACjYQo) from Katie DiSimone.
+If you absolutely need your data, continue with this guide.
 
 </br>
 
@@ -28,19 +28,7 @@ Access your Heroku account from a computer. Do not change device/computer/browse
 
  </br>
 
-# Important Prerequisite
-
-</br>
-
-#### [**Update your Nightscout to latest release!**](.\update.md)
-
-</br>
-
-Enable dbsize and **check your sandbox database size is within 512MiB**.
-
-In the case it's oversize, [cleanup](../../troubleshoot/troublehoot/#cleanup) your database **before** migrating to Atlas.
-
-<img src="..\img\MigrateNS63.png" />
+# mLab database recovery
 
  </br>
 
@@ -59,6 +47,18 @@ Insert mail and password then click Log In
 Select your Nightscout app name  
 
 <img src="..\img\MigrateNS01.png" style="zoom:80%;" /> 
+
+ </br>
+
+Go to Activity and identify the line where your mLab add-on was removed (below in the red box). In the first line below that presents Remove `MONGO_CONNECTION` config var or  Remove `MONGODB_URI` config var click Roll Back to here.
+
+<img src="..\img\MigratemLab01.png" style="zoom:80%;" /> 
+
+ </br>
+
+Click Rollback  
+
+<img src="..\img\MigratemLab02.png" style="zoom:80%;" /> 
 
  </br>
 
@@ -154,7 +154,14 @@ function ValidatemLab()
 
 </br>
 
-All good? Then create a last entry:
+All good? 
+
+!!!warning "Note your mLab user name!!!"
+    It will look like `heroku_zzzzzzzz` with zzzzzzzz a sequence of letters and numbers.
+
+</br>
+
+Then create a last entry:
 
 Scroll down Config Vars until you’ll see `KEY` and `VALUE`
 
@@ -176,17 +183,23 @@ This new key will be inserted at the bottom of the list.
 
 We’ll use it later. 
 
-Now scroll all the way up and select `Overview` (top left)
+</br>
 
-<img src="..\img\MigrateNS11.png" style="zoom:80%;" /> 
+Now let's get a recovery access to the mLab database. 
+
+Open the mLab reset password page: [https://mlab.com/reset-password/](https://mlab.com/reset-password/)
+
+Enter your mLab user name and click RESET PASSWORD
+
+<img src="..\img\MigratemLab03.png" style="zoom:80%;" /> 
 
  </br>
 
-Click `mLab MongoDB`
+Check your inbox and reset the mLab account password to something simple then log into mLab [https://mlab.com/login/](https://mlab.com/login/).
 
-<img src="..\img\MigrateNS12.png" style="zoom:80%;" /> 
+<img src="..\img\MigratemLab04.png" style="zoom:80%;" /> 
 
- </br>
+</br>
 
 Another tab will open, from mLab. **Leave it open**. 
 
@@ -588,30 +601,3 @@ Browse to your Nightscout site and wait 5 minutes for a new value to show up (ma
     Versions 13.x are not optimized for the Atlas database.
 
 </br>
-
-## Step 6: Delete mLab add-on (optional)
-
-!!! warning "Warning"
-    **MAKE SURE NIGHTSCOUT IS FULLY FUNCTIONAL BEFORE REMOVING THE ADD-ON**
-
-If you want to complete the operation once you’re sure everything is working well you can remove mLab from Heroku (**and this is not necessary**).
-
-For this, in Heroku go to `Resources`
-
-<img src="..\img\MigrateNS58.png" style="zoom:80%;" /> 
-
- </br>
-
- On the right of the mLab MongoDB line, click the drop down menu then `Delete Add-on`
-
-<img src="..\img\MigrateNS59.png" style="zoom:80%;" /> 
-
- </br>
-
-Write the name of your app to confirm, click `Remove add-on`
-
-<img src="..\img\MigrateNS60.png" style="zoom:80%;" /> 
-
- </br>
-
- Migration is complete and your Nightscout doesn't have anything to do with the old mLab database now.
