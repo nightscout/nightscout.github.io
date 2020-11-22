@@ -124,6 +124,14 @@ This report will give you an hourly distribution view with a box plot and additi
 
 </br>
 
+## Percentile Chart
+
+This report will give you an percentile distribution view of the range you selected.
+
+<img src="../img/Reports16.png" style="zoom:80%;" />
+
+</br>
+
 ## Weekly success
 
 This report will give you an weekly view of your statistics.

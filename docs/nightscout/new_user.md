@@ -6,7 +6,11 @@
 
 Nightscout is DIY, if you don’t feel confident you’ll have necessary skills, give it a try, you’ll find open heart people ready to help you building it in many Facebook groups. For free. Paying it forward.
 
-Here is a step-by-step guide for completing your own Nightscout site DIY style.
+If you want to [sell installations](https://github.com/nightscout/nightscout.github.io/wiki/Can-I-sell-Nightscout), keep in mind you will be legally liable and can easily be sued by your buyers should anything bad happen to them because of Nightscout. Nightscout is not approved by FDA, CE, ... this is the reason why it's DIY.
+
+</br>
+
+#### Here is a step-by-step guide for completing your own Nightscout site DIY style.
 
 </br>
 
@@ -15,7 +19,12 @@ Create your Heroku, GitHub and Atlas accounts from a computer.
 Do not change device/computer/browser during the creation process!
 
 !!! note
-    If you have unexpected issues whilst creating your site restart with another browser.</br></br>
+    If you have unexpected issues whilst creating your site restart with another browser.
+
+!!! warning "If this is not your first attempt to deploy Nightscout"
+    You might want to do some [cleanup](../../troubleshoot/cleanup/) before.
+
+</br></br>
 
 
 ## Step 1: Create a GitHub account
@@ -184,6 +193,8 @@ Atlas will create your default cluster, wait until completion… (can take more 
 
 - Click on `Allow Access from Anywhere`
 
+!!!warning "If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database."
+
 <img src="..\img\NewNS23.png" style="zoom:80%;" />
 
 </br>
@@ -194,7 +205,19 @@ Atlas will create your default cluster, wait until completion… (can take more 
 
 </br>
 
-- Add a username (for example nightscout) and a password. Write down this information, you’ll need it later.
+- Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret`).
+
+!!! warning "Database credentials"
+    Do not use your Atlas account credentials. Do not use special characters: only letters and numbers.
+
+!!! warning "Write down these credentials in the boxes below: you’ll need them later."
+
+Database password: <input type="text" id="myPwd" value="soo5ecret" size="20">
+
+Database username: <input type="text" id="mydB" value="mycgmic" size="20">
+
+</br>
+
 - Then click `Create Database User`.
 
 <img src="..\img\NewNS25.png" style="zoom:80%;" />
@@ -219,15 +242,12 @@ Atlas will create your default cluster, wait until completion… (can take more 
 
 </br>
 
-- Paste the string in the box below:
+- Paste the string in the box below.
 
 <input type="text" id="myAtlas" value="" size="100">
-</br>
 
-- Enter your new Atlas database password and database name (only letters and numbers) in the boxes below:
-
-Password: <input type="text" id="myPwd" value="soo5ecret" size="20">
-          Name: <input type="text" id="mydB" value="mycgmic" size="20">
+!!!info "It should be similar to this (`xxxxx` will be different):"
+    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 </br>
 
 - Click the `Generate` button:
@@ -276,25 +296,24 @@ function Generate()
 }
 </script>
 
- It should be similar to this (`xxxxx` will be different):
+</br>
 
-`mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
-
-Keep this string safely aside, it is called your `MONGODB_URI`
+!!!warning
+    Keep this string safely aside, it is called your `MONGODB_URI`
 
 </br>
 
-**If you didn't manage to get the string with the automated script:** (else proceed to Step 4)
+**If you didn't manage to get the string with the automated script:** (else proceed to [Step 4](./#step-4-fork-and-deploy-cgm-remote-monitor))
 
 !!!info "Helper page"
     Open [this helper page](./stringhelp.html) in another tab and insert the original connection string and both your database password and the name you decided for your database name (not important), then click `Generate` to get the final string (leave the page open).
 
-- If you want to do it manually: replace `<password>` with your password as noted previously (in the example below `soo5ecret`) and `<dbname>` by any text you want, say `mycgmic` for example. The result will be like this:
+- If you want to do it manually: replace `<password>` with your database password as noted previously (in the example below `soo5ecret`) and `<dbname>` by any text you want, say `mycgmic` for example. The result will be like this:
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
 !!! note
-    There are no < and > characters in the final string, neither for password and database name.
+    There are no < and > characters in the final string, neither for password nor for database name.
 
 </br></br>
 
@@ -349,7 +368,7 @@ Scroll down and setup the following variables:
 
  </br>
 
-- `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and should **NOT use spaces and @ or ! symbols**.
+- `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and should **NOT use spaces and @ or ! symbols**: it is recommended to use only letters and numbers.
 
 <img src="..\img\NewNS34.png" style="zoom:80%;" />
 
@@ -418,7 +437,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Then click `View`
+- Then click `View` (if nothing happens click `Manage App` then upper right `Open App`)
 
 <img src="..\img\NewNS42.png" style="zoom:80%;" />
 

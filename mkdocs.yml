@@ -32,3 +32,4 @@ pages:
 - Troubleshoot:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Connection failure': 'troubleshoot/connection_string.md'
+    - 'Cleanup': 'troubleshoot/cleanup.md'

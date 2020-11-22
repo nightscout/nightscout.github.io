@@ -7,28 +7,29 @@
 
 </br> 
 
-Read this:
+For more information read this:
 
 [https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ](https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ)
 
+You can also use [this guide from mLab](https://docs.mlab.com/how-to-migrate-sandbox-heroku-addons-to-atlas/) else continue reading.
+
 </br>
 
-!!!warning "If you want to recover your site (not the data)"
+!!!warning "If you only need to recover your site (not the data)"
     Follow [this easy video guide](https://www.youtube.com/watch?v=hXSLBACjYQo) from Katie DiSimone. Make sure to use only letters and numbers in database name and password. 
 
 </br>
 
 If you absolutely need your data, continue with this guide.
 
+!!! warning "If this is not your first attempt to migrate or deploy Nightscout"
+    You might want to do some [cleanup](../../troubleshoot/cleanup/) before.
+
 </br>
 
 Access your Heroku account from a computer. Do not change device/computer/browser during the upgrade!
 
 !!! note "If you have issues with your current browser try another one."
-
- </br>
-
-# mLab database recovery
 
  </br>
 
@@ -48,7 +49,17 @@ Select your Nightscout app name
 
 <img src="..\img\MigrateNS01.png" style="zoom:80%;" /> 
 
- </br>
+</br>
+
+#### Case 1: You have the mLab email
+
+Write down your mLab Admin Username. Continue [here](./#backup-your-old-connection-string).
+
+<img src="..\img\MigratemLab05.png" style="zoom:50%;" /> 
+
+</br>
+
+#### Case 2: You deleted the mLab email
 
 Go to Activity and identify the line where your mLab add-on was removed (below in the red box). In the first line below that presents Remove `MONGO_CONNECTION` config var or  Remove `MONGODB_URI` config var click Roll Back to here.
 
@@ -61,6 +72,8 @@ Click Rollback
 <img src="..\img\MigratemLab02.png" style="zoom:80%;" /> 
 
  </br>
+
+#### Backup your old connection string
 
 Go to Settings
 
@@ -156,7 +169,7 @@ function ValidatemLab()
 
 All good? 
 
-!!!warning "Note your mLab user name!!!"
+!!!warning "Note your mLab Admin  Username!!!"
     It will look like `heroku_zzzzzzzz` with zzzzzzzz a sequence of letters and numbers.
 
 </br>
@@ -189,7 +202,7 @@ Now let's get a recovery access to the mLab database.
 
 Open the mLab reset password page: [https://mlab.com/reset-password/](https://mlab.com/reset-password/)
 
-Enter your mLab user name and click RESET PASSWORD
+Enter your mLab Admin  Username and click RESET PASSWORD
 
 <img src="..\img\MigratemLab03.png" style="zoom:80%;" /> 
 
@@ -568,6 +581,8 @@ In the first string you should replace `<password>`, with your real password so 
 #### Connection string
 
 Now find and edit the `MONGO_CONNECTION` variable (click the pen to edit it)
+
+!!!Warning "Do not modify the `MONGO_COLLECTION` variable that should remain set to `entries`"
 
 Paste the resulting string and click `Save changes`
 

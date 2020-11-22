@@ -2,6 +2,12 @@
 
 </br>
 
+!!! note "Azure Users"
+    As of 0.12, Nightscout no longer readily supports the free Azure platform. If you really want to keep using Azure, don’t update to this version. Read this [https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ](https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ).
+    It is recommended that you [migrate to Heroku+Atlas](./migrate_azure.md).
+
+</br>
+
 If you prefer videos look at [this one](https://youtu.be/C0edTQhO21g) from Katie DiSimone.
 
 <br>
@@ -114,13 +120,15 @@ Copy and paste your full repository name to confirm then click `I understand...`
 
 </br>
 
-- Wait until the deploy process completes and click `View `
+- Wait until the deploy process completes and click `View ` (if nothing happens click `Manage App` then upper right `Open App`)
 
 <img src="../img/UpdateNS25.png" style="zoom:80%;" >
 
 </br>
 
-- Your site will open and should be at the latest version. You're done!
+- Your site will open and should be at the latest version.
+- Check your [profile time zone](../../nightscout/profile_editor/#profile-view) is correct.
+- You're done!
 
 
 
