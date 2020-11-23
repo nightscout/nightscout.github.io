@@ -491,7 +491,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-[Configure your uploader](..\uploader\setup.md).
+[Configure your uploader](..\..\uploader\setup.md).
 
 
 
