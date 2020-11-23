@@ -138,7 +138,7 @@ When creating a new site or migrating (usually not the first attempt), when reac
 <img src="../img/TShoot05.png" style="zoom:80%;" >
 
 - [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
-- If you didn't migrate from mLab to Heroku go there.
+- If you didn't migrate Heroku from mLab to Atlas to Heroku go [there](../../update/migrate_heroku/).
 - If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and [deploy](../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor) again after [checking](../connection_string/#change-your-atlas-database-password) the Atlas connection string is correct.
 
 </br>
@@ -169,6 +169,8 @@ Same screen than above but you received a mail from Heroku telling you you're ou
 
 Look at this [dedicated page](./connection_string.md).
 
+<img src="../img/TShoot43.png" style="zoom:80%;" >
+
 </br>
 
 # No data in Nightscout
@@ -177,16 +179,7 @@ Look at this [dedicated page](./connection_string.md).
 
 ### Just after migrating from mLab to Atlas
 
-</br>
-
-- If not already done, [Update Nightscout to latest release](../update/update.md).
-- Verify your Atlas database is not read only, if migration went well on the first time it should be like this, else click `Edit`
-
-<img src="../img/TShoot15.png" style="zoom:80%;" >
-
-- Change the permissions to `Atlas Admin` and `Update User`
-
-<img src="../img/TShoot16.png" style="zoom:80%;" >
+[Check you database is not read only](../connection_string/#mongodb-in-read-only-mode).
 
 </br>
 
@@ -315,6 +308,8 @@ In `Monitor Type` select  `HTTP(s)`
 <img src="../img/TShoot28.png" style="zoom:80%;" >
 
 </br>
+
+You might want to set the monitoring interval to 15 or 20 minutes instead of 5 to save dynos usage.
 
 Add a `Friendly Name` (any), type your Nightscout site page then click `Create Monitor`
 

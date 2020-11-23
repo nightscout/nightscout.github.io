@@ -210,11 +210,12 @@ Click `Create pull request`.
 
 </br>
 
-- Wait until the deploy process completes and click `View `
+- Wait until the deploy process completes and click `View ` (if nothing happens click `Manage App` then upper right `Open App`)
 
 <img src="../img/UpdateNS25.png" style="zoom:80%;" >
 
 </br>
 
 - Your site will open and should be at the latest version. You're done!
+- Check your [profile time zone](../../nightscout/profile_editor/#profile-view) is correct.
 - Else, if you ran into trouble, try the [Redeploy](./redeploy.md) method

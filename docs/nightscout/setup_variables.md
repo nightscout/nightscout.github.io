@@ -78,6 +78,8 @@ MyV3ry53cr37
 
 ##### **MONGO_COLLECTION** ( `entries`)
 
+!!!warning "Deprecated (set as system default) from 14.0.7"
+
 The Mongo collection where CGM entries are stored. Leave default `entries`.
 
 <img src="..\img\SetupNS37.png" style="zoom:80%;" />

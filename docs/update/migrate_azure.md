@@ -2,7 +2,7 @@
 
 </br>
 
-!!! warning "You must migrate your existing mLab MongoDB, where all your Nightscout data are stored, to MongoDB Atlas **before November 2020**."
+!!! warning "You must migrate your existing mLab MongoDB, where all your Nightscout data are stored, to MongoDB Atlas **before December 8th 2020**."
     This is essential to keep your Nightscout functioning.
 
 </br> 

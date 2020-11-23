@@ -4,7 +4,7 @@
 
 ### Dexcom
 
-(1) Dexcom G4 requires additional hardware, like a [Wixel](https://github.com/StephenBlackWasAlreadyTaken/xDrip/wiki/xDrip-Wireless-Bridge), an xDripKit or (2) an Android phone with an OTG cable connected to the receiver as described [here](http://www.nightscout.info/wiki/welcome/basic-requirements).
+(1) Dexcom G4 requires additional hardware, like a [Wixel](https://github.com/StephenBlackWasAlreadyTaken/xDrip/wiki/xDrip-Wireless-Bridge), an xDripKit or (2) a compatible Android phone with an OTG cable connected to the receiver.
 
 <img src="..\img\Upload01.png" style="zoom:80%;" />
 
@@ -14,7 +14,7 @@ Dexcom G5 and G6 with the Dexcom app on your phone will upload directly to Dexco
 
 <img src="..\img\Upload02.png" style="zoom:80%;" />
 
-You can use open source uploaders for your Dexcom sensor but no data will be sent to Clarity:
+You can use open source uploaders for your Dexcom sensor but **no data will be sent to Clarity**:
 
 Android: xDrip+ for G4 (1)(2)(3), G5 and G6.
 
@@ -26,7 +26,7 @@ Loop and AAPS will upload your data directly to Nightscout and will act as uploa
 
 ### Medtronic
 
-If your sensor uploads to CareLink Nightscout will get the information directly with the `mmconnect` plugin.
+If your sensor uploads to CareLink Nightscout will get the information directly with the `mmconnect` plugin (except for 780G pump).
 
 <img src="..\img\Upload04.png" style="zoom:80%;" />
 

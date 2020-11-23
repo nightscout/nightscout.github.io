@@ -78,7 +78,7 @@ You might want to setup [additional fields](https://github.com/nightscout/cgm-re
 ## xDrip+
 
 !!! info "Mind the syntax!"
-    **`https://APISecret@SiteURL.herokuapp.com/api/v1/`**
+    **`https://API_SECRET@HerokuAppName.herokuapp.com/api/v1/`**
 
 <img src="..\img\UploadCFG00.png" style="zoom:80%;" />
 
