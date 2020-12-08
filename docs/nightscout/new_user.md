@@ -246,6 +246,8 @@ Database username: <input type="text" id="mydB" value="mycgmic" size="20">
 
 <input type="text" id="myAtlas" value="" size="100">
 
+</br>
+
 !!!info "It should be similar to this (`xxxxx` will be different):"
     `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 </br>
@@ -302,11 +304,6 @@ function Generate()
     Keep this string safely aside, it is called your `MONGODB_URI`
 
 </br>
-
-**If you didn't manage to get the string with the automated script:** (else proceed to [Step 4](./#step-4-fork-and-deploy-cgm-remote-monitor))
-
-!!!info "Helper page"
-    Open [this helper page](./stringhelp.html) in another tab and insert the original connection string and both your database password and the name you decided for your database name (not important), then click `Generate` to get the final string (leave the page open).
 
 - If you want to do it manually: replace `<password>` with your database password as noted previously (in the example below `soo5ecret`) and `<dbname>` by any text you want, say `mycgmic` for example. The result will be like this:
 
@@ -405,7 +402,7 @@ Scroll down and setup the following variables:
 
 - In `ENABLE` copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
-`careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override`
+`careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override speech cors`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
 

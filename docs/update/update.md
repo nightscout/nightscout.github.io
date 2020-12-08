@@ -29,13 +29,7 @@ This version of Nightscout will probably not run on anything older than these ve
 
 ## Azure Users
 
-</br>
-
-As of 0.12, Nightscout no longer readily supports the free Azure platform. If you really want to keep using Azure, don’t update to this version. Read this [https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ](https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ)
-
-</br>
-
-It is recommended that you [migrate to Heroku+Atlas](./migrate_azure.md).
+It is recommended that you create a new Nightscout site with Heroku.
 
 </br>
 

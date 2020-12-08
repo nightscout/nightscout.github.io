@@ -65,6 +65,9 @@ An Atlas database string will look like this:
 
 ##### **API_SECRET**
 
+!!! warning "This is an important password"
+    Knowing your site API Secret gives anybody full access to your Nightscout data, allows uploading to your site and uncontrolled access. Make sure you keep this password secret and avoid exposing it publicly.
+
 A passphrase that must be at least 12 characters long.
 
 ```
@@ -624,7 +627,7 @@ Generates alarms based on forecasted values. See [Forecasting using AR2 algorith
 
 ##### `profile` (Treatment Profile)
 
-Add a link in the drawer menu to Profile Editor and allows to enter treatment profile settings. Also uses the extended setting:
+Add a link in the drawer menu to [Profile Editor](../profile_editor/) and allows to enter treatment profile settings. Also uses the extended setting:
 
 - `PROFILE_HISTORY` (`off`) - possible values `on` or `off`. Enable/disable NS ability to keep history of your profiles (still experimental)
 - `PROFILE_MULTIPLE` (`off`) - possible values `on` or `off`. Enable/disable NS ability to handle and switch between multiple treatment profiles

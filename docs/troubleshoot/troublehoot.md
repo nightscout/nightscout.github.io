@@ -138,7 +138,8 @@ When creating a new site or migrating (usually not the first attempt), when reac
 <img src="../img/TShoot05.png" style="zoom:80%;" >
 
 - [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
-- If you didn't migrate Heroku from mLab to Atlas to Heroku go [there](../../update/migrate_heroku/).
+- If you didn't migrate your Heroku database from mLab to Atlas go [there](../../update/newdatabase/).
+- If you didn't migrate from Azure to Heroku create a new site [here](../../nightscout/new_user/).
 - If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and [deploy](../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor) again after [checking](../connection_string/#change-your-atlas-database-password) the Atlas connection string is correct.
 
 </br>
@@ -250,7 +251,7 @@ Unfortunately, it is not possible to change the username of a Dexcom account. Yo
 
 #### Create new account
 
-You can only associate one email address with a Dexcom account, so it might be a good idea to create a new email address and associate it to your current account so that you can use your current email with the new account. Go to [https://www.dexcom.com](https://www.dexcom.com/) and look for where to create accounts. Follow the instructions to create a new account.  The alternative is to delete the old account. But do **not** do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period . underscore `_` and at `@` characters creates problems, but we do not know which other characters can create problems.
+You can only associate one email address with a Dexcom account, so it might be a good idea to create a new email address and associate it to your current account so that you can use your current email with the new account. Go to [https://www.dexcom.com](https://www.dexcom.com/) and look for where to create accounts. Follow the instructions to create a new account.  The alternative is to delete the old account. But do **not** do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period `.` underscore `_` and at `@` characters creates problems, but we do not know which other characters can create problems.
 
 #### Reinstall Dexcom Transmitter app
 

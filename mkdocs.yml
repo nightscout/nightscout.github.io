@@ -16,8 +16,7 @@ pages:
 - Update:
     - 'Updating your site': 'update/update.md'
     - 'Redeploying': 'update/redeploy.md'
-    - 'Migrating to Atlas': 'update/migrate_heroku.md'
-    - 'Migrating from Azure': 'update/migrate_azure.md'
+    - 'Attach a new Atlas database': 'update/newdatabase.md'
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Setup the uploader': 'uploader/setup.md'
@@ -26,6 +25,7 @@ pages:
     - 'Discover your site': 'nightscout/discover.md'
     - 'Reports': 'nightscout/reports.md'
     - 'Profile Editor': 'nightscout/profile_editor.md'
+    - 'Admin Tools': 'nightscout/admin_tools.md'
     - 'IF This Then That': 'nightscout/ifttt.md'
     - 'Pebble': 'nightscout/pebble.md'
     - 'Remote Notifications': 'nightscout/pushover.md'
