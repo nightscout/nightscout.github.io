@@ -6,10 +6,6 @@ Updating your website to the latest version (see here which is the [current rele
 
 </br>
 
-You can also use [this video guide from Katie](https://www.youtube.com/watch?v=C0edTQhO21g). It's corresponding to the [Redeploy](./redeploy.md) method you should try if failing with the one below.
-
-</br>
-
 ## Requirements
 
 </br>
@@ -29,7 +25,7 @@ This version of Nightscout will probably not run on anything older than these ve
 
 ## Azure Users
 
-It is recommended that you create a new Nightscout site with Heroku.
+It is recommended that you [create a new Nightscout site with Heroku](../../nightscout/new_user/).
 
 </br>
 

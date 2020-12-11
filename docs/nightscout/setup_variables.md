@@ -124,7 +124,7 @@ careportal basal dbsize mmconnect
 If you don't want to decide now, add all the followings, you can disable them if you don't need them:
 
 ```
-careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override
+careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override cors
 ```
 
 </br>
@@ -1077,7 +1077,7 @@ Plugins can create custom events, but all events sent to IFTTT webhooks will be 
 
 ### Treatment Profile
 
-Some of the [plugins](https://github.com/nightscout/cgm-remote-monitor#plugins) make use of a treatment profile that can be edited using the Profile Editor, see the link in the Settings drawer on your site.
+Some of the [plugins](https://github.com/nightscout/cgm-remote-monitor#plugins) make use of a treatment profile that can be edited using the [Profile Editor](../../nightscout/profile_editor/).
 
 Treatment Profile Fields:
 

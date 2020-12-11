@@ -20,6 +20,7 @@ pages:
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Setup the uploader': 'uploader/setup.md'
+    - 'Multiple sites administration': 'nightscout/multiadmin.md'
     - 'Close the loop': 'nightscout/close_loop.md'
 - Use:
     - 'Discover your site': 'nightscout/discover.md'
