@@ -2,7 +2,7 @@
 
 </br>
 
-### Dexcom
+## Dexcom
 
 (1) Dexcom G4 requires additional hardware, like a [Wixel](https://github.com/StephenBlackWasAlreadyTaken/xDrip/wiki/xDrip-Wireless-Bridge), an xDripKit or (2) a compatible Android phone with an OTG cable connected to the receiver.
 
@@ -24,7 +24,7 @@ iOS: Spike and xDrip4iOS for G4 (1)(3), G5 and old G6 transmitters (not Firefly)
 
 Loop and AAPS will upload your data directly to Nightscout and will act as uploaders.
 
-### Medtronic
+## Medtronic
 
 If your sensor uploads to CareLink Nightscout will get the information directly with the `mmconnect` plugin (except for 780G pump).
 
@@ -34,7 +34,7 @@ Else you'll need an Android phone connected with an OTG cable to your pump Bluet
 
 <img src="..\img\Upload05.png" style="zoom:80%;" />
 
-### Libre
+## Libre
 
 Non Bluetooth Libre sensors need an additional transmitter device to send readings to the uploader. In release order you'll find these: [LimiTTer](https://github.com/JoernL/LimiTTer), blueReader, blucon, miaomiao, Bubble and Droplet.
 
@@ -49,7 +49,7 @@ Open source apps xDrip+, Spike and xDrip4iOS support some of these devices.
 
 For using a Libre 2 sensor (EU only) without an additional transmitter: more information [here](https://androidaps.readthedocs.io/en/latest/EN/Hardware/Libre2.html).
 
-### Eversense
+## Eversense
 
 You need [ESEL](https://github.com/BernhardRo/Esel) with an Android phone.
 

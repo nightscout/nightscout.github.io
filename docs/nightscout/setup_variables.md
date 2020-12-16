@@ -506,7 +506,13 @@ For example:
 
 </br>
 
-8 split view:
+To display the split view browse to:
+
+`https://yourAppName.herokuapp.com/split`
+
+</br>
+
+8 split view example:
 
 <img src="..\img\SetupNS30.png" style="zoom:80%;" />
 
@@ -706,7 +712,7 @@ Calculates BG using sensor and calibration records from and displays an alternat
 
   - `filtered` - Raw BG is calculated by applying the calibration to the glucose record's filtered value. The glucose record's filtered values are generally produced by the CGM by a running average of the unfiltered values to produce a smoothed value when the sensor noise is high.
 
-  - `unsmoothed` - Raw BG is calculated by first finding the ratio of the calculated filtered value (the same value calculated by the `filtered` setting) to the reported glucose value. The displayed raw BG value is calculated by dividing the calculated unfiltered value (the same value calculated by the `unfiltered` setting) by the ratio. The effect is to exagerate changes in trend direction so the trend changes are more noticeable to the user. This is the legacy raw BG calculation algorithm.
+  - `unsmoothed` - Raw BG is calculated by first finding the ratio of the calculated filtered value (the same value calculated by the `filtered` setting) to the reported glucose value. The displayed raw BG value is calculated by dividing the calculated unfiltered value (the same value calculated by the `unfiltered` setting) by the ratio. The effect is to exaggerate changes in trend direction so the trend changes are more noticeable to the user. This is the legacy raw BG calculation algorithm.
 
 <img src="..\img\SetupNS21.png" style="zoom:40%;" />
 
@@ -732,7 +738,7 @@ When you enter the information with the Care Portal or Nightscout receives if fr
 
 ##### `bwp` (Bolus Wizard Preview)
 
-This plugin in intended for the purpose of automatically snoozing alarms when the CGM indicates high blood sugar but there is also insulin on board (IOB) and secondly, alerting to user that it might be beneficial to measure the blood sugar using a glucometer and dosing insulin as calculated by the pump or instructed by trained medicare professionals. ***The values provided by the plugin are provided as a reference based on CGM data and insulin sensitivity you have configured, and are not intended to be used as a reference for bolus calculation.*** The plugin calculates the bolus amount when above your target, generates alarms when you should consider checking and bolusing, and snoozes alarms when there is enough IOB to cover a high BG. Uses the results of the `iob` plugin and `sens`, `target_high`, and `target_low` fields from the [treatment profile](https://github.com/nightscout/cgm-remote-monitor#treatment-profile). Defaults that can be adjusted with extended settings
+This plugin in intended for the purpose of automatically snoozing alarms when the CGM indicates high blood sugar but there is also insulin on board (IOB) and secondly, alerting to user that it might be beneficial to measure the blood sugar using a glucometer and dosing insulin as calculated by the pump or instructed by trained medicare professionals. ***The values provided by the plugin are provided as a reference based on CGM data and insulin sensitivity you have configured, and are not intended to be used as a reference for bolus calculation.*** The plugin calculates the bolus amount when above your target, generates alarms when you should consider checking and bolusing, and snoozes alarms when there is enough IOB to cover a high BG. Uses the results of the `iob` plugin and `sens`, `target_high`, and `target_low` fields from the [treatment profile](../../nightscout/profile_editor/). Defaults that can be adjusted with extended settings
 
 - `BWP_WARN` (`0.50`) - If `BWP` is > `BWP_WARN` a warning alarm will be triggered.
 - `BWP_URGENT` (`1.00`) - If `BWP` is > `BWP_URGENT` an urgent alarm will be triggered.
@@ -955,7 +961,7 @@ Integration with Amazon Alexa, [detailed setup instructions](https://github.com/
 
 </br>
 
-##### `googlehome` (Google Home/DialogFLow)
+##### `googlehome` (Google Home/DialogFlow)
 
 Integration with Google Home (via DialogFlow), [detailed setup instructions](https://github.com/nightscout/cgm-remote-monitor/blob/master/docs/plugins/googlehome-plugin.md)
 
@@ -1077,7 +1083,7 @@ Plugins can create custom events, but all events sent to IFTTT webhooks will be 
 
 ### Treatment Profile
 
-Some of the [plugins](https://github.com/nightscout/cgm-remote-monitor#plugins) make use of a treatment profile that can be edited using the [Profile Editor](../../nightscout/profile_editor/).
+Some of the [plugins](./#plugins) make use of a treatment profile that can be edited using the [Profile Editor](../../nightscout/profile_editor/).
 
 Treatment Profile Fields:
 

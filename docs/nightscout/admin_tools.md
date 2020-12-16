@@ -65,7 +65,9 @@ You will see several predefined roles:
 </br>
 
 - Click save.
-- The token will be shown. Copy the token URL (right-click on it in the browser and select the option to copy the link address) and provide it to the user (e.g., paste it into an email). If the user enters the entire URL (with token), the token will be in effect. 
+- The token will be shown. You can use it in two different ways:
+  - Copy the token URL (right-click on it in the browser and select the option to copy the link address) and provide it to the user (e.g., paste it into an email). If the user enters the entire URL (with token), the token will be in effect. 
+  - Copy the token string (in the example below `school-a595d5f0aeff64c0`) and use it for authentication at site opening, instead of the API secret (Nightscout 14.1.0 required).
 
 <img src="../img/Admin06.png" style="zoom:80%;" />
 

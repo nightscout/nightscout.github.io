@@ -1,6 +1,6 @@
 # Attach a new Atlas database to your Heroku app
 
-As of December 2020, mLab stopped operations.
+In December 2020, mLab will stop operations.
 
 If you didn't migrate your database from mLab to Atlas you need to create a new database for your Nightscout site.
 

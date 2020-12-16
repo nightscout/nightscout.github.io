@@ -479,6 +479,8 @@ Scroll down and setup the following variables:
 
 </br>
 
+##### Papertrail
+
 - Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function should you need it.
 
 <img src="..\img\NewNS49.png" style="zoom:80%;" />

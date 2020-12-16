@@ -40,7 +40,7 @@ A typical new string created with Atlas will look like this:
 
 Common reasons:
 
-- The database Heroku is pointing to is not available (like mLab after Nov 10th 2020).
+- The database Heroku is pointing to is not available (like with the mLab Heroku add-on after Nov 10th 2020 or any mLab database after Dec 2020). The reference for documentation was [here.](https://docs.mlab.com/how-to-migrate-nightscout-sandbox-heroku-addons-to-atlas/)
 
 - Your Atlas connection string is incorrect
 
