@@ -50,7 +50,7 @@ Click `SHOW` and wait for data to load and rendering to complete. This might tak
 
 </br>
 
-## Day To day
+### Day To day
 
 This report will show your BG, day by day, including the treatments you select.
 
@@ -80,7 +80,7 @@ You can change the graph `Size`.
 
 </br>
 
-## Week to Week
+### Week to Week
 
 This report will give you a week by week view, with color code for week days selected.
 
@@ -88,7 +88,7 @@ This report will give you a week by week view, with color code for week days sel
 
 </br>
 
-## Daily stats
+### Daily stats
 
 This report will give you a daily distribution view.
 
@@ -96,9 +96,13 @@ This report will give you a daily distribution view.
 
 </br>
 
-## Distribution
+### Distribution
 
 This report will give you a complete distribution view with a lot of information on the dates range you selected.
+
+You also can filter by hours (scroll to the bottom of the page).
+
+<img src="../img/Reports18.png" style="zoom:80%;" />
 
 <img src="../img/Reports12.png" style="zoom:80%;" />
 
@@ -116,7 +120,7 @@ GVI (Glycemic Variability Index) and PGS (Patient Glycemic Status) are measures 
 
 </br>
 
-## Hourly stats
+### Hourly stats
 
 This report will give you an hourly distribution view with a box plot and additional hour by hour statistics.
 
@@ -124,7 +128,7 @@ This report will give you an hourly distribution view with a box plot and additi
 
 </br>
 
-## Percentile Chart
+### Percentile Chart
 
 This report will give you an percentile distribution view of the range you selected.
 
@@ -132,7 +136,7 @@ This report will give you an percentile distribution view of the range you selec
 
 </br>
 
-## Weekly success
+### Weekly success
 
 This report will give you an weekly view of your statistics.
 
@@ -140,13 +144,13 @@ This report will give you an weekly view of your statistics.
 
 </br>
 
-## Calibrations
+### Calibrations
 
 This will give you a a table of your calibrations, if your uploader sends the correct event and data.
 
 </br>
 
-## Treatments
+### Treatments
 
 This will give you a a table of your treatments, day by day.
 
@@ -154,8 +158,24 @@ This will give you a a table of your treatments, day by day.
 
 </br>
 
-## Profiles
+### Profiles
 
-This report will display all your [profiles](../nightscout/profile_editor.md).
+This report will display [profiles](../nightscout/profile_editor.md) used in the time range.
+
+<img src="../img/Reports17.png" style="zoom:60%;" />
 
 </br>
+
+# Nightscout Reporter
+
+[https://nightscout-reporter.zreptil.de/](https://nightscout-reporter.zreptil.de/) can be used to generate PDF documents with the data stored at Nightscout.
+
+You need to add [`cors`](../setup_variables/#cors-cors) to your [`ENABLE`](../setup_variables/#enable) variables
+
+Facebook group [Nightscout Reporter](https://www.facebook.com/nightrep)
+
+</br>
+
+# Power BI
+
+Facebook group [Nightscout Power BI Reporting](https://www.facebook.com/groups/857487091295727)

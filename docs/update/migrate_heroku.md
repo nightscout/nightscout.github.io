@@ -3,7 +3,7 @@
 </br>
 
 !!! warning "You should have migrated your existing mLab MongoDB, where all your Nightscout data are stored, to MongoDB Atlas **before November 10th 2020**."
-    This was essential to keep your Nightscout functioning and now you can't access your add-on from Heroku as it's been deleted. If you absolutely need your historical data, you still have a possibility to do so **until December 8th 2020**. mLab will then shut down, migration is **mandatory**.
+    This was essential to keep your Nightscout functioning and now you can't access your add-on from Heroku as it's been deleted. If you absolutely need your historical data, you still have a possibility to do so **until mLab will shut down (December 2020). Migration is mandatory**.
 
 </br> 
 
@@ -15,8 +15,9 @@ You can also use [this guide from mLab](https://docs.mlab.com/how-to-migrate-san
 
 </br>
 
-!!!warning "If you only need to recover your site (not the data)"
-    Follow [this easy video guide](https://www.youtube.com/watch?v=hXSLBACjYQo) from Katie DiSimone. Make sure to use only letters and numbers in database name and password. 
+!!!warning "If you only need to recover your site (not your data)"
+    Follow [this easy video guide](https://www.youtube.com/watch?v=hXSLBACjYQo). Make sure to use only letters and numbers in database name and password. 
+    Alternatively, follow [this guide](../newdatabase/).
 
 </br>
 

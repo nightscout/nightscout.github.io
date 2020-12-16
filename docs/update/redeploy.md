@@ -3,12 +3,17 @@
 </br>
 
 !!! note "Azure Users"
-    As of 0.12, Nightscout no longer readily supports the free Azure platform. If you really want to keep using Azure, don’t update to this version. Read this [https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ](https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ).
-    It is recommended that you [migrate to Heroku+Atlas](./migrate_azure.md).
+    As of 0.12, Nightscout no longer readily supports the free Azure platform. It is recommended that you [create a new site with Heroku](../../nightscout/new_user/).
 
 </br>
 
-If you prefer videos look at [this one](https://youtu.be/C0edTQhO21g) from Katie DiSimone.
+!!!warning "Multiple Heroku apps and accounts linked to one Github"
+    If you delete and redeploy you might need to connect again `cgm-remote-monitor`. Automatic deploy might not be maintained after a redeploy.
+
+</br>
+
+!!!note "If you prefer to follow a video"
+    Use [this one](https://youtu.be/C0edTQhO21g).
 
 <br>
 
