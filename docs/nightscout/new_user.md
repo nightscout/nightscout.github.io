@@ -34,6 +34,9 @@ Do not change device/computer/browser during the creation process!
 !!! warning "If you already have a GitHub account and previously forked cgm-remote-monitor"
     Make sure you delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github).
 
+!!! note
+    You do not need several GitHub accounts for several Nightscout sites. One is enough as you can connect it to multiple Heroku apps and accounts.
+
 </br>
 
 - Click this link to create a GitHub account: [https://github.com/](https://github.com/)
@@ -246,6 +249,8 @@ Database username: <input type="text" id="mydB" value="mycgmic" size="20">
 
 <input type="text" id="myAtlas" value="" size="100">
 
+</br>
+
 !!!info "It should be similar to this (`xxxxx` will be different):"
     `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 </br>
@@ -302,11 +307,6 @@ function Generate()
     Keep this string safely aside, it is called your `MONGODB_URI`
 
 </br>
-
-**If you didn't manage to get the string with the automated script:** (else proceed to [Step 4](./#step-4-fork-and-deploy-cgm-remote-monitor))
-
-!!!info "Helper page"
-    Open [this helper page](./stringhelp.html) in another tab and insert the original connection string and both your database password and the name you decided for your database name (not important), then click `Generate` to get the final string (leave the page open).
 
 - If you want to do it manually: replace `<password>` with your database password as noted previously (in the example below `soo5ecret`) and `<dbname>` by any text you want, say `mycgmic` for example. The result will be like this:
 
@@ -405,7 +405,7 @@ Scroll down and setup the following variables:
 
 - In `ENABLE` copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
-`careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override`
+`careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override speech cors`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
 
@@ -479,6 +479,8 @@ Scroll down and setup the following variables:
 
 </br>
 
+##### Papertrail
+
 - Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function should you need it.
 
 <img src="..\img\NewNS49.png" style="zoom:80%;" />
@@ -491,7 +493,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-[Configure your uploader](..\uploader\setup.md).
+Continue to [uploader](../../uploader/setup/) setup.
 
 
 

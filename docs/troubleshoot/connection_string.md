@@ -40,7 +40,7 @@ A typical new string created with Atlas will look like this:
 
 Common reasons:
 
-- The database Heroku is pointing to is not available (like mLab after Nov 10th 2020).
+- The database Heroku is pointing to is not available (mLab services stopped in Dec 2020).
 
 - Your Atlas connection string is incorrect
 
@@ -78,7 +78,7 @@ If you see this message:
 
 <img src="../img/TShoot45.png" style="zoom:80%;" >
 
-- You most probably forgot to [migrate to Atlas](../../update/migrate_heroku/) and as the mLab add-on was removed, the connection string was deleted.
+- If you forgot to migrate to Atlas you need to [attach a new Atlas database](../../update/newdatabase/).
 - If you know you migrated, and your Nightscout was still functional after November 11th, continue [below](./#bad-connection-string) to recover:
 
 </br>
@@ -272,8 +272,7 @@ function Analyze()
 
 </br>
 
-- If you've just migrated to Atlas, try to use [this help page](../../update/stringhelp.html) to verify or recreate it.
-- If you've just created a new site, try to use [this help page](../../nightscout/stringhelp.html) to verify or recreate it.
+If you've just created a new site, try to use [this help page](../../nightscout/stringhelp.html) to verify or recreate it.
 
 </br>
 

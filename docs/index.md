@@ -66,7 +66,7 @@ You can build your Nightscout site and operate it **entirely for free but you mi
 
 Keep in mind free hosting services will require you to maintain them.
 
-Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
+Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you may eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
 
 Heroku Free dynos plan will not prevent your app to fall asleep in certain cases and you might need to setup an Uptime robot to prevent this. You can also make it always available upgrading to a Hobby plan. 
 
@@ -88,9 +88,12 @@ Basic skills in using a computer and following a procedure.
 
 ## Who Will Help Me?
 
-You will find open heart people in many Facebook groups, there are many Nightscout communities and most probably you'll find one in your own country and language.
+You will find open heart people in Facebook groups, there are many Nightscout communities and most probably you'll find one in your own country and language.
 
 Main Facebook group: [https://www.facebook.com/groups/cgminthecloud/](https://www.facebook.com/groups/cgminthecloud/)
+
+!!!note
+    You'll find a lot of useful diabetes oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information **you** want to share. It will not prevent you from creating a neutral account without any private information and use it only to access these groups.
 
 !!!warning "Regarding support"
 

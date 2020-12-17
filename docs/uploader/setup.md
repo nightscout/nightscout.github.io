@@ -67,53 +67,61 @@ You might want to setup [additional fields](https://github.com/nightscout/cgm-re
 
 </br>
 
-## Medtronic 600 Series with uploader
+## [Medtronic 600 Series with uploader](http://pazaan.github.io/600SeriesAndroidUploader/)
 
 <img src="..\img\UploadCFG08.png" style="zoom:60%;" />
 
 You might want to setup [additional fields](https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring) for your pump.
 
+Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/NightscoutForMedtronic)
+
 </br>
 
-## xDrip+
+## [xDrip+](https://jamorham.github.io/#xdrip-plus)
 
 !!! info "Mind the syntax!"
     **`https://API_SECRET@HerokuAppName.herokuapp.com/api/v1/`**
 
 <img src="..\img\UploadCFG00.png" style="zoom:80%;" />
 
+Facebook Group [xDrip](https://www.facebook.com/groups/xDripG5)
+
 </br>
 
-## Glimp
+## [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
 
 <img src="..\img\UploadCFG02.png" style="zoom:80%;" />
 
 </br>
 
-## Diabox
+## [Diabox](https://www.bubblan.org/diabox/)
 
 <img src="..\img\UploadCFG03.png" style="zoom:80%;" />
 
 </br>
 
-## LinkBluCon
+## [LinkBluCon](https://www.ambrosiasys.com/our-products/linkblucon/)
 
 <img src="..\img\UploadCFG04.png" style="zoom:80%;" />
 
 </br>
 
-## Tomato
+## [Tomato](http://tomato.cool/)
 
 <img src="..\img\UploadCFG05.png" style="zoom:60%;" />
 
 </br>
 
-## Spike
+## [Spike](https://spike-app.com/)
 
 Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure-spike-master).
 
+Facebook group [Spike App](https://www.facebook.com/groups/spikeapp)
+
 </br>
 
-## xDrip4iOS
+## [xDrip4iOS](https://testflight.apple.com/join/6ZqKUGpm)
 
 <img src="..\img\UploadCFG06.png" style="zoom:60%;" />
+
+Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838/)

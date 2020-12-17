@@ -137,8 +137,10 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 <img src="../img/TShoot05.png" style="zoom:80%;" >
 
-- [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
-- If you didn't migrate Heroku from mLab to Atlas to Heroku go [there](../../update/migrate_heroku/).
+ [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
+
+- If you didn't migrate your Heroku database from mLab to Atlas [create a new Atlas database](../../update/newdatabase/).
+- If you didn't migrate from Azure to Heroku create a new site [create a new Nightscout site with Heroku](../../nightscout/new_user/).
 - If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and [deploy](../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor) again after [checking](../connection_string/#change-your-atlas-database-password) the Atlas connection string is correct.
 
 </br>
@@ -177,9 +179,9 @@ Look at this [dedicated page](./connection_string.md).
 
 </br>
 
-### Just after migrating from mLab to Atlas
+New Nightscout sites [Check you database is not read only](../connection_string/#mongodb-in-read-only-mode).
 
-[Check you database is not read only](../connection_string/#mongodb-in-read-only-mode).
+Make sure your Nightscout [time zone](../../nightscout/profile_editor/) is correct.
 
 </br>
 
@@ -250,7 +252,7 @@ Unfortunately, it is not possible to change the username of a Dexcom account. Yo
 
 #### Create new account
 
-You can only associate one email address with a Dexcom account, so it might be a good idea to create a new email address and associate it to your current account so that you can use your current email with the new account. Go to [https://www.dexcom.com](https://www.dexcom.com/) and look for where to create accounts. Follow the instructions to create a new account.  The alternative is to delete the old account. But do **not** do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period . underscore `_` and at `@` characters creates problems, but we do not know which other characters can create problems.
+You can only associate one email address with a Dexcom account, so it might be a good idea to create a new email address and associate it to your current account so that you can use your current email with the new account. Go to [https://www.dexcom.com](https://www.dexcom.com/) and look for where to create accounts. Follow the instructions to create a new account.  The alternative is to delete the old account. But do **not** do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period `.` underscore `_` and at `@` characters creates problems, but we do not know which other characters can create problems.
 
 #### Reinstall Dexcom Transmitter app
 
@@ -352,7 +354,7 @@ Nightscout implements Dexcom error codes as listed below:
 
 </br>
 
-- Check the time zone is correct for your currently active profile in your Nightscout `Profile editor`.
+- Check the time zone is correct for your currently active profile in your Nightscout [`Profile editor`](../../nightscout/profile_editor/).
 
 <img src="../img/TShoot30.png" style="zoom:75%;" >
 
@@ -426,3 +428,38 @@ Same for `Treatments`:
 And `Glucose entries`. If you are reluctant to lose historical data you should consider opting for a paid database solution.
 
 <img src="../img/TShoot39.png" style="zoom:80%;" >
+
+</br>
+
+# Reports slow loading or timeout
+
+Loopers might experience Nightscout taking an extremely long time or even timing out when creating reports due to the profiles collection database growing too big.
+
+Two solutions are available:
+
+1. Follow this video (set it full screen in 720p) to selectively delete profiles [https://www.youtube.com/watch?v=iipp0MfPKNQ](https://www.youtube.com/watch?v=iipp0MfPKNQ)
+2. Delete all profiles in Atlas
+
+Log in to Atlas [https://account.mongodb.com/account/login](https://account.mongodb.com/account/login)
+
+Select your cluster then `COLLECTIONS`
+
+<img src="../img/TShoot50.png" style="zoom:80%;" >
+
+</br>
+
+Select the `profile` collection and click the bin icon to delete all profiles.
+
+<img src="../img/TShoot51.png" style="zoom:80%;" >
+
+</br>
+
+Write `profile` in the box then click `Drop`
+
+<img src="../img/TShoot52.png" style="zoom:80%;" >
+
+</br>
+
+Open your Nightscout and create a new profile (mind the time zone!), authenticate and save it.
+
+If you are using Loop, temporarily change a basal rate in Loop, and confirm your profiles now show up in Nightscout.

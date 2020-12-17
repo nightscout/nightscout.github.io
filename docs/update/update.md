@@ -6,10 +6,6 @@ Updating your website to the latest version (see here which is the [current rele
 
 </br>
 
-You can also use [this video guide from Katie](https://www.youtube.com/watch?v=C0edTQhO21g). It's corresponding to the [Redeploy](./redeploy.md) method you should try if failing with the one below.
-
-</br>
-
 ## Requirements
 
 </br>
@@ -29,13 +25,7 @@ This version of Nightscout will probably not run on anything older than these ve
 
 ## Azure Users
 
-</br>
-
-As of 0.12, Nightscout no longer readily supports the free Azure platform. If you really want to keep using Azure, don’t update to this version. Read this [https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ](https://github.com/nightscout/cgm-remote-monitor/wiki/mLab-discontinuation-FAQ)
-
-</br>
-
-It is recommended that you [migrate to Heroku+Atlas](./migrate_azure.md).
+As of 0.12, Nightscout no longer readily supports the free Azure platform. It is recommended that you [create a new site with Heroku](../../nightscout/new_user/).
 
 </br>
 
@@ -156,7 +146,6 @@ Click `Create pull request`.
 </br>
 
 - Select your app (hidden in yellow)
-- Note: see this mLab message? Time to [migrate](../migrate_heroku) to Atlas, it's mandatory! 
 
 <img src="../img/UpdateNS16.png" style="zoom:80%;" >
 
