@@ -97,6 +97,12 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 </br>
 
+### [Loop Follow](https://sweloop.se/LoopFollow/index.html)
+
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+
+</br>
+
 ### [Spike](https://spike-app.com/)
 
 <img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />

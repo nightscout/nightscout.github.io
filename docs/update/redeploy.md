@@ -77,7 +77,6 @@ Copy and paste your full repository name to confirm then click `I understand...`
 </br>
 
 - Select your app (hidden in yellow)
-- Note: see this mLab message? Time to migrate to Atlas, it's mandatory! 
 
 <img src="../img/UpdateNS16.png" style="zoom:80%;" >
 

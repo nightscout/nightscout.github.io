@@ -25,7 +25,7 @@ This version of Nightscout will probably not run on anything older than these ve
 
 ## Azure Users
 
-It is recommended that you [create a new Nightscout site with Heroku](../../nightscout/new_user/).
+As of 0.12, Nightscout no longer readily supports the free Azure platform. It is recommended that you [create a new site with Heroku](../../nightscout/new_user/).
 
 </br>
 
@@ -146,7 +146,6 @@ Click `Create pull request`.
 </br>
 
 - Select your app (hidden in yellow)
-- Note: see this mLab message? Time to [migrate](../migrate_heroku) to Atlas, it's mandatory! 
 
 <img src="../img/UpdateNS16.png" style="zoom:80%;" >
 

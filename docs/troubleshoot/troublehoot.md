@@ -136,11 +136,8 @@ When creating a new site or migrating (usually not the first attempt), when reac
 </br>
 
 <img src="../img/TShoot05.png" style="zoom:80%;" >
+ [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
 
-!!!warning "mLab will stop operating in December 2020 and the mLab add-on was removed on Nov 10th"
-    If you still can access your mLab account and **absolutely** need your historical data you can try to recover with these two guides: [Azure](../../update/migrate_azure/) and [Heroku](../../update/migrate_heroku/). 
-
-- [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
 - If you didn't migrate your Heroku database from mLab to Atlas [create a new Atlas database](../../update/newdatabase/).
 - If you didn't migrate from Azure to Heroku create a new site [create a new Nightscout site with Heroku](../../nightscout/new_user/).
 - If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and [deploy](../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor) again after [checking](../connection_string/#change-your-atlas-database-password) the Atlas connection string is correct.
@@ -181,9 +178,9 @@ Look at this [dedicated page](./connection_string.md).
 
 </br>
 
-### Just after migrating from mLab to Atlas
+New Nightscout sites [Check you database is not read only](../connection_string/#mongodb-in-read-only-mode).
 
-[Check you database is not read only](../connection_string/#mongodb-in-read-only-mode).
+Make sure your Nightscout [time zone](../../nightscout/profile_editor/) is correct.
 
 </br>
 
@@ -281,11 +278,6 @@ Check your Heroku settings match your new credentials (see above)
 
 </br>
 
-!!!note "CareLink"
-    There are issues with CareLink EU refusing authentication from Heroku. No solution yet.
-
-</br>
-
 First verify you can see your BG in Clarity or CareLink.
 
 If data is present open Heroku and check you app didn't fall asleep.
@@ -361,7 +353,7 @@ Nightscout implements Dexcom error codes as listed below:
 
 </br>
 
-- Check the time zone is correct for your currently active profile in your Nightscout `Profile editor`.
+- Check the time zone is correct for your currently active profile in your Nightscout [`Profile editor`](../../nightscout/profile_editor/).
 
 <img src="../img/TShoot30.png" style="zoom:75%;" >
 

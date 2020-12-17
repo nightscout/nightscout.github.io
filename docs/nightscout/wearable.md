@@ -2,7 +2,7 @@
 
 </br>
 
-## Pebble
+## Pebble Smartwatches
 
 <img src="..\img\PebbleNSFoundation.jpeg" style="zoom:50%;" />
 
@@ -15,6 +15,12 @@ For authentication and getting the watchfaces, the original server closed so you
 You'll find Nightscout watchfaces [here](https://apps.rebble.io/en_US/search/watchfaces/1). Search for Nightscout, CGM, ... 
 
 Configure the watchface with your Nightscout site URL.
+
+</br>
+
+##### [urchin](https://github.com/mddub/urchin-cgm)
+
+A Pebble watchface to view data from a continuous glucose monitor in graph format.
 
 </br>
 
@@ -63,6 +69,8 @@ Enable Android Wear Integration to send xDrip+ BG to the smartwatch. Do not enab
 <img src="..\img\Watch00.png" style="zoom:80%;" />
 
 Full xDrip+ wear documentation [here](https://github.com/jamorham/xDrip-plus/blob/master/Documentation/WatchGuide.md).
+
+*NB: you can also use [Tasker](./#xdrip-with-tasker).*
 
 #### [AndroidAPS](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html)
 
@@ -116,6 +124,18 @@ You can setup sugarmate as a calendar complication to display Nightscout on your
 
 </br>
 
+#### [nsapple](https://github.com/Perceptus/nsapple)
+
+nsapple is an apple watch app for Nightscout / Loop followers.
+
+</br>
+
+#### [Loop Follow](https://sweloop.se/LoopFollow/index.html)
+
+You can setup Loop Follow as a calendar complication to display Nightscout on your Apple watch.
+
+</br>
+
 ## Fitbit
 
 #### [Nightscout Monitor](https://gallery.fitbit.com/details/eaed806d-9ff5-4aa9-a2c8-518f1f852f5a)
@@ -150,9 +170,11 @@ Ionic/Sense/Versa/Versa 2/Versa Lite
 
 </br>
 
-## Samsung Gear
+## Samsung Gear Smartwatches
 
 #### xDrip+ with Tasker
+
+*Note: also available for Android Wear devices*
 
 [Instructions](https://github.com/FreDiabetics/xDrip--Tasker-Tizen-Watchface-Integration/blob/master/README.md)
 
@@ -164,10 +186,12 @@ Facebook group: [G-Watch App](https://www.facebook.com/gwatchapp)
 
 </br>
 
-## Garmin
+## Garmin Smartwatches and Computers
 
 By [Phimby](https://apps.garmin.com/en-US/developer/74d80f40-f80a-45c2-b934-321cc86f9dac/apps)
 
 By [Horsetooth](https://apps.garmin.com/en-US/developer/e985e9ec-bcf6-4aef-bfe9-77c1c93fc854/apps)
 
 By [andreas-may](https://apps.garmin.com/en-US/developer/f9420c47-810f-47ac-a7dd-9fa7b8ecd22d/apps)
+
+By [Fredrik_S](https://apps.garmin.com/en-US/developer/c3842ca7-a645-4758-b9ed-4ee6f8e3abec/apps)
