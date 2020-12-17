@@ -136,6 +136,7 @@ When creating a new site or migrating (usually not the first attempt), when reac
 </br>
 
 <img src="../img/TShoot05.png" style="zoom:80%;" >
+
  [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
 
 - If you didn't migrate your Heroku database from mLab to Atlas [create a new Atlas database](../../update/newdatabase/).
