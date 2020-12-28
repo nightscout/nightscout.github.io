@@ -139,7 +139,7 @@ Click `Create pull request`.
 
 </br>
 
-- Log in Heroku https://id.heroku.com/login 
+- Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login) 
 
 <img src="../img/UpdateNS15.png" style="zoom:80%;" >
 
