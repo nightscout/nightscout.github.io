@@ -70,7 +70,7 @@ Copy and paste your full repository name to confirm then click `I understand...`
 
 </br>
 
-- Log in Heroku https://id.heroku.com/login 
+- Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login)
 
 <img src="../img/UpdateNS15.png" style="zoom:80%;" >
 
