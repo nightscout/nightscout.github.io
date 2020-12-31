@@ -90,7 +90,7 @@ You can invite another user in your organization in order to manage several orga
 
 </br>
 
-- Top left, from the drop down menu click the caret and select `Organization Access`
+- Top menu, click `Access Manager` and select `Organization Access` from the drop down menu
 
 <img src="../img/MultiNS08.png" style="zoom:80%;" >
 
@@ -109,6 +109,7 @@ You can invite another user in your organization in order to manage several orga
 </br>
 
 - Select `Organization Owner` then click `Invite to Organization`.
+- Make sure you enable `Organization Owner` for the invited user.
 
 <img src="../img/MultiNS11.png" style="zoom:80%;" >
 
