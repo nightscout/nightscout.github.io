@@ -71,7 +71,7 @@ Nightscout has essentially always been a completely free sevice to install and u
 
 It is still perfectly feasible to build your Nightscout site and operate it **entirely for free**, you just need to be aware that you might experience some limitations which are easily managed using the tools available within the Nightscout "Admin Tools" page.
 
-Free databases like the Altas M0 Sandbox provided by [MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB) and you will eventually need to delete old records (maybe every 2-3 years with standard Nightscout CGM operation). You can extend the capacity to 2GB/5GB by paying for an M2/M5 Shared Cluster if you wish.
+Free databases like the Altas M0 Sandbox provided by [MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB) and you may eventually need to delete old records (maybe every 3-4 years with standard Nightscout CGM useage). You can increase even further the database capacity to 2GB/5GB by paying for an M2/M5 Shared Cluster if you wish.
 
 Application servers such as [Heroku](https://www.heroku.com/)'s "Free" plan will provide enough server hours to run a single Nightscout site without any downtime. If you need to run several sites on the same account, you can easily upgrade to a paid "Hobby" plan. 
 
