@@ -8,8 +8,8 @@ markdown_extensions:
         permalink: ⌁
 
 pages:
-- What is it?:
-    - 'Nightscout': 'index.md'
+- What is Nightscout?:
+    - 'Introduction': 'index.md'
     - 'How does it work?': 'nightscout/insights.md'
     - 'Uploaders': 'uploader/uploaders.md'
 - Install: 'nightscout/new_user.md'
