@@ -287,43 +287,19 @@ If data is present open Heroku and check you app didn't fall asleep.
 
 </br>
 
-A sleeping might be due to your Heroku free plan: a Hobby plan makes the app never sleep. [https://www.heroku.com/pricing](https://www.heroku.com/pricing) 
+A sleeping app might be due to your Heroku free plan: a Hobby plan makes the app never sleep. [https://www.heroku.com/pricing](https://www.heroku.com/pricing) 
 
-If this is the case you will need to setup an uptime robot. [https://uptimerobot.com/](https://uptimerobot.com/)
-
-Select `Register for FREE` and create an account.
-
-<img src="../img/TShoot26.png" style="zoom:80%;" >
+Another reason for a sleeping app can be due to a failure to obtain data from Dexcom Share or CareLink, check the logs to understand the reasons.
 
 </br>
 
-Check your email (also check the spam folder) and activate your account.
-
-Your dashboard will open, click `+ Add New Monitor`
-
-<img src="../img/TShoot27.png" style="zoom:80%;" >
+!!!Note
+    Some users report CareLink with mmconnect data source stopped functioning. If this is your case update Nightscout to the latest released version (min 14.1) and if it doesn't fix the issue, disable the mmconnect plugin until a solution is found.
 
 </br>
 
-In `Monitor Type` select  `HTTP(s)`
-
-<img src="../img/TShoot28.png" style="zoom:80%;" >
-
-</br>
-
-You might want to set the monitoring interval to 15 or 20 minutes instead of 5 to save dynos usage.
-
-Add a `Friendly Name` (any), type your Nightscout site page then click `Create Monitor`
-
-You can enable your email address as an alert contact to inform you if your site goes down.
-
-<img src="../img/TShoot29.png" style="zoom:80%;" >
-
-</br>
-
-After a moment your monitored site will show 100% up.
-
-This will keep your Heroku app active, but should the data source go down, it will not help getting data into it.
+!!!Warning "UpTime Robot"
+    Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account (Dexcom) or Heroku addresses ban (CareLink). This is not a recommended solution as it might generate a global Heroku IP blacklist lock that could propagate to all other users. If you use Nightscout, uploading data in the cloud or even just having a browser or an app downloading data should be enough to keep your app awake.
 
 </br>
 
