@@ -36,10 +36,10 @@ Else you'll need an Android phone connected with an OTG cable to your pump Bluet
 
 ## Libre
 
-Non Bluetooth Libre sensors need an additional transmitter device to send readings to the uploader. In release order you'll find these: [LimiTTer](https://github.com/JoernL/LimiTTer), blueReader, blucon, miaomiao, Bubble and Droplet.
+Non Bluetooth Libre sensors need an additional transmitter device to send readings to the uploader. In release order you'll find these: [LimiTTer](https://github.com/JoernL/LimiTTer), blueReader, blucon, miaomiao, Bubble, and Droplet.
 
 !!! warning "Libre sensors"
-    The Libre environment is complex and evolves quickly. Make sure your sensor is compatible with the transmitter before buying hardware. Join the respective Facebook groups to decide which to use.
+    The Libre environment is complex and evolves quickly. Make sure your sensor is compatible with the transmitter before buying hardware. Join the respective Facebook groups to decide which one to use.
 
 All proprietary apps should support upload to Nightscout (LinkBluCon, Tomato, Diabox, eDroplet, ...).
 

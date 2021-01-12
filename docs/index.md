@@ -32,7 +32,7 @@ Today, there are Nightscout solutions available for nearly all commercial CGM se
 
 ## What Do I Need?
 
-You really don't need to much to get Nightscout up and running but let's start with the basics.
+You really don't need too much to get Nightscout up and running but let's start with the basics.
 
 Are you sitting comfortably? Then let's begin.
 
@@ -54,13 +54,13 @@ You will need:
 !!!warning "IMPORTANT"
     Before using Nightscout, it is important to understand that this project:
 
-    - is a open-source, community-based project and is not supported by any company
+    - is an open-source, community-based project and is not supported by any company
     - is not officially approved or regulated for diabetes therapy and/or treatment in any way
 
     **You must understand that you take full responsibility for building and running this system and you agree to do so at your own risk.**
 
 !!!warning "SAFETY"
-    - This project requires a working internet connection and availability of third party cloud services
+    - This project requires a working internet connection and availability of third-party cloud services
     - Do not rely only on Nightscout as the only way you have of knowing your blood glucose values and trends
     - Make sure you're ready to cope with an unexpected failure and always have alternative ways to check your blood glucose levels
 </br>
@@ -83,18 +83,18 @@ Finally, if you prefer to avoid any manual set-up, configuration and maintenance
 
 You will find many willing and open-hearted people in the Facebook groups. 
 
-The main group for all Nightscout support is the "[CGM In The Cloud](https://www.facebook.com/groups/cgminthecloud/)" Facebook group.
+The main group for all Nightscout support is the "[CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/)" Facebook group.
 
 There are also many local Nightscout communities and you'll probably be able to find one in your own country and language if this helps.
 
 !!!warning "Technical Support"
     This project is often considered "**Do It Yourself**" (DIY) and supported by volunteers. Whilst you will almost certainly always will find someone ready to help you for free, building your own Nightscout site **doesn't entitle you to any form of support** from anybody.
     
-    The open-source diabetes movement is founded on the idea of **paying it foward** and helping others to learn things that others took their time to help teach you about.
+    The open-source diabetes movement is founded on the idea of **paying it forward** and helping others to learn things that others took their time to help teach you about.
 
     *Ask nicely, and nice people will always do nice things and help you.*
     
-    Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not only supporting users. (This means **do not** send them private messages or friend requests just to help fix something that is already clearly documented or for help that can be easily requested in the CGM In The Cloud group)
+    Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not only supporting users. (This means **do not** send them private messages or friend requests just to help fix something that is already clearly documented or for help that can be easily requested in the CGM in the Cloud group)
 
 !!!info "Facebook Privacy"
     You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.
