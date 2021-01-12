@@ -352,7 +352,7 @@ function Generate()
 </br>
 
 !!! note "You're getting into the core setup of your site"
-    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](..\setup_variables)
+    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](../setup_variables/)
 
 </br>
 
@@ -403,14 +403,14 @@ Scroll down and setup the following variables:
 
 </br>
 
-- In `ENABLE` copy and paste the following words (separated by a space) so that won't have to think about which you want now:
+- In `ENABLE` copy and paste the following words (separated by a space) so that you won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override speech cors`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
 
 !!! note "More on `ENABLE` words"
-    If you want to know more about them, look here: [Setup](..\setup_variables)
+    If you want to know more about them, look here: [Setup](../setup_variables/)
 
 </br>
 
