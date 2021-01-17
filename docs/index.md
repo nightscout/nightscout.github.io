@@ -11,11 +11,19 @@
 
 **Nightscout** (also known as **"CGM in the Cloud"**) is an open-source cloud application **used by people with diabetes** to visualize, store and share the data from their **Continuous Glucose Monitoring** sensors in real-time. Once setup, Nightscout acts as a central repository of blood glucose and insulin dosing/treatment data for a single person, allowing you to view the CGM graph and treatment data anywhere using just a web browser connected to the internet.
 
+There are several parts to this system. You need somewhere online to store/process/visualise this data (**a Nightscout Site**), something to upload CGM data to your Nightscout (**a Master/Uploader**), and then optionally you can use other devices to access/view this data (**a Follower or usually several**):
+
+#### Nightscout Site
+
 The Nightscout cloud application can be installed by yourself using free hosting services from various cloud service providers. 
 
 Although not necessary, you might prefer to use paid hosting services for your database (to avoid future maintenance tasks) or indeed pay to use a fully-managed Nightscout hosting service to avoid having to personally build and maintain your site yourself.
 
-The CGM data is usually sent to Nightscout by an uploader device (known as a **"Master"**) such as a mobile/cellphone running an app such as xDrip+, Spike, xDrip4iOS or Medtronic Uploader. Alternatively, the CGM data can be pulled directly from your online Dexcom or Medtronic CareLink accounts. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have.
+#### Master/Uploader
+
+The CGM data is usually sent to Nightscout by an **uploader device** (often known as a **"Master"**) such as a mobile/cellphone running an app such as xDrip+, Spike, xDrip4iOS or Medtronic Uploader. Alternatively, the CGM data can be pulled directly from your online Dexcom or Medtronic CareLink accounts. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have. Once you've read this page (yes - all the way to the bottom!), you can find more information here about [Uploaders](./uploader/uploaders.md).
+
+#### Followers
 
 In addition to viewing the data using a web browser, there are also applications available for mobile devices, smartwatches, electronic devices and other cloud-based services which allow you alternative ways to view and interact with the information stored within your Nightscout site (often known as **"Followers"**).
 
@@ -24,9 +32,9 @@ In addition to viewing the data using a web browser, there are also applications
 </br>
 ## Development History
 
-Nightscout was developed by parents of children with Type 1 Diabetes and has continued to be developed, maintained, and supported by volunteers. When first implemented, Nightscout was a solution specifically for remote monitoring of Dexcom G4 CGM data.
+Nightscout was developed by parents of children with Type 1 Diabetes and has continued to be developed, maintained, and supported by volunteers. 
 
-Today, there are Nightscout solutions available for nearly all commercial CGM sensors. The goal of the project is to allow the remote monitoring, sharing and analysis of a T1D's glucose levels using existing monitoring devices.
+When first implemented, Nightscout was a solution specifically for remote monitoring of Dexcom G4 CGM data. Today, there are Nightscout solutions available for nearly all commercial CGM sensors. The goal of the project is to allow the remote monitoring, sharing and analysis of any T1D's glucose levels using existing monitoring devices.
 </br>
 </br>
 
@@ -46,7 +54,7 @@ You will need:
 
 -   1 hour of "quiet" time (a <s>beer</s> nice cup of coffee is optional but highly recommended)
 
--   Basic computer skills and the ability to ***carefully*** follow the installation guides shown on this site
+-   Basic computer skills and the ability to ***carefully*** follow the installation guides shown on this site 
 
     ***"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.*
  
