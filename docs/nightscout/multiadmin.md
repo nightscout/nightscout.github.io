@@ -6,6 +6,10 @@ Either by necessity or to support others, you might want to have access to multi
 
 </br>
 
+## Remote support and security
+
+Giving username and passwords to someone in order to obtain help to fix Nightscout issues raises serious security issues. Malicious code can be added to your Nightscout project by ill-intentioned people. Always make sure the version deployed is a fork of the official project. After receiving help a good practice is to change your account passwords (GitHub, Heroku, mongoDB Atlas, Clarity, CareLink, ...) and your API secret. 
+
 !!!note
     Inviting Heroku [collaborators](./#heroku) is extremely efficient for remote support.
 
