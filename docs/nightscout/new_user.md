@@ -4,7 +4,7 @@
 
 </br>
 
-Nightscout is DIY, if you don’t feel confident you’ll have necessary skills, give it a try, you’ll find open heart people ready to help you building it in many Facebook groups. For free. Paying it forward.
+Nightscout is DIY (Do It Yourself), if you don’t feel confident you’ll have the necessary skills, give it a try. You’ll find people that is willingly to help you setting it up in many Facebook groups. For free. Paying it forward.
 
 If you want to [sell installations](https://github.com/nightscout/nightscout.github.io/wiki/Can-I-sell-Nightscout), keep in mind you will be legally liable and can easily be sued by your buyers should anything bad happen to them because of Nightscout. Nightscout is not approved by FDA, CE, ... this is the reason why it's DIY.
 
@@ -27,10 +27,10 @@ Print this [document](./NightscoutDataRecord.pdf) to record all information. Sto
 
 ### Create your Heroku, GitHub and Atlas accounts from a computer.
 
-Do not change device/computer/browser during the creation process!
+Do not change device/computer/browser during the setup process!
 
 !!! note
-    If you have unexpected issues whilst creating your site restart with another browser.
+    If you have unexpected issues when creating your site, restart with another browser.
 
 !!! warning "If this is not your first attempt to deploy Nightscout"
     You might want to do some [cleanup](../../troubleshoot/cleanup/) before.
@@ -46,7 +46,7 @@ Do not change device/computer/browser during the creation process!
     Make sure you delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github).
 
 !!! note
-    You do not need several GitHub accounts for several Nightscout sites. One is enough as you can connect it to multiple Heroku apps and accounts.
+    You do not need several GitHub accounts for several Nightscout sites. You can connect one GitHub account to multiple Heroku apps and accounts.
 
 </br>
 
@@ -64,7 +64,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- Select whatever choices (not important) then click `Complete setup`.
+- Type your interests (not important) then click `Complete setup`.
 
 
 
@@ -72,13 +72,13 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- GitHub will send you a verification email, open your mailbox and check for it (look into spam also).
+- GitHub will send you a verification email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
 
 <img src="..\img\NewNS03.png" style="zoom:80%;" />
 
 </br>
 
-- On the received email, click `Verify email address`.
+- Click `Verify email address` in the verification email from GitHub.
 
 <img src="..\img\NewNS04.png" style="zoom:80%;" />
 
@@ -86,7 +86,7 @@ Do not change device/computer/browser during the creation process!
 
 
 
-- A new page will open in your browser, click `Skip this for now`.
+- This will open a new page in your browser, click `Skip this for now`.
 
 <img src="..\img\NewNS05.png" style="zoom:80%;" />
 
@@ -110,7 +110,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- Heroku will send a confirmation email, open your mailbox and look for it (also check spam folder).
+- Heroku will send a confirmation email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
 
 <img src="..\img\NewNS09.png" style="zoom:70%;" />
 
@@ -122,7 +122,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- Create a password an write it down. Click `SET PASSWORD AND LOG IN`
+- Create a password, it is important to write it down for later usage. Click `SET PASSWORD AND LOG IN`
 
 <img src="..\img\NewNS11.png" style="zoom:80%;" />
 
@@ -134,7 +134,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- Your Heroku page will open, click on your profile picture top right and select `Account Settings`
+- Your Heroku page will open, click on your profile picture, in the top right corner, and select `Account Settings`
 
 <img src="..\img\NewNS13.png" style="zoom:80%;" />
 
@@ -152,7 +152,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- Enter a valid credit card information and click `Save Details`
+- Enter your credit card information and click `Save Details`
 
 !!! note "Note"
     Unless you voluntarily select billable features, your credit card information is only used for verifications and you will not be charged anything. Worst case you’ll be charged $0.00</br>
@@ -175,7 +175,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- Enter information then click `Get Started Free`
+- Enter your information and then click `Get Started Free`
 
 <img src="..\img\NewNS18.png" style="zoom:80%;" />
 
@@ -193,7 +193,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-Atlas will create your default cluster, wait until completion… (can take more than 3 minutes)
+Atlas will create your default cluster, wait until it is complete... (can take more than 3 minutes)
 
 <img src="..\img\NewNS21.png" style="zoom:80%;" />
 
@@ -336,7 +336,7 @@ function Generate()
 !!! warning "If you previously forked cgm-remote-monitor before reaching this step, you should delete the existing cgm-remote-monitor repository before proceeding"
     Delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github). </br>
 
-- You should now have three pages opened in your browser: Heroku, Atlas and Github, make sur each one is logged in
+- You should now have three pages opened in your browser: Heroku, Atlas and Github, make sure each one is logged in
    (i.e. not asking you to login) before you continue.
 
 - Click this link [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor), a new GitHub page will open. Click on `Fork`
@@ -347,7 +347,7 @@ function Generate()
 
   </br>
 
-- Wait a moment
+- Wait for a moment
 
 <img src="..\img\NewNS30.png" style="zoom:80%;" />
 
@@ -362,11 +362,11 @@ function Generate()
 </br>
 
 !!! note "You're getting into the core setup of your site"
-    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](..\setup_variables)
+    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. You will find a more complete list here: [Setup](..\setup_variables)
 
 </br>
 
-- Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Check the name is available.
+- Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Confirm that the name is available.
 
 - Don’t change the region.
 
@@ -378,22 +378,22 @@ Scroll down and setup the following variables:
 
  </br>
 
-- `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and should **NOT use spaces and @ or ! symbols**: it is recommended to use only letters and numbers.
+- `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces and @ or ! symbols**: it is recommended to use only letters and digits.
 
-!!!warning "The API_SECRET is the **main password allowing full access to your Nightscout site**. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus numbers) and **do no not share it publicly**. If you think you exposed it by mistake, it is recommended that you **change it**."
+!!!warning "The API_SECRET is the **main password allowing full access to your Nightscout site**. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and **do no not share it publicly**. If you think you exposed it by mistake, it is recommended that you **change it**."
 
 <img src="..\img\NewNS34.png" style="zoom:80%;" />
 
 </br>
 
-- If you want to link your Dexcom Share account as a data source, compile the following lines:
+- If you want to link your Dexcom Share account as a data source, complete the following lines:
 
 <img src="..\img\NewNS35.png" style="zoom:80%;" />
 
 </br>
 
 !!!info "MOST COMMON ERRORS"
-    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. The values for them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging into your Dexcom account. If your account info doesn't let you in, or you don't see data in your Clarity account...then you need to figure out your actual credentials before moving ahead.
+    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. These values are what you entered into your Dexcom mobile app when you logged into that app for the VERY FIRST time. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.
 
 !!! note "Password"
     *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
@@ -403,7 +403,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-- If you want to link your CareLink account as a data source, compile the following lines:
+- If you want to link your CareLink account as a data source, complete the following lines:
 
 <img src="..\img\NewNS36.png" style="zoom:80%;" />
 
@@ -415,18 +415,18 @@ Scroll down and setup the following variables:
 
 </br>
 
-- In `ENABLE` copy and paste the following words (separated by a space) so that won't have to think about which you want now:
+- In `ENABLE`, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override speech cors`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
 
-!!! note "More on `ENABLE` words"
-    If you want to know more about them, look here: [Setup](..\setup_variables)
+!!! note "`ENABLE` words"
+    You find more information about the `ENABLE` words on the: [Setup page](..\setup_variables)
 
 </br>
 
-- Now you need that connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
+- Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
@@ -434,19 +434,19 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Browse down to the end of the list and click `Deploy app`
+- Scroll down to the end of the list and click `Deploy app`
 
 <img src="..\img\NewNS40.png" style="zoom:80%;" />
 
 </br>
 
-- **WAIT** until completion (will take some time). Do not interfere with the process until it's complete.
+- **WAIT** until completion (will take some time). Do not interrupt the process until it's complete.
 
 <img src="..\img\NewNS41.png" style="zoom:80%;" />
 
 </br>
 
-- Then click `View` (if nothing happens click `Manage App` then upper right `Open App`)
+- Then click `View` (if nothing happens, click `Manage App` -> `Open App`, in upper right corner)
 
 <img src="..\img\NewNS42.png" style="zoom:80%;" />
 
@@ -458,7 +458,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Setup your `Time zone` and eventually all other fields. Do not leave empty fields. If you don't know which value you should use, just leave default. You can change them later.
+- Setup your `Time zone` and eventually all other fields. Do not clear any fields. If you don't know which value to use, just use the default value. You can change these values later at any time.
 
 <img src="..\img\NewNS44.png" style="zoom:80%;" />
 
@@ -483,7 +483,7 @@ Scroll down and setup the following variables:
 </br>
 
 !!!warning "Privacy warning"
-    Having the URL of your Nightscout site, anybody can view your BG and run reports of your data. It it strongly recommended that you [secure](../security) your site once you're done with setup.  
+    Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable [security](../security) to your site once you're done with the setup.  
 
 </br>
 
@@ -495,7 +495,7 @@ Scroll down and setup the following variables:
 
 ##### Papertrail
 
-- Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (like a logging service for how the site is running), but really generates more confusion to most people later when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function should you need it.
+- Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (this is like a logging service for how the site is running), but this generates a lot of confusion to most people later on, when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function if you need it later.
 
 <img src="..\img\NewNS49.png" style="zoom:80%;" />
 
