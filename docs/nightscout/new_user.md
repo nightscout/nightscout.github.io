@@ -4,7 +4,8 @@
 
 </br>
 
-Nightscout is DIY (Do It Yourself), if you don’t feel confident you’ll have the necessary skills, give it a try. You’ll find people that is willingly to help you setting it up in many Facebook groups. For free. Paying it forward.
+
+Nightscout is DIY (Do It Yourself), if you don’t feel confident that you have the necessary skills, give it a try. You’ll find people that is willingly to help you setting it up in many Facebook groups. For free. Paying it forward.
 
 If you want to [sell installations](https://github.com/nightscout/nightscout.github.io/wiki/Can-I-sell-Nightscout), keep in mind you will be legally liable and can easily be sued by your buyers should anything bad happen to them because of Nightscout. Nightscout is not approved by FDA, CE, ... this is the reason why it's DIY.
 
@@ -25,7 +26,7 @@ Print this [document](./NightscoutDataRecord.pdf) to record all information. Sto
 
 </br>
 
-### Create your Heroku, GitHub and Atlas accounts from a computer.
+### Create your Heroku, GitHub, and Atlas accounts from a computer.
 
 Do not change device/computer/browser during the setup process!
 
@@ -72,6 +73,7 @@ Do not change device/computer/browser during the setup process!
 
 </br>
 
+
 - GitHub will send you a verification email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
 
 <img src="..\img\NewNS03.png" style="zoom:80%;" />
@@ -110,6 +112,7 @@ Do not change device/computer/browser during the setup process!
 
 </br>
 
+
 - Heroku will send a confirmation email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
 
 <img src="..\img\NewNS09.png" style="zoom:70%;" />
@@ -122,7 +125,7 @@ Do not change device/computer/browser during the setup process!
 
 </br>
 
-- Create a password, it is important to write it down for later usage. Click `SET PASSWORD AND LOG IN`
+- Create a password, it is important that you write it down for later usage. Click `SET PASSWORD AND LOG IN`
 
 <img src="..\img\NewNS11.png" style="zoom:80%;" />
 
@@ -336,7 +339,8 @@ function Generate()
 !!! warning "If you previously forked cgm-remote-monitor before reaching this step, you should delete the existing cgm-remote-monitor repository before proceeding"
     Delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github). </br>
 
-- You should now have three pages opened in your browser: Heroku, Atlas and Github, make sure each one is logged in
+
+- You should now have 3 pages opened in your browser: Heroku, Atlas, and Github, Make sure you are logged-in on each one
    (i.e. not asking you to login) before you continue.
 
 - Click this link [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor), a new GitHub page will open. Click on `Fork`
@@ -362,6 +366,7 @@ function Generate()
 </br>
 
 !!! note "You're getting into the core setup of your site"
+
     Below you'll see the minimum required configuration, you can modify the variables later in Heroku. You will find a more complete list here: [Setup](..\setup_variables)
 
 </br>
@@ -458,7 +463,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Setup your `Time zone` and eventually all other fields. Do not clear any fields. If you don't know which value to use, just use the default value. You can change these values later at any time.
+- Setup your `Time zone` and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.
 
 <img src="..\img\NewNS44.png" style="zoom:80%;" />
 
@@ -487,7 +492,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Dexcom Share and CareLink users should see data flowing in after some minutes, other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
+- Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
 
 <img src="..\img\NewNS48.png" style="zoom:80%;" />
 

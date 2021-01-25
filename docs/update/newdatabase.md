@@ -220,7 +220,7 @@ Access your variables opening [Heroku](https://id.heroku.com/login).
 ## Step 3: Update Nightscout
 
 </br>
-[**Update your Nightscout to latest release!**](.\update.md) 
+[**Update your Nightscout to latest release!**](../update/) 
 
 Versions older than 13.0.x won't probably run. 
 
