@@ -4,7 +4,7 @@
 
 </br>
 
-Nightscout is DIY, if you don’t feel confident you’ll have necessary skills, give it a try, you’ll find open heart people ready to help you building it in many Facebook groups. For free. Paying it forward.
+Nightscout is DIY, if you don’t feel confident that you have the necessary skills, give it a try. In many Facebook groups, you’ll find open-hearted people ready to help you building it. For free. Paying it forward.
 
 If you want to [sell installations](https://github.com/nightscout/nightscout.github.io/wiki/Can-I-sell-Nightscout), keep in mind you will be legally liable and can easily be sued by your buyers should anything bad happen to them because of Nightscout. Nightscout is not approved by FDA, CE, ... this is the reason why it's DIY.
 
@@ -25,7 +25,7 @@ Print this [document](./NightscoutDataRecord.pdf) to record all information. Sto
 
 </br>
 
-### Create your Heroku, GitHub and Atlas accounts from a computer.
+### Create your Heroku, GitHub, and Atlas accounts from a computer.
 
 Do not change device/computer/browser during the creation process!
 
@@ -72,7 +72,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- GitHub will send you a verification email, open your mailbox and check for it (look into spam also).
+- GitHub will send you a verification email. Open your mailbox and check for it (look into SPAM, too).
 
 <img src="..\img\NewNS03.png" style="zoom:80%;" />
 
@@ -110,7 +110,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- Heroku will send a confirmation email, open your mailbox and look for it (also check spam folder).
+- Heroku will send a confirmation email, open your mailbox and look for it (also check your SPAM folder).
 
 <img src="..\img\NewNS09.png" style="zoom:70%;" />
 
@@ -122,7 +122,7 @@ Do not change device/computer/browser during the creation process!
 
 </br>
 
-- Create a password an write it down. Click `SET PASSWORD AND LOG IN`
+- Create a password and write it down. Click `SET PASSWORD AND LOG IN`
 
 <img src="..\img\NewNS11.png" style="zoom:80%;" />
 
@@ -336,7 +336,7 @@ function Generate()
 !!! warning "If you previously forked cgm-remote-monitor before reaching this step, you should delete the existing cgm-remote-monitor repository before proceeding"
     Delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github). </br>
 
-- You should now have three pages opened in your browser: Heroku, Atlas and Github, make sur each one is logged in
+- You should now have 3 pages opened in your browser: Heroku, Atlas, and Github. Make sure you are logged-in on each one
    (i.e. not asking you to login) before you continue.
 
 - Click this link [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor), a new GitHub page will open. Click on `Fork`
@@ -362,7 +362,7 @@ function Generate()
 </br>
 
 !!! note "You're getting into the core setup of your site"
-    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](..\setup_variables)
+    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. A more complete list here: [Setup](../setup_variables/)
 
 </br>
 
@@ -415,14 +415,14 @@ Scroll down and setup the following variables:
 
 </br>
 
-- In `ENABLE` copy and paste the following words (separated by a space) so that won't have to think about which you want now:
+- In `ENABLE` copy and paste the following words (separated by a space) so that you won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override speech cors`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
 
 !!! note "More on `ENABLE` words"
-    If you want to know more about them, look here: [Setup](..\setup_variables)
+    If you want to know more about them, look here: [Setup](../setup_variables/)
 
 </br>
 
@@ -446,7 +446,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Then click `View` (if nothing happens click `Manage App` then upper right `Open App`)
+- Then click `View` (if nothing happens click `Manage App` then in the upper right `Open App`)
 
 <img src="..\img\NewNS42.png" style="zoom:80%;" />
 
@@ -458,7 +458,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Setup your `Time zone` and eventually all other fields. Do not leave empty fields. If you don't know which value you should use, just leave default. You can change them later.
+- Setup your `Time zone` and eventually all other fields. Do not leave fields empty. If you don't know which value you should use, just leave default. You can change them later.
 
 <img src="..\img\NewNS44.png" style="zoom:80%;" />
 
@@ -487,7 +487,7 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Dexcom Share and CareLink users should see data flowing in after some minutes, other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
+- Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
 
 <img src="..\img\NewNS48.png" style="zoom:80%;" />
 
