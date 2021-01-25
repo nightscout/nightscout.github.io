@@ -294,7 +294,7 @@ Another reason for a sleeping app can be due to a failure to obtain data from De
 </br>
 
 !!!Note
-    Some users report CareLink with mmconnect data source stopped functioning. If this is your case update Nightscout to the latest released version (min 14.1) and if it doesn't fix the issue, disable the mmconnect plugin until a solution is found.
+    Some users report CareLink with mmconnect data source stopped functioning. If this is your case update Nightscout to the latest released version (min 14.1) and if it doesn't fix the issue, **remove the `mmconnect` plugin from `ENABLE` until a solution is found**.
 
 </br>
 

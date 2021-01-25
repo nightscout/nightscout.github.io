@@ -2,6 +2,11 @@
 
 </br>
 
+!!!warning "Privacy warning"
+    Having the URL of your Nightscout site, anybody can view your BG and run reports of your data. It it strongly recommended that you [secure](../security) your site.  
+
+</br>
+
 It should look very similar to this when your [uploader](../../uploader/setup/) has added some data.
 
 <img src="..\img\UseNS00.png" style="zoom:80%;" />

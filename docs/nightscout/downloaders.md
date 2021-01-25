@@ -7,15 +7,25 @@
 
 </br>
 
+Note: <img src="../img/LockOK.png" style="zoom:15%;" /> indicates applications compliant to [Nightscout secure settings](./security.md).
+
+</br>
+
 ## Android
 
 ### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
 <img src="https://xdrip-plus.firebaseapp.com/cdn/xdrip-plus-slides/img/xdrip-plus-high-low-alarms.png" style="zoom:50%;" />
 
-Select the Nightscout Follower data source and type your Nightscout URL.
+Select the Nightscout Follower data source and type your Nightscout URL:
+
+`https://HerokuAppName.herokuapp.com`
+
+For a secured site:
+
+ `https://API_SECRET_or_Token@HerokuAppName.herokuapp.com`
 
 <img src="../img/Follower00.png" style="zoom:80%;" />
 
@@ -25,7 +35,7 @@ Facebook group [xDrip](https://www.facebook.com/groups/xDripG5/)
 
 ### [AndroidAPS NSClient](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Screenshots.html)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
 follow the [build APK instructions](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html) selecting the build variant “NSClientRelease”.
 
@@ -43,7 +53,7 @@ Nightwatch is not maintained anymore and might not work with recent Android vers
 
 ### [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
 In Settings, Cloud, Nightscout, select Download only and type your Nightscout URL.
 
@@ -53,7 +63,7 @@ In Settings, Cloud, Nightscout, select Download only and type your Nightscout UR
 
 ### [Diabox](https://www.bubblan.org/diabox/)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockNO.png" style="zoom:15%;" />
 
 In Settings, set Data Collection to Follower, select Nightscout and type your Nightscout URL.
 
@@ -65,23 +75,23 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 ### [Nightscout](https://apps.apple.com/us/app/nightscout/id949973872)
 
-<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
-<img src="../img/Follower03.png" style="zoom:60%;" />
+<img src="../img/Follower03.png" style="zoom:60%;" />	
 
 </br>
 
 ### [Nightscout X](https://apps.apple.com/us/app/nightscout-x/id1333154219)
 
-<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
-<img src="../img/Follower04.png" style="zoom:60%;" />
+<img src="../img/Follower04.png" style="zoom:60%;" />	
 
 </br>
 
 ### [Nightguard](https://apps.apple.com/us/app/nightguard/id1116430352)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockNO.png" style="zoom:15%;" />
 
 [GitHub](https://github.com/nightscout/nightguard)
 
@@ -91,7 +101,7 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 ### [Nightscouter](https://testflight.apple.com/join/UczafrJp)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockNO.png" style="zoom:15%;" />
 
 [GitHub](https://github.com/someoneAnyone/Nightscouter)
 
@@ -99,13 +109,13 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 ### [Loop Follow](https://sweloop.se/LoopFollow/index.html)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
 </br>
 
 ### [Spike](https://spike-app.com/)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
 <img src="https://spike-app.com/wp-content/uploads/2019/03/iPhoneXSpikeHome2019.png" style="zoom:30%;" />
 
@@ -115,7 +125,7 @@ Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure
 
 ### [xDrip4iOS](https://testflight.apple.com/join/6ZqKUGpm)
 
-<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockNO.png" style="zoom:15%;" />
 
 Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.
 
@@ -127,7 +137,7 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 
 ### [sugarmate](https://sugarmate.io/)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
 <img src="../img/Follower05.png" style="zoom:60%;" />
 
@@ -147,13 +157,13 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 ### [FloatingGlucose](https://github.com/dabear/FloatingGlucose)
 
-</br>
+<img src="../img/LockOK.png" style="zoom:15%;" /> </br>
 
 ## Displays
 
 ### [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon)
 
-Facebook group [M5STACK NIGHTSCOUT](https://www.facebook.com/groups/606295776549008)
+<img src="../img/LockOK.png" style="zoom:15%;" /> Facebook group [M5STACK NIGHTSCOUT](https://www.facebook.com/groups/606295776549008)
 
 <img src="https://raw.githubusercontent.com/mlukasek/M5_NightscoutMon/master/images/M5NS_mon_2019-06-20_page1.jpg" style="zoom:20%;" />
 
@@ -161,7 +171,7 @@ Facebook group [M5STACK NIGHTSCOUT](https://www.facebook.com/groups/606295776549
 
 <img src="https://raw.githubusercontent.com/mlukasek/M5StickC_NightscoutMon/master/images/M5StickC_Nightscout_w-speaker.jpg" style="zoom:20%;" />
 
-</br>
+<img src="../img/LockOK.png" style="zoom:15%;" /> </br>
 
 ### [Nightscout PyPortal](https://github.com/shanselman/NightscoutPyPortal)
 

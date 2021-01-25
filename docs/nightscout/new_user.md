@@ -10,11 +10,22 @@ If you want to [sell installations](https://github.com/nightscout/nightscout.git
 
 </br>
 
-#### Here is a step-by-step guide for completing your own Nightscout site DIY style.
+### Security and safekeeping
+
+- Use the same email address for all accounts. Do not use a disposable email address.
+- Do not use the same password for all your accounts.
+- Do not use the API_SECRET for the Atlas database password.
+- Do not use your Dexcom or CareLink user name or password for Nightscout components.
+
+Print this [document](./NightscoutDataRecord.pdf) to record all information. Store it together with your diabetes documentation.
 
 </br>
 
-Create your Heroku, GitHub, and Atlas accounts from a computer.
+#### **Here is a step-by-step guide for completing your own Nightscout site DIY style.**
+
+</br>
+
+### Create your Heroku, GitHub, and Atlas accounts from a computer.
 
 Do not change device/computer/browser during the creation process!
 
@@ -210,10 +221,9 @@ Atlas will create your default cluster, wait until completion… (can take more 
 
 - Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret`).
 
-!!! warning "Database credentials"
-    Do not use your Atlas account credentials. Do not use special characters: only letters and numbers.
+!!! warning "Database credentials: Do not use your Atlas account credentials. Do not use special characters: only letters and numbers."
 
-!!! warning "Write down these credentials in the boxes below: you’ll need them later."
+Write down these credentials in the boxes below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.
 
 Database password: <input type="text" id="myPwd" value="soo5ecret" size="20">
 
@@ -245,7 +255,7 @@ Database username: <input type="text" id="mydB" value="mycgmic" size="20">
 
 </br>
 
-- Paste the string in the box below.
+- Paste the string in the box below (yes, in this browser window you're reading now, unless you're reading a printed version).
 
 <input type="text" id="myAtlas" value="" size="100">
 
@@ -255,7 +265,7 @@ Database username: <input type="text" id="mydB" value="mycgmic" size="20">
     `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 </br>
 
-- Click the `Generate` button:
+- Click the `Generate` button (just here below this line: in this browser window you're reading):
 
 <button onclick="Generate()">Generate</button>
 
@@ -370,6 +380,8 @@ Scroll down and setup the following variables:
 
 - `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and should **NOT use spaces and @ or ! symbols**: it is recommended to use only letters and numbers.
 
+!!!warning "The API_SECRET is the **main password allowing full access to your Nightscout site**. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus numbers) and **do no not share it publicly**. If you think you exposed it by mistake, it is recommended that you **change it**."
+
 <img src="..\img\NewNS34.png" style="zoom:80%;" />
 
 </br>
@@ -417,9 +429,6 @@ Scroll down and setup the following variables:
 - Now you need that connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
-
-!!! note
-    This is the string generated in the helper page if you decided to use it.
 
 <img src="..\img\NewNS39.png" style="zoom:80%;" />
 
@@ -470,6 +479,11 @@ Scroll down and setup the following variables:
 - If the following pop-up shows up click `OK`, and check status (upper right of the window).
 
 <img src="..\img\NewNS47.png" style="zoom:80%;" />
+
+</br>
+
+!!!warning "Privacy warning"
+    Having the URL of your Nightscout site, anybody can view your BG and run reports of your data. It it strongly recommended that you [secure](../security) your site once you're done with setup.  
 
 </br>
 

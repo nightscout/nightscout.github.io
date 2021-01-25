@@ -458,7 +458,9 @@ U value over which the bolus values are rendered on the chart if the `x U and Ov
 
 ##### **INSECURE_USE_HTTP** (`false`)
 
-Redirect unsafe http traffic to https. Possible values `false`, or `true`. Your site redirects to `https` by default. If you don't want that from Nightscout, but want to implement that with a Nginx or Apache proxy, set `INSECURE_USE_HTTP` to `true`. Note: This will allow (unsafe) http traffic to your Nightscout instance and is not recommended.
+!!!warning "Setting this variable to `true` will allow (unsafe) http traffic to your Nightscout instance and is **not recommended**."
+
+Redirect unsafe http traffic to https. Possible values `false`, or `true`. Your site redirects to `https` by default. If you don't want that from Nightscout, but want to implement that with a Nginx or Apache proxy, set `INSECURE_USE_HTTP` to `true`. 
 
 ##### **SECURE_HSTS_HEADER** (`true`)
 
