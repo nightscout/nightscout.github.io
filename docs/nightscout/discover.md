@@ -190,7 +190,7 @@ Once done, exit the edit mode by de-selecting it (white on black background). <i
 
 ## Drawer Menu
 
-You'll find many features in the drawer menu like access to advanced plugins and customizations of your web page (local view only, in order to modify the default view look into your Heroku variables [here](../setup_variables/)).
+Once authenticated (click the lock icon up right) you'll find many features in the drawer menu like access to advanced plugins and customizations of your web page (local view only, in order to modify the default view look into your Heroku variables [here](../setup_variables/)).
 
 <img src="..\img\UseNS21.png" /> 
 

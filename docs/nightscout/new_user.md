@@ -457,9 +457,9 @@ Scroll down and setup the following variables:
 
 </br>
 
-- Your Nightscout site should open, click on the hamburger menu top right and select `Profile Editor`.
+- Your Nightscout site should open and direct you to a new profile creation.
 
-<img src="..\img\NewNS43.png" style="zoom:80%;" />
+<img src="..\img\NewNS50.png" style="zoom:100%;" />
 
 </br>
 
@@ -484,6 +484,12 @@ Scroll down and setup the following variables:
 - If the following pop-up shows up click `OK`, and check status (upper right of the window).
 
 <img src="..\img\NewNS47.png" style="zoom:80%;" />
+
+</br>
+
+- If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select `Profile Editor`.
+
+<img src="..\img\NewNS43.png" style="zoom:80%;" />
 
 </br>
 
