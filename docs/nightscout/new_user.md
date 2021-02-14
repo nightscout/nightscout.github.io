@@ -4,7 +4,6 @@
 
 </br>
 
-
 Nightscout is DIY (Do It Yourself), if you don’t feel confident that you have the necessary skills, give it a try. You’ll find people that is willingly to help you setting it up in many Facebook groups. For free. Paying it forward.
 
 If you want to [sell installations](https://github.com/nightscout/nightscout.github.io/wiki/Can-I-sell-Nightscout), keep in mind you will be legally liable and can easily be sued by your buyers should anything bad happen to them because of Nightscout. Nightscout is not approved by FDA, CE, ... this is the reason why it's DIY.
@@ -13,12 +12,18 @@ If you want to [sell installations](https://github.com/nightscout/nightscout.git
 
 ### Security and safekeeping
 
-- Use the same email address for all accounts. Do not use a disposable email address.
-- Do not use the same password for all your accounts.
+It's **highly important** you understand you have to take computer security seriously when setting up Nightscout. We assume you have full legal ownership of all data being stored in your installation of Nightscout and that there are thus no liabilities you'd need to respond to regarding the data. Depending on how you use Nightscout, an unauthorized user could cause harm by for example changing the CGM data shown by Nightscout. We have no evidence of this having ever happened to anyone, but to keep it that way, take the following guidelines to heart:
+
+- Use the same email address for all accounts to ensure you have access to the accounts going forward. Do not use a disposable email address.
+- Do not use the same password for all your accounts, and choose passwords that are not easy to guess.
 - Do not use the API_SECRET for the Atlas database password.
 - Do not use your Dexcom or CareLink user name or password for Nightscout components.
+- Do not share the API_SECRET or other passwords to your accounts to others.
+- Do not use Nightscout or any related applications on rooted and/or otherwise compromized devices, and ensure you always have the latest operating system and virus protection updates installed.
 
-Print this [document](./NightscoutDataRecord.pdf) to record all information. Store it together with your diabetes documentation.
+If you want to read more about Nightscout security, including about additional configuration options to make your installation more secure, please check our [security guide](../security/).
+
+Print this [document](./NightscoutDataRecord.pdf) to record all information during installation. Store it together securely with your diabetes documentation.
 
 </br>
 
