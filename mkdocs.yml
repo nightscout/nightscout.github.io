@@ -21,11 +21,13 @@ pages:
     - 'Nightscout on your watch': 'nightscout/wearable.md'
     - 'Running multiple sites': 'nightscout/multiadmin.md'
     - 'Closed-loop Systems': 'nightscout/close_loop.md'
+    - 'Security': 'nightscout/security.md'
 - Use:
     - 'Discover your site': 'nightscout/discover.md'
     - 'Reports': 'nightscout/reports.md'
     - 'Profile Editor': 'nightscout/profile_editor.md'
     - 'Admin Tools': 'nightscout/admin_tools.md'
+    - 'Security': 'nightscout/security.md'
 - Update:
     - 'Updating your site': 'update/update.md'
     - 'Redeploying': 'update/redeploy.md'
