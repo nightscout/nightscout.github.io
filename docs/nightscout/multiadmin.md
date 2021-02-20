@@ -6,6 +6,10 @@ Either by necessity or to support others, you might want to have access to multi
 
 </br>
 
+## Remote support and security
+
+Giving username and passwords to someone in order to obtain help to fix Nightscout issues raises serious security issues. Malicious code can be added to your Nightscout project by ill-intentioned people. Always make sure the version deployed is a fork of the official project. After receiving help a good practice is to change your account passwords (GitHub, Heroku, mongoDB Atlas, Clarity, CareLink, ...) and your API secret. 
+
 !!!note
     Inviting Heroku [collaborators](./#heroku) is extremely efficient for remote support.
 
@@ -90,7 +94,7 @@ You can invite another user in your organization in order to manage several orga
 
 </br>
 
-- Top left, from the drop down menu click the caret and select `Organization Access`
+- Top menu, click `Access Manager` and select `Organization Access` from the drop down menu
 
 <img src="../img/MultiNS08.png" style="zoom:80%;" >
 
@@ -109,6 +113,7 @@ You can invite another user in your organization in order to manage several orga
 </br>
 
 - Select `Organization Owner` then click `Invite to Organization`.
+- Make sure you enable `Organization Owner` for the invited user.
 
 <img src="../img/MultiNS11.png" style="zoom:80%;" >
 

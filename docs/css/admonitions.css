@@ -10,7 +10,7 @@
 .admonition .admonition-title {
   margin-top: 0;
   padding-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 .admonition p:last-child, .admonition ul:last-child, .admonition ol:last-child {
   margin-bottom: 0;

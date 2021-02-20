@@ -1,4 +1,4 @@
-# Nightscout components
+# DIY Nightscout Components
 
 </br>
 
@@ -40,7 +40,7 @@ In order to create a new Nightscout site you'll need to open an account in each 
 
 The **GitHub** account will allow you to copy (fork) the original source code in your own cgm-remote-monitor repository, which includes the install (deploy) and update scripts as well as the rest of the functions that make Nightscout. You can see it as the software code of Nightscout, a set of instructions.
 
-The **Heroku** account creation will require you to provide a valid credit card to certificate you are a physical person and not an automated system. Unless you deliberately choose a paid option (and there is no trap: you won't able to select one by mistake) you will not be billed anything. You can see Heroku as the engine of your Nightscout, the application itself, that's running somewhere on the internet and can be accessed from anywhere.
+The **Heroku** account creation will require you to provide a valid credit card to certificate you are a physical person and not an automated system. Unless you deliberately choose a paid option (and there is no trap: you won't be able to select one by mistake) you will not be billed anything. You can see Heroku as the engine of your Nightscout, the application itself, that's running somewhere on the internet and can be accessed from anywhere.
 
 The **Atlas** account will give you access to a small free database (500MB) that should be more than enough for most users. If uploading from a 600 series pump, or if using a DIY close loop system, it might be small and you'll need regular cleanup.
 
@@ -52,6 +52,6 @@ The **Atlas** account will give you access to a small free database (500MB) that
 
 </br>
 
-During normal operation, your uploader (a device connected to your CGM and the internet) will send data to Nightscout, and Heroku will place them in the database. The values or predicted values might trigger some actions with other devices that are connected to Nightscout (like IFFT). You will be able to access them near real time from any device connected to the internet like a computer, mobile phone with a browser or a follower app, various gadgets connected to internet, smartwatches, ...
+During normal operation, your uploader (a device connected to your CGM and the internet) will send data to Nightscout, and Heroku will place them in the database. The values or predicted values might trigger some actions with other devices that are connected to Nightscout (like IFFT). You will be able to access them near real-time from any device connected to the internet like a computer, mobile phone with a browser or a follower app, various gadgets connected to internet, smartwatches, ...
 
 <img src="..\img\insight02.png" style="zoom:80%;" />

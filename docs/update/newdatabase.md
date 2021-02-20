@@ -72,7 +72,7 @@ Atlas will create your default cluster, wait until completion… (can take more 
 !!! warning "Database credentials"
     Do not use your Atlas account credentials. Do not use special characters: only letters and numbers.
 
-!!! warning "Write down these credentials in the boxes below: you’ll need them later."
+Write down these credentials in the boxes below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.
 
 Database password: <input type="text" id="myPwd" value="soo5ecret" size="20">
 
@@ -114,7 +114,7 @@ Database username: <input type="text" id="mydB" value="mycgmic" size="20">
     `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 </br>
 
-- Click the `Generate` button:
+- Click the `Generate` button (just here below this line: in this browser window you're reading):
 
 <button onclick="Generate()">Generate</button>
 
@@ -220,7 +220,7 @@ Access your variables opening [Heroku](https://id.heroku.com/login).
 ## Step 3: Update Nightscout
 
 </br>
-[**Update your Nightscout to latest release!**](.\update.md) 
+[**Update your Nightscout to latest release!**](../update/) 
 
 Versions older than 13.0.x won't probably run. 
 

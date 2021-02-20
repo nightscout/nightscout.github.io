@@ -66,7 +66,7 @@ An Atlas database string will look like this:
 ##### **API_SECRET**
 
 !!! warning "This is an important password"
-    Knowing your site API Secret gives anybody full access to your Nightscout data, allows uploading to your site and uncontrolled access. Make sure you keep this password secret and avoid exposing it publicly.
+    Knowing your site's API Secret gives anybody full access to your Nightscout data, allows uploading to your site and uncontrolled access. Make sure you keep this password secret and avoid exposing it publicly.
 
 A passphrase that must be at least 12 characters long.
 
@@ -75,7 +75,7 @@ MyV3ry53cr37
 ```
 
 !!! note
-    This is the passcode that will be required by the uploader app (if any) to send data to your site, and that will allow you to modify your site parameters from the web interface. Keep it secret, only share it with trusted people, change it if you believe it's been exposed publicly. Minimum length is 12 characters, don't make it too long and do not put special characters in it (better stick to letters and numbers). It is case sensitive. 
+    This is the passcode that will be required by the uploader app (if any) to send data to your site, and that will allow you to modify your site parameters from the web interface. Keep it secret, only share it with trusted people, change it if you believe it's been exposed publicly. Minimum length is 12 characters, don't make it too long and do not put special characters in it (better stick to letters and numbers). It is case-sensitive. 
 
 </br>
 
@@ -458,7 +458,9 @@ U value over which the bolus values are rendered on the chart if the `x U and Ov
 
 ##### **INSECURE_USE_HTTP** (`false`)
 
-Redirect unsafe http traffic to https. Possible values `false`, or `true`. Your site redirects to `https` by default. If you don't want that from Nightscout, but want to implement that with a Nginx or Apache proxy, set `INSECURE_USE_HTTP` to `true`. Note: This will allow (unsafe) http traffic to your Nightscout instance and is not recommended.
+!!!warning "Setting this variable to `true` will allow (unsafe) http traffic to your Nightscout instance and is **not recommended**."
+
+Redirect unsafe http traffic to https. Possible values `false`, or `true`. Your site redirects to `https` by default. If you don't want that from Nightscout, but want to implement that with a Nginx or Apache proxy, set `INSECURE_USE_HTTP` to `true`. 
 
 ##### **SECURE_HSTS_HEADER** (`true`)
 
