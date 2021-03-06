@@ -68,14 +68,18 @@ An Atlas database string will look like this:
 !!! warning "This is an important password"
     Knowing your site's API Secret gives anybody full access to your Nightscout data, allows uploading to your site and uncontrolled access. Make sure you keep this password secret and avoid exposing it publicly.
 
-A passphrase that must be at least 12 characters long.
+* The API_SECRET must be at least 12 characters long, but making it even longer makes it more secure
+* Use a mix of small and CAPITAL letters, numbers and non-alphanumeric characters such as !#%&/()= in the API_SECRET
+  *Note: make sure your uploader and downloaders can handle special characters, you might need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters)*
+* Consider generating the API_SECRET using a password manager
 
 ```
 MyV3ry53cr37
 ```
 
-!!! note
-    This is the passcode that will be required by the uploader app (if any) to send data to your site, and that will allow you to modify your site parameters from the web interface. Keep it secret, only share it with trusted people, change it if you believe it's been exposed publicly. Minimum length is 12 characters, don't make it too long and do not put special characters in it (better stick to letters and numbers). It is case-sensitive. 
+This is the passcode that will be required by the uploader app (if any) to send data to your site, and that will allow you to modify your site parameters from the web interface. Keep it secret, only share it with trusted people, change it if you believe it's been exposed publicly. Minimum length is 12 characters, don't make it too long and do not put special characters in it (better stick to letters and numbers). It is case-sensitive. 
+
+If you change your `API_SECRET` all your [access tokens](../security/#create-authentication-tokens-for-users) will change. Make your you update your devices and send the new token link to those you allowed to access your Nightscout
 
 </br>
 
@@ -109,13 +113,13 @@ Plugins to enable for your site. Must be a space-delimited, lower-case list.
 careportal basal dbsize
 ```
 
-Include the word `bridge` here if you are receiving data from the Dexcom Share service.
+Include the word `bridge` here **only** if you are receiving data from the Dexcom Share service.
 
 ```
 careportal basal dbsize bridge
 ```
 
- Include `mmconnect` if you are bridging from the MiniMed CareLink service.
+ Include `mmconnect` **only** if you are bridging from the MiniMed CareLink service.
 
 ```
 careportal basal dbsize mmconnect
