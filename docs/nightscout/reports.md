@@ -166,6 +166,32 @@ This report will display [profiles](../nightscout/profile_editor.md) used in the
 
 </br>
 
+### Loopalyzer
+
+Loopalyzer is an utility made to help analyze and tune closed loop systems. It may work with other setups as well, both closed and open loop, and non loop. 
+
+Select the period on which you want to run the report then click `Show`. A set of graphs will display top to bottom your basal profile, blood glucose, loop deviation from basal (that should be minimized for an optimized closed loop system), insulin on board and carbs on board. On the last two graphs, treatments are represented by vertical black bars.
+
+<img src="../img/Reports19.png" style="zoom:60%;" />
+
+</br>
+
+Using the dedicated menu you can display your profiles below the graph and use `Timeshift`. Click `Show` to update the display when changing the options.
+
+You can navigate day to day with `< Previous day` and `Next day >` or by period length with `<< Previous` and `Next >>` (i.e. if you selected a week it will go backwards and forward week by week).
+
+ <img src="../img/Reports20.png" style="zoom:60%;" />
+
+`Timeshift` will allow you to  synchronize meals within a time range in order to better analyze your data. Obviously the rest of the day will not make sense since the shift only highlights the time range you are analyzing now. For example below: dinner analysis.
+
+<img src="../img/Reports21.png" style="zoom:60%;" />
+
+</br>
+
+You might also be interested by [AutoTune](https://autotuneweb.azurewebsites.net/).
+
+</br>
+
 # Nightscout Reporter
 
 [https://nightscout-reporter.zreptil.de/](https://nightscout-reporter.zreptil.de/) can be used to generate PDF documents with the data stored at Nightscout.

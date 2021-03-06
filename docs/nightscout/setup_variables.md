@@ -444,9 +444,15 @@ Possible values `on` or `off`. Enables the icon allowing for editing of treatmen
 
 </br>
 
-##### **BOLUS_RENDER_OVER** (`1`)
+##### **BOLUS_RENDER**
 
-U value over which the bolus values are rendered on the chart if the `x U and Over` option is selected. This value can be an integer or a float, e.g. `0.3`, `1.5`, `2`, etc...
+Settings to configure Bolus rendering
+
+`BOLUS_RENDER_OVER` (`0`) - U value over which the bolus labels use the format defined in `BOLUS_RENDER_FORMAT`. This value can be an integer or a float, e.g. `0.3`, `1.5`, `2`, etc.
+
+`BOLUS_RENDER_FORMAT` (`default`) - Possible values are `hidden`, `default` (with leading zero and U), `concise` (with U, without leading zero), and `minimal` (without leading zero and U).
+
+`BOLUS_RENDER_FORMAT_SMALL` (`default`) - Possible values are `hidden`, `default` (with leading zero and U), `concise` (with U, without leading zero), and `minimal` (without leading zero and U).
 
 <img src="..\img\SetupNS43.png" style="zoom:80%;" />
 
