@@ -168,7 +168,7 @@ This report will display [profiles](../nightscout/profile_editor.md) used in the
 
 ### Loopalyzer
 
-Loopalyzer is an utility made to help analyze and tune closed loop systems. It may work with other setups as well, both closed and open loop, and non loop. 
+[Loopalyzer](https://www.youtube.com/watch?v=4-yXkzNqTE0) is an utility made to help analyze and tune closed loop systems. It may work with other setups as well, both closed and open loop, and non loop. 
 
 Select the period on which you want to run the report then click `Show`. A set of graphs will display top to bottom your basal profile, blood glucose, loop deviation from basal (that should be minimized for an optimized closed loop system), insulin on board and carbs on board. On the last two graphs, treatments are represented by vertical black bars.
 
