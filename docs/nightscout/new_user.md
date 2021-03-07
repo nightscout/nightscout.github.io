@@ -235,7 +235,7 @@ Write down these credentials in the boxes below (yes, in this browser window you
 
 Database password: <input type="text" id="myPwd" value="soo5ecret" size="20">
 
-Database username: <input type="text" id="mydB" value="mycgmic" size="20">
+Database username: <input type="text" id="myUsr" value="nightscout" size="20">
 
 </br>
 
@@ -271,6 +271,12 @@ Database username: <input type="text" id="mydB" value="mycgmic" size="20">
 
 !!!info "It should be similar to this (`xxxxx` will be different):"
     `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
+</br>
+
+- Invent a name for your database, this is not a critical information, use a simple text.
+
+Database Name: <input type="text" id="mydB" value="mycgmic" size="20">
+
 </br>
 
 - Click the `Generate` button (just here below this line: in this browser window you're reading):
