@@ -273,7 +273,7 @@ Database username: <input type="text" id="myUsr" value="nightscout" size="20">
     `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
 </br>
 
-- Invent a name for your database, this is not a critical information, use a simple text.
+- Invent a name for your database, this is not a critical information (for example `mycgmic`).
 
 Database Name: <input type="text" id="mydB" value="mycgmic" size="20">
 
