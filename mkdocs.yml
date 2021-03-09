@@ -34,6 +34,7 @@ pages:
     - 'Updating your site': 'update/update.md'
     - 'Redeploying': 'update/redeploy.md'
     - 'Attach a new Atlas database': 'update/newdatabase.md'
+    - 'Update Heroku Stack': 'update/upd_stack.md'
 - Troubleshoot:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Connection failure': 'troubleshoot/connection_string.md'
