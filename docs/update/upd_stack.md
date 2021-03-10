@@ -2,7 +2,7 @@
 
 </br>
 
-It is good practice to maintain your Heroku stack up to date. Either when you receive an email from Heroku or when you [update your Nightscout site](../update) (which is also a good habit.)
+It is good practice to maintain your Heroku stack up to date. Either when you receive an email from Heroku or when you [update your Nightscout site](../update) (which is also a good habit).
 
 </br>
 

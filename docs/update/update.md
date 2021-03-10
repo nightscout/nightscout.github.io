@@ -205,6 +205,13 @@ Click `Create pull request`.
 
 </br>
 
-- Your site will open and should be at the latest version. You're done!
-- Check your [profile time zone](../../nightscout/profile_editor/#profile-view) is correct.
-- Else, if you ran into trouble, try the [Redeploy](./redeploy.md) method
+- Your site will open and should be at the latest version. 
+- Check your [profile time zone](../../nightscout/profile_editor/#profile-view) is correct. You're done!
+
+</br>
+
+Else...
+
+# Redeploy
+
+- If you ran into trouble, try the [Redeploy](./redeploy.md) method
