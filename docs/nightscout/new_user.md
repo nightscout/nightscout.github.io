@@ -270,10 +270,10 @@ Database username: <input type="text" id="myUsr" value="nightscout" size="20">
 </br>
 
 !!!info "It should be similar to this (`xxxxx` will be different):"
-    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
+    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 </br>
 
-- Invent a name for your database, this is not a critical information (for example `mycgmic`).
+- Invent a name for your database, this is not a critical information (for example `mycgmic`), note that default is `myFirstDatabase`.
 
 Database Name: <input type="text" id="mydB" value="mycgmic" size="20">
 
@@ -307,15 +307,15 @@ function Generate()
     if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
     else
     {
-      var iAD = sAtlas.search("<dbname>");
-      if(iAD==-1) { sString = "Atlas URI should contain &lt;dbname&gt;"; }
+      var iAD = sAtlas.search("myFirstDatabase");
+      if(iAD==-1) { sString = "Atlas URI should contain myFirstDatabase"; }
       else
       {
       	bAtlas=1;
         sString = sAtlas.substring(0,iAP);
         sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
         sString = sAtlas.substring(iAP+10, iAD);
-        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+8));
+        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+15));
       }
     }
   }

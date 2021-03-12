@@ -42,15 +42,15 @@ function Generate()
     if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
     else
     {
-      var iAD = sAtlas.search("<dbname>");
-      if(iAD==-1) { sString = "Atlas URI should contain &lt;dbname&gt;"; }
+      var iAD = sAtlas.search("myFirstDatabase");
+      if(iAD==-1) { sString = "Atlas URI should contain myFirstDatabase"; }
       else
       {
       	bAtlas=1;
         sString = sAtlas.substring(0,iAP);
         sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
         sString = sAtlas.substring(iAP+10, iAD);
-        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+8));
+        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+15));
       }
     }
   }
