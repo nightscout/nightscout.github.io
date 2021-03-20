@@ -64,13 +64,13 @@ Do not change device/computer/browser during the setup process!
 
 </br>
 
-- Play and solve the puzzle then click `Join a free plan`.
+- ###### Play and solve the puzzle then click `Join a free plan`.
 
 <img src="..\img\NewNS01.png" style="zoom:80%;" />
 
 </br>
 
-- Type your interests (not important) then click `Complete setup`.
+- ###### Type your interests (not important) then click `Complete setup`.
 
 
 
@@ -79,13 +79,13 @@ Do not change device/computer/browser during the setup process!
 </br>
 
 
-- GitHub will send you a verification email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
+- ###### GitHub will send you a verification email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
 
 <img src="..\img\NewNS03.png" style="zoom:80%;" />
 
 </br>
 
-- Click `Verify email address` in the verification email from GitHub.
+- ###### Click `Verify email address` in the verification email from GitHub.
 
 <img src="..\img\NewNS04.png" style="zoom:80%;" />
 
@@ -93,13 +93,13 @@ Do not change device/computer/browser during the setup process!
 
 
 
-- This will open a new page in your browser, click `Skip this for now`.
+- ###### This will open a new page in your browser, click `Skip this for now`.
 
 <img src="..\img\NewNS05.png" style="zoom:80%;" />
 
 </br>
 
-- Leave the page open as it is.
+- ###### Leave the page open as it is.
 
 <img src="..\img\NewNS06.png" style="zoom:80%;" />
 
