@@ -7,11 +7,11 @@ markdown_extensions:
     - toc:
         permalink: ⌁
 
-pages:
+nav:
 - Introduction:
     - 'What is Nightscout?': 'index.md'
     - 'How do I upload my data?': 'uploader/uploaders.md'
-- Install: 
+- Install:
     - 'Overview': 'nightscout/insights.md'
     - 'Installation': 'nightscout/new_user.md'
 - Configure:
