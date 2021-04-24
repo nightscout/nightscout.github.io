@@ -117,7 +117,7 @@ This creates a scenario in which a token will be required for all access (even o
 !!!note "Note: authentication tokens are also called access tokens"
 
 !!!warning "Changing [`API_SECRET`](../setup_variables/#api_secret)"
-    If you change your `API_SECRET` all your tokens will change. Make your you update your devices and send the new token link to those you allowed to access your Nightscout
+    If you change your `API_SECRET` all your tokens will change. Make sure you update your devices and send the new token link to those you allowed to access your Nightscout
 
 To access the Authentication options, click the settings panel (three horizontal bars in the top right) in your website and select Admin Tools. The Authentication options are at the top of the Admin page. (Note: you must be logged in with your `API SECRET` to access these tools.)
 

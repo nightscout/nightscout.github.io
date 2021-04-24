@@ -64,13 +64,13 @@ Do not change device/computer/browser during the setup process!
 
 </br>
 
-- ###### Play and solve the puzzle then click `Join a free plan`.
+- Play and solve the puzzle then click `Join a free plan`.
 
 <img src="..\img\NewNS01.png" style="zoom:80%;" />
 
 </br>
 
-- ###### Type your interests (not important) then click `Complete setup`.
+- Type your interests (not important) then click `Complete setup`.
 
 
 
@@ -79,13 +79,13 @@ Do not change device/computer/browser during the setup process!
 </br>
 
 
-- ###### GitHub will send you a verification email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
+- GitHub will send you a verification email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
 
 <img src="..\img\NewNS03.png" style="zoom:80%;" />
 
 </br>
 
-- ###### Click `Verify email address` in the verification email from GitHub.
+- Click `Verify email address` in the verification email from GitHub.
 
 <img src="..\img\NewNS04.png" style="zoom:80%;" />
 
@@ -93,13 +93,13 @@ Do not change device/computer/browser during the setup process!
 
 
 
-- ###### This will open a new page in your browser, click `Skip this for now`.
+- This will open a new page in your browser, click `Skip this for now`.
 
 <img src="..\img\NewNS05.png" style="zoom:80%;" />
 
 </br>
 
-- ###### Leave the page open as it is.
+- Leave the page open as it is.
 
 <img src="..\img\NewNS06.png" style="zoom:80%;" />
 
@@ -227,15 +227,15 @@ Atlas will create your default cluster, wait until it is complete... (can take m
 
 </br>
 
-- Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret`).
+- Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret` but please change it!).
 
 !!! warning "Database credentials: Do not use your Atlas account credentials. Do not use special characters: only letters and numbers."
 
 Write down these credentials in the boxes below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.
 
-Database password: <input type="text" id="myPwd" value="soo5ecret" size="20">
+Database password: <input type="text" id="myPwd" value="click here, delete and put your own" size="30">
 
-Database username: <input type="text" id="myUsr" value="nightscout" size="20">
+Database username: <input type="text" id="myUsr" value="click here, delete and put your own" size="30">
 
 </br>
 
@@ -265,17 +265,17 @@ Database username: <input type="text" id="myUsr" value="nightscout" size="20">
 
 - Paste the string in the box below (yes, in this browser window you're reading now, unless you're reading a printed version).
 
-<input type="text" id="myAtlas" value="" size="100">
+<input type="text" id="myAtlas" value="click here, delete and paste your Atlas connection string" size="100">
 
 </br>
 
 !!!info "It should be similar to this (`xxxxx` will be different):"
-    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
+    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 </br>
 
-- Invent a name for your database, this is not a critical information (for example `mycgmic`).
+- Invent a name for your database, this is not a critical information (for example `mycgmic`), note that default is `myFirstDatabase`.
 
-Database Name: <input type="text" id="mydB" value="mycgmic" size="20">
+Database Name: <input type="text" id="mydB" value="click here, delete and put your own" size="30">
 
 </br>
 
@@ -307,21 +307,22 @@ function Generate()
     if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
     else
     {
-      var iAD = sAtlas.search("<dbname>");
-      if(iAD==-1) { sString = "Atlas URI should contain &lt;dbname&gt;"; }
+      var iAD = sAtlas.search("myFirstDatabase");
+      if(iAD==-1) { sString = "Atlas URI should contain myFirstDatabase"; }
       else
       {
       	bAtlas=1;
         sString = sAtlas.substring(0,iAP);
         sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
         sString = sAtlas.substring(iAP+10, iAD);
-        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+8));
+        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+15));
       }
     }
   }
 
   if(bAtlas) document.getElementById("result").innerHTML = sFinalString;
   else document.getElementById("result").innerHTML = sString;
+  if(bAtlas) document.getElementById("resultbis").innerHTML = sFinalString;
 }
 </script>
 
@@ -433,7 +434,7 @@ Scroll down and setup the following variables:
 
 - In `ENABLE`, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
-`careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override speech cors`
+`careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
 
@@ -444,9 +445,15 @@ Scroll down and setup the following variables:
 
 - Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
 
-`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
+If you compiled all the fields and successfully generated the string this is what you should copy in `MONGODB_URI`:
+
+<p style="font-size:18px" id="resultbis">Sorry... something is missing for me to make it automatically...</p>
 
 <img src="..\img\NewNS39.png" style="zoom:80%;" />
+
+If you preferred to make it yourself, make sure it looks like this:
+
+`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
 </br>
 
