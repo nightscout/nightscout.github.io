@@ -4,9 +4,21 @@
 
 </br>
 
-Nightscout is DIY (Do It Yourself), if you don’t feel confident that you have the necessary skills, give it a try. You’ll find people that is willingly to help you setting it up in many Facebook groups. For free. Paying it forward.
-
-If you want to [sell installations](https://github.com/nightscout/nightscout.github.io/wiki/Can-I-sell-Nightscout), keep in mind you will be legally liable and can easily be sued by your buyers should anything bad happen to them because of Nightscout. Nightscout is not approved by FDA, CE, ... this is the reason why it's DIY.
+Welcome to Nightscout!
+There are many ways to get started with Nightscout that the Nightscout community
+supports.
+Nightscout is DIY (Do It Yourself), if you don’t feel confident that you have
+the necessary skills, give it a try.
+You’ll find people that are willing to
+help you setting it up in many Facebook groups. For free. Paying it forward.
+One benefit of the DIY method is that it requires very little financial
+investment and allows you to try Nightscout technology for free.  If you find
+the technology or the maintenance demanding, not interested in servers and
+databases, try [T1PAL](https://t1pal.com/),
+which offers Nightscout as a service.  T1Pal eliminates  the need for the
+following steps, providing a simpler way to get started with Nightscout, at the
+expense of a monthly subscription.  Otherwise, to get started with Nightscout
+for free, please find the following steps.
 
 </br>
 
