@@ -142,10 +142,13 @@ When creating a new site or migrating (usually not the first attempt), when reac
 - If you didn't migrate your Heroku database from mLab to Atlas [create a new Atlas database](../../update/newdatabase/).
 - If you didn't migrate from Azure to Heroku create a new site [create a new Nightscout site with Heroku](../../nightscout/new_user/).
 - If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and [deploy](../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor) again after [checking](../connection_string/#change-your-atlas-database-password) the Atlas connection string is correct.
+- If your site is already up to date:
 
 </br>
 
-- If your site is already up to date, try to restart your app: log in Heroku, go to `Settings`, `More`, `Restart all dynos`.
+## Restart all dynos
+
+- Log in Heroku, go to `Settings`, `More`, `Restart all dynos`.
 
 <img src="../../update/img/MigrateNS57.png" style="zoom:80%;" >
 

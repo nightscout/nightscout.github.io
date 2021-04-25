@@ -6,13 +6,15 @@ Nightscout is integrated with DIY closed loop systems.
 
 Look into the specific app documentation to know more about optimal Nightscout settings.
 
+The heading for each section is a link to the Nightscout overview page for that closed-loop system.
+
 </br>
 
 ## [Loop](https://loopkit.github.io/loopdocs/nightscout/overview/)
 
-[Loop](https://github.com/LoopKit/Loop) is an app template for building an automated insulin delivery system. It is a stone resting on the boulders of work done by many others.
+[Loop](https://loopdocs.org) is an iOS app that assists in the many insulin dosing decisions people with diabetes face every day. You enter your own settings for desired correction range, basal schedule, insulin sensitivity factor (ISF), carbohydrate ratio (CR) and the type of insulin you are using.  The glucose predictions, using your settings and meal entries, provide Loop with the information needed to modify insulin delivery to attain a targeted glucose range in the future.
 
-The app is built on top of [LoopKit](https://github.com/LoopKit/LoopKit). LoopKit is a set of frameworks that provide data storage, retrieval, and calculation, as well as boilerplate view controllers used in Loop.
+Once your Nightscout site is configured, use the [New Variables for Loopers](https://loopkit.github.io/loopdocs/nightscout/update_user/#new-variables-for-loopers) section of LoopDocs to update your Nightscout Config Vars.
 
 Facebook group: [Looped](https://www.facebook.com/groups/TheLoopedGroup)
 
@@ -28,6 +30,6 @@ Facebook group: [Looped](https://www.facebook.com/groups/TheLoopedGroup)
 
 ## [AAPS](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Nightscout.html)
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. 
+AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones.
 
 Facebook group: [Android APS Users](https://www.facebook.com/groups/AndroidAPSUsers)
