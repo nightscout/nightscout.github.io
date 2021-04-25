@@ -17,6 +17,11 @@
 
 <br>
 
+!!!note "DIY Only"
+    These instructions apply to DIY setup only.  For [T1Pal](https://t1pal.com/),
+    Nightscout as a service, updates are automatic.  Contact T1Pal support to
+    request specific features or versions.
+
 ## Step 1. Cleanup Github
 
 </br>

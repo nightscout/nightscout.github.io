@@ -2,6 +2,9 @@
 
 </br>
 
+These instructions apply to DIY setup only.  For [T1Pal](https://t1pal.com/),
+Nightscout as a service, updates are automatic.  Contact T1Pal support to
+request specific features or versions.
 Updating your website to the latest version (see here which is the [current released version](https://github.com/nightscout/cgm-remote-monitor/releases)) is easy with the update tool linked below.
 
 </br>
