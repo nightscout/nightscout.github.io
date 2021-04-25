@@ -47,9 +47,13 @@ as **"Followers"**).
 
 Nightscout was developed by people affected by Type 1 Diabetes and has
 continued to be developed, maintained, and supported by volunteers, clinical
-use, and commercial sponsorship.
+use, and commercial sponsorship.  The web portal known as Nightscout is made by the [CGM
+Remote Monitor
+Contributors](https://github.com/nightscout/cgm-remote-monitor/graphs/contributors)
+and the Nightscout community [over years](https://www.youtube.com/watch?v=n0kugielpnw).
 
 When first implemented, Nightscout was a solution specifically for remote monitoring of Dexcom G4 CGM data. Today, there are Nightscout solutions available for nearly all commercial CGM sensors. The goal of the project is to allow the remote monitoring, sharing and analysis of any T1D's glucose levels using existing monitoring devices.
+
 </br>
 </br>
 
