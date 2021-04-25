@@ -1,3 +1,9 @@
+
+!!!note "DIY Only"
+    These instructions apply to DIY setup only.  For [T1Pal](https://t1pal.com/),
+    Nightscout as a service, all database maintenance is included automatically.
+    Contact T1Pal support to request specific features or versions.
+
 # Attach a new Atlas database to your Heroku app
 
 In December 2020, mLab stopped operations.
