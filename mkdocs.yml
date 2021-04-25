@@ -17,12 +17,11 @@ nav:
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Configure your Uploader': 'uploader/setup.md'
-    - 'Secure your site': 'nightscout/security.md'
+    - 'Security': 'nightscout/security.md'
     - 'Follower Devices': 'nightscout/downloaders.md'
     - 'Nightscout on your watch': 'nightscout/wearable.md'
     - 'Running multiple sites': 'nightscout/multiadmin.md'
     - 'Closed-loop Systems': 'nightscout/close_loop.md'
-    - 'Security': 'nightscout/security.md'
 - Use:
     - 'Discover your site': 'nightscout/discover.md'
     - 'Secure your site': 'nightscout/security.md'
