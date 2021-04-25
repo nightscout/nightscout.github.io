@@ -13,7 +13,7 @@ You’ll find people that are willing to
 help you setting it up in many Facebook groups. For free. Paying it forward.
 One benefit of the DIY method is that it requires very little financial
 investment and allows you to try Nightscout technology for free.  If you find
-the technology or the maintenance demanding, not interested in servers and
+the technology or the maintenance demanding, are not interested in servers and
 databases, try [T1PAL](https://t1pal.com/),
 which offers Nightscout as a service.  T1Pal eliminates  the need for the
 following steps, providing a simpler way to get started with Nightscout, at the

@@ -59,24 +59,25 @@ When first implemented, Nightscout was a solution specifically for remote monito
 
 ## What are the values of Nightscout
 
-We are compelled in the pursuit of humane and equitable application of
-technology to liberating people from the burden of diabetes.  We are not
-waiting to deliver the benefits we've found in sharing all diabetes
-experiences.  Nightscout is free to contribute, free to access, free to
+We are compelled in the pursuit of **humane** and **equitable** application of
+technology to **liberating people from the burden of diabetes**.  We are not
+waiting to deliver the benefits we've found in **sharing _all_ diabetes
+experiences**.  Nightscout is free to contribute, free to access, free to
 criticize, free to try, free to depend on, free to modify, and free to
-distribute.  The Nightscout community demands respect and dignity for all
+distribute.  The Nightscout community demands **respect** and **dignity** for all
 community members.  The reputation of the Nightscout community is affected by
-the quality of the source code, the quality of our discussions, and what we are
-known for doing, and the way we treat each other.
-Users of Nightscout are impacted by reliability, security and confidentiality of
+the **quality** of the source code, the quality of our relationships, the
+quality of our discussions, what we are known for doing: the way we treat each other.
+Users of Nightscout are impacted by **reliability**, **security** and
+**confidentiality** of
 Nightscout.  Therefore, the developers and contributors of Nightscout strive to
-improve the quality of Nightscout while making these opportunities accessible to
-all.
+improve the quality of Nightscout while making these opportunities
+**accessible** to all.
 
-Nightscout's longevity, the application, the ecosystem, and the culture demand
-we use all tools at our disposable to achieve the values in a sustainable way.
+Nightscout's **longevity**, the application, the ecosystem, and the culture demand
+we use all tools at our disposable to achieve the values in a **sustainable** way.
 We are not waiting to do whatever it takes to meet the needs of people affected
-by the inhumane demands of diabetes.  Our active collaboration against the
+by the inhumane demands of diabetes.  Our active **collaboration** against the
 burden of diabetes creates the results we desire.
 
 ## What Do I Need?
