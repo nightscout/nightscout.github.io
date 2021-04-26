@@ -165,11 +165,20 @@ There are also many local Nightscout communities and you'll probably be able to 
     You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.
 </br>
 
-## Paid Solutions
+## Nightscout as a Service
 
 If you prefer to pay and just use Nightscout as a fully managed service and let somebody else worry about installation and maintenance then [T1Pal](https://t1pal.com/) could be exactly what you need.
 
 The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project.
+
+Database and server administration is automated and managed automatically as
+part of the service.
+Contact T1Pal support to request specific features or versions.
+File a support ticket by emailing `support` at `t1pal.com`, or select "Get
+Support" from [My Account](https://www.t1pal.com/account/).
+
+
+
 </br>
 </br>
 

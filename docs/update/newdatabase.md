@@ -1,8 +1,9 @@
 
 !!!note "DIY Only"
-    These instructions apply to DIY setup only.  For [T1Pal](https://t1pal.com/),
-    Nightscout as a service, all database maintenance is included automatically.
-    Contact T1Pal support to request specific features or versions.
+    These instructions apply to DIY setup only.  There are Nightscout as a
+    service options which include database maintenance and setup as an included
+    part of the service.  See [Nightscout as a
+    service](../index.md#nightscout-as-a-service), for more details.
 
 # Attach a new Atlas database to your Heroku app
 
