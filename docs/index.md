@@ -18,7 +18,7 @@ and treatment data anywhere using just a web browser connected to the internet.
 
 There are several parts to this system. You need somewhere online to
 store/process/visualise this data (**a Nightscout Site**), something to upload
-CGM data to your Nightscout (**a Uploader**), and then optionally you can use
+CGM data to your Nightscout (**an Uploader**), and then optionally you can use
 other devices to access/view this data (**a Follower or usually several**):
 
 #### Nightscout Site
@@ -30,7 +30,8 @@ Although not necessary, you might prefer to use paid hosting services for your d
 
 #### Uploader
 
-The CGM data is usually sent to Nightscout by an **uploader device** (often known as a **"Uploader"**) such as a mobile/cellphone running an app such as xDrip+, Spike, xDrip4iOS or Medtronic Uploader. Alternatively, the CGM data can be pulled directly from your online Dexcom or Medtronic CareLink accounts. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have. Once you've read this page (yes - all the way to the bottom!), you can find more information here about [Uploaders](./uploader/uploaders.md).
+The CGM data is usually sent to Nightscout by an **uploader device** (often
+known as an **"Uploader"**) such as a mobile/cellphone running an app such as xDrip+, Spike, xDrip4iOS or Medtronic Uploader. Alternatively, the CGM data can be pulled directly from your online Dexcom or Medtronic CareLink accounts. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have. Once you've read this page (yes - all the way to the bottom!), you can find more information here about [Uploaders](./uploader/uploaders.md).
 
 #### Followers
 
