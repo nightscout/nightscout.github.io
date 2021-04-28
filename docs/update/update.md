@@ -2,6 +2,12 @@
 
 </br>
 
+!!!note "Heroku DIY Only"
+    These instructions apply to DIY setup only.  There are Nightscout as a
+    service options which provides updates and setup included as part of
+    the service.  See [Nightscout as a
+    service](../index.md#nightscout-as-a-service), for more details.
+
 Updating your website to the latest version (see here which is the [current released version](https://github.com/nightscout/cgm-remote-monitor/releases)) is easy with the update tool linked below.
 
 </br>

@@ -3,6 +3,9 @@
 </br>
 
 It is good practice to maintain your Heroku stack up to date. Either when you receive an email from Heroku or when you [update your Nightscout site](../update) (which is also a good habit).
+If you are not comfortable with Heroku and want Nightscout without maintaining
+Heroku, please try [T1PAL](https://t1pal.com/), which offers Nightscout as a
+service.
 
 </br>
 

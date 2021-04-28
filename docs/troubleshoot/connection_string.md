@@ -2,6 +2,16 @@
 
 For technical details look [here](https://docs.mongodb.com/manual/reference/connection-string/#mongodb-uri).
 
+!!!note "DIY Only"
+    These instructions apply to DIY setup only.  There are Nightscout as a
+    service options which include database maintenance and setup as an included
+    part of the service.  See [Nightscout as a
+    service](../index.md#nightscout-as-a-service), for more details.
+
+!!!note "T1Pal Users"
+    File a support ticket by emailing `support` at `t1pal.com`, or select "Get
+    Support" from [My Account](https://www.t1pal.com/account/).
+
 A typical mLab migrated string will look like this:
 
 `mongodb+srv://heroku_0v50k8rf:ddfsjcpfu8fcoj9n6dueabfd5u@cluster0.g03wh.mongodb.net/heroku_0v50k8rf?retryWrites=true&w=majority`
