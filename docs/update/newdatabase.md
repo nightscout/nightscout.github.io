@@ -1,10 +1,3 @@
-
-!!!note "DIY Only"
-    These instructions apply to DIY setup only.  There are Nightscout as a
-    service options which include database maintenance and setup as an included
-    part of the service.  See [Nightscout as a
-    service](../index.md#nightscout-as-a-service), for more details.
-
 # Attach a new Atlas database to your Heroku app
 
 In December 2020, mLab stopped operations.
