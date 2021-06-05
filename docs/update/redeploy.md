@@ -1,5 +1,9 @@
 # Redeploy your repository
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+
+------
+
 </br>
 
 !!! note "Azure Users"

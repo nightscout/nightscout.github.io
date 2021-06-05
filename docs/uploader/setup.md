@@ -47,23 +47,9 @@ On your master phone, touch the Share icon, enable Sharing. If you have no follo
 
 ## Medtronic CareLink
 
-Log in Heroku.
+!!!warning "This plugin is **NOT** functional anymore with Heroku."
 
-From `Settings`, click on the  `Reveal Config Vars`
-
-<img src="../../nightscout/img/config-vars.png" width="800">
-
-</br>
-
-You need to add `mmconnect` in the `ENABLE` variable. Do not delete other entries, just add `mmconnect` after a space.
-
-<img src="../../nightscout/img/NewNS38.png" style="zoom:80%;" />
-
-If you want to link your CareLink account as a data source, compile the following lines:
-
-<img src="../../nightscout/img/NewNS36.png" style="zoom:80%;" />
-
-You might want to setup [additional fields](https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring) for your pump.
+Plugin setup documented [here](https://github.com/nightscout/cgm-remote-monitor/#mmconnect-minimed-connect-bridge) with [additional fields](https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring) for your pump.
 
 </br>
 

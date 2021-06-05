@@ -1,16 +1,8 @@
 # Meet your connection string
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
+
 For technical details look [here](https://docs.mongodb.com/manual/reference/connection-string/#mongodb-uri).
-
-!!!note "DIY Only"
-    These instructions apply to DIY setup only.  There are Nightscout as a
-    service options which include database maintenance and setup as an included
-    part of the service.  See [Nightscout as a
-    service](../index.md#nightscout-as-a-service), for more details.
-
-!!!note "T1Pal Users"
-    File a support ticket by emailing `support` at `t1pal.com`, or select "Get
-    Support" from [My Account](https://www.t1pal.com/account/).
 
 A typical mLab migrated string will look like this:
 
@@ -89,7 +81,7 @@ If you see this message:
 <img src="../img/TShoot45.png" style="zoom:80%;" >
 
 - If you forgot to migrate to Atlas you need to [attach a new Atlas database](../../update/newdatabase/).
-- If you know you migrated, and your Nightscout was still functional after November 11th, continue [below](./#bad-connection-string) to recover:
+- If you know you migrated, and your Nightscout was still functional after November 11th 2020, continue [below](./#bad-connection-string) to recover:
 
 </br>
 
@@ -143,7 +135,7 @@ Note that your `atlasusername`, `atlaspassword` and `dbname` will be different f
 
 - Paste the string in the box below:
 
-<input type="text" id="myAtlas" value="" size="100">
+<input type="text" id="myAtlas" value="Yes here. Delete this and paste it here" size="100">
 </br>
 
 - Click the `Analyze` button:
@@ -319,9 +311,9 @@ If you've tried several times to deploy or migrate, you might end-up with too ma
 
 - Paste the connection string in this box below:
 
-<input type="text" id="myAtlas2" value="" size="100">
+<input type="text" id="myAtlas2" value="Yes here. Delete this and paste it here" size="100">
 
-- Modify the database password and database name (not username) in the boxes below (only letters and numbers allowed):
+- Modify the database password and database name (not username) in the boxes below (only letters and numbers allowed). Don't use the values below: they are examples. Put those you used when creating your Atlas database.
 
 Database password: <input type="text" id="myPwd2" value="soo5ecret" size="20">
 
@@ -411,8 +403,8 @@ function Generate2()
 
 </br>
 
-- If you forgot your password invent a new one (use only letters and numbers: no special characters) or use `Autogenerate Secure Password` and click `Copy`
--  Else make it the same than the one in your connection string
+- If you forgot your password invent a new one (use only letters and numbers: no special characters) or better: use `Autogenerate Secure Password` and click `Copy`
+-  Else make it the same than the one in your Heroku `MONGODB_URI` connection string variable
 
 <img src="../img/TShoot13.png" style="zoom:80%;" >
 

@@ -2,6 +2,12 @@
 
 </br>
 
+Components, costs and complexity will depend on the solution you want to implement.
+
+For an overview of some possibilities, see [vendors](../../vendors).
+
+</br>
+
 ## GitHub
 
 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="zoom:20%;" />

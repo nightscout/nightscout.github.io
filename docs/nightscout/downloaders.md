@@ -33,11 +33,9 @@ Facebook group [xDrip](https://www.facebook.com/groups/xDripG5/)
 
 </br>
 
-### [AndroidAPS NSClient](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Screenshots.html)
+### [AndroidAPS NSClient](https://github.com/nightscout/AndroidAPS/releases)
 
 <img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
-
-follow the [build APK instructions](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html) selecting the build variant “NSClientRelease”.
 
 Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUsers)
 
