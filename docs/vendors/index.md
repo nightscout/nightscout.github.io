@@ -42,7 +42,7 @@ The mainly used solution for classic DIY is Salesforce Heroku and MongoDB Atlas,
     <tr>
         <td><img src="./img/T1Pal.png" align="center"></td>
         <td>Managed</td>
-    	<td>12.99$/month</td>
+    	<td>11.99$/month</td>
         <td><img src="./img/T1Pal.png" align="center"></td>
 		<td>Contributors</td>
         <td>Yes</td>
