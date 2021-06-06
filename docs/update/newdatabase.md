@@ -1,15 +1,12 @@
-
-!!!note "DIY Only"
-    These instructions apply to DIY setup only.  There are Nightscout as a
-    service options which include database maintenance and setup as an included
-    part of the service.  See [Nightscout as a
-    service](../index.md#nightscout-as-a-service), for more details.
-
 # Attach a new Atlas database to your Heroku app
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />+<img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
+
+------
 
 In December 2020, mLab stopped operations.
 
-If you didn't migrate your database from mLab to Atlas you need to create a new database for your Nightscout site.
+If you were using Heroku DIY and didn't migrate your database from mLab to Atlas you need to create a new database for your Nightscout site.
 
 </br>
 

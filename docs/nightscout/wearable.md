@@ -59,7 +59,11 @@ With an Android smartphone.
 ##### Android Wear 2.x:
 
 - Install [Wear OS](https://play.google.com/store/apps/details?id=com.google.android.wearable.app) on your phone and pair your watch. Make sure to allow GPS and Wear OS access to position on the watch. Allow Wear OS to run in background on your phone.
--  [Install](https://support.google.com/wearos/answer/7314014?hl=en) your app wear extension from the smartwatch Google Play store, selecting the apps installed on your phone.
+
+- [Install](https://support.google.com/wearos/answer/7314014?hl=en) your app wear extension from the smartwatch Google Play store, selecting the apps installed on your phone.
+
+  *Note: Newer versions of Wear OS do not support this feature anymore, use [Wear Installer](https://youtu.be/8HsfWPTFGQI).*
+
 - Change the watchface to match your app (in Wear OS or on your watch).
 
 #### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
@@ -100,7 +104,9 @@ Select your Wearable device and enable the Glimp watchface.
 
 </br>
 
-## Amazfit MiBand 4 and 5
+## Xiaomi MiBand 4 and 5
+
+## Amazfit Band 5, Bip, Bip Lite, Bip S and GTR
 
 #### xDrip+
 

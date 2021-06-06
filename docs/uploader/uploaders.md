@@ -52,7 +52,7 @@ Dexcom G4 Platinum (Share) requires you to carry the receiver to forward data to
 
 ## Medtronic
 
-If your sensor system is able to directly upload to CareLink then Nightscout will be able to get the information directly from the cloud using the `mmconnect` plugin (not valid for the newer 780G pump).
+If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore using Heroku** without a bridge device.
 
 <img src="..\img\Upload04.png" />
 </br>

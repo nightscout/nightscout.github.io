@@ -1,24 +1,17 @@
-
-
 # New Nightscout Users
 
 </br>
 
 Welcome to Nightscout!
-There are many ways to get started with Nightscout that the Nightscout community
-supports.
-Nightscout is DIY (Do It Yourself), if you don’t feel confident that you have
-the necessary skills, give it a try.
-You’ll find people that are willing to
-help you setting it up in many Facebook groups. For free. Paying it forward.
-One benefit of the DIY method is that it requires very little financial
-investment and allows you to try Nightscout technology for free.  If you find
-the technology or the maintenance demanding, are not interested in servers and
-databases, try [T1PAL](https://t1pal.com/),
-which offers Nightscout as a service.  T1Pal eliminates  the need for the
-following steps, providing a simpler way to get started with Nightscout, at the
-expense of a monthly subscription.  Otherwise, to get started with Nightscout
-for free, please find the following steps.
+There are many ways to get started with Nightscout that the Nightscout community supports.
+Nightscout is DIY (Do It Yourself), even if you don’t feel confident that you have the necessary skills, give it a try.
+You’ll find people that are willing to help you setting it up in many Facebook groups. For free. Paying it forward.
+
+If you find it too complex or the maintenance too demanding you might be interested in [Nightscout as a service](../../#nightscout-as-a-service).
+
+Components, costs and complexity will depend on the solution you want to implement.
+
+For an overview of other possibilities, see [vendors](../../vendors).
 
 </br>
 
@@ -39,7 +32,13 @@ Print this [document](./NightscoutDataRecord.pdf) to record all information duri
 
 </br>
 
+------
+
 #### **Here is a step-by-step guide for completing your own Nightscout site DIY style.**
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />+<img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
+
+------
 
 </br>
 
@@ -151,6 +150,12 @@ e) Create a password, it is important that you write it down for later usage. Cl
 f) Click `CLICK HERE TO PROCEED`
 
 <img src="..\img\NewNS12.png" style="zoom:70%;" />
+
+Read and accept Salesforce terms of service.
+
+Se sei residente in Italia, abilita l'interruttore `Are you domiciled in Italy`, leggi e accetta le condizioni supplementari.
+
+<img src="..\img\NewNS12a.png" style="zoom:70%;" />
 
 </br>
 
@@ -429,9 +434,9 @@ h) If you want to link your Dexcom Share account as a data source, complete the 
 
 </br>
 
-i) If you want to link your CareLink account as a data source *(currently not functional with Heroku)*, complete the following lines:
+i) Linking your CareLink account as a data source is **not functional anymore with Heroku**. Do not use the plugin below. There are alternative solutions with an Android phone and a private xDrip+ version or a bridge running on a computer or a Raspberry Pi.
 
-<img src="..\img\NewNS36.png" style="zoom:80%;" />
+<img src="..\img\NewNS36.png" style="zoom:60%;" />
 
 </br>
 
@@ -547,5 +552,47 @@ v) Dexcom Share and CareLink users should see data flowing in after some minutes
 
 Continue to [uploader](../../uploader/setup/) setup.
 
+</br>
+
+------
+
+### Editing Config Vars in Heroku
+
+</br>
+
+Once Nightscout deployed, you can access your variables from [Heroku](https://id.heroku.com/login) in order to change or customize your site.
+Variables are described [here](../setup_variables/#nightscout-config-vars).
 
 
+
+- Select your app
+
+<img src="../img/SetupNS00.png" style="zoom:80%;" />
+
+</br>
+
+- Click `Settings`
+
+<img src="../img/SetupNS01.png" style="zoom:80%;" />
+
+</br>
+
+- Scroll down and click `Reveal Config Vars`
+
+<img src="../img/SetupNS02.png" style="zoom:80%;" />
+
+</br>
+
+- You can modify the values clicking on the pen icon
+
+<img src="../img/SetupNS03.png" style="zoom:80%;" />
+
+</br>
+
+- Change the contents of `Value`  as needed then click `Save Changes`
+
+<img src="..\img\SetupNS04.png" style="zoom:80%;" />
+
+</br>
+
+Changing a variable and saving a new value will restart your site, if the change is not actuated you might also want to [restart all dynos](../../troubleshoot/troublehoot#restart-all-dynos).
