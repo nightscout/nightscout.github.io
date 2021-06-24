@@ -124,7 +124,9 @@ T1Pal is Nightscout as a service, created by a Nightscout core developer.
 
 <img src="../../vendors/img/Azure.png" style="zoom:80%;" /> + <img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
 
-Azure was the previous traditional DIY Nightscout and was [abandoned](https://github.com/nightscout/cgm-remote-monitor/issues/4798) due to costs. It is still possible to use it.
+Azure was the previous traditional DIY Nightscout and was [abandoned](https://github.com/nightscout/cgm-remote-monitor/issues/4798) due to costs.
+
+Anybody knowing how to deploy a recent version of Nightscout in Azure is welcome to PR the documentation with a sequence of operations.
 
 </br>
 

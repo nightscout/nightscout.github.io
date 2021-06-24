@@ -5,9 +5,39 @@
 !!! note
     You usually should express the Nightscout URL in secure **https://**, not only http://.  (Unless you set `INSECURE_USE_HTTP` to `true`)
 
+------
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/Heroku.png" style="zoom:80%;" />
+
+Your `Nightscout URL` defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser.
+
+<img src="../../nightscout/img/SetupNS44.png" style="zoom:80%;" />
+
+Your Nightscout password, is the `API_SECRET` variable you can find editing your Heroku variables like [this](../../nightscout/new_user/#editing-config-vars-in-heroku).
+
+------
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/T1Pal.png" style="zoom:80%;" />
+
+You will find the `Uploader url` and `Api Secret` required to configure your uploader [here](https://www.t1pal.com/account/sites/my#Uploaders).
+
+------
+
 </br>
 
 ## Dexcom
+
+You need at least one follower to use Dexcom Share.
+
+On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.
+
+<img src="..\img\UploadCFG09.png" style="zoom:60%;" />
+
+</br>
+
+------
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/Heroku.png" style="zoom:80%;" />
 
 In order to use the Dexcom Share servers to upload to Nightscout, you need to setup (and if not present add) the following variables in Heroku:
 
@@ -37,11 +67,13 @@ You need to add `bridge` in the `ENABLE` variable. Do not delete other entries, 
 
 </br>
 
-You need at least one follower to use Dexcom Share.
+------
 
-On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/T1Pal.png" style="zoom:80%;" />
 
-<img src="..\img\UploadCFG09.png" style="zoom:60%;" />
+For hosted Nightscout put your Dexcom credentials [in Dexcom Bridge](https://www.t1pal.com/account/sites/my#DataIngress).
+
+------
 
 </br>
 
@@ -57,6 +89,10 @@ Plugin setup documented [here](https://github.com/nightscout/cgm-remote-monitor/
 
 <img src="..\img\UploadCFG08.png" style="zoom:60%;" />
 
+You can also use [this QR code generator](https://nightscout.github.io/pages/configure/) and the menu item `Scan NS-Autoconfig QR Code` to copy the information.
+
+For hosted Nightscout you'll find the QR code generator in [Uploaders](https://www.t1pal.com/account/sites/my#Uploaders), select the `HTTP` tab.
+
 You might want to setup [additional fields](https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring) for your pump.
 
 Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/NightscoutForMedtronic)
@@ -71,6 +107,8 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
 <img src="..\img\UploadCFG00.png" style="zoom:80%;" />
 
 Facebook Group [xDrip](https://www.facebook.com/groups/xDripG5)
+
+For hosted Nightscout use the QR code from [Uploaders](https://www.t1pal.com/account/sites/my#Uploaders) after selecting the `XDrip` tab.
 
 </br>
 

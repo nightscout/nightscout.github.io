@@ -4,13 +4,23 @@ Nightscout configuration is held in variables , their content can be modified to
 
 </br>
 
+------
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+
 ##### Editing Config Vars in Heroku
 
 See [here](../../nightscout/new_user#editing-config-vars-in-heroku) where and how to change your variables.
 
-</br>
+------
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
+
+You can change your settings in the Control Panel see [here](../../../vendors/T1Pal/control_panel) for available variables and plugins.
 
 ------
+
+</br>
 
 ## Nightscout Config Vars
 
@@ -739,7 +749,7 @@ Calculates the number of hours since the last `Site Change` treatment that was r
 - `CAGE_INFO` (`44`) - If time since last `Site Change` matches `CAGE_INFO`, user will be warned of upcoming cannula change
 - `CAGE_WARN` (`48`) - If time since last `Site Change` matches `CAGE_WARN`, user will be alarmed to to change the cannula
 - `CAGE_URGENT` (`72`) - If time since last `Site Change` matches `CAGE_URGENT`, user will be issued a persistent warning of overdue change.
-- `CAGE_DISPLAY` (`hours`) - Possible values are 'hours' or 'days'. If 'days' is selected and age of canula is greater than 24h number is displayed in days and hours
+- `CAGE_DISPLAY` (`hours`) - Possible values are `hours` or `days`. If `days` is selected and age of canula is greater than 24h number is displayed in days and hours
 
 ##### `sage` (Sensor Age)
 
