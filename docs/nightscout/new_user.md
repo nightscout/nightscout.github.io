@@ -434,7 +434,7 @@ h) If you want to link your Dexcom Share account as a data source, complete the 
 
 </br>
 
-i) Linking your CareLink account as a data source is **not functional anymore with Heroku**. Do not use the plugin below. There are alternative solutions with an Android phone and a private xDrip+ version or a bridge running on a computer or a Raspberry Pi.
+i) Linking your CareLink account as a data source is **not functional anymore with Heroku**. Do not use the plugin below. There are alternative solutions with an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower), a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
 
 <img src="..\img\NewNS36.png" style="zoom:60%;" />
 
