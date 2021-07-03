@@ -2,6 +2,12 @@
 
 </br>
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	DIY Nightscout
+
+For [Nightscout as a service](../../index#nightscout-as-a-service) contact directly ***support*** at ***t1pal.com*** or use the `Get Support` links.
+
+</br>
+
 ## Before troubleshooting
 
 </br>
