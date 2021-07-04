@@ -44,6 +44,11 @@ Enter your billing information and `Confirm`
 
 </br>
 
+!!!note  
+     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout.
+
+</br>
+
 Select your data source
 
 <img src="..\img\T1Pal04.png" style="zoom:80%;" />

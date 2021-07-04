@@ -419,6 +419,9 @@ g) `API_SECRET` will be your Nightscout site password, it needs to be at least 1
 
 h) If you want to link your Dexcom Share account as a data source, complete the following lines:
 
+!!!note  
+    If you use a DIY closed loop system it is recommended that you let it upload to Nightscout.
+
 <img src="..\img\NewNS35.png" style="zoom:80%;" />
 
 </br>
