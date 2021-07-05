@@ -1,12 +1,17 @@
-
-
 # New Nightscout Users
 
 </br>
 
-Nightscout is DIY (Do It Yourself), if you don’t feel confident that you have the necessary skills, give it a try. You’ll find people that is willingly to help you setting it up in many Facebook groups. For free. Paying it forward.
+Welcome to Nightscout!
+There are many ways to get started with Nightscout that the Nightscout community supports.
+Nightscout is DIY (Do It Yourself), even if you don’t feel confident that you have the necessary skills, give it a try.
+You’ll find people that are willing to help you setting it up in many Facebook groups. For free. Paying it forward.
 
-If you want to [sell installations](https://github.com/nightscout/nightscout.github.io/wiki/Can-I-sell-Nightscout), keep in mind you will be legally liable and can easily be sued by your buyers should anything bad happen to them because of Nightscout. Nightscout is not approved by FDA, CE, ... this is the reason why it's DIY.
+If you find it too complex or the maintenance too demanding you might be interested in [Nightscout as a service](../../#nightscout-as-a-service).
+
+Components, costs and complexity will depend on the solution you want to implement.
+
+For an overview of other possibilities, see [vendors](../../vendors).
 
 </br>
 
@@ -27,7 +32,13 @@ Print this [document](./NightscoutDataRecord.pdf) to record all information duri
 
 </br>
 
+------
+
 #### **Here is a step-by-step guide for completing your own Nightscout site DIY style.**
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />+<img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
+
+------
 
 </br>
 
@@ -139,6 +150,12 @@ e) Create a password, it is important that you write it down for later usage. Cl
 f) Click `CLICK HERE TO PROCEED`
 
 <img src="..\img\NewNS12.png" style="zoom:70%;" />
+
+Read and accept Salesforce terms of service.
+
+Se sei residente in Italia, abilita l'interruttore `Are you domiciled in Italy`, leggi e accetta le condizioni supplementari.
+
+<img src="..\img\NewNS12a.png" style="zoom:70%;" />
 
 </br>
 
@@ -402,6 +419,9 @@ g) `API_SECRET` will be your Nightscout site password, it needs to be at least 1
 
 h) If you want to link your Dexcom Share account as a data source, complete the following lines:
 
+!!!note  
+    If you use a DIY closed loop system it is recommended that you let it upload to Nightscout.
+
 <img src="..\img\NewNS35.png" style="zoom:80%;" />
 
 </br>
@@ -417,9 +437,9 @@ h) If you want to link your Dexcom Share account as a data source, complete the 
 
 </br>
 
-i) If you want to link your CareLink account as a data source *(currently not functional with Heroku)*, complete the following lines:
+i) Linking your CareLink account as a data source is **not functional anymore with Heroku**. Do not use the plugin below. There are alternative solutions with an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower), a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
 
-<img src="..\img\NewNS36.png" style="zoom:80%;" />
+<img src="..\img\NewNS36.png" style="zoom:60%;" />
 
 </br>
 
@@ -535,5 +555,47 @@ v) Dexcom Share and CareLink users should see data flowing in after some minutes
 
 Continue to [uploader](../../uploader/setup/) setup.
 
+</br>
+
+------
+
+### Editing Config Vars in Heroku
+
+</br>
+
+Once Nightscout deployed, you can access your variables from [Heroku](https://id.heroku.com/login) in order to change or customize your site.
+Variables are described [here](../setup_variables/#nightscout-config-vars).
 
 
+
+- Select your app
+
+<img src="../img/SetupNS00.png" style="zoom:80%;" />
+
+</br>
+
+- Click `Settings`
+
+<img src="../img/SetupNS01.png" style="zoom:80%;" />
+
+</br>
+
+- Scroll down and click `Reveal Config Vars`
+
+<img src="../img/SetupNS02.png" style="zoom:80%;" />
+
+</br>
+
+- You can modify the values clicking on the pen icon
+
+<img src="../img/SetupNS03.png" style="zoom:80%;" />
+
+</br>
+
+- Change the contents of `Value`  as needed then click `Save Changes`
+
+<img src="..\img\SetupNS04.png" style="zoom:80%;" />
+
+</br>
+
+Changing a variable and saving a new value will restart your site, if the change is not actuated you might also want to [restart all dynos](../../troubleshoot/troublehoot#restart-all-dynos).

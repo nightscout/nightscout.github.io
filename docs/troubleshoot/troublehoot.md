@@ -2,6 +2,12 @@
 
 </br>
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	DIY Nightscout
+
+For [Nightscout as a service](../../index#nightscout-as-a-service) contact directly ***support*** at ***t1pal.com*** or use the `Get Support` links.
+
+</br>
+
 ## Before troubleshooting
 
 </br>
@@ -280,9 +286,12 @@ Check your Heroku settings match your new credentials (see above)
 
 ### Dexcom or CareLink data stopping after a while
 
-</br>
+!!!Note
+    CareLink with mmconnect data source stopped functioning for most . **Remove the `mmconnect` plugin from `ENABLE` if you use Heroku**.
 
-First verify you can see your BG in Clarity or CareLink.
+</br></br>
+
+First verify you can see your BG in Clarity.
 
 If data is present open Heroku and check you app didn't fall asleep.
 
@@ -292,17 +301,12 @@ If data is present open Heroku and check you app didn't fall asleep.
 
 A sleeping app might be due to your Heroku free plan: a Hobby plan makes the app never sleep. [https://www.heroku.com/pricing](https://www.heroku.com/pricing) 
 
-Another reason for a sleeping app can be due to a failure to obtain data from Dexcom Share or CareLink, check the logs to understand the reasons.
-
-</br>
-
-!!!Note
-    Some users report CareLink with mmconnect data source stopped functioning. If this is your case update Nightscout to the latest released version (min 14.1) and if it doesn't fix the issue, **remove the `mmconnect` plugin from `ENABLE` until a solution is found**.
+Another reason for a sleeping app can be due to a failure to obtain data from Dexcom Share, check the logs to understand the reasons.
 
 </br>
 
 !!!Warning "UpTime Robot"
-    Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account (Dexcom) or Heroku addresses ban (CareLink). This is not a recommended solution as it might generate a global Heroku IP blacklist lock that could propagate to all other users. If you use Nightscout, uploading data in the cloud or even just having a browser or an app downloading data should be enough to keep your app awake.
+    Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account (Dexcom) or Heroku addresses ban. This is not a recommended solution as it might generate a global Heroku IP blacklist lock that could propagate to all other users. If you use Nightscout, uploading data in the cloud or even just having a browser or an app downloading data should be enough to keep your app awake.
 
 </br>
 

@@ -1,8 +1,12 @@
 # Attach a new Atlas database to your Heroku app
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />+<img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
+
+------
+
 In December 2020, mLab stopped operations.
 
-If you didn't migrate your database from mLab to Atlas you need to create a new database for your Nightscout site.
+If you were using Heroku DIY and didn't migrate your database from mLab to Atlas you need to create a new database for your Nightscout site.
 
 </br>
 
@@ -76,7 +80,7 @@ Write down these credentials in the boxes below (yes, in this browser window you
 
 Database password: <input type="text" id="myPwd" value="soo5ecret" size="20">
 
-Database username: <input type="text" id="mydB" value="mycgmic" size="20">
+Database username: <input type="text" id="myUsr" value="nightscout" size="20">
 
 </br>
 
@@ -111,7 +115,13 @@ Database username: <input type="text" id="mydB" value="mycgmic" size="20">
 </br>
 
 !!!info "It should be similar to this (`xxxxx` will be different):"
-    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/<dbname>?retryWrites=true&w=majority`
+    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+</br>
+
+- Invent a name for your database, this is not a critical information (for example `mycgmic`), note that default is `myFirstDatabase`.
+
+Database Name: <input type="text" id="mydB" value="mycgmic" size="20">
+
 </br>
 
 - Click the `Generate` button (just here below this line: in this browser window you're reading):
@@ -143,15 +153,15 @@ function Generate()
     if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
     else
     {
-      var iAD = sAtlas.search("<dbname>");
-      if(iAD==-1) { sString = "Atlas URI should contain &lt;dbname&gt;"; }
+      var iAD = sAtlas.search("myFirstDatabase");
+      if(iAD==-1) { sString = "Atlas URI should contain myFirstDatabase"; }
       else
       {
       	bAtlas=1;
         sString = sAtlas.substring(0,iAP);
         sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
         sString = sAtlas.substring(iAP+10, iAD);
-        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+8));
+        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+15));
       }
     }
   }

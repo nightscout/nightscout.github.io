@@ -1,44 +1,26 @@
 # Nightscout Configuration
 
-</br>
-
-## Editing Config Vars in Heroku
-
-</br>
-
-Once Nightscout deployed, you can access your variables from [Heroku](https://id.heroku.com/login).
-
-- Select your app
-
-<img src="..\img\SetupNS00.png" style="zoom:80%;" />
-
-</br>
-
-- Click `Settings`
-
-<img src="..\img\SetupNS01.png" style="zoom:80%;" />
-
-</br>
-
-- Scroll down and click `Reveal Config Vars`
-
-<img src="..\img\SetupNS02.png" style="zoom:80%;" />
-
-</br>
-
-- You can modify the values clicking on the pen icon
-
-<img src="..\img\SetupNS03.png" style="zoom:80%;" />
-
-</br>
-
-- Change the contents of `Value`  as needed then click `Save Changes`
-
-<img src="..\img\SetupNS04.png" style="zoom:80%;" />
+Nightscout configuration is held in variables , their content can be modified to change and customize the behavior (data source, security, alarms, ...) and appearance (language, colors, visible items, ...). When deploying your Nightscout, most are left with default values and with time you might want to tune your site.
 
 </br>
 
 ------
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+
+##### Editing Config Vars in Heroku
+
+See [here](../../nightscout/new_user#editing-config-vars-in-heroku) where and how to change your variables.
+
+------
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
+
+You can change your settings in the Control Panel see [here](../../../vendors/T1Pal/control_panel) for available variables and plugins.
+
+------
+
+</br>
 
 ## Nightscout Config Vars
 
@@ -115,17 +97,13 @@ Include the word `bridge` here if you are receiving data from the Dexcom Share s
 careportal basal dbsize bridge
 ```
 
- Include `mmconnect` if you are bridging from the MiniMed CareLink service.
-
-```
-careportal basal dbsize mmconnect
-```
-
 If you don't want to decide now, add all the followings, you can disable them if you don't need them:
 
 ```
 careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override cors
 ```
+
+Note: `mmconnect` is not functional with Heroku (if you wanted to bridge from the MiniMed CareLink service you will need another device to send data to Nightscout). If you are sending data to CareLink do **NOT** enable `mmconnect`.
 
 </br>
 
@@ -771,7 +749,7 @@ Calculates the number of hours since the last `Site Change` treatment that was r
 - `CAGE_INFO` (`44`) - If time since last `Site Change` matches `CAGE_INFO`, user will be warned of upcoming cannula change
 - `CAGE_WARN` (`48`) - If time since last `Site Change` matches `CAGE_WARN`, user will be alarmed to to change the cannula
 - `CAGE_URGENT` (`72`) - If time since last `Site Change` matches `CAGE_URGENT`, user will be issued a persistent warning of overdue change.
-- `CAGE_DISPLAY` (`hours`) - Possible values are 'hours' or 'days'. If 'days' is selected and age of canula is greater than 24h number is displayed in days and hours
+- `CAGE_DISPLAY` (`hours`) - Possible values are `hours` or `days`. If `days` is selected and age of canula is greater than 24h number is displayed in days and hours
 
 ##### `sage` (Sensor Age)
 
@@ -851,6 +829,8 @@ Glucose reading directly from the Dexcom Share service, uses these extended sett
 </br>
 
 ##### `mmconnect` (MiniMed Connect bridge)
+
+!!!warning "This plugin is **NOT** functional with Heroku: do not enable it."
 
 Transfer real-time MiniMed Connect data from the Medtronic CareLink server into Nightscout ([read more](https://github.com/nightscout/minimed-connect-to-nightscout)) (***** mandatory) with the following extended settings:
 

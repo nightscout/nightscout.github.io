@@ -1,5 +1,9 @@
 # Redeploy your repository
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+
+------
+
 </br>
 
 !!! note "Azure Users"
@@ -16,6 +20,12 @@
     Use [this one](https://youtu.be/C0edTQhO21g).
 
 <br>
+
+!!!note "DIY Only"
+    These instructions apply to DIY setup only.  There are Nightscout as a
+    service options which provides updates and setup included as part of
+    the service.  See [Nightscout as a
+    service](../index.md#nightscout-as-a-service), for more details.
 
 ## Step 1. Cleanup Github
 

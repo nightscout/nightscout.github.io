@@ -20,6 +20,9 @@ If you are using the Dexcom G5 and G6 sensors connected to the Dexcom app on you
 
 For this to work, Nightscout must be configured to use the `bridge` plug-in and will then automatically pull the CGM information directly from the Dexcom servers in real-time.
 
+!!!note  
+     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout.
+
 *Please note that at this time (early 2021), the Dexcom G5 system is effectively obsolete but many people are still using stocks of old sensors and transmitters.*
 
 If you don't want to use the official Dexcom apps, then you can use **open-source software** apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:
@@ -52,7 +55,9 @@ Dexcom G4 Platinum (Share) requires you to carry the receiver to forward data to
 
 ## Medtronic
 
-If your sensor system is able to directly upload to CareLink then Nightscout will be able to get the information directly from the cloud using the `mmconnect` plugin (not valid for the newer 780G pump).
+If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore using Heroku** without a bridge device.
+
+You can use an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower), a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
 
 <img src="..\img\Upload04.png" />
 </br>
@@ -62,6 +67,23 @@ If this isn't an option and your sensor/transmitter is connected to your pump (M
 
 <img src="..\img\Upload05.png" />
 </br>
+
+</br>
+
+## Glucomen Day
+
+You can forward your data from GlucoLog Web using an AWS bridge documented [here](https://github.com/yaronkhazai/gmns-bridge/tree/main/guides).
+
+</br>
+
+</br>
+
+## Tandem t:slim X2
+
+You can synchronize your treatments one way from your Tandem Diabetes t:connect web/mobile application to Nightscout using  a bridge app running via **Pipenv** or **Docker** as documented [here](https://github.com/jwoglom/tconnectsync).
+
+</br>
+
 </br>
 
 ## Abbott Freestyle Libre

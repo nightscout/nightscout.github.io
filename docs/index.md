@@ -9,33 +9,76 @@
 
 ## Introduction
 
-**Nightscout** (also known as **"CGM in the Cloud"**) is an open-source cloud application **used by people with diabetes** to visualize, store and share the data from their **Continuous Glucose Monitoring** sensors in real-time. Once setup, Nightscout acts as a central repository of blood glucose and insulin dosing/treatment data for a single person, allowing you to view the CGM graph and treatment data anywhere using just a web browser connected to the internet.
+**Nightscout** (also known as **"CGM in the Cloud"**) is an open-source cloud
+application **used by people with diabetes and parents of kids with diabetes** to visualize, store and share the
+data from their **Continuous Glucose Monitoring** sensors in real-time. Once
+setup, Nightscout acts as a central repository of blood glucose and insulin
+dosing/treatment data for a single person, allowing you to view the CGM graph
+and treatment data anywhere using just a web browser connected to the internet.
 
-There are several parts to this system. You need somewhere online to store/process/visualise this data (**a Nightscout Site**), something to upload CGM data to your Nightscout (**a Master/Uploader**), and then optionally you can use other devices to access/view this data (**a Follower or usually several**):
+There are several parts to this system. You need somewhere online to
+store/process/visualize this data (**a Nightscout Site**), something to upload
+CGM data to your Nightscout (**an Uploader**), and then optionally you can use
+other devices to access/view this data (**one - or more - Follower**):
 
 #### Nightscout Site
 
-The Nightscout cloud application can be installed by yourself using free hosting services from various cloud service providers. 
+The Nightscout cloud application can be installed by yourself using hosting
+services from various cloud service providers.
 
 Although not necessary, you might prefer to use paid hosting services for your database (to avoid future maintenance tasks) or indeed pay to use a fully-managed Nightscout hosting service to avoid having to personally build and maintain your site yourself.
 
-#### Master/Uploader
+#### Uploader
 
-The CGM data is usually sent to Nightscout by an **uploader device** (often known as a **"Master"**) such as a mobile/cellphone running an app such as xDrip+, Spike, xDrip4iOS or Medtronic Uploader. Alternatively, the CGM data can be pulled directly from your online Dexcom or Medtronic CareLink accounts. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have. Once you've read this page (yes - all the way to the bottom!), you can find more information here about [Uploaders](./uploader/uploaders.md).
+The CGM data is usually sent to Nightscout by an **uploader device** (often
+known as an **"Uploader"**) such as a mobile/cellphone running an app such as xDrip+, Spike, xDrip4iOS or Medtronic Uploader. Alternatively, the CGM data can be pulled directly from your online Dexcom or Medtronic CareLink accounts. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have. Once you've read this page (yes - all the way to the bottom!), you can find more information here about [Uploaders](./uploader/uploaders.md).
 
 #### Followers
 
-In addition to viewing the data using a web browser, there are also applications available for mobile devices, smartwatches, electronic devices and other cloud-based services which allow you alternative ways to view and interact with the information stored within your Nightscout site (often known as **"Followers"**).
+In addition to viewing the data using a web browser, there are also
+applications available for mobile devices, smartwatches, electronic devices and
+other cloud-based services which allow you alternative ways to view and
+interact with the information stored within your Nightscout site (often known
+as **"Followers"**).
 
 <img src="./img/nscloud.png" width="800px">
 
 </br>
 ## Development History
 
-Nightscout was developed by parents of children with Type 1 Diabetes and has continued to be developed, maintained, and supported by volunteers. 
+Nightscout was developed by people with Type 1 Diabetes and parents of kids with T1D and has
+continued to be developed, maintained, and supported by volunteers, clinical
+use, and commercial sponsorship. The web portal known as Nightscout is made by the [CGM
+Remote Monitor
+Contributors](https://github.com/nightscout/cgm-remote-monitor/graphs/contributors)
+and the Nightscout community over years.
 
 When first implemented, Nightscout was a solution specifically for remote monitoring of Dexcom G4 CGM data. Today, there are Nightscout solutions available for nearly all commercial CGM sensors. The goal of the project is to allow the remote monitoring, sharing and analysis of any T1D's glucose levels using existing monitoring devices.
 </br>
+
+## What are the values of Nightscout
+
+We are compelled in the pursuit of **humane** and **equitable** application of
+technology to **liberating people from the burden of diabetes**.  We are not
+waiting to deliver the benefits we've found in **sharing _all_ diabetes
+experiences**.  Nightscout is free to contribute, free to access, free to
+criticize, free to try, free to depend on, free to modify, and free to
+distribute.  The Nightscout community demands **respect** and **dignity** for all
+community members.  The reputation of the Nightscout community is affected by
+the **quality** of the source code, the quality of our relationships, the
+quality of our discussions, what we are known for doing: the way we treat each other.
+Users of Nightscout are impacted by **reliability**, **security** and
+**confidentiality** of
+Nightscout.  Therefore, the developers and contributors of Nightscout strive to
+improve the quality of Nightscout while making these opportunities
+**accessible** to all.
+
+Nightscout's **longevity**, the application, the ecosystem, and the culture demand
+we use all tools at our disposable to achieve the values in a **sustainable** way.
+We are not waiting to do whatever it takes to meet the needs of people affected
+by the inhumane demands of diabetes.  Our active **collaboration** against the
+burden of diabetes creates the results we desire.
+
 </br>
 
 ## What Do I Need?
@@ -57,34 +100,66 @@ You will need:
 -   Basic computer skills and the ability to ***carefully*** follow the installation guides shown on this site 
 
     ***"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.*
- 
+
 </br>
 !!!warning "IMPORTANT"
     Before using Nightscout, it is important to understand that this project:
 
     - is an open-source, community-based project and is not supported by any company
     - is not officially approved or regulated for diabetes therapy and/or treatment in any way
-
+    
     **You must understand that you take full responsibility for building and running this system and you agree to do so at your own risk.**
 
 !!!warning "SAFETY"
     - This project requires a working internet connection and availability of third-party cloud services
-    - Do not rely only on Nightscout as the only way you have of knowing your blood glucose values and trends
-    - Make sure you're ready to cope with an unexpected failure and always have alternative ways to check your blood glucose levels
+        - Do not rely only on Nightscout as the only way you have of knowing your blood glucose values and trends
+        - Make sure you're ready to cope with an unexpected failure and always have alternative ways to check your blood glucose levels
+
 </br>
 
 ## How Much Does It Cost?
 
-Nightscout has essentially always been a completely free sevice to install and use. The installation instructions take advantage of free accounts from cloud service providers to install and run the application. In late 2020 some of these services changed slightly and this caused some extra work to make them suitable for running Nightscout.
+It is possible to run Nightscout for free. Classic DIY Nightscout requires free accounts at
+three companies: GitHub, MongoDB, and Heroku. All three of which will demand
+some sort of maintenance and will generate sales and warning emails over the course of the years. DIY Nightscout is unfortunately not set it and forget it and will require upgrades and even platform changes to follow software evolutions or policies of the companies used when you created your site.
 
-It is still perfectly feasible to build your Nightscout site and operate it **entirely for free**, you just need to be aware that you might experience some limitations which are easily managed using the tools available within the Nightscout "Admin Tools" page.
+!!!info "There ain't no such thing as a free lunch"
+    You might not pay for service, but also this means you'll be spending a lot of hours on this.
 
-Free databases like the Altas M0 Sandbox provided by [MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB) and you may eventually need to delete old records (maybe every 3-4 years with standard Nightscout CGM useage). You can increase even further the database capacity to 2GB/5GB by paying for an M2/M5 Shared Cluster if you wish.
+Free databases like the Atlas M0 Sandbox provided by
+[MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB)
+and you may eventually need to delete old records (maybe every 3-4 years with
+standard Nightscout CGM usage). You can increase even further the database
+capacity to 2GB/5GB ($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.
 
-Application servers such as [Heroku](https://www.heroku.com/)'s "Free" plan will provide enough server hours to run a single Nightscout site without any downtime. If you need to run several sites on the same account, you can easily upgrade to a paid "Hobby" plan. 
+Application servers such as [Heroku](https://www.heroku.com/)'s "Free" plan will
+provide enough server hours to run a single Nightscout site without any
+downtime. If you need to run several sites on the same account, have "never sleeping" apps, you can easily
+upgrade to a paid "Hobby" plan ($7 per dyno per month).
 
-Finally, if you prefer to avoid any manual set-up, configuration and maintenance tasks, then you can also opt for a paid and fully-managed Nightscout hosting service.
 </br>
+
+## Nightscout as a Service
+
+![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)
+
+If you prefer to pay and just use Nightscout as a fully managed service and let somebody else worry about installation and maintenance then [T1Pal](https://t1pal.com/) could be exactly what you need.
+
+</br>
+   <span style="font-size:larger;">The developers recommend paid support for high quality, reliable service.
+The developers recommend [T1Pal](https://t1pal.com) in order to augment the sustainability of the
+Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.</span>
+
+</br>
+
+The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project.
+
+Database and server administration is automated and managed automatically as
+part of the service.
+Contact T1Pal support to request specific features or versions.
+File a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get
+Support" from [My Account](https://www.t1pal.com/account/).
+
 </br>
 
 ## Who Can Help Me?
@@ -98,22 +173,16 @@ There are also many local Nightscout communities and you'll probably be able to 
 !!!warning "Technical Support"
     This project is often considered "**Do It Yourself**" (DIY) and supported by volunteers. Whilst you will almost certainly always will find someone ready to help you for free, building your own Nightscout site **doesn't entitle you to any form of support** from anybody.
     
-    The open-source diabetes movement is founded on the idea of **paying it forward** and helping others to learn things that others took their time to help teach you about.
 
+    The open-source diabetes movement is founded on the idea of **paying it forward** and helping others to learn things that others took their time to help teach you about.
+    
     *Ask nicely, and nice people will always do nice things and help you.*
     
     Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not only supporting users. (This means **do not** send them private messages or friend requests just to help fix something that is already clearly documented or for help that can be easily requested in the CGM in the Cloud group)
 
 !!!info "Facebook Privacy"
     You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.
-</br>
 
-## Paid Solutions
-
-If you prefer to pay and just use Nightscout as a fully managed service and let somebody else worry about installation and maintenance then [T1Pal](https://t1pal.com/) could be exactly what you need.
-
-The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project.
-</br>
 </br>
 
 ## How to Use These Docs

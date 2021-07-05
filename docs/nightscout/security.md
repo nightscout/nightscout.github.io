@@ -37,25 +37,25 @@ Nightscout 14.2 introduced a new feature called Admin Notifies, which can warn y
 
 If you see the red megaphone in your navigation bar, it means you have messages in the queue.
 
-<img src="../img/notifies_1.png" style="zoom:80%;" />
+<img src="../img/Security02.png" style="zoom:80%;" />
 
 You have to be authenticated to Nightscout using the API_SECRET or an authentication token that has administration access to read the messages.
 
-<img src="../img/notifies_2.png" style="zoom:50%;" />
+<img src="../img/Security03.png" style="zoom:50%;" />
 
-There are multiple types of messages that might be shown.
-
-<img src="../img/notifies_3.png" style="zoom:50%;" />
+There are multiple types of messages that might be shown:
 
 </br>
 
 ### I'm seeing a message about the API_SECRET being weak
 
+<img src="../img/Security04.png" style="zoom:50%;" />
+
 This message is shown when cryptographic analysis if the API_SECRET shows the secret is easily guessable by a computer and should be changed. Things you can do to have this message go away:
 
 * The API_SECRET must be at least 12 characters long, but making it even longer makes it more secure
 * Use a mix of small and CAPITAL letters, numbers and non-alphanumeric characters such as !#%&/()= in the API_SECRET
-  *Note: make sure your uploader and downloaders can handle special characters, you might need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters)*
+  *Note: make sure your uploader and downloaders can handle special characters, you might need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) for example an API_SECRET like `D0n't*H4ck@M3%` would be expressed as: `D0n%27t%2AH4ck%40M3%25`*
 * Consider generating the API_SECRET using a password manager
 
 The API_SECRET is set in the Heroku Settings (see [here](../setup_variables/#editing-config-vars-in-heroku) on how to edit the variables).
@@ -63,6 +63,8 @@ The API_SECRET is set in the Heroku Settings (see [here](../setup_variables/#edi
 </br>
 
 ### I'm seeing a message about authentication failures
+
+<img src="../img/Security06.png" style="zoom:50%;" />
 
 This is highly likely caused by you having installed an app on some device with the wrong API_SECRET or access token, and the app trying to authenticate to your Nightscout, or you or one of the family members have just tried to sign into Nightscout with wrong credentials.
 
@@ -74,6 +76,8 @@ If the message keeps appearing unexpectedly or is reported against multiple IP n
 
 ### I'm seeing a message Nightscout is readable by the world
 
+<img src="../img/Security05.png" style="zoom:50%;" />
+
 This means the site shows the CGM data to users who can guess the site address without authentication. Note Nightscout never allows data to be saved or edited without authentication, so this is not necessarily a problem depending on how hard your site address is to guess and how you want the information to be shared.
 
 If you want to have the site require authentication, read the "How to Turn Off Unauthorized Access" section below.
@@ -82,9 +86,11 @@ If you want to have the site require authentication, read the "How to Turn Off U
 
 ## Renaming the Nightscout site
 
-The site is renamed, thus changing the site URL, in the Heroku settings:
+If you're using [Heroku](https://dashboard.heroku.com/apps) you can rename your Nightscout site URL in your app `Settings`.
 
-<img src="../img/rename.png" style="zoom:50%;" />
+Once done, make sure all apps (uploaders and downloaders) are updated accordingly,
+
+<img src="../img/Security01.png" style="zoom:80%;" />
 
 </br>
 

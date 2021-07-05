@@ -1,6 +1,13 @@
 # Updating Your Site to the Latest Version
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+
+------
+
 </br>
+
+!!!note "Heroku DIY Only"
+    These instructions apply to the Heroku setup only.
 
 Updating your website to the latest version (see here which is the [current released version](https://github.com/nightscout/cgm-remote-monitor/releases)) is easy with the update tool linked below.
 
@@ -205,6 +212,13 @@ Click `Create pull request`.
 
 </br>
 
-- Your site will open and should be at the latest version. You're done!
-- Check your [profile time zone](../../nightscout/profile_editor/#profile-view) is correct.
-- Else, if you ran into trouble, try the [Redeploy](./redeploy.md) method
+- Your site will open and should be at the latest version. 
+- Check your [profile time zone](../../nightscout/profile_editor/#profile-view) is correct. You're done!
+
+</br>
+
+Else...
+
+# Redeploy
+
+- If you ran into trouble, try the [Redeploy](./redeploy.md) method
