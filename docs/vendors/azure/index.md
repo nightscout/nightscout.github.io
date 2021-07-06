@@ -1,3 +1,0 @@
-# azure
-
-Coming soon
