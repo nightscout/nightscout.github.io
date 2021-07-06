@@ -45,7 +45,7 @@ Enter your billing information and `Confirm`
 </br>
 
 !!!note  
-     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout.
+     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of bridging Dexcom Share.
 
 </br>
 
@@ -121,7 +121,7 @@ Upon first access you will be required to create a new profile. Select `OK`
 
 </br>
 
-File all required fields as sown [here](../../../nightscout/profile_editor/).
+File all required fields as shown [here](../../../nightscout/profile_editor/).
 
 Make sure you enter your correct time zone.
 
