@@ -45,7 +45,7 @@ Enter your billing information and `Confirm`
 </br>
 
 !!!note  
-     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of bridging Dexcom Share.
+     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing from Dexcom Share.
 
 </br>
 

@@ -30,7 +30,7 @@ You will find the `Uploader url` and `Api Secret` required to configure your upl
 You need at least one follower to use Dexcom Share.
 
 !!!note  
-     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout.
+    If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and the `bridge` plugin.
 
 On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.
 

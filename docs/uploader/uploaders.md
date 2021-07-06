@@ -21,7 +21,7 @@ If you are using the Dexcom G5 and G6 sensors connected to the Dexcom app on you
 For this to work, Nightscout must be configured to use the `bridge` plug-in and will then automatically pull the CGM information directly from the Dexcom servers in real-time.
 
 !!!note  
-     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout.
+    If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and the `bridge` plugin.
 
 *Please note that at this time (early 2021), the Dexcom G5 system is effectively obsolete but many people are still using stocks of old sensors and transmitters.*
 
