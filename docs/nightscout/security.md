@@ -1,6 +1,12 @@
 
 ## Nightscout Security
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+
+For <img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> users, your page is already secured and views can be defined from your [Share panel](https://t1pal.com/account/sites/my#Views).
+
+------
+
 Nightscout security model is based on the following assumptions:
 
 * The users of Nightscout only use it to process information about themselves or someone they're legally responsible for and thus own all of the data being stored in Nightscout.

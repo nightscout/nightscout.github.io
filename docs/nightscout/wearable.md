@@ -108,6 +108,8 @@ Select your Wearable device and enable the Glimp watchface.
 
 ## Amazfit Band 5, Bip, Bip Lite, Bip S and GTR
 
+## Amazfit GTR2, GTR2e, GTS2, GTS2e and GTR42
+
 #### xDrip+
 
 Follow Artem's instructions [here](https://bigdigital.home.blog/).

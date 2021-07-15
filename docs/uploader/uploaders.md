@@ -97,7 +97,7 @@ Most of the transmitters have their own proprietary apps. Nearly all of these su
 
 **Open-source apps** such as **xDrip+**, **Spike** and **xDrip4iOS** also support most of the above transmitter devices.
 
-For Android uploader devices, this is the possibility to directly connect to the Libre 2 sensor (EU only) without an additional transmitter. Please read [here](https://androidaps.readthedocs.io/en/latest/EN/Hardware/Libre2.html) for more information.
+You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip), Diabox or [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre).
 </br>
 </br>
 

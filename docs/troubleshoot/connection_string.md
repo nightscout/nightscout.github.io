@@ -284,100 +284,59 @@ If you're still in trouble continue below:
 
 ## Recover your connection string
 
-If you've tried several times to deploy or migrate, you might end-up with too many items to cope with in your different accounts. At this point, you could benefit doing some cleanup in order to identify the correct Atlas database you want to connect to.
-
-[Cleanup](../cleanup/) and come back.
+If you've tried several times to deploy or migrate, you might end-up with many useless items in your accounts. At this point, you could benefit doing some cleanup in order to identify the correct Atlas database you want to connect to. Consider [cleanup](../cleanup/) before continuing.
 
 </br>
 
-- Log into [Atlas](https://cloud.mongodb.com/)
-- Click `Connect` on your cluster
+a) Go to your MongDB account. Log in if necessary [https://cloud.mongodb.com/](https://cloud.mongodb.com/)
+
+b) Click `Connect` below your cluster name (in the example below `Cluster0`, but it might have another name)
 
 <img src="../img/TShoot07.png" style="zoom:80%;" >
 
 </br>
 
-- Click `Connect your application`
+c) Click `Connect your application`
 
 <img src="../img/TShoot09.png" style="zoom:80%;" >
 
 </br>
 
-- Click `Copy` then `Close`
+d) A new view opens, in  `(2) Add your connection string into your application code` you will find your MONGODB_URI or MONGO_CONNECTION string.
+
+Click `Copy` then `Close`
 
 <img src="../img/TShoot10.png" style="zoom:80%;" >
 
 </br>
 
-- Paste the connection string in this box below:
+e) Paste it into a place where you can edit the text (i.e. a Word or a Notepad document).
 
-<input type="text" id="myAtlas2" value="Yes here. Delete this and paste it here" size="100">
+Edit your string so that you add the database user password after the database user info. You defined them during your MongoDB Atlas database creation, when you reached [this step](../../nightscout/new_user/#h-add-a-database-username-for-example-nightscout-and-a-database-password-in-the-example-below-soo5ecret-but-please-change-it).
 
-- Modify the database password and database name (not username) in the boxes below (only letters and numbers allowed). Don't use the values below: they are examples. Put those you used when creating your Atlas database.
+Here’s an example of how the string is built up:
 
-Database password: <input type="text" id="myPwd2" value="soo5ecret" size="20">
-
-Database name: <input type="text" id="mydB2" value="mycgmic" size="20">
-
-!!! warning "If you migrated from mLab and Heroku (not Azure)"
-    **Your database name should be identical to your database user name!** (Unless you modified it) "
-
-- If you don't remember your Atlas database password (which should not be your mongoDB Atlas account password) invent a new one (only letters and numbers). And proceed to [Change your Atlas database password](./#change-your-atlas-database-password) then come back.
-
-
-
-
-<button onclick="Generate2()">Generate</button>
-
-<p style="font-size:25px" id="result2">The connection string will appear here</p>
-
-<script>
-var bAtlas;
-var sdB, sPwd;
-var sFinalString = "Not defined yet";
-
-function Generate2()
-{
-  var sString = sFinalString;
-
-  bAtlas=0;
-  var sString = "Looks good!";
-  var sAtlas = document.getElementById("myAtlas2").value;
-  sPwd = document.getElementById("myPwd2").value;
-  sdB = document.getElementById("mydB2").value;
-  var iAS = sAtlas.search("://");
-  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
-  else
-  {
-    var iAP = sAtlas.search("<password>");
-    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
-    else
-    {
-      var iAD = sAtlas.search("<dbname>");
-      if(iAD==-1) { sString = "Atlas URI should contain &lt;dbname&gt;"; }
-      else
-      {
-      	bAtlas=1;
-        sString = sAtlas.substring(0,iAP);
-        sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
-        sString = sAtlas.substring(iAP+10, iAD);
-        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+8));
-      }
-    }
-  }
-
-  if(bAtlas) document.getElementById("result2").innerHTML = sFinalString;
-  else document.getElementById("result2").innerHTML = sString;
-}
-</script>
+`mongodb+srv://` `nightscout` `:`**`<password>`**`@cluster0.xxxxx.mongodb.net/`**`myFirstDatabase`**`?retryWrites=true&w=majority`
 
 </br>
 
+f) Edit your string in order to replace `<password>` with your database password.
 
+g) If you don't remember your Atlas database password (which should not be your mongoDB Atlas account password) invent a new one (only letters and numbers).
 
-- Copy the resulting string into your Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration). There must be only one of these variables, not both.
-- If there is neither one nor the other create a new `MONGODB_URI` variable and paste the string in the value field.
-- Restart all dynos in Heroku
+Your string will now look like this: (do not use the same password as the example). Note there are no remaining `<` and `>`.
+
+`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+
+</br>
+
+h) Copy this resulting string above into your Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration). There must be only one of these variables, not both. Open [this link](../../nightscout/new_user/#editing-config-vars-in-heroku) in another tab to see how to edit your Heroku variables.
+
+i) If there is neither one nor the other create a new `MONGODB_URI` variable and paste the string in the value field.
+
+j) If you remembered your password restart all dynos in Heroku, and you should be done.
+
+k) If you changed your password or your Nightscout page still fails to open continue.
 
 </br>
 
@@ -418,4 +377,4 @@ function Generate2()
 
 - Make sure the password matches in your connection string Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration)
 
-- Refresh your Nightscout web page display
+- Refresh your Nightscout web page display should be enough, you can also [restart Heroku dynos](../../troubleshoot/troublehoot/#restart-all-dynos).

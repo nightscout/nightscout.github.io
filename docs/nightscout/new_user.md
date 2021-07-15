@@ -210,6 +210,11 @@ c) Select `Create a cluster in Shared Clusters (FREE)`
 
 <img src="..\img\NewNS19.png" style="zoom:80%;" />
 
+!!!note "If you ever see this, just STOP"
+    We're building a free cluster: you don't need to provide any billing information.
+
+<img src="..\img\NewNS19b.png" style="zoom:70%;" />
+
 </br>
 
 d) Leave all default values and click `Create Cluster`
@@ -244,7 +249,9 @@ g) Click on `Add IP Address`
 
 </br>
 
-h) Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret` but please change it!).
+###### h) Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret` but please change it!).
+
+<img src="..\img\NewNS25.png" style="zoom:80%;" />
 
 !!! warning "Database credentials: Do not use your Atlas account credentials. Do not use special characters: only letters and numbers."
 
@@ -258,7 +265,7 @@ Database username: <input type="text" id="myUsr" value="click here, delete and p
 
 i) Then click `Create Database User`.
 
-<img src="..\img\NewNS25.png" style="zoom:80%;" />
+<img src="..\img\NewNS25b.png" style="zoom:80%;" />
 
 </br>
 
