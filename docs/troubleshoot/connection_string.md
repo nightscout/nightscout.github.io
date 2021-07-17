@@ -358,6 +358,8 @@ k) If you changed your password or your Nightscout page still fails to open cont
 
 - In `Password` click `Edit Password`
 
+  ***Note:*** *take a look at the top of this view, after `Edit User` you can see your database user name before `@`. Check it's matching the one in your connection string.* 
+
 <img src="../img/TShoot12.png" style="zoom:80%;" >
 
 </br>
@@ -377,4 +379,4 @@ k) If you changed your password or your Nightscout page still fails to open cont
 
 - Make sure the password matches in your connection string Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration)
 
-- Refresh your Nightscout web page display should be enough, you can also [restart Heroku dynos](../../troubleshoot/troublehoot/#restart-all-dynos).
+- Refreshing your Nightscout web page display should be enough, but you can also [restart Heroku dynos](../../troubleshoot/troublehoot/#restart-all-dynos).

@@ -6,9 +6,6 @@
 
 </br>
 
-!!!note "Heroku DIY Only"
-    These instructions apply to the Heroku setup only.
-
 Updating your website to the latest version (see here which is the [current released version](https://github.com/nightscout/cgm-remote-monitor/releases)) is easy with the update tool linked below.
 
 </br>

@@ -21,12 +21,6 @@
 
 <br>
 
-!!!note "DIY Only"
-    These instructions apply to DIY setup only.  There are Nightscout as a
-    service options which provides updates and setup included as part of
-    the service.  See [Nightscout as a
-    service](../index.md#nightscout-as-a-service), for more details.
-
 ## Step 1. Cleanup Github
 
 </br>
