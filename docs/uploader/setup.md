@@ -107,7 +107,7 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
 ## [xDrip+](https://jamorham.github.io/#xdrip-plus)
 
 !!! info "Mind the syntax!"
-    **`https://API_SECRET@HerokuAppName.herokuapp.com/api/v1/`**
+    **`https://API_SECRET@mysite.herokuapp.com/api/v1/`**
 
 <img src="..\img\UploadCFG00.png" style="zoom:80%;" />
 
