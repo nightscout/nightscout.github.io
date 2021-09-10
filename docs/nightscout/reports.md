@@ -14,7 +14,7 @@ Select `Reports` to open the reports page.
 
 First select the report type you'd like to see (see below for an overview).
 
-`Day to day`, `Week to week`, `Daily Stats`, `Distribution`, `Hourly stats`, `Percentile Chart`, `Weekly success`, `Calibrations`, `Treatments`, `Profiles` or `Loopalyzer`
+`Day to day`, `Week to week`, `Daily Stats`, `Distribution`, `Hourly stats`, `Percentile Chart`, `Weekly Distribution`, `Calibrations`, `Treatments`, `Profiles` or `Loopalyzer`
 
 Then select the period for which you want your data analyzed.
 
@@ -136,7 +136,7 @@ This report will give you an percentile distribution view of the range you selec
 
 </br>
 
-### Weekly success
+### Weekly Distribution
 
 This report will give you an weekly view of your statistics.
 
