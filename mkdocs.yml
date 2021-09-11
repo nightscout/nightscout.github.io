@@ -18,7 +18,6 @@ nav:
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Configure your Uploader': 'uploader/setup.md'
-    - 'Security': 'nightscout/security.md'
     - 'Follower Devices': 'nightscout/downloaders.md'
     - 'Nightscout on your watch': 'nightscout/wearable.md'
     - 'Running multiple sites': 'nightscout/multiadmin.md'
@@ -29,6 +28,7 @@ nav:
     - 'Reports': 'nightscout/reports.md'
     - 'Profile Editor': 'nightscout/profile_editor.md'
     - 'Admin Tools': 'nightscout/admin_tools.md'
+    - 'Remote Notifications': 'nightscout/pushover.md'
 - Update:
     - 'Updating your site': 'update/update.md'
     - 'Redeploying': 'update/redeploy.md'
