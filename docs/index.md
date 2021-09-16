@@ -162,6 +162,38 @@ Support" from [My Account](https://www.t1pal.com/account/).
 
 </br>
 
+<br />
+
+
+## 10BE (full managed Nightscout Service)
+
+<img src="https://ns.10be.de/templates/images/ns.10be.de-logo_halb_klein.jpg" width="400" height="155">
+<p>
+ns.10BE.de was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and you don't have to worry about maintenance, nightscout updates or MongoDB- and CPU Limits/Space.
+
+The servers are located in different data centers (fail-safe) in Germany and Finland/France (can be selected). And are watched by [monitoring from uptimerobot](https://10be.de/en/status.html) and our own Slackbot and when a Server was down, it restarts self and send a twitter message.
+</p>
+
+
+***It is 10BE for free?***
+
+Not anymore, because the costs were simply not covered by the donations.
+
+A Nightscout Instance will be costs 4,99 Euro a month, but how larger the interval, then more discount there is.
+
+You got every 6-8 hours a Backup of your Database and Settings.
+You can import the Data from your old Nightscout Instance or MongoDB-Database or upload Data (freestyle, dexcom, omnipod, csv) via CSV File.
+
+To see what you will get for it, take a look at our [features page](https://10be.de/en/pricing.html). The registration is free.
+
+
+***Support:*** support @ ns.10be.de or https://10be.de/en/contact.html or https://twitter.com/10be_de or https://www.facebook.com/10be.de
+
+
+<br />
+<br />
+
+
 ## Who Can Help Me?
 
 You will find many willing and open-hearted people in the Facebook groups. 
