@@ -67,53 +67,41 @@ Do not change device/computer/browser during the setup process!
 
 </br>
 
-a) Click this link to create a GitHub account: [https://github.com/](https://github.com/)
+a) Click this link to create a GitHub account: [https://github.com/  
+     Enter your email and click `Sign up for GitHub`
 
-b) Enter a username (anything you want and that is accepted, not very important), email, and password.
+<img src="..\img\NewNS00a.png" style="zoom:70%;" />
 
-c) Then click `Sign up for GitHub`
+</br>
+
+b) Enter a password and a username (anything you want and that is accepted, not very important).  
+     Type `n` to decline advertisement emails.
 
 <img src="..\img\NewNS00.png" style="zoom:80%;" />
 
 </br>
 
-d) Play and solve the puzzle then click `Join a free plan`.
+c) Play and solve the puzzle then click `Create account`
 
 <img src="..\img\NewNS01.png" style="zoom:80%;" />
 
 </br>
 
-e) Type your interests (not important) then click `Complete setup`.
-
-
+d)  GitHub will send you a verification code. Open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
 
 <img src="..\img\NewNS02.png" style="zoom:80%;" />
 
 </br>
 
-f) GitHub will send you a verification email, open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
+e) A personalization sequence will start, click `Skip personalization ` at the bottom.
 
-<img src="..\img\NewNS03.png" style="zoom:80%;" />
+<img src="..\img\NewNS03.png" style="zoom:70%;" />
 
 </br>
 
-g) Click `Verify email address` in the verification email from GitHub.
+f) Leave the page that opened as it is. Don't close it.
 
 <img src="..\img\NewNS04.png" style="zoom:80%;" />
-
-</br>
-
-
-
-h) This will open a new page in your browser, click `Skip this for now`.
-
-<img src="..\img\NewNS05.png" style="zoom:80%;" />
-
-</br>
-
-i) Leave the page open as it is.
-
-<img src="..\img\NewNS06.png" style="zoom:80%;" />
 
 </br></br>
 
@@ -192,7 +180,7 @@ k) You should now have 2 pages open: Heroku and GitHub. Leave them open.</br></b
 
 </br>
 
-a) Open another tab at: [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas) and click `Start Free`
+a) Open another tab at: [https://www.mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas) and click `Get started now`
 
 
 
@@ -200,9 +188,33 @@ a) Open another tab at: [https://www.mongodb.com/cloud/atlas](https://www.mongod
 
 </br>
 
-b) Enter your information and then click `Get Started Free`
+b) Enter your information, click `Continue` then `Create account`
 
 <img src="..\img\NewNS18.png" style="zoom:80%;" />
+
+</br>
+
+MongoDB Atlas will send you an email, if you don't receive it check your Spam folder.
+
+<img src="..\img\NewNS18b.png" style="zoom:80%;" />
+
+</br>
+
+In the email you received from **MongoDB Atlas** (mongodb-atlas @ mongodb.com), click on `Verify email`
+
+<img src="..\img\NewNS18c.png" style="zoom:80%;" />
+
+</br>
+
+Another browser tab will open with your confirmed MongoDB account, `Continue`.
+
+<img src="..\img\NewNS18d.png" style="zoom:80%;" />
+
+</br>
+
+Enter some information (like below) and click `Finish`.
+
+<img src="..\img\NewNS18e.png" style="zoom:80%;" />
 
 </br>
 
@@ -380,7 +392,7 @@ b) Click this link [https://github.com/nightscout/cgm-remote-monitor](https://gi
 
 
 
-<img src="..\img\NewNS29.png" style="zoom:80%;" />
+<img src="..\img\NewNS29.png" style="zoom:70%;" />
 
 </br>
 
@@ -400,7 +412,7 @@ d) Scroll down and click `Deploy to Heroku`
 
 !!! note "You're getting into the core setup of your site"
 
-    Below you'll see the minimum required configuration, you can modify the variables later in Heroku. You will find a more complete list here: [Setup](..\setup_variables)
+    Below you'll see the minimum required configuration, you can modify the variables later in Heroku.
 
 </br>
 
@@ -444,7 +456,7 @@ h) If you want to link your Dexcom Share account as a data source, complete the 
 
 </br>
 
-i) Linking your CareLink account as a data source is **not functional anymore with Heroku**. Do not use the plugin below. There are alternative solutions with an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower), a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
+i) Linking your CareLink account as a data source is **not functional anymore with Heroku**. Do not use the plugin below. There are alternative solutions with an Android phone and a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower) (recommended), or (not recommended: verify availability for your pump and country) a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
 
 <img src="..\img\NewNS36.png" style="zoom:60%;" />
 
