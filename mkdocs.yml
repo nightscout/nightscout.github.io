@@ -12,9 +12,9 @@ nav:
     - 'What is Nightscout?': 'index.md'
     - 'How do I upload my data?': 'uploader/uploaders.md'
 - Install:
-    - 'Overview': 'nightscout/insights.md'
+    - 'DIY Overview': 'nightscout/insights.md'
     - 'Classic DIY Installation': 'nightscout/new_user.md'
-    - 'Nightscout as a service': 'vendors/T1Pal/new_user.md'
+    - 'Nightscout as a service': 'vendors/NSaaS.md'
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Configure your Uploader': 'uploader/setup.md'

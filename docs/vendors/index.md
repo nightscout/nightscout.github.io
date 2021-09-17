@@ -50,6 +50,16 @@ The mainly used solution for classic DIY is Salesforce Heroku and MongoDB Atlas,
         <td>Low</td>
     </tr>
     <tr>
+        <td><img src="./img/10BE.png" align="center"></td>
+        <td>Managed</td>
+    	<td>&lt;€5/month</td>
+        <td><img src="./img/10BE.png" align="center"></td>
+		<td>Some</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Low</td>
+    </tr>
+    <tr>
         <td><img src="./img/Azure.png" align="center"></td>
         <td>DIY</td>
     	<td>variable</td>
@@ -102,6 +112,7 @@ The mainly used solution for classic DIY is Salesforce Heroku and MongoDB Atlas,
 </table>
 
 
+
 </br>
 
 ## Salesforce Heroku + MongoDB Atlas
@@ -112,11 +123,19 @@ This is the traditional DIY Nightscout.
 
 </br>
 
-## T1Pal
+## [T1Pal](T1Pal/new_user)
 
 <img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
 
 T1Pal is Nightscout as a service, created by a Nightscout core developer.
+
+</br>
+
+## [10BE](10BE)
+
+<img src="../../vendors/img/10BE.png" style="zoom:80%;" />
+
+10BE is a managed Nightscout service, offered as a pure **data storage / diary / information management**.
 
 </br>
 

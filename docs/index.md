@@ -141,6 +141,8 @@ upgrade to a paid "Hobby" plan ($7 per dyno per month).
 
 ## Nightscout as a Service
 
+</br>
+
 ![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)
 
 If you prefer to pay and just use Nightscout as a fully managed service and let somebody else worry about installation and maintenance then [T1Pal](https://t1pal.com/) could be exactly what you need.
@@ -162,36 +164,29 @@ Support" from [My Account](https://www.t1pal.com/account/).
 
 </br>
 
-<br />
-
-
-## 10BE (full managed Nightscout Service)
-
 <img src="https://ns.10be.de/templates/images/ns.10be.de-logo_halb_klein.jpg" width="400" height="155">
 <p>
-ns.10BE.de was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and you don't have to worry about maintenance, nightscout updates or MongoDB- and CPU Limits/Space.
+ns.10BE.de was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits.
 
-The servers are located in different data centers (fail-safe) in Germany and Finland/France (can be selected). And are watched by [monitoring from uptimerobot](https://10be.de/en/status.html) and our own Slackbot and when a Server was down, it restarts self and send a twitter message.
-</p>
-
+The servers are located in different fail-safe data centers in Germany, Finland or France (can be selected) . They are monitored by [uptimerobot](https://ns.10be.de/en/status.html) and own Slackbot. When a server goes down, it restarts itself and sends a twitter message.
+</br>
 
 ***It is 10BE for free?***
 
 Not anymore, because the costs were simply not covered by the donations.
 
-A Nightscout Instance will be costs 4,99 Euro a month, but how larger the interval, then more discount there is.
+A Nightscout Instance will cost €4.99/month, with discounts when increasing subscription duration.
 
-You got every 6-8 hours a Backup of your Database and Settings.
-You can import the Data from your old Nightscout Instance or MongoDB-Database or upload Data (freestyle, dexcom, omnipod, csv) via CSV File.
+A backup of your database and settings is performed every 6-8 hours.
+You can import data from your old Nightscout instance or MongoDB database, also upload data (Freestyle, Dexcom, Omnipod, ...) via CSV files.
 
-To see what you will get for it, take a look at our [features page](https://10be.de/en/pricing.html). The registration is free.
-
+To see more about NS10 features and costs, take a look at the [features page](https://10be.de/en/pricing.html). The registration is free.
 
 ***Support:*** support @ ns.10be.de or https://10be.de/en/contact.html or https://twitter.com/10be_de or https://www.facebook.com/10be.de
 
+</br>
 
-<br />
-<br />
+</br>
 
 
 ## Who Can Help Me?
