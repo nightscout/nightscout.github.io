@@ -5,11 +5,11 @@ name: publish
 on:
   # Remark: `workflow_dispatch` requires manual action
   # Remark:     Click on action tab, choose branch, then publish
-  # workflow_dispatch
+  workflow_dispatch
   # Remark: `push` automatically publishes when push detected for branches
-  push:
-    branches:
-      - source
+  # push:
+  #   branches:
+  #    - source
 
 
 jobs:
