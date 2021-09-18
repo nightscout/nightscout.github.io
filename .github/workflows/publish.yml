@@ -1,0 +1,29 @@
+name: publish
+
+# Controls when to publish gh-pages
+# Remark: uncomment one section of `on:` (without the leading Remark)
+on:
+  # Remark: `workflow_dispatch` requires manual action
+  # Remark:     Click on action tab, choose branch, then publish
+  workflow_dispatch
+  # Remark: `push` automatically publishes when push detected for branches
+  # push:
+  #   branches:
+  #    - source
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
+
+      - uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          BRANCH: gh-pages
+          FOLDER: site
