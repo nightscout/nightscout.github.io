@@ -67,8 +67,9 @@ Do not change device/computer/browser during the setup process!
 
 </br>
 
-a) Click this link to create a GitHub account: [https://github.com/  
-     Enter your email and click `Sign up for GitHub`
+a) Click this link to create a GitHub account: [https://github.com/](https://github.com/)  
+
+Enter your email and click `Sign up for GitHub`
 
 <img src="..\img\NewNS00a.png" style="zoom:70%;" />
 
