@@ -127,7 +127,7 @@ Security key authentication requires you to use a hardware key. You probably won
 
 ### Recovery Codes
 
-You should enable and keep a copy of your recovery codes. This might eventually be the only way to recover your account access if something goes wrong with the other authentication method. Print a copy and keep it with your [Nightscout information]() together with your diabetes documentation.
+You should enable and keep a copy of your recovery codes. This might eventually be the only way to recover your account access if something goes wrong with the other authentication method. Print a copy and keep it with your [Nightscout information](../../nightscout/new_user/#record-your-information-in-a-safe-place) together with your diabetes documentation.
 
 <img src="../heroku/img/MFA06.png" style="zoom:80%;" />
 
