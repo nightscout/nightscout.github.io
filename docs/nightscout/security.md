@@ -21,13 +21,16 @@ Nightscout security model is based on the following assumptions:
 
 ## Security and safekeeping
 
-- Use the same email address for all accounts so you'll have access to all your accounts after installation. Do not use a disposable email address - use something you know you can access later.
+- Use the same email address for all accounts so you'll have access to all your accounts after installation. **Do not use a disposable email address** - use something you know you can access later.
 - Use a safe password for all accounts related to Nightscout, including the password for the email account for the accounts. We highly recommend using a password manager such as 1Password and allowing it to generate the passwords for you.
 - Do not reuse the same password for all your accounts.
 - Do not use your Dexcom or CareLink user name or password for Nightscout components.
 - Do not use the API_SECRET for the Atlas database password.
 - Do not share the API_SECRET or access tokens with administration privileges to anyone, ever. If you need to grant access to Nightscout, see below for instructions how to create access tokens for this purpose.
 - Do not use Nightscout or any related applications on rooted and/or otherwise compromised devices, and ensure you always have the latest operating system and virus protection updates installed.
+
+!!! note
+    Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see [here](../../vendors/heroku).
 
 </br>
 

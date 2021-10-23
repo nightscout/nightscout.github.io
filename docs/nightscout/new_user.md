@@ -28,7 +28,9 @@ It's **highly important** you understand you have to take computer security seri
 
 If you want to read more about Nightscout security, including about additional configuration options to make your installation more secure, please check our [security guide](../security/).
 
-Print this [document](./NightscoutDataRecord.pdf) to record all information during installation. Store it together securely with your diabetes documentation.
+##### Record your information in a safe place.
+
+You can either print this [pdf document](./NightscoutDataRecord.pdf) or edit the [Word version](./NightscoutDataRecord.docx), or this [Excel sheet](./NightscoutDataRecord.xlsx), to record all information during installation. Store it together securely with your diabetes documentation.
 
 </br>
 

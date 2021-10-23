@@ -44,6 +44,16 @@ When trying to deploy a new Nightscout site, this message appears when clicking 
 
 </br>
 
+### I lost access to my GitHub
+
+Create a new account and fork cgm-remote monitor as described [here](../../nightscout/new_user/#step-1-create-a-github-account).
+
+**Follow only Step 1.**
+
+You can now upgrade or redeploy your Nightscout using redeploy as explained [here](../../update/redeploy/#step-1-cleanup-github).  You won't have to delete the existing repository since it's not there for the moment. Go down to Fork cgm-remote-monitor in the explanation.
+
+</br>
+
 ### Cannot find cgm-remote-monitor in Heroku / No GitHub source visible
 
 </br>
@@ -84,6 +94,16 @@ When updating Nightscout, `cgm-remote-monitor` doesn't appear automatically in H
 
 - Click `Authorize GitHub` in the pop-up.
 - If it doesn't help, you can also try to `Revoke access`... before going back to Re-`Connect` your GitHub account. This is necessary if someone else did setup Nightscout for you and left his own GitHub connected to your Heroku account.
+
+</br>
+
+### I can't log into Heroku
+
+If you lost your password use the [password reset option](https://id.heroku.com/account/password/reset).
+
+If you lost your authenticator use the recovery codes (that you hopefully saved when [securing your account)](../../vendors/heroku/).
+
+If you lost or don't have anymore access to the email you used to create your Heroku account you will need to deploy a new Nightscout site. You can use the same GitHub account and the same MongodB Atlas database you currently have but will have to change the name as it's already in use. First [recover your connection string](../../troubleshoot/connection_string/#recover-your-connection-string), and proceed to [creating a new Nightscout](../../nightscout/new_user/) **skipping Step 3**.
 
 </br>
 
@@ -148,7 +168,8 @@ When creating a new site or migrating (usually not the first attempt), when reac
 - If you didn't migrate your Heroku database from mLab to Atlas [create a new Atlas database](../../update/newdatabase/).
 - If you didn't migrate from Azure to Heroku create a new site [create a new Nightscout site with Heroku](../../nightscout/new_user/).
 - If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and [deploy](../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor) again after [checking](../connection_string/#change-your-atlas-database-password) the Atlas connection string is correct.
-- If your site is already up to date:
+
+- If you don't see any good reason just go ahead:
 
 </br>
 
@@ -187,8 +208,6 @@ Look at this [dedicated page](./connection_string.md).
 # No data in Nightscout
 
 </br>
-
-New Nightscout sites [Check you database is not read only](../connection_string/#mongodb-in-read-only-mode).
 
 Make sure your Nightscout [time zone](../../nightscout/profile_editor/) is correct.
 

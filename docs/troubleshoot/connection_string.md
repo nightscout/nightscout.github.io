@@ -40,13 +40,18 @@ A typical new string created with Atlas will look like this:
 
 # Unable to connect to Mongo
 
+<img src="../img/TShoot54.png" style="zoom:80%;" >
+
 Common reasons:
 
-- The database Heroku is pointing to is not available (mLab services stopped in Dec 2020).
+- The database Heroku is pointing to is not available (mLab services stopped in Dec 2020).  [Attach a new Atlas database](../../update/newdatabase/).
+- Your Atlas connection string is incorrect. Check [here](#bad-connection-string).
 
-- Your Atlas connection string is incorrect
+- If you haven't been using Nightscout for a while and it was working before, check your MongoDB Atlas database didn't go to sleep mode. If it did, select `Resume` to restart it. Once done, continue below with Heroku [restart all dynos](../../troubleshoot/troublehoot/#restart-all-dynos).
 
-  </br>
+<img src="../img/TShoot53.png" style="zoom:80%;" >
+
+</br>
 
 If you see this message
 
