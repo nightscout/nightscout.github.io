@@ -76,6 +76,11 @@ Copy and paste your full repository name to confirm then click `I understand...`
 
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login) 
 
+!!! note
+    Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see [here](../../vendors/heroku).
+
+</br>
+
 <img src="../img/UpdateNS15.png" style="zoom:80%;" >
 
 </br>

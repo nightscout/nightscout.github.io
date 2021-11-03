@@ -189,9 +189,14 @@ Same screen than above but you received a mail from Heroku telling you you're ou
 
 - Check your remaining dyno hours in Heroku, click on your profile picture top right and select `Account Settings`, then `Billing`.
 
-- An account without credit card information has 550 free dyno hours, with credit card information 1000.
+- An account without credit card information has 550 [free dyno hours](https://devcenter.heroku.com/articles/free-dyno-hours#usage), with credit card information 1000.
 
 <img src="../img/TShoot42.png" style="zoom:80%;" >
+
+</br>
+
+- An account with credit card information can only hold one Nightscout site. You need one account per site, and you can simplify multiple sites management as explained [here](../../nightscout/multiadmin/).
+- If Heroku runs out of free dynos, check you don't have other deployments wasting your free dyno hours and eventually [cleanup or stop unused apps](../cleanup/#heroku).
 
 </br>
 
@@ -269,6 +274,11 @@ When you change these variables, Heroku restarts Nightscout. So now everything s
     
 
 ### Dexcom username issue
+
+!!! note
+    New Dexcom users are not being assigned a username anymore but need to log with their email address. If you don't have a username, you should be able to use `bridge` with an email address, make sure you [update Nightscout to the latest release](../../update/update/).
+
+</br>
 
 It seems that Dexcom share somewhere in its systems is not capable of using the username other than ordinary letters.
 

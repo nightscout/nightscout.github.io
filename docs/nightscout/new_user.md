@@ -449,7 +449,7 @@ h) If you want to link your Dexcom Share account as a data source, complete the 
 </br>
 
 !!!info "MOST COMMON ERRORS"
-    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. These values are what you entered into your Dexcom mobile app when you logged into that app for the VERY FIRST time. The `BRIDGE_USER_NAME` is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.
+    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. These values are what you entered into your Dexcom mobile app when you logged into that app for the VERY FIRST time. The `BRIDGE_USER_NAME` is usually not your email address but recently newly created accounts do not have a user name. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.
 
 !!! note "Password"
     *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
@@ -474,6 +474,8 @@ j) Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg
 k) In `ENABLE`, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
+
+Also add `bridge` if you're using your Dexcom share account as a data source.
 
 <img src="..\img\NewNS38.png" style="zoom:80%;" />
 

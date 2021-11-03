@@ -44,13 +44,37 @@ As of 0.12, Nightscout no longer readily supports the free Azure platform. It is
 
 </br>
 
-- Select your own `cgm-remote-monitor` project (not `nightscout/cgm-remote-monitor`)
+- Select your own `cgm-remote-monitor` project (**not `nightscout/cgm-remote-monitor`**)
 
 <img src="../img/UpdateNS01.png" style="zoom:80%;" >
 
 </br>
 
-- Your repository will open, note your GitHub username (hidden below in yellow).
+- Your repository will open. If you see `This branch is xxx commits behind nightscout:master` you need to update.
+- Select `Fetch upstream`
+
+<img src="../img/UpdateNS01a.png" style="zoom:80%;" >
+
+</br>
+
+- Select `Fetch and merge`
+
+<img src="../img/UpdateNS01b.png" style="zoom:80%;" >
+
+</br>
+
+- After a moment, your repository should display `This branch is up to date with nightscout:master`
+
+<img src="../img/UpdateNS01c.png" style="zoom:80%;" >
+
+- You have now updated your GitHub repository, proceed to [Step 2](#step2-deploy-in-heroku): Deploy in Heroku
+- If something went wrong continue below.
+
+</br>
+
+#### Use the update script
+
+- Note your GitHub username (hidden below in yellow).
 - Scroll down until you see the Nightscout logo. 
 
 <img src="../img/UpdateNS02.png" style="zoom:80%;" >
@@ -144,6 +168,11 @@ Click `Create pull request`.
 </br>
 
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login) 
+
+!!! note
+    Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see [here](../../vendors/heroku).
+
+</br>
 
 <img src="../img/UpdateNS15.png" style="zoom:80%;" >
 

@@ -34,6 +34,7 @@ nav:
     - 'Redeploying': 'update/redeploy.md'
     - 'Attach a new Atlas database': 'update/newdatabase.md'
     - 'Update Heroku Stack': 'update/upd_stack.md'
+    - 'Downgrade': 'update/downgrade.md'
 - Troubleshoot:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Connection failure': 'troubleshoot/connection_string.md'

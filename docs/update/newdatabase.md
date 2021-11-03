@@ -193,6 +193,11 @@ function Generate()
 
 Access your variables opening [Heroku](https://id.heroku.com/login).
 
+!!! note
+    Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see [here](../../vendors/heroku).
+
+</br>
+
 - Select your app
 
 <img src="../../nightscout/img/SetupNS00.png" style="zoom:80%;" />

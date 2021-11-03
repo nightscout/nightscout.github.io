@@ -12,6 +12,11 @@ It is good practice to maintain your Heroku stack up to date. Either when you re
 
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login)
 
+!!! note
+    Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see [here](../../vendors/heroku).
+
+</br>
+
 <img src="../../update/img/UpdateNS15.png" style="zoom:70%;" >
 
 </br>

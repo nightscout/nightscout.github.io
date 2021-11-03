@@ -20,7 +20,25 @@ Follow [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanu
 
 If you experience issues during deployment you might end up with many apps. Make sure you keep the last one that was functional or delete all before attempting a new deployment. This will just make it easier to find which app you're trying to build. Keeping sleeping apps doesn't have any negative impact but no real advantage unless you do it on purpose.
 
-Deleting an Heroku app does **not** delete your Nightscout data, but you might want to write down your variables if your site was functional before. Note you can also rename an app (unless the name is already in use in heroku.com).
+If you're not convinced you want to delete an app, make sure to put it in maintenance mode to avoid wasting free dyno hours. This will also help you understand if you use it as the related Nightscout site will report offline for maintenance.
+
+</br>
+
+### Maintenance mode
+
+Maintenance mode is useful to troubleshoot Dexcom and CareLink accounts locked and also if you need to modify several variables without having Nightscout restarting every change.
+
+You can also put your Nightscout in maintenance mode if you won't use it for an extended period of time.
+
+Be aware that your MongoDB Atlas database might also go in sleep mode and you will need to [restart it manually](../connection_string/#mongodb-paused).
+
+<img src="../img/Cleanup00a.png" style="zoom:80%;" >
+
+</br>
+
+### Delete an app
+
+Deleting an Heroku app does **not** delete your Nightscout data, but you might want to write down your variables (definitely backup your connection string) if your site was functional before. Note that you can also rename an app (unless the name is already in use in heroku.com).
 
 <img src="../img/Cleanup00.png" style="zoom:80%;" >
 
