@@ -20,7 +20,7 @@ $ cd <nightscout docs location>
 $ pip install -r requirements.txt
 ```
 
-* Install Materials theme
+* Install Material theme
 
 ```bash
 $ pip install mkdocs-material
