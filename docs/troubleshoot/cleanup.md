@@ -125,7 +125,7 @@ If your database gets recreated after you deleted it this means you MONGODB_URI 
 
 </br>
 
-###### If you want to delete a non-empty Project you need to terminate all clusters belonging to it.
+<span style="font-size:larger;">If you want to delete a non-empty Project you need to terminate all clusters belonging to it.</span></span>
 
 <img src="../img/Cleanup15.png" style="zoom:80%;" >
 

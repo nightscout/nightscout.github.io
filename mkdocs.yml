@@ -1,8 +1,23 @@
 site_name: Nightscout
-theme: flatly
+theme:
+    name: material
+    language: en
+    features:
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.tracking
+        - navigation.top
+        - search.suggest
+        - search.highlight
+        - content.code.annotate
+    logo: NS-logo.png
+    favicon: NS-logo-std.png
+    palette:
+      primary: black
+    nav_style: primary
 extra_css:
     - css/admonitions.css
-markdown_extensions:
+markdown_extensions: 
     - admonition
     - toc:
         permalink: ⌁

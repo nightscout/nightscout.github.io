@@ -36,7 +36,7 @@ You can either print this [pdf document](./NightscoutDataRecord.pdf) or edit the
 
 ------
 
-#### **Here is a step-by-step guide for completing your own Nightscout site DIY style.**
+<span style="font-size:larger;">**Here is a step-by-step guide for completing your own Nightscout site DIY style.**</span>
 
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />+<img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
 
@@ -264,7 +264,7 @@ g) Click on `Add IP Address`
 
 </br>
 
-###### h) Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret` but please change it!).
+h) Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret` but please change it!).
 
 <img src="..\img\NewNS25.png" style="zoom:80%;" />
 
