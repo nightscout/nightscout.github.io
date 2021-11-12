@@ -20,13 +20,20 @@ $ cd <nightscout docs location>
 $ pip install -r requirements.txt
 ```
 
+* Install [Material](https://squidfunk.github.io/mkdocs-material/) theme
+
+```bash
+$ pip install mkdocs-material
+```
+
 * Run mkdocs server locally
+
 ```bash
 $ cd <nightscout docs location>
 $ mkdocs serve
 ```
 
-* Preview docs in browser. Most changes will update automatically as you edit. Configuration and navigation changes will require restarting the mkdocs server.
+* Preview docs in browser. Most changes will update automatically as you edit. Configuration and navigation changes will require restarting the MkDocs server.
 * Optionally, you can share the preview with others by uploading them to your repository's `gh-pages` branch
 ```bash
 $ mkdocs gh-deploy

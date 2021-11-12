@@ -127,7 +127,7 @@ Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure
 
 Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.
 
-<img src="../img/Follower01.png" style="zoom:80%;" />
+<img src="../img/Follower01.png" style="zoom:50%;" />
 
 Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 

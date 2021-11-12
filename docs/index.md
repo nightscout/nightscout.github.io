@@ -1,4 +1,4 @@
-![](.\img\cropped-Header3.png)
+![](./img/cropped-Header3.png)
 
 # Welcome to Nightscout
 
@@ -165,8 +165,8 @@ Support" from [My Account](https://www.t1pal.com/account/).
 </br>
 
 <img src="https://ns.10be.de/templates/images/ns.10be.de-logo_halb_klein.jpg" width="400" height="155">
-<p>
-ns.10BE.de was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits.
+
+[ns.10BE.de](https://ns.10be.de/) was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits.
 
 The servers are located in different fail-safe data centers in Germany, Finland or France (can be selected) . They are monitored by [uptimerobot](https://ns.10be.de/en/status.html) and own Slackbot. When a server goes down, it restarts itself and sends a twitter message.
 </br>

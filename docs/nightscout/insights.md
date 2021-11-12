@@ -10,7 +10,7 @@ For an overview of some possibilities, see [vendors](../../vendors).
 
 ------
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/Heroku.png" style="zoom:80%;" /> + <img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" /> + <img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
 
 ------
 
