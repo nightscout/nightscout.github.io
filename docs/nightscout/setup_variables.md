@@ -824,7 +824,7 @@ Glucose reading directly from the Dexcom Share service, uses these extended sett
 - `BRIDGE_FIRST_FETCH_COUNT` (`3`) - Changes max count during the very first update only.
 - `BRIDGE_MAX_FAILURES` (`3`) - How many failures before giving up.
 - `BRIDGE_MINUTES` (`1400`) - The time window to search for new data per update (the default value is one day in minutes).
-- `BRIDGE_SERVER` (``) - The default blank value is used to fetch data from Dexcom servers in the US. Set to (`EU`) to fetch from European servers instead. *****
+- `BRIDGE_SERVER` (`US`) - Set to `US` to fetch data from Dexcom servers in the US. Set to (`EU`) to fetch from non US servers instead. *****
 
 </br>
 
