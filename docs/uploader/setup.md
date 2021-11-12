@@ -7,7 +7,7 @@
 
 ------
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/Heroku.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
 
 Your `Nightscout URL` defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser.
 
@@ -17,7 +17,7 @@ Your Nightscout password, is the `API_SECRET` variable you can find editing your
 
 ------
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/T1Pal.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
 
 You will find the `Uploader url` and `Api Secret` required to configure your uploader [here](https://www.t1pal.com/account/sites/my#Uploaders).
 
@@ -40,7 +40,7 @@ On your master phone, touch the Share icon, enable Sharing. If you have no follo
 
 ------
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/Heroku.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
 
 In order to use the Dexcom Share servers to upload to Nightscout, you need to setup (and if not present add) the following variables in Heroku:
 
@@ -72,7 +72,7 @@ You need to add `bridge` in the `ENABLE` variable. Do not delete other entries, 
 
 ------
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/T1Pal.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
 
 For hosted Nightscout put your Dexcom credentials [in Dexcom Bridge](https://www.t1pal.com/account/sites/my#DataIngress).
 
