@@ -29,7 +29,9 @@ nav:
 - Install:
     - 'DIY Overview': 'nightscout/insights.md'
     - 'Classic DIY Installation': 'nightscout/new_user.md'
-    - 'Nightscout as a service': 'vendors/NSaaS.md'
+    - 'Paid hosting overview': 'vendors/NSaaS.md'
+    - 'Paid hosting: T1Pal': 'vendors/T1Pal/new_user.md'
+    - 'Paid hosting: 10BE': 'vendors/10BE.md'
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Configure your Uploader': 'uploader/setup.md'
@@ -54,3 +56,4 @@ nav:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Connection failure': 'troubleshoot/connection_string.md'
     - 'Cleanup': 'troubleshoot/cleanup.md'
+- Translation: 'translate.md'

@@ -38,7 +38,7 @@ A typical new string created with Atlas will look like this:
 
 </br>
 
-# Unable to connect to Mongo
+## Unable to connect to Mongo
 
 <img src="../img/TShoot54.png" style="zoom:80%;" >
 

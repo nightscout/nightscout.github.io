@@ -86,6 +86,10 @@ Select your Wearable device and enable the Glimp watchface.
 
 <img src="..\img\Watch01.png" style="zoom:75%;" />
 
+#### [NightWear](https://github.com/rahim/nightwear)
+
+NightWear is a Wear OS app available in the [Google Play Store](https://play.google.com/store/apps/details?id=im.rah.nightwear&utm_source=github&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1) directly from your watch. You can use it with Android and iOS.
+
 </br>
 
 ## Amazfit Pace & Stratos

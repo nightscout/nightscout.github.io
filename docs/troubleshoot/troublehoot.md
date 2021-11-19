@@ -1,4 +1,4 @@
-# Overall third party services
+## Overall third party services
 
 </br>
 
@@ -8,7 +8,7 @@ For [Nightscout as a service](../../index#nightscout-as-a-service) contact direc
 
 </br>
 
-## Before troubleshooting
+### Before troubleshooting
 
 </br>
 
@@ -28,7 +28,7 @@ Atlas: [https://status.cloud.mongodb.com/](https://status.cloud.mongodb.com/)
 
 </br>
 
-# GitHub and Heroku
+## GitHub and Heroku
 
 </br>
 
@@ -103,7 +103,7 @@ If you lost your password use the [password reset option](https://id.heroku.com/
 
 If you lost your authenticator use the recovery codes (that you hopefully saved when [securing your account)](../../vendors/heroku/).
 
-If you lost or don't have anymore access to the email you used to create your Heroku account you will need to deploy a new Nightscout site. You can use the same GitHub account and the same MongodB Atlas database you currently have but will have to change the name as it's already in use. First [recover your connection string](../../troubleshoot/connection_string/#recover-your-connection-string), and proceed to [creating a new Nightscout](../../nightscout/new_user/) **skipping Step 3**.
+If you lost or don't have anymore access to the email you used to create your Heroku account you will need to deploy a new Nightscout site. You can use the same GitHub account and the same MongodB Atlas database you currently have but will have to use another Nightscout site name in Heroku as the current one is already in use. First [recover your connection string](../../troubleshoot/connection_string/#recover-your-connection-string), and proceed to [creating a new Nightscout](../../nightscout/new_user/) **skipping Step 3**.
 
 </br>
 
@@ -200,7 +200,7 @@ Same screen than above but you received a mail from Heroku telling you you're ou
 
 </br>
 
-### Boot Error - Unable to connect to Mongo
+## Boot Error - Unable to connect to Mongo
 
 </br>
 
@@ -307,7 +307,7 @@ When you install the Dexcom app, it is linked to a Dexcom account. Unfortunately
 
 You then have to re-invite your followers.
 
-#### Nightscout
+#### Update Dexcom data in Nightscout
 
 Check your Heroku settings match your new credentials (see above)
 

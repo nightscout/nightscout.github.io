@@ -119,23 +119,12 @@ You will need:
 
 ## How Much Does It Cost?
 
-It is possible to run Nightscout for free. Classic DIY Nightscout requires free accounts at
-three companies: GitHub, MongoDB, and Heroku. All three of which will demand
-some sort of maintenance and will generate sales and warning emails over the course of the years. DIY Nightscout is unfortunately not set it and forget it and will require upgrades and even platform changes to follow software evolutions or policies of the companies used when you created your site.
+It is possible to run Nightscout for free. Classic DIY Nightscout requires free accounts at three companies: GitHub, MongoDB, and Heroku. All three of which will demand some sort of maintenance and will generate sales and warning emails over the course of the years. DIY Nightscout is unfortunately not set it and forget it and will require upgrades and even platform changes to follow software evolutions or policies of the companies used when you created your site.
 
-!!!info "There ain't no such thing as a free lunch"
-    You might not pay for service, but also this means you'll be spending a lot of hours on this.
+Free databases like the Atlas M0 Sandbox provided by [MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB) and you may eventually need to delete old records (maybe every 3-4 years with standard Nightscout CGM usage). You can increase even further the database capacity to 2GB/5GB ($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.
 
-Free databases like the Atlas M0 Sandbox provided by
-[MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB)
-and you may eventually need to delete old records (maybe every 3-4 years with
-standard Nightscout CGM usage). You can increase even further the database
-capacity to 2GB/5GB ($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.
-
-Application servers such as [Heroku](https://www.heroku.com/)'s "Free" plan will
-provide enough server hours to run a single Nightscout site without any
-downtime. If you need to run several sites on the same account, have "never sleeping" apps, you can easily
-upgrade to a paid "Hobby" plan ($7 per dyno per month).
+Application servers such as [Heroku](https://www.heroku.com/)'s "Free" plan will provide enough server hours to run a single Nightscout site without any
+downtime. If you need to run several sites on the same account, have "never sleeping" apps, you can easily upgrade to a paid "Hobby" plan ($7 per dyno per month).
 
 </br>
 
@@ -182,7 +171,7 @@ You can import data from your old Nightscout instance or MongoDB database, also 
 
 To see more about NS10 features and costs, take a look at the [features page](https://10be.de/en/pricing.html). The registration is free.
 
-***Support:*** support @ ns.10be.de or https://10be.de/en/contact.html or https://twitter.com/10be_de or https://www.facebook.com/10be.de
+***Support:*** support @ ns.10be.de or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
 
 </br>
 
