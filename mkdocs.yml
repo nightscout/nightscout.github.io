@@ -54,6 +54,7 @@ nav:
     - 'Downgrade': 'update/downgrade.md'
 - Troubleshoot:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
+    - 'Dexcom bridge': 'troubleshoot/dexcom_bridge.md'
     - 'Connection failure': 'troubleshoot/connection_string.md'
     - 'Cleanup': 'troubleshoot/cleanup.md'
 - Translation: 'translate.md'

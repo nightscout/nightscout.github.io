@@ -5,7 +5,6 @@
 </br>
  <img src="./img/nightscout_screenshot_600.png" width="600px">
 </br>
-</br>
 
 ## Introduction
 
@@ -130,8 +129,6 @@ downtime. If you need to run several sites on the same account, have "never slee
 
 ## Nightscout as a Service
 
-</br>
-
 ![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)
 
 If you prefer to pay and just use Nightscout as a fully managed service and let somebody else worry about installation and maintenance then [T1Pal](https://t1pal.com/) could be exactly what you need.
@@ -172,8 +169,6 @@ You can import data from your old Nightscout instance or MongoDB database, also 
 To see more about NS10 features and costs, take a look at the [features page](https://10be.de/en/pricing.html). The registration is free.
 
 ***Support:*** support @ ns.10be.de or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
-
-</br>
 
 </br>
 

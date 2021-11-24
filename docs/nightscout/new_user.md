@@ -229,79 +229,83 @@ c) Select `Create a cluster in Shared Clusters (FREE)`
 
 </br>
 
-d) Leave all default values and click `Create Cluster`
+d) Check you selected `Shared`, leave all default values and click `Create Cluster`
 
 <img src="../img/NewNS20.png" style="zoom:80%;" />
 
 </br>
 
-Atlas will create your default cluster, wait until it is complete... (can take more than 3 minutes)
-
-<img src="../img/NewNS21.png" style="zoom:80%;" />
-
-</br>
-
-e) Click on `CONNECT`
-
-<img src="../img/NewNS22.png" style="zoom:100%;" />
-
-</br>
-
-f) Click on `Allow Access from Anywhere`
-
-!!!warning "If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database."
-
-<img src="../img/NewNS23.png" style="zoom:80%;" />
-
-</br>
-
-g) Click on `Add IP Address`
-
-<img src="../img/NewNS24.png" style="zoom:80%;" />
-
-</br>
-
-h) Add a database username (for example `nightscout`) and a database password (in the example below `soo5ecret` but please change it!).
+e) Select `Username and Password` and invent a database username (for example `nightscout`) and a database password (for example `soo5ecret` but please make one that's yours!).
 
 !!! warning "Database credentials: Do not use your Atlas account credentials. Do not use special characters: only letters and numbers. No spaces."
 
 <img src="../img/NewNS25.png" style="zoom:80%;" />
 
-Write down these credentials in the boxes below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.
+Write down these credentials in the lines below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.
 
-Database password: <input type="text" id="myPwd" value="click here, delete and put your own" size="30">
+Database password (write here ->) <input type="text" id="myPwd" value="click here, delete and put your own" size="30">
 
-Database username: <input type="text" id="myUsr" value="click here, delete and put your own" size="30">
-
-</br>
-
-i) Then click `Create Database User`.
-
-<img src="../img/NewNS25b.png" style="zoom:80%;" />
+Database username (write here ->) <input type="text" id="myUsr" value="click here, delete and put your own" size="30">
 
 </br>
 
-j) Click on `Choose a connection method`
+Then click `Create User`.
+
+f) Select `My Local Environment` and in the box `My IP address` write `0.0.0.0/0` (mind these are all zeroes, not the letter O)
+
+!!!warning "If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database."
+
+<img src="../img/NewNS23.png" style="zoom:80%;" />
+
+Then click `Add Entry`.
+
+</br>
+
+g) Click on `Finish and Close`
+
+<img src="../img/NewNS24.png" style="zoom:80%;" />
+
+</br>
+
+h) Click on `Go to Databases`
+
+<img src="../img/NewNS24b.png" style="zoom:80%;" />
+
+</br>
+
+i) Atlas will create your default cluster, it can take more than 3 minutes
+
+<img src="../img/NewNS21.png" style="zoom:80%;" />
+
+</br>
+
+j) Click on `CONNECT`
+
+<img src="../img/NewNS22.png" style="zoom:100%;" />
+
+</br>
+
+k) Click on `Choose a connection method`
 
 <img src="../img/NewNS26.png" style="zoom:80%;" />
 
 </br>
 
-k) Select `Connect your application`
+l) Select `Connect your application`
 
 <img src="../img/NewNS27.png" style="zoom:80%;" />
 
 </br>
 
-l) Copy the connection string: click `Copy` and paste it somewhere to edit it (like Notepad).
+m) Copy the connection string: click `Copy` and paste it somewhere to edit it (like Notepad).
 
 <img src="../img/NewNS28.png" style="zoom:100%;" />
 
 </br>
 
-m) Paste the string in the box below (yes, in this browser window you're reading now, unless you're reading a printed version).
+n) Paste the string in the line below (yes, in this browser window you're reading now, unless you're reading a printed version).
 
-<input type="text" id="myAtlas" value="click here, delete and paste your Atlas connection string" size="100">
+(paste here ->) <input type="text" id="myAtlas" value="click here, delete and paste your Atlas connection string" size="100">
 
 </br>
 
@@ -309,15 +313,15 @@ m) Paste the string in the box below (yes, in this browser window you're reading
     `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 </br>
 
-n) Invent a name for your database, this is not a critical information (for example `mycgmic`), note that default is `myFirstDatabase`. Only letters and numbers, no spaces.
+o) Invent a name for your database, this is not a critical information (for example `mycgmic`), note that default is `myFirstDatabase`. Only letters and numbers, no spaces.
 
-Database Name: <input type="text" id="mydB" value="click here, delete and put your own" size="30">
+Database Name (write here ->) <input type="text" id="mydB" value="click here, delete and put your own" size="30">
 
 </br>
 
-o) Click the `Generate` button (just here below this line: in this browser window you're reading):
+p) Click on the word `Generate` (just here below this line: in this browser window you're reading):
 
-<button onclick="Generate()">Generate</button>
+<button onclick="Generate()">-> Generate</button>
 
 <p style="font-size:25px" id="result">The connection string will appear here</p>
 
@@ -446,7 +450,7 @@ h) If you want to link your Dexcom Share account as a data source, complete the 
 </br>
 
 !!!info "MOST COMMON ERRORS"
-    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom app or online account. These values are what you entered into your Dexcom mobile app when you logged into that app for the VERY FIRST time. The `BRIDGE_USER_NAME` is usually not your email address but recently newly created accounts do not have a user name. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.
+    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [here](../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
 
 !!! note "Password"
     *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*

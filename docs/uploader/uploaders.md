@@ -29,7 +29,7 @@ If you don't want to use the official Dexcom apps, then you can use **open-sourc
 
 **Android**: xDrip+ for G4, G5 and G6. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
 
-**iOS**: Spike or xDrip4iOS for G4, G5 and older G6 transmitters (**n ot Firefly**) <!-- Spike or xDrip4iOS for G4 (1)(3) -->
+**iOS**: Spike or xDrip4iOS for G4, G5 and older G6 transmitters (**not Firefly**) <!-- Spike or xDrip4iOS for G4 (1)(3) -->
 
 <img src="..\img\Upload03.png" />
 

@@ -109,8 +109,6 @@ If you lost or don't have anymore access to the email you used to create your He
 
 # Atlas
 
-</br>
-
 ### Limit of one free cluster.
 
 </br>
@@ -154,8 +152,6 @@ When creating a new site or migrating (usually not the first attempt), when reac
 </br>
 
 # Nightscout page doesn't open
-
-</br>
 
 ### Application Error
 
@@ -212,8 +208,6 @@ Look at this [dedicated page](./connection_string.md).
 
 # No data in Nightscout
 
-</br>
-
 Make sure your Nightscout [time zone](../../nightscout/profile_editor/) is correct.
 
 </br>
@@ -255,16 +249,18 @@ Now from the `Config Vars` area, check the following (see screenshot below for r
 
 </br>
 
+##### Authentication errors
 
-One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout BRIDGE settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. 
+
+One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout `BRIDGE` settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. 
 
 <img src="../../nightscout/img/heroku-logs.png">
 
 </br>
 
-Do your logs have "SSO authentication errors" like in the red box highlighted above? If you do, then:
+Do your logs have "`SSO authentication errors`" like in the red box highlighted above? If you do, then:
 
-1. Delete your BRIDGE entries within Heroku settings.  Don't delete the variables, just delete the values of BRIDGE_PASSWORD and BRIDGE_USER_NAME.
+1. Delete your `BRIDGE` entries within Heroku settings.  Don't delete the variables, just delete the values of `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME`.
 3. Wait 15 minutes and then follow the directions below. It is important to wait 15 minutes: the reason you can't log in right now is that your Dexcom account has a temporary lock from the passwords in the step above being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you'll just keep prolonging the issue.
 
 When you change these variables, Heroku restarts Nightscout. So now everything should work.
@@ -335,7 +331,7 @@ Another reason for a sleeping app can be due to a failure to obtain data from De
 </br>
 
 !!!Warning "UpTime Robot"
-    Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account (Dexcom) or Heroku addresses ban. This is not a recommended solution as it might generate a global Heroku IP blacklist lock that could propagate to all other users. If you use Nightscout, uploading data in the cloud or even just having a browser or an app downloading data should be enough to keep your app awake.
+    Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account ([Dexcom](../dexcom_bridge/#account-lock)) or Heroku addresses ban. This is not a recommended solution as it might generate a global Heroku IP blacklist lock that could propagate to all other users. If you use Nightscout, uploading data in the cloud or even just having a browser or an app downloading data should be enough to keep your app awake.
 
 </br>
 
@@ -360,11 +356,7 @@ Nightscout implements Dexcom error codes as listed below:
 
 # Data timing issues
 
-</br>
-
 ### Basal is shifted in time
-
-</br>
 
 - Check the time zone is correct for your currently active profile in your Nightscout [`Profile editor`](../../nightscout/profile_editor/).
 
@@ -373,8 +365,6 @@ Nightscout implements Dexcom error codes as listed below:
 </br>
 
 ### Data in the future
-
-</br>
 
 - Check you don't have data in the future with the `Admin tools`. Remove them if existing.
 
@@ -398,6 +388,12 @@ Nightscout implements Dexcom error codes as listed below:
 - Delete the entries in the future (manually) with the bin icon
 
 <img src="../img/TShoot34.png" style="zoom:80%;" >
+
+</br>
+
+### Basal / IOB / COB missing after DST
+
+- Setup again your time zone in [profile editor](../../nightscout/profile_editor/) (authenticate and save).
 
 </br>
 

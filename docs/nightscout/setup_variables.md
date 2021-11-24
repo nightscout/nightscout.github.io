@@ -16,7 +16,7 @@ See [here](../../nightscout/new_user#editing-config-vars-in-heroku) where and ho
 
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
 
-You can change your settings in the Control Panel see [here](../../../vendors/T1Pal/control_panel) for available variables and plugins.
+You can change your settings in the Control Panel see [here](../../../vendors/T1Pal/new_user/#configure-more-settings) for available variables and plugins.
 
 ------
 
@@ -592,9 +592,11 @@ Use extended settings to adjust what errorcodes trigger notifications and alarms
 
 ##### `ar2` (AR2 Forecasting)
 
-Generates alarms based on forecasted values. See [Forecasting using AR2 algorithm](https://github.com/nightscout/nightscout.github.io/wiki/Forecasting)
+Generates alarms based on forecasted values.
 
 - Enabled by default if no thresholds are set **OR** `ALARM_TYPES` includes `predict`.
+  - You can permanently disable AR2 setting the `SHOW_FORECAST` variable to `false` (or removing `ar2` if you use it for `openaps` or `loop`).
+
 - `AR2` forecasting display can be enabled/disabled from `... `
 - Use extended settings to adjust AR2 behavior:
   - `AR2_CONE_FACTOR` (`2`) - to adjust size of cone, use `0` for a single line.
