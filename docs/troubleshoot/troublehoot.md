@@ -266,46 +266,13 @@ Do your logs have "`SSO authentication errors`" like in the red box highlighted 
 When you change these variables, Heroku restarts Nightscout. So now everything should work.
 
 !!!info "About your Bridge password and user name"
-    The `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME` are NOT visible from within your Dexcom mobile app or online account. The values of them are what you entered into your Dexcom mobile app when you VERY FIRST logged into that app however long ago. If you have double-checked everything else that could be incorrect and BGs still aren't showing in Nightscout, then you likely have those Bridge values incorrect. To fix that, delete your Dexcom app (don't stop the session before deleting the app...just keep it going). Download the app again from the iPhone's App Store and login to the freshly-downloaded Dexcom app. **Take note** that deleting the app will not stop your session, your session will pick right back up once the transmitter pairs again. The `BRIDGE_USER_NAME` is not an email address. Use that exact same login now in your Heroku settings. You can leave your Loop's Share account info blank...you just need the transmitter ID going forward.
+    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [**here**](../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
     
 
 ### Dexcom username issue
 
 !!! note
     New Dexcom users are not being assigned a username anymore but need to log with their email address. If you don't have a username, you should be able to use `bridge` with an email address, make sure you [update Nightscout to the latest release](../../update/update/).
-
-</br>
-
-It seems that Dexcom share somewhere in its systems is not capable of using the username other than ordinary letters.
-
-By changing the username, this has been solved for everyone who has tried so far. If that doesn't work for you, please report it at [https://github.com/nightscout/cgm-remote-monitor/issues/5608](https://github.com/nightscout/cgm-remote-monitor/issues/5608) or if you can comment on any Facebook post that linked to this site.
-
-#### Change username
-
-Unfortunately, it is not possible to change the username of a Dexcom account. You have to create a whole new account.
-
-#### Create new account
-
-You can only associate one email address with a Dexcom account, so it might be a good idea to create a new email address and associate it to your current account so that you can use your current email with the new account. Go to [https://www.dexcom.com](https://www.dexcom.com/) and look for where to create accounts. Follow the instructions to create a new account.  The alternative is to delete the old account. But do **not** do that. It may be good to be able to go back and retrieve historical data. Make sure the new username contains only letters. It is better to stick to a-z. We know that the period `.` underscore `_` and at `@` characters creates problems, but we do not know which other characters can create problems.
-
-#### Reinstall Dexcom Transmitter app
-
-When you install the Dexcom app, it is linked to a Dexcom account. Unfortunately, there is no way to switch accounts. What you have to do is simply uninstall the app and reinstall it. In principle, it is the same procedure as changing phone. Of course, this time you should log in with the new account.
-
-- Write down the current Transmitter ID. You can find the ID if you look in settings in the Dexcom app.
-- Uninstall the Dexcom app
-- Reinstall the Dexcom app
-- Log in with your new account
-- Follow the instructions in the app.
-- For G6 do not select sensor code. The sensor code is already saved on your old transmitter.
-- Enter the transmitter ID and wait for pairing
-- Answer yes to the question "have you inserted sensor"
-
-You then have to re-invite your followers.
-
-#### Update Dexcom data in Nightscout
-
-Check your Heroku settings match your new credentials (see above)
 
 </br>
 
