@@ -49,6 +49,7 @@ nav:
 - Update:
     - 'Updating your site': 'update/update.md'
     - 'Redeploying': 'update/redeploy.md'
+    - 'Deploy another GitHub branch': 'update/dev_branch.md'
     - 'Attach a new Atlas database': 'update/newdatabase.md'
     - 'Update Heroku Stack': 'update/upd_stack.md'
     - 'Downgrade': 'update/downgrade.md'
