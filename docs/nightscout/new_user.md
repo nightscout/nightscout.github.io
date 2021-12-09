@@ -243,9 +243,9 @@ e) Select `Username and Password` and invent a database username (for example `n
 
 Write down these credentials in the lines below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.
 
-Database password (write here ->) <input type="text" id="myPwd" value="click here, delete and put your own" size="30">
+<b>Database username</b> (write here ->) <input type="text" id="myUsr" value="click here, delete and put your own" size="30">
 
-Database username (write here ->) <input type="text" id="myUsr" value="click here, delete and put your own" size="30">
+<b>Database password</b> (write here ->) <input type="text" id="myPwd" value="click here, delete and put your own" size="30">
 
 </br>
 
