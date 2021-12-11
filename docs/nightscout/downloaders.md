@@ -135,6 +135,11 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 
 ### [sugarmate](https://sugarmate.io/)
 
+!!!note "Important limitation"
+    Sugarmate doesn't allow Nightscout as a data source if you receive your data from Dexcom share with `bridge`.
+
+
+
 <img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
 <img src="../img/Follower05.png" style="zoom:60%;" />
