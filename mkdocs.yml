@@ -53,6 +53,7 @@ nav:
     - 'Attach a new Atlas database': 'update/newdatabase.md'
     - 'Update Heroku Stack': 'update/upd_stack.md'
     - 'Downgrade': 'update/downgrade.md'
+    - 'Multiple Factor Authentication': 'vendors/heroku/index.md'
 - Troubleshoot:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Dexcom bridge': 'troubleshoot/dexcom_bridge.md'

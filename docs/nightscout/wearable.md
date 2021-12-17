@@ -132,6 +132,9 @@ Apple Watch series 3 and above.
 
 #### [sugarmate](https://sugarmate.io/)
 
+!!!note "Important limitation"
+    Sugarmate doesn't allow Nightscout as a data source if you receive your data from Dexcom share with `bridge`.
+
 You can setup sugarmate as a calendar complication to display Nightscout on your Apple watch.
 
 </br>

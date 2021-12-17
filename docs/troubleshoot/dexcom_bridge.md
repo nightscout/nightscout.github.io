@@ -13,7 +13,7 @@ In the case you have linked accounts, check you are using the right credentials 
 
 <img src="../img/DexShare05.png" style="zoom:60%;" >
 
-Also verify you actually have current data in this profile/account. [https://clarity.dexcom.eu/#/data/daily](https://clarity.dexcom.eu/#/data/daily)
+Also verify you actually have current data in this profile/account.
 
 !!! note "Password"
     Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.

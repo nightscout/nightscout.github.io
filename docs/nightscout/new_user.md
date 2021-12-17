@@ -62,10 +62,10 @@ Do not change device/computer/browser during the setup process!
 </br>
 
 !!! warning "If you already have a GitHub account and previously forked cgm-remote-monitor"
-    Make sure you delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github).
+    Make sure you update your current cgm-remote-monitor fork using [Step 1 of this page (ONLY STEP1!)](../../update/update/#step1-update-your-repository-in-github).
 
 !!! note
-    You do not need several GitHub accounts for several Nightscout sites. You can connect one GitHub account to multiple Heroku apps and accounts.
+    **You do not need several GitHub accounts for several Nightscout sites.** You can connect one GitHub account to multiple Heroku apps and accounts.
 
 </br>
 

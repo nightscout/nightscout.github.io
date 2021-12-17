@@ -4,8 +4,8 @@
 
 Multiple factor authentication (MFA) also called 2 factors authentication (2FA) is a safety feature preventing malicious access to an account. Once authenticated with your login and password you will be required to confirm your identity with another method, a second factor authentication.
 
-!!! note
-    It is recommended to setup two MFAs, the second being a copy of the recovery codes.
+!!! warning "Losing access"
+    It is recommended to setup at least two MFAs, **one being a copy of the recovery codes**. Salesforce take security very seriously and recovering your account after losing access might range from very complex to impossible. For increased safety, setup more than one authentication method on more than one device.
 
 [The requirement begins on February 1, 2022. We encourage you to begin planning now for this change.](https://help.salesforce.com/s/articleView?id=000356005&type=1) 
 
@@ -40,6 +40,9 @@ You should select at least one (Salesforce Authenticator is recommended) but mig
 ### Salesforce Authenticator
 
 Salesforce Authenticator relies on an additional app you will need to install on your phone. It is available in the [Google Play Store](https://play.google.com/store/apps/details?id=com.salesforce.authenticator) and the [Apple Store](https://apps.apple.com/us/app/salesforce-authenticator/id782057975).
+
+!!! warning "Losing or removing the Authenticator app"
+    It is recommended to setup at least two MFAs, **one being a copy of the recovery codes**. If your only authentication method is this app you will lose access if you remove it or lose/change phone! 
 
 If you select this option (use the `Add` button) you will need to install the app to get the passcode called Two-Word Phrase
 
