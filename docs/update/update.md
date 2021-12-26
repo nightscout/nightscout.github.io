@@ -6,7 +6,10 @@
 
 </br>
 
-Updating your website to the latest version (see here which is the [current released version](https://github.com/nightscout/cgm-remote-monitor/releases)) is easy with the update tool linked below.
+[See here which is the current released version](https://github.com/nightscout/cgm-remote-monitor/releases) before updating.
+
+!!!note   
+    If you prefer to follow a video, have a look [here](https://www.youtube.com/watch?v=HfPsFdkgnbc).
 
 </br>
 

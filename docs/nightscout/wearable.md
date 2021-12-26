@@ -108,7 +108,7 @@ NightWear is a Wear OS app available in the [Google Play Store](https://play.goo
 
 </br>
 
-## Xiaomi MiBand 4 and 5
+## Xiaomi MiBand 4, 5 and 6
 
 ## Amazfit Band 5, Bip, Bip Lite, Bip S and GTR
 
