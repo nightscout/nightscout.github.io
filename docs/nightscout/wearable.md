@@ -185,31 +185,15 @@ Ionic/Sense/Versa/Versa 2/Versa Lite
 
 </br>
 
-### Fitbit Analog watchfaces:
+### Analog watchfaces
 
 #### [Analog CGM](https://gallery.fitbit.com/details/4d7b46b1-aaba-49b4-aa10-183321014dd3)
 
-Ionic/Versa/Versa 2/Versa Lite/Versa 3/Sense
-
-Supports Always On Display mode
-
-</br>
-
 #### [Orbits NS](https://gallery.fitbit.com/details/44de5c81-b77c-4f90-baa8-38f3e3d28695)
-
-Ionic/Versa/Versa 2/Versa Lite/Versa 3/Sense
-
-Supports Always On Display mode
-
-</br>
 
 #### [Radial CGM](https://gallery.fitbit.com/details/0173730e-5381-4495-bc6e-6ec93c8df029)
 
 Ionic/Versa/Versa 2/Versa Lite/Versa 3/Sense
-
-</br>
-
-This is not an exhaustive list.  Search for "CGM" to find others also.
 
 </br>
 
