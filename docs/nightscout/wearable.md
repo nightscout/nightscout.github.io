@@ -224,3 +224,6 @@ By [andreas-may](https://apps.garmin.com/en-US/developer/f9420c47-810f-47ac-a7dd
 By [Fredrik_S](https://apps.garmin.com/en-US/developer/c3842ca7-a645-4758-b9ed-4ee6f8e3abec/apps)
 
 By [John_](https://apps.garmin.com/en-US/developer/b2d30711-2708-4f3a-8e83-009c16d07081/apps)
+
+By [floheigl](https://apps.garmin.com/en-US/apps/488ffa72-5994-4d0f-90ff-3eeb99f3ea41)
+
