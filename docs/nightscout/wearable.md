@@ -88,7 +88,9 @@ Select your Wearable device and enable the Glimp watchface.
 
 #### [NightWear](https://github.com/rahim/nightwear)
 
-NightWear is a Wear OS app available in the [Google Play Store](https://play.google.com/store/apps/details?id=im.rah.nightwear&utm_source=github&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1) directly from your watch. You can use it with Android and iOS.
+NightWear is a minimal Wear OS watch face and complication available in the [Google Play Store](https://play.google.com/store/apps/details?id=im.rah.nightwear) directly from your watch.
+
+It uses Wear's standalone app support, so requires no companion app installed on the phone, or no phone at all as long as the watch has an internet connection. This also means it's possible to display Nightscout data on a Google Wear OS watch paired with an Apple iPhone.
 
 </br>
 
