@@ -98,7 +98,7 @@ As of 0.12, Nightscout no longer readily supports the free Azure platform. It is
 
 - If an update is available click `Continue updating at GitHub` 
 - Make sure you see `GitHub user located!` else check your username.
-- If you know an update is available but you see `Repo is Up to date`, try the alternative method.
+- If you know an update is available but you see `Repo is Up to date`, try the alternative method: [redeploy](../redeploy).
 
 <img src="../img/UpdateNS05.png" style="zoom:80%;" >
 
