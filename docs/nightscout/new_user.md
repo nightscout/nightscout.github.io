@@ -285,7 +285,7 @@ j) Click on `CONNECT`
 
 </br>
 
-k) Click on `Choose a connection method`
+k) If displayed, click on `Choose a connection method` (else skip)
 
 <img src="../img/NewNS26.png" style="zoom:80%;" />
 

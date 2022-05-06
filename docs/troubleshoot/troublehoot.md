@@ -30,11 +30,7 @@ Atlas: [https://status.cloud.mongodb.com/](https://status.cloud.mongodb.com/)
 
 ## GitHub and Heroku
 
-</br>
-
 ### A valid GitHub Directory could not be found.
-
-</br>
 
 When trying to deploy a new Nightscout site, this message appears when clicking `Deploy to Heroku`.
 
@@ -56,8 +52,6 @@ You can now upgrade or redeploy your Nightscout using redeploy as explained [her
 
 ### Cannot find cgm-remote-monitor in Heroku / No GitHub source visible
 
-</br>
-
 When updating Nightscout, `cgm-remote-monitor` doesn't appear automatically in Heroku under your repository name.
 
 <img src="../img/TShoot01.png" style="zoom:80%;" >
@@ -77,8 +71,6 @@ When updating Nightscout, your repository name doesn't appear in `Manual Deploy`
 </br>
 
 ### Cannot find cgm-remote-monitor in Heroku: Item cannot be retrieved
-
-</br>
 
 When updating Nightscout, `cgm-remote-monitor` doesn't appear automatically in Heroku under your repository name and an error message appears when you try to connect to GitHub.
 
@@ -110,8 +102,6 @@ If you lost or don't have anymore access to the email you used to create your He
 # Atlas
 
 ### Limit of one free cluster.
-
-</br>
 
 When creating a new site or migrating (usually not the first attempt), when reaching `Target Cluster`.
 
@@ -155,8 +145,6 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 ### Application Error
 
-</br>
-
 <img src="../img/TShoot05.png" style="zoom:80%;" >
 
  [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
@@ -179,8 +167,6 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 ### Nightscout stopped working after a few weeks
 
-</br>
-
 Same screen than above but you received a mail from Heroku telling you you're out of dyno hours...
 
 - Check your remaining dyno hours in Heroku, click on your profile picture top right and select `Account Settings`, then `Billing`.
@@ -198,8 +184,6 @@ Same screen than above but you received a mail from Heroku telling you you're ou
 
 ## Boot Error - Unable to connect to Mongo
 
-</br>
-
 Look at this [dedicated page](./connection_string.md).
 
 <img src="../img/TShoot43.png" style="zoom:80%;" >
@@ -210,11 +194,7 @@ Look at this [dedicated page](./connection_string.md).
 
 Make sure your Nightscout [time zone](../../nightscout/profile_editor/) is correct.
 
-</br>
-
 ### Dexcom data not showing
-
-</br>
 
 #### Dexcom Share
 
@@ -304,8 +284,6 @@ Another reason for a sleeping app can be due to a failure to obtain data from De
 
 ### Error code instead of a BG value
 
-</br>
-
 Nightscout implements Dexcom error codes as listed below:
 
 | Code  | Corresponding error   |
@@ -365,8 +343,6 @@ Nightscout implements Dexcom error codes as listed below:
 </br>
 
 # Database full
-
-</br>
 
 Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
 
