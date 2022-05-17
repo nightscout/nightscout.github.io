@@ -47,6 +47,7 @@ nav:
     - 'Admin Tools': 'nightscout/admin_tools.md'
     - 'Remote Notifications': 'nightscout/pushover.md'
 - Update:
+    - 'Temporary workaround': 'update/temp2413.md'
     - 'Updating your site': 'update/update.md'
     - 'Redeploying': 'update/redeploy.md'
     - 'Deploy another GitHub branch': 'update/dev_branch.md'

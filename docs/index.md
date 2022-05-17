@@ -127,6 +127,13 @@ downtime. If you need to run several sites on the same account, have "never slee
 
 </br>
 
+## Build your own Nightscout DIY site
+
+ <span style="font-size:larger;">Ready to build your free classic Nightscout DIY site?  
+You'll find instructions [here](../nightscout/new_user/).</span>
+
+</br>
+
 ## Nightscout as a Service
 
 ![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)

@@ -1,5 +1,14 @@
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
 
+</br>
+
+!!!warning  
+    Since April 13th 2022 Heroku [Incident](https://status.heroku.com/incidents/2413), upgrading and redeploying from GitHub is not possible anymore  
+    Whilst this is probably a temporary situation, you need to deploy a new site from scratch to bypass this limitation.  
+    If necessary, [follow this strategy as a workaround](../temp2413).
+
+</br>
+
 In rare occasions, like testing a specific fix or a feature that is not released yet (i.e. not in the `master` branch) you might need to deploy another branch like `dev` in the example below.
 
 Do not deploy `dev` or a branch other than `master` unless directed to do so (except if you know why you are doing so).
