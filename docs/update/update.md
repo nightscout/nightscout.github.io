@@ -6,13 +6,6 @@
 
 </br>
 
-!!!warning  
-    Since April 13th 2022 Heroku [Incident](https://status.heroku.com/incidents/2413), upgrading and redeploying from GitHub is not possible anymore  
-    Whilst this is probably a temporary situation, you need to deploy a new site from scratch to bypass this limitation.  
-    If necessary, [follow this strategy as a workaround](../temp2413).
-
-</br>
-
 [See here which is the current released version](https://github.com/nightscout/cgm-remote-monitor/releases) before updating.
 
 !!!note   

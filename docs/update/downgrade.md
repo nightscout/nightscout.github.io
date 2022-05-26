@@ -6,13 +6,6 @@
 
 </br>
 
-!!!warning  
-    Since April 13th 2022 Heroku [Incident](https://status.heroku.com/incidents/2413), upgrading and redeploying from GitHub is not possible anymore  
-    Whilst this is probably a temporary situation, you need to deploy a new site from scratch to bypass this limitation.  
-    If necessary, [follow this strategy as a workaround](../temp2413).
-
-</br>
-
 There is usually no good reason to downgrade Nightscout unless being instructed to do so.
 
 Roll back can be really useful in case of mistakes and when awaiting bug fixes in minor releases.
