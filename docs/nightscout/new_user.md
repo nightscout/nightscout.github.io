@@ -406,8 +406,6 @@ c) Wait for a moment
 
 </br>
 
-###### (ignore this line)
-
 d) Scroll down and click `Deploy to Heroku`
 
 <img src="../img/NewNS31.png" style="zoom:80%;" />
