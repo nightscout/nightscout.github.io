@@ -830,6 +830,13 @@ Glucose reading directly from the Dexcom Share service, uses these extended sett
 
 </br>
 
+The variables below belong to dev branch until further notice.
+
+- `OBSCURED` (`bridge`) - Obscure data source when using `bridge` uploader.
+- `OBSCURE_DEVICE_PROVENANCE` (`dexcom-dont-own-my-body-data`) - Self explanatory.
+
+</br>
+
 ##### `mmconnect` (MiniMed Connect bridge)
 
 !!!warning "This plugin is **NOT** functional with Heroku: do not enable it."

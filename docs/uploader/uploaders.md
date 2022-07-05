@@ -8,6 +8,9 @@ The type of Uploader needed will depend on the type of CGM system being used. In
 
 Once you are clear about the type of sensor and upload system you will be using, you can find detailed configuration information for each one [here](./setup.md).
 </br>
+
+If you're developing an uploader, you'll find the API information in your Nightscout site  at `/api-docs` and `/api3-docs`.
+
 </br>
 
 ## Dexcom

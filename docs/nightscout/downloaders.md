@@ -41,9 +41,19 @@ Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUser
 
 </br>
 
-### [Nightwatch](https://github.com/StephenBlackWasAlreadyTaken/NightWatch/releases)
+### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Google Play Store)
+
+<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+
+Monitor your Nightscout glucose levels on your Android phone or tablet. Dark UI, large readings and buttons, designed for usage at night.
+
+</br>
+
+### [Nightwatch](https://github.com/StephenBlackWasAlreadyTaken/NightWatch/releases) (legacy)
 
 <img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+
+CGM data on your Android Phone and Android Wear Watch!
 
 Nightwatch is not maintained anymore and might not work with recent Android versions. Switching to xDrip+ is recommended.
 
@@ -121,9 +131,9 @@ Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure
 
 </br>
 
-### [xDrip4iOS](https://testflight.apple.com/join/6ZqKUGpm)
+### [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/)
 
-<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockNO.png" style="zoom:15%;" />
+<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
 Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.
 
@@ -135,8 +145,9 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 
 ### [sugarmate](https://sugarmate.io/)
 
-!!!note "Important limitation"
-    Sugarmate doesn't allow Nightscout as a data source if you receive your data from Dexcom share with `bridge`.
+!!!note "Important limitation"  
+    Sugarmate doesn't allow Nightscout as a data source if you receive your data from Dexcom share with `bridge`.  
+    If you need this data source, [deploy a dev branch](../../update/dev_branch/) and enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables in Heroku.
 
 
 

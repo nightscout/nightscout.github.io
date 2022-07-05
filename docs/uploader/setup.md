@@ -151,7 +151,7 @@ Facebook group [Spike App](https://www.facebook.com/groups/spikeapp)
 
 </br>
 
-## [xDrip4iOS](https://testflight.apple.com/join/6ZqKUGpm)
+## [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/)
 
 <img src="../img/UploadCFG06.png" style="zoom:50%;" />
 
