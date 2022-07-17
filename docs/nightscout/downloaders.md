@@ -146,7 +146,7 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 ### [sugarmate](https://sugarmate.io/)
 
 !!!note "Important limitation"  
-    Sugarmate doesn't allow Nightscout as a data source if you receive your data from Dexcom share with `bridge`.  
+    Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.  
     If you need this data source, [deploy a dev branch](../../update/dev_branch/) and enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables in Heroku.
 
 
@@ -158,6 +158,22 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 Add Nightscout as a data source, type your Nightscout URL.
 
 <img src="../img/Follower02.png" style="zoom:80%;" />
+
+</br>
+
+### [Diabetes Cockpit](https://apps.apple.com/us/app/diabetes-cockpit/id1580577116)
+
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+
+<img src="../img/Follower08.png" style="zoom:80%;" />
+
+</br>
+
+### [Gluco-Tracker](https://apps.apple.com/it/app/gluco-tracker/id1526976290)
+
+<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+
+<img src="../img/Follower09.png" style="zoom:80%;" />
 
 </br>
 
@@ -186,12 +202,6 @@ Add Nightscout as a data source, type your Nightscout URL.
 <img src="https://raw.githubusercontent.com/mlukasek/M5StickC_NightscoutMon/master/images/M5StickC_Nightscout_w-speaker.jpg" style="zoom:20%;" />
 
 <img src="../img/LockOK.png" style="zoom:15%;" /> </br>
-
-### [Nightscout PyPortal](https://github.com/shanselman/NightscoutPyPortal)
-
-[Blog](https://www.hanselman.com/blog/displaying-your-realtime-blood-glucose-from-nightscout-on-an-adafruit-pyportal)
-
-<img src="https://user-images.githubusercontent.com/2892/55283910-3a616b80-5321-11e9-9a20-7e110521c2cd.jpeg" style="zoom:8%;" />
 
 </br>
 

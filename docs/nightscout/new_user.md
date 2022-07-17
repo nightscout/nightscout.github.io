@@ -310,10 +310,10 @@ n) Paste the string in the line below (yes, in this browser window you're readin
 </br>
 
 !!!info "It should be similar to this (`xxxxx` will be different):"
-    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority`
 </br>
 
-o) Invent a name for your database, this is not a critical information (for example `mycgmic`), note that default is `myFirstDatabase`. Only letters and numbers, no spaces.
+o) Invent a name for your database, this is not a critical information (for example `myCGMitc`). Only letters and numbers, no spaces.
 
 Database Name (write here ->) <input type="text" id="mydB" value="click here, delete and put your own" size="30">
 

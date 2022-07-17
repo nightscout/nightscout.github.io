@@ -110,11 +110,11 @@ It uses Wear's standalone app support, so requires no companion app installed on
 
 </br>
 
-## Xiaomi MiBand 4, 5 and 6
+## Xiaomi MiBand 2, 3, 4, 5 and 6
 
-## Amazfit Band 5, Bip, Bip Lite, Bip S and GTR
+## Amazfit Band 5, Bip, Bip Lite, Bip S and Bip S lite
 
-## Amazfit GTR2, GTR2e, GTS2, GTS2e and GTR42
+## Amazfit GTR2, GTR2e, GTS2, GTS 2 mini, GTS2e, GTR42 and 47
 
 #### xDrip+
 
@@ -134,10 +134,15 @@ Apple Watch series 3 and above.
 
 #### [sugarmate](https://sugarmate.io/)
 
-!!!note "Important limitation"
-    Sugarmate doesn't allow Nightscout as a data source if you receive your data from Dexcom share with `bridge`.
+!!!note "Important limitation"  
+    Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.  
+    If you need this data source, [deploy a dev branch](../../update/dev_branch/) and enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables in Heroku.
 
 You can setup sugarmate as a calendar complication to display Nightscout on your Apple watch.
+
+</br>
+
+#### [Gluco-Tracker](https://apps.apple.com/it/app/gluco-tracker/id1526976290?platform=appleWatch)
 
 </br>
 
