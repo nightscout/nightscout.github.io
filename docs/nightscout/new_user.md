@@ -394,9 +394,11 @@ a) You should now have 3 pages opened in your browser: Heroku, Atlas, and Github
 
 b) Click this link [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor), a new GitHub page will open. Click on `Fork`
 
-
-
 <img src="../img/NewNS29.png" style="zoom:70%;" />
+
+Confirm with `Create fork`
+
+<img src="../img/NewNS51.png" style="zoom:70%;" />
 
 </br>
 
