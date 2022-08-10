@@ -31,7 +31,7 @@ We make the technology behind Nightscout and manage it for you. There are some i
 
 Click this link [https://t1pal.com/getting-started/starting/home](https://t1pal.com/getting-started/starting/home)
 
-Select `Select Plan`
+Click `GET STARTED!`
 
 <img src="../img/T1Pal01.png" style="zoom:80%;" />
 

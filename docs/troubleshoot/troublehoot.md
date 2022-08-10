@@ -153,7 +153,9 @@ When creating a new site or migrating (usually not the first attempt), when reac
 - If you didn't migrate from Azure to Heroku create a new site [create a new Nightscout site with Heroku](../../nightscout/new_user/).
 - If you're creating a new Nightscout site, it might have failed because of a wrong connection string. Delete your Heroku app and [deploy](../../nightscout/new_user/#step-4-fork-and-deploy-cgm-remote-monitor) again after [checking](../connection_string/#change-your-atlas-database-password) the Atlas connection string is correct.
 
-- If you don't see any good reason just go ahead:
+- If you don't see any good reason [restart all dynos](#restart-all-dynos).
+
+- Check your [database is not full](#database-full).
 
 </br>
 
@@ -344,7 +346,9 @@ Nightscout implements Dexcom error codes as listed below:
 
 # Database full
 
-Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying an M2 or M5 Shared cluster.
+Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying for an M2 or M5 Shared cluster.
+
+**Note:** *If you consider paying for a database upgrade, also think about a [paid hosting service](../../vendors/NSaaS).*
 
 - Make sure your Nightscout site has `Database Size` enabled to monitor database capacity. Look [here](../../nightscout/setup_variables/#dbsize-database-size) for more information on this plugin.
 
@@ -352,7 +356,11 @@ Free databases like M0 Sandbox provided by Atlas will only hold a limited amount
 
 </br>
 
-- Check in [Atlas](https://account.mongodb.com/account/login)
+If your Nightscout page doesn't open after [restarting all dynos](#restart-all-dynos) and you want to rule out a full database, you can try an emergency cleanup of the less important part of your Nightscout site: `devicestatus`.
+
+##### Atlas database size verification
+
+- Log in [Atlas](https://account.mongodb.com/account/login)
 - Open your Nightscout cluster and select `Collections`
 
 <img src="../img/TShoot32.png" style="zoom:80%;" >
@@ -363,10 +371,10 @@ Free databases like M0 Sandbox provided by Atlas will only hold a limited amount
 
 <img src="../img/TShoot36.png" style="zoom:80%;" >
 
-- Open Nightscout  `Admin tools`.
+- Open Nightscout  [`Admin tools`](../../nightscout/discover/#drawer-menu). If your site doesn't open jump to [Emergency cleanup](#emergency-cleanup).
 - Depending on the collection you identified above, choose which of the following you want to cleanup:
 
-##### Cleanup:
+##### Cleanup
 
 You can cleanup (enter the number of days to keep) or delete your devices status:
 
@@ -376,9 +384,22 @@ Same for `Treatments`:
 
 <img src="../img/TShoot38.png" style="zoom:80%;" >
 
-And `Glucose entries`. If you are reluctant to lose historical data you should consider opting for a paid database solution.
+And `Glucose entries`. If you are reluctant to lose historical data you should consider opting for a paid database solution or [hosted](../../vendors/NSaaS) Nightscout.
 
 <img src="../img/TShoot39.png" style="zoom:80%;" >
+
+##### Emergency cleanup
+
+In the Atlas cluster view you opened [above](#atlas-database-size-verification), select the `devicestatus` collection and click the bin icon to delete it.  
+You will lose all device status history (battery, ..) but you won't lose neither BG, treatments nor profiles.
+
+<img src="../img/TShoot55.png" style="zoom:80%;" >
+
+Write `devicestatus` in the box then click `Drop`
+
+<img src="../img/TShoot56.png" style="zoom:80%;" >
+
+[Restart all dynos](#restart-all-dynos) in Heroku and when your site opens, consider [cleanup](#cleanup) from Admin Tools if your database size exceeds 80%.
 
 </br>
 

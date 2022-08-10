@@ -148,6 +148,8 @@ This report will give you an weekly view of your statistics.
 
 This will give you a a table of your calibrations, if your uploader sends the correct event and data.
 
+<img src="../img/Reports22.png" style="zoom:80%;" />
+
 </br>
 
 ### Treatments
