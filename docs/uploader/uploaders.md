@@ -15,11 +15,12 @@ If you're developing an uploader, you'll find the API information in your Nights
 
 ## Dexcom
 
-#### Dexcom G5/G6
+#### Dexcom G5/G6/ONE
 
 <img src="..\img\Upload02.png" />
 
-If you are using the Dexcom G5 and G6 sensors connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device. 
+If you are using the Dexcom G5 and G6 sensors connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device.  
+Dexcom Share is not available with Dexcom ONE.
 
 For this to work, Nightscout must be configured to use the `bridge` plug-in and will then automatically pull the CGM information directly from the Dexcom servers in real-time.
 
@@ -30,15 +31,18 @@ For this to work, Nightscout must be configured to use the `bridge` plug-in and 
 
 If you don't want to use the official Dexcom apps, then you can use **open-source software** apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:
 
-**Android**: xDrip+ for G4, G5 and G6. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
+**Android**: xDrip+ for G4, G5, G6 and ONE. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
 
-**iOS**: Spike or xDrip4iOS for G4, G5 and older G6 transmitters (**not Firefly**) <!-- Spike or xDrip4iOS for G4 (1)(3) -->
+**iOS**:   
+	Spike for G4, G5 and older G6 transmitters (**not Firefly**) <!-- Spike or xDrip4iOS for G4 (1)(3) -->  
+	xDrip4iOS for G4, G5, G6 and ONE transmitters
 
 <img src="..\img\Upload03.png" />
 
 !!! info "Dexcom "Firefly" Transmitters"
-    Any transmitter made before Dexcom switched to the "firefly" range of G6 transmitters is compatible with **Spike** or **xDrip4iOS**. Although there are *slight* physical differences, the easiest way to check is to look at the Transmitter ID. If it starts with **80xxxx** or **81yxxx** (where **y** is a number) then it is a pre-Firefly transmitter and is compatible. 
+    Any transmitter made before Dexcom switched to the "firefly" range of G6 transmitters is compatible with **Spike**. Although there are *slight* physical differences, the easiest way to check is to look at the Transmitter ID. If it starts with **80xxxx** or **81yxxx** (where **y** is a number) then it is a pre-Firefly transmitter and is compatible. 
     
+
     Most of the useable transmitters that fall into this category at the present time (early 2021) are generally rebatteried or rechargeable/modified 80xxxx or 81xxxx transmitters.
 
 
@@ -98,11 +102,11 @@ Non Bluetooth-enabled Freestyle Libre sensors will need an additional transmitte
 
 Most of the transmitters have their own proprietary apps. Nearly all of these support the uploading of data to Nightscout (LinkBluCon, Tomato, Diabox, eDroplet, ...). Again, check the transmitter manufacturer's website and the relevant Facebook support groups for information.
 
-**Open-source apps** such as **xDrip+**, **Spike** and **xDrip4iOS** also support most of the above transmitter devices.
+**Open-source apps** such as **xDrip+**, **Spike** and **xDrip4iOS** also support some of the above transmitter devices.
 
-You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip), Diabox or [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre).
+You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre). Other Libre 2 sensors can be used directly with Juggluco and Diabox.
 
-You can upload automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project in Heroku.
+For Libre 3, you can upload automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project in Heroku, or use xDrip+ to perform this operation.
 
 </br>
 </br>
