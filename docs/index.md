@@ -118,7 +118,8 @@ You will need:
 
 ## How Much Does It Cost?
 
-Classic DIY Nightscout requires accounts at three companies: GitHub,
+The developers recommend paid support for high quality, reliable, consistent
+service.  Classic DIY Nightscout requires accounts at three companies: GitHub,
 MongoDB, and Heroku. All three of which will demand some sort of maintenance
 and will generate sales and warning emails over the course of the years. DIY
 Nightscout is unfortunately not set it and forget it and will require upgrades
@@ -138,18 +139,28 @@ Nightscout site consistently all year.
  <span style="font-size:larger;">Ready to build your free classic Nightscout DIY site?  
 You'll find instructions [here](../nightscout/new_user/).</span>
 
+See the comparison list for an [overview of different providers](/vendors/).
+
 </br>
 
 ## Nightscout as a Service
+If you prefer to pay and just use Nightscout as a fully managed service and let
+somebody else worry about installation and maintenance then you may be
+interested in a dedicated Nightscout hosting provider.  There are two dedicated
+Nightscout hosting providers.  Both of them are run by community members for
+community members.
+
+See the comparison list for an [overview of different providers](/vendors/).  The community run hosting providers are:
+* https://t1pal.com/
+* https://ns.10be.de/
+
+
+### T1Pal
 
 ![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)
 
-If you prefer to pay and just use Nightscout as a fully managed service and let somebody else worry about installation and maintenance then [T1Pal](https://t1pal.com/) could be exactly what you need.
-
-</br>
-   <span style="font-size:larger;">The developers recommend paid support for high quality, reliable service.
-The developers recommend [T1Pal](https://t1pal.com) in order to augment the sustainability of the
-Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.</span>
+[T1Pal](https://t1pal.com) directly supports the sustainability of the
+Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.
 
 </br>
 
@@ -161,7 +172,9 @@ Contact T1Pal support to request specific features or versions.
 File a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get
 Support" from [My Account](https://www.t1pal.com/account/).
 
-</br>
+
+
+### NS10BE
 
 <img src="https://ns.10be.de/templates/images/ns.10be.de-logo_halb_klein.jpg" width="400" height="155">
 
