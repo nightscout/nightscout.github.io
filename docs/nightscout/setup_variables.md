@@ -10,7 +10,7 @@ Nightscout configuration is held in variables , their content can be modified to
 
 ##### Editing Config Vars in Heroku
 
-See [here](../../nightscout/new_user#editing-config-vars-in-heroku) where and how to change your variables.
+See [here](../../vendors/heroku/new_user#editing-config-vars-in-heroku) where and how to change your variables.
 
 ------
 

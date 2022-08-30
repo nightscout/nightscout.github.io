@@ -26,12 +26,16 @@ nav:
 - Introduction:
     - 'What is Nightscout?': 'index.md'
     - 'How do I upload my data?': 'uploader/uploaders.md'
-- Install:
-    - 'DIY Overview': 'nightscout/insights.md'
+- DIY Nightscout:
     - 'Classic DIY Installation': 'nightscout/new_user.md'
-    - 'Paid hosting overview': 'vendors/NSaaS.md'
-    - 'Paid hosting: T1Pal': 'vendors/T1Pal/new_user.md'
-    - 'Paid hosting: 10BE': 'vendors/10BE.md'
+    - 'Heroku Hobby plan': 'vendors/heroku/new_user.md'
+    - 'Heroku Hobby plan upgrade': 'vendors/heroku/hobbyplan.md'
+    - 'Heroku Stack Update': 'update/upd_stack.md'
+    - 'Heroku Multiple Factor Authentication': 'vendors/heroku/index.md'
+    - 'Heroku Downgrade': 'update/downgrade.md'
+- Paid Hosting:
+    - 'T1Pal': 'vendors/T1Pal/new_user.md'
+    - '10BE': 'vendors/10BE.md'
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Configure your Uploader': 'uploader/setup.md'
@@ -51,9 +55,6 @@ nav:
     - 'Redeploying': 'update/redeploy.md'
     - 'Deploy another GitHub branch': 'update/dev_branch.md'
     - 'Attach a new Atlas database': 'update/newdatabase.md'
-    - 'Update Heroku Stack': 'update/upd_stack.md'
-    - 'Downgrade': 'update/downgrade.md'
-    - 'Multiple Factor Authentication': 'vendors/heroku/index.md'
 - Troubleshoot:
     - 'Troubleshooting': 'troubleshoot/troublehoot.md'
     - 'Dexcom bridge': 'troubleshoot/dexcom_bridge.md'
