@@ -118,17 +118,17 @@ You will need:
 
 ## How Much Does It Cost?
 
-Classic DIY Nightscout requires free accounts at three companies: GitHub,
+Classic DIY Nightscout requires accounts at three companies: GitHub,
 MongoDB, and Heroku. All three of which will demand some sort of maintenance
 and will generate sales and warning emails over the course of the years. DIY
 Nightscout is unfortunately not set it and forget it and will require upgrades
 and even platform changes to follow software evolutions or policies of the
 companies used when you created your site.
 
-Free databases like the Atlas M0 Sandbox provided by [MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB) and you may eventually need to delete old records (maybe every 3-4 years with standard Nightscout CGM usage). You can increase even further the database capacity to 2GB/5GB ($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.
+Free databases like the Atlas M0 Sandbox provided by[MongoDB](https://www.mongodb.com/) will hold a limited amount ofdata (512MB).  Depending on usage patterns, this may be enough for a few months or a few years before consuming the database capacity.  You can increase the database capacity to 2GB/5GB($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.  Some people choose to delete the older data instead.
 
 Application servers such as [Heroku](https://www.heroku.com/)'s "Hobby" plan
-($7 per dyno per month).  will provide enough server hours to run a single
+($7 per dyno per month) will provide enough server hours to run a single
 Nightscout site without any downtime.
 
 </br>
