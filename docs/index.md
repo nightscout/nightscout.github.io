@@ -118,12 +118,19 @@ You will need:
 
 ## How Much Does It Cost?
 
-It is possible to run Nightscout for free. Classic DIY Nightscout requires free accounts at three companies: GitHub, MongoDB, and Heroku. All three of which will demand some sort of maintenance and will generate sales and warning emails over the course of the years. DIY Nightscout is unfortunately not set it and forget it and will require upgrades and even platform changes to follow software evolutions or policies of the companies used when you created your site.
+The developers recommend paid support for high quality, reliable, consistent
+service.  Classic DIY Nightscout requires accounts at three companies: GitHub,
+MongoDB, and Heroku. All three of which will demand some sort of maintenance
+and will generate sales and warning emails over the course of the years. DIY
+Nightscout is unfortunately not set it and forget it and will require upgrades
+and even platform changes to follow software evolutions or policies of the
+companies used when you created your site.
 
-Free databases like the Atlas M0 Sandbox provided by [MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB) and you may eventually need to delete old records (maybe every 3-4 years with standard Nightscout CGM usage). You can increase even further the database capacity to 2GB/5GB ($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.
+Free databases like the Atlas M0 Sandbox provided by[MongoDB](https://www.mongodb.com/) will hold a limited amount ofdata (512MB).  Depending on usage patterns, this may be enough for a few months or a few years before consuming the database capacity.  You can increase the database capacity to 2GB/5GB($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.  Some people choose to delete the older data instead.
 
-Application servers such as [Heroku](https://www.heroku.com/)'s "Free" plan will provide enough server hours to run a single Nightscout site without any
-downtime. If you need to run several sites on the same account, have "never sleeping" apps, you can easily upgrade to a paid "Hobby" plan ($7 per dyno per month).
+Application servers such as [Heroku](https://www.heroku.com/)'s "Hobby" plan
+($7 per dyno per month) will provide enough server hours to run a single
+Nightscout site consistently all year.
 
 </br>
 
@@ -132,18 +139,28 @@ downtime. If you need to run several sites on the same account, have "never slee
  <span style="font-size:larger;">Ready to build your free classic Nightscout DIY site?  
 You'll find instructions [here](../nightscout/new_user/).</span>
 
+See the comparison list for an [overview of different providers](/vendors/).
+
 </br>
 
 ## Nightscout as a Service
+If you prefer to pay and just use Nightscout as a fully managed service and let
+somebody else worry about installation and maintenance then you may be
+interested in a dedicated Nightscout hosting provider.  There are two dedicated
+Nightscout hosting providers.  Both of them are run by community members for
+community members.
+
+See the comparison list for an [overview of different providers](/vendors/).  The community run hosting providers are:
+* https://t1pal.com/
+* https://ns.10be.de/
+
+
+### T1Pal
 
 ![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)
 
-If you prefer to pay and just use Nightscout as a fully managed service and let somebody else worry about installation and maintenance then [T1Pal](https://t1pal.com/) could be exactly what you need.
-
-</br>
-   <span style="font-size:larger;">The developers recommend paid support for high quality, reliable service.
-The developers recommend [T1Pal](https://t1pal.com) in order to augment the sustainability of the
-Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.</span>
+[T1Pal](https://t1pal.com) directly supports the sustainability of the
+Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.
 
 </br>
 
@@ -155,7 +172,9 @@ Contact T1Pal support to request specific features or versions.
 File a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get
 Support" from [My Account](https://www.t1pal.com/account/).
 
-</br>
+
+
+### NS10BE
 
 <img src="https://ns.10be.de/templates/images/ns.10be.de-logo_halb_klein.jpg" width="400" height="155">
 
