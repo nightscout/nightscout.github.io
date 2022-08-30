@@ -4,7 +4,7 @@
 
 </br>
 
-You can deploy you Nightscout site with Heroku using a Hobby plan (up to 7$ per month for one Dyno).  
+You can deploy you Nightscout site with Heroku using a Hobby plan (7$ per month for one app).  
 If you find it too complex or the maintenance too demanding you might be interested in [Nightscout as a service](../../NSaaS).
 
 !!!info "Database costs"  

@@ -12,7 +12,7 @@ Starting October 26, 2022, Heroku will begin deleting inactive accounts and asso
 
 Starting November 28, 2022, Heroku plans to stop offering free product plans and plan to start shutting down free dynos and data services.
 
-This means that if you wish to continue using Heroku you need to upgrade your free plan to Hobby ([up to 7$/month](https://devcenter.heroku.com/articles/usage-and-billing#cost)) **before November 28th 2022**.  
+This means that if you wish to continue using Heroku you need to upgrade your free plan to Hobby ([7$/month](https://devcenter.heroku.com/articles/usage-and-billing#cost)) **before November 28th 2022**.  
 If you already have a Hobby plan you don't need to do anything and you Nightscout site will continue to work as before.
 
 </br>
@@ -62,8 +62,3 @@ If you already have a Hobby plan you don't need to do anything and you Nightscou
 - Verify the credit card you used is still valid, in case of doubt `Change credit card` and enter a valid credit card.
 
 <img src="../../heroku/img/HerokuH04.png" style="zoom:80%;" >
-
-- You can also see an estimate of your future billing based on the latest Free dyno hours you used (check last day of the month)
-
-<img src="../../heroku/img/HerokuH05.png" style="zoom:80%;" >
-
