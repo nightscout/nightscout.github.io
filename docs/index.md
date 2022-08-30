@@ -129,7 +129,7 @@ Free databases like the Atlas M0 Sandbox provided by[MongoDB](https://www.mongod
 
 Application servers such as [Heroku](https://www.heroku.com/)'s "Hobby" plan
 ($7 per dyno per month) will provide enough server hours to run a single
-Nightscout site without any downtime.
+Nightscout site consistently all year.
 
 </br>
 
