@@ -33,7 +33,7 @@ nav:
     - 'Heroku Stack Update': 'update/upd_stack.md'
     - 'Heroku Multiple Factor Authentication': 'vendors/heroku/index.md'
     - 'Heroku Downgrade': 'update/downgrade.md'
-- Paid Hosting:
+- Dedicated Nightscout services:
     - 'T1Pal': 'vendors/T1Pal/new_user.md'
     - '10BE': 'vendors/10BE.md'
 - Configure:
