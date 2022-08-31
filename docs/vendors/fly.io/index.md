@@ -12,6 +12,10 @@ mission critical app.
 
 ## Set up new Nightscout
 
+Fly.io is managed through a command line app.
+
 ## Migrate Nightscout
 
-[Migrate from heroku](https://fly.io/docs/rails/getting-started/migrate-from-heroku/)
+* [Migrate from heroku service](https://fly.io/launch/heroku)
+
+* [Full migration docs](https://fly.io/docs/rails/getting-started/migrate-from-heroku/)

@@ -92,12 +92,12 @@ However, there are a few options to start Nightscout cost-free:
 
 Free databases like the Atlas M0 Sandbox provided by[MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB).  Depending on usage patterns, this may be enough for a few months or a few years before consuming the database capacity.  You can increase the database capacity to 2GB/5GB($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.  Some people choose to delete the older data instead.  The free storage tier may not offer enough storage for many Nightscout users.  When Nightscout database runs out of space, consider securing more storage capacity to allow Nightscout to be a permanent record.
 
-For many people Nightscout is a mission-critical application.  Free server
-hosting offers from [fly.io](/vendors/fly.io/) or
-[Railway](/vendors/railway.app/) may not offer enough compute for Nightscout.
-These issues will compound issues with reliability and
-consistency.  The best practice when trying out these resources at low cost or
-for free is to secure them them with a small payment, once Nightscout is
+For many people Nightscout is a mission-critical application.  
+Free hosting hosting promotional offers may not offer enough compute or storage
+capacity for Nightscout.
+These limited capacities will compound issues with reliability and consistency over time.
+The best practice when trying out these resources at low cost or for
+free is to secure them them with a small payment, once Nightscout is
 working for you.
 
 
