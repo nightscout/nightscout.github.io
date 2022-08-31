@@ -85,7 +85,7 @@ if your budget allows.
     	<td>0$-50$/month</td>
         <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
-        <td>Yes</td>
+        <td>No</td>
         <td>High</td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ if your budget allows.
     	<td>0$-5$/month</td>
         <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
-        <td>Yes</td>
+        <td>No</td>
         <td>High</td>
     </tr>
     <tr>
