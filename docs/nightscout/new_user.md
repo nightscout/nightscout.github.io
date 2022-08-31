@@ -62,8 +62,8 @@ if your budget allows.
         <td>Low</td>
     </tr>
     <tr>
-        <td><img src="../../vendors/img/Azure.png" align="center"></td>
-        <td>DIY</td>
+        <td><a href="/vendors/azure/new_azure/"><img src="../../vendors/img/Azure.png" align="center"></a></td>
+        <td><a href="/vendors/azure/new_azure/">DIY</a></td>
     	<td>variable</td>
         <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
@@ -71,8 +71,8 @@ if your budget allows.
         <td>High</td>
     </tr>
     <tr>
-        <td><img src="../../vendors/img/DO.png" align="center"></td>
-        <td>DIY</td>
+        <td><a href="/vendors/digitalocean/"><img src="../../vendors/img/DO.png" align="center"></a></td>
+        <td><a href="/vendors/digitalocean/">DIY</a></td>
     	<td>6$/month</td>
         <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
@@ -80,8 +80,8 @@ if your budget allows.
         <td>High</td>
     </tr>
     <tr>
-        <td><img src="../../vendors/img/flyio-logo.png" align="center"></td>
-        <td>DIY</td>
+        <td><a href="/vendors/fly.io/"><img src="../../vendors/img/flyio-logo.png" align="center"></a></td>
+        <td><a href="/vendors/fly.io/">DIY</a></td>
     	<td>0$-50$/month</td>
         <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
@@ -89,8 +89,8 @@ if your budget allows.
         <td>High</td>
     </tr>
     <tr>
-        <td><img src="../../vendors/img/railway-app-logo.png" align="center"></td>
-        <td>DIY</td>
+        <td><a href="/vendors/railway.app/"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
+        <td><a href="/vendors/railway.app/">DIY</a></td>
     	<td>0$-5$/month</td>
         <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
