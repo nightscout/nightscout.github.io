@@ -8,6 +8,8 @@ You still can [deploy your Nightscout site in Heroku](../../vendors/heroku/new_u
 </br>
 
 This documentation will reflect free possible solutions as soon as they are validated.
+Consider supporting one of the community supported dedicated hosting providers
+if your budget allows.
 
 <img src="../../img/WIP.png" style="zoom:50%;" align="center">
 
@@ -72,6 +74,24 @@ This documentation will reflect free possible solutions as soon as they are vali
         <td><img src="../../vendors/img/DO.png" align="center"></td>
         <td>DIY</td>
     	<td>6$/month</td>
+        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td><img src="../../vendors/img/flyio-logo.png" align="center"></td>
+        <td>DIY</td>
+    	<td>0$-50$/month</td>
+        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td><img src="../../vendors/img/railway-app-logo.png" align="center"></td>
+        <td>DIY</td>
+    	<td>0$-5$/month</td>
         <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
         <td>Yes</td>

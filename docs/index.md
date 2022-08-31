@@ -90,11 +90,12 @@ DIY Nightscout is unfortunately not set it and forget it and will require upgrad
 Nightscout has grown in complexity and maturity that require resources to sustain, especially if we are talking about uninterrupted working Nightscout for years on end. Most of the free accounts provided have quotas on the resources used that will impact the Nightscout experience in some negative way without payment.
 However, there are a few options to start Nightscout cost-free:
 
-Free databases like the Atlas M0 Sandbox provided by[MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB).  Depending on usage patterns, this may be enough for a few months or a few years before consuming the database capacity.  You can increase the database capacity to 2GB/5GB($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.  Some people choose to delete the older data instead.  The free storage tier may not offer enough storage for many Nightscout users.  When Nightscout database runs out of space, consider securiing more storage capacity to allow Nightscout to be a permanent record.
+Free databases like the Atlas M0 Sandbox provided by[MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB).  Depending on usage patterns, this may be enough for a few months or a few years before consuming the database capacity.  You can increase the database capacity to 2GB/5GB($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.  Some people choose to delete the older data instead.  The free storage tier may not offer enough storage for many Nightscout users.  When Nightscout database runs out of space, consider securing more storage capacity to allow Nightscout to be a permanent record.
 
 For many people Nightscout is a mission-critical application.  Free server
-hosting offers from fly.io or Railway may not offer enough compute for
-Nightscout.  These issues will compound issues with reliability and
+hosting offers from [fly.io](/vendors/fly.io/) or
+[Railway](/vendors/railway.app/) may not offer enough compute for Nightscout.
+These issues will compound issues with reliability and
 consistency.  The best practice when trying out these resources at low cost or
 for free is to secure them them with a small payment, once Nightscout is
 working for you.
