@@ -55,13 +55,13 @@ You will need:
 
 -   A CGM sensor: Dexcom, Medtronic, Libre (plus an additional transmitter) or Eversense
 
--   A way to [upload](./uploader/uploaders.md) your data (this is generally an internet-connected mobile phone with a matching uploader app)
+-   A way to [upload](./uploader/uploaders.md) your data, to be stored in Nightscout (this is generally an internet-connected mobile phone with a matching uploader app)
 
 -   Internet access
 
 -   A few hours of "quiet" time (a <s>beer</s> nice cup of coffee is optional but highly recommended)
 
--   Basic computer skills and the ability to ***carefully*** follow the installation guides shown on this site 
+-   Basic computer skills and the ability to ***carefully*** follow the installation guides shown on this site
 
     ***"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.*
 
@@ -83,39 +83,28 @@ You will need:
 
 ## How Much Does It Cost?
 
-Classic DIY Nightscout requires accounts at various companies. All of which will demand some sort of maintenance and will generate sales and warning emails over the course of the years.
+There's no simple answer to this. You basically have two options:
 
-DIY Nightscout is unfortunately not set it and forget it and will require upgrades and even platform changes to follow software evolutions or policies of the companies used when you created your site.
+1. **DIY** Use instructions on this website or your computing skills to create your own installation. Depending on your skill and choice of platform, this can take anywhere from minutes to tens of hours to accomplish. Additionally, you will need to maintain this installation yourself, further adding to the effort. Having said that, there are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be **free** - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it. Additionally, it's important to understand that if you're using a free tier of a hosting service to run Nightscout, your hosting costs are being paid by the hosting provider you're using.
+2. **Use a service** You can use a hosting provider that does all of this work for you in exchange for a small monthly fee set at a level that mostly just covers the cost of operations to provide this service. There are currently two options available for this (NS10BE and T1Pal), both of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
 
-Nightscout has grown in complexity and maturity that require resources to sustain, especially if we are talking about uninterrupted working Nightscout for years on end. Most of the free accounts provided have quotas on the resources used that will impact the Nightscout experience in some negative way without payment.
-However, there are a few options to start Nightscout cost-free:
-
-Free databases like the Atlas M0 Sandbox provided by [MongoDB](https://www.mongodb.com/) will hold a limited amount of data (512MB).  Depending on usage patterns, this may be enough for a few months or a few years before consuming the database capacity.  You can increase the database capacity to 2GB/5GB($9/$25 USD/month) by paying for an M2/M5 Shared Cluster if you wish.  Some people choose to delete the older data instead.  The free storage tier may not offer enough storage for many Nightscout users.  When Nightscout database runs out of space, consider securing more storage capacity to allow Nightscout to be a permanent record.
-
-For many people Nightscout is a mission-critical application.  
-Free hosting hosting promotional offers may not offer enough compute or storage
-capacity for Nightscout.
-These limited capacities will compound issues with reliability and consistency over time.
-The best practice when trying out these resources at low cost or for
-free is to secure them them with a small payment, once Nightscout is
-working for you.
-
+The Nightscout development community actively supports both of these choices.
 
 </br>
 
 ## Build your own Nightscout DIY site
 
-<span style="font-size:larger;">Ready to build your classic Nightscout DIY site?  
-You'll find instructions [here](../nightscout/new_user/).</span>
+<span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions [here](../nightscout/new_user/).</span>
+
+**Note:** DIY users of Nightscout has been historically using a service called Heroku to host their sites. Heroku is in process of removing their free hosting tier altogehter. At the time of writing, there are no easy to follow instructions available for non-technical users on how to host Nightscout for free. If you have the time to author instructions for this purpose, new documentation pull requests are extremely welcome at https://github.com/nightscout/nightscout.github.io.
 
 </br>
 
 ## Nightscout as a Service
 
-The developers recommend paid support for high quality, reliable service. If you prefer to pay and use Nightscout as a fully managed service and let somebody else worry about installation and maintenance then you may be interested in a dedicated Nightscout hosting provider. There are two dedicated Nightscout hosting providers.  Both of them are run by community members for community members.
+If you want to save time and avoid the need to maintain a DIY solution, you have two service providers of choice.
 
 </br>
-
 
 ### T1Pal
 
@@ -123,12 +112,9 @@ The developers recommend paid support for high quality, reliable service. If you
 
 [T1Pal](https://t1pal.com) directly supports the sustainability of the Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.
 
-The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project.
+The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project. Database and server administration is automated and managed automatically as part of the service. Contact T1Pal support to request specific features or versions.
 
-Database and server administration is automated and managed automatically as part of the service.
-Contact T1Pal support to request specific features or versions.
-File a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get Support" from [My Account](https://www.t1pal.com/account/).
-
+If you need help with T1Pal, please file a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get Support" from [My Account](https://www.t1pal.com/account/).
 
 
 ### NS10BE
@@ -137,7 +123,7 @@ File a support ticket by emailing ***support*** at ***t1pal.com***, or select "G
 
 [ns.10BE.de](https://ns.10be.de/) was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits. A backup of your database and settings is performed every 6-8 hours. You can import data from your old Nightscout instance or MongoDB database, also upload data (Freestyle, Dexcom, Omnipod, ...) via CSV files. The servers are located in different fail-safe data centers in Germany, Finland or France (can be selected) . They are monitored by [uptimerobot](https://ns.10be.de/en/status.html) and own Slackbot. When a server goes down, it restarts itself and sends a twitter message.
 
-10BE is not free anymore, because the costs were simply not covered by the donations. A Nightscout Instance will cost €4.99/month, with discounts when increasing subscription duration.
+A Nightscout Instance at NS10BE costs €4.99/month, with discounts when increasing subscription duration.
 
 To see more about NS10 features and costs, take a look at the [features page](https://10be.de/en/pricing.html). The registration is free.
 
