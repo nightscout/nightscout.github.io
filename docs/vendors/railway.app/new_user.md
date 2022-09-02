@@ -1,56 +1,43 @@
 # Railway Nightscout
 
-------
+---
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../img/railway-app-logo.png" style="zoom:80%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../img/railway-app-logo.png" style="zoom:80%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
 
-------
+---
 
 !!!info "Cost"  
-    [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan), that is not enough for loopers, but can be great for a few weeks evaluation or for light users of Nightscout.
-    The [Developer plan](https://docs.railway.app/reference/plans#developer-plan-offering) should be sufficient for loopers and anyone depending on Nightscout as a mission critical app. Costs will vary depending on your use (We expect the amount to be below or around $5 per month).  
-    Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
-
-</br>
-
-This page is under construction. Do not follow these instructions yet.
-
-<img src="/img/WIP.png" align="center">
+ [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan), that is not enough for loopers, but can be great for a few weeks evaluation or for light users of Nightscout.
+The [Developer plan](https://docs.railway.app/reference/plans#developer-plan-offering) should be sufficient for loopers and anyone depending on Nightscout as a mission critical app. Costs will vary depending on your use (We expect the amount to be below or around $5 per month).  
+ Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 </br>
 
 ## Set up new Nightscout
 
-### Create your Railway, GitHub and Atlas accounts from a computer.
+### Create your Railway and GitHub accounts from a computer.
 
 Do not change device/computer/browser during the setup process!
 
 !!! note
-    If you have unexpected issues when creating your site, restart with another browser.
+If you have unexpected issues when creating your site, restart with another browser.
 
 </br></br>
-
 
 ### Step 1: Create a GitHub account
 
 </br>
 
 !!! warning "If you already have a GitHub account and previously forked cgm-remote-monitor"
-    [Delete your current cgm-remote-monitor fork.](../../../update/redeploy/#step-1-cleanup-github)
+[Delete your current cgm-remote-monitor fork.](../../../update/redeploy/#step-1-cleanup-github)
 
 If you don't have a GitHub account [create one](../../../nightscout/github/#create-a-github-account) and come back.
 
 </br></br>
 
-### Step 2: Create an Atlas account
+### Step 2: Create a Railway account
 
-Follow [these steps](../../../vendors/mongodb/atlas/#create-an-atlas-database) and come back.
-
-</br></br>
-
-### Step 3: Create a Railway account
-
-Open a new browser tab in [https://railway.app/new](https://railway.app/new) and select `GitHub`.
+Open [railway](https://railway.app) in a new browser tab and click `login`.
 
 <img src="../img/Railway01.png" style="zoom:80%;" />
 
@@ -76,17 +63,39 @@ You should now see this. You've created your Railway account,
 
 </br></br>
 
-### Step 4: Fork and deploy cgm-remote-monitor
+### Step 3: Deploy cgm-remote-monitor
 
 </br>
 
 Click on the `Deploy on Railway` button below:
 
-[ ![]( https://railway.app/button.svg) ](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fnightscout%2Fcgm-remote-monitor&plugins=mongodb&envs=API_SECRET%2CAUTH_DEFAULT_ROLES%2Cenable%2CMONGODB_URI%2CDISPLAY_UNITS&optionalEnvs=MONGODB_URI&API_SECRETDesc=A+passphrase+that+must+be+at+least+12+characters+long.&AUTH_DEFAULT_ROLESDesc=Possible+values+readable%2C+denied%2C+or+any+valid+role+name.+When+readable%2C+anyone+can+view+Nightscout+without+a+token.+Setting+it+to+denied+will+require+a+token+from+every+visit%2C+using+status-only+will+enable+api-secret+based+login.&enableDesc=Plugins+to+enable+for+your+site.+Must+be+a+space-delimited%2C+lower-case+list.&MONGODB_URIDesc=The+connection+string+required+to+access+your+database+%28where+all+your+data+is+stored+in+the+cloud%29.&DISPLAY_UNITSDesc=Preferred+BG+units+for+the+site%3A+mg%2Fdl+or+mmol%2FL+%28or+just+mmol%29.+Setting+to+mmol%2FL+puts+the+entire+server+into+mmol%2FL+mode+by+default%2C+no+further+settings+needed.&AUTH_DEFAULT_ROLESDefault=denied&enableDefault=careportal+basal+dbsize+rawbg+iob+maker+cob+bwp+cage+iage+sage+boluscalc+pushover+treatmentnotify+loop+pump+profile+food+openaps+bage+alexa+override+speech+cors)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/XvAfVW?referralCode=9Y13IY)
 
 Click `Configure`
 
 <img src="../img/Railway07.png" style="zoom:80%;" />
+
+---
+
+Note: if you are asked to verify your account, follow these instructions:
+
+1. click verify account
+
+<img src="../img/Railway18.png" style="zoom:80%;" />
+
+1. provide a payment method (don't worry, they are just verifying your card with a temporary charge)
+
+<img src="../img/Railway19.png" style="zoom:80%;" />
+
+1. wait until the payment card is verified successfully
+
+<img src="../img/Railway20.png" style="zoom:80%;" />
+
+Now click on the `Deploy on Railway` button below:
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/XvAfVW?referralCode=9Y13IY)
+
+---
 
 Click `Install & Authorize`
 
@@ -106,19 +115,11 @@ Mind if you see this you will need to [delete the`cgm-remote-monitor` fork in Gi
 
 <img src="../img/Railway10.png" style="zoom:80%;" />
 
-Now you need the connection string you defined during the [Atlas cluster creation](../../../vendors/mongodb/atlas/) (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
+Leave MONGODB_URI blank for now.
 
-It will look like this:
+<img src="../img/Railway21.png" style="zoom:80%;" />
 
-`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority`
-
-<img src="../img/Railway12.png" style="zoom:80%;" />
-
-Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
-
-<img src="../img/Railway13.png" style="zoom:80%;" />
-
-Two optional variables are already setup for you, open the caret to see them (recommended).
+Three optional variables are already setup for you, open the caret to see them (recommended).
 
 <img src="../img/Railway15.png" style="zoom:80%;" />
 
@@ -132,12 +133,55 @@ It's recommended that you leave them like this for now.
 
 <img src="../img/Railway14.png" style="zoom:80%;" />
 
-Once all your variables defined you can `Deploy`.
+Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
+
+<img src="../img/Railway13.png" style="zoom:80%;" />
+
+Once all your variables defined you can `Deploy`, and wait until it is complete.
 
 <img src="../img/Railway16.png" style="zoom:80%;" />
 
-</br></br>
+Once your app is deployed, we need to set the MONGODB_URI.
 
+<img src="../img/Railway22.png" style="zoom:80%;" />
+
+Click the Mongo service, and then click on the connect tab
+
+<img src="../img/Railway23.png" style="zoom:80%;" />
+
+<img src="../img/Railway24.png" style="zoom:80%;" />
+
+Copy the connection url
+
+<img src="../img/Railway25.png" style="zoom:80%;" />
+
+click on the nightscout service and click on the environment tab
+
+<img src="../img/Railway26.png" style="zoom:80%;" />
+<img src="../img/Railway27.png" style="zoom:80%;" />
+
+Add a new variable by clicking `New Variable`
+
+<img src="../img/Railway28.png" style="zoom:80%;" />
+
+For the variable name, enter MONGODB_URI
+
+<img src="../img/Railway29.png" style="zoom:80%;" />
+
+For the variable value, paste the connection url we copied from the mongo service. It will look like this:
+
+`mongodb://mongo:secret@containers-us-west-19.railway.app:6450`
+
+<img src="../img/Railway30.png" style="zoom:80%;" />
+
+Click add, and you should now see the MONGODB_URI is set
+
+<img src="../img/Railway31.png" style="zoom:80%;" />
+<img src="../img/Railway32.png" style="zoom:80%;" />
+
+Now lets deploy nightscout. We can trigger a deployment by modifying our fork, or via the [railway cli](https://docs.railway.app/develop/cli) by running [railway up](https://docs.railway.app/develop/cli#deploy)
+
+</br></br>
 
 ## Migrate Nightscout
 
