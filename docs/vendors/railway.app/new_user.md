@@ -69,7 +69,7 @@ You should now see this. You've created your Railway account,
 
 Click on the `Deploy on Railway` button below:
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/XvAfVW?referralCode=9Y13IY)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/XvAfVW)
 
 Click `Configure`
 
@@ -93,7 +93,7 @@ Note: if you are asked to verify your account, follow these instructions:
 
 Now click on the `Deploy on Railway` button below:
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/XvAfVW?referralCode=9Y13IY)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/XvAfVW)
 
 ---
 
