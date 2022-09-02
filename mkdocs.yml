@@ -32,6 +32,13 @@ nav:
     - 'MongoDB Atlas database': 'vendors/mongodb/atlas.md'
     - 'Heroku Hobby plan': 'vendors/heroku/new_user.md'
     - 'Railway.app': 'vendors/railway.app/new_user.md'
+    - 'Fly.io': 'vendors/fly.io/new_user.md'
+    - 'Northflank': 'vendors/northflank/new_user.md'
+    - 'Oracle Cloud': 'vendors/oracle/new_user.md'
+    - 'Digital Ocean': 'vendors/digitalocean/new_user.md'
+    - 'MVPS': 'vendors/MVPS/new_user.md'
+    - 'Google Cloud': 'vendors/google/new_user.md'
+    - 'Synology NAS': 'vendors/synology/new_user.md'
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Configure your Uploader': 'uploader/setup.md'

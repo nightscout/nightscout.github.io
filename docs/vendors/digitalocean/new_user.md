@@ -1,5 +1,3 @@
-# digitalocean
-
 Coming soon
 
 

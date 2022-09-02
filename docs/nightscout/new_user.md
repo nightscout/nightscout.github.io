@@ -7,13 +7,45 @@ Make sure you read and undertand [this](/#how-much-does-it-cost) before starting
 
 </br>
 
-This documentation will reflect possible solutions as soon as they are validated.
+#### Currently fully documented solutions:
 
-Click on the vendor logo to continue.
+[Heroku](../../vendors/heroku/new_user) with MongoDB Atlas.
+
+</br>
+
+#### Work in progress solutions:
+
+[Railway.io](../../vendors/railway.app/new_user) with MongoDB Atlas.
+
+</br>
+
+#### External documentation to be consolidated:
+
+[MVPS](../../vendors/MVPS/new_user)
+
+[Digital Ocean](../../vendors/digitalocean/new_user)
+
+[Oracle](../../vendors/oracle/new_user)
+
+[Synology](../../vendors/synology/new_user)
+
+</br>
+
+#### Exploration paths:
+
+[Azure](../../vendors/azure/new_azure)
+
+[Google Cloud](../../vendors/google/new_user)
+
+[Northflank](../../vendors/northflank/new_user)
 
 </br>
 
 ## DIY Vendors comparison table
+
+Click on the vendor logo.
+
+</br>
 
 <table style="padding:10px">
     <tr>
