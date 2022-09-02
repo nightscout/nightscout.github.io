@@ -2,131 +2,147 @@
 
 </br>
 
-From November 28th 2022 Heroku will not propose a [free plan](https://blog.heroku.com/next-chapter) anymore.  
-You still can [deploy your Nightscout site in Heroku](../../vendors/heroku/new_user) using a Hobby plan.
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  
+Make sure you read and undertand [this](/#how-much-does-it-cost) before starting.</span>
 
 </br>
 
-This documentation will reflect free possible solutions as soon as they are validated.
-Consider supporting one of the community supported dedicated hosting providers
-if your budget allows.
+This documentation will reflect possible solutions as soon as they are validated.
 
-<img src="../../img/WIP.png" style="zoom:50%;" align="center">
+Click on the vendor logo to continue.
 
 </br>
+
+## DIY Vendors comparison table
 
 <table style="padding:10px">
     <tr>
         <td>Vendor</td>
-        <td>Install and</br>maintenance</td>
     	<td>Cost (USD)</td>
-        <td>Support</td>
         <td>Web page</td>
         <td>Data base</td>
         <td>Complexity</td>
     </tr>
     <tr>
         <td><a href="/vendors/heroku/new_user/"><img src="../../vendors/img/Heroku.png" align="center"></a></td>
-        <td><a href="/vendors/heroku/new_user/">DIY</a></td>
     	<td>7$/month</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
         <td>No</td>
         <td>Medium</td>
     </tr>
     <tr>
-        <td><a href="/vendors/heroku/new_user/#step-3-create-an-atlas-account"><img src="../../vendors/img/Atlas.png" align="center"></a></td>
-        <td><a href="/vendors/heroku/new_user/#step-3-create-an-atlas-account">DIY</a></td>
-    	<td>Free -</br>9$/month</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
+        <td><a href="/vendors/mongodb/atlas/#create-an-atlas-database"><img src="../../vendors/img/Atlas.png" align="center"></a></td>
+    	<td>Free -></br>9$/month</td>
         <td>No</td>
         <td>Yes</td>
         <td>Medium</td>
     </tr>
     <tr>
-        <td><a href="/vendors/T1Pal/new_user/"><img src="../../vendors/img/T1Pal.png" align="center"></a></td>
-        <td><a href="/vendors/T1Pal/new_user/">Managed</a></td>
-    	<td>11.99$/month</td>
-        <td><img src="../../vendors/img/T1Pal.png" align="center"></td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>Low</td>
-    </tr>
-    <tr>
-        <td><a href="/vendors/10BE/"><img src="../../vendors/img/10BE.png" align="center"></a></td>
-        <td><a href="/vendors/10BE/">Managed</a></td>
-    	<td>&lt;€5/month</td>
-        <td><img src="../../vendors/img/10BE.png" align="center"></td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>Low</td>
-    </tr>
-    <tr>
-        <td><a href="/vendors/azure/new_azure/"><img src="../../vendors/img/Azure.png" align="center"></a></td>
-        <td><a href="/vendors/azure/new_azure/">DIY</a></td>
-    	<td>variable</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
+        <td><a href="/vendors/railway.app/new_user"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
+        <td>Free -></br>5$/month</td>
         <td>Yes</td>
         <td>No</td>
-        <td>High</td>
+        <td>Medium</td>
     </tr>
     <tr>
-        <td><a href="/vendors/digitalocean/"><img src="../../vendors/img/DO.png" align="center"></a></td>
-        <td><a href="/vendors/digitalocean/">DIY</a></td>
+        <td><a href="/vendors/digitalocean/new_user"><img src="../../vendors/img/DO.png" align="center"></a></td>
     	<td>6$/month</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>
     </tr>
     <tr>
-        <td><a href="/vendors/fly.io/"><img src="../../vendors/img/flyio-logo.png" align="center"></a></td>
-        <td><a href="/vendors/fly.io/">DIY</a></td>
-    	<td>0$-50$/month</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
+        <td><a href="/vendors/fly.io/new_user"><img src="../../vendors/img/flyio-logo.png" align="center"></a></td>
+        <td>Free -></br>5$/month</td>
         <td>Yes</td>
         <td>No</td>
         <td>High</td>
     </tr>
     <tr>
-        <td><a href="/vendors/railway.app/"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
-        <td><a href="/vendors/railway.app/">DIY</a></td>
-    	<td>0$-5$/month</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
+        <td><img src="../../vendors/img/Oracle.png" align="center"></td>
+        <td>Free -></br>$/month</td>
         <td>Yes</td>
-        <td>No</td>
+        <td>Yes</td>
         <td>High</td>
     </tr>
     <tr>
         <td><img src="../../vendors/img/MVPS.png" align="center"></td>
-        <td>DIY</td>
     	<td>3$/month</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>
     </tr>
     <tr>
         <td><img src="../../vendors/img/RPi.png" align="center"></td>
-        <td>DIY</td>
     	<td>Hardware</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>
     </tr>
     <tr>
         <td><img src="../../vendors/img/Synology.png" align="center"></td>
-        <td>DIY</td>
     	<td>Hardware</td>
-        <td><img src="../../vendors/img/Facebook.png"> DIY</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>
     </tr>
+    <tr>
+        <td><a href="/vendors/azure/new_azure/"><img src="../../vendors/img/Azure.png" align="center"></a>	     </td>
+        <td>variable</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>High</td>
+     </tr>
 </table>
 
+</br>
 
+## Nightscout as a Service comparison table
+
+<table style="padding:10px">
+    <tr>
+        <td>Vendor</td>
+    	<td>Cost (USD)</td>
+        <td>Web page</td>
+        <td>Data base</td>
+        <td>Complexity</td>
+    </tr>
+    <tr>
+        <td><a href="/vendors/T1Pal/new_user/"><img src="../../vendors/img/T1Pal.png" align="center"></a></td>
+    	<td>11.99$/month</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>None</td>
+    </tr>
+    <tr>
+        <td><a href="/vendors/10BE/"><img src="../../vendors/img/10BE.png" align="center"></a></td>
+    	<td>max 4.99€/month</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>None</td>
+    </tr>
+</table>
+
+</br>
+
+## Security and safekeeping
+
+It's **highly important** you understand you have to take computer security seriously when setting up Nightscout. We assume you have full legal ownership of all data being stored in your installation of Nightscout and that there are thus no liabilities you'd need to respond to regarding the data. Depending on how you use Nightscout, an unauthorized user could cause harm by for example changing the CGM data shown by Nightscout. We have no evidence of this having ever happened to anyone, but to keep it that way, take the following guidelines to heart:
+
+- Use the same email address for all accounts to ensure you have access to the accounts going forward. Do not use a disposable email address.
+- Do not use the same password for all your accounts, and choose passwords that are not easy to guess.
+- Do not use the API_SECRET for the Atlas database password.
+- Do not use your Dexcom or CareLink user name or password for Nightscout components.
+- Do not share the API_SECRET or other passwords to your accounts to others.
+- Do not use Nightscout or any related applications on rooted and/or otherwise compromized devices, and ensure you always have the latest operating system and virus protection updates installed.
+
+If you want to read more about Nightscout security, including about additional configuration options to make your installation more secure, please check our [security guide](../security/).
+
+##### Record your information in a safe place.
+
+You can either print this [pdf document](./NightscoutDataRecord.pdf) or edit the [Word version](./NightscoutDataRecord.docx), or this [Excel sheet](./NightscoutDataRecord.xlsx), to record all information during installation. Store it together securely with your diabetes documentation.
+
+</br>
 
 
 

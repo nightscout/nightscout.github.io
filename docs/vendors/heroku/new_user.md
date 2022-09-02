@@ -4,39 +4,15 @@
 
 </br>
 
-You can deploy you Nightscout site with Heroku using a Hobby plan (7$ per month for one app).  
-If you find it too complex or the maintenance too demanding you might be interested in [Nightscout as a service](../../NSaaS).
-
-!!!info "Database costs"  
-    This method uses a free sandbox database from MondoDB Atlas.  
-    Should MongoDB remove its free shared clusters offer, an M2 shared cluster will increase your cost of 9$ per month.
-
-</br>
-
-### Security and safekeeping
-
-It's **highly important** you understand you have to take computer security seriously when setting up Nightscout. We assume you have full legal ownership of all data being stored in your installation of Nightscout and that there are thus no liabilities you'd need to respond to regarding the data. Depending on how you use Nightscout, an unauthorized user could cause harm by for example changing the CGM data shown by Nightscout. We have no evidence of this having ever happened to anyone, but to keep it that way, take the following guidelines to heart:
-
-- Use the same email address for all accounts to ensure you have access to the accounts going forward. Do not use a disposable email address.
-- Do not use the same password for all your accounts, and choose passwords that are not easy to guess.
-- Do not use the API_SECRET for the Atlas database password.
-- Do not use your Dexcom or CareLink user name or password for Nightscout components.
-- Do not share the API_SECRET or other passwords to your accounts to others.
-- Do not use Nightscout or any related applications on rooted and/or otherwise compromized devices, and ensure you always have the latest operating system and virus protection updates installed.
-
-If you want to read more about Nightscout security, including about additional configuration options to make your installation more secure, please check our [security guide](../security/).
-
-##### Record your information in a safe place.
-
-You can either print this [pdf document](./NightscoutDataRecord.pdf) or edit the [Word version](./NightscoutDataRecord.docx), or this [Excel sheet](./NightscoutDataRecord.xlsx), to record all information during installation. Store it together securely with your diabetes documentation.
+!!!info "Cost"  
+    You can deploy your Nightscout site with Heroku using a [Hobby plan (7$ per month per app)](https://www.heroku.com/pricing).  
+    Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 </br>
 
 ------
 
-</br>
-
-### Create your Heroku, GitHub, and Atlas accounts from a computer.
+### Create your Heroku, GitHub and Atlas accounts from a computer.
 
 Do not change device/computer/browser during the setup process!
 
@@ -51,52 +27,10 @@ Do not change device/computer/browser during the setup process!
 
 ## Step 1: Create a GitHub account
 
-</br>
-
-!!! warning "If you already have a GitHub account and previously forked cgm-remote-monitor"
-    Make sure you update your current cgm-remote-monitor fork using [Step 1 of this page (ONLY STEP1!)](../../update/update/#step1-update-your-repository-in-github).
-
 !!! note
-    **You do not need several GitHub accounts for several Nightscout sites.** You can connect one GitHub account to multiple Heroku apps and accounts.
+    **You do not need several GitHub accounts for several Heroku Nightscout sites.** You can connect one GitHub account to multiple Heroku apps and accounts.
 
-</br>
-
-a) Click this link to create a GitHub account: [https://github.com/](https://github.com/)  
-
-Enter your email and click `Sign up for GitHub`
-
-<img src="../../../nightscout/img/NewNS00a.png" style="zoom:70%;" />
-
-</br>
-
-b) Enter a password and a username (anything you want and that is accepted, not very important).  
-     Type `n` to decline advertisement emails.
-
-<img src="../../../nightscout/img/NewNS00.png" style="zoom:80%;" />
-
-</br>
-
-c) Play and solve the puzzle then click `Create account`
-
-<img src="../../../nightscout/img/NewNS01.png" style="zoom:80%;" />
-
-</br>
-
-d)  GitHub will send you a verification code. Open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).
-
-<img src="../../../nightscout/img/NewNS02.png" style="zoom:80%;" />
-
-</br>
-
-e) A personalization sequence will start, click `Skip personalization ` at the bottom.
-
-<img src="../../../nightscout/img/NewNS03.png" style="zoom:70%;" />
-
-</br>
-
-f) Leave the page that opened as it is. Don't close it.
-
-<img src="../../../nightscout/img/NewNS04.png" style="zoom:80%;" />
+If you don't have a GitHub account [create one](../../../nightscout/github/#create-a-github-account) and come back.
 
 </br></br>
 
@@ -181,206 +115,9 @@ k) You should now have 2 pages open: Heroku and GitHub. Leave them open.</br></b
 
 ## Step 3: Create an Atlas account
 
-!!! note "Note"
-    MongoDB Atlas regularly changes the site aspect. If you encounter a page not matching this documentation search for keywords like `not now`, `skip` or `later` to continue. Report discrepancies [here](https://github.com/nightscout/nightscout.github.io/issues/new).
-
-</br>
-
-a) Open another tab at: [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register)
-
-b) Enter your information, click `Continue` then `Create account`
-
-<img src="../../../nightscout/img/NewNS18.png" style="zoom:80%;" />
-
-</br>
-
-MongoDB Atlas will send you an email, if you don't receive it check your Spam folder.
-
-<img src="../../../nightscout/img/NewNS18b.png" style="zoom:80%;" />
-
-</br>
-
-In the email you received from **MongoDB Atlas** (mongodb-atlas @ mongodb.com), click on `Verify email`
-
-<img src="../../../nightscout/img/NewNS18c.png" style="zoom:80%;" />
-
-</br>
-
-Another browser tab will open with your confirmed MongoDB account, `Continue`.
-
-<img src="../../../nightscout/img/NewNS18d.png" style="zoom:80%;" />
-
-</br>
-
-Enter some information (like below) and click `Finish`.
-
-<img src="../../../nightscout/img/NewNS18e.png" style="zoom:80%;" />
-
-</br>
-
-c) Select `Create a cluster in Shared Clusters (FREE)`
-
-<img src="../../../nightscout/img/NewNS19.png" style="zoom:80%;" />
-
-!!!note "If you ever see this, just STOP"
-    We're building a free cluster: you don't need to provide any billing information.
-
-<img src="../../../nightscout/img/NewNS19b.png" style="zoom:70%;" />
-
-</br>
-
-d) Check you selected `Shared`, leave all default values and click `Create Cluster`
-
-<img src="../../../nightscout/img/NewNS20.png" style="zoom:80%;" />
-
-</br>
-
-e) Select `Username and Password` and invent a database username (for example `nightscout`) and a database password (for example `soo5ecret` but please make one that's yours!).
-
-!!! warning "Database credentials: Do not use your Atlas account credentials. Do not use special characters: only letters and numbers. No spaces."
-
-<img src="../../../nightscout/img/NewNS25.png" style="zoom:80%;" />
-
-Write down these credentials in the lines below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.
-
-<b>Database username</b> (write here ->) <input type="text" id="myUsr" value="click here, delete and put your own" size="30">
-
-<b>Database password</b> (write here ->) <input type="text" id="myPwd" value="click here, delete and put your own" size="30">
-
-</br>
-
-Then click `Create User`.
-
-f) Select `My Local Environment` and in the box `My IP address` write `0.0.0.0/0` (mind these are all zeroes, not the letter O)
-
-!!!warning "If you don't allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database."
-
-<img src="../../../nightscout/img/NewNS23.png" style="zoom:80%;" />
-
-Then click `Add Entry`.
-
-</br>
-
-g) Click on `Finish and Close`
-
-<img src="../../../nightscout/img/NewNS24.png" style="zoom:80%;" />
-
-</br>
-
-h) Click on `Go to Databases`
-
-<img src="../../../nightscout/img/NewNS24b.png" style="zoom:80%;" />
-
-</br>
-
-i) Atlas will create your default cluster, it can take more than 3 minutes
-
-<img src="../../../nightscout/img/NewNS21.png" style="zoom:80%;" />
-
-</br>
-
-j) Click on `CONNECT`
-
-<img src="../../../nightscout/img/NewNS22.png" style="zoom:100%;" />
-
-</br>
-
-k) If displayed, click on `Choose a connection method` (else skip)
-
-<img src="../../../nightscout/img/NewNS26.png" style="zoom:80%;" />
-
-</br>
-
-l) Select `Connect your application`
-
-<img src="../../../nightscout/img/NewNS27.png" style="zoom:80%;" />
-
-</br>
-
-m) Copy the connection string: click `Copy` and paste it somewhere to edit it (like Notepad).
-
-<img src="../../../nightscout/img/NewNS28.png" style="zoom:100%;" />
-
-</br>
-
-n) Paste the string in the line below (yes, in this browser window you're reading now, unless you're reading a printed version).
-
-(paste here ->) <input type="text" id="myAtlas" value="click here, delete and paste your Atlas connection string" size="100">
-
-</br>
-
-!!!info "It should be similar to this (`xxxxx` will be different):"
-    `mongodb+srv://nightscout:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority`
-</br>
-
-o) Invent a name for your database, this is not a critical information (for example `myCGMitc`). Only letters and numbers, no spaces.
-
-Database Name (write here ->) <input type="text" id="mydB" value="click here, delete and put your own" size="30">
-
-</br>
-
-p) Click on the word `Generate` (just here below this line: in this browser window you're reading):
-
-<button onclick="Generate()">-> Generate</button>
-
-<p style="font-size:25px" id="result">The connection string will appear here</p>
-
-<script>
-var bAtlas;
-var sdB, sPwd;
-var sFinalString = "Not defined yet";
-function Generate()
-{
-  var sString = sFinalString;
-  bAtlas=0;
-  var sString = "Looks good!";
-  var sAtlas = document.getElementById("myAtlas").value;
-  sPwd = document.getElementById("myPwd").value;
-  sdB = document.getElementById("mydB").value;
-  var iAS = sAtlas.search("://");
-  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
-  else
-  {
-    var iAP = sAtlas.search("<password>");
-    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
-    else
-    {
-      var iAD = sAtlas.search("myFirstDatabase");
-      if(iAD==-1) { sString = "Atlas URI should contain myFirstDatabase"; }
-      else
-      {
-      	bAtlas=1;
-        sString = sAtlas.substring(0,iAP);
-        sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
-        sString = sAtlas.substring(iAP+10, iAD);
-        sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD+15));
-      }
-    }
-  }
-
-  if(bAtlas) document.getElementById("result").innerHTML = sFinalString;
-  else document.getElementById("result").innerHTML = sString;
-  if(bAtlas) document.getElementById("resultbis").innerHTML = sFinalString;
-}
-</script>
-
-</br>
-
-!!!warning
-    Keep this string safely aside, it is called your `MONGODB_URI`
-
-</br>
-
-p) If you want to do it manually: replace `<password>` with your database password as noted previously (in the example below `soo5ecret`) and `<dbname>` by any text you want, say `mycgmic` for example. The result will be like this:
-
-`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
-
-!!! note
-    There are no < and > characters in the final string, neither for password nor for database name.
+Follow [these steps](../../../vendors/mongodb/atlas/#create-an-atlas-database) and come back.
 
 </br></br>
-
-
 
 ## Step 4: Fork and deploy cgm-remote-monitor
 
@@ -392,7 +129,7 @@ p) If you want to do it manually: replace `<password>` with your database passwo
 a) You should now have 3 pages opened in your browser: Heroku, Atlas, and Github, Make sure you are logged-in on each one
 (i.e. not asking you to login) before you continue.
 
-b) Click this link [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor), a new GitHub page will open. Click on `Fork`
+b) Open this link in a new browser page [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor). Click on `Fork`
 
 <img src="../../../nightscout/img/NewNS29.png" style="zoom:70%;" />
 
@@ -452,13 +189,13 @@ h) If you want to link your Dexcom Share account as a data source, complete the 
 </br>
 
 !!!info "MOST COMMON ERRORS"
-    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [here](../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
+    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [here](../../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
 
 !!! note "Password"
     *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
 
 !!! info
-    You need to have at least one follower to use Dexcom Share. See [here](../../uploader/setup/#dexcom).
+    You need to have at least one follower to use Dexcom Share. See [here](../../../uploader/setup/#dexcom).
 
 </br>
 
@@ -485,7 +222,7 @@ k) In `ENABLE`, copy and paste the following words (separated by a space) so tha
 <img src="../../../nightscout/img/NewNS38.png" style="zoom:80%;" />
 
 !!! note "`ENABLE` words"
-    You find more information about the `ENABLE` words on the: [Setup page](../setup_variables)
+    You find more information about the `ENABLE` words on the: [Setup page](../../../nightscout/setup_variables)
 
 </br>
 
@@ -558,7 +295,7 @@ u) If you need to modify your profile after this, authenticate with the lock ico
 </br>
 
 !!!warning "Privacy warning"
-    Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable [security](../security) to your site once you're done with the setup.  
+    Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable [security](../../../nightscout/security) to your site once you're done with the setup.  
 
 </br>
 
@@ -582,7 +319,7 @@ v) Dexcom Share and CareLink users should see data flowing in after some minutes
 
 </br>
 
-Continue to [uploader](../../uploader/setup/) setup.
+Continue to [uploader](../../../uploader/setup/) setup.
 
 </br>
 
@@ -593,7 +330,7 @@ Continue to [uploader](../../uploader/setup/) setup.
 </br>
 
 Once Nightscout deployed, you can access your variables from [Heroku](https://id.heroku.com/login) in order to change or customize your site.
-Variables are described [here](../setup_variables/#nightscout-config-vars).
+Variables are described [here](../../../nightscout/setup_variables/#nightscout-config-vars).
 
 
 
@@ -627,4 +364,4 @@ Variables are described [here](../setup_variables/#nightscout-config-vars).
 
 </br>
 
-Changing a variable and saving a new value will restart your site, if the change is not actuated you might also want to [restart all dynos](../../troubleshoot/troublehoot#restart-all-dynos).
+Changing a variable and saving a new value will restart your site, if the change is not actuated you might also want to [restart all dynos](../../../troubleshoot/troublehoot#restart-all-dynos).

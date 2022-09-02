@@ -56,6 +56,13 @@ Copy and paste your full repository name to confirm then click `I understand...`
 
 </br>
 
+You have successfully deleted your copy of the `cgm-remote-monitor` project.
+
+!!!info "Railway new install"  
+    [Stop here and continue setup at Step 2.](../../../vendors/railway.app/new_user/#step-2-create-an-atlas-account)
+
+</br>
+
 - Click this link to go to the official repository: [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor)
 
 - Click on `Fork`
