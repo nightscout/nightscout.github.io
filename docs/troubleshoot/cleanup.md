@@ -8,11 +8,13 @@ If you have a large amount of CGM data, be extra cautious when performing Atlas 
 
 </br>
 
-## [Github](https://github.com/login)
+## [GitHub](https://github.com/login)
 
-Github cleanup consists of deleting your fork and forking again the [official latest released version](https://github.com/nightscout/cgm-remote-monitor).
+The most efficient way to cleanup GitHub and restart with an up-to-date Nightscout project is:
 
-Follow [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github).
+- [Delete your current cgm-remote-monitor fork.](../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor)
+
+- [Fork the current Nightscout cgm-remote-monitor project](../../../nightscout/github/#fork-the-nightscout-project).
 
 </br>
 

@@ -1,9 +1,7 @@
 # New Nightscout Users
 
-</br>
-
 <span style="font-size:larger;">Interested in building a Nightscout DIY site?  
-Make sure you read and undertand [this](/#how-much-does-it-cost) before starting.</span>
+Make sure you read and undertand **[this](/#how-much-does-it-cost)** before starting.</span>
 
 </br>
 
@@ -11,13 +9,10 @@ Make sure you read and undertand [this](/#how-much-does-it-cost) before starting
 
 [Heroku](../../vendors/heroku/new_user) with MongoDB Atlas.
 
-</br>
-
 #### Work in progress solutions:
 
-[Railway.io](../../vendors/railway.app/new_user) with MongoDB Atlas.
-
-</br>
+[Railway.io](../../vendors/railway.app/new_user)  
+[Railway.io with MongoDB Atlas](../../vendors/railway.app/migrate) (can be used for Heroku migration).
 
 #### External documentation to be consolidated:
 
@@ -29,8 +24,6 @@ Make sure you read and undertand [this](/#how-much-does-it-cost) before starting
 
 [Synology](../../vendors/synology/new_user)
 
-</br>
-
 #### Exploration paths:
 
 [Azure](../../vendors/azure/new_azure)
@@ -39,13 +32,9 @@ Make sure you read and undertand [this](/#how-much-does-it-cost) before starting
 
 [Northflank](../../vendors/northflank/new_user)
 
-</br>
-
 ## DIY Vendors comparison table
 
 Click on the vendor logo.
-
-</br>
 
 <table style="padding:10px">
     <tr>
@@ -126,9 +115,6 @@ Click on the vendor logo.
         <td>High</td>
      </tr>
 </table>
-
-</br>
-
 ## Nightscout as a Service comparison table
 
 <table style="padding:10px">
@@ -173,13 +159,4 @@ If you want to read more about Nightscout security, including about additional c
 ##### Record your information in a safe place.
 
 You can either print this [pdf document](./NightscoutDataRecord.pdf) or edit the [Word version](./NightscoutDataRecord.docx), or this [Excel sheet](./NightscoutDataRecord.xlsx), to record all information during installation. Store it together securely with your diabetes documentation.
-
-</br>
-
-
-
-
-
-
-</br>
 

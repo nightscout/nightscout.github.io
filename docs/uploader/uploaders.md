@@ -1,7 +1,5 @@
 # Supported Uploaders
 
-</br>
-
 An **Uploader** is a mechanism or system for uploading the CGM data from your sensor to your Nightscout site. This can be either an electronic solution (usually for older devices), or just a simple app installed on your phone (for most newer systems) that connects to the sensor/pump and then uploads this data.
 
 The type of Uploader needed will depend on the type of CGM system being used. In this page, we will break the different systems down by manufacturer, then further by sensor type.
@@ -10,8 +8,6 @@ Once you are clear about the type of sensor and upload system you will be using,
 </br>
 
 If you're developing an uploader, you'll find the API information in your Nightscout site  at `/api-docs` and `/api3-docs`.
-
-</br>
 
 ## Dexcom
 
@@ -45,10 +41,7 @@ If you don't want to use the official Dexcom apps, then you can use **open-sourc
 
     Most of the useable transmitters that fall into this category at the present time (early 2021) are generally rebatteried or rechargeable/modified 80xxxx or 81xxxx transmitters.
 
-
 Loop and AAPS will upload your data directly to Nightscout and will act as uploaders.
-</br>
-</br>
 
 #### Dexcom G4 *(now obsolete)*
 
@@ -57,8 +50,6 @@ Loop and AAPS will upload your data directly to Nightscout and will act as uploa
 The Dexcom G4 system is now Dexcom G4 requires additional hardware, like a [Wixel](https://github.com/StephenBlackWasAlreadyTaken/xDrip/wiki/xDrip-Wireless-Bridge), an xDripKit or a compatible Android phone with an OTG cable connected to the receiver.
 
 Dexcom G4 Platinum (Share) requires you to carry the receiver to forward data to the uploader.
-</br>
-</br>
 
 ## Medtronic
 
@@ -67,35 +58,22 @@ If your sensor system is able to directly upload to CareLink then Nightscout mig
 You can use an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower) (see also [here](https://bigdigital.home.blog/category/xdrip/) for a customized version for smartbands), a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
 
 <img src="..\img\Upload04.png" />
-</br>
-</br>
 
 If this isn't an option and your sensor/transmitter is connected to your pump (Medtronic 600 series pumps), then you'll need an Android phone connected with an OTG cable to your pump's connected glucose meter. The phone will need to run the [600 Series Uploader](http://pazaan.github.io/600SeriesAndroidUploader/) app.
 
 <img src="..\img\Upload05.png" />
-</br>
-
-</br>
 
 ## Glucomen Day
 
 You can forward your data from GlucoLog Web using an AWS bridge documented [here](https://github.com/yaronkhazai/gmns-bridge/tree/main/guides).
 
-</br>
-
-</br>
-
 ## Tandem t:slim X2
 
 You can synchronize your treatments one way from your Tandem Diabetes t:connect web/mobile application to Nightscout using  a bridge app running via **Pipenv** or **Docker** as documented [here](https://github.com/jwoglom/tconnectsync).
 
-</br>
-
-</br>
-
 ## Abbott Freestyle Libre
 
-Non Bluetooth-enabled Freestyle Libre sensors will need an additional transmitter device fixed on top of the sensor to send readings to the uploader device. In release order here are some transmitter options: [LimiTTer](https://github.com/JoernL/LimiTTer), BlueReader, Blucon, MiaoMiao, Bubble, and Droplet.
+Non Bluetooth-enabled Freestyle Libre sensors will need an additional transmitter device fixed on top of the sensor to send readings to the uploader device. In release order here are some transmitter options: [LimiTTer](https://github.com/JoernL/LimiTTer), BlueReader, Blucon, MiaoMiao, Bubble, Droplet and Atom.
 
 !!! warning "Transmitter Compatibility"
     The Libre environment is complex and evolves quickly. Before buying a transmitter, please join the respective Facebook groups and make sure that the transmitter you are planning to buy is compatible with your sensor type.
@@ -106,10 +84,7 @@ Most of the transmitters have their own proprietary apps. Nearly all of these su
 
 You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre). Other Libre 2 sensors can be used directly with Juggluco and Diabox.
 
-For Libre 3, you can upload automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project in Heroku, or use xDrip+ to perform this operation.
-
-</br>
-</br>
+For Libre 3, you can upload automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip+ to perform this operation.
 
 ## Eversense
 

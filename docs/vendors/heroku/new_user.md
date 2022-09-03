@@ -121,31 +121,11 @@ Follow [these steps](../../../vendors/mongodb/atlas/#create-an-atlas-database) a
 
 ## Step 4: Fork and deploy cgm-remote-monitor
 
-</br>
-
-!!! warning "If you previously forked cgm-remote-monitor before reaching this step, you should delete the existing cgm-remote-monitor repository before proceeding"
-    Delete your current cgm-remote-monitor fork using [Step 1 of this guide (ONLY STEP1!)](../../update/redeploy/#step-1-cleanup-github). </br>
-
-a) You should now have 3 pages opened in your browser: Heroku, Atlas, and Github, Make sure you are logged-in on each one
-(i.e. not asking you to login) before you continue.
-
-b) Open this link in a new browser page [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor). Click on `Fork`
-
-<img src="../../../nightscout/img/NewNS29.png" style="zoom:70%;" />
-
-Confirm with `Create fork`
-
-<img src="../../../nightscout/img/NewNS51.png" style="zoom:70%;" />
+a) [Fork the Nightscout cgm-remote-monitor project](../../../nightscout/github/#fork-the-nightscout-project).
 
 </br>
 
-c) Wait for a moment
-
-<img src="../../../nightscout/img/NewNS30.png" style="zoom:80%;" />
-
-</br>
-
-d) Scroll down and click `Deploy to Heroku`
+b) Scroll down and click `Deploy to Heroku`
 
 <img src="../../../nightscout/img/NewNS31.png" style="zoom:80%;" />
 
@@ -159,9 +139,9 @@ d) Scroll down and click `Deploy to Heroku`
 
 </br>
 
-e) Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Confirm that the name is available.
+c) Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Confirm that the name is available.
 
-f) Don’t change the region.
+d) Don’t change the region.
 
 <img src="../../../nightscout/img/NewNS33.png" style="zoom:80%;" />
 
@@ -171,7 +151,7 @@ Scroll down and setup the following variables:
 
  </br>
 
-g) `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
+e) `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
 
 !!!warning "The API_SECRET is the **main password allowing full access to your Nightscout site**. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and **do no not share it publicly**. If you think you exposed it by mistake, it is recommended that you **change it**."
 
@@ -179,7 +159,7 @@ g) `API_SECRET` will be your Nightscout site password, it needs to be at least 1
 
 </br>
 
-h) If you want to link your Dexcom Share account as a data source, complete the following lines:
+f) If you want to link your Dexcom Share account as a data source, complete the following lines:
 
 !!!note  
     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing using Dexcom Share and the `bridge` plugin.
@@ -199,7 +179,7 @@ h) If you want to link your Dexcom Share account as a data source, complete the 
 
 </br>
 
-i) Linking your CareLink account as a data source is **not functional anymore with Heroku**. Do not use the plugin below. There are alternative solutions with an Android phone and a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower) (recommended), or (not recommended: verify availability for your pump and country) a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
+g) Linking your CareLink account as a data source is **not functional anymore with Heroku**. Do not use the plugin below. There are alternative solutions with an Android phone and a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower) (recommended), or (not recommended: verify availability for your pump and country) a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
 
 <img src="../../../nightscout/img/NewNS36.png" style="zoom:60%;" />
 
@@ -211,7 +191,7 @@ j) Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg
 
 </br>
 
-k) In `ENABLE`, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
+h) In `ENABLE`, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
 
@@ -226,69 +206,65 @@ k) In `ENABLE`, copy and paste the following words (separated by a space) so tha
 
 </br>
 
-l) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
-
-If you compiled all the fields and successfully generated the string this is what you should copy in `MONGODB_URI`:
-
-<p style="font-size:18px" id="resultbis">Sorry... something is missing for me to make it automatically...</p>
+i) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
 
 <img src="../../../nightscout/img/NewNS39.png" style="zoom:80%;" />
 
-If you preferred to make it yourself, make sure it looks like this:
+Make sure it looks like this one below and NOTE: THERE ARE NO < AND > CHARACTERS:
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
 
 </br>
 
-m) Scroll down to the end of the list and click `Deploy app`
+j) Scroll down to the end of the list and click `Deploy app`
 
 <img src="../../../nightscout/img/NewNS40.png" style="zoom:80%;" />
 
 </br>
 
-n) **WAIT** until completion (will take some time). Do not interrupt the process until it's complete.
+k) **WAIT** until completion (will take some time). Do not interrupt the process until it's complete.
 
 <img src="../../../nightscout/img/NewNS41.png" style="zoom:80%;" />
 
 </br>
 
-o) Then click `View` (if nothing happens, click `Manage App` -> `Open App`, in upper right corner)
+l) Then click `View` (if nothing happens, click `Manage App` -> `Open App`, in upper right corner)
 
 <img src="../../../nightscout/img/NewNS42.png" style="zoom:80%;" />
 
 </br>
 
-p) Your Nightscout site should open and direct you to a new profile creation.
+m) Your Nightscout site should open and direct you to a new profile creation.
 
 <img src="../../../nightscout/img/NewNS50.png" style="zoom:100%;" />
 
 </br>
 
-q) Setup your `Time zone` and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.
+n) Setup your `Time zone` and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.
 
 <img src="../../../nightscout/img/NewNS44.png" style="zoom:80%;" />
 
 </br>
 
-r) Browse down to `Authentication status` and click `Authenticate`. Enter your API secret. Click `Update`.
+o) Browse down to `Authentication status` and click `Authenticate`. Enter your API secret. Click `Update`.
 
 <img src="../../../nightscout/img/NewNS45.png" style="zoom:80%;" />
 
 </br>
 
-s) Click `Save`.
+p) Click `Save`.
 
 <img src="../../../nightscout/img/NewNS46.png" style="zoom:80%;" />
 
 </br>
 
-t) If the following pop-up shows up click `OK`, and check status (upper right of the window).
+q) If the following pop-up shows up click `OK`, and check status (upper right of the window).
 
 <img src="../../../nightscout/img/NewNS47.png" style="zoom:80%;" />
 
 </br>
 
-u) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select `Profile Editor`.
+r) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select `Profile Editor`.
 
 <img src="../../../nightscout/img/NewNS43.png" style="zoom:80%;" />
 
@@ -299,7 +275,7 @@ u) If you need to modify your profile after this, authenticate with the lock ico
 
 </br>
 
-v) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
+s) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
 
 <img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
 

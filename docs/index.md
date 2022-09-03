@@ -28,13 +28,11 @@ In addition to viewing the data using a web browser, there are also applications
 
 <img src="./img/nscloud.png" width="800px">
 
-</br>
 ## Development History
 
 Nightscout was developed by people with Type 1 Diabetes and parents of kids with T1D and has continued to be developed, maintained, and supported by volunteers, clinical use, and commercial sponsorship. The web portal known as Nightscout is made by the [CGM Remote Monitor Contributors](https://github.com/nightscout/cgm-remote-monitor/graphs/contributors) and the Nightscout community over years.
 
 When first implemented, Nightscout was a solution specifically for remote monitoring of Dexcom G4 CGM data. Today, there are Nightscout solutions available for nearly all commercial CGM sensors. The goal of the project is to allow the remote monitoring, sharing and analysis of any T1D's glucose levels using existing monitoring devices.
-</br>
 
 ## What are the values of Nightscout
 
@@ -42,8 +40,6 @@ We are compelled in the pursuit of **humane** and **equitable** application of t
 Users of Nightscout are impacted by **reliability**, **security** and **confidentiality** of Nightscout. Therefore, the developers and contributors of Nightscout strive to improve the quality of Nightscout while making these opportunities **accessible** to all.
 
 Nightscout's **longevity**, the application, the ecosystem, and the culture demand we use all tools at our disposable to achieve the values in a **sustainable** way. We are not waiting to do whatever it takes to meet the needs of people affected by the inhumane demands of diabetes.  Our active **collaboration** against the burden of diabetes creates the results we desire.
-
-</br>
 
 ## What Do I Need?
 
@@ -65,7 +61,6 @@ You will need:
 
     ***"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.*
 
-</br>
 !!!warning "IMPORTANT"
     Before using Nightscout, it is important to understand that this project:
 
@@ -79,8 +74,6 @@ You will need:
         - Do not rely only on Nightscout as the only way you have of knowing your blood glucose values and trends
         - Make sure you're ready to cope with an unexpected failure and always have alternative ways to check your blood glucose levels
 
-</br>
-
 ## How Much Does It Cost?
 
 There's no simple answer to this. You basically have two options:
@@ -90,21 +83,15 @@ There's no simple answer to this. You basically have two options:
 
 The Nightscout development community actively supports both of these choices.
 
-</br>
-
 ## Build your own Nightscout DIY site
 
 <span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions [here](../nightscout/new_user/).</span>
 
 **Note:** DIY users of Nightscout has been historically using a service called Heroku to host their sites. Heroku is in process of removing their free hosting tier altogehter. At the time of writing, there are no easy to follow instructions available for non-technical users on how to host Nightscout for free. If you have the time to author instructions for this purpose, new documentation pull requests are extremely welcome at https://github.com/nightscout/nightscout.github.io.
 
-</br>
-
 ## Nightscout as a Service
 
 If you want to save time and avoid the need to maintain a DIY solution, you have two service providers of choice.
-
-</br>
 
 ### T1Pal
 
@@ -129,8 +116,6 @@ To see more about NS10 features and costs, take a look at the [features page](ht
 
 ***Support:*** ***support*** at ***ns.10be.de*** or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
 
-</br>
-
 
 ## Who Can Help Me?
 
@@ -153,8 +138,6 @@ There are also many local Nightscout communities and you'll probably be able to 
 !!!info "Facebook Privacy"
     You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.
 
-</br>
-
 ## How to Use These Docs
 
 * Use the navigation menu at the top of the screen to find the section that you are looking for.
@@ -164,8 +147,6 @@ There are also many local Nightscout communities and you'll probably be able to 
 * You can search the Nightscout Docs site by clicking the Search icon at the top of every page:
 
     <img src="img/search_icon_screenshot.png" width="254px"> 
-
-</br>
 
 ## How Can I Help?
 

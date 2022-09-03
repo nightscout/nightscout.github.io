@@ -30,47 +30,12 @@ This version of Nightscout will probably not run on anything older than these ve
 
 </br>
 
-## Azure Users
-
-As of 0.12, Nightscout no longer readily supports the free Azure platform. It is recommended that you [create a new site with Heroku](../../nightscout/new_user/).
-
-</br>
-
 ## Step1: Update your repository in GitHub
 
-</br>
+- [Update your current cgm-remote-monitor fork.](../../../nightscout/github/#update-your-nightscout-fork)
 
-- Click here to log in at GitHub: [https://github.com/login](https://github.com/login).
-- Enter your username or email and your password. Click `Sign in`
+- If you have he latest version in GitHub, proceed to [Step 2](#step2-deploy-in-heroku): Deploy in Heroku
 
-<img src="../img/UpdateNS00.png" style="zoom:80%;" >
-
-</br>
-
-- Select your own `cgm-remote-monitor` project (**not `nightscout/cgm-remote-monitor`**)
-
-<img src="../img/UpdateNS01.png" style="zoom:80%;" >
-
-</br>
-
-- Your repository will open. If you see `This branch is xxx commits behind nightscout:master` you need to update.
-- Select `Fetch upstream`
-
-<img src="../img/UpdateNS01a.png" style="zoom:80%;" >
-
-</br>
-
-- Select `Fetch and merge`
-
-<img src="../img/UpdateNS01b.png" style="zoom:80%;" >
-
-</br>
-
-- After a moment, your repository should display `This branch is up to date with nightscout:master`
-
-<img src="../img/UpdateNS01c.png" style="zoom:80%;" >
-
-- You have now updated your GitHub repository, proceed to [Step 2](#step2-deploy-in-heroku): Deploy in Heroku
 - If something went wrong continue below.
 
 </br>
@@ -173,7 +138,8 @@ Click `Create pull request`.
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login) 
 
 !!! note
-    Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see [here](../../vendors/heroku).
+    Salesforce recommends two-factor-authentication for more Heroku security, starting Feb 2022.  
+    For an overview of possible methods see [here](../../vendors/heroku).
 
 </br>
 

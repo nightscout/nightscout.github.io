@@ -6,12 +6,7 @@
 
 </br>
 
-!!! note "Azure Users"
-    As of 0.12, Nightscout no longer readily supports the free Azure platform. It is recommended that you [create a new site with Heroku](../../nightscout/new_user/).
-
-</br>
-
-!!!warning "Multiple Heroku apps and accounts linked to one Github"
+!!!warning "Multiple apps and accounts linked to one Github"
     If you delete and redeploy you might need to connect again `cgm-remote-monitor`. Automatic deploy might not be maintained after a redeploy.
 
 </br>
@@ -25,55 +20,10 @@
 
 </br>
 
-- Click here to log in at GitHub: [https://github.com/login](https://github.com/login).
-- Enter your username or email and your password. Click `Sign in`
+- [Delete your current cgm-remote-monitor fork.](../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor)
 
-<img src="../img/UpdateNS00.png" style="zoom:80%;" >
+- [Fork the current Nightscout cgm-remote-monitor project](../../../nightscout/github/#fork-the-nightscout-project).
 
-</br>
-
-- Select your own `cgm-remote-monitor` project (not `nightscout/cgm-remote-monitor`)
-
-<img src="../img/UpdateNS01.png" style="zoom:80%;" >
-
-</br>
-
-Click `Settings`
-
-<img src="../img/UpdateNS26.png" style="zoom:80%;" >
-
-</br>
-
-Scroll down to `Danger zone` and click `Delete this repository`
-
-<img src="../img/UpdateNS27.png" style="zoom:80%;" >
-
-</br>
-
-Copy and paste your full repository name to confirm then click `I understand...`
-
-<img src="../img/UpdateNS28.png" style="zoom:80%;" >
-
-</br>
-
-You have successfully deleted your copy of the `cgm-remote-monitor` project.
-
-!!!info "Railway new install"  
-    [Stop here and continue setup at Step 2.](../../../vendors/railway.app/new_user/#step-2-create-an-atlas-account)
-
-</br>
-
-- Click this link to go to the official repository: [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor)
-
-- Click on `Fork`
-
-<img src="../img/UpdateNS29.png" style="zoom:80%;" >
-
-</br>
-
-- Wait for completion then leave GitHub open.
-
-<img src="../img/UpdateNS30.png" style="zoom:80%;" >
 
 </br>
 
@@ -84,7 +34,8 @@ You have successfully deleted your copy of the `cgm-remote-monitor` project.
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login) 
 
 !!! note
-    Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see [here](../../vendors/heroku).
+    Salesforce recommends two-factor-authentication for more Heroku security, starting Feb 2022.  
+    For an overview of possible methods see [here](../../vendors/heroku).
 
 </br>
 
