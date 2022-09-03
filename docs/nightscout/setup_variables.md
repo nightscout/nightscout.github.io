@@ -6,17 +6,9 @@ Nightscout configuration is held in variables , their content can be modified to
 
 ------
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+<img src="../../vendors/img/Heroku.png" style="zoom:80%;" /> [Editing Config Vars in Heroku](../../vendors/heroku/new_user#editing-config-vars-in-heroku)
 
-##### Editing Config Vars in Heroku
-
-See [here](../../vendors/heroku/new_user#editing-config-vars-in-heroku) where and how to change your variables.
-
-------
-
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
-
-You can change your settings in the Control Panel see [here](../../../vendors/T1Pal/new_user/#configure-more-settings) for available variables and plugins.
+<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> [Control Panel](../../../vendors/T1Pal/new_user/#configure-more-settings)
 
 ------
 
@@ -58,16 +50,6 @@ MyV3ry53cr37
 
 !!! note
     This is the passcode that will be required by the uploader app (if any) to send data to your site, and that will allow you to modify your site parameters from the web interface. Keep it secret, only share it with trusted people, change it if you believe it's been exposed publicly. Minimum length is 12 characters, don't make it too long and do not put special characters in it (better stick to letters and numbers). It is case-sensitive. 
-
-</br>
-
-##### **MONGO_COLLECTION** ( `entries`)
-
-!!!warning "Deprecated (set as system default) from 14.0.7"
-
-The Mongo collection where CGM entries are stored. Leave default `entries`.
-
-<img src="..\img\SetupNS37.png" style="zoom:80%;" />
 
 </br>
 
@@ -259,6 +241,13 @@ Default setting for new browser views, for the number of minutes since the last 
 ------
 
 ### Core
+
+##### **MONGO_COLLECTION** ( `entries`)
+
+Set as system default from 14.0.7.  
+The collection where CGM entries are stored. Leave default `entries`.
+
+<img src="..\img\SetupNS37.png" style="zoom:80%;" />
 
 ##### **MONGO_TREATMENTS_COLLECTION** (`treatments`) 
 

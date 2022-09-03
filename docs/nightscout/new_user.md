@@ -32,7 +32,7 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 
 [Northflank](../../vendors/northflank/new_user)
 
-## DIY Vendors comparison table
+## Vendors comparison table
 
 Click on the vendor logo.
 
@@ -43,6 +43,20 @@ Click on the vendor logo.
         <td>Web page</td>
         <td>Data base</td>
         <td>Complexity</td>
+    </tr>
+    <tr>
+        <td><a href="/vendors/T1Pal/new_user/"><img src="../../vendors/img/T1Pal.png" align="center"></a></td>
+    	<td>11.99$/month</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>None</td>
+    </tr>
+    <tr>
+        <td><a href="/vendors/10BE/"><img src="../../vendors/img/10BE.png" align="center"></a></td>
+    	<td>max 4.99€/month</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>None</td>
     </tr>
     <tr>
         <td><a href="/vendors/heroku/new_user/"><img src="../../vendors/img/Heroku.png" align="center"></a></td>
@@ -62,15 +76,8 @@ Click on the vendor logo.
         <td><a href="/vendors/railway.app/new_user"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
         <td>Free -></br>5$/month</td>
         <td>Yes</td>
-        <td>No</td>
+        <td>Yes</td>
         <td>Medium</td>
-    </tr>
-    <tr>
-        <td><a href="/vendors/digitalocean/new_user"><img src="../../vendors/img/DO.png" align="center"></a></td>
-    	<td>6$/month</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>High</td>
     </tr>
     <tr>
         <td><a href="/vendors/fly.io/new_user"><img src="../../vendors/img/flyio-logo.png" align="center"></a></td>
@@ -89,6 +96,13 @@ Click on the vendor logo.
     <tr>
         <td><img src="../../vendors/img/MVPS.png" align="center"></td>
     	<td>3$/month</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>High</td>
+    </tr>
+    <tr>
+        <td><a href="/vendors/digitalocean/new_user"><img src="../../vendors/img/DO.png" align="center"></a></td>
+    	<td>6$/month</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>
@@ -114,31 +128,6 @@ Click on the vendor logo.
         <td>No</td>
         <td>High</td>
      </tr>
-</table>
-## Nightscout as a Service comparison table
-
-<table style="padding:10px">
-    <tr>
-        <td>Vendor</td>
-    	<td>Cost (USD)</td>
-        <td>Web page</td>
-        <td>Data base</td>
-        <td>Complexity</td>
-    </tr>
-    <tr>
-        <td><a href="/vendors/T1Pal/new_user/"><img src="../../vendors/img/T1Pal.png" align="center"></a></td>
-    	<td>11.99$/month</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>None</td>
-    </tr>
-    <tr>
-        <td><a href="/vendors/10BE/"><img src="../../vendors/img/10BE.png" align="center"></a></td>
-    	<td>max 4.99€/month</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>None</td>
-    </tr>
 </table>
 
 </br>

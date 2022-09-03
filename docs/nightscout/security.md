@@ -1,9 +1,7 @@
 
 ## Nightscout Security
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
-
-For <img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> users, your page is already secured and views can be defined from your [Share panel](https://t1pal.com/account/sites/my#Views).
+<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> is already secured see [Share panel](https://t1pal.com/account/sites/my#Views).
 
 ------
 
@@ -28,9 +26,6 @@ Nightscout security model is based on the following assumptions:
 - Do not use the API_SECRET for the Atlas database password.
 - Do not share the API_SECRET or access tokens with administration privileges to anyone, ever. If you need to grant access to Nightscout, see below for instructions how to create access tokens for this purpose.
 - Do not use Nightscout or any related applications on rooted and/or otherwise compromised devices, and ensure you always have the latest operating system and virus protection updates installed.
-
-!!! note
-    Salesforce requires two-factor-authentication for more Heroku security, this is mandatory starting Feb 2022. For an overview of possible methods see [here](../../vendors/heroku).
 
 </br>
 
@@ -67,8 +62,6 @@ This message is shown when cryptographic analysis if the API_SECRET shows the se
   *Note: make sure your uploader and downloaders can handle special characters, you might need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) for example an API_SECRET like `D0n't*H4ck@M3%` would be expressed as: `D0n%27t%2AH4ck%40M3%25`*
 * Consider generating the API_SECRET using a password manager
 
-The API_SECRET is set in the Heroku Settings (see [here](../setup_variables/#editing-config-vars-in-heroku) on how to edit the variables).
-
 </br>
 
 ### I'm seeing a message about authentication failures
@@ -79,7 +72,7 @@ This is highly likely caused by you having installed an app on some device with 
 
 If you have apps running that use the Nightscout REST API, check you have the correct API_SECRET and/or access token configured to each.
 
-If the message keeps appearing unexpectedly or is reported against multiple IP numbers, it's possible someone is trying to brute force attack your installation and guess your API_SECRET to be able to modify data in your Nightscout. In this situation, we highly recommend you rename the Nightscout site in Heroku to change it's address and pick a name that's hard to guess.
+If the message keeps appearing unexpectedly or is reported against multiple IP numbers, it's possible someone is trying to brute force attack your installation and guess your API_SECRET to be able to modify data in your Nightscout. In this situation, we highly recommend you rename the Nightscout site to change it's address and pick a name that's hard to guess.
 
 </br>
 
@@ -115,7 +108,7 @@ To Take Advantage of Roles, Turn Off Unauthorized Access to Your Site:
 
 If you want to ensure that ONLY someone with permission to view your site (e.g., a token) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](../setup_variables/#auth_default_roles) variable in Heroku. Set the value as: `denied`.
 
-[Edit](../setup_variables/#editing-config-vars-in-heroku) (or add) your variable in Heroku and set it to `denied`.
+Edit (or add) your variable and set it to `denied`.
 
 <img src="../img/Admin03.png" style="zoom:100%;" />
 
