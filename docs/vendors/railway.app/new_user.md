@@ -13,6 +13,10 @@ The [Developer plan](https://docs.railway.app/reference/plans#developer-plan-off
 
 </br>
 
+<img src="../../../img/WIP.png" style="zoom:80%;" />
+
+</br>
+
 ## Set up new Nightscout
 
 ### Create your Railway and GitHub accounts from a computer.
@@ -37,7 +41,9 @@ If you don't have a GitHub account [create one](../../../nightscout/github/#crea
 
 ### Step 2: Create a Railway account
 
-a) Open [railway](https://railway.app) in a new browser tab and click `login`.
+a) Open [Railway](https://railway.app) in a new browser tab and click `login`. Login with GitHub.
+
+<img src="../img/Railway00.png" style="zoom:80%;" />
 
 <img src="../img/Railway01.png" style="zoom:80%;" />
 
@@ -69,7 +75,7 @@ e) Scroll down and click `I will not deploy any of that`.
 
 f) You should now see this. You've created your Railway account,
 
-<img src="../img/Railway06.png" style="zoom:80%;" />
+<img src="../img/Railway06a.png" style="zoom:80%;" />
 
 </br>
 
@@ -89,51 +95,25 @@ b) Click `Configure`
 
 </br>
 
-c) Note: if you are asked to verify your account, follow these instructions:
-
-- c1) Click verify account
-
-<img src="../img/Railway18.png" style="zoom:80%;" />
-
-</br>
-
-- c2) Provide a payment method (don't worry, they are just verifying your card with a temporary charge)
-
-<img src="../img/Railway19.png" style="zoom:80%;" />
-
-</br>
-
-- c3) Wait until the payment card is verified successfully
-
-<img src="../img/Railway20.png" style="zoom:80%;" />
-
-</br>
-
-d) Now click on the `Deploy on Railway` button below:
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/XvAfVW)
-
-</br>
-
-e) Click `Install & Authorize`
+c) Click `Install & Authorize`
 
 <img src="../img/Railway08.png" style="zoom:80%;" />
 
 </br>
 
-f) You will then see this page, scroll down to define the [required variables](../../../nightscout/setup_variables/#required-variables) for creating your Nightscout site.
+d) You will then see this page, scroll down to define the [required variables](../../../nightscout/setup_variables/#required-variables) for creating your Nightscout site.
 
 <img src="../img/Railway09.png" style="zoom:80%;" />
 
 </br>
 
-g) Mind if you see this you will need to [delete the`cgm-remote-monitor` fork in GitHub](../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor) and retry `Deploy` afterwards.
+e) Mind if you see this you will need to [delete the`cgm-remote-monitor` fork in GitHub](../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor) and retry `Deploy` afterwards.
 
 <img src="../img/Railway17.png" style="zoom:80%;" />
 
 </br>
 
-h) Setup your Nightscout core variables.
+f) Setup your Nightscout core variables.
 
 `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
 
@@ -165,19 +145,19 @@ Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl
 
 </br>
 
-i) You can now `Deploy`, and wait until it is complete.
+g) You can now `Deploy`, and wait until it is complete.
 
 <img src="../img/Railway16.png" style="zoom:80%;" />
 
 </br>
 
-j) Once your app is deployed, we need to set the MONGODB_URI.
+h) Once your app is deployed, we need to set the MONGODB_URI.
 
 <img src="../img/Railway22.png" style="zoom:80%;" />
 
 </br>
 
-k) Click the Mongo service, and then click on the connect tab
+i) Click the Mongo service, and then click on the connect tab
 
 <img src="../img/Railway23.png" style="zoom:80%;" />
 
@@ -185,32 +165,32 @@ k) Click the Mongo service, and then click on the connect tab
 
 </br>
 
-l) Copy the connection url
+j) Copy the connection url
 
 <img src="../img/Railway25.png" style="zoom:80%;" />
 
 </br>
 
-m) Click on the nightscout service and click on the environment tab
+k) Click on the nightscout service and click on the environment tab
 
 <img src="../img/Railway26.png" style="zoom:80%;" />
 <img src="../img/Railway27.png" style="zoom:80%;" />
 
 </br>
 
-n) Add a new variable by clicking `New Variable`
+l) Add a new variable by clicking `New Variable`
 
 <img src="../img/Railway28.png" style="zoom:80%;" />
 
 </br>
 
-o) For the variable name, enter `MONGODB_URI`
+m) For the variable name, enter `MONGODB_URI`
 
 <img src="../img/Railway29.png" style="zoom:80%;" />
 
 </br>
 
-p) For the variable value, paste the connection url we copied from the mongo service. It will look like this:
+n) For the variable value, paste the connection url we copied from the mongo service. It will look like this:
 
 `mongodb://mongo:secret@containers-us-west-19.railway.app:6450`
 
@@ -218,7 +198,7 @@ p) For the variable value, paste the connection url we copied from the mongo ser
 
 </br>
 
-q) Click add, and you should now see the MONGODB_URI is set
+o) Click add, and you should now see the MONGODB_URI is set
 
 <img src="../img/Railway31.png" style="zoom:80%;" />
 <img src="../img/Railway32.png" style="zoom:80%;" />

@@ -204,4 +204,4 @@ p) If you want to do it manually: replace `<password>` with your database passwo
 
 </br>
 
-Now that you have copied the resulting MONGODB_URI string to a safe place, you can continue to the next step in the guide you were following before getting here.
+Now that you have **copied** the resulting `MONGODB_URI` string to a **safe place**, go back to the instructions page you were following.

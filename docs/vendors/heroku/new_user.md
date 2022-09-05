@@ -301,7 +301,7 @@ Continue to [uploader](../../../uploader/setup/) setup.
 
 ------
 
-### Editing Config Vars in Heroku
+## Editing Config Vars in Heroku
 
 </br>
 
