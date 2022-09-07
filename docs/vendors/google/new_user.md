@@ -1,1 +1,1 @@
-https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html
+[https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html)
