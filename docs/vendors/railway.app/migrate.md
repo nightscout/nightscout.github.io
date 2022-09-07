@@ -7,9 +7,25 @@
 ---
 
 !!!info "Cost"  
- [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan), that is not enough for loopers, but can be great for a few weeks evaluation or for light users of Nightscout.
-The [Developer plan](https://docs.railway.app/reference/plans#developer-plan-offering) should be sufficient for loopers and anyone depending on Nightscout as a mission critical app. Costs will vary depending on your use (We expect the amount to be below or around $5 per month).  
- Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
+    [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**.  
+<img src="../img/RailwayFree.png" style="zoom:80%;" />
+
+Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
+
+</br>
+
+Monitor the first free 500 hours to understand how much you might be charged for a Developer plan.  
+If your site stops after 500 hours with more than 1.56$ credit, this mean you probably can use Railway for free subscribing to a Developer plan.  
+If you are reluctant to leave a billing method to Railway, you can opt for a one-off purchase guaranteeing you access to a Developer plan until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).
+
+<img src="../img/RailwayDev.png" style="zoom:80%;" />
+
+</br>
+
+!!!warning "Limited compatibility"  
+    Railway doesn't seem to fully support MongoDB Atlas and some Nightscout features will be missing.  
+    Most probably you will only see BG and blood tests.  
+    Reports are not functional, or in a limited way.
 
 </br>
 

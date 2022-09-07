@@ -1,6 +1,6 @@
 # Redeploy your repository
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />  and <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
 
 ------
 
@@ -10,6 +10,8 @@
     If you delete and redeploy you might need to connect again `cgm-remote-monitor`. Automatic deploy might not be maintained after a redeploy.
 
 </br>
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
 
 !!!note "If you prefer to follow a video"
     Use [this one](https://youtu.be/C0edTQhO21g).
@@ -24,8 +26,16 @@
 
 - [Fork the current Nightscout cgm-remote-monitor project](../../../nightscout/github/#fork-the-nightscout-project).
 
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" /> 
 
-</br>
+- You have successfully updated your GitHub repository, now let's deploy it in Heroku Step 2 below.
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
+
+- You have successfully updated your GitHub repository.  
+  You also have completed updating Nightscout as Railway will automatically deploy this new version for you.  
+  
+  </br>
 
 ## Step 2: Deploy in Heroku
 
