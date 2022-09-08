@@ -33,6 +33,7 @@
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
 
 - You have successfully updated your GitHub repository.  
+  You will need to reconnect your cgm-remote-monitor project to Railway.  
   You also have completed updating Nightscout as Railway will automatically deploy this new version for you.  
   
   </br>

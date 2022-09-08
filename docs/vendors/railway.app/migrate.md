@@ -15,17 +15,10 @@ Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 </br>
 
 Monitor the first free 500 hours to understand how much you might be charged for a Developer plan.  
-If your site stops after 500 hours with more than 1.56$ credit, this mean you probably can use Railway for free subscribing to a Developer plan.  
+If your site stops after 500 hours with more than 1.56$ credit, this mean **you probably can use Railway for free subscribing to a Developer plan**.  
 If you are reluctant to leave a billing method to Railway, you can opt for a one-off purchase guaranteeing you access to a Developer plan until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).
 
 <img src="../img/RailwayDev.png" style="zoom:80%;" />
-
-</br>
-
-!!!warning "Limited compatibility"  
-    Railway doesn't seem to fully support MongoDB Atlas and some Nightscout features will be missing.  
-    Most probably you will only see BG and blood tests.  
-    Reports are not functional, or in a limited way.
 
 </br>
 
