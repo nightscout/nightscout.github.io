@@ -9,11 +9,21 @@
 
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
 
-Your `Nightscout URL` defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser.
+Your `Nightscout URL` defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser. It usually looks like: `https://yoursitename.herokuapp.com`
 
 <img src="../../nightscout/img/SetupNS44.png" style="zoom:80%;" />
 
-Your Nightscout password, is the `API_SECRET` variable you can find editing your Heroku variables like [this](../../nightscout/new_user/#editing-config-vars-in-heroku).
+Your Nightscout password, is the `API_SECRET` variable you can find editing your Heroku variables like [this](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku).
+
+------
+
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
+
+Your `Nightscout URL` defined in Railway by your Web app name, as shown in your [Dashboard](https://railway.app/dashboard). It usually looks like: `https://web-production-xxx.up.railway.app`
+
+<img src="../../../vendors/railway.app/img/RailwayM14.png" style="zoom:80%;" />
+
+Your Nightscout password, is the `API_SECRET` variable you can find editing your Railway variables like [this](../../../vendors/railway.app/new_user/#editing-variables-in-railway).
 
 ------
 
@@ -35,18 +45,6 @@ You need at least one follower to use Dexcom Share.
 On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.
 
 <img src="../img/UploadCFG09.png" style="zoom:60%;" />
-
-</br>
-
-------
-
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
-
-In order to use the Dexcom Share servers to upload to Nightscout, you need to setup (and if not present add) the following variables in Heroku:
-
-From `Settings`, click on the  `Reveal Config Vars`
-
-<img src="../../nightscout/img/config-vars.png" width="800">
 
 </br>
 
@@ -107,7 +105,9 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
 ## [xDrip+](https://jamorham.github.io/#xdrip-plus)
 
 !!! info "Mind the syntax!"
-    **`https://API_SECRET@mysite.herokuapp.com/api/v1/`**
+    <span style="font-size:larger;">**`https://API_SECRET@my_nightscout_url/api/v1/`**</span>  
+    `my_nightscout_url` will depend on where your site is hosted (herokuapp.com, railway.app, fly.io, ...)  
+    You will find your `API_SECRET`in your site variables.
 
 <img src="../img/UploadCFG00.png" style="zoom:80%;" />
 

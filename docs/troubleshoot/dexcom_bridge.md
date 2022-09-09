@@ -67,7 +67,8 @@ Do not forget any app or device!
 - Sugarmate, Happy Bob, xDrip+,...
 - ...
 
-You can identify an account lock browsing your Heroku logs as described [here](../troublehoot/#authentication-errors).
+Heroku: You can identify an account lock browsing your [Heroku logs](#authentication-errors).  
+Railway: 
 
 </br>
 
@@ -83,16 +84,11 @@ If you are using a Dexcom system, and your data is not appearing in Nightscout, 
 
 NOTE: The #1 reason why BGs aren't showing is that you have mismatched password and user names in Heroku settings and Dexcom.
 
-#### Heroku Settings
+#### Verify your configuration
 
-Login to your [Heroku](https://www.heroku.com/) account and from within Heroku `Settings`, click on the  `Reveal Config Vars`
+For Heroku: [Edit your `Config Variables`.](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku)
 
-<img src="../../nightscout/img/config-vars.png" width="800">
-
-</br>
-
-
-Now from the `Config Vars` area, check the following (see screenshot below for reference):
+For Railway: [Go to your `Variables` page](../../../vendors/railway.app/new_user/#editing-config-vars-in-railway).
 
 1. You must use the same `BRIDGE_PASSWORD` or `BRIDGE_USER_NAME` that your Dexcom mobile app is using.
 2. You must have `bridge` and `careportal` on the `ENABLE` line (you can have other values there...but don't forget these two).
@@ -100,16 +96,18 @@ Now from the `Config Vars` area, check the following (see screenshot below for r
 4. Your `careportal` must be one word in the `ENABLE` line, sometimes autocorrect makes it two words.
 5. If using `mmol`, make sure you have spelled that value correctly in the `DISPLAY_UNITS`.
 
-<img src="../../nightscout/img/bridge-settings.jpg" width="600">
-
 </br>
 
 ##### Authentication errors
 
+One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout `BRIDGE` settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...  
+Check your Heroku logs that are viewable by selecting `View Logs` from the drop-down menu underneath the `More` option.  
 
-One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout `BRIDGE` settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. 
+<img src="../../../vendors/heroku/img/heroku-logs.png">
 
-<img src="../../nightscout/img/heroku-logs.png">
+With Railway they are available selecting your app, then `Deployments` and `View Logs` at the end of the top (last) deployment line.
+
+<img src="../../../vendors/railway.app/img/railway-logs.png">
 
 </br>
 
@@ -121,7 +119,7 @@ Do your logs have "`SSO authentication errors`" like in the red box highlighted 
 When you change these variables, Heroku restarts Nightscout. So now everything should work.
 
 !!!info "About your Bridge password and user name"
-    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [**here**](../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
+    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.
 
 ### Dexcom username issue
 

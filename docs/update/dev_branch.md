@@ -1,4 +1,4 @@
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" /> or <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
 
 </br>
 
@@ -47,6 +47,7 @@ Do not deploy `dev` or a branch other than `master` unless directed to do so (ex
 
 ## Step2: Deploy in Heroku
 
+- Skip this step for Railway
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login) 
 
 !!! note
@@ -123,10 +124,57 @@ Do not deploy `dev` or a branch other than `master` unless directed to do so (ex
 
 </br>
 
+## Step2: Deploy in Railway
+
+- Open [Railway](https://railway.app) and click `login`. Login with GitHub.
+
+
+<img src="../../../vendors/railway.app/img/Railway00.png" style="zoom:80%;" />
+
+<img src="../../../vendors/railway.app/img/Railway01.png" style="zoom:80%;" />
+
+</br>
+
+- Select your Nightscout project.
+
+
+<img src="../../../vendors/railway.app/img/RailwayM15.png" style="zoom:80%;" />
+
+</br>
+
+- Select your web app.
+
+
+<img src="../../../vendors/railway.app/img/RailwayM16.png" style="zoom:80%;" />
+
+</br>
+
+- Select `Settings` and look into `Environment`.  
+
+- Change the `Deployment Trigger` with `dev` (it was showing `master`).
+
+<img src="../img/Dev07.png" style="zoom:80%;" />
+
+- If you only see `master` in the list you need to [delete and fork your Nightscout repository in GitHub](../../update/redeploy/#step-1-cleanup-github) **taking care to select all branches when you reach the following step!**.  
+  <img src="../img/Dev06.png" style="zoom:80%;" />  
+  Then 
+
+- Once `dev` selected Railway will deploy automatically.
+
+</br>
+
+</br>
+
 ## How to return to the `master` release
 
 If things don't go as expected you can simply redeploy your master branch selecting it in the drop down menu:
 
+Heroku:
+
 <img src="../img/UpdateNS23.png" style="zoom:80%;" >
+
+Railway:
+
+<img src="../img/Dev08.png" style="zoom:80%;" />
 
 When the dev branch gets merged into release, just follow the [classic update method](./update.md).

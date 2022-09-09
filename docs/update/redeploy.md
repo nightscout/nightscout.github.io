@@ -84,7 +84,8 @@
 
 </br>
 
-- If you have trouble connecting your app, click `Disconnect ` and reconnect it as shown above
+- If you have trouble connecting your app, click `Disconnect ` and reconnect it as shown above.  
+  You might have to do it twice. Make sure you see it connected before continuing.
 
 <img src="../img/UpdateNS22.png" style="zoom:80%;" >
 

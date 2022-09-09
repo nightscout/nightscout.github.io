@@ -110,7 +110,7 @@ If you see this message:
 
 <img src="../img/TShoot16.png" style="zoom:80%;" >
 
-- Restart all dynos in Heroku
+- Restart all dynos if using Heroku
 
 </br>
 
@@ -152,9 +152,9 @@ If you see this message:
 
 </br>
 
-- Open Heroku and `Reveal Config Vars` in `Settings`
+For Heroku: [Edit your `Config Variables`.](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku)
 
-<img src="../../update/img/MigrateNS03.png" style="zoom:80%;" >
+For Railway: [Go to your `Variables` page](../../../vendors/railway.app/new_user/#editing-config-vars-in-railway).
 
 </br>
 
@@ -178,9 +178,9 @@ Note that your `atlasusername`, `atlaspassword` and `dbname` will be different f
 <input type="text" id="myAtlas" value="Yes here. Delete this and paste it here" size="100">
 </br>
 
-- Click the `Analyze` button:
+- Click the `Analyze` text below:
 
-<button onclick="Analyze()">Analyze</button>
+<button onclick="Analyze()">-> Analyze</button>
 
 <p style="font-size:20px" id="result">Analysis result will appear here.</p>
 
@@ -188,7 +188,7 @@ If the analysis result doesn't show any error, check below the data is what you 
 
 **Database Username:** <p id="myUser">...</p>
 **Database Password:** <p id="myPwd">...</p>
-**Database name:** <p id="mydB">...</p>
+**Database name:** <p id="mydB">...</p> (No database name is not an error)
 
 <script>
 var sUser, sdB, sPwd;
@@ -355,9 +355,9 @@ Click `Copy` then `Close`
 
 e) Paste it into a place where you can edit the text (i.e. a Word or a Notepad document).
 
-Edit your string so that you add the database user password after the database user info. You defined them during your MongoDB Atlas database creation, when you reached [this step](../../nightscout/new_user/#h-add-a-database-username-for-example-nightscout-and-a-database-password-in-the-example-below-soo5ecret-but-please-change-it).
+Edit your string so that you add the database user password after the database user info. You defined them during your MongoDB Atlas database creation, when you reached [step **e)**](../../../vendors/mongodb/atlas/).
 
-Here’s an example of how the string is built up:
+Here’s an example of how the string is built up (`myFirstDatabase` might not show, this is normal):
 
 `mongodb+srv://` `nightscout` `:`**`<password>`**`@cluster0.xxxxx.mongodb.net/`**`myFirstDatabase`**`?retryWrites=true&w=majority`
 
@@ -367,7 +367,8 @@ f) Edit your string in order to replace `<password>` with your database password
 
 g) If you don't remember your Atlas database password (which should not be your mongoDB Atlas account password) invent a new one (only letters and numbers).
 
-Your string will now look like this: (do not use the same password as the example). Note there are no remaining `<` and `>`.
+Your string will now look like this: (do not use the same password as the example). Note there are no remaining `<` and `>`.  
+If you don't see a database name like `myFirstDatabase` before the question mark, just ignore it.
 
 `mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 

@@ -218,7 +218,7 @@ Now lets deploy nightscout. We can trigger a deployment by modifying our fork, o
 
 </br>
 
-## Editing Config Vars in Railway
+## Editing Variables in Railway
 
 </br>
 
