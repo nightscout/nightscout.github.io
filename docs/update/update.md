@@ -34,7 +34,9 @@ This version of Nightscout will probably not run on anything older than these ve
 
 - [Update your current cgm-remote-monitor fork.](../../../nightscout/github/#update-your-nightscout-fork)
 
-- If you have he latest version in GitHub, proceed to [Step 2](#step2-deploy-in-heroku): Deploy in Heroku
+- If you have the latest version in GitHub  
+  If using Heroku: proceed to [Step 2](#step2-deploy-in-heroku): Deploy  
+  If using Railway: your site should be up to date and you're done. If it's not, [reconnect](../../../troubleshoot/railway/#reconnect-github-to-your-project) GitHub.
 
 - If something went wrong continue below.
 
@@ -133,6 +135,7 @@ Click `Create pull request`.
 
 - You have successfully updated your GitHub repository.  
   You also have completed updating Nightscout as Railway will automatically deploy this new version for you.  
+  If it's not updated, [reconnect](../../../troubleshoot/railway/#reconnect-github-to-your-project) GitHub.  
   If something went wrong scroll down and try to redeploy.
 
 </br>

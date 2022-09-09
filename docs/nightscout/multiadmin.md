@@ -50,7 +50,7 @@ Automatic deploys will allow you to update automatically your Heroku apps when y
 
 ## Heroku
 
-For free dynos purposes (1000 dynos hours per month with a credit card information present in your Heroku account) you should setup only one Nightscout site per Heroku account. This requires you to log out and in every time you need to work on an app.
+You can setup multiple Nightscout sites per Heroku account. You be charged the Hobby plan fee for each app.
 
 You can setup collaborators in Heroku to avoid having to switch accounts. First decide on which will be your main Heroku account. Then add the email address you used to register as collaborator to the other(s) one(s).
 

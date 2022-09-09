@@ -67,8 +67,11 @@ nav:
     - 'Heroku Multiple Factor Authentication': 'vendors/heroku/index.md'
     - 'Heroku Downgrade': 'update/downgrade.md'
 - Troubleshoot:
-    - 'Troubleshooting': 'troubleshoot/troublehoot.md'
+    - 'Troubleshooting': 'troubleshoot/troubleshoot.md'
+    - 'GitHub': 'troubleshoot/github.md'
+    - 'Heroku': 'troubleshoot/heroku.md'
+    - 'Railway': 'troubleshoot/railway.md'
+    - 'MongoDB Atlas': 'troubleshoot/atlas.md'
     - 'Dexcom bridge': 'troubleshoot/dexcom_bridge.md'
-    - 'Connection failure': 'troubleshoot/connection_string.md'
     - 'Cleanup': 'troubleshoot/cleanup.md'
 - Translation: 'translate.md'

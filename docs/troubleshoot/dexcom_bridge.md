@@ -68,3 +68,64 @@ Do not forget any app or device!
 - ...
 
 You can identify an account lock browsing your Heroku logs as described [here](../troublehoot/#authentication-errors).
+
+</br>
+
+## Dexcom Share
+
+Make sure you have Dexcom Share turned ON in your Dexcom app. In the Dexcom app's main screen, find the triangle made of dots. If the dots are grey, you do not have Share turned on. Tap the triangle, and follow the directions to add a follower (yourself if you don't have someone else you'd like to invite) and turn on Share.
+
+<img src="../../nightscout/img/sharing.jpg" width="250">
+
+</br>
+
+If you are using a Dexcom system, and your data is not appearing in Nightscout, there are only a limited number of reasons for that. You should check your (1) Heroku settings and (2) Dexcom Share.
+
+NOTE: The #1 reason why BGs aren't showing is that you have mismatched password and user names in Heroku settings and Dexcom.
+
+#### Heroku Settings
+
+Login to your [Heroku](https://www.heroku.com/) account and from within Heroku `Settings`, click on the  `Reveal Config Vars`
+
+<img src="../../nightscout/img/config-vars.png" width="800">
+
+</br>
+
+
+Now from the `Config Vars` area, check the following (see screenshot below for reference):
+
+1. You must use the same `BRIDGE_PASSWORD` or `BRIDGE_USER_NAME` that your Dexcom mobile app is using.
+2. You must have `bridge` and `careportal` on the `ENABLE` line (you can have other values there...but don't forget these two).
+3. If you are outside the USA, you must add `BRIDGE_SERVER` set to `EU` in Heroku settings.
+4. Your `careportal` must be one word in the `ENABLE` line, sometimes autocorrect makes it two words.
+5. If using `mmol`, make sure you have spelled that value correctly in the `DISPLAY_UNITS`.
+
+<img src="../../nightscout/img/bridge-settings.jpg" width="600">
+
+</br>
+
+##### Authentication errors
+
+
+One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout `BRIDGE` settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...check your Heroku logs that are viewable by selecting "View Logs" from the drop-down menu underneath the "More" option. 
+
+<img src="../../nightscout/img/heroku-logs.png">
+
+</br>
+
+Do your logs have "`SSO authentication errors`" like in the red box highlighted above? If you do, then:
+
+1. Delete your `BRIDGE` entries within Heroku settings.  Don't delete the variables, just delete the values of `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME`.
+2. Wait 15 minutes and then follow the directions below. It is important to wait 15 minutes: the reason you can't log in right now is that your Dexcom account has a temporary lock from the passwords in the step above being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you'll just keep prolonging the issue.
+
+When you change these variables, Heroku restarts Nightscout. So now everything should work.
+
+!!!info "About your Bridge password and user name"
+    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [**here**](../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
+
+### Dexcom username issue
+
+!!! note
+    New Dexcom users are not being assigned a username anymore but need to log with their email address. If you don't have a username, you should be able to use `bridge` with an email address, make sure you [update Nightscout to the latest release](../../update/update/).
+
+</br>

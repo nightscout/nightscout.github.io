@@ -10,7 +10,7 @@ Information on how to use security on this [dedicated page](../security).
 
 ## Database Maintenance
 
-Your Database will require maintenance as nothing in Nightscout is setup to perform cleanup and unless you planned for a larger size database it will eventually [fill-up](../../troubleshoot/troublehoot/#database-full). Make sure you leave [`dbsize`](../setup_variables/#dbsize-database-size) visible on your page to keep it under control.
+If you use a free database like MongoDB Atlas, it will require maintenance as nothing in Nightscout is setup to perform cleanup and unless you planned for a larger size database it will eventually fill-up. Make sure you leave [`dbsize`](../setup_variables/#dbsize-database-size) visible on your page to keep it under control.
 
 </br>
 

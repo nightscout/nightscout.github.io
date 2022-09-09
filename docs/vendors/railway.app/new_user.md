@@ -7,13 +7,18 @@
 ---
 
 !!!info "Cost"  
- [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan), that is enough for a few weeks evaluation.
-The [Developer plan](https://docs.railway.app/reference/plans#developer-plan-offering) should be sufficient for loopers and anyone depending on Nightscout as a mission critical app. Costs will vary depending on your use.  
- Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
+    [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**.  
+<img src="../img/RailwayFree.png" style="zoom:80%;" />
 
 </br>
 
-<img src="../../../img/WIP.png" style="zoom:80%;" />
+Monitor the first free 500 hours to understand how much you might be charged for a Developer plan.  
+If your site stops after 500 hours with more than 1.56$ credit, this mean **you probably can use Railway for free subscribing to a Developer plan**.  
+If you are reluctant to leave a billing method to Railway, you can opt for a one-off purchase guaranteeing you access to a Developer plan until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).
+
+<img src="../img/RailwayDev.png" style="zoom:80%;" />
+
+Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 </br>
 
@@ -208,3 +213,45 @@ o) Click add, and you should now see the MONGODB_URI is set
 **Work in progress...**
 
 Now lets deploy nightscout. We can trigger a deployment by modifying our fork, or via the [railway cli](https://docs.railway.app/develop/cli) by running [railway up](https://docs.railway.app/develop/cli#deploy)
+
+</br>
+
+</br>
+
+## Editing Config Vars in Railway
+
+</br>
+
+a) Open [Railway](https://railway.app) and click `login`. Login with GitHub.
+
+<img src="../img/Railway00.png" style="zoom:80%;" />
+
+<img src="../img/Railway01.png" style="zoom:80%;" />
+
+</br>
+
+b) Select your Nightscout project.
+
+<img src="../img/RailwayM15.png" style="zoom:80%;" />
+
+</br>
+
+c) Select your web app.
+
+<img src="../img/RailwayM16.png" style="zoom:80%;" />
+
+</br>
+
+d) Click on `Variables`.
+
+<img src="../img/RailwayM17.png" style="zoom:80%;" />
+
+</br>
+
+e) You can perform various operations on your variables:
+
+1. Add a new variable with `+ New Variable`
+2. View the variable value with `Show Value`
+3. Edit or delete the variable or its value with the line end menu
+
+<img src="../img/RailwayM18.png" style="zoom:80%;" />
