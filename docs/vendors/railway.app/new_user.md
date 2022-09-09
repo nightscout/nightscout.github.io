@@ -90,7 +90,7 @@ f) You should now see this. You've created your Railway account,
 
 a) Click on the `Deploy on Railway` button below:
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/XvAfVW)
+![Deploy on Railway](https://railway.app/button.svg)
 
 </br>
 
