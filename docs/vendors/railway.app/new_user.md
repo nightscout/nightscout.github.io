@@ -1,4 +1,4 @@
-# Railway Nightscout
+# Railway.app Nightscout
 
 ---
 
@@ -8,12 +8,14 @@
 
 !!!info "Cost"  
     [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**.  
-<img src="../img/RailwayFree.png" style="zoom:80%;" />
+    <img src="../img/RailwayFree.png" style="zoom:80%;" />  
+    Adding a database to your Railway account might increase costs.  
+    Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).
 
 </br>
 
-Monitor the first free 500 hours to understand how much you might be charged for a Developer plan.  
-If your site stops after 500 hours with more than 1.56$ credit, this mean **you probably can use Railway for free subscribing to a Developer plan**.  
+Monitor the first free 500 hours to understand how much you might be charged for a Developer plan. If your site stops after 500 hours with more than 1.56$ credit, this mean **you probably can use Railway for free subscribing to a [Developer plan](https://railway.app/pricing)**.  
+The Developer plan offers Max 100 GB of Disk (Soft cap) which is more than enough. But this offer might change over the years.  
 If you are reluctant to leave a billing method to Railway, you can opt for a one-off purchase guaranteeing you access to a Developer plan until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).
 
 <img src="../img/RailwayDev.png" style="zoom:80%;" />
@@ -26,10 +28,9 @@ Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 ### Create your Railway and GitHub accounts from a computer.
 
-Do not change device/computer/browser during the setup process!
-
-!!! note
-If you have unexpected issues when creating your site, restart with another browser.
+!!!note  
+    Do not change device/computer/browser during the setup process!  
+    If you have unexpected issues when creating your site, restart with another browser.
 
 </br>
 
@@ -78,47 +79,120 @@ e) Scroll down and click `I will not deploy any of that`.
 
 </br>
 
-f) You should now see this. You've created your Railway account,
+f) You should now see this. You've created your Railway account.  
+If it still shows 200 hours, refresh your browser page.
 
 <img src="../img/Railway06a.png" style="zoom:80%;" />
 
 </br>
 
-### Step 3: Deploy cgm-remote-monitor
+### Step 3: Create your database
+
+!!!note "Already have a database?"  
+    If you're migrating from another platform and you already have database connection string from another Nightsout deployment, just copy the `MONGODB_URI` or `MONGO_CONNECTION` string and keep your data!
+
+You have several choices.
+
+- #### You can reuse your existing MongDB Atlas database.    
+
+Migrating from Heroku? [Edit your Heroku site variables](../../heroku/new_user#editing-config-vars-in-heroku) and copy the `MONGODB_URI` or `MONGO_CONNECTION` variable.  
+    Lost your string? [Recover it](../../../troubleshoot/atlas/#recover-your-connection-string) from MongoDB Atlas.
+
+- #### You can create a new MongoDB Atlas database.  
+
+To create a new MongoDB database follow [these instructions](../../mongodb/atlas/#create-an-atlas-database) and come back with your `MONGODB_URI` connection string.  
+The Atlas database size is limited to 512MB of data and is free to try. This might evolve in the future.
+
+- #### You can create a new Railway Mongo database.  
+
+a) Click `New Project` from your Dashboard screen (top right).
+
+<img src="../../../vendors/railway.app/img/RailwayDB01.png" style="zoom:80%;" />
+
+</br>
+
+b) Click  `Provision MongoDB`
+
+<img src="../../../vendors/railway.app/img/RailwayDB02.png" style="zoom:80%;" />
+
+</br>
+
+c) Select your new MongoDB project.
+
+<img src="../../../vendors/railway.app/img/RailwayDB03.png" style="zoom:80%;" />
+
+</br>
+
+d) Go to the `Connect` page.
+
+<img src="../../../vendors/railway.app/img/RailwayDB04.png" style="zoom:80%;" />
+
+</br>
+
+e) Move the mouse to the end of the line showing the `Mongo Connection URL` and click the copy icon.
+
+<img src="../../../vendors/railway.app/img/RailwayDB05.png" style="zoom:80%;" />
+
+</br>
+
+!!!warning "This is an important information"
+
+Now that you have **copied** the resulting `MONGODB_URI` string, keep it in a **safe place**, you will need it later.
+
+</br>
+
+### Step 4: Deploy cgm-remote-monitor
 
 </br>
 
 a) Click on the `Deploy on Railway` button below:
 
-![Deploy on Railway](https://railway.app/button.svg)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/6v8Ejj)
+
+*Note: this is a temporary template until the community finds a way to get it owned by Nightscout and not only a single user.  
+It doesn't include any referral code.*
 
 </br>
 
-b) Click `Configure`
+b) If you see this screen, select `Connect GitHub to Deploy`.
+
+<img src="../img/Railway07a.png" style="zoom:80%;" />
+
+Then select `Authorize Railway App`.
+
+<img src="../img/Railway02.png" style="zoom:80%;" />
+
+</br>
+
+c) Click `Configure`
 
 <img src="../img/Railway07.png" style="zoom:80%;" />
 
 </br>
 
-c) Click `Install & Authorize`
+d) Click `Install & Authorize`
 
-<img src="../img/Railway08.png" style="zoom:80%;" />
+<img src="../img/Railway08a.png" style="zoom:80%;" />
 
 </br>
 
-d) You will then see this page, scroll down to define the [required variables](../../../nightscout/setup_variables/#required-variables) for creating your Nightscout site.
+e) You will then see this page, scroll down to define the [required variables](../../../nightscout/setup_variables/#required-variables) for creating your Nightscout site.
 
 <img src="../img/Railway09.png" style="zoom:80%;" />
 
 </br>
 
-e) Mind if you see this you will need to [delete the`cgm-remote-monitor` fork in GitHub](../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor) and retry `Deploy` afterwards.
+f) Mind if you see this you will need to [delete the`cgm-remote-monitor` fork in GitHub](../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor) and retry `Deploy` from **a)** afterwards.
 
 <img src="../img/Railway17.png" style="zoom:80%;" />
 
 </br>
 
-f) Setup your Nightscout core variables.
+g) Setup your Nightscout core variables.
+
+!!!note "Migrating from Heroku"  
+    If you're migrating your project from Heroku, [display all variables in Heroku](../../heroku/new_user/#editing-config-vars-in-heroku) and copy all those with a value into Railway.  
+    See below how to add variables in Railway but use your Heroku values.
 
 `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
 
@@ -126,95 +200,135 @@ f) Setup your Nightscout core variables.
 
 <img src="../img/Railway10.png" style="zoom:80%;" />
 
-Leave MONGODB_URI blank for now.
+h) At **Step 3** you created your database and came back with a MONGODB_URI string. Time has come to use it here.  
+
 
 <img src="../img/Railway21.png" style="zoom:80%;" />
 
-Three optional variables are already setup for you, open the caret to see them (recommended).
+</br>
+
+##### Dexcom Bridge
+
+i) If you use [Dexcom `bridge`](../../../troubleshoot/dexcom_bridge/) you need to configure these two variables with your Dexcom credentials:
+
+<img src="../img/Railway33.png" style="zoom:80%;" />
+
+<img src="../img/Railway34.png" style="zoom:80%;" />
+
+If you're using Dexcom Share in the US you should put **US**, in **any other case it must be EU**.  
+If you don't see it proposed at this point you'll need to **browse the list below to find it and modify it**.
+
+<img src="../img/Railway36.png" style="zoom:80%;" />
+
+**Remember to add `bridge` at the end of the `enable` variable in the list below.**
+
+!!!info "MOST COMMON ERRORS"
+    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [here](../../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
+
+!!! note "Password"
+    *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
+
+!!! info
+    You need to have at least one follower to use Dexcom Share. See [here](../../../uploader/setup/#dexcom).
+
+</br>
+
+j) Many optional variables are already setup for you, open the caret to see them and eventually modify them (**recommended**).
 
 <img src="../img/Railway15.png" style="zoom:80%;" />
 
-If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the `API_SECRET`) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](../setup_variables/#auth_default_roles) variable in as `denied`.  
-If you want your site to be visible to anybody set it as `readable`.
+</br>
 
-<img src="../img/Railway11.png" style="zoom:80%;" />
-
-A common list of [`enable`](../../../nightscout/setup_variables/#enable) variables is predefined, you can change them if you know why.  
-It's recommended that you leave them like this for now.
-
-<img src="../img/Railway14.png" style="zoom:80%;" />
-
-Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
+k) Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
 
 <img src="../img/Railway13.png" style="zoom:80%;" />
 
 </br>
 
-g) You can now `Deploy`, and wait until it is complete.
+l) You can update the alarms values. See [here](../../../nightscout/setup_variables/#alarms) for the meaning of each one.
+
+<img src="../img/Railway37.png" style="zoom:80%;" />
+
+</br>
+
+m) If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the `API_SECRET`) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](../setup_variables/#auth_default_roles) variable in as `denied`.  
+If you want your site to be visible to anybody leave it as `readable`.
+
+<img src="../img/Railway11.png" style="zoom:80%;" />
+
+</br>
+
+n) A common list of [`enable`](../../../nightscout/setup_variables/#enable) variables is predefined, you can change them if you know why.  
+It's recommended that you leave them like this for now.
+
+Just remember to add `bridge` at the end if your get your BG values from Dexcom Share.
+
+<img src="../img/Railway14.png" style="zoom:80%;" />
+
+</br>
+
+o) You can modify the variables values, check the [documentation](../../../nightscout/setup_variables) for the meaning of each one.  
+Make sure you don't make typo errors, some will crash your site (like for example `LANGUAGE` value in upercase).
+
+</br>
+
+p) You can now `Deploy`, and wait until it is complete.
 
 <img src="../img/Railway16.png" style="zoom:80%;" />
 
 </br>
 
-h) Once your app is deployed, we need to set the MONGODB_URI.
+q) You can see your new Nightscout site name in the deployment tab of your project. Click on the name to open Nightscout.  
+Click on the link to open it.
 
-<img src="../img/Railway22.png" style="zoom:80%;" />
-
-</br>
-
-i) Click the Mongo service, and then click on the connect tab
-
-<img src="../img/Railway23.png" style="zoom:80%;" />
-
-<img src="../img/Railway24.png" style="zoom:80%;" />
+<img src="../img/RailwayM14.png" style="zoom:80%;" />
 
 </br>
 
-j) Copy the connection url
+r) Your Nightscout site should open and direct you to a new profile creation.
 
-<img src="../img/Railway25.png" style="zoom:80%;" />
-
-</br>
-
-k) Click on the nightscout service and click on the environment tab
-
-<img src="../img/Railway26.png" style="zoom:80%;" />
-<img src="../img/Railway27.png" style="zoom:80%;" />
+<img src="../../../nightscout/img/NewNS50.png" style="zoom:100%;" />
 
 </br>
 
-l) Add a new variable by clicking `New Variable`
+s) Setup your `Time zone` and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.
 
-<img src="../img/Railway28.png" style="zoom:80%;" />
-
-</br>
-
-m) For the variable name, enter `MONGODB_URI`
-
-<img src="../img/Railway29.png" style="zoom:80%;" />
+<img src="../../../nightscout/img/NewNS44.png" style="zoom:80%;" />
 
 </br>
 
-n) For the variable value, paste the connection url we copied from the mongo service. It will look like this:
+t) Browse down to `Authentication status` and click `Authenticate`. Enter your API secret. Click `Update`.
 
-`mongodb://mongo:secret@containers-us-west-19.railway.app:6450`
-
-<img src="../img/Railway30.png" style="zoom:80%;" />
+<img src="../../../nightscout/img/NewNS45.png" style="zoom:80%;" />
 
 </br>
 
-o) Click add, and you should now see the MONGODB_URI is set
+u) Click `Save`.
 
-<img src="../img/Railway31.png" style="zoom:80%;" />
-<img src="../img/Railway32.png" style="zoom:80%;" />
+<img src="../../../nightscout/img/NewNS46.png" style="zoom:80%;" />
+
+</br>
+
+v) If the following pop-up shows up click `OK`, and check status (upper right of the window).
+
+<img src="../../../nightscout/img/NewNS47.png" style="zoom:80%;" />
 
 </br>
 
-**Work in progress...**
+w) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select `Profile Editor`.
 
-Now lets deploy nightscout. We can trigger a deployment by modifying our fork, or via the [railway cli](https://docs.railway.app/develop/cli) by running [railway up](https://docs.railway.app/develop/cli#deploy)
+<img src="../../../nightscout/img/NewNS43.png" style="zoom:80%;" />
 
 </br>
+
+!!!warning "Privacy warning"
+    Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable [security](../../../nightscout/security) to your site once you're done with the setup.  
+
+</br>
+
+x) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
+
+<img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
 
 </br>
 

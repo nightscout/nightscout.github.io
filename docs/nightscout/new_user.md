@@ -7,12 +7,11 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 
 #### Currently fully documented solutions:
 
-[Heroku](../../vendors/heroku/new_user) with MongoDB Atlas.
+[Heroku](../../vendors/heroku/new_user) with MongoDB Atlas.  
+[Railway.io](../../vendors/railway.app/new_user) with its own database or a MongoDB Atlas (can be used for migration).  
 
 #### Work in progress solutions:
 
-[Railway.io](../../vendors/railway.app/new_user)  
-[Railway.io with MongoDB Atlas](../../vendors/railway.app/migrate) (can be used for Heroku migration).  
 [MIgrate to Fly.io with MongoDB Atlas](../../vendors/fly.io/migrate/).
 
 #### External documentation to be consolidated:

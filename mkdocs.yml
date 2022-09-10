@@ -32,7 +32,6 @@ nav:
     - 'MongoDB Atlas database': 'vendors/mongodb/atlas.md'
     - 'Heroku Hobby plan': 'vendors/heroku/new_user.md'
     - 'Railway.app': 'vendors/railway.app/new_user.md'
-    - 'Railway.app with Atlas': 'vendors/railway.app/migrate.md'
     - 'Fly.io': 'vendors/fly.io/new_user.md'
     - 'Migrate Heroku to Fly.io': 'vendors/fly.io/migrate.md'
     - 'Northflank': 'vendors/northflank/new_user.md'
