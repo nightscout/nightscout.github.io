@@ -96,7 +96,7 @@ You have several choices.
 - #### You can reuse your existing MongDB Atlas database.    
 
 Migrating from Heroku? [Edit your Heroku site variables](../../heroku/new_user#editing-config-vars-in-heroku) and copy the `MONGODB_URI` or `MONGO_CONNECTION` variable.  
-    Lost your string? [Recover it](../../../troubleshoot/atlas/#recover-your-connection-string) from MongoDB Atlas.
+    Lost your string? [Recover it](../../../troubleshoot/atlas/#recover-your-connection-string) from MongoDB Atlas. **Recommended for Heroku migration.**
 
 - #### You can create a new MongoDB Atlas database.  
 
@@ -192,7 +192,7 @@ g) Setup your Nightscout core variables.
 
 !!!note "Migrating from Heroku"  
     If you're migrating your project from Heroku, [display all variables in Heroku](../../heroku/new_user/#editing-config-vars-in-heroku) and copy all those with a value into Railway.  
-    See below how to add variables in Railway but use your Heroku values.
+    See below how to add variables in Railway but use your Heroku variables values.
 
 `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
 
@@ -281,6 +281,9 @@ p) You can now `Deploy`, and wait until it is complete.
 q) You can see your new Nightscout site name in the deployment tab of your project. Click on the name to open Nightscout.  
 Click on the link to open it.
 
+!!!info "Railway site name"  
+    You can [change your Railway site name](#change-your-railway-nightscout-site-name) in order to make it easier to remember. **Recommended**. You will do this later, before setting your uploaders.
+
 <img src="../img/RailwayM14.png" style="zoom:80%;" />
 
 </br>
@@ -329,6 +332,77 @@ w) If you need to modify your profile after this, authenticate with the lock ico
 x) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
 
 <img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
+
+</br>
+
+## Change your Railway Nightscout site name
+
+Railways automatically makes a name when creating your new site. It is rather difficult to remember.
+
+You can change the site name but need to keep the `.up.railway.app` domain.
+
+1. Select your Nightscout app
+
+2. Go in `Settings`
+
+3. In `Domains` go to the end of line and click the edit icon
+
+4. Write your new name and check it's available
+
+   Click `Update`
+
+   You Nightscout URL will now be `https://`*yoursitename*`.up.railway.app`
+
+<img src="../img/Railway38.png" style="zoom:80%;" />
+
+</br>
+
+Change all your [uploaders](../../../uploader/setup/) and [follower](../../../nightscout/downloaders/) devices to reflect the new URL once verified correct functioning of your Nightscout site.
+
+</br>
+
+## Migrate your MongoDB Atlas database to Railway
+
+!!!warning "Not an easy operation"  
+    This is not an easy operation and requires command line instructions using a computer.  
+    You can have a trusted person help you perform it, if you can provide both MongoDB Atlas and Railway MongoDB connection strings.
+
+a) Dump your Atlas database
+
+- Follow [these instructions](../../mongodb/atlas/#backup-your-database).
+
+- Make sure you renamed your exported database folder to `test` as this is the default database name in Railway.
+
+b) Copy your Railway database connection string
+
+1. Select your MongoDB database
+2. Click on `Connect`
+3. Click on the Copy icon
+
+<img src="../../mongodb/img/AtlasX05.png" style="zoom:80%;" />
+
+c) Import your Atlas database in Railway
+
+- Open a command line utility (CMD, Terminal, ...) and make your way to the utility folder (if you don't want to include it in your system path). For example in Windows 64bits it's in `C:\Program Files\MongoDB\Tools\100\bin`.
+
+Type a new command starting with: `mongorestore --uri` followed by the database string you copied above in **b)3.**, run it.
+
+<img src="../../mongodb/img/AtlasX06.png" style="zoom:80%;" />
+
+d) Wait until the import completes. You will see a line like this before returning to the command prompt.
+
+```
+2022-09-11T09:49:35.331+0200    456003 document(s) restored successfully. 0 document(s) failed to restore.
+```
+
+The number of documents will be different but the rest should be identical.
+
+You have completed database restore.
+
+</br>
+
+If you're migrating your database, make sure to [update](#editing-variables-in-railway) the `MONGODB_URI` variable string to the new URI as copied in **b)3.**.  
+Refresh your Nightscout browser once deployment completes view to verify data has been imported correctly.
 
 </br>
 

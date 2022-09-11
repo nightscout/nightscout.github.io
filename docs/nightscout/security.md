@@ -90,9 +90,11 @@ If you want to have the site require authentication, read the "How to Turn Off U
 
 If you're using [Heroku](https://dashboard.heroku.com/apps) you can rename your Nightscout site URL in your app `Settings`.
 
-Once done, make sure all apps (uploaders and downloaders) are updated accordingly,
-
 <img src="../img/Security01.png" style="zoom:80%;" />
+
+If you're using Railway look [here](../../vendors/railway.app/new_user/#change-your-railway-nightscout-site-name).
+
+Once done, make sure all apps (uploaders and downloaders) are updated accordingly,
 
 </br>
 

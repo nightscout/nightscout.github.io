@@ -19,7 +19,7 @@ Your Nightscout password, is the `API_SECRET` variable you can find editing your
 
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
 
-Your `Nightscout URL` defined in Railway by your Web app name, as shown in your [Dashboard](https://railway.app/dashboard). It usually looks like: `https://web-production-xxx.up.railway.app`
+Your `Nightscout URL` defined in Railway by your Web app name, as shown in your [Dashboard](https://railway.app/dashboard). It usually looks like: `https://yoursitename.up.railway.app`
 
 <img src="../../../vendors/railway.app/img/RailwayM14.png" style="zoom:80%;" />
 
@@ -50,7 +50,15 @@ On your master phone, touch the Share icon, enable Sharing. If you have no follo
 
 Verify, update or add these variables:
 
+`BRIDGE_USER_NAME  
+BRIDGE_PASSWORD  
+BRIDGE_SERVER`
+
+[Edit in Heroku](../../vendors/heroku/new_user/#editing-config-vars-in-heroku):
+
 <img src="../../nightscout/img/NewNS35.png" style="zoom:80%;" />
+
+Or [edit in Railway](../../vendors/railway.app/new_user/#editing-variables-in-railway).
 
 </br>
 

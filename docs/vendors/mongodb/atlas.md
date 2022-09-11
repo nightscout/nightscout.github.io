@@ -205,3 +205,64 @@ p) If you want to do it manually: replace `<password>` with your database passwo
 </br>
 
 Now that you have **copied** the resulting `MONGODB_URI` string to a **safe place**, go back to the instructions page you were following.
+
+</br>
+
+</br>
+
+## Backup your database
+
+!!!warning "Not a normal operation"  
+    Making a backup of your database is either a good idea or necessary if you want to migrate it to another database.  
+    This is not an easy operation and requires command line instructions using a computer.
+
+
+
+#### Install the database tools
+
+Follow [this link](https://www.mongodb.com/docs/database-tools/installation/installation/) to install the CLI tool on your computer.
+
+#### Dump your database
+
+Get your `MONGODB_URI` handy to find the missing pieces (password and database name).
+
+Log in your MongoDB account [https://cloud.mongodb.com/](https://cloud.mongodb.com/).
+
+1. Select your organization
+2. Select your database
+3. In the advanced options menu, select `Command line tools`
+
+<img src="../img/AtlasX01.png" style="zoom:80%;" />
+
+</br>
+
+Scroll down to `Binary import and Export tools`, copy the `mongodump` command line.
+
+<img src="../img/AtlasX02.png" style="zoom:80%;" />
+
+Paste the command line in a text editor.
+
+Look into your `MONGODB_URI` and replace `<PASSWORD>` with your database password and entually (if you have one) `<DATABASE>` with your database name.
+
+<img src="../img/AtlasX03.png" style="zoom:80%;" />
+
+</br>
+
+Open a command line utility (CMD, Terminal, ...) and make your way to the utility folder (if you don't want to include it in your system path).  
+For example in Windows 64bits it's in `C:\Program Files\MongoDB\Tools\100\bin`.
+
+Copy and paste your `mongodump` command, run it.
+
+<img src="../img/AtlasX04.png" style="zoom:80%;" />
+
+</br>
+
+You will find the database dump in a subfolder called `dump` with your database name in a subfolder.
+
+!!!note "Database name"  
+    If you will want to import this dump into a default new MongoDB database (not Atlas) rename the database folder name to `test`.  
+    Do not change the folder name if this is a MongoDB Atlas backup only.
+
+<img src="../img/AtlasX07.png" style="zoom:80%;" />
+
+</br>
