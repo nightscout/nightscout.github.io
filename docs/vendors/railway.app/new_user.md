@@ -7,18 +7,16 @@
 ---
 
 !!!info "Cost"  
-    [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**.  
+    [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**. Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).  
     <img src="../img/RailwayFree.png" style="zoom:80%;" />  
+    **You probably can use Railway for free subscribing to a [Developer plan](https://railway.app/pricing)**.  
+    Monitor the first free 500 hours to understand how much you might be charged for a Developer plan. If your site stops after 500 hours with more than 1.56$ credit, this mean you can run Nightscout for free.  
+
+!!!warning "Database"  
     Adding a database to your Railway account might increase costs.  
-    Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).
+    The Developer plan offers Max 100 GB of Disk (Soft cap) but mind the cost $0.000231 / GB / Minute will quickly reach 5$ for a 512MB database. 
 
 </br>
-
-Monitor the first free 500 hours to understand how much you might be charged for a Developer plan. If your site stops after 500 hours with more than 1.56$ credit, this mean **you probably can use Railway for free subscribing to a [Developer plan](https://railway.app/pricing)**.  
-The Developer plan offers Max 100 GB of Disk (Soft cap) which is more than enough. But this offer might change over the years.  
-If you are reluctant to leave a billing method to Railway, you can opt for a one-off purchase guaranteeing you access to a Developer plan until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).
-
-<img src="../img/RailwayDev.png" style="zoom:80%;" />
 
 Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
@@ -86,6 +84,28 @@ If it still shows 200 hours, refresh your browser page.
 
 </br>
 
+g) If you need to use Nightscout for more than 500 hours per month you need to update your account to a Developer plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
+
+<img src="../img/Railway06b.png" style="zoom:80%;" />
+
+</br>
+
+Enter your credit card information and select `Subscribe to a Developer Plan`.
+
+<img src="../img/Railway06c.png" style="zoom:80%;" />
+
+Your card will be billed 1$ that will be refund immediately. Bank fees won't be refund.
+
+</br>
+
+!!!note "One-off purchase"  
+    <img src="../img/Railway06d.png" style="zoom:80%;" />  
+    <img src="../img/Railway06e.png" style="zoom:80%;" />  
+    If you are reluctant to leave a billing method to Railway, you can **opt for a one-off 5$ purchase guaranteeing you access to a Developer plan** until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).  
+    No billing will occur after the initial credits are fully used. They will transfer month to month (*note: we need to check for how long they transfer if not used.*) 
+
+</br>
+
 ### Step 3: Create your database
 
 !!!note "Already have a database?"  
@@ -95,15 +115,25 @@ You have several choices.
 
 - #### You can reuse your existing MongDB Atlas database.    
 
-Migrating from Heroku? [Edit your Heroku site variables](../../heroku/new_user#editing-config-vars-in-heroku) and copy the `MONGODB_URI` or `MONGO_CONNECTION` variable.  
-    Lost your string? [Recover it](../../../troubleshoot/atlas/#recover-your-connection-string) from MongoDB Atlas. **Recommended for Heroku migration.**
+!!!info "Costs"  
+    Recommended for Heroku migration.
 
-- #### You can create a new MongoDB Atlas database.  
+Migrating from Heroku? [Edit your Heroku site variables](../../heroku/new_user#editing-config-vars-in-heroku) and copy the `MONGODB_URI` or `MONGO_CONNECTION` variable.  
+    Lost your string? [Recover it](../../../troubleshoot/atlas/#recover-your-connection-string) from MongoDB Atlas.
+
+- #### You can create a new MongoDB Atlas database.
+
+!!!info "Costs"  
+    Recommended for a free Nightscout site.
 
 To create a new MongoDB database follow [these instructions](../../mongodb/atlas/#create-an-atlas-database) and come back with your `MONGODB_URI` connection string.  
 The Atlas database size is limited to 512MB of data and is free to try. This might evolve in the future.
 
-- #### You can create a new Railway Mongo database.  
+- #### You can create a new Railway Mongo database.
+
+!!!warning "Costs"  
+    Adding a Railway Mongo database will not fit forever in 5$ per month.  
+    If you don't keep its dimension very small (<500MB *to be checked*) you will most probably be charged for it.
 
 a) Click `New Project` from your Dashboard screen (top right).
 
@@ -410,6 +440,10 @@ Refresh your Nightscout browser once deployment completes view to verify data ha
 
 </br>
 
+#### Method 1 - Web interface
+
+This is recommended when you only need to edit or add few variables.
+
 a) Open [Railway](https://railway.app) and click `login`. Login with GitHub.
 
 <img src="../img/Railway00.png" style="zoom:80%;" />
@@ -443,3 +477,60 @@ e) You can perform various operations on your variables:
 3. Edit or delete the variable or its value with the line end menu
 
 <img src="../img/RailwayM18.png" style="zoom:80%;" />
+
+</br>
+
+Note that each variable modification will redeploy your project.
+
+</br>
+
+#### Method 2 - Raw Editor
+
+This is recommended when you must perform lots of changes to avoid multiple project redeploys.
+
+a) Open [Railway](https://railway.app) and click `login`. Login with GitHub.
+
+<img src="../img/Railway00.png" style="zoom:80%;" />
+
+<img src="../img/Railway01.png" style="zoom:80%;" />
+
+</br>
+
+b) Select your Nightscout project.
+
+<img src="../img/RailwayM15.png" style="zoom:80%;" />
+
+</br>
+
+c) Select your web app.
+
+<img src="../img/RailwayM16.png" style="zoom:80%;" />
+
+</br>
+
+d) Click on `Variables`.
+
+<img src="../img/RailwayM17.png" style="zoom:80%;" />
+
+</br>
+
+e) Click on `RAW Editor` top right
+
+<img src="../img/Railway39.png" style="zoom:80%;" />
+
+</br>
+
+f) You can access all your variables in a text editor, each line contains the variable name, the sign `=` then its corresponding value.
+
+`VARIABLE=value`
+
+Perform all your changes taking care of uppercase and lowercase information and click `Update Variables` when finished.
+
+<img src="../img/Railway40.png" style="zoom:80%;" />
+
+</br>
+
+Once saved your project will redeploy.  
+If deploy fails, check your modifications...
+
+</br>
