@@ -259,10 +259,7 @@ Copy and paste your `mongodump` command, run it.
 
 You will find the database dump in a subfolder called `dump` with your database name in a subfolder.
 
-!!!note "Database name"  
-    If you will want to import this dump into a default new MongoDB database (not Atlas) rename the database folder name to `test`.  
-    Do not change the folder name if this is a MongoDB Atlas backup only.
-
 <img src="../img/AtlasX07.png" style="zoom:80%;" />
 
 </br>
+

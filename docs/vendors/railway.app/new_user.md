@@ -22,7 +22,7 @@ Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 </br>
 
-## Set up new Nightscout
+## Set up a new Nightscout
 
 ### Create your Railway and GitHub accounts from a computer.
 
@@ -411,7 +411,13 @@ b) Copy your Railway database connection string
 
 <img src="../../mongodb/img/AtlasX05.png" style="zoom:80%;" />
 
-c) Import your Atlas database in Railway
+c) Rename the database dump folder (example for Windows below) to `test` (default)
+
+<img src="../../mongodb/img/AtlasX07.png" style="zoom:80%;" />
+
+</br>
+
+d) Import your Atlas database in Railway
 
 - Open a command line utility (CMD, Terminal, ...) and make your way to the utility folder (if you don't want to include it in your system path). For example in Windows 64bits it's in `C:\Program Files\MongoDB\Tools\100\bin`.
 
@@ -419,7 +425,7 @@ Type a new command starting with: `mongorestore --uri` followed by the database 
 
 <img src="../../mongodb/img/AtlasX06.png" style="zoom:80%;" />
 
-d) Wait until the import completes. You will see a line like this before returning to the command prompt.
+e) Wait until the import completes. You will see a line like this before returning to the command prompt.
 
 ```
 2022-09-11T09:49:35.331+0200    456003 document(s) restored successfully. 0 document(s) failed to restore.

@@ -10,11 +10,11 @@ Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 </br>
 
-## Set up new Nightscout
+## Set up a new Nightscout
 
 Fly.io is managed through a command line app.
 
-Not documented yet.
+!!!warning "**Not documented yet.**"
 
 </br>
 

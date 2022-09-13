@@ -12,7 +12,8 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 
 #### Work in progress solutions:
 
-[MIgrate to Fly.io with MongoDB Atlas](../../vendors/fly.io/migrate/).
+[Northflank](../../vendors/northflank/new_user) with its own database or a MongoDB Atlas (can be used for migration).  
+[Migrate to Fly.io with MongoDB Atlas](../../vendors/fly.io/migrate/).
 
 #### External documentation to be consolidated:
 
@@ -25,7 +26,6 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 #### Exploration paths:
 
 [Azure](../../vendors/azure/new_azure)  
-[Northflank](../../vendors/northflank/new_user)
 
 ## Vendors comparison table
 
@@ -74,6 +74,14 @@ Click on the vendor logo.
         <td>Yes</td>
         <td>Medium</td>
     </tr>
+    <tr>
+        <td><a href="/vendors/northflank/new_user"><img src="../../vendors/img/northflank.png" align="center"></a></td>
+        <td>Free -></br>???$/month</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Medium</td>
+    </tr>
+
     <tr>
         <td><a href="/vendors/fly.io/new_user"><img src="../../vendors/img/flyio-logo.png" align="center"></a></td>
         <td>Free -></br>5$/month</td>
