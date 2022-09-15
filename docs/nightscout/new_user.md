@@ -8,12 +8,12 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 #### Currently fully documented solutions:
 
 [Heroku](../../vendors/heroku/new_user) with MongoDB Atlas.  
-[Railway.io](../../vendors/railway.app/new_user) with its own database or a MongoDB Atlas (can be used for migration).  
+[Railway](../../vendors/railway.app/new_user) with its own database or with a MongoDB Atlas (can be used for migration).  
 
 #### Work in progress solutions:
 
-[Northflank](../../vendors/northflank/new_user) with its own database or a MongoDB Atlas (can be used for migration).  
-[Migrate to Fly.io with MongoDB Atlas](../../vendors/fly.io/migrate/).
+[Northflank](../../vendors/northflank/new_user) with its own database or with a MongoDB Atlas (can be used for migration).  
+[Fly.io](../../vendors/fly.io/new_user/) is being worked on... stay tuned.
 
 #### External documentation to be consolidated:
 

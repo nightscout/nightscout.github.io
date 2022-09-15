@@ -18,12 +18,12 @@ Fly.io is managed through a command line app.
 
 </br>
 
-## Editing Config Vars in Fly.io
+## Editing Secrets in Fly.io
 
 </br>
 
 !!!warning "Secrets"  
-    You **cannot see the values of your variables as they are secret**.  
+    You **cannot see the values of your secret variables as they are secret**.  
     You can only delete them and set them: you **cannot edit them**.  
     Please make sure you write them down somewhere!
 
@@ -45,17 +45,21 @@ Look [here](https://fly.io/docs/getting-started/working-with-fly-apps/#working-w
 
 </br>
 
-If you want to create a new variable or modify an existing one you need to use the `flyctl secrets set` command.  
-For example if you want to set your Nightscout site vertical scale to linear:
+If you want to create a new secret or modify an existing one you need to use the `flyctl secrets set` command.  
+For example if you want to set your Nightscout site API Secret to **Th1515MyP455w0rd**, type:
 
 ```
-flyctl secrets set SCALE_Y="linear" -a yourappname
+flyctl secrets set API_SECRET="Th1515MyP455w0rd" -a yourappname
 ```
 
-If your `SCALE_Y` variable was already set to `linear` you will see the following message:  
+*Note: replace `yourappname` in the example with the real name of your Fly.io Nightscout app.*
+
+If your `API_SECRET` secret was already set to `Th1515MyP455w0rd` you will see the following message:  
 `Error No change detected to secrets. Skipping release.`
 
-When changing a variable, the app will automatically redeploy. You will see this sequence (it will take a few minutes):
+Now put back your original API Secret password with the same command.
+
+When changing a secret, the app will automatically redeploy. You will see this sequence (it will take a few minutes):
 
 ```
 Release v1 created

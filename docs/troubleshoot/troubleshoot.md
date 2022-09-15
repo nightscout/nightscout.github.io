@@ -62,7 +62,7 @@ Look at this [dedicated page](./atlas.md).
 
 ## Nightscout page doesn't open
 
-- With Heroku check [here](../heroku/#application-error).
+- With Heroku check [here](../heroku).
 
 </br>
 
