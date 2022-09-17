@@ -306,6 +306,15 @@ p) You can now `Deploy`, and wait until it is complete.
 
 <img src="../img/Railway16.png" style="zoom:80%;" />
 
+If you see this message, deploy didn't complete correctly, let's fix this manually.
+
+<img src="../img/Railway41.png" style="zoom:80%;" />
+
+!!!info "This is a bug that needs to be fixed at documentation/method level"
+
+Disconnect and reconnect Github like explained [here](../../../troubleshoot/railway/#reconnect-github-to-your-project), start at step **d**.  
+Deploy will restart automatically and you'll be able to continue from here.
+
 </br>
 
 q) You can see your new Nightscout site name in the deployment tab of your project. Click on the name to open Nightscout.  

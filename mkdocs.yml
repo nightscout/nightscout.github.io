@@ -33,7 +33,6 @@ nav:
     - 'Heroku Hobby plan': 'vendors/heroku/new_user.md'
     - 'Railway.app': 'vendors/railway.app/new_user.md'
     - 'Fly.io': 'vendors/fly.io/new_user.md'
-    - 'Migrate Heroku to Fly.io': 'vendors/fly.io/migrate.md'
     - 'Northflank': 'vendors/northflank/new_user.md'
     - 'Oracle Cloud': 'vendors/oracle/new_user.md'
     - 'Google Cloud': 'vendors/google/new_user.md'

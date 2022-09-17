@@ -1,10 +1,6 @@
 
 ## Nightscout Security
 
-<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> is already secured see [Share panel](https://t1pal.com/account/sites/my#Views).
-
-------
-
 Nightscout security model is based on the following assumptions:
 
 * The users of Nightscout only use it to process information about themselves or someone they're legally responsible for and thus own all of the data being stored in Nightscout.
