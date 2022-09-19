@@ -306,14 +306,30 @@ p) You can now `Deploy`, and wait until it is complete.
 
 <img src="../img/Railway16.png" style="zoom:80%;" />
 
-If you see this message, deploy didn't complete correctly, let's fix this manually.
+If you see this message, deploy didn't complete, let's fix this manually.
 
 <img src="../img/Railway41.png" style="zoom:80%;" />
 
-!!!info "This is a bug that needs to be fixed at documentation/method level"
+p1)  Select `Settings` and scroll down to `Service`.  
+Disconnect your `Source Repo` with the cross at the end of the line.
 
-Disconnect and reconnect Github like explained [here](../../../troubleshoot/railway/#reconnect-github-to-your-project), start at step **d**.  
-Deploy will restart automatically and you'll be able to continue from here.
+<img src="../../../vendors/railway.app/img/RailwayT01.png" style="zoom:80%;" />
+
+p2) Confirm `Disconnect`.
+
+<img src="../../../vendors/railway.app/img/RailwayT02.png" style="zoom:80%;" />
+
+</br>
+
+p3) Select `Connect Repo`.
+
+<img src="../../../vendors/railway.app/img/RailwayT03.png" style="zoom:80%;" />
+
+You should be able to select your GitHub `cgm-remote-monitor` repository.
+
+<img src="../../../vendors/railway.app/img/RailwayM03.png" style="zoom:80%;" />
+
+Your Railway app will now automatically deploy.
 
 </br>
 

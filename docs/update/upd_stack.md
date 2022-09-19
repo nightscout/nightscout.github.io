@@ -59,7 +59,7 @@ It is good practice to maintain your Heroku stack up to date. Either when you re
 
 - Scroll down to the bottom of the page, select the `master` branch and click `Deploy Branch`
 
-*Note: if you can't select the `master` branch or `Deploy Branch` doesn't do anything [update your Nightscout site](../update).*
+*Note: if you can't select the `master` branch or `Deploy Branch` doesn't do anything [reconnect GitHub](../../troubleshoot/heroku/#cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible).*
 
 <img src="../../update/img/UpdateNS23.png" style="zoom:80%;" >
 
