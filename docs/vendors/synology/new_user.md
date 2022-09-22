@@ -9,4 +9,4 @@ Coming soon, initial documents shared:
   - 01-09-2022 [https://www.facebook.com/groups/cgminthecloud/posts/5451196141668264/](https://www.facebook.com/groups/cgminthecloud/posts/5451196141668264/)
   - 19-09-2022 [https://www.facebook.com/groups/cgminthecloud/posts/5497953650325846/](https://www.facebook.com/groups/cgminthecloud/posts/5497953650325846/)
 
-![Concept of the visual steps](Self-host-Nightscout-v0.3-drawio.png)
+![Concept of the visual steps](../img/Self-host-Nightscout-v0.3-drawio.png)
