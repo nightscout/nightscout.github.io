@@ -34,7 +34,7 @@ $ mkdocs serve
 ```
 
 * Preview docs in browser. Most changes will update automatically as you edit. Configuration and navigation changes will require restarting the MkDocs server.
-* Do you see error "'mkdocs' is not recognized as an internal or external command, operable program or batch file." on Windows? This is a known problem with Python on Windows. Basically you need to add the "Scripts" directory to your PATH environment variable. If you are uncomfortable editing environment variables, you can use `python -m mkdocs` as the command
+* Do you see error "*'mkdocs' is not recognized as an internal or external command, operable program or batch file.*" on Windows? This is a known problem with Python on Windows. Basically you need to add the "Scripts" directory to your PATH environment variable. If you are uncomfortable editing environment variables, you can use `python -m mkdocs` as the command
 
 ```bash
 $ cd <nightscout docs location>
