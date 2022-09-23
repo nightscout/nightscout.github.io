@@ -17,6 +17,10 @@ If you already have a Hobby plan you don't need to do anything and you Nightscou
 
 </br>
 
+<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+
+</br>
+
 ## Upgrade to 7$/month Hobby Plan
 
 </br>

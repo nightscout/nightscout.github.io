@@ -14,7 +14,7 @@
 
 </br>
 
-Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
+<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
 
 </br>
 
