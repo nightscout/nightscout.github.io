@@ -211,6 +211,8 @@ i) Save the modified file:
 2. Press `Enter`
 3. Press `Ctrl-X`
 
+*Note: if you use a Mac the `Ctrl` key is `⌘`*
+
 You can return to step **g.** above if you want to check it's been modified correctly.
 
 </br>

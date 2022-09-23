@@ -9,16 +9,18 @@
 !!!info "Cost"  
     [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**. Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).  
     <img src="../img/RailwayFree.png" style="zoom:80%;" />  
-    **You probably can use Railway for free subscribing to a [Developer plan](https://railway.app/pricing)**.  
-    Monitor the first free 500 hours to understand how much you might be charged for a Developer plan. If your site stops after 500 hours with more than 1.56$ credit, this mean you can run Nightscout for free.  
+      
+    **You can use Railway for free subscribing to a [Developer plan](https://railway.app/pricing)**.
 
-!!!warning "Database"  
-    Adding a database to your Railway account might increase costs.  
-    The Developer plan offers Max 100 GB of Disk (Soft cap) but mind the cost $0.000231 / GB / Minute will quickly reach 5$ for a 512MB database. 
+Keep in mind a free M0 MongoDB Atlas database size is limited to 512MB and you will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) the additional cost is 9$ per month.   
+
+!!!warning "Database"    
+    Adding a MongoDB database to your Railway account might increase costs.  
+    The Developer plan offers Max 100 GB of Disk (Soft cap) but mind the cost $0.000231 / GB / Minute will quickly reach 5$ for a 512MB database.
 
 </br>
 
-Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
+<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
 
 </br>
 
@@ -84,7 +86,7 @@ If it still shows 200 hours, refresh your browser page.
 
 </br>
 
-g) If you need to use Nightscout for more than 500 hours per month you need to update your account to a Developer plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
+g) If you need to use Nightscout for more than 500 hours per month you need to upgrade your account to a Developer plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
 
 <img src="../img/Railway06b.png" style="zoom:80%;" />
 
