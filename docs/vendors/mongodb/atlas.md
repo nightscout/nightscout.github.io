@@ -8,7 +8,9 @@
 
 !!!info "Database limitations"  
     You will use a [free M0 cluster for your Atlas database](https://www.mongodb.com/pricing#mdb-modal-shared) from MongoDB, its size is limited to 512MB.  
-    Should MongoDB remove its free shared clusters offer, or should you need a larger database size, an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) will increase your cost of 9$ per month.
+    You will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) the additional cost is 9$ per month. 
+
+<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
 
 !!! note "Note"
     MongoDB Atlas regularly changes the site aspect. If you encounter a page not matching this documentation search for keywords like `not now`, `skip` or `later` to continue. Report discrepancies [here](https://github.com/nightscout/nightscout.github.io/issues/new).

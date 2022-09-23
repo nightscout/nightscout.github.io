@@ -6,7 +6,9 @@
 
 !!!info "Cost"  
     You can deploy your Nightscout site with Heroku using a [Hobby plan (7$ per month per app)](https://www.heroku.com/pricing).  
-    Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
+    Keep in mind the MongoDB database size is limited to 512MB and you will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) the additional cost is 9$ per month.
+
+<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
 
 </br>
 
