@@ -408,7 +408,7 @@ You can change the site name but need to keep the `.up.railway.app` domain.
 
    Click `Update`
 
-   You Nightscout URL will now be `https://`*yoursitename*`.up.railway.app`
+   Your Nightscout URL will now be `https://`*yoursitename*`.up.railway.app`
 
 <img src="../img/Railway38.png" style="zoom:80%;" />
 

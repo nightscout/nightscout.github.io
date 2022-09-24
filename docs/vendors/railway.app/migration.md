@@ -203,15 +203,27 @@ Your site will redeploy, wait until redeploy completes.
 
 </br>
 
-Congratulations. You migrated from Heroku to Railway.
+n) Change your site name (you need to keep the `.up.railway.app` domain).
+
+1. Select your Nightscout app
+
+2. Go in `Settings`
+
+3. In `Domains` go to the end of line and click the edit icon
+
+4. Write your new name and check it's available
+
+   Click `Update`
+
+   Your Nightscout URL will now be `https://`*yoursitename*`.up.railway.app`
+
+<img src="../img/Railway38.png" style="zoom:80%;" />
 
 </br>
 
-n) You can see your new Nightscout site name in the deployment tab of your project. Click on the name to open Nightscout.  
-Click on the link to open it.
+Congratulations. You migrated from Heroku to Railway.
 
-!!!info "Railway site name"  
-    You can [change your Railway site name](#change-your-railway-nightscout-site-name) in order to make it easier to remember. **Recommended**. You will do this later, before setting your uploaders.
+Click the site name to open Nightscout.
 
 <img src="../img/RailwayM14.png" style="zoom:80%;" />
 
@@ -226,3 +238,10 @@ Now you will need to update all the devices connected to Nightscout with the new
     **Make sure you update the [uploader](../../../uploader/setup/) and [follower](../../../nightscout/downloaders/) devices with the new railway.app address!**
 
 </br>
+
+To fully test your new Railway Nightscout app: put your Heroku app in [maintenance mode](../../../troubleshoot/heroku/#maintenance-mode).  
+If things don't go as expected, you can disable it and return to Heroku whilst you fix it.  
+**Better test it now than once Heroku will shutdown your app.**
+
+</br>
+
