@@ -129,23 +129,23 @@ Do not deploy `dev` or a branch other than `master` unless directed to do so (ex
 - Open [Railway](https://railway.app) and click `login`. Login with GitHub.
 
 
-<img src="../../../vendors/railway.app/img/Railway00.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/Railway00.png" style="zoom:80%;" />
 
-<img src="../../../vendors/railway.app/img/Railway01.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/Railway01.png" style="zoom:80%;" />
 
 </br>
 
 - Select your Nightscout project.
 
 
-<img src="../../../vendors/railway.app/img/RailwayM15.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayM15.png" style="zoom:80%;" />
 
 </br>
 
 - Select your web app.
 
 
-<img src="../../../vendors/railway.app/img/RailwayM16.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayM16.png" style="zoom:80%;" />
 
 </br>
 

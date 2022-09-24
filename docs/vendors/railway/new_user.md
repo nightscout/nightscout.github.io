@@ -1,4 +1,4 @@
-# Railway.app Nightscout
+# Railway Nightscout
 
 ---
 
@@ -7,9 +7,10 @@
 ---
 
 !!!info "Cost"  
-    [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**. Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).  
+    [Railway](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**. Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).  
     <img src="../img/RailwayFree.png" style="zoom:80%;" />  
       
+
     **You can use Railway for free subscribing to a [Developer plan](https://railway.app/pricing)**.
 
 Keep in mind a free M0 MongoDB Atlas database size is limited to 512MB and you will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) the additional cost is 9$ per month.   
@@ -139,31 +140,31 @@ The Atlas database size is limited to 512MB of data and is free to try. This mig
 
 a) Click `New Project` from your Dashboard screen (top right).
 
-<img src="../../../vendors/railway.app/img/RailwayDB01.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayDB01.png" style="zoom:80%;" />
 
 </br>
 
 b) Click  `Provision MongoDB`
 
-<img src="../../../vendors/railway.app/img/RailwayDB02.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayDB02.png" style="zoom:80%;" />
 
 </br>
 
 c) Select your new MongoDB project.
 
-<img src="../../../vendors/railway.app/img/RailwayDB03.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayDB03.png" style="zoom:80%;" />
 
 </br>
 
 d) Go to the `Connect` page.
 
-<img src="../../../vendors/railway.app/img/RailwayDB04.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayDB04.png" style="zoom:80%;" />
 
 </br>
 
 e) Move the mouse to the end of the line showing the `Mongo Connection URL` and click the copy icon.
 
-<img src="../../../vendors/railway.app/img/RailwayDB05.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayDB05.png" style="zoom:80%;" />
 
 </br>
 
@@ -315,21 +316,21 @@ If you see this message, deploy didn't complete, let's fix this manually.
 p1)  Select `Settings` and scroll down to `Service`.  
 Disconnect your `Source Repo` with the cross at the end of the line.
 
-<img src="../../../vendors/railway.app/img/RailwayT01.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayT01.png" style="zoom:80%;" />
 
 p2) Confirm `Disconnect`.
 
-<img src="../../../vendors/railway.app/img/RailwayT02.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayT02.png" style="zoom:80%;" />
 
 </br>
 
 p3) Select `Connect Repo`.
 
-<img src="../../../vendors/railway.app/img/RailwayT03.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayT03.png" style="zoom:80%;" />
 
 You should be able to select your GitHub `cgm-remote-monitor` repository.
 
-<img src="../../../vendors/railway.app/img/RailwayM03.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayM03.png" style="zoom:80%;" />
 
 Your Railway app will now automatically deploy.
 

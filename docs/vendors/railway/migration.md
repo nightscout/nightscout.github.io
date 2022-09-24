@@ -1,4 +1,4 @@
-# Migrate from Heroku to Railway.app
+# Migrate from Heroku to Railway
 
 ---
 
@@ -7,7 +7,7 @@
 ---
 
 !!!info "Cost"  
-    [Railway.app](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**. Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).  
+    [Railway](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**. Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).  
     <img src="../img/RailwayFree.png" style="zoom:80%;" />  
       
     **You can migrate from Heroku to Railway and keep your Nightscout site for free (maintaining your MongoDB Atlas database) by subscribing to a [Developer plan](https://railway.app/pricing)**.

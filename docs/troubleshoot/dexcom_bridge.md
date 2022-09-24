@@ -88,7 +88,7 @@ NOTE: The #1 reason why BGs aren't showing is that you have mismatched password 
 
 For Heroku: [Edit your `Config Variables`.](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku)
 
-For Railway: [Go to your `Variables` page](../../../vendors/railway.app/new_user/#editing-config-vars-in-railway).
+For Railway: [Go to your `Variables` page](../../../vendors/railway/new_user/#editing-config-vars-in-railway).
 
 1. You must use the same `BRIDGE_PASSWORD` or `BRIDGE_USER_NAME` that your Dexcom mobile app is using.
 2. You must have `bridge` and `careportal` on the `ENABLE` line (you can have other values there...but don't forget these two).
@@ -107,7 +107,7 @@ Check your Heroku logs that are viewable by selecting `View Logs` from the drop-
 
 With Railway they are available selecting your app, then `Deployments` and `View Logs` at the end of the top (last) deployment line.
 
-<img src="../../../vendors/railway.app/img/railway-logs.png">
+<img src="../../../vendors/railway/img/railway-logs.png">
 
 </br>
 

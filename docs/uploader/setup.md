@@ -21,9 +21,9 @@ Your Nightscout password, is the `API_SECRET` variable you can find editing your
 
 Your `Nightscout URL` defined in Railway by your Web app name, as shown in your [Dashboard](https://railway.app/dashboard). It usually looks like: `https://yoursitename.up.railway.app`
 
-<img src="../../../vendors/railway.app/img/RailwayM14.png" style="zoom:80%;" />
+<img src="../../../vendors/railway/img/RailwayM14.png" style="zoom:80%;" />
 
-Your Nightscout password, is the `API_SECRET` variable you can find editing your Railway variables like [this](../../../vendors/railway.app/new_user/#editing-variables-in-railway).
+Your Nightscout password, is the `API_SECRET` variable you can find editing your Railway variables like [this](../../../vendors/railway/new_user/#editing-variables-in-railway).
 
 ------
 
@@ -58,7 +58,7 @@ BRIDGE_SERVER`
 
 <img src="../../nightscout/img/NewNS35.png" style="zoom:80%;" />
 
-Or [edit in Railway](../../vendors/railway.app/new_user/#editing-variables-in-railway).
+Or [edit in Railway](../../vendors/railway/new_user/#editing-variables-in-railway).
 
 </br>
 

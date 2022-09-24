@@ -8,7 +8,7 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 #### Currently fully documented solutions:
 
 [Heroku](../../vendors/heroku/new_user) with MongoDB Atlas.  
-[Railway](../../vendors/railway.app/new_user) with its own database or with a MongoDB Atlas (can be used for migration).  
+[Railway](../../vendors/railway/new_user) with its own database or with a MongoDB Atlas (can be used for migration).  
 
 #### Work in progress solutions:
 
@@ -68,7 +68,7 @@ Click on the vendor logo.
         <td>Medium</td>
     </tr>
     <tr>
-        <td><a href="/vendors/railway.app/new_user"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
+        <td><a href="/vendors/railway/new_user"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
         <td>Free -></br>5$/month</td>
         <td>Yes</td>
         <td>Yes</td>
@@ -183,7 +183,7 @@ It's **highly important** you understand you have to take computer security seri
           <td>Medium</td>
       </tr>
       <tr>
-          <td><a href="/vendors/railway.app/new_user"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
+          <td><a href="/vendors/railway/new_user"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
           <td>Free -></br>5$/month</td>
           <td>Yes</td>
           <td>Yes</td>

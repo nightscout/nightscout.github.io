@@ -154,7 +154,7 @@ If you see this message:
 
 For Heroku: [Edit your `Config Variables`.](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku)
 
-For Railway: [Go to your `Variables` page](../../../vendors/railway.app/new_user/#editing-config-vars-in-railway).
+For Railway: [Go to your `Variables` page](../../../vendors/railway/new_user/#editing-config-vars-in-railway).
 
 </br>
 
@@ -375,7 +375,7 @@ If you don't see a database name like `myFirstDatabase` before the question mark
 </br>
 
 h) Copy this resulting string above into your Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration). There must be only one of these variables, not both.  
-Open [this link for Heroku](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku) or [this link for Railway](../../../vendors/railway.app/new_user/#editing-config-vars-in-railway) in another tab to see how to edit your Heroku variables.
+Open [this link for Heroku](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku) or [this link for Railway](../../../vendors/railway/new_user/#editing-config-vars-in-railway) in another tab to see how to edit your Heroku variables.
 
 i) If there is neither one nor the other create a new `MONGODB_URI` variable and paste the string in the value field.
 

@@ -6,7 +6,7 @@
 
 <img src="../img/TShoot57.png" style="zoom:80%;" >
 
-If you didn't upgrade Heroku to a hobby plan [migrate to Railway](../../../vendors/railway.app/migrate).
+If you didn't upgrade Heroku to a hobby plan [migrate to Railway](../../../vendors/railway/migrate).
 
 If you just tried to deploy a new Nightscout site, something went wrong. Cleanup your Heroku apps and retry...
 
@@ -22,7 +22,7 @@ If you just tried to deploy a new Nightscout site, something went wrong. Cleanup
 - If you didn't migrate from Azure to Heroku create a new site [create a new Nightscout site](../../nightscout/new_user/).
 - If you're creating a new Nightscout site, it might have failed because of a [wrong connection string](../atlas/#unable-to-connect-to-mongo).
 
-- If you don't see any good reason [restart all dynos](#restart-all-dynos) if you have Heroku or check you app state in Railway [dashboard](https://railway.app/dashboard).
+- If you don't see any good reason [restart all dynos](#restart-all-dynos) if you have Heroku or check you app state in Railway [dashboard](https://railway/dashboard).
 
 - Check your MongoDB Atlas [database is not full](../atlas/#database-full).
 
