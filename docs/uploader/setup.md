@@ -88,9 +88,9 @@ For hosted Nightscout put your Dexcom credentials [in Dexcom Bridge](https://www
 
 ## Medtronic CareLink
 
-!!!warning "This plugin is **NOT** functional anymore with Heroku."
+!!!warning "The `mmconnect` plugin is **NOT** functional anymore with cloud Nightscout sites."
 
-You can use an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower) (see also [here](https://bigdigital.home.blog/category/xdrip/) for a customized version for smartbands), a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
+You can use an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower). See [here](../../uploader/setup/#xdrip) how to set it up.
 
 Plugin setup documented [here](https://github.com/nightscout/cgm-remote-monitor/#mmconnect-minimed-connect-bridge) with [additional fields](https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring) for your pump.
 

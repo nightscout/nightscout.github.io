@@ -53,9 +53,7 @@ Dexcom G4 Platinum (Share) requires you to carry the receiver to forward data to
 
 ## Medtronic
 
-If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore using Heroku** without a bridge device.
-
-You can use an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower) (see also [here](https://bigdigital.home.blog/category/xdrip/) for a customized version for smartbands), a [computer](https://github.com/FredMK/minimed-connect-to-nightscout-wrapper) or a [Raspberry Pi](https://github.com/psonnera/minimed-connect-to-nightscout-wrapper/wiki) to bridge CareLink to Nightscout.
+If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore using cloud hosted Nightscout sites** without an Android bridge device with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower) .
 
 <img src="..\img\Upload04.png" />
 

@@ -21,11 +21,11 @@ Note: <img src="../img/LockOK.png" style="zoom:15%;" /> indicates applications c
 
 Select the Nightscout Follower data source and type your Nightscout URL:
 
-`https://HerokuAppName.herokuapp.com`
+`https://yoururl`
 
 For a secured site:
 
- `https://API_SECRET_or_Token@HerokuAppName.herokuapp.com`
+ `https://API_SECRET_or_Token@yoururl`
 
 <img src="../img/Follower00.png" style="zoom:80%;" />
 
@@ -147,7 +147,7 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 
 !!!note "Important limitation"  
     Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.  
-    If you need this data source, [deploy a dev branch](../../update/dev_branch/) and enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables in Heroku.
+    If you need this data source, [deploy a dev branch](../../update/dev_branch/) and enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables.
 
 
 
