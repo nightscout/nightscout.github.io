@@ -8,7 +8,7 @@ Nightscout configuration is held in variables , their content can be modified to
 
 <img src="../../vendors/img/Heroku.png" style="zoom:80%;" /> [Editing Config Vars in Heroku](../../vendors/heroku/new_user#editing-config-vars-in-heroku)
 
-<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" /> [Editing Config Vars in Railway](../../vendors/railway.app/migrate/#editing-config-vars-in-railway)
+<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" /> [Editing Config Vars in Railway](../../vendors/railway.app/new_user/#editing-variables-in-railway)
 
 <img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> [Control Panel](../../../vendors/T1Pal/new_user/#configure-more-settings) will allow to modify some of these variables.
 
