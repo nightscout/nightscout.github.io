@@ -42,7 +42,7 @@ Keep in mind a free M0 MongoDB Atlas database size is limited to 512MB and you w
 !!! warning "Already have a GitHub account?"  
     [Delete the cgm-remote-monitor fork](../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor) from your GitHub (if present) before proceeding.
 
-If you don't have a GitHub account [create one](../../../nightscout/github/#create-a-github-account) and come back.
+If you don't have a GitHub account follow [**this link**](../../../nightscout/github/#create-a-github-account) to create one and come back.
 
 </br>
 
@@ -56,7 +56,7 @@ a) Open [Railway](https://railway.app) in a new browser tab and click `login`. L
 
 </br>
 
-b) Select `Authorize Railway App`.
+b) If the following screen shows-up, select `Authorize Railway App`.
 
 <img src="../img/Railway02.png" style="zoom:80%;" />
 
@@ -87,7 +87,7 @@ If it still shows 200 hours, refresh your browser page.
 
 </br>
 
-g) If you need to use Nightscout for more than 500 hours per month you need to upgrade your account to a Developer plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
+g) You need to use Nightscout for more than 500 hours per month: upgrade your account to a Developer plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
 
 <img src="../img/Railway06b.png" style="zoom:80%;" />
 
@@ -105,7 +105,7 @@ Your card will be billed 1$ that will be refund immediately. Bank fees won't be 
     <img src="../img/Railway06d.png" style="zoom:80%;" />  
     <img src="../img/Railway06e.png" style="zoom:80%;" />  
     If you are reluctant to leave a billing method to Railway, you can **opt for a one-off 5$ purchase guaranteeing you access to a Developer plan** until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).  
-    No billing will occur after the initial credits are fully used. They will transfer month to month (*note: we need to check for how long they transfer if not used.*) 
+    No billing will occur after the initial credits are fully used. They will transfer month to month with no known limit in time.
 
 </br>
 
@@ -339,8 +339,9 @@ Your Railway app will now automatically deploy.
 q) You can see your new Nightscout site name in the deployment tab of your project. Click on the name to open Nightscout.  
 Click on the link to open it.
 
-!!!info "Railway site name"  
-    You can [change your Railway site name](#change-your-railway-nightscout-site-name) in order to make it easier to remember. **Recommended**. You will do this later, before setting your uploaders.
+!!!info "Change Railway site name"  
+    You should [change your Railway site name](#change-your-railway-nightscout-site-name) now in order to make it easier to remember. **Recommended**.  
+    You can also do this later, before setting your uploaders.
 
 <img src="../img/RailwayM14.png" style="zoom:80%;" />
 
@@ -387,7 +388,10 @@ w) If you need to modify your profile after this, authenticate with the lock ico
 
 </br>
 
-x) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
+x) Dexcom Share users should see data flowing in after some minutes.
+xDrip+ users (including Medtronic [CareLink followers](../../../uploader/uploaders/#medtronic)) should setup the uploader as shown [**here**](../../../uploader/setup/#xdrip).
+xDrip4iOS users [here](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#nightscout-upload).
+[AAPS](https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient) and [Loop](https://loopkit.github.io/loopdocs/operation/loop-settings/services/): consult the relative documentation.
 
 <img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
 

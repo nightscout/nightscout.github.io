@@ -28,7 +28,7 @@ GitHub: [https://www.githubstatus.com/](https://www.githubstatus.com/)
 
 Heroku: [https://status.heroku.com/](https://status.heroku.com/)
 
-Railway: 
+Railway: [https://railway.instatus.com/](https://railway.instatus.com/)
 
 Atlas: [https://status.cloud.mongodb.com/](https://status.cloud.mongodb.com/)
 

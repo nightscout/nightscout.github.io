@@ -90,9 +90,7 @@ For hosted Nightscout put your Dexcom credentials [in Dexcom Bridge](https://www
 
 !!!warning "The `mmconnect` plugin is **NOT** functional anymore with cloud Nightscout sites."
 
-You can use an Android phone with a [private version of xDrip+](https://github.com/benceszasz/xDripCareLinkFollower). See [here](../../uploader/setup/#xdrip) how to set it up.
-
-Plugin setup documented [here](https://github.com/nightscout/cgm-remote-monitor/#mmconnect-minimed-connect-bridge) with [additional fields](https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring) for your pump.
+You can use an Android phone with a private version of xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up.
 
 </br>
 
@@ -116,6 +114,17 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
     <span style="font-size:larger;">**`https://API_SECRET@my_nightscout_url/api/v1/`**</span>  
     `my_nightscout_url` will depend on where your site is hosted (herokuapp.com, railway.app, fly.io, ...)  
     You will find your `API_SECRET`in your site variables.
+
+Here is how it will look like for some vendors:
+
+```html
+https://yoursite.herokuapp.com/api/v1/
+https://yoursite.up.railway.app/api/v1/
+https://yoursite.guest.t1pal.com/api/v1/
+https://yoursite.10be.de/api/v1/
+```
+
+</br>
 
 <img src="../img/UploadCFG00.png" style="zoom:80%;" />
 

@@ -45,6 +45,7 @@ nav:
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Configure your Uploader': 'uploader/setup.md'
+    - 'xDrip+ CareLink bridge': 'uploader/xdripcarelink.md'
     - 'Follower Devices': 'nightscout/downloaders.md'
     - 'Nightscout on your watch': 'nightscout/wearable.md'
     - 'Running multiple sites': 'nightscout/multiadmin.md'
