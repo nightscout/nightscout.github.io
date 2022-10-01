@@ -6,17 +6,16 @@
 
 ---
 
-!!!info "Cost"  
-    [Railway](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**. Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).  
-    <img src="../img/RailwayFree.png" style="zoom:80%;" />  
-      
+!!!info "Cost"
 
-    **You can use Railway for free subscribing to a [Developer plan](https://railway.app/pricing)**.
+You can create your **Railway Nightscout site for free** (using a MongoDB Atlas database) by subscribing to a [Developer plan](https://railway.app/pricing). You will need to add a credit card to your Railway account but since Nightscout usage will remain below the free 5$ threshold per month, **you will not be billed**.
+
+</br>
 
 Keep in mind a free M0 MongoDB Atlas database size is limited to 512MB and you will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) the additional cost is 9$ per month.   
 
 !!!warning "Database"    
-    Adding a MongoDB database to your Railway account might increase costs.  
+    Adding a Railway MongoDB database to your Railway account will eventually generate costs.  
     The Developer plan offers Max 100 GB of Disk (Soft cap) but mind the cost $0.000231 / GB / Minute will quickly reach 5$ for a 512MB database.
 
 </br>
@@ -114,15 +113,7 @@ Your card will be billed 1$ that will be refund immediately. Bank fees won't be 
 !!!note "Already have a database?"  
     If you're migrating from another platform and you already have database connection string from another Nightsout deployment, just copy the `MONGODB_URI` or `MONGO_CONNECTION` string and keep your data!
 
-You have several choices.
-
-- #### You can reuse your existing MongDB Atlas database.    
-
-!!!info "Costs"  
-    Recommended for Heroku migration.
-
-Migrating from Heroku? [Edit your Heroku site variables](../../heroku/new_user#editing-config-vars-in-heroku) and copy the `MONGODB_URI` or `MONGO_CONNECTION` variable.  
-    Lost your string? [Recover it](../../../troubleshoot/atlas/#recover-your-connection-string) from MongoDB Atlas.
+You have two choices.
 
 - #### You can create a new MongoDB Atlas database.
 
@@ -136,7 +127,7 @@ The Atlas database size is limited to 512MB of data and is free to try. This mig
 
 !!!warning "Costs"  
     Adding a Railway Mongo database will not fit forever in 5$ per month.  
-    If you don't keep its dimension very small (<500MB *to be checked*) you will most probably be charged for it.
+    If you don't keep its dimension very small (<200MB) you will most probably be charged for it.
 
 a) Click `New Project` from your Dashboard screen (top right).
 

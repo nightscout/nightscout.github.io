@@ -6,11 +6,11 @@
 
 ---
 
-!!!info "Cost"  
-    [Railway](https://railway.app/) offers 500 free hours of execution usage per month for the [Starter plan](https://docs.railway.app/reference/plans#starter-plan) **this is not enough to cover a full month**. Running multiple free accounts to override this limitation is [not acceptable](https://railway.app/legal/fair-use).  
-    <img src="../img/RailwayFree.png" style="zoom:80%;" />  
-      
-    **You can migrate from Heroku to Railway and keep your Nightscout site for free (maintaining your MongoDB Atlas database) by subscribing to a [Developer plan](https://railway.app/pricing)**.
+!!!info "Cost"
+
+You can migrate from Heroku to Railway and **keep your Nightscout site for free** (maintaining your MongoDB Atlas database) by subscribing to a [Developer plan](https://railway.app/pricing). You will need to add a credit card to your Railway account but since Nightscout usage will remain below the free 5$ threshold per month, **you will not be billed**.
+
+</br>
 
 Keep in mind the free M0 MongoDB Atlas database size is limited to 512MB and you will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters), the additional cost is 9$ per month.
 

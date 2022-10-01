@@ -25,7 +25,7 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 
 #### Exploration paths:
 
-[Azure](../../vendors/azure/new_azure)  
+[Azure](../../vendors/azure/new_user)  
 
 ## Vendors comparison table
 
