@@ -8,24 +8,24 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 #### Currently fully documented solutions:
 
 [Heroku](../../vendors/heroku/new_user) with MongoDB Atlas.  
-[Railway](../../vendors/railway/new_user) with its own database or with a MongoDB Atlas (can be used for migration).  
+[Railway](../../vendors/railway/new_user) with its own database or with a MongoDB Atlas (and [Heroku to Railway migration](../../vendors/railway/migration)).  
 
 #### Work in progress solutions:
 
 [Northflank](../../vendors/northflank/new_user) with its own database or with a MongoDB Atlas (can be used for migration).  
-[Fly.io](../../vendors/fly.io/new_user/) is being worked on... stay tuned.
+[Digital Ocean](../../vendors/digitalocean/new_user)    
+[Synology](../../vendors/synology/new_user)  
 
 #### External documentation to be consolidated:
 
 [Google Cloud](../../vendors/google/new_user)  
 [MVPS](../../vendors/MVPS/new_user)  
-[Digital Ocean](../../vendors/digitalocean/new_user)  
 [Oracle](../../vendors/oracle/new_user)  
-[Synology](../../vendors/synology/new_user)
+[Azure](../../vendors/azure/new_user)  
 
 #### Exploration paths:
 
-[Azure](../../vendors/azure/new_user)  
+[Fly.io](../../vendors/fly.io/new_user/)
 
 ## Vendors comparison table
 
