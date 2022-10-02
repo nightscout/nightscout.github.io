@@ -7,8 +7,10 @@ Make sure you read and undertand **[this](/#how-much-does-it-cost)** before star
 
 #### Currently fully documented solutions:
 
-[Heroku](../../vendors/heroku/new_user) with MongoDB Atlas.  
-[Railway](../../vendors/railway/new_user) with its own database or with a MongoDB Atlas (and [Heroku to Railway migration](../../vendors/railway/migration)).  
+[Heroku Hobby account](../../vendors/heroku/new_user) with MongoDB Atlas.
+
+Railway free Developer account with its own database or with a MongoDB Atlas (and [Heroku to Railway migration](../../vendors/railway/migration)).  
+Use either of the methods until we find out which is easier: [Method 1](../../vendors/railway/new_user) or [Method 2](../../vendors/railway/new_user2).  
 
 #### Work in progress solutions:
 
