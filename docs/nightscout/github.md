@@ -70,6 +70,8 @@ Confirm with `Create fork`
 
 <img src="../../../nightscout/img/NewNS51.png" style="zoom:70%;" />
 
+***Note:*** *in orange in the picture above, if you already know you'll want to deploy branches different from the latest `master` release, uncheck this box.*
+
 </br>
 
 c) Wait for a moment

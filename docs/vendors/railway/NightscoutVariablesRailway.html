@@ -250,7 +250,7 @@ function Validate()
   if((e1.length + e2.length + e3.length)<1)
   {
     document.getElementById("result1").innerHTML = "Validation is PASS.";
-    document.getElementById("result3").innerHTML = "Select all text from the box below and copy it. Go back into Railway raw editor, ENV and paste it.";
+    document.getElementById("result3").innerHTML = "Click on the Copy All button below. Go back into Railway raw editor, ENV and paste.";
     CopyAll();
   }
 };
@@ -342,6 +342,18 @@ sLine = "SHOW_PLUGINS=" + document.getElementById("SHOW_PLUGINS").value; sBuffer
   document.getElementById("NSVARS").innerHTML = sBuffer;
 };
 
+function CopyToClipboard() {
+
+  var copyText = document.getElementById("NSVARS");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  navigator.clipboard.writeText(copyText.value);
+
+   alert("Variables copied, now paste them in Railway Raw Editor.");
+}
+
 </script>
 
 </br></br>
@@ -352,6 +364,8 @@ sLine = "SHOW_PLUGINS=" + document.getElementById("SHOW_PLUGINS").value; sBuffer
   <p id="result2"></p>
   <p id="result3"></p>
   
+</br></br>
+<button onclick="CopyToClipboard()">Copy All</button>
 </br></br>
 <textarea id="NSVARS" name="NSVARS" rows="27" cols="150">
 Once validated you will see all Railway Nightscout variables in this box.
