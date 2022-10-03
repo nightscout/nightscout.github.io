@@ -313,7 +313,7 @@ You have created your Nightscout MongoDB database and its user.
 ### Step 5 - Install Nightscout
 
 a) Create a new user.  
-You are now running Ubunto with highest privilege. Don't try to run nightscout as root user, it will not work.  
+You are now running Ubuntu with highest privilege. Don't try to run Nightscout as root user, it will not work.  
 **Replace `mainuser`** with a name of your choice, like your name, only lowercase letters.
 
 ```bash
@@ -327,7 +327,7 @@ In the example below, the user name is `john`.
 You need to invent a password for your new user.  
 Confirm it then just hit `Enter` for the following lines, when done key `Y` then `Enter`.
 
-<img src="../img/DO26.png" style="zoom:80%;" />
+<img src="../img/DO26.png" style="zoom:80%;" /> <!--  MyNightscout -->
 
 </br>
 
@@ -350,5 +350,82 @@ Type the following command:
 **Replace `mainuser`** with your new user name.
 
 ```
-ssh mainuser@IP-number
+sudo -u mainuser -s
 ```
+
+In the example below, the user name is `john`.
+
+<img src="../img/DO28.png" style="zoom:80%;" />
+
+</br>
+
+d) Install `nodejs` and `npm`.  
+Type the following command:
+
+```
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+```
+
+<img src="../img/DO29.png" style="zoom:80%;" />
+
+</br>
+
+Once complete, type the following command:
+
+```
+sudo apt-get install -y nodejs
+```
+
+<img src="../img/DO30.png" style="zoom:80%;" />
+
+</br>
+
+e) Clone the Nightscout repository `cgm-remote-monitor`.  
+Enter the following commands, one at a time, enter each time:
+
+```
+cd
+```
+
+```
+git clone https://github.com/nightscout/cgm-remote-monitor.git
+```
+
+<img src="../img/DO32.png" style="zoom:80%;" />
+
+```
+ln -s cgm-remote-monitor nightscout
+```
+
+```
+cd nightscout
+```
+
+<img src="../img/DO33.png" style="zoom:80%;" />
+
+</br>
+
+f) Install Nightscout.  
+Type the following command:
+
+```
+npm install
+```
+
+<img src="../img/DO34.png" style="zoom:80%;" />
+
+It will take a long time to complete. Be patient.
+
+</br>
+
+### Step 6 - Configure Nightscout
+
+a) Create a new user.  
+You are now running Ubuntu with highest privilege. Don't try to run Nightscout as root user, it will not work.  
+**Replace `mainuser`** with a name of your choice, like your name, only lowercase letters.
+
+```bash
+sudo adduser mainuser
+```
+
+In the example below, the user name is `john`.
