@@ -34,6 +34,10 @@ b) Authorize Fly.io for Github:
 
 </br>
 
+c) You don't need to input card information to get nightscout running so click the 'Try fly.io for free' button:
+
+<img src="../../nightscout/img/try-fly.io-free.png" style="zoom:80%;" />>
+
 ## Step 4: Create an Atlas account
 
 Follow [these steps](../../../vendors/mongodb/atlas/#create-an-atlas-database) and come back.
@@ -54,38 +58,67 @@ b) clone the fork locally
 
 </br>
 
+c) Open a terminal and navigate to the directory where you code has been cloned locally
+
+d) Deploy nightscout into fly.io by typing `flyctl launch`
+
 !!! note "You're getting into the core setup of your site"
 
-    Below you'll see the minimum required configuration, you can modify the variables later in Heroku.
+    Below you'll see the minimum required configuration, you can modify the variables later in the flyctl command line tool.
 
 </br>
 
-c) Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Confirm that the name is available.
+## Step 5: Setting Variables
 
-d) Don’t change the region.
+When changing a secret, the app will automatically redeploy. You will see this sequence (it will take a few minutes):
 
-<img src="../../../nightscout/img/NewNS33.png" style="zoom:80%;" />
+```
+Release v1 created
+==> Monitoring deployment
 
-</br>
+ 1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]
+--> v1 deployed successfully
+```
 
-Scroll down and setup the following variables:
+Until near the end of this step the CLI will report that you have a critical error because the app doesn't have all the variables it needs to start. Once you see the critical error notification in your terminal you can `ctrl-c` and exit that command process. 
 
  </br>
+!!! note
+    If you want to create a new secret or modify an existing one you need to use the `flyctl secrets set` command.  
+    For example if you want to set a variable to **Th1515MyP455w0rd**, type:
 
-e) `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
+    ```
+    flyctl secrets set MY_MAD_VARIABLE="Th1515MyP455w0rd" -a yourappname
+    ```
+
+    *Note: replace `yourappname` in the example with the real name of your Fly.io Nightscout app although this is not always required if working in the directory you've deployed from as it already has that context.
+
+!!!warning "Secrets"  
+    You **cannot see the values of your secret variables as they are secret**.  
+    You can only delete them and set them: you **cannot edit them**.  
+    Please make sure you write them down somewhere!
+
+</br>
+
+Fly.io variables are named `Secrets` and you cannot visualize them.  
+Look [here](https://fly.io/docs/getting-started/working-with-fly-apps/#working-with-secrets) for more details.
+
+</br>
+
+a) `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
 
 !!!warning "The API_SECRET is the **main password allowing full access to your Nightscout site**. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and **do no not share it publicly**. If you think you exposed it by mistake, it is recommended that you **change it**."
 
-<img src="../../../nightscout/img/NewNS34.png" style="zoom:80%;" />
+To create secrets in fly.io use the `flyctl secrets` command. 
+
+To set the `API_SECRET` type `flyctl secrets set API_SECRET=MyAPISecret123` where `MyAPISecret123` is your API Secret.
 
 </br>
 
-f) If you want to link your Dexcom Share account as a data source, complete the following lines:
+b) If you want to link your Dexcom Share account as a data source, complete the following lines:
 
 !!!note  
     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing using Dexcom Share and the `bridge` plugin.
-
-<img src="../../../nightscout/img/NewNS35.png" style="zoom:80%;" />
 
 </br>
 
@@ -98,96 +131,87 @@ f) If you want to link your Dexcom Share account as a data source, complete the 
 !!! info
     You need to have at least one follower to use Dexcom Share. See [here](../../../uploader/setup/#dexcom).
 
-</br>
+There are 3 dexcom share secrets to set:
 
-g) Linking your CareLink account as a data source is **not possible anymore using cloud hosted Nightscout sites**.  
-Use an Android bridge device with a private version of xDrip+.  
-More information **[here](../../../uploader/xdripcarelink)**.
+    1. `BRIDGE_SERVER`: Either `EU` or `US` depending on your Dexcom clarity login.
+    2. `BRIDGE_USER_NAME`:  Your Dexcom Clarity username
+    3. `BRIDGE_PASSWORD`: Your Dexcom Clarity password
 
-<img src="../../../nightscout/img/NewNS36.png" style="zoom:60%;" />
-
-</br>
-
-j) Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
-
-<img src="../../../nightscout/img/NewNS37.png" style="zoom:80%;" />
+These are formed together into a command that looks like `flyctl secrets set BRIDGE_SERVER=<EU|US> BRIDGE_USER_NAME=<MyUserName> BRIDGE_PASSWORD=<MyPassword>` where the arguments in the `< >` are replaced with your credentials. 
 
 </br>
 
-h) In `ENABLE`, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
+c) Set the units to use for Nightscout where acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`). 
+The command is `flyctl secrets set DISPLAY_UNITS=<units>`
+
+d) For the ENABLE variable, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
 
-**If you are using your Dexcom share account as a data source** also add `bridge` at the end, after a space like this:
+If you are using your Dexcom share account as a data source also add bridge at the end, after a space like this:
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge`
 
-<img src="../../../nightscout/img/NewNS38.png" style="zoom:80%;" />
+Now put that into a secrets command for flyctl:
 
-!!! note "`ENABLE` words"
-    You find more information about the `ENABLE` words on the: [Setup page](../../../nightscout/setup_variables)
+`flyctl secrets set ENABLE="careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge"`
 
-</br>
+!!! info
+    Ensure you have `" "` surrounding your words to make sure all of it is captured within the variable.
 
-i) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the `MONGODB_URI` variable field.
 
-<img src="../../../nightscout/img/NewNS39.png" style="zoom:80%;" />
+e) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Set the MONGODB_URI with `flyctl secrets set MONGODB_URI="mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority"` with the URI replaced with the correct string for your Mongo instance. 
 
 Make sure it looks like this one below and NOTE: THERE ARE NO < AND > CHARACTERS:
 
-`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority`
+mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority
+
+!!! info
+    Ensure you have `" "` surrounding your URI to make sure all of it is captured within the variable.
 
 </br>
 
-j) Scroll down to the end of the list and click `Deploy app`
+## Step 6: Nightscout Application Configuration
 
-<img src="../../../nightscout/img/NewNS40.png" style="zoom:80%;" />
+a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard click on the application (rather than the builder):
 
-</br>
+<img src="../../nightscout/img/fly.io-dashboard.png" style="zoom:80%;" />
 
-k) **WAIT** until completion (will take some time). Do not interrupt the process until it's complete.
+b) Inside your app you should see that it is running and has a clickable hostname.
 
-<img src="../../../nightscout/img/NewNS41.png" style="zoom:80%;" />
+<img src="../../nightscout/img/fly.io-application-dashboard.png" style="zoom:80%;" />
 
-</br>
-
-l) Then click `View` (if nothing happens, click `Manage App` -> `Open App`, in upper right corner)
-
-<img src="../../../nightscout/img/NewNS42.png" style="zoom:80%;" />
-
-</br>
-
-m) Your Nightscout site should open and direct you to a new profile creation.
+c) Your Nightscout site should now be ready to open and direct you to a new profile creation.
 
 <img src="../../../nightscout/img/NewNS50.png" style="zoom:100%;" />
 
 </br>
 
-n) Setup your `Time zone` and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.
+d) Setup your `Time zone` and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.
 
 <img src="../../../nightscout/img/NewNS44.png" style="zoom:80%;" />
 
 </br>
 
-o) Browse down to `Authentication status` and click `Authenticate`. Enter your API secret. Click `Update`.
+e) Browse down to `Authentication status` and click `Authenticate`. Enter your API secret. Click `Update`.
 
 <img src="../../../nightscout/img/NewNS45.png" style="zoom:80%;" />
 
 </br>
 
-p) Click `Save`.
+f) Click `Save`.
 
 <img src="../../../nightscout/img/NewNS46.png" style="zoom:80%;" />
 
 </br>
 
-q) If the following pop-up shows up click `OK`, and check status (upper right of the window).
+g) If the following pop-up shows up click `OK`, and check status (upper right of the window).
 
 <img src="../../../nightscout/img/NewNS47.png" style="zoom:80%;" />
 
 </br>
 
-r) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select `Profile Editor`.
+h) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select `Profile Editor`.
 
 <img src="../../../nightscout/img/NewNS43.png" style="zoom:80%;" />
 
@@ -198,7 +222,7 @@ r) If you need to modify your profile after this, authenticate with the lock ico
 
 </br>
 
-s) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
+i) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
 
 <img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
 
@@ -214,64 +238,11 @@ s) Dexcom Share and CareLink users should see data flowing in after some minutes
 
 
 
-## Step 5: Uploader setup
+## Step 7: Uploader setup
 
 </br>
 
 Continue to [uploader](../../../uploader/setup/) setup.
-
-</br>
-
-## Editing Secrets in Fly.io
-
-</br>
-
-!!!warning "Secrets"  
-    You **cannot see the values of your secret variables as they are secret**.  
-    You can only delete them and set them: you **cannot edit them**.  
-    Please make sure you write them down somewhere!
-
-</br>
-
-**Once Nightscout deployed, you need to install [flyctl](https://fly.io/docs/hands-on/install-flyctl/) to access your variables in order to change or customize your site.**
-Variables are described [here](../../../nightscout/setup_variables/#nightscout-config-vars).
-
-[Sign in with GitHub](https://fly.io/docs/hands-on/sign-in/) in your CLI interface (Powershell/Terminal).  
-A new browser will open. Select the entry with your email address.  
-If required, authenticate through GitHub.
-
-<img src="../img/FlyM16.png" style="zoom:80%;" />
-
-</br>
-
-Fly.io variables are named `Secrets` and you cannot visualize them.  
-Look [here](https://fly.io/docs/getting-started/working-with-fly-apps/#working-with-secrets) for more details.
-
-</br>
-
-If you want to create a new secret or modify an existing one you need to use the `flyctl secrets set` command.  
-For example if you want to set your Nightscout site API Secret to **Th1515MyP455w0rd**, type:
-
-```
-flyctl secrets set API_SECRET="Th1515MyP455w0rd" -a yourappname
-```
-
-*Note: replace `yourappname` in the example with the real name of your Fly.io Nightscout app.*
-
-If your `API_SECRET` secret was already set to `Th1515MyP455w0rd` you will see the following message:  
-`Error No change detected to secrets. Skipping release.`
-
-Now put back your original API Secret password with the same command.
-
-When changing a secret, the app will automatically redeploy. You will see this sequence (it will take a few minutes):
-
-```
-Release v1 created
-==> Monitoring deployment
-
- 1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]
---> v1 deployed successfully
-```
 
 </br>
 
