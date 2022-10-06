@@ -12,7 +12,7 @@ Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 </br>
 
-**WORK IN PROGRESS DO NOT USE YET**
+**WORK IN PROGRESS DO NOT USE**
 
 <img src="../../../img/WIP.png" style="zoom:80%;" />
 
@@ -49,6 +49,8 @@ c) Select `Deploy a virtual machine`.
 </br>
 
 d) Select `Ubuntu 20.04 (TLS) x64` using the drop down menu.
+
+!!!warning "Do not use 22.04 as MongoDB is [not yet supported](https://www.mongodb.com/community/forums/t/installing-mongodb-over-ubuntu-22-04/159931/58) in this release"
 
 <img src="../img/DO04.png" style="zoom:80%;" />
 
@@ -123,6 +125,15 @@ sudo apt-get update && apt-get upgrade -y
 You will see it's completed when the terminal stops scrolling text and you're returned to the prompt. Something like this:
 
 <img src="../img/DO14.png" style="zoom:80%;" />
+
+**If you see the following message: `*** System restart required ***` you will need to reboot**. Do not skip this step.
+
+Type the following command and wait 5 minutes before opening again the console as in **a)** above.  
+Your system will reboot after one minute after you enter the command. Wait.
+
+```bash
+shutdown -r
+```
 
 </br>
 
@@ -283,7 +294,17 @@ In the example below the database username is `john_nightscout`, the password is
 
 </br>
 
-d) Check you can login into Mongo with this user typing this command:  
+d) Exit the shell entering:
+
+```bash
+exit
+```
+
+Mongo will answer `bye` and you'll be back to Ubuntu's command prompt.
+
+</br>
+
+e) Check you can login into Mongo with this user typing this command:  
 **BUT** you need to **replace** `MONGO_NS_USER` with your own database administrator name, and replace `MONGO_NS_DB` with your own database name. The ones you decided above in **Step 3.c.**
 
 ```bash
@@ -296,7 +317,9 @@ This is the example continued, don't use `john_nightscout`: use your own.
 
 <img src="../img/DO21.png" style="zoom:80%;" />
 
-e) Exit the shell entering:
+</br>
+
+f) Exit the shell entering:
 
 ```bash
 exit
@@ -420,12 +443,87 @@ It will take a long time to complete. Be patient.
 
 ### Step 6 - Configure Nightscout
 
-a) Create a new user.  
-You are now running Ubuntu with highest privilege. Don't try to run Nightscout as root user, it will not work.  
-**Replace `mainuser`** with a name of your choice, like your name, only lowercase letters.
+a) Edit the configuration file.
 
 ```bash
-sudo adduser mainuser
+nano my.env
 ```
 
-In the example below, the user name is `john`.
+A text editor will open. Leave it like that for the moment.
+
+<img src="../img/DO35.png" style="zoom:80%;" />
+
+</br>
+
+b) Identify your IP.  
+Go back in your droplet settings and write down the `IPv4` information. You will need it in the form below for `BASE_URL`.
+
+<img src="../img/DO36.png" style="zoom:80%;" />
+
+</br>
+
+c) Open the [**helper page**](../NightscoutVariablesUbuntu.html) in a new browser tab.
+
+File all necessary fields, click on the Validate button at the bottom of the form, if no error is seen you will have all variables displayed in the text box at the bottom, click on the Copy All button.
+
+d) Return to the text editor. Paste the result in `nano`.
+
+<img src="../img/DO37.png" style="zoom:80%;" />
+
+e) Save the modified file:
+
+1. Press `Ctrl-O`    (the letter O not zero)
+2. Press `Enter`
+3. Press `Ctrl-X`
+
+*Note: if you use a Mac the `Ctrl` key is `⌘`*
+
+</br>
+
+f) Install `pm2`.  
+Type the following command:
+
+```
+sudo npm install pm2 -g
+```
+
+<img src="../img/DO38.png" style="zoom:80%;" />
+
+</br>
+
+g) Start cgm-remote-monitor with `pm2`.  
+Type the following command:
+
+```
+env $(cat my.env)  PORT=1337 pm2 start server.js
+```
+
+<img src="../img/DO39.png" style="zoom:80%;" />
+
+</br>
+
+h) Make `pm2` start cgm-remote-monitor on startup.  
+
+Type the following command:
+
+```
+pm2 startup
+```
+
+This will give you a command you need to run as superuser to allow pm2 to start the app on reboot.
+The command will be something like: `sudo su -c "env PATH=$PATH:/usr/bin pm2 startup ..."`
+
+Copy the tailored command, paste and execute it.
+
+</br>
+
+i) Save it.
+
+```
+pm2 save
+```
+
+Your Nightscout site is not available at http:// and the IP address you found in b) but it's not secured so most browsers will refuse it.
+
+</br>
+

@@ -77,7 +77,7 @@ Click on the vendor logo.
         <td>Medium</td>
     </tr>
     <tr>
-        <td><a href="/vendors/northflank/new_user"><img src="../../vendors/img/northflank.png" align="center"></a></td>
+        <td><a href="/vendors/northflank/new_user"><img src="../../vendors/img/Northflank.png" align="center"></a></td>
         <td>Free -></br>???$/month</td>
         <td>Yes</td>
         <td>Yes</td>
