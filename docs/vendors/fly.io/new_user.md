@@ -10,6 +10,12 @@ Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 </br>
 
+**WORK IN PROGRESS DO NOT USE**
+
+<img src="../../../img/WIP.png" style="zoom:80%;" />
+
+</br>
+
 ## Set up a new Nightscout
 
 ## Step 1: Create a GitHub account
@@ -26,17 +32,22 @@ Fly.io is mainly managed through a command line interface (CLI). The first step 
 
 ## Step 3: Create a fly.io account
 
-a) `flyct auth signup` will begin the signup process, alternativly go to https://fly.io/app/sign-up to login. Given a Github account has already been created in step 1 'Sign up with Github' is recommended.
-
-b) Authorize Fly.io for Github:
-
-<img src="../../nightscout/img/fly.io-github-auth.png" style="zoom:80%;" />
+a) `flyct auth signup` will begin the signup process, alternatively go to [https://fly.io/app/sign-up](https://fly.io/app/sign-up) to login.  
+Sign up with Github.
 
 </br>
 
-c) You don't need to input card information to get nightscout running so click the 'Try fly.io for free' button:
+b) Authorize Fly.io for GitHub:
 
-<img src="../../nightscout/img/try-fly.io-free.png" style="zoom:80%;" />>
+<img src="../img/fly.io-github-auth.png" style="zoom:80%;" />
+
+</br>
+
+c) You don't need to input card information to get Nightscout running so click the `Try fly.io for free` button:
+
+<img src="../img/try-fly.io-free.png" style="zoom:80%;" />
+
+</br>
 
 ## Step 4: Create an Atlas account
 
@@ -52,15 +63,18 @@ a) [Fork the Nightscout cgm-remote-monitor project](../../../nightscout/github/#
 
 b) clone the fork locally 
 
-<img src="../../../nightscout/img/NewNS31.png" style="zoom:80%;" />
-
-<img src="../../../nightscout/img/NewNS32.png" style="zoom:80%;" />
+<!-- *Note: this needs documentation.*
+*Using Git / Git Bash is better. Else download the zipped file and extract it in a place you can find back easily.* -->
 
 </br>
 
 c) Open a terminal and navigate to the directory where you code has been cloned locally
 
-d) Deploy nightscout into fly.io by typing `flyctl launch`
+<!-- *Note: this needs documentation.* -->
+
+</br>
+
+d) Deploy Nightscout into fly.io by typing `flyctl launch`
 
 !!! note "You're getting into the core setup of your site"
 
@@ -90,7 +104,7 @@ Until near the end of this step the CLI will report that you have a critical err
     ```
     flyctl secrets set MY_MAD_VARIABLE="Th1515MyP455w0rd" -a yourappname
     ```
-
+    
     *Note: replace `yourappname` in the example with the real name of your Fly.io Nightscout app although this is not always required if working in the directory you've deployed from as it already has that context.
 
 !!!warning "Secrets"  
@@ -111,7 +125,13 @@ a) `API_SECRET` will be your Nightscout site password, it needs to be at least 1
 
 To create secrets in fly.io use the `flyctl secrets` command. 
 
-To set the `API_SECRET` type `flyctl secrets set API_SECRET=MyAPISecret123` where `MyAPISecret123` is your API Secret.
+To set the `API_SECRET` type
+
+```
+flyctl secrets set API_SECRET=MyAPISecret123
+```
+
+where `MyAPISecret123` is your API Secret.
 
 </br>
 
@@ -137,12 +157,24 @@ There are 3 dexcom share secrets to set:
     2. `BRIDGE_USER_NAME`:  Your Dexcom Clarity username
     3. `BRIDGE_PASSWORD`: Your Dexcom Clarity password
 
-These are formed together into a command that looks like `flyctl secrets set BRIDGE_SERVER=<EU|US> BRIDGE_USER_NAME=<MyUserName> BRIDGE_PASSWORD=<MyPassword>` where the arguments in the `< >` are replaced with your credentials. 
+These are formed together into a command that looks like:
+
+```
+flyctl secrets set BRIDGE_SERVER=<EU|US> BRIDGE_USER_NAME=<MyUserName> BRIDGE_PASSWORD=<MyPassword>
+```
+
+where the arguments in the `< >` are replaced with your credentials. 
 
 </br>
 
 c) Set the units to use for Nightscout where acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`). 
-The command is `flyctl secrets set DISPLAY_UNITS=<units>`
+The command is:
+
+```
+flyctl secrets set DISPLAY_UNITS=<units>
+```
+
+ </br>
 
 d) For the ENABLE variable, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
@@ -154,13 +186,22 @@ If you are using your Dexcom share account as a data source also add bridge at t
 
 Now put that into a secrets command for flyctl:
 
-`flyctl secrets set ENABLE="careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge"`
+```
+flyctl secrets set ENABLE="careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge"
+```
 
 !!! info
     Ensure you have `" "` surrounding your words to make sure all of it is captured within the variable.
 
+</br>
 
-e) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Set the MONGODB_URI with `flyctl secrets set MONGODB_URI="mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority"` with the URI replaced with the correct string for your Mongo instance. 
+e) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Set the MONGODB_URI with:
+
+```
+flyctl secrets set MONGODB_URI="mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority"
+```
+
+with the URI replaced with the correct string for your Mongo instance. 
 
 Make sure it looks like this one below and NOTE: THERE ARE NO < AND > CHARACTERS:
 
@@ -175,11 +216,11 @@ mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrite
 
 a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard click on the application (rather than the builder):
 
-<img src="../../nightscout/img/fly.io-dashboard.png" style="zoom:80%;" />
+<img src="../img/fly.io-dashboard.png" style="zoom:80%;" />
 
 b) Inside your app you should see that it is running and has a clickable hostname.
 
-<img src="../../nightscout/img/fly.io-application-dashboard.png" style="zoom:80%;" />
+<img src="../img/fly.io-application-dashboard.png" style="zoom:80%;" />
 
 c) Your Nightscout site should now be ready to open and direct you to a new profile creation.
 
@@ -226,17 +267,7 @@ i) Dexcom Share and CareLink users should see data flowing in after some minutes
 
 <img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
 
-</br>
-
-##### Papertrail
-
-- Finally, you might want to modify the `PAPERTRAIL_API_TOKEN` line. Heroku offers a free, tiny amount of Papertrail service (this is like a logging service for how the site is running), but this generates a lot of confusion to most people later on, when they get a message that their "Free Papertrail Service has run out of room". Papertrail is not needed, edit the line and add `DISABLED` at the end, so that you can recover the function if you need it later.
-
-<img src="../../../nightscout/img/NewNS49.png" style="zoom:80%;" />
-
 </br></br>
-
-
 
 ## Step 7: Uploader setup
 
