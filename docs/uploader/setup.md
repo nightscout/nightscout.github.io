@@ -118,10 +118,10 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
 Here is how it will look like for some vendors:
 
 ```html
-https://yoursite.herokuapp.com/api/v1/
-https://yoursite.up.railway.app/api/v1/
-https://yoursite.guest.t1pal.com/api/v1/
-https://yoursite.10be.de/api/v1/
+https://API_SECRET@yoursite.herokuapp.com/api/v1/
+https://API_SECRET@yoursite.up.railway.app/api/v1/
+https://API_SECRET@yoursite.guest.t1pal.com/api/v1/
+https://API_SECRET@yoursite.10be.de/api/v1/
 ```
 
 </br>
