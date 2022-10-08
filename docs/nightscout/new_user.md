@@ -14,7 +14,8 @@ Use either of the methods until we find out which is easier: [Method 1](../../ve
 
 #### Work in progress solutions:
 
-[Northflank](../../vendors/northflank/new_user) with its own database or with a MongoDB Atlas (can be used for migration).  
+[Northflank](../../vendors/northflank/new_user) with its own database or with a MongoDB Atlas (and [Heroku to Northflank migration](../../vendors/northflank/migrate)).  
+[Fly.io](../../vendors/fly.io/new_user/) with a MongoDB Atlas database (and [Heroku to Fly.io migration](../../vendors/fly.io/migrate)).  
 [Digital Ocean](../../vendors/digitalocean/new_user)    
 [Synology](../../vendors/synology/new_user)  
 
@@ -27,7 +28,7 @@ Use either of the methods until we find out which is easier: [Method 1](../../ve
 
 #### Exploration paths:
 
-[Fly.io](../../vendors/fly.io/new_user/)
+
 
 ## Vendors comparison table
 

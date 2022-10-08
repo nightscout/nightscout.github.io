@@ -3,11 +3,6 @@
 
 <span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../../vendors/img/flyio-logo.png" style="zoom:60%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
 
-!!!info "Cost"  
-Nightscout is expected to run without charges in the [free tier](https://fly.io/docs/about/pricing/#free-tier).  
-Most operations involve CLI and are rather complex for the non-technical user.   
-Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
-
 </br>
 
 **WORK IN PROGRESS DO NOT USE**
@@ -16,13 +11,21 @@ Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
 
 </br>
 
-## Set up a new Nightscout
+!!!info "Cost"  
+Nightscout is expected to run without charges in the [free tier](https://fly.io/docs/about/pricing/#free-tier).  
+Most operations involve CLI and are rather complex for the non-technical user. 
 
-## Step 1: Create a GitHub account
+<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
 
-If you don't have a GitHub account [create one](../../../nightscout/github/#create-a-github-account) and come back.
+</br>
 
-</br></br>
+## Step 1: Create a GitHub account and fork the Nightscout project
+
+If you already have a GitHub account, [update](../../../nightscout/github/#update-your-nightscout-fork) your Nightscout project.
+
+If you don't have a GitHub account [create one](../../../nightscout/github/#create-a-github-account) then [fork the Nightscout project](../../../nightscout/github/#fork-the-nightscout-project) and come back.
+
+</br>
 
 ## Step 2: Download fly.io Command Line Interface (CLI)
 
@@ -51,30 +54,57 @@ c) You don't need to input card information to get Nightscout running so click t
 
 ## Step 4: Create an Atlas account
 
-Follow [these steps](../../../vendors/mongodb/atlas/#create-an-atlas-database) and come back.
+Follow [these steps](../../../vendors/mongodb/atlas/#create-an-atlas-database) and come back with your `MONGODB_URI` connection string.
 
 </br></br>
 
-## Step 4: Fork and deploy cgm-remote-monitor
+## Step 5: Locally fork and deploy cgm-remote-monitor
 
-a) [Fork the Nightscout cgm-remote-monitor project](../../../nightscout/github/#fork-the-nightscout-project).
+a) Clone the `cgm-remote-monitor` repository locally:
 
-</br>
+If necessary install [Git](https://git-scm.com/downloads) on your computer (pick your own OS in Downloads).
 
-b) clone the fork locally 
+Open a PowerShell (Windows) or a terminal (OSX/Linux), and type (replace `yourGitHubNameHere` by your own GitHub account name):
 
-<!-- *Note: this needs documentation.*
-*Using Git / Git Bash is better. Else download the zipped file and extract it in a place you can find back easily.* -->
+```
+git clone https://github.com/yourGitHubNameHere/cgm-remote-monitor
+```
 
-</br>
-
-c) Open a terminal and navigate to the directory where you code has been cloned locally
-
-<!-- *Note: this needs documentation.* -->
+<img src="../img/FlyIO01.png" style="zoom:80%;" />
 
 </br>
 
-d) Deploy Nightscout into fly.io by typing `flyctl launch`
+b) Navigate to the directory where you code has been cloned locally
+
+```
+cd cgm-remote-monitor
+```
+
+</br>
+
+c) Deploy Nightscout into fly.io by typing:
+
+```
+flyctl launch
+```
+
+Enter your new Fly.io Nightscout site name:
+
+<img src="../img/FlyIO02.png" style="zoom:80%;" />
+
+Select the server closer to where you live (use up and down arrows on the keyboard).  
+Press enter to select it.
+
+<img src="../img/FlyIO03.png" style="zoom:80%;" />
+
+</br>
+
+`Would you like to set up a Postgresql database now?` answer N.  
+`Would you like to deploy now?` answer N.
+
+<img src="../img/FlyIO09.png" style="zoom:100%;" />
+
+</br>
 
 !!! note "You're getting into the core setup of your site"
 
@@ -82,28 +112,14 @@ d) Deploy Nightscout into fly.io by typing `flyctl launch`
 
 </br>
 
-## Step 5: Setting Variables
+## Step 6: Setting Variables
 
-When changing a secret, the app will automatically redeploy. You will see this sequence (it will take a few minutes):
-
-```
-Release v1 created
-==> Monitoring deployment
-
- 1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]
---> v1 deployed successfully
-```
-
-Until near the end of this step the CLI will report that you have a critical error because the app doesn't have all the variables it needs to start. Once you see the critical error notification in your terminal you can `ctrl-c` and exit that command process. 
-
- </br>
 !!! note
     If you want to create a new secret or modify an existing one you need to use the `flyctl secrets set` command.  
     For example if you want to set a variable to **Th1515MyP455w0rd**, type:
 
-    ```
+
     flyctl secrets set MY_MAD_VARIABLE="Th1515MyP455w0rd" -a yourappname
-    ```
     
     *Note: replace `yourappname` in the example with the real name of your Fly.io Nightscout app although this is not always required if working in the directory you've deployed from as it already has that context.
 
@@ -157,21 +173,29 @@ There are 3 dexcom share secrets to set:
     2. `BRIDGE_USER_NAME`:  Your Dexcom Clarity username
     3. `BRIDGE_PASSWORD`: Your Dexcom Clarity password
 
-These are formed together into a command that looks like:
+Copy and paste each command adding the information after `=`
 
 ```
-flyctl secrets set BRIDGE_SERVER=<EU|US> BRIDGE_USER_NAME=<MyUserName> BRIDGE_PASSWORD=<MyPassword>
+flyctl secrets set BRIDGE_SERVER=
 ```
 
-where the arguments in the `< >` are replaced with your credentials. 
+```
+flyctl secrets set BRIDGE_USER_NAME=
+```
+
+```
+flyctl secrets set BRIDGE_PASSWORD=
+```
+
+<img src="../img/FlyIO04.png" style="zoom:80%;" />
 
 </br>
 
 c) Set the units to use for Nightscout where acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`). 
-The command is:
+Copy and paste this command adding the unit you want after `=`
 
 ```
-flyctl secrets set DISPLAY_UNITS=<units>
+flyctl secrets set DISPLAY_UNITS=
 ```
 
  </br>
@@ -195,32 +219,53 @@ flyctl secrets set ENABLE="careportal basal dbsize rawbg iob maker cob bwp cage 
 
 </br>
 
-e) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Set the MONGODB_URI with:
+e) Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Set the `MONGODB_URI` with:
 
 ```
-flyctl secrets set MONGODB_URI="mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority"
+flyctl secrets set MONGODB_URI=""
 ```
 
-with the URI replaced with the correct string for your Mongo instance. 
+Place the URI within `"` and `"`. 
 
 Make sure it looks like this one below and NOTE: THERE ARE NO < AND > CHARACTERS:
 
-mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority
+`flyctl secrets set MONGODB_URI="mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority"`
+
+<img src="../img/FlyIO05.png" style="zoom:80%;" />
 
 !!! info
     Ensure you have `" "` surrounding your URI to make sure all of it is captured within the variable.
 
 </br>
 
-## Step 6: Nightscout Application Configuration
+You can now deploy your site with Fly.io.  
+Type the following command:
 
-a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard click on the application (rather than the builder):
+```
+flyctl deploy
+```
+
+<img src="../img/FlyIO06.png" style="zoom:80%;" />
+
+It will take some time. Wait until completion.
+
+
+
+</br>
+
+## Step 7: Nightscout Application Configuration
+
+a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard click on the application (not the builder):
 
 <img src="../img/fly.io-dashboard.png" style="zoom:80%;" />
+
+</br>
 
 b) Inside your app you should see that it is running and has a clickable hostname.
 
 <img src="../img/fly.io-application-dashboard.png" style="zoom:80%;" />
+
+</br>
 
 c) Your Nightscout site should now be ready to open and direct you to a new profile creation.
 
@@ -269,7 +314,7 @@ i) Dexcom Share and CareLink users should see data flowing in after some minutes
 
 </br></br>
 
-## Step 7: Uploader setup
+## Step 8: Uploader setup
 
 </br>
 
@@ -277,3 +322,53 @@ Continue to [uploader](../../../uploader/setup/) setup.
 
 </br>
 
+</br>
+
+## Editing Config Vars in Fly.io
+
+</br>
+
+!!!warning "Secrets"  
+    You **cannot see the values of your variables as they are secret**.  
+    You can only delete them and set them: you **cannot edit them**.  
+    Please make sure you write them down somewhere!
+
+</br>
+
+**Once Nightscout deployed, you need to install [flyctl](https://fly.io/docs/hands-on/install-flyctl/) to access your variables in order to change or customize your site.**
+Variables are described [here](../../../nightscout/setup_variables/#nightscout-config-vars).
+
+[Sign in with GitHub](https://fly.io/docs/hands-on/sign-in/) in your CLI interface (Powershell/Terminal).  
+A new browser will open. Select the entry with your email address.  
+If required, authenticate through GitHub.
+
+<img src="../img/FlyM16.png" style="zoom:80%;" />
+
+</br>
+
+Fly.io variables are named `Secrets` and you cannot visualize them.  
+Look [here](https://fly.io/docs/getting-started/working-with-fly-apps/#working-with-secrets) for more details.
+
+</br>
+
+If you want to create a new variable or modify an existing one you need to use the `flyctl secrets set` command.  
+For example if you want to set your Nightscout site vertical scale to linear:
+
+```
+flyctl secrets set SCALE_Y="linear" -a yourappname
+```
+
+If your `SCALE_Y` variable was already set to `linear` you will see the following message:  
+`Error No change detected to secrets. Skipping release.`
+
+When changing a variable, the app will automatically redeploy. You will see this sequence (it will take a few minutes):
+
+```
+Release v1 created
+==> Monitoring deployment
+
+ 1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]
+--> v1 deployed successfully
+```
+
+</br>
