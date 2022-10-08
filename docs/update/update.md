@@ -1,6 +1,6 @@
 # Updating Your Site to the Latest Version
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />  and <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />   <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />  <img src="../../vendors/img/Northflank.png" style="zoom:80%;" />
 
 ------
 
@@ -131,11 +131,11 @@ Click `Create pull request`.
 
 - You have successfully updated your GitHub repository, now let's deploy it in Heroku Step 2 below.
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />   <img src="../../vendors/img/Northflank.png" style="zoom:80%;" />
 
 - You have successfully updated your GitHub repository.  
-  You also have completed updating Nightscout as Railway will automatically deploy this new version for you.  
-  If it's not updated, [reconnect](../../../troubleshoot/railway/#reconnect-github-to-your-project) GitHub.  
+  You also have completed updating Nightscout as Railway or Northflank will automatically deploy this new version for you.  
+  If it's not updated with Railway, [reconnect](../../../troubleshoot/railway/#reconnect-github-to-your-project) GitHub.  
   If something went wrong scroll down and try to redeploy.
 
 </br>

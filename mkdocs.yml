@@ -73,6 +73,7 @@ nav:
     - 'GitHub': 'troubleshoot/github.md'
     - 'Heroku': 'troubleshoot/heroku.md'
     - 'Railway': 'troubleshoot/railway.md'
+    - 'Northflank': 'troubleshoot/northflank.md'
     - 'MongoDB Atlas': 'troubleshoot/atlas.md'
     - 'Dexcom bridge': 'troubleshoot/dexcom_bridge.md'
     - 'Cleanup': 'troubleshoot/cleanup.md'
