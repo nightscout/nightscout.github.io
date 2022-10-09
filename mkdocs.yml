@@ -74,6 +74,7 @@ nav:
     - 'Heroku': 'troubleshoot/heroku.md'
     - 'Railway': 'troubleshoot/railway.md'
     - 'Northflank': 'troubleshoot/northflank.md'
+    - 'Fly.io': 'troubleshoot/fly.io.md'
     - 'MongoDB Atlas': 'troubleshoot/atlas.md'
     - 'Dexcom bridge': 'troubleshoot/dexcom_bridge.md'
     - 'Cleanup': 'troubleshoot/cleanup.md'

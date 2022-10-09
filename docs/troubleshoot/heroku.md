@@ -6,7 +6,7 @@
 
 <img src="../img/TShoot57.png" style="zoom:80%;" >
 
-If you didn't upgrade Heroku to a hobby plan [migrate to Railway](../../../vendors/railway/migrate).
+If you didn't upgrade Heroku to a hobby plan, you need to [create a new Nightscout site](../../nightscout/new_user) and [recover your MongoDB Atlas connection string](../atlas/#recover-your-connection-string).
 
 If you just tried to deploy a new Nightscout site, something went wrong. Cleanup your Heroku apps and retry...
 
@@ -114,7 +114,7 @@ Same screen than above but you received a mail from Heroku telling you you're ou
 
 ## Cleanup
 
-If you experience issues during deployment you might end up with many apps. Make sure you keep the last one that was functional or delete all before attempting a new deployment. This will just make it easier to find which app you're trying to build. Keeping sleeping apps doesn't have any negative impact but no real advantage unless you do it on purpose.
+If you experience issues during deployment you might end up with many apps. Make sure you keep the last one that was functional or [delete](#delete-an-app) all before attempting a new deployment. This will just make it easier to find which app you're trying to build. Keeping sleeping apps doesn't have any negative impact but no real advantage unless you do it on purpose.
 
 Make sure the app you're using for Nightscout is running on a Hobby tier.
 
@@ -147,3 +147,59 @@ To delete an app, select it and go to `Settings`, scroll down to `Delete App`
 Copy and paste your app name to confirm deletion, 
 
 <img src="../img/Cleanup02.png" style="zoom:80%;" >
+
+</br>
+
+## Backup your site variables
+
+Having a copy of your variables is very important since some of them are vital to your site like MONGODB_URI and your access to it like API_SECRET.
+
+### Method 1 - Spreadsheet
+
+Reveal your Heroku Nightscout app [Config Vars](/heroku/new_user/#editing-config-vars-in-heroku) and copy all variables names and values in a spreadsheet.
+
+### Method 2 - Export
+
+Log into Heroku, select your app.  
+Click on the top right `More` button and select `Run console`.
+
+<img src="../../vendors/heroku/img/HerokuM01.png" style="zoom:80%;" >
+
+In the console command line type the command below, then click `Run`.
+
+```
+export `heroku config -s`
+```
+
+<img src="../../vendors/heroku/img/HerokuM02.png" style="zoom:80%;" >
+
+Wait until the command completes.
+
+<img src="../../vendors/heroku/img/HerokuM03.png" style="zoom:80%;" >
+
+Save the session: it contains all your variables and values (and a few useless things).
+
+<img src="../../vendors/heroku/img/HerokuM04.png" style="zoom:80%;" >
+
+Edit the file with a text editor and remove the first line `(bash: line 1: heroku: command not found)`.  
+Using find and replace, get rid of all `declare -x`.  
+Delete the following Heroku specific variables:  
+
+```
+DYNO="run.6309"
+HOME="/app"
+MEMORY_AVAILABLE="512"
+NODE_ENV="production"
+NODE_HOME="/app/.heroku/node"
+OLDPWD
+PATH="/app/.heroku/node/bin:/app/.heroku/yarn/bin:/usr/local/bin:/usr/bin:/bin:/app/bin:/app/node_modules/.bin"
+PORT="6489"
+PS1="\\[\\033[01;34m\\]\\w\\[\\033[00m\\] \\[\\033[01;32m\\]\$ \\[\\033[00m\\]"
+PWD="/app"
+SHLVL="1"
+TERM="xterm-256color"
+WEB_CONCURRENCY="1"
+WEB_MEMORY="512"
+```
+
+!!!warning "Save this file in a safe place."

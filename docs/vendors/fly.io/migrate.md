@@ -4,9 +4,7 @@
 
 </br>
 
-**WORK IN PROGRESS DO NOT USE YET**
-
-<img src="../../../img/WIP.png" style="zoom:80%;" />
+!!!warning "Not recommended. [Deploy a new Fly.io Nightscout](../new_user) site and copy your Heroku variables."
 
 </br>
 
@@ -150,6 +148,8 @@ Your Fly.io Nightscout is now independent from Heroku.
     You MUST have a backup of your Heroku variables for maintenance purposes.
 
 Reveal your Heroku Nightscout app [Config Vars](/heroku/new_user/#editing-config-vars-in-heroku) and copy all variables names and values in a spreadsheet.
+
+!!!warning "Save this information in a safe place!"
 
 </br>
 

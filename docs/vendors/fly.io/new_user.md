@@ -3,14 +3,6 @@
 
 <span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../../vendors/img/flyio-logo.png" style="zoom:60%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
 
-</br>
-
-**WORK IN PROGRESS DO NOT USE**
-
-<img src="../../../img/WIP.png" style="zoom:80%;" />
-
-</br>
-
 !!!info "Cost"  
 Nightscout is expected to run without charges in the [free tier](https://fly.io/docs/about/pricing/#free-tier).  
 Most operations involve CLI and are rather complex for the non-technical user. 
@@ -266,8 +258,38 @@ Continue to [uploader](../../../uploader/setup/) setup.
 
 </br>
 
+You will find your Nightscout variables under different forms depending on your deployment method.
+
+If you migrated using the wizard, they will be secrets.
+
+If you deployed a new site as explained in this documentation they will be environment variables.
+
+</br>
+
+### Env variables
+
+Environment variables can be viewed with [flyctl](https://fly.io/docs/hands-on/install-flyctl) using the following command:
+
+```
+flyctl config env
+```
+
+If you want to modify a configuration variable you need to edit the `fly.toml` file in your local `cgm-remote-monitor` copy (the one you created at [step 6](#step-6-setting-variables) above).
+
+Once variable(s) modified, save the file and run the following command (from inside your `cgm-remote-monitor`).
+
+```
+flyctl deploy
+```
+
+</br>
+
+### Secrets
+
+Your variables are stored as secrets if you used the migration wizard.
+
 !!!warning "Secrets"  
-    You **cannot see the values of your variables as they are secret**.  
+    You **cannot see the values of your secret variables as they are secret**.  
     You can only delete them and set them: you **cannot edit them**.  
     Please make sure you write them down somewhere!
 
