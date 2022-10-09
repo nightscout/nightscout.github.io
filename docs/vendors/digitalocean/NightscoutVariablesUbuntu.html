@@ -342,11 +342,11 @@ sLine = "BRIDGE_USER_NAME=" + document.getElementById("BRIDGE_USER_NAME").value;
   sBuffer = sBuffer + "\n";
 sLine = "CUSTOM_TITLE=" + document.getElementById("CUSTOM_TITLE").value; sBuffer = sBuffer + sLine;
   sBuffer = sBuffer + "\n";
-sLine = "ENABLE=" + document.getElementById("ENABLE").value; sBuffer = sBuffer + sLine;
+sLine = "ENABLE=" + document.getElementById("ENABLE").value; sBuffer = sBuffer + sLine.replace(/ /g, '%20');
   sBuffer = sBuffer + "\n";
 sLine = "MONGO_CONNECTION=" + document.getElementById("MONGO_CONNECTION").value; sBuffer = sBuffer + sLine;
   sBuffer = sBuffer + "\n";
-sLine = "SHOW_PLUGINS=" + document.getElementById("SHOW_PLUGINS").value; sBuffer = sBuffer + sLine;
+sLine = "SHOW_PLUGINS=" + document.getElementById("SHOW_PLUGINS").value; sBuffer = sBuffer + sLine.replace(/ /g, '%20');
   sBuffer = sBuffer + "\n";
   
   document.getElementById("NSVARS").innerHTML = sBuffer;
