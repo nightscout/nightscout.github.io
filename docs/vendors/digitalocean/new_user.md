@@ -523,7 +523,7 @@ i) Save it.
 pm2 save
 ```
 
-Your Nightscout site is not available at http:// and the IP address you found in b) but it's not secured so most browsers will refuse it.
+Your Nightscout site is now available at http:// and the IP address you found in b) but it's not secured so most browsers will refuse it.
 
 </br>
 
