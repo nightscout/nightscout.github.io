@@ -109,15 +109,8 @@ You can run your Nightscout site in virtual private servers, using free or paid 
 
 Below is a list of some VPS. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
 
-> **Pros**:  
-> Reliable solutions.
->
-> **Cons**:  
-> Requires building your site with Ubuntu commands  
-> Requires Ubuntu maintenance
-
+[Google Cloud](../../vendors/google/new_user) (from the xDrip+ developers team. Work in progress, great expectations!)  
 [Digital Ocean](../../vendors/digitalocean/new_user)  
-[Google Cloud](../../vendors/google/new_user)  
 [MVPS](../../vendors/MVPS/new_user)  
 [Oracle](../../vendors/oracle/new_user)  
 
