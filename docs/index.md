@@ -30,9 +30,9 @@ In addition to viewing the data using a web browser, there are also applications
 
 ## Development History
 
-Nightscout was developed by people with Type 1 Diabetes and parents of kids with T1D and has continued to be developed, maintained, and supported by volunteers, clinical use, and commercial sponsorship. The web portal known as Nightscout is made by the [CGM Remote Monitor Contributors](https://github.com/nightscout/cgm-remote-monitor/graphs/contributors) and the Nightscout community over years.
+Nightscout was [developed](https://sixuntilme.com/2014/07/10/cgm-cloud-part/) by people with Type 1 Diabetes and parents of kids with T1D and has continued to be developed, maintained, and supported by volunteers, clinical use, and commercial sponsorship. The web portal known as Nightscout is made by the [CGM Remote Monitor Contributors](https://github.com/nightscout/cgm-remote-monitor/graphs/contributors) and the Nightscout community over years.
 
-When first implemented, Nightscout was a solution specifically for remote monitoring of Dexcom G4 CGM data. Today, there are Nightscout solutions available for nearly all commercial CGM sensors. The goal of the project is to allow the remote monitoring, sharing and analysis of any T1D's glucose levels using existing monitoring devices.
+When first implemented, Nightscout was a solution specifically for remote monitoring of [Dexcom G4 CGM data](https://github.com/hackingtype1/original-android-cgm). Today, there are Nightscout solutions available for nearly all commercial CGM sensors. The goal of the project is to allow the remote monitoring, sharing and analysis of any T1D's glucose levels using existing monitoring devices.
 
 ## What are the values of Nightscout
 
@@ -78,8 +78,8 @@ You will need:
 
 There's no simple answer to this. You basically have two options:
 
-1. **DIY** Use instructions on this website or your computing skills to create your own installation. Depending on your skill and choice of platform, this can take anywhere from minutes to tens of hours to accomplish. Additionally, you will need to maintain this installation yourself, further adding to the effort. Having said that, there are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be **free** - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it. Additionally, it's important to understand that if you're using a free tier of a hosting service to run Nightscout, your hosting costs are being paid by the hosting provider you're using.
-2. **Use a service** You can use a hosting provider that does all of this work for you in exchange for a small monthly fee set at a level that mostly just covers the cost of operations to provide this service. There are currently two options available for this (NS10BE and T1Pal), both of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+1. **DIY** Use instructions on this website or your computing skills to create your own installation. Depending on your skill and choice of platform, this can take anywhere from minutes to hours to accomplish. Additionally, you will need to maintain this installation yourself. Having said that, there are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be **free** - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it. Additionally, it's important to understand that if you're using a free tier of a hosting service to run Nightscout, your hosting costs are being paid by the hosting provider you're using.
+2. **Use a service** You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently two options available for this ([NS10BE](#ns10be) and [T1Pal](#t1pal)), both of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
 
 The Nightscout development community actively supports both of these choices.
 
@@ -87,7 +87,7 @@ The Nightscout development community actively supports both of these choices.
 
 <span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions [here](../nightscout/new_user/).</span>
 
-**Note:** DIY users of Nightscout has been historically using a service called Heroku to host their sites. Heroku is in process of removing their free hosting tier altogehter. At the time of writing, there are no easy to follow instructions available for non-technical users on how to host Nightscout for free. If you have the time to author instructions for this purpose, new documentation pull requests are extremely welcome at https://github.com/nightscout/nightscout.github.io.
+**Note:** DIY users of Nightscout have been historically using platforms like [Digital Ocean](https://github.com/jasoncalabrese/project-glu/blob/master/README.md), [Microsoft Azure](https://docs.google.com/document/d/1RP-0KAX0Z46iGmShBdygY7_vQN1d-xEgtK_dSsjCA20/edit) and then Salesforce Heroku to host their sites. Heroku is in process of removing the free hosting tier but here are various solutions to host your Nightscout site for free. If you have the time to author instructions for this purpose, new documentation pull requests are extremely welcome at [https://github.com/nightscout/nightscout.github.io](https://github.com/nightscout/nightscout.github.io).
 
 ## Nightscout as a Service
 

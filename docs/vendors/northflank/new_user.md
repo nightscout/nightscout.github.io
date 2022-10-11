@@ -8,7 +8,7 @@
 
 !!!info "Cost"
 
-You can migrate from Heroku to Northflank and **keep your Nightscout site for free** (maintaining your MongoDB Atlas database).
+Northflank and **keep your Nightscout site for free** (maintaining your MongoDB Atlas database).
 
 !!!warning "Database"  
     Adding a database to your Northflank account will increase costs.
