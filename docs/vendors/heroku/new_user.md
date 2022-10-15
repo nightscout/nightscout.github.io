@@ -279,7 +279,7 @@ r) If you need to modify your profile after this, authenticate with the lock ico
 
 </br>
 
-s) Dexcom Share and CareLink users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
+s) Dexcom Share users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
 
 <img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
 

@@ -30,6 +30,8 @@ nav:
     - 'Classic DIY Installation': 'nightscout/new_user.md'
     - 'GitHub': 'nightscout/github.md'
     - 'MongoDB Atlas database': 'vendors/mongodb/atlas.md'
+    - 'Azure': 'vendors/azure/new_user.md'
+    - 'Migrate to Azure': 'vendors/azure/migrate.md'
     - 'Heroku Hobby plan': 'vendors/heroku/new_user.md'
     - 'Railway (method 1)': 'vendors/railway/new_user.md'
     - 'Railway (method 2)': 'vendors/railway/new_user2.md'

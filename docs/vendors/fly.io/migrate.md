@@ -163,4 +163,25 @@ Your Fly.io app name is the one you defined above in step 1.f.
 
 </br>
 
-You have completed Heroku to Fly.io migration.
+## Step 5 - Update your uploaders and downloaders
+
+Now you will need to update all the devices connected to Nightscout with the new web address.
+
+!!!warning "Change the URL!"  
+    Note that Fly.io will display he same information than Heroku even if you don't do so, but this will stop when Heroku will shutdown the free service.  
+    **Make sure you update the [uploader](../../../uploader/setup/) and [follower](../../../nightscout/downloaders/) devices with the new code.run address!**
+
+#### Uploaders
+
+For Dexcom users, if you use the bridge plugin you should be set now in terms.  
+xDrip+ users (including Medtronic CareLink followers) should update the uploader as shown [here](../../../uploader/setup/#xdrip).  
+xDrip4iOS users [here](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#nightscout-upload).  
+[AAPS](https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient) and [Loop](https://loopkit.github.io/loopdocs/operation/loop-settings/services/): consult the relative documentation to change your site name.
+
+</br>
+
+To fully test your new Fly.io Nightscout app: put your Heroku app in [maintenance mode](../../../troubleshoot/heroku/#maintenance-mode).  
+If things don't go as expected, you can disable it and return to Heroku whilst you fix it.  
+**Better test it now than once Heroku will shutdown your app.**
+
+</br>

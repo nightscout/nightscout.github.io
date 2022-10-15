@@ -11,17 +11,20 @@ Interested in building a Nightscout DIY site?  Make sure you read and understand
 
 </br>
 
-## Building Nightscout DIY in a PaaS
+## Building Nightscout DIY in a cloud platform
+
+
 
 You can run your Nightscout site in several vendors platforms, using free or paid accounts.  
 Traditionally the database holding Nightscout data is hosted by another provider (mLab, now MongoDB Atlas).
 
-Below is a list of useable PaaS. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
+Below is a list of useable platforms. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
 
 ### MongoDB Atlas
 
-***Note**: Not strictly PaaS related but most PaaS deployments rely on this provider for the Nightscout database.*  
 MongoDB bought [mLab](https://twitter.com/chrisckchang/status/506959446753284096) in 2018 and shutdown its service in 2020. Most users migrated to MongoDB Atlas, using a free M0 database with a limited 512MB capacity. Leaving the database grow uncontrolled usually leads to a Nightscout crash.
+
+Follow [these instructions](../../vendors/mongodb/atlas) to build a small database to host your Nightscout data if you don't already have one.
 
 > **Pros**:  
 > The M0 cluster is free  
@@ -49,7 +52,8 @@ You can [create your new Nightscout site with Heroku](../../vendors/heroku/new_u
 ### Azure
 
 Nightscout DIY was [originally](https://github.com/rnpenguin/cgm-remote-monitor) created with Azure but most users dropped it after costs increased.  
-A new deployment method is [being worked on](https://www.youtube.com/watch?v=EDADrteGBnY)... stay tuned.
+A new deployment method is [being worked on](../../vendors/azure/new_user)... stay tuned.  
+If you want to migrate and keep your Atlas database look [here](../../vendors/azure/migrate).
 
 > **Pros**:  
 > Large platform with a reliable history  
@@ -57,7 +61,7 @@ A new deployment method is [being worked on](https://www.youtube.com/watch?v=EDA
 > Using a local database.
 >
 > **Cons**:  
-> We'll see
+> Hard con contain in the free tier
 
 ### Railway.app
 
@@ -107,12 +111,12 @@ Fly.io proposes a [simple migration wizard from Heroku](../../vendors/fly.io/mig
 
 ## Building Nightscout with your Synology NAS
 
-Don't buy a NAS just for this, but if you already have one that's worth a try!  
+Don't buy a Synology NAS device just for this, but if you already have one that's worth a try!  
 You can host your Nightscout site in your [Synology](../../vendors/synology/new_user) NAS. 
 
 </br>
 
-## Building Nightscout DIY in a VPS
+## Building Nightscout DIY in a virtual server
 
 You can run your Nightscout site in virtual private servers, using free or paid accounts.  
 The [original](https://github.com/jasoncalabrese/project-glu/blob/master/README.md) Nightscout project was also developed to run in Digital Ocean.

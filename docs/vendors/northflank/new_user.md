@@ -8,7 +8,7 @@
 
 !!!info "Cost"
 
-Northflank and **keep your Nightscout site for free** (maintaining your MongoDB Atlas database).
+You can create your **Northflank Nightscout site for free** (using a MongoDB Atlas database).
 
 !!!warning "Database"  
     Adding a database to your Northflank account will increase costs.
