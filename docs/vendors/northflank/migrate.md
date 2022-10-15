@@ -155,7 +155,7 @@ Now you will need to update all the devices connected to Nightscout with the new
 
 #### Uploaders
 
-For Dexcom users, if you use the bridge plugin you should be set now in terms.  
+For Dexcom users, if you use the bridge plugin you should be set.  
 xDrip+ users (including Medtronic CareLink followers) should update the uploader as shown [here](../../../uploader/setup/#xdrip).  
 xDrip4iOS users [here](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#nightscout-upload).  
 [AAPS](https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient) and [Loop](https://loopkit.github.io/loopdocs/operation/loop-settings/services/): consult the relative documentation to change your site name.

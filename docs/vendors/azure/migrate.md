@@ -180,7 +180,9 @@ g) Click + New application setting
 h) In Name write the variable name from the first column in Heroku  
 Then, in the line below, Value, paste the value from the second column in Heroku.
 
-<img src="../img/Azure36.png" style="zoom:80%;" />
+<img src="../img/Azure38.png" style="zoom:80%;" />
+
+Then click OK and go for the next one.
 
 </br>
 
@@ -213,7 +215,7 @@ If you have your data coming directly from Dexcom share those three:
 
 </br>
 
-j) Click Save, then Continue.
+j) When you're done copying, click Save, then Continue.
 
 <img src="../img/Azure39.png" style="zoom:80%;" />
 
@@ -237,7 +239,7 @@ Now you will need to update all the devices connected to Nightscout with the new
 
 #### Uploaders
 
-For Dexcom users, if you use the bridge plugin you should be set now in terms.  
+For Dexcom users, if you use the bridge plugin you should be set.  
 xDrip+ users (including Medtronic CareLink followers) should update the uploader as shown [here](../../../uploader/setup/#xdrip).  
 xDrip4iOS users [here](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#nightscout-upload).  
 [AAPS](https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient) and [Loop](https://loopkit.github.io/loopdocs/operation/loop-settings/services/): consult the relative documentation to change your site name.
