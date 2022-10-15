@@ -103,6 +103,9 @@ TIME_FORMAT=12
 # U value over which the bolus values are rendered on the chart if the 'x U and Over' option is selected.
 BOLUS_RENDER_OVER=1
 
+#   DO NOT MODIFY ANYTHING BELOW
+# //////////////////////////////////////////////////////////////////////////////////////////////
+
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
