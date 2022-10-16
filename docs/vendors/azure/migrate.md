@@ -48,14 +48,19 @@ b) Search Web app and click Create.
 
 </br>
 
-c) Check you're still using your Free Trial or 3-Month free Trial.  
-Open the list in Resource group and pick your group (the one you created in Step 2.f.).
+c) Below Resource group click Create new and enter Nightscout (for example).  
+
+<img src="../img/Azure09.png" style="zoom:80%;" />
+
+</br>
+
+d) Check you're still using your Free Trial or 3-Month free Trial.
 
 <img src="../img/Azure23.png" style="zoom:80%;" />
 
 </br>
 
-d) Decide your site name (only lowercase and you can use `-` as a separator).  
+e) Decide your site name (only lowercase and you can use `-` as a separator).  
 It must be unique: check the tick box at the end of the line is green.  
 If it isn't: you need to choose another name...
 
@@ -63,16 +68,15 @@ If it isn't: you need to choose another name...
 
 </br>
 
-e) Now select a Docker container, in Linux.
+f) Now select a Docker container, in Linux.
 
-Pick a place close to where you live in the Region selection.  
-Make sure it is the same than the database region you selected in Step 2.g.
+Pick a place close to where you live in the Region selection.
 
 <img src="../img/Azure25.png" style="zoom:80%;" />
 
 </br>
 
-f) Change the plan size.
+g) Change the plan size.
 
 <img src="../img/Azure26.png" style="zoom:80%;" />
 
@@ -82,19 +86,19 @@ Select Dev /Test, F1 Free and click Apply.
 
 </br>
 
-g) Click Next: Docker > in the lower left of the page.
+h) Click Next: Docker > in the lower left of the page.
 
 <img src="../img/Azure28.png" style="zoom:80%;" />
 
 </br>
 
-h) In Image source select Docker Hub.
+i) In Image source select Docker Hub.
 
 <img src="../img/Azure29.png" style="zoom:80%;" />
 
 </br>
 
-i) In Image and tag paste the following name:
+j) In Image and tag paste the following name:
 
 ```
 nightscout/cgm-remote-monitor:latest
@@ -104,13 +108,13 @@ nightscout/cgm-remote-monitor:latest
 
 </br>
 
-j) Click Review + create in the lower left of the page.
+k) Click Review + create in the lower left of the page.
 
 <img src="../img/Azure12.png" style="zoom:80%;" />
 
 </br>
 
-k) Verify the summary information:  
+l) Verify the summary information:  
 Free sku  
 Check the site Name is what you wanted  
 then click Create.
@@ -212,6 +216,8 @@ If you have your data coming directly from Dexcom share those three:
 `BRIDGE_USER_NAME`  
 `BRIDGE_PASSWORD`  
 `BRIDGE_SERVER`
+
+<img src="../img/Azure15.png" style="zoom:80%;" />
 
 </br>
 
