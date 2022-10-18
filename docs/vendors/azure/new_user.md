@@ -5,7 +5,7 @@
 Yes! It's [back](https://news.microsoft.com/features/open-source-and-the-cloud-changing-the-lives-of-people-with-type-1-diabetes)!
 
 !!!info "Cost"  
-Nightscout and its database are expected to run without charges within free services.
+Need more data. It looks like this solution doesn't fit in the free plan because of the database.
 
 <span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
 

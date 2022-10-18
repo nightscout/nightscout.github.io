@@ -5,7 +5,7 @@
 Yes! Azure is [back](https://news.microsoft.com/features/open-source-and-the-cloud-changing-the-lives-of-people-with-type-1-diabetes)!
 
 !!!info "Cost"  
-Nightscout is expected to run without charges within free services.
+Need more data. This solution might fit for free in a Basic plan.
 
 <span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
 
