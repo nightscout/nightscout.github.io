@@ -383,7 +383,9 @@ o) If the following pop-up shows up click `OK`, and check status (upper right of
 </br>
 
 !!!warning "Status: error"  
-    If you cannot save your profile this probably means you region/plan requires too many RUs to build the Cosmos database for free. Consider using a MongoDB Atlas database until we find a solution.
+    <img src="../img/Azure41.png" style="zoom:80%;" />  
+      
+    If you cannot save your profile this probably means your region/plan requires too many RUs to build the Cosmos database for free. Consider using a MongoDB Atlas database until we find a solution.
 
 </br>
 
