@@ -87,7 +87,7 @@ Open a PowerShell (Windows) or a terminal (OSX/Linux), and type (replace `yourGi
 git clone https://github.com/yourGitHubNameHere/cgm-remote-monitor
 ```
 
-<img src="../img/FlyIO01.png" style="zoom:80%;" />
+<img src="../../vendors/fly.io/img/FlyIO01.png" style="zoom:80%;" />
 
 </br>
 

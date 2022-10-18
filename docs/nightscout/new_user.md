@@ -116,6 +116,12 @@ You can host your Nightscout site in your [Synology](../../vendors/synology/new_
 
 </br>
 
+## Building Nightscout with a Raspberry PI 4
+
+If you own one, you can use it to host your Nightscout, see [here](../../vendors/raspberry-pi/new_user). 
+
+</br>
+
 ## Building Nightscout DIY in a virtual server
 
 You can run your Nightscout site in virtual private servers, using free or paid accounts.  

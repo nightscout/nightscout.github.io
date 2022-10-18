@@ -626,3 +626,56 @@ Confirm with your cluster name and wait until shutdown is complete.
 <img src="../img/Cleanup16.png" style="zoom:80%;" >
 
 You can then delete the empty project.
+
+</br>
+
+## Backup your database
+
+!!!warning "Not a normal operation"  
+    Making a backup of your database is either a good idea or necessary if you want to migrate it to another database.  
+    This is not an easy operation and requires command line instructions using a computer.
+
+#### Install the database tools
+
+Follow [this link](https://www.mongodb.com/docs/database-tools/installation/installation/) to install the CLI tool on your computer.
+
+#### Dump your database
+
+Get your `MONGODB_URI` handy to find the missing pieces (password and database name).
+
+Log in your MongoDB account [https://cloud.mongodb.com/](https://cloud.mongodb.com/).
+
+1. Select your organization
+2. Select your database
+3. In the advanced options menu, select `Command line tools`
+
+<img src="../../vendors/mongodb/img/AtlasX01.png" style="zoom:80%;" />
+
+</br>
+
+Scroll down to `Binary import and Export tools`, copy the `mongodump` command line.
+
+<img src="../../vendors/mongodb/img/AtlasX02.png" style="zoom:80%;" />
+
+Paste the command line in a text editor.
+
+Look into your `MONGODB_URI` and replace `<PASSWORD>` with your database password and entually (if you have one) `<DATABASE>` with your database name.
+
+<img src="../../vendors/mongodb/img/AtlasX03.png" style="zoom:80%;" />
+
+</br>
+
+Open a command line utility (CMD, Terminal, ...) and make your way to the utility folder (if you don't want to include it in your system path).  
+For example in Windows 64bits it's in `C:\Program Files\MongoDB\Tools\100\bin`.
+
+Copy and paste your `mongodump` command, run it.
+
+<img src="../../vendors/mongodb/img/AtlasX04.png" style="zoom:80%;" />
+
+</br>
+
+You will find the database dump in a subfolder called `dump` with your database name in a subfolder.
+
+<img src="../../vendors/mongodb/img/AtlasX07.png" style="zoom:80%;" />
+
+</br>

@@ -5,19 +5,14 @@
 Yes! It's [back](https://news.microsoft.com/features/open-source-and-the-cloud-changing-the-lives-of-people-with-type-1-diabetes)!
 
 !!!info "Cost"  
-Need more data. It looks like this solution doesn't fit in the free plan because of the database.
+Region dependent. If you can deploy Nightscout with this guide it should be free.  
+If you run into trouble during database creation you might need a Basic account.
 
 <span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
 
 </br>
 
 **This is a transcript of the original video you'll find [here](https://www.youtube.com/watch?v=EDADrteGBnY).**
-
-</br>
-
-**WORK IN PROGRESS DO NOT USE**
-
-<img src="../../../img/WIP.png" style="zoom:80%;" />
 
 </br>
 
@@ -384,6 +379,11 @@ n) Click `Save`.
 o) If the following pop-up shows up click `OK`, and check status (upper right of the window).
 
 <img src="../../../nightscout/img/NewNS47.png" style="zoom:80%;" />
+
+</br>
+
+!!!warning "Status: error"  
+    If you cannot save your profile this probably means you region/plan requires too many RUs to build the Cosmos database for free. Consider using a MongoDB Atlas database until we find a solution.
 
 </br>
 
