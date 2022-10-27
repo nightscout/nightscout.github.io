@@ -194,7 +194,7 @@ i) You might not need to copy ALL the values, if you know which ones you need yo
 If you don't really know which ones you want to copy there's only few that are strictly necessary:
 
 `API_SECRET`  
-`MONGODB_URI`  
+`MONGODB_URI`  *Note: if you don't see `MONGODB_URI` but see `MONGO_CONNECTION` (NOT `MONGO_COLLECTION`) use its value.*
 `DISPLAY_UNITS`
 
 in `ENABLE` paste this:

@@ -11,9 +11,9 @@ For all others: [https://clarity.dexcom.eu/](https://clarity.dexcom.eu/)
 
 In the case you have linked accounts, check you are using the right credentials for the profile you want to `bridge` to Nightscout.
 
-<img src="../img/DexShare05.png" style="zoom:60%;" >
+**Verify you actually have current data in this profile/account!** You want to put the username and password of the account that has CGM data in `BRIDGE`, this is usually the credentials you are using with the master phone (the one connected to the sensor).
 
-Also verify you actually have current data in this profile/account.
+<img src="../img/DexShare05.png" style="zoom:60%;" >
 
 !!! note "Password"
     Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.

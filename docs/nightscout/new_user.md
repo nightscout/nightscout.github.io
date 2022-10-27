@@ -129,7 +129,7 @@ The [original](https://github.com/jasoncalabrese/project-glu/blob/master/README.
 
 Below is a list of some VPS. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
 
-[Google Cloud](../../vendors/google/new_user) (from the xDrip+ developers team. Work in progress, great expectations!)  
+[Google Cloud](../../vendors/google/new_user) (scripted install, very simple)  
 [Digital Ocean](../../vendors/digitalocean/new_user)  
 [MVPS](../../vendors/MVPS/new_user)  
 [Oracle](../../vendors/oracle/new_user)  

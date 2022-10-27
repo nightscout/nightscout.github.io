@@ -122,6 +122,8 @@ Backup your Heroku environment variables as explained [here](../heroku/#method-2
 
 Edit the `fly.toml` file and paste all variables after `[env]`. Save the file.
 
+*Note: if you don't see `MONGODB_URI` but see `MONGO_CONNECTION` (NOT `MONGO_COLLECTION`) use its value.*
+
 #### If you lost access to Heroku or you don't want to transform them in environment variables
 
 You can leave the variables as secrets and use [this method](../../vendors/fly.io/new_user/#secrets) when you need to modify them.
