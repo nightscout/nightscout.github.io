@@ -297,7 +297,7 @@ Click OK.
 
 </br>
 
-g) Click again + New application setting and write `DISPLAY_UNITS` in Name.  
+g) Click again + New application setting and write `ENABLE` in Name.  
 If you don't use Dexcom Share to get your BG data in Nightscout, copy the line below to Value:
 
 ```
