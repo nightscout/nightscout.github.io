@@ -6,21 +6,38 @@
 
 </br>
 
-<span style="font-size:larger;">Too complicated? Not what you're looking for?  Consider a hosted Nightscout service. Check [here](../../#nightscout-as-a-service).</span></br></br>
+<span style="font-size:larger;">Too complicated? Not what you're looking for? </br>Consider a hosted Nightscout service. Check [here](../../#nightscout-as-a-service).</span></br></br>
 Interested in building a Nightscout DIY site?  Make sure you read and understand [this](/#how-much-does-it-cost) before starting.
 
 </br>
 
+## Basic concepts
+
+Even if knowing how it works is not mandatory, it is very useful to understand a few background concepts before starting DIY Nightscout.
+
+1. The code available open source in [GitHub](https://github.com/nightscout/cgm-remote-monitor) or packaged for you in [Docker](https://hub.docker.com/u/nightscout) is the set of instruction that will be used to make your Nightscout. You don't need to understand it or be a programmer to use it.
+2. Your Nightscout will usually be running in the internet cloud, meaning that somewhere on the planet, a computer or another will spend some of its time to keep your Nightscout active. This is the engine of Nightscout: it will make sure to be ready to accept the data you will send to it (BG, treatments, ...) or to answer to data requests when you ask them (BG, reports, ...) and even send alarms when instructed to do so. You will not see the engine work but you will see its frontpage: the web URL of your Nightscout site, which will be available on any device connected to the internet.
+3. Since you will need to store a lot of data, Nightscout must have a database. This database will also be in the cloud, meaning data will be stored on one or more computers, somewhere. The Nightscout engine mentioned above will store and read data from this database whenever required.
+
+<img src="../../img/nselements.png" style="zoom:80%;" />
+
+From this you understand there are three main pieces necessary to build your Nightscout:
+
+1. The Nightscout code also known as cgm-remote-monitor
+2. A cloud platform running the Nightscout engine and web page
+3. A cloud database storing data
+
+Some platforms offer both engine and database like Azure, Railway, Northflank and all VPS servers. But you can use an external database if you want. Some others like Heroku or Fly.io don't propose a database and require you to use an external one. Traditionally the database holding Nightscout data is hosted by another provider (mLab, now MongoDB Atlas).
+
+</br>  
+
 ## Building Nightscout DIY in a cloud platform
 
-
-
 You can run your Nightscout site in several vendors platforms, using free or paid accounts.  
-Traditionally the database holding Nightscout data is hosted by another provider (mLab, now MongoDB Atlas).
 
 Below is a list of useable platforms. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
 
-### MongoDB Atlas
+### MongoDB Atlas Database
 
 MongoDB bought [mLab](https://twitter.com/chrisckchang/status/506959446753284096) in 2018 and shutdown its service in 2020. Most users migrated to MongoDB Atlas, using a free M0 database with a limited 512MB capacity. Leaving the database grow uncontrolled usually leads to a Nightscout crash.
 
@@ -52,16 +69,18 @@ You can [create your new Nightscout site with Heroku](../../vendors/heroku/new_u
 ### Azure
 
 Nightscout DIY was [originally](https://github.com/rnpenguin/cgm-remote-monitor) created with Azure but most users dropped it after costs increased.  
-A new deployment method is [being worked on](../../vendors/azure/new_user)... stay tuned.  
+A new deployment method has [been created](../../vendors/azure/new_user).  
 If you want to migrate and keep your Atlas database look [here](../../vendors/azure/migrate).
 
 > **Pros**:  
 > Large platform with a reliable history  
 > Well known by the community IT specialists  
-> Using a local database.
+> Using a local database  
+> Using a basic plan and free services make it free
 >
 > **Cons**:  
-> Hard con contain in the free tier
+> Trial account lasts maximum 12 months  
+> Basic plan and pay as you go is free if you stay within quotas
 
 ### Railway.app
 
@@ -71,12 +90,11 @@ You can easily [migrate from Heroku to Railway](../../vendors/railway/migration)
 > Nightscout fits in the free tier  
 > Easy to deploy or migrate an existing site from Heroku  
 > Simple to use and troubleshoot  
-> Can use a native Railway MongoDB database
+> Can use a native Railway MongoDB database ($)
 >
 > **Cons**:  
 > Startup company  
-> A large amount of Nightscout users might have a negative impact on Railway financials and force them to review the free plan conditions  
-> M5Stack_NightscoutMon users experience network issues provoking devices reset
+> A large amount of Nightscout users might have a negative impact on Railway financials and force them to review the free plan conditions
 
 ### Northflank
 
@@ -86,11 +104,11 @@ You can create your new [Northflank](../../vendors/northflank/new_user) Nightsco
 > Nightscout fits in the free tier  
 > Easy to deploy or migrate an existing site from Heroku  
 > Simple to use and troubleshoot  
-> Can use a native Northflank MongoDB database
+> Can use a native Northflank MongoDB database ($)
 >
 > **Cons**:  
 > Small company  
-> The Nightscout address generated for your site is impossible to remember (I know it sounds stupid but it is an issue)  
+> The Nightscout address generated for your site is impossible to remember, you can fix this with a free DNS service  
 > A large amount of Nightscout users might have a negative impact on Northflank financials and force them to review the free plan conditions  
 > *Migration from Heroku requires the option to be enabled by Northflank support, making Nightscout users visible
 
@@ -107,32 +125,25 @@ Fly.io proposes a [simple migration wizard from Heroku](../../vendors/fly.io/mig
 > Maintaining your site requires the use of a computer with command line instructions, not very intuitive  
 > Migrated Heroku sites store variables as secrets
 
+### Google Cloud
+
+The xDrip+ developers team proposes [a simple scripted install in a Google Cloud free tier server](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud).  
+You don't need to know much about computers to install it, migrate from Heroku, get your data from another Nightscout, update, ... The solution is in progress and looks really great.
+
+> **Pros**:  
+> Nightscout and database fit in the free tier  
+> Easy to migrate an existing site from Heroku  
+> Easy to migrate data from another Nightscout  
+> Easy to upgrade, backup, ...
+>
+> **Cons**:  
+> You'll tell us
+
 </br>
 
-## Building Nightscout with your Synology NAS
+### VPS, NAS, other hardware
 
-Don't buy a Synology NAS device just for this, but if you already have one that's worth a try!  
-You can host your Nightscout site in your [Synology](../../vendors/synology/new_user) NAS. 
-
-</br>
-
-## Building Nightscout with a Raspberry PI 4
-
-If you own one, you can use it to host your Nightscout, see [here](../../vendors/raspberry-pi/new_user). 
-
-</br>
-
-## Building Nightscout DIY in a virtual server
-
-You can run your Nightscout site in virtual private servers, using free or paid accounts.  
-The [original](https://github.com/jasoncalabrese/project-glu/blob/master/README.md) Nightscout project was also developed to run in Digital Ocean.
-
-Below is a list of some VPS. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
-
-[Google Cloud](../../vendors/google/new_user) (scripted install, very simple)  
-[Digital Ocean](../../vendors/digitalocean/new_user)  
-[MVPS](../../vendors/MVPS/new_user)  
-[Oracle](../../vendors/oracle/new_user)  
+Need more? Look at [advanced](../advanced) install methods.
 
 </br>
 
@@ -171,41 +182,48 @@ Click on the vendor logo.
     </tr>
     <tr>
         <td><a href="/vendors/mongodb/atlas/#create-an-atlas-database"><img src="../../vendors/img/Atlas.png" align="center"></a></td>
-    	<td>Free -></br></td>
+        <td>Free -></br>9$/month</br></td>
         <td>Yes</td>
         <td>Yes</td>
         <td>Medium</td>
     </tr>
+    <tr>
+        <td><a href="/vendors/azure/new_user/"><img src="../../vendors/img/Azure.png" align="center"></a>	     </td>
+        <td>Free -></br>?$/month</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>High</td>
+     </tr>
     <tr>
         <td><a href="/vendors/railway/new_user"><img src="../../vendors/img/railway-app-logo.png" align="center"></a></td>
-        <td>Free -></br>5$/month</td>
+        <td>Free -></br>?$/month</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>Medium</td>
     </tr>
     <tr>
         <td><a href="/vendors/northflank/new_user"><img src="../../vendors/img/Northflank.png" align="center"></a></td>
-        <td>Free -></br>???$/month</td>
+        <td>Free -></br>?$/month</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>Medium</td>
     </tr>
 <tr>
         <td><a href="/vendors/fly.io/new_user"><img src="../../vendors/img/flyio-logo.png" align="center"></a></td>
-        <td>Free -></br>5$/month</td>
+        <td>Free -></br>?$/month</td>
         <td>Yes</td>
         <td>No</td>
         <td>High</td>
     </tr>
     <tr>
         <td><a href="/vendors/google/new_user"><img src="../../vendors/img/GoogleCloud.png" align="center"></td>
-        <td>Free -></br>$/month</td>
+        <td>Free -></br>?$/month</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>
     </tr>    <tr>
         <td><a href="/vendors/oracle/new_user"><img src="../../vendors/img/Oracle.png" align="center"></td>
-        <td>Free -></br>$/month</td>
+        <td>Free -></br>?$/month</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>
@@ -219,7 +237,7 @@ Click on the vendor logo.
     </tr>
     <tr>
         <td><a href="/vendors/digitalocean/new_user"><img src="../../vendors/img/DO.png" align="center"></a></td>
-    	<td>6$/month</td>
+    	<td>4$/month</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>
@@ -238,14 +256,8 @@ Click on the vendor logo.
         <td>Yes</td>
         <td>High</td>
     </tr>
-    <tr>
-        <td><a href="/vendors/azure/new_user/"><img src="../../vendors/img/Azure.png" align="center"></a>	     </td>
-        <td>variable</td>
-        <td>Yes</td>
-        <td>No</td>
-        <td>High</td>
-     </tr>
 </table>
+
 
 
 </br>

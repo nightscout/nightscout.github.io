@@ -1,7 +1,15 @@
 # Nightscout in Google Cloud
 
-A scripted simple deployment not requiring computer skills.
+</br>
 
-Written by the xDrip+ developers.
+### Deploy Nightscout
 
-https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html
+You can use several methods to deploy your Nightscout site:
+
+[Manually](../../../nightscout/ubuntu), command by command.
+
+Using a [deployment script](../../../nightscout/xdripteam).
+
+Using a [Docker](../../../nightscout/docker) container.
+
+</br>

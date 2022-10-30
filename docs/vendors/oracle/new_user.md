@@ -15,3 +15,17 @@ Another guide here:
 Work in progress here:
 
 [https://docs.google.com/document/d/1kX1R4y_FVS4AHVqCek0IwtgD-NKi8Y77/edit](https://docs.google.com/document/d/1kX1R4y_FVS4AHVqCek0IwtgD-NKi8Y77/edit)
+
+</br>
+
+### Deploy Nightscout
+
+You can use several methods to deploy your Nightscout site:
+
+[Manually](../../../nightscout/ubuntu), command by command.
+
+Using a [deployment script](../../../nightscout/xdripteam).
+
+Using a [Docker](../../../nightscout/docker) container.
+
+</br>
