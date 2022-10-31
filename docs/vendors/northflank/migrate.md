@@ -79,7 +79,7 @@ Select Heroku.
 
 <img src="../img/NorthflankM01.png" style="zoom:80%;" />
 
-<!-- *Note: if you don't see this option, send a mail to Northflank support to request access to the feature.* -->
+!!!note  "If you don't see this option, send a mail to Northflank support to request access to the feature."
 
 </br>
 
