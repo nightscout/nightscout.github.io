@@ -8,6 +8,10 @@
 
 </br>
 
+<!-- https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6 /-->
+
+<!-- https://github.com/schmitzn/howto-nightscout-linux -->
+
 ### Update your system
 
 Update your Ubuntu system (you should type this is a command every 3 or 6 months to keep it updated).  

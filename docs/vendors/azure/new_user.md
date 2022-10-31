@@ -41,6 +41,11 @@ Perform necessary authentication.
 
 > This is where your Nightscout data will be saved (BG, treatments, ...)
 
+!!!warning "AAPS Users"  
+    There is an issue with AAPS and Cosmos database.  
+    Until it's fixed, use a [MongoDB Atlas](../../mongodb/atlas) (or another MongoDB database).  
+    Once you've got your MONGODB_URI go to [step 3](#step-3-create-your-nightscout-web-app) below. 
+
 a) Click Go to the Azure portal (located here [https://portal.azure.com/](https://portal.azure.com/))
 
 <img src="../img/Azure04.png" style="zoom:80%;" />
