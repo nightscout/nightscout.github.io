@@ -59,9 +59,9 @@ Azure is back hurrah hurrah. Wait, why did we leave it some years ago? Ah, sure,
 
 ***You need a small free database? An [M0 Atlas](../../mongodb/atlas) does that and nothing more.***
 
-Free accounts on MongoDB Atlas are a source of problems for Nightscout.  An M0 free database is very limited in size.  While opinions vary, some people are take extra steps to delete data, while the developers generally recommend purchasing enough storage.
+Free accounts on MongoDB Atlas are a source of problems for Nightscout.  An M0 free database is very limited in size.  While opinions vary, some people take extra steps to delete data to stay under prescribed size for MongoDB Atlas, while the developers generally recommend purchasing enough storage from another provider.
 Loopers/AAPS'ers in particular should secure enough
-storage for an excellent Nightscout experience and avoid MongoDB Atlas.
+storage for an excellent Nightscout experience and avoid the MongoDB Atlas free tier.
 
 ## **[RAILWAY]()**
 
