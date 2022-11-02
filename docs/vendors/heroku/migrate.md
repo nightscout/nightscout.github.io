@@ -4,9 +4,12 @@ As the [deadline](https://blog.heroku.com/next-chapter) is coming closer, one qu
 
 There is no universal solution. So, you'll have to read between the lines and understand what's the best strategy for you, as we have different needs, skills and budgets.
 
-## **HISTORY**
+There's no simple answer to this. You basically have two options:
 
-Digging in Facebook, GitHub and the internet you'll discover Jason Calabrese used DigitalOcean, and in the early 2014 the deploy to Azure and Heroku buttons were added to the repo with the original developer's agreement.
+1. **DIY** Use instructions on this website or your computing skills to create your own installation. Depending on your skill and choice of platform, this can take anywhere from minutes to hours to accomplish. Additionally, you will need to maintain this installation yourself. Having said that, there are cloud providers that offer the needed hosting services for free with a variety of restrictions, so your monthly hosting cost can be **free** - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it. Additionally, it's important to understand that if you're using a free tier of a hosting service to run Nightscout, your hosting costs are being paid by the hosting provider you're using.
+2. **Use a service** You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently two options available for this ([NS10BE](#ns10be) and [T1Pal](#t1pal)), both of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+
+The Nightscout development community actively supports both of these choices.
 
 ## **[TANSTAAFL](https://en.wiktionary.org/wiki/TANSTAAFL)**
 
@@ -16,7 +19,29 @@ This is an important concept everybody needs to understand: what we call free me
 
 ***You need a reliable Nightscout but don't want to build it and maintain it? T1Pal and NS10BE are your best choices.***
 
-Too few people know about the [hosted solutions recommended by our developers](https://nightscout.github.io/#nightscout-as-a-service). If you will want to pay a vendor for your DIY Nightscout you should seriously consider them. Also, if you need to support multiple T1D people in a family that's surely something to think about.
+### T1Pal
+
+![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)
+
+[T1Pal](https://t1pal.com) directly supports the sustainability of the Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.
+
+The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project. Database and server administration is automated and managed automatically as part of the service. Contact T1Pal support to request specific features or versions.
+
+If you need help with T1Pal, please file a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get Support" from [My Account](https://www.t1pal.com/account/).
+
+
+### NS10BE
+
+<img src="https://ns.10be.de/templates/images/ns.10be.de-logo_halb_klein.jpg" width="400" height="155">
+
+[ns.10BE.de](https://ns.10be.de/) was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits. A backup of your database and settings is performed every 6-8 hours. You can import data from your old Nightscout instance or MongoDB database, also upload data (Freestyle, Dexcom, Omnipod, ...) via CSV files. The servers are located in different fail-safe data centers in Germany, Finland or France (can be selected) . They are monitored by [uptimerobot](https://ns.10be.de/en/status.html) and own Slackbot. When a server goes down, it restarts itself and sends a twitter message.
+
+A Nightscout Instance at NS10BE costs €4.99/month, with discounts when increasing subscription duration.
+
+To see more about NS10 features and costs, take a look at the [features page](https://10be.de/en/pricing.html). The registration is free.
+
+***Support:*** ***support*** at ***ns.10be.de*** or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
+
 
 ## **[HEROKU]()**
 
