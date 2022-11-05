@@ -1,19 +1,27 @@
 # Migrate from Heroku to Fly.io keeping your MongoDB Atlas database
 
----
-
-</br>
-
-!!!warning "Not recommended. [Deploy a new Fly.io Nightscout](../new_user) site and copy your Heroku variables."
+!!!warning "Migration is not recommended"  
+    If you want to migrate your site in Fly.io make sure you will be able to **maintain it**.  
+    It might be better to [deploy a new Fly.io Nightscout](../new_user) site and copy your Heroku variables.
 
 </br>
 
 <span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../../vendors/img/flyio-logo.png" style="zoom:60%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
 
-!!!info "Cost"  
-[Fly.io](https://fly.io/) states that "Heroku apps fits in our [free tier](https://fly.io/docs/about/pricing/#free-tier)".  
-While migration is extremely easy, maintenance and upgrades involve CLI and are rather complex.  
-Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
+
+</br>
+
+**Pros**:  
+
+> Pay-as-you-go Hobby plan allows you to run Nightscout [for free](https://fly.io/docs/about/pricing/#plans)  
+> Migration process is really simple  
+
+**Cons**:  
+
+>Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+>  While migration is extremely easy, maintenance and upgrades involve CLI and are complex  
 
 </br>
 

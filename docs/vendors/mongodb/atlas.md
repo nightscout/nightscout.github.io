@@ -1,21 +1,33 @@
 # MongoDB
 
-## Create an Atlas database
-
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
 
 </br>
 
-!!!info "Database limitations"  
-    You will use a [free M0 cluster for your Atlas database](https://www.mongodb.com/pricing#mdb-modal-shared) from MongoDB, its size is limited to 512MB.  
-    You will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) the additional cost is 9$ per month. 
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+</br>
+
+**Pros**:  
+
+> The sandbox M0 cluster for your Atlas database from MongoDB is [free](https://www.mongodb.com/pricing#mdb-modal-shared)  
+> Nightscout has been adapted for MongoDB Atlas  
+
+**Cons**:  
+
+>Database size is limited to 512MiB. For learning and exploring MongoDB, not for production  
+>You will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure  
+>You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) the additional cost is 9$ per month  
+
+</br>
 
 !!! note "Note"
     MongoDB Atlas regularly changes the site aspect. If you encounter a page not matching this documentation search for keywords like `not now`, `skip` or `later` to continue. Report discrepancies [here](https://github.com/nightscout/nightscout.github.io/issues/new).
 
 </br>
+
+## Create an Atlas database
 
 a) Open another tab at: [https://www.mongodb.com/cloud/atlas/register](https://www.mongodb.com/cloud/atlas/register)
 

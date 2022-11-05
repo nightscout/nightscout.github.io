@@ -1,24 +1,25 @@
 # Migrate from Heroku to Northflank keeping your MongoDB Atlas database
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>  <img src="../../img/Heroku.png" style="zoom:80%;" /> + <img src="../../img/Atlas.png" style="zoom:80%;" />  ⟹   <img src="../../img/Northflank.png" style="zoom:80%;" /> + <img src="../../img/Atlas.png" style="zoom:80%;" />
-
----
-
-!!!info "Cost"
-
-You can migrate from Heroku to Northflank and **keep your Nightscout site for free** (maintaining your MongoDB Atlas database).
+<span style="font-size:smaller;">**APPLIES TO:**</span>  <img src="../../img/Northflank.png" style="zoom:80%;" /> + <img src="../../img/Atlas.png" style="zoom:80%;" />
 
 </br>
 
-Keep in mind the free M0 MongoDB Atlas database size is limited to 512MB and you will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters), the additional cost is 9$ per month.
-
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
 </br>
 
-**WORK IN PROGRESS DO NOT USE**
+**Pros**:  
 
-<img src="../../../img/WIP.png" style="zoom:80%;" />
+> The developer plan allows you to run Nightscout [for free](https://northflank.com/pricing)  
+> Migration process is really simple (*)  
+
+**Cons**:  
+
+>Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+>The developer plan is intended to experiment deployments  
+>(*) You need to request the migration feature to Northflank support  
+>You might want to use a free DNS provider to override the default site name  
 
 </br>
 
@@ -142,6 +143,12 @@ Congratulations. You migrated from Heroku to Northflank.
 Click the site name to open Nightscout.
 
 <img src="../img/NorthflankM11.png" style="zoom:80%;" />
+
+</br>
+
+!!!note "Nightscout site name"  
+    You [cannot](https://northflank.com/docs/v1/application/network/configure-ports#public-ports) override the default name if you don't have a DNS.  
+    You can use a free DNS service to do this like [NoIP](https://www.noip.com/),  [Dynu](https://www.dynu.com/), [FreeDNS](https://freedns.afraid.org/), ...
 
 </br>
 

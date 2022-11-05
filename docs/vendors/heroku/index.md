@@ -9,13 +9,10 @@ Multiple factor authentication (MFA) also called 2 factors authentication (2FA) 
 !!! warning "Losing access"
     It is recommended to setup at least two MFAs, **one being a copy of the recovery codes**. Salesforce take security very seriously and recovering your account after losing access might range from very complex to impossible. For increased safety, setup more than one authentication method on more than one device.
 
-[The requirement begins on February 1, 2022. We encourage you to begin planning now for this change.](https://help.salesforce.com/s/articleView?id=000356005&type=1) 
+</br>
 
-Until this date you can postpone creating a two factor authentication method but it is recommended to create one as soon as possible.
-
-Upon Heroku access, until Feb 1st 2021 you will be proposed to secure your account as shown below.
-
-To setup MFA and secure your account select `Continue`.
+To setup MFA and secure your account select `Continue`.  
+If you don't want to secure your account, select `Later`.
 
 If you want to enter your account without setting MFA just select `Later`.
 

@@ -4,11 +4,21 @@
 
 The original documentation is here [https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6](https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6).
 
-!!!info "Cost"  
-Nightscout and its database will fit in a Basic droplet at 4$ / month.  
-You can test this solution for free for 2 months.  
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
-Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.
+</br>
+
+**Pros**:  
+
+> Reliable platform  
+> Well known by the community IT specialists  
+
+**Cons**:  
+
+> Smallest Droplet at 4$/month
+
+</br>
 
 ### Create a Droplet
 

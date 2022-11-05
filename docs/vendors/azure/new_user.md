@@ -4,11 +4,21 @@
 
 Yes! It's [back](https://news.microsoft.com/features/open-source-and-the-cloud-changing-the-lives-of-people-with-type-1-diabetes)!
 
-!!!info "Cost"  
-Region dependent. If you can deploy Nightscout with this guide it should be free.  
-If you run into trouble during database creation you might need a Basic account.
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+</br>
+
+**Pros**:  
+
+> Large platform with proven reliability  
+> Well known by the community IT specialists  
+> Subscribe to a Basic plan using free services
+
+**Cons**:  
+
+> The Cosmos database is not fully supported  
+> Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database
 
 </br>
 

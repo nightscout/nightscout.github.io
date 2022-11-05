@@ -3,11 +3,23 @@
 
 <span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../../vendors/img/flyio-logo.png" style="zoom:60%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
 
-!!!info "Cost"  
-Nightscout is expected to run without charges in the [free tier](https://fly.io/docs/about/pricing/#free-tier).  
-Most operations involve CLI and are rather complex for the non-technical user. 
+</br>
 
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
+
+</br>
+
+**Pros**:  
+
+> Pay-as-you-go Hobby plan allows you to run Nightscout [for free](https://fly.io/docs/about/pricing/#plans) 
+
+**Cons**:  
+
+>Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+>Creation, maintenance and upgrade involve CLI and are complex  
+
+</br></span>
 
 </br>
 

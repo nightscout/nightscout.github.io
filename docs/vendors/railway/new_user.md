@@ -2,27 +2,25 @@
 
 Method 1: using the Railway button
 
----
-
 <span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../img/railway-app-logo.png" style="zoom:80%;" />
 
----
+</br>
 
-!!!info "Cost"
-
-You can create your **Railway Nightscout site for free** (using a MongoDB Atlas database) by subscribing to a [Developer plan](https://railway.app/pricing). You will need to add a credit card to your Railway account but since Nightscout usage will remain below the free 5$ threshold per month, **you will not be billed**.
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
 </br>
 
-Keep in mind a free M0 MongoDB Atlas database size is limited to 512MB and you will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters) the additional cost is 9$ per month.   
+**Pros**:  
 
-!!!warning "Database"    
-    Adding a Railway MongoDB database to your Railway account will eventually generate costs.  
-    The Developer plan offers Max 100 GB of Disk (Soft cap) but mind the cost $0.000231 / GB / Minute will quickly reach 5$ for a 512MB database.
+> The developer plan allows you to run Nightscout [for free](https://docs.railway.app/reference/plans#developer-plan-offering)  
+> Migration process is really simple  
+> You can use a local Mongo database, cost is $0.000231 / GB / Minute
 
-</br>
+**Cons**:  
 
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+>Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+>Railway network model generates missing data issues with some follower apps and devices
 
 </br>
 
@@ -112,24 +110,23 @@ Your card will be billed 1$ that will be refund immediately. Bank fees won't be 
 
 ### Step 3: Create your database
 
-!!!note "Already have a database?"  
-    If you're migrating from another platform and you already have database connection string from another Nightsout deployment, just copy the `MONGODB_URI` or `MONGO_CONNECTION` string and keep your data!
+- #### You can reuse your existing MongDB Atlas database.    
 
-You have two choices.
+Migrating from Heroku? [Edit your Heroku site variables](../../heroku/new_user#editing-config-vars-in-heroku) and copy the `MONGODB_URI` or `MONGO_CONNECTION` variable.  
+    Lost your string? [Recover it](../../../troubleshoot/atlas/#recover-your-connection-string) from MongoDB Atlas.
 
 - #### You can create a new MongoDB Atlas database.
 
-!!!info "Costs"  
-    Recommended for a free Nightscout site.
-
 To create a new MongoDB database follow [these instructions](../../mongodb/atlas/#create-an-atlas-database) and come back with your `MONGODB_URI` connection string.  
-The Atlas database size is limited to 512MB of data and is free to try. This might evolve in the future.
+The Atlas database size is limited to 512MiB of data and is free to try. This might evolve in the future.  
+When the MongoDB Atlas database is full your Nightscout site will crash.
 
 - #### You can create a new Railway Mongo database.
 
 !!!warning "Costs"  
     Adding a Railway Mongo database will not fit forever in 5$ per month.  
-    If you don't keep its dimension very small (<200MB) you will most probably be charged for it.
+    If you don't keep its dimension very small (<200MB) you will most probably be charged for it.  
+    A good database is important for your Nightscout site reliability.
 
 a) Click `New Project` from your Dashboard screen (top right).
 

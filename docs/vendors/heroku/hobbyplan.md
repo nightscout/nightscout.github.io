@@ -1,14 +1,12 @@
 # Heroku Hobby plan upgrade
 
-------
-
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../img/Heroku.png" style="zoom:80%;" />
 
-------
+</br>
 
 ## [End of Free plan](https://blog.heroku.com/next-chapter)
 
-Starting October 26, 2022, Heroku will begin deleting inactive accounts and associated storage for accounts that have been inactive for over a year.
+Starting October 26, 2022, Heroku began deleting accounts that have been inactive for over a year.
 
 Starting November 28, 2022, Heroku plans to stop offering free product plans and plan to start shutting down free dynos and data services.
 
@@ -17,7 +15,20 @@ If you already have a Hobby plan you don't need to do anything and you Nightscou
 
 </br>
 
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
+
+</br>
+
+**Pros**:  
+
+> Heroku is a reliable platform well known by the community  
+> Heroku has been hosting Nightscout users for years in the free tier  
+
+**Cons**:  
+
+>Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+>Paying for a hobby plan doesn't remove DIY maintenance tasks like stack upgrade  
 
 </br>
 

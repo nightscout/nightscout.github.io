@@ -87,7 +87,7 @@ The Nightscout development community actively supports both of these choices.
 
 <span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions [here](../nightscout/new_user/).</span>
 
-**Note:** DIY users of Nightscout have been historically using platforms like [Digital Ocean](https://github.com/jasoncalabrese/project-glu/blob/master/README.md), [Microsoft Azure](https://docs.google.com/document/d/1RP-0KAX0Z46iGmShBdygY7_vQN1d-xEgtK_dSsjCA20/edit) and then Salesforce Heroku to host their sites. Heroku is in process of removing the free hosting tier but here are various solutions to host your Nightscout site for free. If you have the time to author instructions for this purpose, new documentation pull requests are extremely welcome at [https://github.com/nightscout/nightscout.github.io](https://github.com/nightscout/nightscout.github.io).
+**Note:** DIY users of Nightscout have been historically using platforms like [Digital Ocean](https://github.com/jasoncalabrese/project-glu/blob/master/README.md), [Microsoft Azure](https://docs.google.com/document/d/1RP-0KAX0Z46iGmShBdygY7_vQN1d-xEgtK_dSsjCA20/edit) and then Salesforce Heroku to host their sites. If you have the time to author instructions for this purpose, new documentation [pull requests](https://github.com/nightscout/nightscout.github.io/pulls?q=is%3Apr) are extremely welcome as well as [comments](https://github.com/nightscout/nightscout.github.io/issues).
 
 ## Nightscout as a Service
 

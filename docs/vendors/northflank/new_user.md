@@ -6,16 +6,23 @@
 
 ---
 
-!!!info "Cost"
+</br>
 
-You can create your **Northflank Nightscout site for free** (using a MongoDB Atlas database).
-
-!!!warning "Database"  
-    Adding a database to your Northflank account will increase costs.
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
 </br>
 
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+**Pros**:  
+
+> The developer plan allows you to run Nightscout [for free](https://northflank.com/pricing)  
+> You can use a local database: cost is 0.3$/GB/month (minimum cost 0.3$ per month)
+
+**Cons**:  
+
+>Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+>The developer plan is intended to experiment deployments  
+>You might want to use a free DNS provider to override the default site name  
 
 </br>
 
@@ -236,24 +243,21 @@ You have several choices.
 
 - #### You can reuse your existing MongDB Atlas database.    
 
-!!!info "Costs"  
-    Recommended for Heroku migration.
-
 Migrating from Heroku? [Edit your Heroku site variables](../../heroku/new_user#editing-config-vars-in-heroku) and copy the `MONGODB_URI` or `MONGO_CONNECTION` variable.  
     Lost your string? [Recover it](../../../troubleshoot/atlas/#recover-your-connection-string) from MongoDB Atlas.
 
 - #### You can create a new MongoDB Atlas database.
 
-!!!info "Costs"  
-    Recommended for a free Nightscout site.
-
 To create a new MongoDB database follow [these instructions](../../mongodb/atlas/#create-an-atlas-database) and come back with your `MONGODB_URI` connection string.  
-The Atlas database size is limited to 512MB of data and is free to try. This might evolve in the future.
+The Atlas database size is limited to 512MiB of data and is free to try. This might evolve in the future.  
+When the MongoDB Atlas database is full your Nightscout site will crash.
 
 - #### You can create a new Northflank Mongo database.
 
 !!!warning "Costs"  
-    Minimum price is 0.3$ per GB per month.
+    The Mongo database is free, you only pay for the storage  
+    Minimum price is 0.3$/month, cost is then 0.3$/GB/month.  
+    A good database is important for your Nightscout site reliability.
 
 </br>
 
@@ -378,7 +382,7 @@ x) Dexcom Share and CareLink users should see data flowing in after some minutes
 
 ## Change your Northflank Nightscout site name
 
-To be documented [if possible](https://northflank.com/docs/v1/application/network/configure-ports#public-ports).
+You [cannot](https://northflank.com/docs/v1/application/network/configure-ports#public-ports) override the default name if you don't have a DNS. You can use a free DNS service to do this like [NoIP](https://www.noip.com/),  [Dynu](https://www.dynu.com/), [FreeDNS](https://freedns.afraid.org/), ...
 
 </br>
 

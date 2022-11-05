@@ -1,20 +1,23 @@
 # Migrate from Heroku to Railway
 
----
-
-<span style="font-size:smaller;">**APPLIES TO:**</span>  <img src="../../img/Heroku.png" style="zoom:80%;" /> + <img src="../../img/Atlas.png" style="zoom:80%;" />  ⟹   <img src="../../img/railway-app-logo.png" style="zoom:80%;" /> + <img src="../../img/Atlas.png" style="zoom:80%;" />
-
----
-
-!!!info "Cost"
-
-You can migrate from Heroku to Railway and **keep your Nightscout site for free** (maintaining your MongoDB Atlas database) by subscribing to a [Developer plan](https://railway.app/pricing). You will need to add a credit card to your Railway account but since Nightscout usage will remain below the free 5$ threshold per month, **you will not be billed**.
+<span style="font-size:smaller;">**APPLIES TO:**</span>  <img src="../../img/railway-app-logo.png" style="zoom:80%;" /> + <img src="../../img/Atlas.png" style="zoom:80%;" />
 
 </br>
 
-Keep in mind the free M0 MongoDB Atlas database size is limited to 512MB and you will eventually need to perform [cleanup](../../../nightscout/admin_tools/#database-maintenance), make sure you add [`dbsize`](../../../nightscout/setup_variables/#dbsize-database-size) in `enable` to avoid unexpected Nightscout failure. You can increase database size with an [M2 shared cluster](https://www.mongodb.com/docs/atlas/manage-clusters/#shared-clusters), the additional cost is 9$ per month.
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+</br>
+
+**Pros**:  
+
+> The developer plan allows you to run Nightscout [for free](https://docs.railway.app/reference/plans#developer-plan-offering)  
+> Migration process is really simple  
+
+**Cons**:  
+
+>Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+>Railway network model generates missing data issues with some follower apps and devices
 
 </br>
 

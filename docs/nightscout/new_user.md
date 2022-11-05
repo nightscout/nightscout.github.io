@@ -6,8 +6,8 @@
 
 </br>
 
-<span style="font-size:larger;">Too complicated? Not what you're looking for? </br>Consider a hosted Nightscout service. Check [here](../../#nightscout-as-a-service).</span></br></br>
-Interested in building a Nightscout DIY site?  Make sure you read and understand [this](/#how-much-does-it-cost) before starting.
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
 </br>
 
@@ -55,7 +55,8 @@ Follow [these instructions](../../vendors/mongodb/atlas) to build a small databa
 ### Heroku
 
 Heroku was a very popular platform for Nightscout until now. Most of the documentation is based on a Heroku Nightscout.  
-On August 25th 2022, Salesforce decided to [drop the free plan](https://blog.heroku.com/next-chapter).  In order to keep your Nightscout running in Heroku, you can [upgrade to a Hobby account](../../vendors/heroku/hobbyplan).  
+On August 25th 2022, Salesforce decided to [drop the free plan](https://blog.heroku.com/next-chapter).  
+In order to keep your Nightscout running in Heroku, you can [upgrade to a Hobby account](../../vendors/heroku/hobbyplan).  
 You can [create your new Nightscout site with Heroku](../../vendors/heroku/new_user) using a Hobby account plan (7$ / month).
 
 > **Pros**:  
@@ -69,18 +70,19 @@ You can [create your new Nightscout site with Heroku](../../vendors/heroku/new_u
 ### Azure
 
 Nightscout DIY was [originally](https://github.com/rnpenguin/cgm-remote-monitor) created with Azure but most users dropped it after costs increased.  
-A new deployment method has [been created](../../vendors/azure/new_user).  
+A new deployment method has [been created using a Docker container](../../vendors/azure/new_user).  
 If you want to migrate and keep your Atlas database look [here](../../vendors/azure/migrate).
 
 > **Pros**:  
 > Large platform with a reliable history  
 > Well known by the community IT specialists  
-> Using a local database  
-> Using a basic plan and free services make it free
+> Using a local database*  
+> Using a basic plan and free services keep it free
 >
 > **Cons**:  
 > Trial account lasts maximum 12 months  
-> Basic plan and pay as you go is free if you stay within quotas
+> Basic plan and pay as you go is free if you stay within quotas  
+> *The Cosmos database doesn't integrate completely with Nightscout
 
 ### Railway.app
 
@@ -128,7 +130,7 @@ Fly.io proposes a [simple migration wizard from Heroku](../../vendors/fly.io/mig
 ### Google Cloud
 
 The xDrip+ developers team proposes [a simple scripted install in a Google Cloud free tier server](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud).  
-You don't need to know much about computers to install it, migrate from Heroku, get your data from another Nightscout, update, ... The solution is in progress and looks really great.
+You don't need to know much about computers to install it, migrate from Heroku, get your data from another Nightscout, update, ... The solution is in progress and is really great.
 
 > **Pros**:  
 > Nightscout and database fit in the free tier  
@@ -137,7 +139,7 @@ You don't need to know much about computers to install it, migrate from Heroku, 
 > Easy to upgrade, backup, ...
 >
 > **Cons**:  
-> You'll tell us
+> The community needs to build knowledge to help users troubleshoot issues
 
 </br>
 

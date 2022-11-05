@@ -1,13 +1,25 @@
-# Migrate Nightscout from Heroku to Azure (Docker)
+# Migrate Nightscout from Heroku to Azure
 
-<span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../../vendors/img/Azure.png" style="zoom:60%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../../vendors/img/Azure.png" style="zoom:60%;" /> + <img src="../../../vendors/img/docker.png" style="zoom:60%;" /> + <img src="../../../vendors/img/Atlas.png" style="zoom:60%;" />
 
 Yes! Azure is [back](https://news.microsoft.com/features/open-source-and-the-cloud-changing-the-lives-of-people-with-type-1-diabetes)!
 
-!!!info "Cost"  
-Need more data. This solution might fit for free in a Basic plan.
+</br>
 
-<span style="font-size:larger;">Consider [Nightscout as a service](/#nightscout-as-a-service) as an option.</span>
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
+
+</br>
+
+**Pros**:  
+
+> Large platform with proven reliability  
+> Well known by the community IT specialists  
+> Subscribe to a Basic plan using free services
+
+**Cons**:  
+
+> Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database
 
 </br>
 

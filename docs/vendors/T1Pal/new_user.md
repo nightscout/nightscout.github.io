@@ -409,8 +409,3 @@ Low BG threshold, triggers the `ALARM_LOW` alarm.
 ##### **Low BG**
 
 Urgent Low BG threshold, triggers the `ALARM_URGENT_LOW` alarm.
-
-</br>
-
-!!! note "`ALARM_*` `ALARM_URGENT_*`"
-    You can setup alarms, so that when your Nightscout page is open and the alarm enabled, above (`HIGH`) or below (`LOW`) a certain threshold, a sound might play.
