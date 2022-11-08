@@ -19,7 +19,8 @@ Yes! Azure is [back](https://news.microsoft.com/features/open-source-and-the-clo
 
 **Cons**:  
 
-> Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database
+> Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+> **[Free service plan](https://azure.microsoft.com/en-us/pricing/details/app-service/windows/) is intended to be used only for development and testing purposes**
 
 </br>
 

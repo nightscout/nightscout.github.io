@@ -1,4 +1,4 @@
-# Heroku Hobby plan upgrade
+# Heroku Eco plan
 
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../img/Heroku.png" style="zoom:80%;" />
 
@@ -22,18 +22,19 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 **Pros**:  
 
 > Heroku is a reliable platform well known by the community  
-> The Hobby plan is designed for production, the app never sleeps  
+> The Eco plan is made for personal apps  
+> Nightscout fits in 1000 dyno hours per month  
 > Heroku has been hosting Nightscout users for years in the free tier  
 
 **Cons**:  
 
 >Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
->The [Eco plan](../ecoplan) is more economical  
->Paying for a hobby plan doesn't remove DIY maintenance tasks like stack upgrade  
+>Paying for an Eco plan doesn't remove DIY maintenance tasks like stack upgrade  
+>Eco plan apps will sleep after 30 minutes of inactivity  
 
 </br>
 
-## Upgrade to 7$/month Hobby Plan
+## Enable a 5$/month Eco Plan
 
 </br>
 
@@ -55,14 +56,13 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 
 </br>
 
-- Select `Hobby ($7/dyno/month)` then click `Save`
+- Select `Eco ($5 for 1000 Dyno Hours/Month)` then click `Save`
 
-<img src="../../heroku/img/HerokuH02.png" style="zoom:80%;" >
+<img src="../../heroku/img/HerokuE02.png" style="zoom:80%;" >
 
 </br>
 
-- Your Nightscout Heroku app is now using a `Hobby` plan.  
-  *Note: if you were doing a test you still can return to an `Eco` dyno plan for now.*
+- Your Nightscout Heroku app is now using an `Eco` plan.
 
 <img src="../../heroku/img/HerokuH03.png" style="zoom:80%;" >
 

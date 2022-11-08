@@ -22,15 +22,15 @@ You can create Nightscout with a few clicks and won't have to worry about mainte
 
 ## **Heroku**
 
-***You liked the Heroku experience and don't want to change? A [Hobby account subscription](../hobbyplan) is all it takes to continue like that.***
+***You liked the Heroku experience and don't want to change? An [Eco plan subscription](../ecoplan) is all it takes to continue like that.***
 
-Heroku is a great choice even if 7$ per month is a lot for running Nightscout. Someone reminded me they've been offering a free account to many of us for years so there's no reason not to pay for a Hobby account and let it go as before. **Con:** it remains DIY, not set it and forget it though.
+Heroku is still a valid choice for running Nightscout. Someone reminded me they've been offering a free account to many of us for years so there's no reason not to pay for an Eco account and let it go as before. Still, it is not set it and forget it and you will need to keep it updated yourself. And that MongoDB Atlas database still is a weak point.
 
 ## **Azure**
 
 ***You need a reliable engine for your Nightscout site, well [Azure](../../azure/migrate) sure is the way to go.***
 
-Azure is back hurrah hurrah. Wait, why did we leave it some years ago? Ah, sure, costs. But we believe we have a free solution thanks to [Scott](https://www.youtube.com/watch?v=EDADrteGBnY).
+Azure is back hurrah hurrah. Wait, why did we leave it some years ago? Ah, sure, costs. But we believe we have a free solution thanks to [Scott](https://www.youtube.com/watch?v=EDADrteGBnY). Shame the Cosmos database didn't meet expectations... And keep in mind the free tier is designed for testing, not production.
 
 ## **MongoDB Atlas**
 
@@ -48,7 +48,7 @@ With the xDrip+ team trying to make it so easy that the solutions above will loo
 
 ***You want a simple and free alternative to Heroku? [Railway](../../railway/migration) is for you... if you're not worried you might have to migrate again in the future.***
 
-We really liked the Railway solution when we found it: it's very simple to migrate and the platform is simple to use. Still, we discovered M5Stack Nightscout devices didn't like the network performance and resets... probably some other followers are suffering related issues. But the main worry with Railway is that they're a startup company and even if they're eager to see more users coming we don't know how they'll react when too many of us use their servers ... for free. TANSTAAFL above.
+We really liked the Railway solution when we found it: it's very simple to migrate and the platform is simple to use. Still, we discovered some Nightscout followers are suffering network related issues. But the main worry with Railway is that they're a startup company and even if they're eager to see more users coming we don't know how they'll react when too many of us use their servers ... for free. TANSTAAFL above.
 
 ## **Northflank**
 

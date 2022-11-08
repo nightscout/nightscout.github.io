@@ -1,4 +1,4 @@
-# Heroku Hobby plan Nightscout
+# Heroku Eco plan Nightscout
 
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../../vendors/img/Heroku.png" style="zoom:80%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
 
@@ -11,14 +11,13 @@
 
 **Pros**:  
 
-> Heroku is a reliable platform well known by the community  
-> Heroku has been hosting Nightscout users for years in the free tier  
+> Large platform with a reliable history  
+> Well documented, well known by the community
 
 **Cons**:  
 
->Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
->You can deploy your Nightscout site using a [Hobby plan (7$ per month per app)](https://www.heroku.com/pricing)  
->Paying for a hobby plan doesn't remove DIY maintenance tasks like stack upgrade  
+> The Eco plan has the same limitations than the previous Free plan, for 5$ per month  
+> Relying on the MongoDB Atlas database
 
 </br>
 

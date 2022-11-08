@@ -15,7 +15,8 @@ Method 2: using the help page
 
 > The developer plan allows you to run Nightscout [for free](https://docs.railway.app/reference/plans#developer-plan-offering)  
 > Migration process is really simple  
-> You can use a local Mongo database, cost is $0.000231 / GB / Minute
+> You can use a local Mongo database, cost is $0.000231 / GB / Minute  
+> The developer [plan](https://docs.railway.app/reference/plans) is meant for hobbyist workloads  
 
 **Cons**:  
 

@@ -61,6 +61,8 @@ You can modify this later but you can't select anything cheaper than this first 
 
 <img src="../img/DO06.png" style="zoom:80%;" />
 
+***Note:** For a reliable Nightscout a $6 Droplet is recommended.*
+
 </br>
 
 g) Choose a datacenter close to where you live.

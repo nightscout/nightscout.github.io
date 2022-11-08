@@ -48,6 +48,7 @@ Follow [these instructions](../../vendors/mongodb/atlas) to build a small databa
 > Nightscout was adapted to the MongoDB Atlas
 >
 > **Cons**:  
+> M0 clusters are designed for learning and testing, not production  
 > There is no warranty the M0 cluster will remain in the future  
 > A larger M2 cluster costs 9$ per month  
 > A full M0 database crashes Nightscout
@@ -56,15 +57,16 @@ Follow [these instructions](../../vendors/mongodb/atlas) to build a small databa
 
 Heroku was a very popular platform for Nightscout until now. Most of the documentation is based on a Heroku Nightscout.  
 On August 25th 2022, Salesforce decided to [drop the free plan](https://blog.heroku.com/next-chapter).  
-In order to keep your Nightscout running in Heroku, you can [upgrade to a Hobby account](../../vendors/heroku/hobbyplan).  
-You can [create your new Nightscout site with Heroku](../../vendors/heroku/new_user) using a Hobby account plan (7$ / month).
+In order to keep your Nightscout running in Heroku, you can [upgrade to an Eco plan](../../vendors/heroku/ecoplan) or a [Hobby plan](../../vendors/heroku/hobbyplan).  
+You can [create your new Nightscout site with Heroku](../../vendors/heroku/new_user) using an Eco plan (5$ / month).
 
 > **Pros**:  
 > Large platform with a reliable history  
 > Well documented, well known by the community
 >
 > **Cons**:  
-> For a Nightscout site 7$ per month is not really worth it  
+> For a Nightscout site a 7$ per month Hobby plan is not really worth it (compared to hosted solutions)  
+> The Eco plan has the same limitations than the previous Free plan, for 5$ per month  
 > Relying on the MongoDB Atlas database
 
 ### Azure
@@ -76,20 +78,20 @@ If you want to migrate and keep your Atlas database look [here](../../vendors/az
 > **Pros**:  
 > Large platform with a reliable history  
 > Well known by the community IT specialists  
-> Using a local database*  
 > Using a basic plan and free services keep it free
->
-> **Cons**:  
+> 
+>**Cons**:  
 > Trial account lasts maximum 12 months  
 > Basic plan and pay as you go is free if you stay within quotas  
-> *The Cosmos database doesn't integrate completely with Nightscout
+> The F1 free app service plan is designed for testing, not production  
+> The Cosmos database doesn't integrate completely with Nightscout
 
 ### Railway.app
 
 You can easily [migrate from Heroku to Railway](../../vendors/railway/migration) or create a [new Railway Nightscout site](../../vendors/railway/new_user2) with a MongoDB Atlas or a Railway MongoDB database.
 
 > **Pros**:  
-> Nightscout fits in the free tier  
+> Nightscout fits in the free tier using a developer account  
 > Easy to deploy or migrate an existing site from Heroku  
 > Simple to use and troubleshoot  
 > Can use a native Railway MongoDB database ($)
@@ -125,7 +127,8 @@ Fly.io proposes a [simple migration wizard from Heroku](../../vendors/fly.io/mig
 > **Cons**:  
 > Small company  
 > Maintaining your site requires the use of a computer with command line instructions, not very intuitive  
-> Migrated Heroku sites store variables as secrets
+> Migrated Heroku sites store variables as secrets  
+> Relying on the MongoDB Atlas database
 
 ### Google Cloud
 

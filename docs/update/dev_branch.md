@@ -149,7 +149,11 @@ Do not deploy `dev` or a branch other than `master` unless directed to do so (ex
 
 </br>
 
-- Select `Settings` and look into `Environment`.  
+- Select `Settings` and look into `Default Branch`.
+
+- Change it to `dev`.
+
+- Still in `Settings` look at `Environment`.  
 
 - Change the `Deployment Trigger` with `dev` (it was showing `master`).
 

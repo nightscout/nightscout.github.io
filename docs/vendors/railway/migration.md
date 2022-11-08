@@ -13,6 +13,7 @@
 
 > The developer plan allows you to run Nightscout [for free](https://docs.railway.app/reference/plans#developer-plan-offering)  
 > Migration process is really simple  
+> The developer [plan](https://docs.railway.app/reference/plans) is meant for hobbyist workloads  
 
 **Cons**:  
 

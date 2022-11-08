@@ -18,7 +18,8 @@ Yes! It's [back](https://news.microsoft.com/features/open-source-and-the-cloud-c
 **Cons**:  
 
 > The Cosmos database is not fully supported  
-> Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database
+> Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
+> **[Free service plan](https://azure.microsoft.com/en-us/pricing/details/app-service/windows/) is intended to be used only for development and testing purposes**
 
 </br>
 
