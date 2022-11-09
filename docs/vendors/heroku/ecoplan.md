@@ -78,3 +78,6 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 - Verify the credit card you used is still valid, in case of doubt `Change credit card` and enter a valid credit card.
 
 <img src="../../heroku/img/HerokuH04.png" style="zoom:80%;" >
+
+</br>
+
