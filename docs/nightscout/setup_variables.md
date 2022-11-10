@@ -6,11 +6,14 @@ Nightscout configuration is held in variables , their content can be modified to
 
 ------
 
-<img src="../../vendors/img/Heroku.png" style="zoom:80%;" /> [Editing Config Vars in Heroku](../../vendors/heroku/new_user#editing-config-vars-in-heroku)
+Your variables location will depend on your hosting:
 
-<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" /> [Editing Config Vars in Railway](../../vendors/railway/new_user/#editing-variables-in-railway)
+[Editing Config Vars in Heroku](../../vendors/heroku/new_user#editing-config-vars-in-heroku)  
+[Editing Variables in Railway](../../vendors/railway/new_user/#editing-variables-in-railway)  
+[Editing Environment Variables in Northflank](../../vendors/northflank/new_user/#editing-variables-in-northflank)  
+[Editing Application Settings in Azure](../../vendors/azure/new_user/#editing-config-vars-in-azure)
 
-<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" /> [Control Panel](../../../vendors/T1Pal/new_user/#configure-more-settings) will allow to modify some of these variables.
+[T1Pal Control Panel](../../../vendors/T1Pal/new_user/#configure-more-settings) will allow to modify some of these variables.
 
 ------
 

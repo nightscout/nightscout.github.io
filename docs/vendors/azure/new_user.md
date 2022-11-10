@@ -421,3 +421,64 @@ q) Dexcom Share users should see data flowing in after some minutes. Other uploa
 <img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
 
 </br>
+
+Congratulations. You have created your new Nightscout site with Azure. Continue [here](../../../uploader/setup/) to setup your uploader.
+
+</br>
+
+------
+
+## Editing Config Vars in Azure
+
+</br>
+
+a) Log into Azure : [https://portal.azure.com/](https://portal.azure.com/)
+
+b) Select your App service, your Nightscout site name (you should see it in recent resources)
+
+<img src="../img/Azure42.png" style="zoom:80%;" />
+
+If you didn't find it, it will show in App Services
+
+<img src="../img/Azure43.png" style="zoom:80%;" />
+
+c) In the left menu select Configuration
+
+<img src="../img/Azure34.png" style="zoom:80%;" />
+
+### View a variable value
+
+Click the eye icon to display the hidden value
+
+<img src="../img/Azure45.png" style="zoom:80%;" />
+
+### Modify a variable
+
+Identify the line with the variable you want to change and click the pen icon at the end of the line  
+Click OK to save it when finished  
+Remember to save modifications when done with your variables!
+
+<img src="../img/Azure44.png" style="zoom:80%;" />
+
+### Delete a variable
+
+Identify the line with the variable you want to delete and click the bin icon at the end of the line  
+Remember to save modifications when done with your variables!
+
+<img src="../img/Azure46.png" style="zoom:80%;" />
+
+### Add a variable
+
+Select New Application Setting and type variable name and value  
+Remember to save modifications when done with your variables!
+
+<img src="../img/Azure35.png" style="zoom:80%;" />
+
+</br>
+
+### Save your modifications
+
+When you're done modifying your variables, click Save (or Discard if you don't want to save).  
+Your site will redeploy if you changed the configuration. Expect a few minutes before it comes back online.
+
+<img src="../img/Azure47.png" style="zoom:80%;" />
