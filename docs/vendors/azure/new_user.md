@@ -235,6 +235,10 @@ nightscout/cgm-remote-monitor:latest
 
 <img src="../img/Azure30.png" style="zoom:80%;" />
 
+!!!note "Using a Development version"  
+    Do not use a `dev` version unless you know exactly why you want to do this.  
+    Type this: `nightscout/cgm-remote-monitor:latest_dev`
+
 </br>
 
 j) Click Review + create in the lower left of the page.

@@ -112,6 +112,10 @@ j) Select your `cgm-remote-monitor` and the `master` branch.
 
 <img src="../img/Northflank10.png" style="zoom:80%;" />
 
+!!!note "Using a Development version"  
+    Do not use a `dev` version unless you know exactly why you want to do this.  
+    If you want to use another branch, do it now: select the `dev` branch.
+
 </br>
 
 k) In `Buid options` select `Buildpack`.
