@@ -14,7 +14,7 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 
 </br>
 
-!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../../#nightscout-as-a-service)."  
 <span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
 </br>
@@ -34,6 +34,9 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 </br>
 
 ## Upgrade to 7$/month Hobby Plan
+
+!!!note "5$/month Eco Plan"  
+    You can also select an [eco plan upgrade](../ecoplan). You can easily change plan.
 
 </br>
 
@@ -78,3 +81,6 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 - Verify the credit card you used is still valid, in case of doubt `Change credit card` and enter a valid credit card.
 
 <img src="../../heroku/img/HerokuH04.png" style="zoom:80%;" >
+
+</br>
+

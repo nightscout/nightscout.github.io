@@ -355,3 +355,19 @@ Variables are described [here](../../../nightscout/setup_variables/#nightscout-c
 </br>
 
 Changing a variable and saving a new value will restart your site, if the change is not actuated you might also want to [restart all dynos](../../../troubleshoot/troublehoot#restart-all-dynos).
+
+</br>
+
+</br>
+
+### Prevent your Nightscout app from falling asleep
+
+!!!warning "Use with caution"  
+    If an app fails and crashes at startup (database full), if you entered wrong credentials and the app stops for missing data activity, using this trick to keep it alive will not help. It might even make things worse in the case of wrong Dexcom credentials and lead to a locked account.
+
+This is necessary if you don't have an uploader sending data to Nightscout, or a follower polling data from it.  
+For example using the bridge plugin.
+
+- You can use monitoring webapps like Uptime Robot, New Relic, ...
+
+</br>

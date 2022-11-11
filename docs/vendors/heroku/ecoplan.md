@@ -14,7 +14,7 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 
 </br>
 
-!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
+!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../../#nightscout-as-a-service)."  
 <span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
 
 </br>
@@ -81,3 +81,16 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 
 </br>
 
+</br>
+
+### Prevent your Nightscout app from falling asleep
+
+!!!warning "Use with caution"  
+    If an app fails and crashes at startup (database full), if you entered wrong credentials and the app stops for missing data activity, using this trick to keep it alive will not help. It might even make things worse in the case of wrong Dexcom credentials and lead to a locked account.
+
+This is necessary if you don't have an uploader sending data to Nightscout, or a follower polling data from it.  
+For example using the bridge plugin.
+
+- You can use monitoring webapps like Uptime Robot, New Relic, ...
+
+</br>

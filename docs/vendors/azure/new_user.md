@@ -17,7 +17,7 @@ Yes! It's [back](https://news.microsoft.com/features/open-source-and-the-cloud-c
 
 **Cons**:  
 
-> The Cosmos database is not fully supported  
+> **The Cosmos database is not fully supported!**  
 > Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
 > **[Free service plan](https://azure.microsoft.com/en-us/pricing/details/app-service/windows/) is intended to be used only for development and testing purposes**
 
@@ -52,9 +52,9 @@ Perform necessary authentication.
 
 > This is where your Nightscout data will be saved (BG, treatments, ...)
 
-!!!warning "AAPS Users"  
-    There is an issue with AAPS and Cosmos database.  
-    Until it's fixed, use a [MongoDB Atlas](../../mongodb/atlas) (or another MongoDB database).  
+!!!warning "Limited compatibility"  
+    There are outstanding issues with Cosmos database support.  
+    Until they're fixed, use a [MongoDB Atlas](../../mongodb/atlas) (or better: another MongoDB database).  
     Once you've got your MONGODB_URI go to [step 3](#step-3-create-your-nightscout-web-app) below. 
 
 a) Click Go to the Azure portal (located here [https://portal.azure.com/](https://portal.azure.com/))
@@ -208,6 +208,10 @@ Make sure it is the same than the database region you selected in Step 2.g.
 f) Change the plan size.
 
 <img src="../img/Azure26.png" style="zoom:80%;" />
+
+!!!warning "Limited CPU usage"  
+    The Free F1 plan includes 60 CPU minutes per day. It usually is enough for a moderate Nightscout usage but can also be insufficient and provoke interruptions in your Nightscout site. Not recommended for FreeAPS X and OpenAPS users.  
+    If you want a more reliable CPU, consider another plan like Shared D1 ($).
 
 Select Dev /Test, F1 Free and click Apply.
 
