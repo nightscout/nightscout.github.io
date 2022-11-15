@@ -39,7 +39,7 @@ Fly.io is mainly managed through a command line interface (CLI). The first step 
 
 ## Step 3: Create a fly.io account
 
-a) `flyct auth signup` will begin the signup process, alternatively go to [https://fly.io/app/sign-up](https://fly.io/app/sign-up) to login.  
+a) `flyctl auth signup` will begin the signup process, alternatively go to [https://fly.io/app/sign-up](https://fly.io/app/sign-up) to login.  
 Sign up with Github.
 
 </br>
