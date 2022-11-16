@@ -201,7 +201,7 @@ flyctl deploy
 
 ## Step 7: Nightscout Application Configuration
 
-a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard click on the application (not the builder):
+a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard at [https://fly.io/dashboard](https://fly.io/dashboard) click on the application (not the builder):
 
 <img src="../img/fly.io-dashboard.png" style="zoom:80%;" />
 
