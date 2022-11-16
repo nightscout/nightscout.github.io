@@ -167,6 +167,10 @@ To the question  `Select region: ` select the region closer to where you live (u
 
 <img src="../img/FlyIO03.png" style="zoom:80%;" />
 
+To the question `Would you like to set up an Postgresql database now?` answer `N` (no).
+
+To the question `Would you like to set up an Upstash Redis database now?` answer `N` (no).
+
 To the question `Would you like to deploy now?` answer `Y` (yes). 
 
 <img src="../img/FlyIO02.png" style="zoom:80%;" />
