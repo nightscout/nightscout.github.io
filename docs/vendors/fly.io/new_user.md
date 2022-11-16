@@ -39,7 +39,7 @@ Fly.io is mainly managed through a command line interface (CLI). The first step 
 
 ## Step 3: Create a fly.io account
 
-a) `flyct auth signup` will begin the signup process, alternatively go to [https://fly.io/app/sign-up](https://fly.io/app/sign-up) to login.  
+a) `flyctl auth signup` will begin the signup process, alternatively go to [https://fly.io/app/sign-up](https://fly.io/app/sign-up) to login.  
 Sign up with Github.
 
 </br>
@@ -167,6 +167,10 @@ To the question  `Select region: ` select the region closer to where you live (u
 
 <img src="../img/FlyIO03.png" style="zoom:80%;" />
 
+To the question `Would you like to set up an Postgresql database now?` answer `N` (no).
+
+To the question `Would you like to set up an Upstash Redis database now?` answer `N` (no).
+
 To the question `Would you like to deploy now?` answer `Y` (yes). 
 
 <img src="../img/FlyIO02.png" style="zoom:80%;" />
@@ -197,7 +201,7 @@ flyctl deploy
 
 ## Step 7: Nightscout Application Configuration
 
-a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard click on the application (not the builder):
+a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard at [https://fly.io/dashboard](https://fly.io/dashboard) click on the application (not the builder):
 
 <img src="../img/fly.io-dashboard.png" style="zoom:80%;" />
 
