@@ -55,7 +55,7 @@ Follow [these instructions](../../vendors/mongodb/atlas) to build a small databa
 
 ### Heroku
 
-Heroku was a very popular platform for Nightscout until now. Most of the documentation is based on a Heroku Nightscout.  
+Since the [beginning](https://github.com/nightscout/cgm-remote-monitor/pull/98) Heroku has been a very popular platform for Nightscout. Most of the documentation is based on a Heroku Nightscout.  
 On August 25th 2022, Salesforce decided to [drop the free plan](https://blog.heroku.com/next-chapter).  
 In order to keep your Nightscout running in Heroku, you can [upgrade to an Eco plan](../../vendors/heroku/ecoplan) or a [Hobby plan](../../vendors/heroku/hobbyplan).  
 You can [create your new Nightscout site with Heroku](../../vendors/heroku/new_user) using an Eco plan (5$ / month).
@@ -98,7 +98,8 @@ You can easily [migrate from Heroku to Railway](../../vendors/railway/migration)
 >
 > **Cons**:  
 > Startup company  
-> A large amount of Nightscout users might have a negative impact on Railway financials and force them to review the free plan conditions
+> A large amount of Nightscout users might have a negative impact on Railway financials and force them to review the free plan conditions  
+> Railway network model causes issues with some follower app and devices
 
 ### Northflank
 
@@ -180,7 +181,7 @@ Click on the vendor logo.
     </tr>
     <tr>
         <td><a href="/vendors/heroku/new_user/"><img src="../../vendors/img/Heroku.png" align="center"></a></td>
-    	<td>7$/month</td>
+    	<td>5$/month</td>
         <td>Yes</td>
         <td>No</td>
         <td>Medium</td>
@@ -196,7 +197,7 @@ Click on the vendor logo.
         <td><a href="/vendors/azure/new_user/"><img src="../../vendors/img/Azure.png" align="center"></a>	     </td>
         <td>Free -></br>?$/month</td>
         <td>Yes</td>
-        <td>No</td>
+        <td>Issues</td>
         <td>High</td>
      </tr>
     <tr>
@@ -213,6 +214,13 @@ Click on the vendor logo.
         <td>Yes</td>
         <td>Medium</td>
     </tr>
+    <tr>
+        <td><a href="/vendors/google/new_user"><img src="../../vendors/img/GoogleCloud.png" align="center"></td>
+        <td>Free -></br>?$/month</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Low</td>
+    </tr>
 <tr>
         <td><a href="/vendors/fly.io/new_user"><img src="../../vendors/img/flyio-logo.png" align="center"></a></td>
         <td>Free -></br>?$/month</td>
@@ -221,12 +229,6 @@ Click on the vendor logo.
         <td>High</td>
     </tr>
     <tr>
-        <td><a href="/vendors/google/new_user"><img src="../../vendors/img/GoogleCloud.png" align="center"></td>
-        <td>Free -></br>?$/month</td>
-        <td>Yes</td>
-        <td>Yes</td>
-        <td>High</td>
-    </tr>    <tr>
         <td><a href="/vendors/oracle/new_user"><img src="../../vendors/img/Oracle.png" align="center"></td>
         <td>Free -></br>?$/month</td>
         <td>Yes</td>
@@ -242,7 +244,7 @@ Click on the vendor logo.
     </tr>
     <tr>
         <td><a href="/vendors/digitalocean/new_user"><img src="../../vendors/img/DO.png" align="center"></a></td>
-    	<td>4$/month</td>
+    	<td>4-6$/month</td>
         <td>Yes</td>
         <td>Yes</td>
         <td>High</td>

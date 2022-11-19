@@ -42,7 +42,15 @@ Since they bought mLab, most of us have a database in MongoDB. This is a weak po
 
 ***You're not scared to innovate with a new easy and reliable way to build and maintain your Nightscout? Give this a try!***
 
-With the xDrip+ team trying to make it so easy that the solutions above will look difficult, [you need to try it](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud) to believe it. 
+With the xDrip+ team trying to make it so easy that the solutions above will look difficult, [you need to try it](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud) to believe it.
+
+*Note: You can use this method to deploy in Digital Ocean and other VPS*
+
+## [**Oracle Cloud**](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)
+
+***You're ready to type commands in a terminal window, following an accurate step by step guide? Oracle Cloud solution is worth a try.***
+
+Follow this very detailed guide to build your Nightscout site. It also contains a lot of reference information for VPS DIY Nightscout, including Docker.
 
 ## **Railway**
 

@@ -7,12 +7,6 @@ Interested in building a Nightscout DIY site?  Make sure you read and understand
 
 </br>
 
-**WORK IN PROGRESS DO NOT USE**
-
-<img src="../../img/WIP.png" style="zoom:80%;" />
-
-</br>
-
 ## Building Nightscout DIY in a cloud platform
 
 You can run your Nightscout site in several vendors platforms, using free or paid accounts.  
@@ -49,7 +43,7 @@ Don't buy a NAS device just for this, but if you already have one that's worth a
 
 You can host your Nightscout site in your [Synology](../../vendors/synology/new_user) NAS.
 
-You can also try with your [QNAP](https://github.com/nightscout/nightscout.github.io/issues/163) NAS.
+You can also try with your [QNAP](https://docs.google.com/document/d/1zpF6Y3kPQqc9KOsClIQt686HDLhGfFxwz4vGfq8E254/edit) NAS.
 
 </br>
 

@@ -35,11 +35,14 @@ Do not deploy `dev` or a branch other than `master` unless directed to do so (ex
 </br>
 
 - After a moment, your repository should display `This branch is up to date with nightscout:dev`
-- If you ran into trouble, try to [Redeploy](./redeploy.md).
-
-If you're using Railway to host your Nightscout site you need to perform the following steps:
 
 <img src="../img/Dev04.png" style="zoom:80%;" >
+
+- If you ran into trouble, try to [Redeploy](./redeploy.md).
+
+</br>
+
+If you're using Railway to host your Nightscout site you need to perform the following steps:
 
 - Go to `Settings`
 
@@ -227,6 +230,44 @@ nightscout/cgm-remote-monitor:latest_dev
   Your site will redeploy if you changed the configuration. Expect a few minutes before it comes back online.
 
 <img src="../img/Dev13.png" style="zoom:80%;" />
+
+</br>
+
+</br>
+
+## Step 2e: Deploy in Fly.io
+
+</br>
+
+!!!warning "Site maintainability"  
+    Make sure you have a local fork of `cgm-remote-monitor` and the current fly.toml before continuing.  
+    If you don't, first perform [these operations](../../../troubleshoot/fly.io/#make-your-migrated-app-maintainable).
+
+a) Open a PowerShell (Windows) or a terminal (OSX/Linux), and type:
+
+```bash
+cd cgm-remote-monitor
+```
+
+</br>
+
+b) Update your local fork
+
+```bash
+git pull origin dev
+```
+
+</br>
+
+c) Deploy the changes.
+
+Type the command:
+
+```
+flyctl deploy
+```
+
+Deploy will take some time and should complete with the message `1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]`.
 
 </br>
 

@@ -1,6 +1,6 @@
 # Updating Your Site to the Latest Version
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />   <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />  <img src="../../vendors/img/Northflank.png" style="zoom:80%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />   <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />  <img src="../../vendors/img/Northflank.png" style="zoom:80%;" /> <img src="../../vendors/img/Azure.png" style="zoom:80%;" /> <img src="../../../vendors/img/flyio-logo.png" style="zoom:60%;" />
 
 ------
 
@@ -9,28 +9,14 @@
 [See here which is the current released version](https://github.com/nightscout/cgm-remote-monitor/releases) before updating.
 
 !!!note   
+    <img src="../../vendors/img/Heroku.png" style="zoom:80%;" />   
     If you prefer to follow a video, have a look [here](https://www.youtube.com/watch?v=HfPsFdkgnbc).
 
 </br>
 
-## Requirements
+## Step 1: Update your repository in GitHub
 
-</br>
-
-This version of Nightscout will probably not run on anything older than these versions/platforms:
-
-* Android 4
-* iOS 9
-* Chrome 68
-* Edge 17
-* Firefox 61
-* Safari 10 (macOS 10.12)
-* Opera 54
-* Internet Explorer: none
-
-</br>
-
-## Step1: Update your repository in GitHub
+- You an skip this step if you use Azure
 
 - [Update your current cgm-remote-monitor fork.](../../../nightscout/github/#update-your-nightscout-fork)
 
@@ -142,7 +128,11 @@ Click `Create pull request`.
 
 </br>
 
-## Step2: Deploy in Heroku
+## Step 2: Deploy in Heroku
+
+</br>
+
+Skip if you don't use Heroku.
 
 </br>
 
@@ -223,8 +213,75 @@ Click `Create pull request`.
 
 </br>
 
-Else...
+If you ran into trouble, try the [Redeploy](./redeploy.md) method
 
-# Redeploy
+</br>
 
-- If you ran into trouble, try the [Redeploy](./redeploy.md) method
+</br>
+
+## Step 2: Deploy in Azure
+
+</br>
+
+Skip if you don't use Azure.
+
+</br>
+
+- Log into Azure : [https://portal.azure.com/](https://portal.azure.com/)
+- Select your App service, your Nightscout site name (you should see it in recent resources)
+
+<img src="../../../vendors/azure/img/Azure42.png" style="zoom:80%;" />
+
+- If you didn't find it, it will show in App Services
+
+<img src="../../../vendors/azure/img/Azure43.png" style="zoom:80%;" />
+
+- In the left menu select Deployment Center and change Continuous Deployment to **On**.
+
+<img src="../../../vendors/azure/img/AzureU02.png" style="zoom:80%;" />
+
+- Click Save (or Discard if you don't want to update).  
+  Your site will redeploy with the latest cgm-remote-monitor version.  
+  Expect a few minutes before it comes back online.
+
+<img src="../img/Dev13.png" style="zoom:80%;" /></br>
+
+- You can leave Continuous Deployment On if you want upgrades to happen automatically, or turn it back to Off (and save) to control upgrades manually yourself.
+
+</br>
+
+## Step 2: Deploy in Fly.io
+
+</br>
+
+!!!warning "Site maintainability"  
+    Make sure you have a local fork of `cgm-remote-monitor` and the current fly.toml before continuing.  
+    If you don't, first perform [these operations](../../../troubleshoot/fly.io/#make-your-migrated-app-maintainable).
+
+a) Open a PowerShell (Windows) or a terminal (OSX/Linux), and type:
+
+```
+cd cgm-remote-monitor
+```
+
+</br>
+
+b) Update your local fork
+
+```
+git pull origin master
+```
+
+</br>
+
+c) Deploy the changes.
+
+Type the command:
+
+```
+flyctl deploy
+```
+
+Deploy will take some time and should complete with the message `1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]`.
+
+</br>

@@ -172,7 +172,8 @@ g) Select `Add variables`.
 </br>
 
 h) The Nightscout project will deploy in the background, just ignore it: now we need to import all variables from Heroku.  
-When you see this, press simultaneously the keys `Ctrl` and `K`. If you use a Mac `⌘` and `K`.
+When you see this, press simultaneously the keys `Ctrl` and `K`.  
+**If you use a Mac `⌘` and `K`.**
 
 <img src="../img/RailwayM21.png" style="zoom:80%;" />
 

@@ -2,14 +2,4 @@
 
 </br>
 
-### Deploy Nightscout
-
-You can use several methods to deploy your Nightscout site:
-
-[Manually](../../../nightscout/ubuntu), command by command.
-
-Using a [deployment script](../../../nightscout/xdripteam).
-
-Using a [Docker](../../../nightscout/docker) container.
-
-</br>
+The easiest solution is documented by the [xDrip+ team](../../../nightscout/xdripteam).

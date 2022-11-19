@@ -50,8 +50,7 @@ If you run PowerShell in Windows, exit the folder before deleting it, in task ma
 
 ## Make your migrated app maintainable
 
-The Heroku migration wizard was quickly not recommended.  
-Now you need to be able to maintain your site, upgrade it and this proves impossible.
+Follow these instructions  to make your site maintainable and upgradable.
 
 #### Step 1: Create a GitHub account and fork the Nightscout project
 
