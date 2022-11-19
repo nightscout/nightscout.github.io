@@ -1,6 +1,6 @@
 # Updating Your Site to the Latest Version
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />   <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />  <img src="../../vendors/img/Northflank.png" style="zoom:80%;" /> <img src="../../vendors/img/Azure.png" style="zoom:80%;" /> <img src="../../../vendors/img/flyio-logo.png" style="zoom:60%;" />
+<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />   <img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />  <img src="../../vendors/img/Northflank.png" style="zoom:80%;" /> <img src="../../vendors/img/Azure.png" style="zoom:80%;" /> <img src="../../../vendors/img/flyio-logo.png" style="zoom:80%;" />
 
 ------
 
