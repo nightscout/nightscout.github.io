@@ -191,6 +191,13 @@ Default setting for new browser views, for the Low alarm (triggered when BG cros
 
 Default setting for new browser views, for the Urgent Low alarm (triggered when BG crosses `BG_LOW`). (`on` or `off`)
 
+##### **Other Alarms on by Default***
+
+These other two alarms are on by default, so set them to 'off' if you prefer no alarms.
+
+* ALARM_TIMEAGO_WARN
+* ALARM_TIMEAGO_URGENT
+
 </br>
 
 !!! note "Pushover"
@@ -227,13 +234,13 @@ Number of minutes to snooze warning alarms (that aren't tagged as high or low).
 
 ##### **ALARM_TIMEAGO_URGENT**  (`on`) 
 
-Default setting for new browser views, for an urgent alarm when CGM data hasn't been received in the number of minutes set in `ALARM_TIMEAGO_URGENT_MINS`. `on` or `off`)
+Default setting for new browser views, for an urgent alarm when CGM data hasn't been received in the number of minutes set in `ALARM_TIMEAGO_URGENT_MINS`. (`on` or `off`)
 
 ##### **ALARM_TIMEAGO_URGENT_MINS**  (`30`) 
 
 Default setting for new browser views, for the number of minutes since the last CGM reading to trigger an `ALARM_TIMEAGO_URGENT` alarm.
 
-##### **ALARM_TIMEAGO_WARN**  (`180`) 
+##### **ALARM_TIMEAGO_WARN**  (`on`) 
 
 Default setting for new browser views, for a warning alarm when CGM data hasn't been received in the number of minutes set in `ALARM_TIMEAGO_WARN_MINS`. (`on` or `off`)
 
