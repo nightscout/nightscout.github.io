@@ -191,7 +191,7 @@ function Generate()
       var iAD = sAtlas.search("mongodb.net")+12;
       bAtlas=1;
       sString = sAtlas.substring(0,iAP);
-      sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+9, iAD));
+      sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
       sString = sAtlas.substring(iAP+10, iAD);
       sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD));
     }
