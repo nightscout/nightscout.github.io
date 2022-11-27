@@ -84,9 +84,9 @@ e) Select `Username and Password` and invent a database username (for example `n
 
 <img src="../../../nightscout/img/NewNS25.png" style="zoom:80%;" />
 
-Write down these credentials in the lines below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need them later.
+Write down the password in the line below (yes, in this browser window you're reading now, unless you're reading a printed version). You’ll need it later.
 
-<b>Database username</b> (write here ->) <input type="text" id="myUsr" value="click here, delete and put your own" size="30">
+<!-- <b>Database username</b> (write here ->) <input type="text" id="myUsr" value="click here, delete and put your own" size="30"> -->
 
 <b>Database password</b> (write here ->) <input type="text" id="myPwd" value="click here, delete and put your own" size="30">
 
@@ -201,6 +201,7 @@ function Generate()
   if(bAtlas) document.getElementById("resultbis").innerHTML = sFinalString;
 }
 </script>
+
 
 </br>
 
