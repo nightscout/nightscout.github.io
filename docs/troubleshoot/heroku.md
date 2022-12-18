@@ -8,7 +8,11 @@
 
 If you didn't upgrade Heroku to a hobby plan, you need to [create a new Nightscout site](../../nightscout/new_user) and [recover your MongoDB Atlas connection string](../atlas/#recover-your-connection-string).
 
-If you just tried to deploy a new Nightscout site, something went wrong. Cleanup your Heroku apps and retry...
+If you just upgraded to an Eco or Hobby plan, make sure you enabled the web app (that turned off when the Free plan was removed).
+
+<img src="../img/TShoot58.png" style="zoom:80%;" >
+
+If you just tried to deploy a new Nightscout site, something went wrong. [Cleanup](../cleanup) your Heroku apps and retry...
 
 </br>
 
@@ -18,13 +22,9 @@ If you just tried to deploy a new Nightscout site, something went wrong. Cleanup
 
  [Update Nightscout to latest release](../update/update.md). It might not fix your issue but it will help find a solution.
 
-- If you didn't migrate your Heroku database from mLab to Atlas [create a new Atlas database](../../update/newdatabase/).
-- If you didn't migrate from Azure to Heroku create a new site [create a new Nightscout site](../../nightscout/new_user/).
-- If you're creating a new Nightscout site, it might have failed because of a [wrong connection string](../atlas/#unable-to-connect-to-mongo).
-
-- If you don't see any good reason [restart all dynos](#restart-all-dynos) if you have Heroku or check you app state in Railway [dashboard](https://railway/dashboard).
-
 - Check your MongoDB Atlas [database is not full](../atlas/#database-full).
+- If you're creating a new Nightscout site, it might have failed because of a [wrong connection string](../atlas/#unable-to-connect-to-mongo).
+- If you don't see any good reason [restart all dynos](#restart-all-dynos) if you have Heroku or check you app state in Railway [dashboard](https://railway/dashboard).
 
 </br>
 

@@ -41,8 +41,6 @@ If you don't want to use the official Dexcom apps, then you can use **open-sourc
 
     Most of the useable transmitters that fall into this category at the present time (early 2021) are generally rebatteried or rechargeable/modified 80xxxx or 81xxxx transmitters.
 
-Loop and AAPS will upload your data directly to Nightscout and will act as uploaders.
-
 #### Dexcom G4 *(now obsolete)*
 
 <img src="..\img\Upload01.png" />
@@ -53,8 +51,7 @@ Dexcom G4 Platinum (Share) requires you to carry the receiver to forward data to
 
 ## Medtronic
 
-If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore using cloud hosted Nightscout sites** without an Android bridge device with a private version of xDrip+.  
-More information **[here](../xdripcarelink)**.
+If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore with recent pumps (7xx series and above)** without an Android bridge device running xDrip+.
 
 <img src="..\img\Upload04.png" />
 

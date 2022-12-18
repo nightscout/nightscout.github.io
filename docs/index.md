@@ -30,7 +30,7 @@ In addition to viewing the data using a web browser, there are also applications
 
 ## Development History
 
-Nightscout was [developed](https://sixuntilme.com/2014/07/10/cgm-cloud-part/) by people with Type 1 Diabetes and parents of kids with T1D and has continued to be developed, maintained, and supported by volunteers, clinical use, and commercial sponsorship. The web portal known as Nightscout is made by the [CGM Remote Monitor Contributors](https://github.com/nightscout/cgm-remote-monitor/graphs/contributors) and the Nightscout community over years.
+Nightscout was developed by people with Type 1 Diabetes and parents of kids with T1D and has continued to be developed, maintained, and supported by volunteers, clinical use, and commercial sponsorship. The web portal known as Nightscout is made by the [CGM Remote Monitor Contributors](https://github.com/nightscout/cgm-remote-monitor/graphs/contributors) and the Nightscout community over years.
 
 When first implemented, Nightscout was a solution specifically for remote monitoring of [Dexcom G4 CGM data](https://github.com/hackingtype1/original-android-cgm). Today, there are Nightscout solutions available for nearly all commercial CGM sensors. The goal of the project is to allow the remote monitoring, sharing and analysis of any T1D's glucose levels using existing monitoring devices.
 

@@ -11,8 +11,7 @@ There will be a delay between your pump readings and xDrip+/Nightscout. This is 
 
 </br>
 
-Download the forked version from **[here](https://github.com/benceszasz/xDripCareLinkFollower/releases)** (use the latest release, download `xdrip-carelink.apk`).  
-Do not use the official xDrip+ release as it doesn't include this feature yet.
+Download xDrip+ from **[here](https://github.com/NightscoutFoundation/xDrip/releases)** (use the latest pre-release).  
 
 Once downloaded install xDrip+ (you can find information [here](https://xdrip.readthedocs.io/en/latest/install/install/#enable-location)).
 

@@ -13,8 +13,6 @@ Your variables location will depend on your hosting:
 [Editing Environment Variables in Northflank](../../vendors/northflank/new_user/#editing-variables-in-northflank)  
 [Editing Application Settings in Azure](../../vendors/azure/new_user/#editing-config-vars-in-azure)
 
-[T1Pal Control Panel](../../../vendors/T1Pal/new_user/#configure-more-settings) will allow to modify some of these variables.
-
 ------
 
 </br>

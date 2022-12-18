@@ -1,0 +1,58 @@
+version: '3.4.1'
+services:
+  nightscout:
+    image: nightscout/cgm-remote-monitor:latest
+    environment:
+      TZ: YOUR_TIMEZONE
+      MONGO_CONNECTION: mongodb://mongo:27017/Nightscout
+      API_SECRET: YOUR_API_SECRET
+      ENABLE: careportal dbsize
+      SHOW_PLUGINS: careportal dbsize
+      DISPLAY_UNITS: mg/dl
+    ports:
+      - "1337:1337"
+    depends_on:
+      - mongo    
+    labels:
+      - 'traefik.enable=true'
+      # Change the below Host from `localhost` to be the web address where Nightscout is running.
+      # Also change the email address in the `traefik` service below.
+      - 'traefik.http.routers.nightscout.rule=Host(`YOUR_PUBLIC_HOST_URL`)'
+      - 'traefik.http.routers.nightscout.entrypoints=websecure'
+      - 'traefik.http.routers.nightscout.tls.certresolver=le'
+    volumes:
+      - /nightscout/docker:/var/opt/ssl/:ro
+    restart: always
+    
+  mongo:
+    image: mongo:4.4.9
+    volumes:
+      - ./data:/data/db                                                                      
+    ports:
+      - "27017:27017"
+      - "27018:27018"
+      - "27019:27019"
+      - "28017:28017"
+    restart: always
+    
+  traefik:
+    image: traefik:latest
+    container_name: 'traefik2'
+    command:
+      - '--providers.docker=true'
+      - '--providers.docker.exposedbydefault=false'
+      - '--entrypoints.web.address=:80'
+      - '--entrypoints.web.http.redirections.entrypoint.to=websecure'
+      - '--entrypoints.websecure.address=:443'
+      - "--certificatesresolvers.le.acme.httpchallenge=true"
+      - "--certificatesresolvers.le.acme.httpchallenge.entrypoint=web"
+      - '--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json'
+      # Change the below to match your email address
+      - '--certificatesresolvers.le.acme.email=YOUR_EMAIL'
+    ports:
+      - '443:443'
+      - '80:80'
+    volumes:
+      - './letsencrypt:/letsencrypt'
+      - '/var/run/docker.sock:/var/run/docker.sock:ro' 
+    restart: always

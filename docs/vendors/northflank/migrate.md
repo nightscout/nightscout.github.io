@@ -148,7 +148,7 @@ Click the site name to open Nightscout.
 
 !!!note "Nightscout site name"  
     You [cannot](https://northflank.com/docs/v1/application/network/configure-ports#public-ports) override the default name if you don't have a DNS.  
-    You can use a free DNS service to do this like [NoIP](https://www.noip.com/),  [Dynu](https://www.dynu.com/), [FreeDNS](https://freedns.afraid.org/), ...
+    You can use a free [dynamic DNS](../../../nightscout/dns) service to do this.
 
 </br>
 

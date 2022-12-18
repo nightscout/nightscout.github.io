@@ -334,6 +334,10 @@ Change all your [uploaders](../../../uploader/setup/) and [follower](../../../ni
 
 ------
 
+You have completed a new Nightscout site creation. The following section provides more information for database migration and variables edition that you might not need to use now.
+
+------
+
 </br>
 
 ## Migrate your MongoDB Atlas database to Railway

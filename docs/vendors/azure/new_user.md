@@ -436,6 +436,12 @@ Congratulations. You have created your new Nightscout site with Azure. Continue 
 
 ------
 
+You have completed a new Nightscout site creation. The following section provides more information for database migration and variables edition that you might not need to use now.
+
+------
+
+</br>
+
 ## Editing Config Vars in Azure
 
 </br>

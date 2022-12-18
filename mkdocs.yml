@@ -79,6 +79,7 @@ nav:
     - 'Cleanup': 'troubleshoot/cleanup.md'
 - Advanced DIY:
     - 'Advanced DIY Installation': 'nightscout/advanced.md'
+    - 'Dynamic DNS': 'nightscout/dns.md'
     - 'Deploy in Ubuntu': 'nightscout/ubuntu.md'
     - 'Deploy with Docker': 'nightscout/docker.md'
     - 'Google Cloud': 'vendors/google/new_user.md'

@@ -1,3 +1,5 @@
+
+
 # Building your Nightscout site step by step in Ubuntu
 
 </br>
@@ -5,24 +7,22 @@
 The most complete guide for building your site step by step is the one used for [Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf).  
 Just skip Oracle specific instructions and follow the flow.
 
-</br>
-
-**WORK IN PROGRESS DO NOT USE**
-
-<img src="../../img/WIP.png" style="zoom:80%;" />
+Deploying in Ubuntu is very popular for skilled people, see also [here](https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6) and [here](https://www.michael-schloemp.de/2021/10/25/nightscout-installation-auf-ubuntu-20-04-1blu-vps/).</br>
 
 </br>
 
-<!-- https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6 /-->
+If you don't own a domain, get one now, see [here](../dns).
 
-<!-- https://github.com/schmitzn/howto-nightscout-linux -->
+</br>
 
 ### Update your system
 
 Update your Ubuntu system (you should type this is a command every 3 or 6 months to keep it updated).
 
 ```bash
-sudo apt update && sudo apt upgrade -y&& sudo apt clean
+sudo apt update
+sudo apt upgrade -y
+sudo apt clean
 ```
 
 You will see it's completed when the terminal stops scrolling text and you're returned to the prompt.
@@ -41,17 +41,62 @@ sudo apt install nano -y
 
 </br>
 
-### Step 1 - Install MongoDB in Ubuntu 20.04
+### Step 1 - Install MongoDB
 
-If you use Ubuntu 22.04 skip this and continue [here](#step-1-install-mongodb-in-ubuntu-2204).
+If you use Ubuntu 22.04 skip this and continue to a2).
 
-a) Install MongoDB
+a1) Install MongoDB with Ubuntu 20.04
 
 ```bash
 sudo apt install mongodb -y
 ```
 
-Wait until it completes.
+Wait until it completes, continue to b).
+
+a2) Install MongoDB with Ubuntu 22.04
+
+You first need to install ssl 1.1.
+
+Mind your architecture, check first:
+
+```
+dpkg --print-architecture
+```
+
+For arm64:
+
+```bash
+sudo -i
+wget http://launchpadlibrarian.net/475575244/libssl1.1_1.1.1f-1ubuntu2_arm64.deb
+apt install -y ./libssl1.1_1.1.1f-1ubuntu2_arm64.deb
+```
+
+For amd64:
+
+```
+sudo -i
+wget http://launchpadlibrarian.net/475575244/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+apt install -y ./libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+```
+
+You can now install Mongo dependencies.
+
+```
+apt-get update
+apt-get install gnupg
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org
+/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+```
+
+And Mongo server.
+
+```
+apt-get update
+apt-get install -y mongodb-org
+systemctl start mongod
+systemctl status mongodsystemctl enable mongod
+```
 
 b) Enter in Mongo shell
 
@@ -64,7 +109,7 @@ You will know you've entered the mongo shell when the prompt `>` is displayed.
 c) Create an admin user. Decide on a name and a password.  
 Avoid reusing other usernames and passwords.
 
-**Replace** `ADMIN_NAME` and `ADMIN_PASSWORD` with those your own. Keep all `" "`.
+Replace `ADMIN_NAME` and `ADMIN_PASSWORD` with those your own. Keep all `" "`.
 
 ```
 use admin
@@ -106,20 +151,6 @@ sudo service mongodb restart
 ```
 
 You have installed the MongoDB application.
-
-</br>
-
-### Step 1 - Install MongoDB in Ubuntu 22.04
-
-If you use Ubuntu 20.04 skip this and continue to [Step 2](#step-2-create-a-new-database).
-
-a) I:
-
-```bash
-
-```
-
-Wait .
 
 </br>
 
@@ -209,16 +240,33 @@ sudo -u mainuser -s
 
 d) Install `nodejs` and `npm`.
 
-*Note: you can also try simply to install it with `sudo apt-get install -y nodejs npm` if your VPS is powerful enough. Small VPS will fail to run Nightscout with recent node.js versions.*
+**Mind some small VPS will not be powerful enough to deploy with npm, consider using a [Docker container](../docker) in this case.**
+
+*Note: you can also try simply to install the latest versions with with `sudo apt-get install -y nodejs npm` if your VPS is powerful enough. Small VPS will fail to run Nightscout with recent node.js versions.*
 
 ```
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-```
-
-Once complete, install node.js
-
-```
 sudo apt-get install -y nodejs
+```
+
+**Keep in mind updating your VPS will update node hence prevent future deploys. If you want to keep node to a fixed version you should use the following commands (node 14 as an example):**
+
+```
+sudo apt install nodejs
+sudo apt install build-essential checkinstall
+sudo apt install libssl-dev
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+source /etc/profile
+nvm ls-remote
+nvm install 14.18.1
+nvm list
+nvm use 14.18.1
+```
+
+Once complete, install npm
+
+```
+sudo apt-get install -y npm
 ```
 
 </br>
@@ -309,13 +357,41 @@ g) Save it.
 pm2 save
 ```
 
-Your Nightscout site is now available at http:// and the IP address of your computer/VPS but it's not secured so most browsers will refuse it.
+Your Nightscout site is now available at `http://` and the IP address of your computer/VPS but it's not secured so most browsers will refuse it.
 
 </br>
 
-### Step 5 - Secure and open your access
+### Step 5 - Open and secure your access
 
-Install (if necessary) and configure the firewall
+a) Create a reverse [nginx](https://nginx.org/en/) proxy
+
+```
+sudo apt-get install nginx
+```
+
+b) Delete and replace the original `/etc/nginx/sites-available/default` with this one.  
+**Replace `MY_FULLYQUALIFIEDNAME`** with your own (it will look like `site.domain.tld`). You don't have one? Look [here](../dns/).
+
+```
+server {
+	listen 80;
+	server_name MY_FULLYQUALIFIEDNAME;
+	location / {
+		proxy_pass http://127.0.0.1:1337;
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection 'upgrade';
+		proxy_set_header Host $host;
+		proxy_cache_bypass $http_upgrade;
+		proxy_set_header X-Forwarded-Proto "https";
+	}
+}
+```
+
+Your Nightscout site is now available at `http://MY_FULLYQUALIFIEDNAME` but it's not secured so most browsers will refuse it.
+
+c) If your VPS doesn't provide a firewall you should install and configure ufw.  
+**Make sure to open ssh if you don't have KVM access!**
 
 ```
 sudo apt install ufw
@@ -324,3 +400,29 @@ sudo ufw allow OpenSSH
 sudo ufw enable
 ```
 
+d) Obtain a certificate for your site name.
+
+```
+sudo apt install certbot python3-certbot-nginx -y
+sudo certbot --nginx -d "MY_FULLYQUALIFIEDNAME" --redirect --agree-tos --no-eff-email
+```
+
+You can increase ssl security with a strong Diffie-Hellman group ([src](https://gist.github.com/johnmales/1b3c927f2a56aae640b4b2cd0298b1e7)):
+
+```
+sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+```
+
+e) Make sure certbot takes care of renewing your certificate:
+
+```
+sudo certbot renew --dry-run
+```
+
+f) Restart the service:
+
+```
+sudo service nginx restart
+```
+
+Upon success you will be able to access your Nightscout site from any browser using `https://`.

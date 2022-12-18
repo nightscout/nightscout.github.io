@@ -386,11 +386,17 @@ x) Dexcom Share and CareLink users should see data flowing in after some minutes
 
 ## Change your Northflank Nightscout site name
 
-You [cannot](https://northflank.com/docs/v1/application/network/configure-ports#public-ports) override the default name if you don't have a DNS. You can use a free DNS service to do this like [NoIP](https://www.noip.com/),  [Dynu](https://www.dynu.com/), [FreeDNS](https://freedns.afraid.org/), ...
+You [cannot](https://northflank.com/docs/v1/application/network/configure-ports#public-ports) override the default name if you don't have a DNS. You can use a free [dynamic DNS](../../../nightscout/dns) service to do this.
+
+Change all your [uploaders](../../../uploader/setup/) and [follower](../../../nightscout/downloaders/) devices to reflect the new URL once verified correct functioning of your Nightscout site.
 
 </br>
 
-Change all your [uploaders](../../../uploader/setup/) and [follower](../../../nightscout/downloaders/) devices to reflect the new URL once verified correct functioning of your Nightscout site.
+------
+
+You have completed a new Nightscout site creation. The following section provides more information for database migration and variables edition that you might not need to use now.
+
+------
 
 </br>
 
