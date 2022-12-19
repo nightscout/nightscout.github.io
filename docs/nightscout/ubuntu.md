@@ -370,7 +370,7 @@ sudo apt-get install nginx
 ```
 
 b) Delete and replace the original `/etc/nginx/sites-available/default` with this one.  
-**Replace `MY_FULLYQUALIFIEDNAME`** with your own (it will look like `site.domain.tld`). You don't have one? Look [here](../dns/).
+**Replace `MY_FULLYQUALIFIEDNAME`** with your own (it will look like `name.domain.tld`). You don't have one? Look [here](../dns/).
 
 ```
 server {

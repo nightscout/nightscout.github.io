@@ -234,3 +234,10 @@ By [John_](https://apps.garmin.com/en-US/developer/b2d30711-2708-4f3a-8e83-009c1
 
 By [floheigl](https://apps.garmin.com/en-US/apps/488ffa72-5994-4d0f-90ff-3eeb99f3ea41)
 
+</br>
+
+## Karoo/Karoo 2
+
+By [Henry Haspden](https://github.com/haspden/INFLITE-TYPE-ONE-Hammerhead-CGM#readme)
+
+</br>

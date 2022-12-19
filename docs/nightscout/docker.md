@@ -45,6 +45,8 @@ sudo apt install nano -y
 
 ### Step 1 - Install Docker
 
+*Note: instructions from the [vendor](https://docs.docker.com/engine/install/ubuntu/)*
+
 a) Install keys
 
 ```bash
@@ -133,7 +135,7 @@ API_SECRET: YOUR_API_SECRET
 
 *Note: now you've also seen where your Nightscout variables are defined.*
 
-- You need to update your Nightscout site URL (your DDNS name)
+- You need to update your Nightscout site URL (your DDNS name looking like `name.domain.tld`)
 
 ```
 - 'traefik.http.routers.nightscout.rule=Host(`YOUR_PUBLIC_HOST_URL`)'

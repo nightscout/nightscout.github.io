@@ -21,11 +21,11 @@ Note: <img src="../img/LockOK.png" style="zoom:15%;" /> indicates applications c
 
 Select the Nightscout Follower data source and type your Nightscout URL:
 
-`https://yoururl`
+*Example:* `https://name.domain.tld`
 
-For a secured site:
+For a secured site add the token and @ before:
 
- `https://API_SECRET_or_Token@yoururl`
+ *Example:* `https://token@name.domain.tld`
 
 <img src="../img/Follower00.png" style="zoom:80%;" />
 
@@ -47,6 +47,8 @@ Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUser
 
 Monitor your Nightscout glucose levels on your Android phone or tablet. Dark UI, large readings and buttons, designed for usage at night.
 
+<img src="../img/Follower10.png" style="zoom:80%;" />
+
 </br>
 
 ### [Nightwatch](https://github.com/StephenBlackWasAlreadyTaken/NightWatch/releases) (legacy)
@@ -63,7 +65,7 @@ Nightwatch is not maintained anymore and might not work with recent Android vers
 
 <img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
-In Settings, Cloud, Nightscout, select Download only and type your Nightscout URL.
+In Settings, Cloud, Nightscout, select Download only and type your Nightscout URL. Use a token or API_SECRET for a secure site.
 
 <img src="../img/Follower06.png" style="zoom:80%;" />
 
@@ -135,7 +137,8 @@ Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure
 
 <img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
 
-Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.
+Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.  
+If you're using a secured Nightscout site, enter your token in the matching field.
 
 <img src="../img/Follower01.png" style="zoom:50%;" />
 

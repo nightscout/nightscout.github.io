@@ -50,8 +50,8 @@ On your master phone, touch the Share icon, enable Sharing. If you have no follo
 
 Verify, update or add these variables:
 
-`BRIDGE_USER_NAME  
-BRIDGE_PASSWORD  
+`BRIDGE_USER_NAME 
+BRIDGE_PASSWORD 
 BRIDGE_SERVER`
 
 [Edit in Heroku](../../vendors/heroku/new_user/#editing-config-vars-in-heroku):
@@ -88,7 +88,7 @@ For hosted Nightscout put your Dexcom credentials [in Dexcom Bridge](https://www
 
 ## Medtronic CareLink
 
-!!!warning "The `mmconnect` plugin is **NOT** functional anymore with cloud Nightscout sites."
+!!!warning "The `mmconnect` plugin is **NOT** functional anymore with recent pumps (7xx) in cloud Nightscout sites."
 
 You can use an Android phone with a private version of xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up.
 

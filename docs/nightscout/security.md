@@ -185,6 +185,8 @@ Anybody with this link can use your Nightscout with the role defined for this to
 - You can edit a subject by clicking the edit icon, making changes, and saving.
 - You can delete a subject by clicking the “x” icon to remove the subject from the list.
 
+See [how to setup your downloaders (followers)](../../nightscout/downloaders) with a secured site.
+
 </br>
 
 ## Developers: API authorization
