@@ -24,15 +24,14 @@ Below is a list of some VPS. There are probably others, don't hesitate to [open 
 
 First select your VPS:
 
-[Google Cloud](../../vendors/google/new_user)  
-[Digital Ocean](../../vendors/digitalocean/new_user) ($)  
-[MVPS](../../vendors/MVPS/new_user) ($)  
-[Oracle](../../vendors/oracle/new_user)  
+[Google Cloud](../../vendors/google/new_user) with a [Scripted deployment](../xdripteam) (one command).  
+[Oracle](../../vendors/oracle/new_user)  and extensive documentation (npm and Docker).  
+[Digital Ocean](../../vendors/digitalocean/new_user) (example). There are many others that can be used either command by command or using the [Scripted deployment](../xdripteam).  
+[Amazon Web Service](https://github.com/rajdeut/terraform-aws-nightscout#readme)
 
-Then select your deployment method:
+Some common deployment methods:
 
-[Ubuntu](../ubuntu) commands  
-[Scripted deployment](../xdripteam) (one command)  
+[Ubuntu](../ubuntu) commands.  
 [Docker](../nightscout/docker) container.
 
 </br>
@@ -41,8 +40,7 @@ Then select your deployment method:
 
 Don't buy a NAS device just for this, but if you already have one that's worth a try!
 
-You can host your Nightscout site in your [Synology](../../vendors/synology/new_user) NAS.
-
+You can host your Nightscout site in your [Synology](../../vendors/synology/new_user) NAS.  
 You can also try with your [QNAP](https://docs.google.com/document/d/1zpF6Y3kPQqc9KOsClIQt686HDLhGfFxwz4vGfq8E254/edit) NAS.
 
 </br>

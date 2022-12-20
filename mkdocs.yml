@@ -84,7 +84,6 @@ nav:
     - 'Deploy with Docker': 'nightscout/docker.md'
     - 'Google Cloud': 'vendors/google/new_user.md'
     - 'Oracle Cloud': 'vendors/oracle/new_user.md'
-    - 'MVPS': 'vendors/MVPS/new_user.md'
     - 'Digital Ocean': 'vendors/digitalocean/new_user.md'
     - 'Synology NAS': 'vendors/synology/new_user.md'
     - 'Raspberry Pi': 'vendors/raspberry-pi/new_user.md'
