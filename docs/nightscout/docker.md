@@ -154,19 +154,19 @@ API_SECRET: YOUR_API_SECRET
 To start your Nightscout:
 
 ```
-sudo docker compose up -d
+sudo docker-compose up -d
 ```
 
 Or, if you want to start it in background (once everything is working as you won't see the log):
 
 ```
-nohup sudo docker compose up -d &>/dev/null &
+nohup sudo docker-compose up -d &>/dev/null &
 ```
 
 To stop it:
 
 ```
-sudo docker compose stop
+sudo docker-compose stop
 ```
 
 Note that you need to stop it and start it if you modify your `docker-compose.yml` configuration.
