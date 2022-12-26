@@ -1,7 +1,3 @@
-
-
-
-
 # Building your Nightscout site with a Docker image
 
 </br>

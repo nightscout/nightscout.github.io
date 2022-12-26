@@ -190,7 +190,9 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 ### [FloatingGlucose](https://github.com/dabear/FloatingGlucose)
 
-<img src="../img/LockOK.png" style="zoom:15%;" /> </br>
+<img src="../img/LockOK.png" style="zoom:15%;" /> 
+
+</br>
 
 ## Displays
 
@@ -211,3 +213,10 @@ Add Nightscout as a data source, type your Nightscout URL.
 ### [SugarPiDisplay](https://github.com/bassettb/SugarPiDisplay)
 
 <img src="https://raw.githubusercontent.com/bassettb/SugarPiDisplay/master/docs/image2.jpg" style="zoom:50%;" />
+
+</br>
+
+## Other
+
+[Home assistant](https://www.home-assistant.io/integrations/nightscout/)
+
