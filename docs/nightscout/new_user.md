@@ -1215,7 +1215,7 @@ Need more? Look at [advanced](../advanced) install methods.
   border-top:0.05rem solid var(--md-typeset-table-color)'>2GB</td>
   <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Low</td>
-  <td class=xl102543 style='border-top:none'>No remote carbs/bolus (Loop)</td>
+  <td class=xl102543 style='border-top:none'></td>
  </tr>
  <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
   transition: background-color 125ms ease 0s'>
