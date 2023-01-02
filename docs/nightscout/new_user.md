@@ -156,7 +156,6 @@ Need more? Look at [advanced](../advanced) install methods.
 ## Vendors comparison table
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 <style id="Book1_543_Styles"><!--table
 	{mso-displayed-decimal-separator:"\.";
 	mso-displayed-thousand-separator:"\,";}
@@ -183,9 +182,9 @@ Need more? Look at [advanced](../advanced) install methods.
 	padding-right:1px;
 	padding-left:1px;
 	mso-ignore:padding;
-	color:black;
+	color:white;
 	font-size:11.0pt;
-	font-weight:400;
+	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
 	font-family:Roboto;
@@ -194,14 +193,59 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	border-top:none;
+	border-top:1.0pt solid windowtext;
 	border-right:none;
-	border-bottom:none;
+	border-bottom:1.0pt solid windowtext;
 	border-left:1.0pt solid windowtext;
-	background:#B4C6E7;
+	background:#404040;
 	mso-pattern:black none;
 	white-space:normal;}
 .xl67543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:white;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#404040;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl68543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:white;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	background:#404040;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl69543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -221,10 +265,102 @@ Need more? Look at [advanced](../advanced) install methods.
 	border-right:none;
 	border-bottom:none;
 	border-left:1.0pt solid windowtext;
+	background:#E2EFDA;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl70543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#B4C6E7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl71543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
 	background:#D6DCE4;
 	mso-pattern:black none;
 	white-space:normal;}
-.xl68543
+.xl72543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#FFF2CC;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl73543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#F8CBAD;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl74543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -247,7 +383,53 @@ Need more? Look at [advanced](../advanced) install methods.
 	background:#E2EFDA;
 	mso-pattern:black none;
 	white-space:normal;}
-.xl69543
+.xl75543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:1.0pt solid windowtext;
+	background:#B4C6E7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl76543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#B4C6E7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl77543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -270,73 +452,7 @@ Need more? Look at [advanced](../advanced) install methods.
 	background:#B4C6E7;
 	mso-pattern:black none;
 	white-space:normal;}
-.xl70543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:1.0pt solid windowtext;
-	background:#D6DCE4;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl71543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#D6DCE4;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl72543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:1.0pt solid windowtext;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#D6DCE4;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl73543
+.xl78543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -355,11 +471,34 @@ Need more? Look at [advanced](../advanced) install methods.
 	border-top:.5pt solid windowtext;
 	border-right:none;
 	border-bottom:none;
-	border-left:none;
-	background:#FFCCCC;
+	border-left:1.0pt solid windowtext;
+	background:#D6DCE4;
 	mso-pattern:black none;
 	white-space:normal;}
-.xl74543
+.xl79543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#D6DCE4;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl80543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -382,7 +521,7 @@ Need more? Look at [advanced](../advanced) install methods.
 	background:#FFCCCC;
 	mso-pattern:black none;
 	white-space:normal;}
-.xl75543
+.xl81543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -405,73 +544,7 @@ Need more? Look at [advanced](../advanced) install methods.
 	background:#D6DCE4;
 	mso-pattern:black none;
 	white-space:normal;}
-.xl76543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:1.0pt solid windowtext;
-	background:#FFF2CC;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl77543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#FFF2CC;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl78543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:1.0pt solid windowtext;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#FFF2CC;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl79543
+.xl82543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -494,72 +567,6 @@ Need more? Look at [advanced](../advanced) install methods.
 	background:#FFF2CC;
 	mso-pattern:black none;
 	white-space:normal;}
-.xl80543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:1.0pt solid windowtext;
-	background:#F8CBAD;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl81543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#F8CBAD;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl82543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:1.0pt solid windowtext;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#F8CBAD;
-	mso-pattern:black none;
-	white-space:nowrap;}
 .xl83543
 	{padding-top:1px;
 	padding-right:1px;
@@ -589,8 +596,8 @@ Need more? Look at [advanced](../advanced) install methods.
 	padding-left:1px;
 	mso-ignore:padding;
 	color:black;
-	font-size:11.0pt;
-	font-weight:400;
+	font-size:14.0pt;
+	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
 	font-family:Calibri, sans-serif;
@@ -598,76 +605,78 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	mso-background-source:auto;
-	mso-pattern:auto;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#B4C6E7;
+	mso-pattern:black none;
 	white-space:nowrap;}
 .xl85543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
 	mso-ignore:padding;
-	color:white;
-	font-size:11.0pt;
+	color:black;
+	font-size:14.0pt;
 	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
+	font-family:Calibri, sans-serif;
 	mso-font-charset:0;
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
 	border-top:1.0pt solid windowtext;
 	border-right:none;
-	border-bottom:none;
-	border-left:1.0pt solid windowtext;
-	background:#404040;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#B4C6E7;
 	mso-pattern:black none;
-	white-space:normal;}
+	white-space:nowrap;}
 .xl86543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
 	mso-ignore:padding;
-	color:white;
-	font-size:11.0pt;
+	color:black;
+	font-size:14.0pt;
 	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
+	font-family:Calibri, sans-serif;
 	mso-font-charset:0;
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
 	border-top:1.0pt solid windowtext;
-	border-right:none;
-	border-bottom:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	background:#404040;
+	background:#B4C6E7;
 	mso-pattern:black none;
-	white-space:normal;}
+	white-space:nowrap;}
 .xl87543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
 	mso-ignore:padding;
 	color:black;
-	font-size:11.0pt;
-	font-weight:400;
+	font-size:14.0pt;
+	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
 	font-family:Calibri, sans-serif;
 	mso-font-charset:0;
 	mso-number-format:General;
-	text-align:general;
+	text-align:center;
 	vertical-align:middle;
 	border-top:1.0pt solid windowtext;
 	border-right:none;
-	border-bottom:none;
-	border-left:none;
-	mso-background-source:auto;
-	mso-pattern:auto;
+	border-bottom:.5pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#D6DCE4;
+	mso-pattern:black none;
 	white-space:nowrap;}
 .xl88543
 	{padding-top:1px;
@@ -684,11 +693,11 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
+	border-top:1.0pt solid windowtext;
 	border-right:none;
 	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	background:#E2EFDA;
+	background:#D6DCE4;
 	mso-pattern:black none;
 	white-space:nowrap;}
 .xl89543
@@ -697,21 +706,21 @@ Need more? Look at [advanced](../advanced) install methods.
 	padding-left:1px;
 	mso-ignore:padding;
 	color:black;
-	font-size:11.0pt;
-	font-weight:400;
+	font-size:14.0pt;
+	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
 	font-family:Calibri, sans-serif;
 	mso-font-charset:0;
 	mso-number-format:General;
-	text-align:general;
+	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
 	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	mso-background-source:auto;
-	mso-pattern:auto;
+	background:#D6DCE4;
+	mso-pattern:black none;
 	white-space:nowrap;}
 .xl90543
 	{padding-top:1px;
@@ -719,69 +728,66 @@ Need more? Look at [advanced](../advanced) install methods.
 	padding-left:1px;
 	mso-ignore:padding;
 	color:black;
-	font-size:11.0pt;
-	font-weight:400;
+	font-size:14.0pt;
+	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
+	font-family:Calibri, sans-serif;
 	mso-font-charset:0;
-	mso-number-format:"_\(\0022$\0022* \#\,\#\#0\.00_\)\;_\(\0022$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022$\0022* \0022-\0022??_\)\;_\(\@_\)";
-	text-align:left;
+	mso-number-format:General;
+	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
+	border-top:1.0pt solid windowtext;
 	border-right:none;
 	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:white;
+	border-left:1.0pt solid windowtext;
+	background:#FFF2CC;
 	mso-pattern:black none;
-	white-space:normal;}
+	white-space:nowrap;}
 .xl91543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
 	mso-ignore:padding;
 	color:black;
-	font-size:11.0pt;
-	font-weight:400;
+	font-size:14.0pt;
+	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
+	font-family:Calibri, sans-serif;
 	mso-font-charset:0;
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
+	border-top:1.0pt solid windowtext;
 	border-right:none;
 	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	background:white;
+	background:#FFF2CC;
 	mso-pattern:black none;
-	white-space:normal;}
+	white-space:nowrap;}
 .xl92543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
 	mso-ignore:padding;
 	color:black;
-	font-size:11.0pt;
-	font-weight:400;
+	font-size:14.0pt;
+	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
+	font-family:Calibri, sans-serif;
 	mso-font-charset:0;
-	mso-number-format:"\#\,\#\#0\\ \[$€-1\]\;\[Red\]\\-\#\,\#\#0\\ \[$€-1\]";
-	text-align:left;
+	mso-number-format:General;
+	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
 	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	background:white;
+	background:#FFF2CC;
 	mso-pattern:black none;
-	white-space:normal;}
+	white-space:nowrap;}
 .xl93543
 	{padding-top:1px;
 	padding-right:1px;
@@ -797,150 +803,14 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
+	border-top:1.0pt solid windowtext;
 	border-right:none;
 	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:#B4C6E7;
+	border-left:1.0pt solid windowtext;
+	background:#F8CBAD;
 	mso-pattern:black none;
 	white-space:nowrap;}
 .xl94543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:left;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:.5pt solid windowtext;
-	border-left:none;
-	background:white;
-	mso-pattern:black none;
-	white-space:normal;}
-.xl95543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:left;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:none;
-	border-left:none;
-	background:white;
-	mso-pattern:black none;
-	white-space:normal;}
-.xl96543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:none;
-	border-left:none;
-	background:white;
-	mso-pattern:black none;
-	white-space:normal;}
-.xl97543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:general;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:none;
-	border-left:none;
-	mso-background-source:auto;
-	mso-pattern:auto;
-	white-space:nowrap;}
-.xl98543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	mso-number-format:"\0022$\0022\#\,\#\#0_\)\;\[Red\]\\\(\0022$\0022\#\,\#\#0\\\)";
-	text-align:left;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:none;
-	border-left:none;
-	background:white;
-	mso-pattern:black none;
-	white-space:normal;}
-.xl99543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:white;
-	font-size:11.0pt;
-	font-weight:700;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Calibri, sans-serif;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:1.0pt solid windowtext;
-	border-right:1.0pt solid windowtext;
-	border-bottom:none;
-	border-left:none;
-	background:#404040;
-	mso-pattern:black none;
-	white-space:nowrap;}
-.xl100543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -955,12 +825,138 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
+	border-top:1.0pt solid windowtext;
 	border-right:none;
 	border-bottom:.5pt solid windowtext;
-	border-left:1.0pt solid windowtext;
-	background:#E2EFDA;
+	border-left:none;
+	background:#F8CBAD;
 	mso-pattern:black none;
+	white-space:nowrap;}
+.xl95543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:14.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#F8CBAD;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl96543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl97543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl98543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl99543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl100543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Calibri, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
 	white-space:nowrap;}
 .xl101543
 	{padding-top:1px;
@@ -977,10 +973,10 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:1.0pt solid windowtext;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
 	border-bottom:.5pt solid windowtext;
-	border-left:none;
+	border-left:1.0pt solid windowtext;
 	background:#E2EFDA;
 	mso-pattern:black none;
 	white-space:nowrap;}
@@ -990,20 +986,20 @@ Need more? Look at [advanced](../advanced) install methods.
 	padding-left:1px;
 	mso-ignore:padding;
 	color:black;
-	font-size:11.0pt;
-	font-weight:400;
+	font-size:14.0pt;
+	font-weight:700;
 	font-style:normal;
 	text-decoration:none;
 	font-family:Calibri, sans-serif;
 	mso-font-charset:0;
 	mso-number-format:General;
-	text-align:general;
+	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:1.0pt solid windowtext;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
 	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	background:white;
+	background:#E2EFDA;
 	mso-pattern:black none;
 	white-space:nowrap;}
 .xl103543
@@ -1021,11 +1017,11 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
 	border-bottom:.5pt solid windowtext;
-	border-left:1.0pt solid windowtext;
-	background:#B4C6E7;
+	border-left:none;
+	background:#E2EFDA;
 	mso-pattern:black none;
 	white-space:nowrap;}
 .xl104543
@@ -1034,22 +1030,23 @@ Need more? Look at [advanced](../advanced) install methods.
 	padding-left:1px;
 	mso-ignore:padding;
 	color:black;
-	font-size:14.0pt;
-	font-weight:700;
+	font-size:11.0pt;
+	font-weight:400;
 	font-style:normal;
 	text-decoration:none;
-	font-family:Calibri, sans-serif;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
 	mso-font-charset:0;
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
 	border-top:.5pt solid windowtext;
-	border-right:1.0pt solid windowtext;
+	border-right:none;
 	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	background:#B4C6E7;
-	mso-pattern:black none;
-	white-space:nowrap;}
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
 .xl105543
 	{padding-top:1px;
 	padding-right:1px;
@@ -1067,10 +1064,10 @@ Need more? Look at [advanced](../advanced) install methods.
 	vertical-align:middle;
 	border-top:.5pt solid windowtext;
 	border-right:1.0pt solid windowtext;
-	border-bottom:none;
+	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	background:white;
-	mso-pattern:black none;
+	mso-background-source:auto;
+	mso-pattern:auto;
 	white-space:nowrap;}
 .xl106543
 	{padding-top:1px;
@@ -1088,60 +1085,14 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:center;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
+	border-top:none;
 	border-right:none;
-	border-bottom:1.0pt solid windowtext;
-	border-left:1.0pt solid windowtext;
-	background:#F8CBAD;
-	mso-pattern:black none;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
 	white-space:normal;}
 .xl107543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:left;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:1.0pt solid windowtext;
-	border-left:none;
-	background:white;
-	mso-pattern:black none;
-	white-space:normal;}
-.xl108543
-	{padding-top:1px;
-	padding-right:1px;
-	padding-left:1px;
-	mso-ignore:padding;
-	color:black;
-	font-size:11.0pt;
-	font-weight:400;
-	font-style:normal;
-	text-decoration:none;
-	font-family:Roboto;
-	mso-generic-font-family:auto;
-	mso-font-charset:0;
-	mso-number-format:General;
-	text-align:center;
-	vertical-align:middle;
-	border-top:.5pt solid windowtext;
-	border-right:none;
-	border-bottom:1.0pt solid windowtext;
-	border-left:none;
-	background:white;
-	mso-pattern:black none;
-	white-space:normal;}
-.xl109543
 	{padding-top:1px;
 	padding-right:1px;
 	padding-left:1px;
@@ -1156,277 +1107,339 @@ Need more? Look at [advanced](../advanced) install methods.
 	mso-number-format:General;
 	text-align:general;
 	vertical-align:middle;
-	border-top:.5pt solid windowtext;
+	border-top:none;
 	border-right:1.0pt solid windowtext;
-	border-bottom:1.0pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
 	border-left:none;
-	background:white;
-	mso-pattern:black none;
+	mso-background-source:auto;
+	mso-pattern:auto;
 	white-space:nowrap;}
+.xl108543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"_\(\0022$\0022* \#\,\#\#0\.00_\)\;_\(\0022$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022$\0022* \0022-\0022??_\)\;_\(\@_\)";
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl109543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"\#\,\#\#0\\ \[$€-1\]\;\[Red\]\\-\#\,\#\#0\\ \[$€-1\]";
+	text-align:center;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl110543
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Roboto;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:"\0022$\0022\#\,\#\#0_\)\;\[Red\]\\\(\0022$\0022\#\,\#\#0\\\)";
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
 --></style>
 </head>
 <body>
 
 <div id="Book1_543" align=center x:publishsource="Excel">
-
-<table border=0 cellpadding=0 cellspacing=0 width=729 class=xl65543
- style='border-collapse:collapse;table-layout:fixed;width:548pt;box-sizing: inherit;
+<table border=0 cellpadding=0 cellspacing=0 width=742 class=xl65543
+ style='border-collapse:collapse;table-layout:fixed;width:558pt;box-sizing: inherit;
  border-spacing: 0px;display:inline-block;background-color:var(--md-default-bg-color);
  border:0.05rem solid var(--md-typeset-table-color);border-radius: 0.1rem;
  font-size:0.64rem;max-width:100%;touch-action: auto;color:rgba(0, 0, 0, 0.87);
  font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
  text-align:start;widows: 2;-webkit-text-stroke-width: 0px;text-decoration-thickness: initial;
  text-decoration-style: initial;text-decoration-color: initial'>
- <col class=xl84543 width=100 style='mso-width-source:userset;mso-width-alt:
- 3185;width:75pt'>
- <col class=xl65543 width=142 style='mso-width-source:userset;mso-width-alt:
+ <col class=xl96543 width=113 style='mso-width-source:userset;mso-width-alt:
+ 3612;width:85pt'>
+ <col class=xl96543 width=142 style='mso-width-source:userset;mso-width-alt:
  4551;width:107pt'>
- <col class=xl84543 width=72 style='mso-width-source:userset;mso-width-alt:
+ <col class=xl96543 width=72 style='mso-width-source:userset;mso-width-alt:
  2304;width:54pt'>
- <col class=xl84543 width=94 style='mso-width-source:userset;mso-width-alt:
+ <col class=xl96543 width=94 style='mso-width-source:userset;mso-width-alt:
  3015;width:71pt'>
  <col class=xl65543 width=321 style='mso-width-source:userset;mso-width-alt:
  10268;width:241pt'>
- <tr class=xl87543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl85543 width=100 style='height:15.35pt;width:75pt;
+ <tr height=21 style='height:16.0pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=21 class=xl66543 width=113 style='height:16.0pt;width:85pt;
   box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Vendor</td>
-  <td class=xl86543 width=142 style='width:107pt;box-sizing: inherit;
+  <td class=xl67543 width=142 style='width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Cost/month</td>
-  <td class=xl86543 width=72 style='width:54pt;box-sizing: inherit;border-top:
+  <td class=xl67543 width=72 style='width:54pt;box-sizing: inherit;border-top:
   0.05rem solid var(--md-typeset-table-color)'>Database</td>
-  <td class=xl86543 width=94 style='width:71pt;box-sizing: inherit;border-top:
+  <td class=xl67543 width=94 style='width:71pt;box-sizing: inherit;border-top:
   0.05rem solid var(--md-typeset-table-color)'>Complexity</td>
-  <td class=xl99543 width=321 style='width:241pt'>Limitations</td>
+  <td class=xl68543 width=321 style='width:241pt'>Limitations</td>
  </tr>
- <tr class=xl89543 height=25 style='height:18.7pt'>
-  <td colspan=5 height=25 class=xl100543 style='border-right:1.0pt solid black;
+ <tr height=25 style='height:18.7pt'>
+  <td colspan=5 height=25 class=xl101543 style='border-right:1.0pt solid black;
   height:18.7pt'>Hosted solutions</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl68543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>T1Pal</td>
-  <td class=xl90543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl74543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>T1Pal</td>
+  <td class=xl108543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'><span
   style='mso-spacerun:yes'> </span>11.99$<span
   style='mso-spacerun:yes'> </span></td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>2GB</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Low</td>
-  <td class=xl102543 style='border-top:none'>Loop remote cmds require additional subscription</td>
+  <td class=xl105543 style='border-top:none'>Loop remote carbs/bolus require
+  extra service</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl68543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>NS10BE</td>
-  <td class=xl92543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>&lt; 5€</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl74543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>NS10BE</td>
+  <td class=xl108543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+  border-top:0.05rem solid var(--md-typeset-table-color)'><span
+  style='mso-spacerun:yes'> </span>&lt; 5€<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>20GB</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Low</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+  <td class=xl105543 style='border-top:none'>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=25 style='height:18.7pt'>
-  <td colspan=5 height=25 class=xl103543 style='border-right:1.0pt solid black;
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl69543 width=113 style='height:16.0pt;width:85pt'>Nightscout
+  Pro</td>
+  <td class=xl109543 width=142 style='width:107pt'>3£</td>
+  <td class=xl97543 width=72 style='width:54pt'>&#8734;</td>
+  <td class=xl97543 width=94 style='width:71pt'>Low</td>
+  <td class=xl98543>&nbsp;</td>
+ </tr>
+ <tr height=25 style='height:18.7pt'>
+  <td colspan=5 height=25 class=xl84543 style='border-right:1.0pt solid black;
   height:18.7pt'>Platforms as a service</td>
  </tr>
- <tr class=xl97543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td rowspan=2 height=40 class=xl66543 width=100 style='height:30.7pt;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Heroku</td>
-  <td class=xl95543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td rowspan=2 height=40 class=xl75543 width=113 style='border-bottom:.5pt solid black;
+  height:30.7pt;border-top:none;width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Heroku</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>5$ Eco plan</td>
-  <td class=xl96543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>No</td>
-  <td class=xl96543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl105543 style='border-top:none'>Will sleep without an active
   up/downloader</td>
  </tr>
- <tr class=xl97543 height=20 style='height:15.35pt'>
-  <td height=20 class=xl95543 width=142 style='height:15.35pt;width:107pt'>7$
+ <tr height=20 style='height:15.35pt'>
+  <td height=20 class=xl106543 width=142 style='height:15.35pt;width:107pt'>7$
   Hobby plan</td>
-  <td class=xl96543 width=72 style='width:54pt'>No</td>
-  <td class=xl96543 width=94 style='width:71pt;box-sizing: inherit;border-top:
+  <td class=xl106543 width=72 style='width:54pt'>No</td>
+  <td class=xl106543 width=94 style='width:71pt;box-sizing: inherit;border-top:
   0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl105543>&nbsp;</td>
+  <td class=xl107543>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl69543 width=100 style='height:15.35pt;width:75pt;
-  box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Azure</td>
-  <td class=xl94543 width=142 style='width:107pt;box-sizing: inherit;
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl77543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Azure</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Free Basic plan</td>
-  <td class=xl91543 width=72 style='width:54pt;box-sizing: inherit;border-top:
-  0.05rem solid var(--md-typeset-table-color)'>Issues</td>
-  <td class=xl91543 width=94 style='width:71pt;box-sizing: inherit;border-top:
-  0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl102543>Basic B1 is too limited for FAPSX</td>
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  border-top:0.05rem solid var(--md-typeset-table-color)'>Issues</td>
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
+  <td class=xl105543 style='border-top:none'>Basic B1 is too limited for FAPSX</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl69543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Railway</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl77543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Railway</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Free Developer plan</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+  <td class=xl105543 style='border-top:none'>Some followers experience issues</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl69543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Northflank</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt'>Free
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl77543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Northflank</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt'>Free
   Developer plan</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+  <td class=xl105543 style='border-top:none'>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl69543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Fly.io</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+ <tr height=21 style='height:16.0pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=21 class=xl70543 width=113 style='height:16.0pt;width:85pt;
+  box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Fly.io</td>
+  <td class=xl99543 width=142 style='width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Free Hobby plan</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>No</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>High</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+  <td class=xl99543 width=72 style='width:54pt;box-sizing: inherit;border-top:
+  0.05rem solid var(--md-typeset-table-color)'>No</td>
+  <td class=xl99543 width=94 style='width:71pt;box-sizing: inherit;border-top:
+  0.05rem solid var(--md-typeset-table-color)'>High</td>
+  <td class=xl100543>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=25 style='height:18.7pt'>
-  <td colspan=5 height=25 class=xl70543 style='border-right:1.0pt solid black;
+ <tr height=25 style='height:18.7pt'>
+  <td colspan=5 height=25 class=xl87543 style='border-right:1.0pt solid black;
   height:18.7pt'>Databases</td>
  </tr>
- <tr class=xl97543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td rowspan=2 height=40 class=xl67543 width=100 style='height:30.7pt;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Atlas</td>
-  <td class=xl95543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td rowspan=2 height=40 class=xl78543 width=113 style='border-bottom:.5pt solid black;
+  height:30.7pt;border-top:none;width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Atlas</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Free M0 tier</td>
-  <td class=xl73543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  <td class=xl80543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>512MB</td>
-  <td class=xl96543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl105543 style='border-top:none'>Very small for Loop/AAPS</td>
  </tr>
- <tr class=xl97543 height=20 style='height:15.35pt'>
-  <td height=20 class=xl98543 width=142 style='height:15.35pt;width:107pt'>9$
+ <tr height=20 style='height:15.35pt'>
+  <td height=20 class=xl110543 width=142 style='height:15.35pt;width:107pt'>9$
   M2 tier</td>
-  <td class=xl96543 width=72 style='width:54pt'>2GB</td>
-  <td class=xl96543 width=94 style='width:71pt;box-sizing: inherit;border-top:
+  <td class=xl106543 width=72 style='width:54pt'>2GB</td>
+  <td class=xl106543 width=94 style='width:71pt;box-sizing: inherit;border-top:
   0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl105543>Not worth the cost compared to hosted solutions</td>
+  <td class=xl107543>Not worth the cost compared to hosted solutions</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt'>
-  <td height=20 class=xl75543 width=100 style='height:15.35pt;width:75pt'>Azure</td>
-  <td class=xl94543 width=142 style='width:107pt'>Free Basic plan</td>
-  <td class=xl74543 width=72 style='width:54pt;box-sizing: inherit;border-top:
-  0.05rem solid var(--md-typeset-table-color)'>Issues</td>
-  <td class=xl91543 width=94 style='width:71pt;box-sizing: inherit;border-top:
-  0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl102543>Cosmos is not supported correctly</td>
+ <tr height=20 style='height:15.35pt'>
+  <td height=20 class=xl81543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt'>Azure</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt'>Free Basic
+  plan</td>
+  <td class=xl80543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  border-top:0.05rem solid var(--md-typeset-table-color)'>Issues</td>
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
+  <td class=xl105543 style='border-top:none'>Cosmos is not supported correctly</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt'>
-  <td height=20 class=xl75543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt'>Railway</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt'>10$/GB</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+ <tr height=20 style='height:15.35pt'>
+  <td height=20 class=xl81543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt'>Railway</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt'>10$/GB</td>
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>100GB</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+  <td class=xl105543 style='border-top:none'>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt'>
-  <td height=20 class=xl75543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt'>Northflank</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt'>0.3$/GB</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>&nbsp;</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl71543 width=113 style='height:16.0pt;width:85pt'>Northflank</td>
+  <td class=xl99543 width=142 style='width:107pt'>0.3$/GB</td>
+  <td class=xl97543 width=72 style='width:54pt;box-sizing: inherit;border-top:
+  0.05rem solid var(--md-typeset-table-color)'>&#8734;</td>
+  <td class=xl99543 width=94 style='width:71pt;box-sizing: inherit;border-top:
+  0.05rem solid var(--md-typeset-table-color)'>Medium</td>
+  <td class=xl100543>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=25 style='height:18.7pt'>
-  <td colspan=5 height=25 class=xl76543 style='border-right:1.0pt solid black;
+ <tr height=25 style='height:18.7pt'>
+  <td colspan=5 height=25 class=xl90543 style='border-right:1.0pt solid black;
   height:18.7pt'>Virtual private servers</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl79543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Google
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl82543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Google
   Cloud</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Free e2-micro tier</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl102543 style='border-top:none'>Access from Australia and China is
+  <td class=xl105543 style='border-top:none'>Access from Australia and China is
   not free</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl79543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Oracle</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl82543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Oracle</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Free E2.1 micro tier</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>High</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+  <td class=xl105543 style='border-top:none'>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt'>
-  <td height=20 class=xl79543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt'>VPS</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt'>1$ -&gt; ?</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt'>Yes</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>High</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl72543 width=113 style='height:16.0pt;width:85pt'>VPS</td>
+  <td class=xl99543 width=142 style='width:107pt'>1$ -&gt; ?</td>
+  <td class=xl99543 width=72 style='width:54pt'>Yes</td>
+  <td class=xl99543 width=94 style='width:71pt;box-sizing: inherit;border-top:
+  0.05rem solid var(--md-typeset-table-color)'>High</td>
+  <td class=xl100543>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=25 style='height:18.7pt'>
-  <td colspan=5 height=25 class=xl80543 style='border-right:1.0pt solid black;
+ <tr height=25 style='height:18.7pt'>
+  <td colspan=5 height=25 class=xl93543 style='border-right:1.0pt solid black;
   height:18.7pt'>Hardware solutions</td>
  </tr>
- <tr class=xl89543 height=20 style='height:15.35pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl83543 width=100 style='height:15.35pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Raspberry
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl83543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Raspberry
   Pi</td>
-  <td class=xl94543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Hardware</td>
-  <td class=xl91543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl91543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>High</td>
-  <td class=xl102543 style='border-top:none'>&nbsp;</td>
+  <td class=xl105543 style='border-top:none'>&nbsp;</td>
  </tr>
- <tr class=xl89543 height=21 style='height:16.0pt;box-sizing: inherit;
-  transition: background-color 125ms ease 0s;background-color:rgba(0, 0, 0, 0.035);
-  box-shadow: 0 0.05rem 0 var(--md-default-bg-color) inset'>
-  <td height=21 class=xl106543 width=100 style='height:16.0pt;border-top:none;
-  width:75pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Synology</td>
-  <td class=xl107543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
+ <tr height=21 style='height:16.0pt;box-sizing: inherit;transition: background-color 125ms ease 0s;
+  background-color:rgba(0, 0, 0, 0.035);box-shadow: 0 0.05rem 0 var(--md-default-bg-color) inset'>
+  <td height=21 class=xl73543 width=113 style='height:16.0pt;width:85pt;
+  box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Synology</td>
+  <td class=xl99543 width=142 style='width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Hardware</td>
-  <td class=xl108543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl108543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>High</td>
-  <td class=xl109543 style='border-top:none'>&nbsp;</td>
+  <td class=xl99543 width=72 style='width:54pt;box-sizing: inherit;border-top:
+  0.05rem solid var(--md-typeset-table-color)'>Yes</td>
+  <td class=xl99543 width=94 style='width:71pt;box-sizing: inherit;border-top:
+  0.05rem solid var(--md-typeset-table-color)'>High</td>
+  <td class=xl100543>&nbsp;</td>
  </tr>
  <![if supportMisalignedColumns]>
  <tr height=0 style='display:none'>
-  <td width=100 style='width:75pt'></td>
+  <td width=113 style='width:85pt'></td>
   <td width=142 style='width:107pt'></td>
   <td width=72 style='width:54pt'></td>
   <td width=94 style='width:71pt'></td>

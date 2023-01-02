@@ -51,4 +51,10 @@ If you own one, you can use it to host your Nightscout, see [here](../../vendors
 
 </br>
 
-<!-- https://www.michael-schloemp.de/2022/09/20/mehrere-nightscout-instanzen-auf-einem-v-server-ohne-docker-container/ -->
+## Home Assistant Add-On for Nightscout
+
+This add-on is a wrapper around nightscout/cgm-remote-monitor. It includes a Mongo Database which is used to store the uploaded values.
+
+See [here](https://github.com/marciogranzotto/addon-nightscout).
+
+</br>
