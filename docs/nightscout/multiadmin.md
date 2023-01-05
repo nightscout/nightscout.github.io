@@ -50,7 +50,7 @@ Automatic deploys will allow you to update automatically your Heroku apps when y
 
 ## Heroku
 
-You can setup multiple Nightscout sites per Heroku account. You be charged the Hobby plan fee for each app.
+You can setup multiple Nightscout sites per Heroku account. You be charged the Eco/Basic plan fee for each app.
 
 You can setup collaborators in Heroku to avoid having to switch accounts. First decide on which will be your main Heroku account. Then add the email address you used to register as collaborator to the other(s) one(s).
 

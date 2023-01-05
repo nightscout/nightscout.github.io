@@ -8,9 +8,9 @@
 
 Starting October 26, 2022, Heroku began deleting accounts that have been inactive for over a year.
 
-Starting November 28, 2022, Heroku will stop offering free product plans and start shutting down free dynos and data services. Free accounts are converted to Eco plan with dynos sized zero (i.e. stopped without billing).
+Starting November 28, 2022, Heroku stopped offering free product plans and start shutting down free dynos and data services. Free accounts are converted to Eco plan with dynos sized zero (i.e. stopped without billing).
 
-This means that if you wish to continue using Heroku you need to upgrade your free plan.
+This means that if you wish to continue using Heroku you need to upgrade your plan.
 
 </br>
 

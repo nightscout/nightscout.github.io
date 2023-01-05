@@ -6,9 +6,9 @@
 
 <img src="../img/TShoot57.png" style="zoom:80%;" >
 
-If you didn't upgrade Heroku to a hobby plan, you need to [create a new Nightscout site](../../nightscout/new_user) and [recover your MongoDB Atlas connection string](../atlas/#recover-your-connection-string).
+If you didn't upgrade Heroku to an Eco or Basic plan, you need to [create a new Nightscout site](../../nightscout/new_user) and [recover your MongoDB Atlas connection string](../atlas/#recover-your-connection-string).
 
-If you just upgraded to an Eco or Hobby plan, make sure you enabled the web app (that turned off when the Free plan was removed).
+If you just upgraded to an Eco or Basic plan, make sure you enabled the web app (that turned off when the Free plan was removed).
 
 <img src="../img/TShoot58.png" style="zoom:80%;" >
 
@@ -95,28 +95,11 @@ If you lost or don't have anymore access to the email you used to create your He
 
 </br>
 
-### Nightscout stopped working after a few weeks
-
-Same screen than above but you received a mail from Heroku telling you you're out of dyno hours...
-
-- Check your remaining dyno hours in Heroku, click on your profile picture top right and select `Account Settings`, then `Billing`.
-
-- An account without credit card information has 550 [free dyno hours](https://devcenter.heroku.com/articles/free-dyno-hours#usage), with credit card information 1000.
-
-<img src="../img/TShoot42.png" style="zoom:80%;" >
-
-</br>
-
-- An account with credit card information can only hold one Nightscout site. You need one account per site, and you can simplify multiple sites management as explained [here](../../nightscout/multiadmin/).
-- If Heroku runs out of free dynos, check you don't have other deployments wasting your free dyno hours and eventually [cleanup or stop unused apps](../cleanup/#heroku).
-
-</br>
-
 ## Cleanup
 
 If you experience issues during deployment you might end up with many apps. Make sure you keep the last one that was functional or [delete](#delete-an-app) all before attempting a new deployment. This will just make it easier to find which app you're trying to build. Keeping sleeping apps doesn't have any negative impact but no real advantage unless you do it on purpose.
 
-Make sure the app you're using for Nightscout is running on a Hobby tier.
+Make sure the app you're using for Nightscout is running on an Eco/Basic tier.
 
 If you're not convinced you want to delete an app, make sure to put it in maintenance mode to understand if you use it as the related Nightscout site will report offline for maintenance.
 

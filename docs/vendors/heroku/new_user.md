@@ -49,12 +49,6 @@ If you don't have a GitHub account [create one](../../../nightscout/github/#crea
 
 </br>
 
-!!!warning "Pending Heroku site modifications"  
-    These instructions are still valid until Heroku will remove the Free plan from its site.  
-    New instructions will be provided after November 28th when Free dynos will not be available anymore.
-
-</br>
-
 a) Click this link to create an Heroku account: [https://signup.heroku.com/login](https://signup.heroku.com/login)
 
 b) Enter mandatory data (*) and click `CREATE FREE ACCOUNT`
@@ -113,17 +107,19 @@ i) Click `Add credit card`
 
 j) Enter your credit card information and click `Save Details`
 
-!!!warning "End of Heroku free plan"
-    You will need to [change your plan from Free to Hobby](../hobbyplan) within November 28th 2022 to keep your Heroku app available.  
-    You will be charged 7$ per month for each Heroku app.
-
 </br>
 
 <img src="../../../nightscout/img/NewNS16.png" style="zoom:80%;" />
 
 </br>
 
-k) You should now have 2 pages open: Heroku and GitHub. Leave them open.</br></br>
+k) Subscribe to the `Eco plan` for 5$ per month. You can [upgrade to Basic](../hobbyplan) later if you wish.
+
+<img src="../img/HerokuE03.png" style="zoom:80%;" />
+
+</br>
+
+l) You should now have 2 pages open: Heroku and GitHub. Leave them open.</br></br>
 
 ## Step 3: Create an Atlas account
 

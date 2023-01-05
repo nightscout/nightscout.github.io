@@ -194,7 +194,7 @@ You might also be interested by [AutoTune](https://autotuneweb.azurewebsites.net
 
 </br>
 
-# Nightscout Reporter
+## Nightscout Reporter
 
 [https://nightscout-reporter.zreptil.de/](https://nightscout-reporter.zreptil.de/) can be used to generate PDF documents with the data stored at Nightscout.
 
@@ -204,6 +204,6 @@ Facebook group [Nightscout Reporter](https://www.facebook.com/nightrep)
 
 </br>
 
-# Power BI
+## Power BI
 
 Facebook group [Nightscout Power BI Reporting](https://www.facebook.com/groups/857487091295727)

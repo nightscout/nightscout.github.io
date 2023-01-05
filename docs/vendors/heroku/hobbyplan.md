@@ -1,4 +1,4 @@
-# Heroku Hobby plan upgrade
+# Heroku Basic plan upgrade
 
 <span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../img/Heroku.png" style="zoom:80%;" />
 
@@ -8,9 +8,9 @@
 
 Starting October 26, 2022, Heroku began deleting accounts that have been inactive for over a year.
 
-Starting November 28, 2022, Heroku will stop offering free product plans and start shutting down free dynos and data services. Free accounts are converted to Eco plan with dynos sized zero (i.e. stopped without billing).
+Starting November 28, 2022, Heroku stopped offering free product plans and start shutting down free dynos and data services. Free accounts are converted to Eco plan with dynos sized zero (i.e. stopped without billing).
 
-This means that if you wish to continue using Heroku you need to upgrade your free plan.
+This means that if you wish to continue using Heroku you need to upgrade your plan.
 
 </br>
 
@@ -22,18 +22,18 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 **Pros**:  
 
 > Heroku is a reliable platform well known by the community  
-> The Hobby plan is designed for production, the app never sleeps  
+> The Basic plan is designed for production, the app never sleeps  
 > Heroku has been hosting Nightscout users for years in the free tier  
 
 **Cons**:  
 
 >Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
 >The [Eco plan](../ecoplan) is more economical  
->Paying for a hobby plan doesn't remove DIY maintenance tasks like stack upgrade  
+>Paying for a Basic plan doesn't remove DIY maintenance tasks like stack upgrade  
 
 </br>
 
-## Upgrade to 7$/month Hobby Plan
+## Upgrade to 7$/month Basic Plan
 
 !!!note "5$/month Eco Plan"  
     You can also select an [eco plan upgrade](../ecoplan). You can easily change plan.
@@ -58,13 +58,13 @@ This means that if you wish to continue using Heroku you need to upgrade your fr
 
 </br>
 
-- Select `Hobby ($7/dyno/month)` then click `Save`
+- Select `Basic ($7/dyno/month)` then click `Save`
 
 <img src="../../heroku/img/HerokuH02.png" style="zoom:80%;" >
 
 </br>
 
-- Your Nightscout Heroku app is now using a `Hobby` plan.  
+- Your Nightscout Heroku app is now using a `Basic` plan.  
   *Note: if you were doing a test you still can return to an `Eco` dyno plan for now.*
 
 <img src="../../heroku/img/HerokuH03.png" style="zoom:80%;" >

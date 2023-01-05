@@ -93,7 +93,7 @@ If data is present open Heroku and check you app didn't fall asleep.
 
 </br>
 
-A sleeping app was due to your Heroku free plan: a Hobby plan makes the app never sleep. [https://www.heroku.com/pricing](https://www.heroku.com/pricing) 
+A sleeping app was due to your Heroku free plan: a Basic plan makes the app never sleep. [https://www.heroku.com/pricing](https://www.heroku.com/pricing) 
 
 Another reason for a sleeping app can be due to a failure to obtain data from Dexcom Share, check the logs to understand the reasons.
 
