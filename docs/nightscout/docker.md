@@ -5,7 +5,7 @@
 The most complete guide for building your site step by step is the one used for [Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf).  
 Just skip Oracle specific instructions and follow the flow.
 
-Original documentation from [Andries-Smit](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705)
+Original documentation from [Jason](https://github.com/nightscout/nightscout-docker), [Andries](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705), [Peter](https://github.com/peterleimbach/TestNightscoutDockerUbuntuServer22.04LTS)
 
 </br>
 
@@ -150,19 +150,19 @@ API_SECRET: YOUR_API_SECRET
 To start your Nightscout:
 
 ```
-sudo docker-compose up -d
+sudo docker compose up -d
 ```
 
 Or, if you want to start it in background (once everything is working as you won't see the log):
 
 ```
-nohup sudo docker-compose up -d &>/dev/null &
+nohup sudo docker compose up -d &
 ```
 
 To stop it:
 
 ```
-sudo docker-compose stop
+sudo docker compose down
 ```
 
 Note that you need to stop it and start it if you modify your `docker-compose.yml` configuration.

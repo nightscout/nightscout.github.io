@@ -112,7 +112,7 @@ It uses Wear's standalone app support, so requires no companion app installed on
 
 ## Xiaomi MiBand 2, 3, 4, 5 and 6
 
-## Amazfit Band 5, Bip, Bip Lite, Bip S and Bip S lite
+## Amazfit Band 5, Bip, Bip Lite, Bip S and Bip S lite, T-Rex Pro
 
 ## Amazfit GTR2, GTR2e, GTS2, GTS 2 mini, GTS2e, GTR42 and 47
 
@@ -170,7 +170,7 @@ Ionic/Sense/Versa/Versa 2/Versa 3/Versa Lite
 
 #### [Glance](https://gallery.fitbit.com/details/7b5d9822-7e8e-41f9-a2a7-e823548c001c)
 
-Ionic/Sense/Versa/Versa 2/Versa 3/Versa Lite
+Ionic/Sense/Versa/Versa 2/Versa 3/Versa 4/Versa Lite
 
 [Web site](https://glancewatchface.com/)
 
