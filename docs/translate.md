@@ -22,7 +22,7 @@
 
 [Français](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=fr)
 
-[עברית](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=he)
+[עברית](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=iw)
 
 [Hrvatski](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=hr)
 
@@ -30,7 +30,7 @@
 
 [한국어](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ko)
 
-[Norsk](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=nb)
+[Norsk](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=no)
 
 [Nederlands](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=nl)
 
@@ -48,7 +48,7 @@
 
 [Turkish](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=tr)
 
-中文（[简体](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh_cn))
+中文（[简体](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh-CN))
 
-中文（[繁體](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh_tw))
+中文（[繁體](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh-TW))
 
