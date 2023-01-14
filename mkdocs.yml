@@ -38,6 +38,7 @@ nav:
     - 'Google Cloud': 'nightscout/xdripteam.md'
     - 'NSaaS - T1Pal': 'vendors/T1Pal/new_user.md'
     - 'NSaaS - NS10BE': 'vendors/10BE.md'
+    - 'NSaaS - Nightscout.Pro': 'vendors/Nightscout.Pro/new_user.md'
 - Configure:
     - 'Configure your Nightscout': 'nightscout/setup_variables.md'
     - 'Configure your Uploader': 'uploader/setup.md'
