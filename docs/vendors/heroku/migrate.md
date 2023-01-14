@@ -20,6 +20,12 @@ T1Pal is made by developers who contribute to Nightscout development, it doesn't
 
 You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits.  Some features are not available for legal reasons and if you need extra variables setup you can contact NS10BE support. You will need to copy your Nightscout settings but can migrate your Mongo database easily in NS10BE.
 
+## **[Nightscout.Pro](../../../#nightscoutpro)**
+
+***You need a simple reliable Nightscout but don't want to build it and maintain it?***
+
+A completely 'hands-off' approach to Nightscout. Simply subscribe via the [website](https://nightscout.pro/) and you'll receive an email once your site is ready. Enjoy unlimited database and resources and do not have to worry about updating your nightscout site as it all taken care of for you.
+
 ## **Heroku**
 
 ***You liked the Heroku experience and don't want to change? An [Eco plan subscription](../ecoplan) is all it takes to continue like that.***
