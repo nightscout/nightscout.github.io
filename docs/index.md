@@ -79,7 +79,7 @@ You will need:
 There's no simple answer to this. You basically have two options:
 
 1. **DIY** Use instructions on this website or your computing skills to create your own installation. Depending on your skill and choice of platform, this can take anywhere from minutes to hours to accomplish. Additionally, you will need to maintain this installation yourself. Having said that, there are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be **free** - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it. Additionally, it's important to understand that if you're using a free tier of a hosting service to run Nightscout, your hosting costs are being paid by the hosting provider you're using.
-2. **Use a service** You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently two options available for this ([NS10BE](#ns10be) and [T1Pal](#t1pal)), both of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+2. **Use a service** You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), and [Nightscout.Pro](#nightscoutpro)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
 
 The Nightscout development community actively supports both of these choices.
 
@@ -91,7 +91,7 @@ The Nightscout development community actively supports both of these choices.
 
 ## Nightscout as a Service
 
-If you want to save time and avoid the need to maintain a DIY solution, you have two service providers of choice.
+If you want to save time and avoid the need to maintain a DIY solution, you have three service providers of choice.
 
 ### T1Pal
 
@@ -115,6 +115,41 @@ A Nightscout Instance at NS10BE costs €4.99/month, with discounts when increas
 To see more about NS10 features and costs, take a look at the [features page](https://10be.de/en/pricing.html). The registration is free.
 
 ***Support:*** ***support*** at ***ns.10be.de*** or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
+
+
+### Nightscout.Pro
+
+<img src="https://nightscout.pro/wp-content/uploads/2022/12/nightscoutsocial.jpg" width="400">
+
+[Nightscout.Pro](https://nightscout.pro/) was founded in 2022 by **Andy Low** - A type 1 diabetic web developer from Scotland, UK. Nightscout.Pro offer a completely 'hands-off' approach to Nightscout hosting, meaning all you need to do is subscribe via the website, and your Nightscout site will be created for you, with little to no configuration needed. Your site will be set up in a 'default' configuration, which can be modified by contacting **support** via [Email](mailto:support@nightscout.pro), [Facebook](https://www.facebook.com/nightscoutpro) or [Discord](https://discord.gg/7hYrkqVavU).
+
+The site is  translated into multiple languages, with more in line to be added over time, and can accept payment in various local currencies.
+
+**Pricing per month**
+<table>
+    <tr>
+        <td>Currency</td>
+        <td>Price</td>
+    </tr>
+    <tr>
+        <td>GBP</td>
+        <td>£3</td>
+    </tr>
+    <tr>
+        <td>USD</td>
+        <td>$4</td>
+    </tr>
+    <tr>
+        <td>EUR</td>
+        <td>€4</td>
+    </tr>
+    <tr>
+        <td>PLN</td>
+        <td>18 zł</td>
+    </tr>
+</table>
+
+More information about the companies background and processes can be found on the website at [Welcome to Nightscout.Pro.](https://nightscout.pro/welcome-to-nightscout-pro/)
 
 
 ## Who Can Help Me?
