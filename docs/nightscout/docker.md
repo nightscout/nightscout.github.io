@@ -5,7 +5,8 @@
 The most complete guide for building your site step by step is the one used for [Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf).  
 Just skip Oracle specific instructions and follow the flow.
 
-Original documentation from [Jason](https://github.com/nightscout/nightscout-docker), [Andries](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705), [Peter](https://github.com/peterleimbach/TestNightscoutDockerUbuntuServer22.04LTS)
+Original documentation from [Jason](https://github.com/nightscout/nightscout-docker).  
+More from [Andries](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705) and [Peter](https://github.com/peterleimbach/TestNightscoutDockerUbuntuServer22.04LTS) (traefik as below) plus [Ireneusz](https://github.com/ireneusz-ptak/ns-docker) and [Michael](https://www.michael-schloemp.de/2022/08/28/nightscout-on-ubuntu-vps-server-with-nginx-translated/) (nginx)
 
 </br>
 
