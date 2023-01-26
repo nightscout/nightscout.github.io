@@ -139,11 +139,13 @@ You don't need to know much about computers to install it, migrate from Heroku, 
 
 > **Pros**:  
 > Nightscout and database fit in the free tier  
+> A very large database space  
 > Easy to migrate an existing site from Heroku  
 > Easy to migrate data from another Nightscout  
 > Easy to upgrade, backup, ...
 >
 > **Cons**:  
+> Limited outgoing bandwidth (1GB/month)  
 > The community needs to build knowledge to help users troubleshoot issues
 
 </br>
@@ -1385,7 +1387,7 @@ Need more? Look at [advanced](../advanced) install methods.
   <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Free e2-micro tier</td>
   <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
+  border-top:0.05rem solid var(--md-typeset-table-color)'>20GB</td>
   <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl105543 style='border-top:none'>Access from Australia and China is
@@ -1449,6 +1451,7 @@ Need more? Look at [advanced](../advanced) install methods.
  <![endif]>
 </table>
 </div>
+
 
 </body>
 
