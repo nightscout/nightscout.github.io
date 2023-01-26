@@ -186,6 +186,16 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 </br>
 
+## Mac
+
+### [Nightscout MacOS Menu Bar](https://github.com/adamd9/Nightscout-MacOS-Menu-Bar) ([Apple Store Link](https://apps.apple.com/au/app/nightscout-menu-bar/id1639776072?mt=12))
+
+Show your current BG in the system bar at the top of your screen on Mac (including Loop details). Available directly through the Apple Store.
+
+<img src="./img/nightscout-macos-menu-bar.png" style="zoom:30%;" /> 
+
+</br>
+
 ## Windows
 
 ### [FloatingGlucose](https://github.com/dabear/FloatingGlucose)
