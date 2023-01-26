@@ -87,3 +87,7 @@ For Libre 3, you can upload automatically from LibreView servers deploying [this
 In order to get data from the Eversense CGM system, you will need to use the [ESEL](https://github.com/BernhardRo/Esel) app running on an Android phone.
 
 <img src="..\img\Upload06.png" />
+
+## Diasend
+
+[disaend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from [diasend](https://www.diasend.com/) to [nightscout](https://github.com/nightscout/cgm-remote-monitor). This can e.g. help [CamAPS FX](https://camdiab.com/) users to view their treatments and glucose values via nightscout.
