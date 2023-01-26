@@ -1,8 +1,5 @@
 # What to expect when you subscribe to Nightscout Pro
 
-
-## TL;DR
-
 [Nightscout.Pro](https://nightscout.pro/) is a completely 'hands-off' Nightscout hosting service which you can get started with no configuration required. You can subscribe directly via the website which has been translated in various languages and offer payment options in various local currencies.
 
 Simply [sign-up](https://nightscout.pro/product/managed-nightscout-site/) and you will receive an email once your site has been set up with the details.

@@ -97,6 +97,7 @@ You can easily [migrate from Heroku to Railway](../../vendors/railway/migration)
 > Can use a native Railway MongoDB database ($)
 >
 > **Cons**:  
+> The railway.app domain is blocked for safety by some companies  
 > Startup company  
 > A large amount of Nightscout users might have a negative impact on Railway financials and force them to review the free plan conditions  
 > Railway network model causes issues with some follower app and devices
@@ -1248,7 +1249,7 @@ Need more? Look at [advanced](../advanced) install methods.
   <td height=21 class=xl69543 width=113 style='height:16.0pt;width:85pt'>Nightscout
   Pro</td>
   <td class=xl109543 width=142 style='width:107pt'>3£</td>
-  <td class=xl97543 width=72 style='width:54pt'>&#8734;</td>
+  <td class=xl97543 width=72 style='width:54pt'>20GB</td>
   <td class=xl97543 width=94 style='width:71pt'>Low</td>
   <td class=xl98543>&nbsp;</td>
  </tr>
@@ -1448,6 +1449,7 @@ Need more? Look at [advanced](../advanced) install methods.
  <![endif]>
 </table>
 </div>
+
 </body>
 
 </br>
