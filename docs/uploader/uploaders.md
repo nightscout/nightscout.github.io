@@ -90,4 +90,4 @@ In order to get data from the Eversense CGM system, you will need to use the [ES
 
 ## Diasend
 
-[disaend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from [diasend](https://www.diasend.com/) to [nightscout](https://github.com/nightscout/cgm-remote-monitor). This can e.g. help [CamAPS FX](https://camdiab.com/) users to view their treatments and glucose values via nightscout.
+[disaend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout.
