@@ -139,7 +139,7 @@ You don't need to know much about computers to install it, migrate from Heroku, 
 
 > **Pros**:  
 > Nightscout and database fit in the free tier  
-> A very large database space  
+> A large database space  
 > Easy to migrate an existing site from Heroku  
 > Easy to migrate data from another Nightscout  
 > Easy to upgrade, backup, ...
