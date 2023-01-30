@@ -383,7 +383,22 @@ More details [below](../../nightscout/setup_variables/#plugins).
 
 ##### **SHOW_FORECAST** (`ar2`)
 
-Plugin forecasts that should be shown by default, supports space delimited values such as `"ar2 openaps"`
+Plugin forecasts that should be shown by default, supports space delimited values such as: 
+`"ar2 openaps loop false"`
+
+Note the ar2 forecast is selected by default so if no value is set, it will be AR2. AR2 is an early attempt at forecasting BG and you should not base any medical decisions on it's predictions. 
+
+If you are looping, you can chose instead to use either `"loop"` or `"openaps"` which will use the appropriate algorithm.
+
+You should also add the parameter to the SHOW_PLUGINS and ENABLE variables.
+
+For example, if you are using the Loop app for iPhone, you should have the following settings (In addition to any others outlined in the docs):
+
+```
+ENABLE=loop
+SHOW_PLUGINS=loop
+SHOW_FORECAST=loop
+```
 
 </br>
 
