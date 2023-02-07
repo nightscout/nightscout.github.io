@@ -84,7 +84,7 @@ For Libre 3, you can upload automatically from LibreView servers deploying [this
 
 ## Eversense
 
-In order to get data from the Eversense CGM system, you will need to use the [ESEL](https://github.com/BernhardRo/Esel) app running on an Android phone.
+In order to get data from the Eversense CGM system, you will need to use the [ESEL](https://github.com/BernhardRo/Esel/releases) app running on an Android phone with the [modified](https://cr4ck3d3v3r53n53.club/) vendor app.
 
 <img src="..\img\Upload06.png" />
 
