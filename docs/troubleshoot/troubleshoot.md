@@ -8,8 +8,6 @@
 
 <span style="font-size:smaller;">**APPLIES TO:**</span>	DIY Nightscout
 
-For [Nightscout as a service](/#nightscout-as-a-service) contact directly ***support*** at ***t1pal.com*** or use the `Get Support` link.
-
 </br>
 
 ### Before troubleshooting
