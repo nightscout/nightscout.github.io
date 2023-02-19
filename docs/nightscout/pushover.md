@@ -1,3 +1,5 @@
+This is an orphan page. Please feedback if it's still necessary.
+
 # Remote notifications
 
 While Loop app currently sends notifications locally on Loop user's iPhone, parents and caregivers likely want those messages on their phones, too.  We can achieve this functionality through a combination of Nightscout, IFTTT, Google, and Pushover.

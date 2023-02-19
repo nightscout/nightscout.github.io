@@ -6,7 +6,7 @@ The most complete guide for building your site step by step is the one used for 
 Just skip Oracle specific instructions and follow the flow.
 
 Original documentation from [Jason](https://github.com/nightscout/nightscout-docker).  
-More from [Andries](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705) and [Peter](https://github.com/peterleimbach/TestNightscoutDockerUbuntuServer22.04LTS) (traefik as below) plus [Ireneusz](https://github.com/ireneusz-ptak/ns-docker).
+More from [Andries](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705) and [Peter](https://github.com/peterleimbach/TestNightscoutDockerUbuntuServer22.04LTS) (traefik as below), [justmara](https://github.com/justmara/ns-setup) and [Ireneusz](https://github.com/ireneusz-ptak/ns-docker).
 
 A comprehensive description of the yaml file for mongo and Nightscout setup [here](https://github.com/LostOnTheLine/Nightscout_Docker-Compose).
 
@@ -41,6 +41,8 @@ sudo apt install nano -y
 ```
 
 </br>
+
+## Deploy a single instance
 
 ### Step 1 - Install Docker
 
@@ -148,7 +150,7 @@ API_SECRET: YOUR_API_SECRET
 
 </br>
 
-## Step 3 - Build and run Nightscout
+### Step 3 - Build and run Nightscout
 
 To start your Nightscout:
 
@@ -171,3 +173,71 @@ sudo docker compose down
 Note that you need to stop it and start it if you modify your `docker-compose.yml` configuration.
 
 </br>
+
+## Deploy multiple instances
+
+Hints from [justmara](https://github.com/justmara)
+
+Portainer configuration used in docker-compose:
+
+```
+  portainer:
+    image: portainer/portainer-ee:latest
+    container_name: portainer
+    restart: unless-stopped
+    volumes:
+      - ./portainer-data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.portainer.rule=Host(`portainer.<MYDOMAIN>`)'
+      - 'traefik.http.routers.portainer.entrypoints=web'
+      - 'traefik.http.routers.portainer.service=portainer-service'
+      - 'traefik.http.services.portainer-service.loadbalancer.server.port=9000'
+    ports:
+      - "8000:8000"
+      - "9443:9443"
+      - "9000:9000"
+    networks:
+      - dia
+```
+
+Portainer custom template used to start new Nightscout instances:
+
+```
+version: '3.9'
+
+x-ns-common-env: &ns-common-env
+  NODE_ENV: production
+  TZ: Europe/Moscow
+  TIME_FORMAT: 24
+  INSECURE_USE_HTTP: 'true'
+  ENABLE: basal iob cob boluscalc cage sage iage bage pump openaps pushover bgi food rawbg
+  SHOW_FORECAST: openaps
+  PUMP_FIELDS: clock reservoir
+  DISPLAY_UNITS: mmol
+  AUTH_DEFAULT_ROLES: denied
+
+services:
+  nightscout-{{ns-name}}:
+    image: nightscout/cgm-remote-monitor:latest
+    container_name: dia-ns-{{ns-name}}
+    restart: always
+    depends_on:
+      - mongo
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.ns-{{ns-name}}.rule=Host(`{{ns-name}}.<MYDOMAIN>`)'
+      - 'traefik.http.routers.ns-{{ns-name}}.entrypoints=web'
+    environment:
+      <<: *ns-common-env
+      MONGO_CONNECTION: mongodb://mongo:27017/ns-{{ns-name}}
+      API_SECRET: {{ns-secret}}
+    networks:
+      - dia
+
+networks:
+  dia:
+    external: true
+```
+

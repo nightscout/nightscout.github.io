@@ -1,3 +1,5 @@
+This is an orphan page. Please feedback if it's still necessary.
+
 # IFTTT Integration
 
 If This, Then That (IFTTT) is a useful Nightscout integration.  By using IFTTT, you can have single button presses on your iPhone that will set an override, log a cannula change, log a sensor change and much more. 

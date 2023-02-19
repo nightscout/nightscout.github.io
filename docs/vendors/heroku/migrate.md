@@ -1,6 +1,6 @@
 # Migration?
 
-As the [deadline](https://blog.heroku.com/next-chapter) is coming closer, one question starts to come up more frequently. What should I do with my Nightscout, should I migrate, where? What is recommended?
+The [deadline](https://blog.heroku.com/next-chapter) is in the past now, but if you used Heroku and would like to revive your site, one question remains: "What should I do with my Nightscout, should I migrate, where? What is recommended?"
 
 There is no universal solution. So, you'll have to read between the lines and understand what's the best strategy for you, as we have different needs, skills and budgets.
 

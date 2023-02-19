@@ -135,7 +135,7 @@ Fly.io proposes a [simple migration wizard from Heroku](../../vendors/fly.io/mig
 ### Google Cloud
 
 The xDrip+ developers team proposes [a simple scripted install in a Google Cloud free tier server](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud).  
-You don't need to know much about computers to install it, migrate from Heroku, get your data from another Nightscout, update, ... The solution is in progress and is really great.
+You don't need to know much about computers to install it, migrate from Heroku, get your data from another Nightscout or update. This is  great solution.
 
 > **Pros**:  
 > Nightscout and database fit in the free tier  
@@ -2495,8 +2495,3 @@ Need more? Look at [advanced](../advanced) install methods.
 If you want to read more about Nightscout security, including about additional configuration options to make your installation more secure, please check our [security guide](../security/).
 
 </br>
-
-##### Record your information in a safe place.
-
-You can either print this [pdf document](./NightscoutDataRecord.pdf) or edit the [Word version](./NightscoutDataRecord.docx), or this [Excel sheet](./NightscoutDataRecord.xlsx), to record all information during installation. Store it together securely with your diabetes documentation.
-
