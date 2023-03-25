@@ -140,6 +140,12 @@ For hosted Nightscout use the QR code from [Uploaders](https://www.t1pal.com/acc
 
 </br>
 
+## [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html)
+
+<img src="../img/UploadCFG11.png" style="zoom:80%;" />
+
+</br>
+
 ## [Diabox](https://www.bubblan.org/diabox/)
 
 <img src="../img/UploadCFG03.png" style="zoom:80%;" />

@@ -36,10 +36,7 @@ If you don't want to use the official Dexcom apps, then you can use **open-sourc
 <img src="..\img\Upload03.png" />
 
 !!! info "Dexcom "Firefly" Transmitters"
-    Any transmitter made before Dexcom switched to the "firefly" range of G6 transmitters is compatible with **Spike**. Although there are *slight* physical differences, the easiest way to check is to look at the Transmitter ID. If it starts with **80xxxx** or **81yxxx** (where **y** is a number) then it is a pre-Firefly transmitter and is compatible. 
-    
-
-    Most of the useable transmitters that fall into this category at the present time (early 2021) are generally rebatteried or rechargeable/modified 80xxxx or 81xxxx transmitters.
+    Most of the useable transmitters that fall into this category at the present time are generally rebatteried or rechargeable/modified transmitters.
 
 #### Dexcom G4 *(now obsolete)*
 
@@ -69,6 +66,8 @@ You can synchronize your treatments one way from your Tandem Diabetes t:connect 
 
 ## Abbott Freestyle Libre
 
+#### Libre 1
+
 Non Bluetooth-enabled Freestyle Libre sensors will need an additional transmitter device fixed on top of the sensor to send readings to the uploader device. In release order here are some transmitter options: [LimiTTer](https://github.com/JoernL/LimiTTer), BlueReader, Blucon, MiaoMiao, Bubble, Droplet and Atom.
 
 !!! warning "Transmitter Compatibility"
@@ -76,11 +75,16 @@ Non Bluetooth-enabled Freestyle Libre sensors will need an additional transmitte
 
 Most of the transmitters have their own proprietary apps. Nearly all of these support the uploading of data to Nightscout (LinkBluCon, Tomato, Diabox, eDroplet, ...). Again, check the transmitter manufacturer's website and the relevant Facebook support groups for information.
 
-**Open-source apps** such as **xDrip+**, **Spike** and **xDrip4iOS** also support some of the above transmitter devices.
+**Open-source apps** such as **xDrip+**, **Juggluco**, **Spike** and **xDrip4iOS** also support some of the above transmitter devices.
 
-You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre). Other Libre 2 sensors can be used directly with Juggluco and Diabox.
+#### Libre 2
 
-For Libre 3, you can upload automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip+ to perform this operation.
+You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre).  
+Other Libre 2 sensors can be used directly with [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html) and Diabox.
+
+#### Libre 3
+
+You can use the sensor connected with [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html) or upload to Nightscout automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip+ to perform this operation.
 
 ## Eversense
 
@@ -90,4 +94,4 @@ In order to get data from the Eversense CGM system, you will need to use the [ES
 
 ## Diasend
 
-[disaend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout.
+[disaend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout. A 30 minutes delay might occur.

@@ -220,6 +220,12 @@ Show your current BG in the system bar at the top of your screen on Mac (includi
 
 </br>
 
+### [BGBuddy](https://github.com/VeryKross/BGBuddy)
+
+<img src="https://user-images.githubusercontent.com/11561147/208538830-5ceb35ea-0ee1-4cdb-b980-db8bcfabd936.jpg" style="zoom:10%;" />
+
+</br>
+
 ### [SugarPiDisplay](https://github.com/bassettb/SugarPiDisplay)
 
 <img src="https://raw.githubusercontent.com/bassettb/SugarPiDisplay/master/docs/image2.jpg" style="zoom:50%;" />
