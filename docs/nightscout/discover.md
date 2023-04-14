@@ -291,7 +291,16 @@ You need to [authenticate](../discover/#authenticate_yourself) to save your sett
 
 In order to `Save` your changes you need to Authenticate, click `Authenticate` and enter your [API Secret](../setup_variables/#api_secret).
 
-`Reset, and use defaults` will reverse your changes to defaults from your Heroku [config variables](../setup_variables/#nightscout-config-vars).
+`Reset, and use defaults` will reverse your changes to defaults from your [config variables](../setup_variables/#nightscout-config-vars).
 
 In `About` you'll see your current Nightscout version.
 
+</br>
+
+### API
+
+You can find information about your site API at:
+
+https://{url}/api-docs[?token=TOKEN]
+
+https://{url}/api/v2/properties.json[?token=TOKEN]

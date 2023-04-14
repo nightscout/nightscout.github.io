@@ -150,7 +150,7 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 
 !!!note "Important limitation"  
     Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.  
-    If you need this data source, [deploy a dev branch](../../update/dev_branch/) and enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables.
+    If you need this data source: enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables.
 
 
 

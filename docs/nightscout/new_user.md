@@ -135,7 +135,7 @@ Fly.io proposes a [simple migration wizard from Heroku](../../vendors/fly.io/mig
 ### Google Cloud
 
 The xDrip+ developers team proposes [a simple scripted install in a Google Cloud free tier server](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud).  
-You don't need to know much about computers to install it, migrate from Heroku, get your data from another Nightscout or update. This is  great solution.
+You don't need to know much about computers to install it, migrate from Heroku, get your data from another Nightscout or update. This is a great solution.
 
 > **Pros**:  
 > Nightscout and database fit in the free tier  
