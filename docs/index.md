@@ -274,9 +274,8 @@ troubleshoot/fly.io.md
 nightscout/dns.md
 ```
 
-<!--  
+```{toctree}
 :hidden:
 :caption: TRANSLATE
-translate.md  
-{toctree}  
--->
+translate.md
+```

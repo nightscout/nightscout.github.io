@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Google Translate links
 
 [عربي](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ar)

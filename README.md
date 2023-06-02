@@ -40,7 +40,7 @@ $ https://<nightscout docs location>/_build/html/index.html
 
 * Optionally, you can share the preview with others by building them in your repository with GitHub pages. You need to enable GitHub pages in your repository fork. The workflow in `.github/workflows/documentation.yaml` will automatically create and deploy your pages. 
 
-<img src="docs/vendors/github/img/GHPages.png" style="zoom:50%;" />
+<img src="docs/vendors/github/img/GHPages.png" width="400px" />
 
 ## Conventions
 
