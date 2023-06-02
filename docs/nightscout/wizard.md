@@ -12,10 +12,10 @@ This set of questions will hopefully help choose the best solution for you, or a
 
 ```{admonition} [TANSTAAFL](https://en.wiktionary.org/wiki/TANSTAAFL)
 :class: note
- If it's cheap and easy it might not be as reliable as you'd like  
- If it's cheap and reliable it might be difficult to build or maintain  
- If it's simple and reliable it might not be free  
- **Free, simple and reliable is not available.**
+If it's cheap and easy it might not be as reliable as you'd like  
+If it's cheap and reliable it might be difficult to build or maintain  
+If it's simple and reliable it might not be free  
+**Free, simple and reliable is not available.**
 ```
 
 </br>
@@ -35,7 +35,6 @@ function Validate()
 	sDB=""; sNS=""
 	dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1;
 	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1
-
 	sel = document.getElementById("CONT");
 	switch(sel.selectedIndex)
 	{
@@ -43,7 +42,6 @@ function Validate()
 		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsGoog=0; ns10be=0; nsPro=0;
 		break;
 	}
-	
 	sel = document.getElementById("SIMPLE");
 	switch(sel.selectedIndex)
 	{
@@ -57,7 +55,6 @@ function Validate()
 		case 3: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0; nsGoog=0; nsHero=0; nsRail=0; nsNort=0;
 				nsAzur=0; nsFly=0; nsGoog=0; nsVPS=0; break
 	}
-	
 	sel = document.getElementById("COST");
 	switch(sel.selectedIndex)
 	{
@@ -67,7 +64,6 @@ function Validate()
 		case 3: nsT1Pal=0; break
 		case 4: break
 	}
-	
 	sel = document.getElementById("RELY");
 	switch(sel.selectedIndex)
 	{
@@ -75,7 +71,6 @@ function Validate()
 		case 1: nsFly=0; break
 		case 2: break
 	}
-	
 	if(dbAtla) sDB=sDB+" - Free MongoDB Atlas (limited to 512MiB) <br />"
 	if(dbAtlaP) sDB=sDB+" - M2 MongoDB Atlas (9$/month) <br />"
 	if(dbRail) sDB=sDB+" - Railway Mongo database (free if <300MiB) <br />"
@@ -85,7 +80,6 @@ function Validate()
 	if(nsGoog) sDB=sDB+" - Database included in Google Cloud <br />"
 	if(sDB=="") sDB="Uh... not many choices there, try to change some options and retry."
 	document.getElementById("resultDB").innerHTML = sDB;
-	
 	if(sDB!=" - Database included in the hosted service"&sDB!="Uh... not many choices there, try to change some options and retry.")
 	{
 		if(sDB!=" - Database included in Google Cloud <br />"&sDB!=" - Database included in the hosted service <br /> - Database included in Google Cloud <br />")

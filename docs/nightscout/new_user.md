@@ -1112,7 +1112,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   style='mso-spacerun:yes'> </span>11.99$<span
   style='mso-spacerun:yes'> </span></td>
   <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>2GB</td>
+  border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
   <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Low</td>
   <td class=xl105543 style='border-top:none'>Loop remote carbs/bolus require
@@ -1126,7 +1126,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   style='mso-spacerun:yes'> </span>&lt; 5€<span
   style='mso-spacerun:yes'> </span></td>
   <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>20GB</td>
+  border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
   <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Low</td>
   <td class=xl105543 style='border-top:none'>&nbsp;</td>
@@ -1135,7 +1135,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   <td height=21 class=xl69543 width=113 style='height:16.0pt;width:85pt'>Nightscout
   Pro</td>
   <td class=xl109543 width=142 style='width:107pt'>3£</td>
-  <td class=xl97543 width=72 style='width:54pt'>20GB</td>
+  <td class=xl97543 width=72 style='width:54pt'>Yes</td>
   <td class=xl97543 width=94 style='width:71pt'>Low</td>
   <td class=xl98543>&nbsp;</td>
  </tr>
@@ -1225,7 +1225,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
  <tr height=20 style='height:15.35pt'>
   <td height=20 class=xl110543 width=142 style='height:15.35pt;width:107pt'>9$
   M2 tier</td>
-  <td class=xl106543 width=72 style='width:54pt'>2GB</td>
+  <td class=xl106543 width=72 style='width:54pt'></td>
   <td class=xl106543 width=94 style='width:71pt;box-sizing: inherit;border-top:
   0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl107543>Not worth the cost compared to hosted solutions</td>
@@ -1246,7 +1246,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   width:85pt'>Railway</td>
   <td class=xl104543 width=142 style='border-top:none;width:107pt'>10$/GB</td>
   <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>100GB</td>
+  border-top:0.05rem solid var(--md-typeset-table-color)'></td>
   <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl105543 style='border-top:none'>&nbsp;</td>
@@ -1255,7 +1255,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   <td height=21 class=xl71543 width=113 style='height:16.0pt;width:85pt'>Northflank</td>
   <td class=xl99543 width=142 style='width:107pt'>0.3$/GB</td>
   <td class=xl97543 width=72 style='width:54pt;box-sizing: inherit;border-top:
-  0.05rem solid var(--md-typeset-table-color)'>&#8734;</td>
+  0.05rem solid var(--md-typeset-table-color)'></td>
   <td class=xl99543 width=94 style='width:71pt;box-sizing: inherit;border-top:
   0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl100543>&nbsp;</td>
@@ -1271,7 +1271,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Free e2-micro tier</td>
   <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>20GB</td>
+  border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
   <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl105543 style='border-top:none'>Access from Australia and China is
