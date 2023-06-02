@@ -1,5 +1,3 @@
-This is an orphan page. Please feedback if it's still necessary.
-
 # Remote notifications
 
 While Loop app currently sends notifications locally on Loop user's iPhone, parents and caregivers likely want those messages on their phones, too.  We can achieve this functionality through a combination of Nightscout, IFTTT, Google, and Pushover.
@@ -10,9 +8,9 @@ Using Pushover <i>**THROUGH**</i> IFTTT however, we can improve the possible not
 
 The basic concept is that NS puts out an event that triggers the IFTTT service called Webhooks (old name was "Maker Webhooks" hence you may see references to "maker" in NS docs).  Actually, there are several types of events that NS has programmed in all ready to use in IFTTT.
 
-<p align="center">
-<img src="../img/ns-core-events.png" width="700">
-</p>
+
+<img src="/nightscout/img/ns-core-events.png" width="700">
+
 
 For this setup, we are going to use the most general logging event called `ns-event`.  You'll get all the alarms and notifications logged, and then you can decide in subsequent steps which ones you'd actually like to send to your phone for pushover notification.
 
@@ -40,163 +38,164 @@ If you don't already have these steps done, you will need them.  Skip any that y
 
 * Login to your Google account and select Google Drive
 
-<p align="center">
-<img src="../img/google1.png" width="550">
-</p>
+
+<img src="/nightscout/img/google1.png" width="550">
+
 
 * Click on the blue "New" button and create a new folder named IFTTT.
 
-<p align="center">
-<img src="../img/google2.png" width="550">
-</p>
+
+<img src="/nightscout/img/google2.png" width="550">
+
 
 * Double click on the newly created IFTTT folder, select the blue "New" button again, and create a new subfolder called "Nightscout-Alarms"
 
-<p align="center">
-<img src="../img/google3.png" width="550">
-</p>
+
+<img src="/nightscout/img/google3.png" width="550">
+
 
 This IFTTT/Nightscout-Alarms folder will eventually contain numerous Google Spreadsheets, one for each NS alarm or information that is logged.  As new alarms are triggered, the IFTTT applet we are about to write will add a row to the appropriate spreadsheet logging the time of the alarm and any other reported details that go with the entry.  For now though, your drive will be blank...screenshot below just to give you an idea of where we are going.
 
-<p align="center">
-<img src="../img/google4.png" width="550">
-</p>
+
+<img src="/nightscout/img/google4.png" width="550">
+
 
 ## Make 1st IFTTT Applet to Log NS Alarms
 
 * Login to your IFTTT.com account and select the "New Applet" button.
 
-<p align="center">
-<img src="../img/IFTTT_newapplet.png" width="550">
-</p>
+
+<img src="/nightscout/img/IFTTT_newapplet.png" width="550">
+
 
 * In the screen that appears, click on the blue "+this" part of the screen
 
-<p align="center">
-<img src="../img/IFTTT_this.png" width="550">
-</p>
+
+<img src="/nightscout/img/IFTTT_this.png" width="550">
+
 
 * In the next screen, type "webhooks" in the search field and then click on the blue connect button
 
-<p align="center">
-<img src="../img/webhooks1.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks1.png" width="550">
+
 
 * If this is the first time you are using IFTTT Webhooks service, you will have a "Connect" button to select.  If you already have IFTTT applets using Webhooks, you won't see this screen...just move to the next bullet.
 
-<p align="center">
-<img src="../img/webhooks2.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks2.png" width="550">
+
 
 * Click on the "receive a web request" blue box, and then fill in the Event Name as `ns-event` and then press the "Create trigger" button.  (Side note:  the event name used here corresponds to the triggers discussed above for core events that NS already has integrated for IFTTT users.  If you want to, instead, use the other triggers such as ns-warn or ns-urgent, you can.  This example is using the most general trigger so that the options are wider for most users.)
 
-<p align="center">
-<img src="../img/webhooks3.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks3.png" width="550">
+
 
 * Click on the blue "+that" text
 
-<p align="center">
-<img src="../img/IFTTT_that2.png" width="550">
-</p>
+
+<img src="/nightscout/img/IFTTT_that2.png" width="550">
+
 
 * Enter `google` in the search field and click on the Google Sheets icon
 
-<p align="center">
-<img src="../img/webhooks4.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks4.png" width="550">
+
 
 * Select the green "Add row to spreadsheet" box
 
-<p align="center">
-<img src="../img/webhooks5.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks5.png" width="550">
+
 
 *  Delete the contents of the "Spreadsheet Name" and "Drive folder path".  For the "Spreadsheet Name", click the "Add Ingredient" button and select the "Value1".  For the "Drive folder path", enter `IFTTT/Nightscout-Alarms`.  You do not have to modify the "Formatted row" box's contents.  Click the "Create action" button at the bottom.
 
-<p align="center">
-<img src="../img/webhooks6.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks6.png" width="550">
+
 
 * Turn off the toggle for receiving notifications when the applet runs, and then click the Finish button
 
-<p align="center">
-<img src="../img/webhooks7.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks7.png" width="550">
+
 
 * You'll now have the finished IFTTT applet that will cause a row to be added to a Google spreadsheet...tracking all your NS notifications and alarms.  If it is the first time that alarm has been logged, the applet will also create the spreadsheet itself.  After a while, your IFTTT/Nightscout-Alarms folder will start to look like the screenshot posted above with numerous spreadsheets for each alarm type.
 
-<p align="center">
-<img src="../img/webhooks8.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks8.png" width="550">
+
 
 ## Enable IFTTT Webhooks in your Nightscout site
 
-!!!info ""
-    If you already have created IFTTT buttons previously to work with your NS site, you can skip this section.  If those buttons are working, then you've already added your MAKER_KEY and "maker" to your ENABLE line in Heroku.
+```{note}
+If you already have created IFTTT buttons previously to work with your NS site, you can skip this section.  If those buttons are working, then you've already added your MAKER_KEY and "maker" to your ENABLE line in Heroku.
+```
 
 * To actually make that first applet work, we need to enter a "Maker Key" to get NS and IFTTT talking to each other.  Find your Maker Key by going to your IFTTT account, Services and then clicking on Webhooks.  (Your screen may not have as many services showing; the example account below just happens to already use several services.)
 
-<p align="center">
-<img src="../img/webhooks9.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks9.png" width="550">
+
 ********
-<p align="center">
-<img src="../img/webhooks10.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks10.png" width="550">
+
 
 * You will see your Maker Key as the last part of the URL; copy that last part (the red circled part)
 
-<p align="center">
-<img src="../img/webhooks11.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks11.png" width="550">
+
 
 * Navigate to your Heroku account's settings tab, "reveal config vars" and (1) add your Maker Key to the MAKER_KEY line and (2) add "maker" to your ENABLE line.
 
-<p align="center">
-<img src="../img/IFTTT_NSkey.png" width="550">
-</p>
 
-<p align="center">
-<img src="../img/IFTTT_enable.png" width="550">
-</p>
+<img src="/nightscout/img/IFTTT_NSkey.png" width="550">
+
+
+
+<img src="/nightscout/img/IFTTT_enable.png" width="550">
+
 
 ## Make 2nd IFTTT Applet to send Pushover notifications
 
 * In your IFTTT account, select the "New Applet" button.
 
-<p align="center">
-<img src="../img/webhooks12.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks12.png" width="550">
+
 
 * In the screen that appears, click on the blue "+this" part of the screen
 
-<p align="center">
-<img src="../img/IFTTT_this.png" width="550">
-</p>
+
+<img src="/nightscout/img/IFTTT_this.png" width="550">
+
 
 * In the next screen, type "google" in the search field and then click on the "Google Sheets" logo.
 
-<p align="center">
-<img src="../img/webhooks4.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks4.png" width="550">
+
 
 * Click on the "New row added to spreadsheet" as the trigger.
 
-<p align="center">
-<img src="../img/webhooks13.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks13.png" width="550">
+
 
 * Enter the following information:  Folder path is `IFTTT/Nightscout-Alarms` and for the filename you are going to enter the name of the particular NS alarm or information that you would like to get pushover alerts for.  Click on the "Create trigger" button to save the trigger.
 
-<p align="center">
-<img src="../img/webhooks14.png" width="550">
-</p>
 
-!!!info ""
-    This applet can't be created unless your filename (alarm spreadsheet) already exists.  If your 1st applet we created above hasn't run for a long time, the spreadsheets may not exist yet because the alarms haven't triggered.  You have two options...(1) manually create the file in your Google Drive so that you can finish the applet now or (2) wait several days/weeks for the alarms to happen and that will automatically create the files in your Google drive.</br></br>
-    If you choose option 1, here's a partial list of some of the filenames you could create in advance:
-    
+<img src="/nightscout/img/webhooks14.png" width="550">
+
+```{note}
+This applet can't be created unless your filename (alarm spreadsheet) already exists.  If your 1st applet we created above hasn't run for a long time, the spreadsheets may not exist yet because the alarms haven't triggered.  You have two options...(1) manually create the file in your Google Drive so that you can finish the applet now or (2) wait several days/weeks for the alarms to happen and that will automatically create the files in your Google drive.</br></br>
+If you choose option 1, here's a partial list of some of the filenames you could create in advance:
+```
+
     * Loop isn't looping
     * Cannula age 48 hours
     * Cannula age 72 hours
@@ -209,44 +208,44 @@ This IFTTT/Nightscout-Alarms folder will eventually contain numerous Google Spre
 
 * Click on the blue "+that" text
 
-<p align="center">
-<img src="../img/IFTTT_that2.png" width="550">
-</p>
+
+<img src="/nightscout/img/IFTTT_that2.png" width="550">
+
 
 * Enter `pushover` in the search field and click on the Pushover icon.  If this is your first time linking your IFTTT to Pushover, you will be prompted to enter your Pushover account login and allow IFTTT access.  This only needs to be done once.
 
-<p align="center">
-<img src="../img/webhooks15.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks15.png" width="550">
+
 
 * Select the "Send a Pushover notification" box
 
-<p align="center">
-<img src="../img/webhooks16.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks16.png" width="550">
+
 
 *  Delete the contents of the "Title" and "Message" and "URL" boxes.  For the Title, click the "Add Ingredient" button and add `ColumnC`.  For the "Message", click the "Add Ingredient" button and add the values of various columns from your spreadsheet for the information you would like to include.  For the alerts: `ColumnC` contains the alarm name, `ColumnA` is the date/time of the alarm, and `ColumnD` has more detailed information about the info/alarm.  This is a pretty decent recipe to follow to get the useful information in your notification.
-<p align="center">
-<img src="../img/webhooks17.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks17.png" width="550">
+
 
 * Select the "Message Priority" that you would like for this particular alarm type.
 
-<p align="center">
-<img src="../img/webhooks18.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks18.png" width="550">
+
 
 * Select the "Device" that you would like to receive this particular alarm type.  The devices listed will be all your devices that have Pushover app installed and logged into.  Click "Create Action" when you are finished.
 
-<p align="center">
-<img src="../img/webhooks19.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks19.png" width="550">
+
 
 * You'll now have made the IFTTT applet that will cause a Pushover notification to a particular device for a particular NS alarm, once the first applet records the alarm in the google spreadsheet.  Keep the "receive notification when this Applet runs" toggled off and click the Finish button.
 
-<p align="center">
-<img src="../img/webhooks20.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks20.png" width="550">
+
 
 ## Revisit Nightscout Alert Levels
 
@@ -334,19 +333,17 @@ Putting all these notifications together may cause you to want to revisit the al
 
 * To create more notifications, simply repeat the steps for the 2nd applet you created, only this time use a new filename that corresponds to the spreadsheet tracking the alert you'd like notifications for.  You'll end up with multiple applets of the dark blue type (the pushover notifiers) and only a single light blue (NS alarm general collector).
 
-<p align="center">
-<img src="../img/webhooks23.png" width="550">
-</p>
+
+<img src="/nightscout/img/webhooks23.png" width="550">
+
 
 * Here are examples of the Meal Bolus and Temp Basal ns-event logging spreadsheets
 
-<p align="center">
-<img src="../img/webhooks21.png" width="550">
-</p>
 
-<p align="center">
-<img src="../img/webhooks22.png" width="550">
-</p>
+<img src="/nightscout/img/webhooks21.png" width="550">
+
+<img src="/nightscout/img/webhooks22.png" width="550">
+
 
 * The 1st applet can only create up to 2000 active rows in a given spreadsheet.  After that, the applet will automatically create a new spreadsheet.  For most alarms, it may take quite some time to reach 2000 rows of info.  For other alerts, such as temp basals being set, that may fill up rather fast for the average looper.  You can either clean out the data rows periodically to make room, or update your filename in the 2nd applet periodically when a new spreadsheet is made.
 

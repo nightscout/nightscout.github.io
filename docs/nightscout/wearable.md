@@ -1,10 +1,10 @@
-# How to display Nightscout data on your watch.
+# Nightscout on your Watch
 
 </br>
 
 ## Pebble Smartwatches
 
-<img src="..\img\PebbleNSFoundation.jpeg" style="zoom:50%;" />
+<img src="/nightscout/img/PebbleNSFoundation.jpeg" width="400px" />
 
 Pebble smartwatch use is a historic milestone of CGM in the Cloud. Pebble has been bought by Fitbit in 2016 and necessary resources have moved to archives and [rebble.io](https://rebble.io/). Pebble support is still maintained in Loop, AndroidAPS, FreeAPS and xDrip+.
 
@@ -18,7 +18,7 @@ Configure the watchface with your Nightscout site URL.
 
 </br>
 
-##### [urchin](https://github.com/mddub/urchin-cgm)
+### [urchin](https://github.com/mddub/urchin-cgm)
 
 A Pebble watchface to view data from a continuous glucose monitor in graph format.
 
@@ -28,17 +28,17 @@ If you want to use your Pebble with Loop look [here](https://loopkit.github.io/l
 
 </br>
 
-#### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
+### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
 
 Enable Pebble Integration in Smartwatch features.
 
-<img src="..\img\Watch02.png" style="zoom:80%;" />
+<img src="/nightscout/img/Watch02.png" width="800px" />
 
 </br>
 
 You can answer no to default watchface install so that you will be able to select another one. You can then decide to install or not the snooze control.
 
-<img src="..\img\Watch03.png" style="zoom:80%;" />
+<img src="/nightscout/img/Watch03.png" width="600px" />
 
 </br>
 
@@ -46,47 +46,60 @@ You can answer no to default watchface install so that you will be able to selec
 
 With an Android smartphone.
 
-##### Android Wear 1.x:
+````{tab-set}
 
+:::{tab-item} Android Wear 1
 - Recommended: Install an old version of Android Wear on your phone (search APKMirror for example: Android Wear 2.9.0.185084575.gms) and pair your watch. Make sure to allow GPS and Wear OS access to position on the watch. Allow Wear OS to run in background on your phone.
 
-!!!note
-     If you installed Wear OS, you will need to manually update the watch the Google Play Services see [here](https://androidaps.readthedocs.io/en/latest/EN/Usage/SonySW3.html).
+***Note:If you installed Wear OS, you will need to manually update the watch Google Play Services see [here](https://androidaps.readthedocs.io/en/latest/EN/Usage/SonySW3.html).***
 
   - Once your smartwatch Google Play Service has been updated to a version above 9.x you can safely update Android Wear to Wear OS.
   - Change the watchface to match your app (in Wear OS or on your watch).
+:::
 
-##### Android Wear 2.x:
-
+:::{tab-item} Android Wear 2
 - Install [Wear OS](https://play.google.com/store/apps/details?id=com.google.android.wearable.app) on your phone and pair your watch. Make sure to allow GPS and Wear OS access to position on the watch. Allow Wear OS to run in background on your phone.
 
-- [Install](https://support.google.com/wearos/answer/7314014?hl=en) your app wear extension from the smartwatch Google Play store, selecting the apps installed on your phone.
-
-  *Note: Newer versions of Wear OS do not support this feature anymore, use [Wear Installer](https://youtu.be/8HsfWPTFGQI).*
+- [Install](https://support.google.com/wearos/answer/7314014?hl=en) your app wear extension from the smartwatch Google Play store, selecting the apps installed on your phone.*Note: Newer versions of Wear OS do not support this feature anymore, use [Wear Installer](https://youtu.be/8HsfWPTFGQI) or Use [GeminiMan Wear OS Manager](https://play.google.com/store/apps/details?id=com.geminiman.wearosmanager) or [Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools).*
 
 - Change the watchface to match your app (in Wear OS or on your watch).
+:::
 
-#### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
+:::{tab-item} Android Wear 3
+- Install [Wear OS](https://play.google.com/store/apps/details?id=com.google.android.wearable.app) on your phone and pair your watch. Make sure to allow GPS and Wear OS access to position on the watch. Allow Wear OS to run in background on your phone.
+
+- Use [Wear Installer](https://youtu.be/8HsfWPTFGQI) or Use [GeminiMan Wear OS Manager](https://play.google.com/store/apps/details?id=com.geminiman.wearosmanager) or [Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools).
+
+- Change the watchface to match your app (in Wear OS or on your watch).
+:::
+
+
+
+````
+
+</br>
+
+### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
 
 Enable Android Wear Integration to send xDrip+ BG to the smartwatch. Do not enable neither Collection nor Force Collection.
 
-<img src="..\img\Watch00.png" style="zoom:80%;" />
+<img src="/nightscout/img/Watch00.png" width="800px" />
 
 Full xDrip+ wear documentation [here](https://github.com/jamorham/xDrip-plus/blob/master/Documentation/WatchGuide.md).
 
-*NB: you can also use [Tasker](./#xdrip-with-tasker).*
+*NB: you can also use [Tasker](#xdrip-with-tasker).*
 
-#### [AndroidAPS](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html)
+### [AndroidAPS](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html)
 
 For AndroidAPS [here](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Watchfaces.html#aaps-on-wear-os-smartwatch).
 
-#### [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
+### [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
 
 Select your Wearable device and enable the Glimp watchface.
 
-<img src="..\img\Watch01.png" style="zoom:75%;" />
+<img src="/nightscout/img/Watch01.png" width="700px" />
 
-#### [NightWear](https://github.com/rahim/nightwear)
+### [NightWear](https://github.com/rahim/nightwear)
 
 NightWear is a minimal Wear OS watch face and complication available in the [Google Play Store](https://play.google.com/store/apps/details?id=im.rah.nightwear) directly from your watch.
 
@@ -96,7 +109,7 @@ It uses Wear's standalone app support, so requires no companion app installed on
 
 ## Amazfit Pace & Stratos
 
-#### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
+### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
 
 - Install the [Amazfit watch app](https://play.google.com/store/apps/details?id=com.huami.watch.hmwatchmanager) on your phone.
 - Install the [Amazfit tool](https://forum.xda-developers.com/t/tool-pace-stratos-verge-tool-all-in-one-drivers-unlock-twrp-factory-image.3874802/) on a Windows PC.
@@ -104,7 +117,7 @@ It uses Wear's standalone app support, so requires no companion app installed on
 - OEM unlock and enable USB debug on the watch, run TOOL ALL IN ONE and click the APK Installer button, select the widget apk file and INSTALL it. Close the install window and click Reboot System.
 - In xDrip+, enable the Amazfit service and select the options you want to enable.
 
-<img src="..\img\Watch04.png" style="zoom:75%;" />
+<img src="/nightscout/img/Watch04.png" width="800px" />
 
 *Original instructions [here](https://crazyinfo.de/2018/07/25/xdrip-smartwatch-widget-fuer-amazfit-pace-stratos).*
 
@@ -116,7 +129,7 @@ It uses Wear's standalone app support, so requires no companion app installed on
 
 ## Amazfit GTR2, GTR2e, GTS2, GTS 2 mini, GTS2e, GTR42 and 47
 
-#### xDrip+
+### xDrip+
 
 Follow Artem's instructions [here](https://bigdigital.home.blog/).
 
@@ -124,7 +137,7 @@ Follow Artem's instructions [here](https://bigdigital.home.blog/).
 
 ## Apple Watch
 
-#### [Nightguard](https://apps.apple.com/us/app/nightguard/id1116430352#?platform=appleWatch)
+### [Nightguard](https://apps.apple.com/us/app/nightguard/id1116430352#?platform=appleWatch)
 
 Apple Watch series 3 and above.
 
@@ -132,27 +145,29 @@ Apple Watch series 3 and above.
 
 </br>
 
-#### [sugarmate](https://sugarmate.io/)
+### [sugarmate](https://sugarmate.io/)
 
-!!!note "Important limitation"  
-    Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.  
-    If you need this data source, [deploy a dev branch](../../update/dev_branch/) and enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables in Heroku.
+```{admonition} Important limitation
+:class: warning
+**Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.**
+If you need this data source: enable [obscuration](/nightscout/setup_variables.md#bridge-share2nightscout-bridge) variables.
+```
 
 You can setup sugarmate as a calendar complication to display Nightscout on your Apple watch.
 
 </br>
 
-#### [Gluco-Tracker](https://apps.apple.com/it/app/gluco-tracker/id1526976290?platform=appleWatch)
+### [Gluco-Tracker](https://apps.apple.com/it/app/gluco-tracker/id1526976290?platform=appleWatch)
 
 </br>
 
-#### [nsapple](https://github.com/Perceptus/nsapple)
+### [nsapple](https://github.com/Perceptus/nsapple)
 
 nsapple is an apple watch app for Nightscout / Loop followers.
 
 </br>
 
-#### [Loop Follow](https://sweloop.se/LoopFollow/index.html)
+### [Loop Follow](https://sweloop.se/LoopFollow/index.html)
 
 You can setup Loop Follow as a calendar complication to display Nightscout on your Apple watch.
 
@@ -160,7 +175,7 @@ You can setup Loop Follow as a calendar complication to display Nightscout on yo
 
 ## Fitbit
 
-#### [Nightscout Monitor](https://gallery.fitbit.com/details/eaed806d-9ff5-4aa9-a2c8-518f1f852f5a)
+### [Nightscout Monitor](https://gallery.fitbit.com/details/eaed806d-9ff5-4aa9-a2c8-518f1f852f5a)
 
 Ionic/Sense/Versa/Versa 2/Versa 3/Versa Lite
 
@@ -168,7 +183,7 @@ Ionic/Sense/Versa/Versa 2/Versa 3/Versa Lite
 
 </br>
 
-#### [Glance](https://gallery.fitbit.com/details/7b5d9822-7e8e-41f9-a2a7-e823548c001c)
+### [Glance](https://gallery.fitbit.com/details/7b5d9822-7e8e-41f9-a2a7-e823548c001c)
 
 Ionic/Sense/Versa/Versa 2/Versa 3/Versa 4/Versa Lite
 
@@ -176,7 +191,7 @@ Ionic/Sense/Versa/Versa 2/Versa 3/Versa 4/Versa Lite
 
 </br>
 
-#### [Sentinel](https://gallery.fitbit.com/developer/b50ac7f5-b932-441a-be18-e258b17c736b)
+### [Sentinel](https://gallery.fitbit.com/developer/b50ac7f5-b932-441a-be18-e258b17c736b)
 
 Ionic/Sense/Versa/Versa 2/Versa Lite
 
@@ -184,7 +199,7 @@ Facebook group: [Sentinel](https://www.facebook.com/groups/3185325128159614)
 
 </br>
 
-#### [Marclock](https://gallery.fitbit.com/details/9eacf714-5b23-40c8-9621-ded74bd9edf9)
+### [Marclock](https://gallery.fitbit.com/details/9eacf714-5b23-40c8-9621-ded74bd9edf9)
 
 Ionic/Sense/Versa/Versa 2/Versa Lite
 
@@ -206,7 +221,7 @@ Ionic/Versa/Versa 2/Versa Lite/Versa 3/Sense
 
 ## Samsung Gear Smartwatches
 
-#### xDrip+ with Tasker
+### xDrip+ with Tasker
 
 *Note: also available for Android Wear devices*
 
@@ -214,7 +229,7 @@ Ionic/Versa/Versa 2/Versa Lite/Versa 3/Sense
 
 </br>
 
-#### [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch)
+### [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch)
 
 Facebook group: [G-Watch App](https://www.facebook.com/gwatchapp)
 

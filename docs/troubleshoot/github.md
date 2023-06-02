@@ -1,17 +1,53 @@
-# GitHub Troubleshooting
+# Troubleshoot GitHub
 
 </br>
 
-### I lost access to my GitHub
+## Lost access to GitHub
 
-Create a new account and fork cgm-remote monitor as described [here](../../nightscout/github).
+Not a big problem:
 
-**Follow only Step 1.**
+### Create a GitHub account
 
-You can now upgrade or redeploy your Nightscout using redeploy as explained [here](../../update/redeploy/#step-1-cleanup-github).  You won't have to delete the existing repository since it's not there for the moment. Go down to Fork cgm-remote-monitor in the explanation.
+```{include} /vendors/github/create.md
+
+```
 
 </br>
 
-If you're using Heroku you'll need to [reconnect](../heroku/#cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible) your app to GitHub.
+------
 
-If you're using Railway you'll need to [reconnect](../railway/#reconnect-github-to-your-project) your app to GitHub.
+### Fork the Nightscout project
+
+```{include} /vendors/github/fork.md
+
+```
+
+</br>
+
+You'll need to reconnect your app to GitHub.
+
+</br>
+
+-------
+
+## Cannot update GitHub
+
+When encountering update issues with GitHub, the easiest method it to delete it and fork the project again.
+
+### Delete your own fork of cgm-remote-monitor
+
+```{include} /vendors/github/delete.md
+
+```
+
+### Fork the Nightscout project
+
+```{include} /vendors/github/fork.md
+
+```
+
+</br>
+
+You'll need to reconnect your app to GitHub.
+
+</br>

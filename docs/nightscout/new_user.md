@@ -1,160 +1,44 @@
 # New Nightscout Users
 
-</br>
-
 <span style="font-size:larger;">*"What is great is there will be multiple options for those interested in setting up the system! #wearenotwaiting" J.A.*</span></span>
 
-</br>
+```{admonition} Too complicated? Not what you're looking for?
+:class: seealso
+Consider a hosted Nightscout service! Check for easier solutions [here](project:/index.md#nightscout-as-a-service).
+```
 
-!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../#nightscout-as-a-service)."  
-<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
-
-</br>
+```{admonition} Confusing?
+:class: hint
+**[Need help to choose?
+Try the wizard](wizard)**.
+<img src="/nightscout/img/wizard.png" />
+```
 
 ## Basic concepts
 
 Even if knowing how it works is not mandatory, it is very useful to understand a few background concepts before starting DIY Nightscout.
 
-1. The code available open source in [GitHub](https://github.com/nightscout/cgm-remote-monitor) or packaged for you in [Docker](https://hub.docker.com/u/nightscout) is the set of instruction that will be used to make your Nightscout. You don't need to understand it or be a programmer to use it.
-2. Your Nightscout will usually be running in the internet cloud, meaning that somewhere on the planet, a computer or another will spend some of its time to keep your Nightscout active. This is the engine of Nightscout: it will make sure to be ready to accept the data you will send to it (BG, treatments, ...) or to answer to data requests when you ask them (BG, reports, ...) and even send alarms when instructed to do so. You will not see the engine work but you will see its frontpage: the web URL of your Nightscout site, which will be available on any device connected to the internet.
-3. Since you will need to store a lot of data, Nightscout must have a database. This database will also be in the cloud, meaning data will be stored on one or more computers, somewhere. The Nightscout engine mentioned above will store and read data from this database whenever required.
+1. The **code** available open source in [GitHub](https://github.com/nightscout/cgm-remote-monitor) or packaged for you in [Docker](https://hub.docker.com/u/nightscout) is the set of instruction that will be used to make your Nightscout. You don't need to understand it or be a programmer to use it.
+2. Your Nightscout will usually be running a **web application** in the internet cloud, meaning that somewhere on the planet, a computer or another will spend some of its time to keep your Nightscout active. This is the engine of Nightscout: it will make sure to be ready to accept the data you will send to it (BG, treatments, ...) or to answer to data requests when you ask them (BG, reports, ...) and even send alarms when instructed to do so. You will not see the engine work but you will see its frontpage: the web URL of your Nightscout site, which will be available on any device connected to the internet.
+3. Since you will need to store a lot of data, Nightscout must have a **database**. This database will also be in the cloud, meaning data will be stored on one or more computers, somewhere. The Nightscout engine mentioned above will store and read data from this database whenever required.
 
-<img src="../../img/nselements.png" style="zoom:80%;" />
+<img src="./img/nselements.png"  width="600px" />
 
-From this you understand there are three main pieces necessary to build your Nightscout:
+**From this you understand there are three main pieces necessary to build your Nightscout:**
 
-1. The Nightscout code also known as cgm-remote-monitor
-2. A cloud platform running the Nightscout engine and web page
-3. A cloud database storing data
+1. **The Nightscout code also known as cgm-remote-monitor**
+2. **A cloud platform running the Nightscout web app**
+3. **A cloud database storing Nightscout data**
 
-Some platforms offer both engine and database like Azure, Railway, Northflank and all VPS servers. But you can use an external database if you want. Some others like Heroku or Fly.io don't propose a database and require you to use an external one. Traditionally the database holding Nightscout data is hosted by another provider (mLab, now MongoDB Atlas).
+Some platforms offer both engine and database like Azure, Railway, Northflank and all VPS servers. But you can use an external database if you want. Some others like Heroku or Fly.io don't propose a database and require you to use an external one. Traditionally the database holding Nightscout data is hosted by another provider (mLab, now MongoDB Atlas) but it might not be the most reliable solution.
 
 </br>  
 
 ## Building Nightscout DIY in a cloud platform
 
-You can run your Nightscout site in several vendors platforms, using free or paid accounts.  
+You can run your Nightscout site in several vendors platforms, using free or paid accounts.  Try the [wizard](wizard) to see which options can match your needs.
 
-Below is a list of useable platforms. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
-
-### MongoDB Atlas Database
-
-MongoDB bought [mLab](https://twitter.com/chrisckchang/status/506959446753284096) in 2018 and shutdown its service in 2020. Most users migrated to MongoDB Atlas, using a free M0 database with a limited 512MB capacity. Leaving the database grow uncontrolled usually leads to a Nightscout crash.
-
-Follow [these instructions](../../vendors/mongodb/atlas) to build a small database to host your Nightscout data if you don't already have one.
-
-> **Pros**:  
-> The M0 cluster is free  
-> Nightscout was adapted to the MongoDB Atlas
->
-> **Cons**:  
-> M0 clusters are designed for learning and testing, not production  
-> There is no warranty the M0 cluster will remain in the future  
-> A larger M2 cluster costs 9$ per month  
-> A full M0 database crashes Nightscout
-
-### Heroku
-
-Since the [beginning](https://github.com/nightscout/cgm-remote-monitor/pull/98) Heroku has been a very popular platform for Nightscout. Most of the documentation is based on a Heroku Nightscout.  
-On August 25th 2022, Salesforce decided to [drop the free plan](https://blog.heroku.com/next-chapter).  
-In order to keep your Nightscout running in Heroku, you can [upgrade to an Eco plan](../../vendors/heroku/ecoplan) or a [Basic plan](../../vendors/heroku/hobbyplan).  
-You can [create your new Nightscout site with Heroku](../../vendors/heroku/new_user) using an Eco plan (5$ / month).
-
-> **Pros**:  
-> Large platform with a reliable history  
-> Well documented, well known by the community
->
-> **Cons**:  
-> For a Nightscout site a 7$ per month Basic plan is not really worth it (compared to hosted solutions)  
-> The Eco plan has the same limitations than the previous Free plan, for 5$ per month  
-> Relying on the MongoDB Atlas database
-
-### Azure
-
-Nightscout DIY was [originally](https://github.com/rnpenguin/cgm-remote-monitor) created with Azure but most users dropped it after costs increased.  
-A new deployment method has [been created using a Docker container](../../vendors/azure/new_user).  
-If you want to migrate and keep your Atlas database look [here](../../vendors/azure/migrate).
-
-> **Pros**:  
-> Large platform with a reliable history  
-> Well known by the community IT specialists  
-> Using a basic plan and free services keep it free
-> 
->**Cons**:  
-> Trial account lasts maximum 12 months  
-> Basic plan and pay as you go is free if you stay within quotas  
-> The F1 free app service plan is designed for testing, not production  
-> The Cosmos database doesn't integrate completely with Nightscout
-
-### Railway.app
-
-You can easily [migrate from Heroku to Railway](../../vendors/railway/migration) or create a [new Railway Nightscout site](../../vendors/railway/new_user2) with a MongoDB Atlas or a Railway MongoDB database.
-
-> **Pros**:  
-> Nightscout fits in the free tier using a developer account  
-> Easy to deploy or migrate an existing site from Heroku  
-> Simple to use and troubleshoot  
-> Can use a native Railway MongoDB database ($)
->
-> **Cons**:  
-> The railway.app domain is blocked for safety by some companies  
-> Startup company  
-> A large amount of Nightscout users might have a negative impact on Railway financials and force them to review the free plan conditions  
-> Railway network model causes issues with some follower app and devices
-
-### Northflank
-
-You can create your new [Northflank](../../vendors/northflank/new_user) Nightscout site, with its own database or with a MongoDB Atlas or migrate from [Heroku to Northflank](../../vendors/northflank/migrate)*
-
-> **Pros**:  
-> Nightscout fits in the free tier  
-> Easy to deploy or migrate an existing site from Heroku  
-> Simple to use and troubleshoot  
-> Can use a native Northflank MongoDB database ($)
->
-> **Cons**:  
-> Small company  
-> The Nightscout address generated for your site is impossible to remember, you can fix this with a free DNS service  
-> A large amount of Nightscout users might have a negative impact on Northflank financials and force them to review the free plan conditions  
-> *Migration from Heroku requires the option to be enabled by Northflank support, making Nightscout users visible
-
-### Fly.io
-
-Fly.io proposes a [simple migration wizard from Heroku](../../vendors/fly.io/migrate) and you can create your [new Nightscout site in Fly.io](../../vendors/fly.io/new_user/). Using a computer is mandatory with Fly.io as managing your site will require the use of a command line utility. Not recommended for beginners.
-
-> **Pros**:  
-> Nightscout fits in the free tier  
-> Easy to migrate an existing site from Heroku
->
-> **Cons**:  
-> Small company  
-> Maintaining your site requires the use of a computer with command line instructions, not very intuitive  
-> Migrated Heroku sites store variables as secrets  
-> Relying on the MongoDB Atlas database
-
-### Google Cloud
-
-The xDrip+ developers team proposes [a simple scripted install in a Google Cloud free tier server](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud).  
-You don't need to know much about computers to install it, migrate from Heroku, get your data from another Nightscout or update. This is a great solution.
-
-> **Pros**:  
-> Nightscout and database fit in the free tier  
-> A large database space  
-> Easy to migrate an existing site from Heroku  
-> Easy to migrate data from another Nightscout  
-> Easy to upgrade, backup, ...
->
-> **Cons**:  
-> Limited outgoing bandwidth (1GB/month)  
-> The community needs to build knowledge to help users troubleshoot issues
-
-</br>
-
-### VPS, NAS, other hardware
-
-Need more? Look at [advanced](../advanced) install methods.
-
-</br>
+Below is a list of most used platforms. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
 
 ## Vendors comparison table
 
@@ -2487,11 +2371,11 @@ Need more? Look at [advanced](../advanced) install methods.
 </head>
 
 - Do not use the same password for all your accounts, and choose passwords that are not easy to guess.
-- Do not use the API_SECRET for the Atlas database password.
+- Do not use the `API_SECRET` for the Atlas database password.
 - Do not use your Dexcom or CareLink user name or password for Nightscout components.
-- Do not share the API_SECRET or other passwords to your accounts to others.
+- Do not share the `API_SECRET` or other passwords of your accounts to others.
 - Do not use Nightscout or any related applications on rooted and/or otherwise compromised devices, and ensure you always have the latest operating system and virus protection updates installed.
 
-If you want to read more about Nightscout security, including about additional configuration options to make your installation more secure, please check our [security guide](../security/).
+If you want to read more about Nightscout security, including about additional configuration options to make your installation more secure, please check our [security guide](/nightscout/security.md).
 
 </br>

@@ -1,37 +1,60 @@
-# Uploaders setup
+# Setup Uploaders
 
 </br>
 
-!!! note
-    You usually should express the Nightscout URL in secure **https://**, not only http://.  (Unless you set `INSECURE_USE_HTTP` to `true`)
+```{hint}
+You usually should express the Nightscout URL in secure `**https://**`, not only `http://`.
+(Unless you set `INSECURE_USE_HTTP` to `true`)
+```
 
-------
+## What is my Nightscout URL?
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Heroku.png" style="zoom:80%;" />
+This is the address you type in any browser to display your Nightscout web site.
 
-Your `Nightscout URL` defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser. It usually looks like: `https://yoursitename.herokuapp.com`
+````{tab-set}
 
-<img src="../../nightscout/img/SetupNS44.png" style="zoom:80%;" />
+:::{tab-item} Heroku
+Your `Nightscout URL` defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser.
+It usually looks like: `https://yoursitename.herokuapp.com`
 
-Your Nightscout password, is the `API_SECRET` variable you can find editing your Heroku variables like [this](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku).
+<img src="/vendors/heroku/img/SetupNS44.png" width="800px" />
+:::
 
-------
+:::{tab-item} Railway
+Your `Nightscout URL` is defined in Railway by your Web app name, as shown in your [Dashboard](https://railway.app/dashboard).
+It usually looks like: `https://yoursitename.up.railway.app`
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/railway-app-logo.png" style="zoom:80%;" />
+<img src="/vendors/railway/img/RailwayM14.png" width="400px" />
+:::
 
-Your `Nightscout URL` defined in Railway by your Web app name, as shown in your [Dashboard](https://railway.app/dashboard). It usually looks like: `https://yoursitename.up.railway.app`
+:::{tab-item} Northflank
+Your `Nightscout URL` is defined in Northflank by your Web app name, as shown in your project services.
+It usually looks like: `https://port-name--service-name--project-name--entity-dns-id.code.run`
 
-<img src="../../../vendors/railway/img/RailwayM14.png" style="zoom:80%;" />
+<img src="/vendors/northflank/img/Northflank29.png" width="600px"/>
+:::
 
-Your Nightscout password, is the `API_SECRET` variable you can find editing your Railway variables like [this](../../../vendors/railway/new_user/#editing-variables-in-railway).
+:::{tab-item} Azure
+Your `Nightscout URL` is defined in Azure by your Web app name, as shown in your App services.
+It usually looks like: `https://yoursitename.azurewebsites.net`
 
-------
+<img src="/vendors/azure/img/AzureName.png" width="800px"/>
+:::
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
+:::{tab-item} Fly.io
+Your `Nightscout URL` is defined in Fly.io by the `app` variable in your `fly.toml` file.
+You can also find it in your Dashboard.
+It usually looks like: `https://yoursitename.fly.dev`
 
-You will find the `Uploader url` and `Api Secret` required to configure your uploader [here](https://www.t1pal.com/account/sites/my#Uploaders).
+<img src="/vendors/fly.io/img/FlyIO05.png" width="400px"/>
+:::
 
-------
+:::{tab-item} Google Cloud
+Your `Nightscout URL` is defined in FreeDNS.
+You can find it in [Status - Hostname](https://navid200.github.io/xDrip/docs/Nightscout/Hostname.html).
+:::
+
+````
 
 </br>
 
@@ -39,12 +62,13 @@ You will find the `Uploader url` and `Api Secret` required to configure your upl
 
 You need at least one follower to use Dexcom Share.
 
-!!!note  
-    If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and the `bridge` plugin.
+```{hint}
+If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and the `bridge` plugin.
+```
 
 On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.
 
-<img src="../img/UploadCFG09.png" style="zoom:60%;" />
+<img src="/uploader/img/UploadCFG09.png" width="500px" />
 
 </br>
 
@@ -54,41 +78,27 @@ Verify, update or add these variables:
 BRIDGE_PASSWORD 
 BRIDGE_SERVER`
 
-[Edit in Heroku](../../vendors/heroku/new_user/#editing-config-vars-in-heroku):
-
-<img src="../../nightscout/img/NewNS35.png" style="zoom:80%;" />
-
-Or [edit in Railway](../../vendors/railway/new_user/#editing-variables-in-railway).
-
-</br>
-
 You need to add `bridge` in the `ENABLE` variable. Do not delete other entries, just add `bridge` after a space.
 
-<img src="../../nightscout/img/NewNS38.png" style="zoom:80%;" />
-
 </br>
 
-!!!info "MOST COMMON ERRORS"
-    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [here](../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
+```{admonition} MOST COMMON ERRORS
+:class: hint
+The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [here](/troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
+```
 
-!!! note "Password"
-    *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
-
-</br>
-
-------
-
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/T1Pal.png" style="zoom:80%;" />
-
-For hosted Nightscout put your Dexcom credentials [in Dexcom Bridge](https://www.t1pal.com/account/sites/my#DataIngress).
-
-------
+```{admonition} Password
+:class: note
+*Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
+```
 
 </br>
 
 ## Medtronic CareLink
 
-!!!warning "The `mmconnect` plugin is **NOT** functional anymore with recent pumps (7xx) in cloud Nightscout sites."
+```{warning}
+The `mmconnect` plugin is **NOT** functional anymore with recent pumps (7xx) in cloud Nightscout sites.
+```
 
 You can use an Android phone with a private version of xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up.
 
@@ -96,7 +106,7 @@ You can use an Android phone with a private version of xDrip+. See [**here**](..
 
 ## [Medtronic 600 Series with uploader](http://pazaan.github.io/600SeriesAndroidUploader/)
 
-<img src="../img/UploadCFG08.png" style="zoom:60%;" />
+<img src="/uploader/img/UploadCFG08.png" width="600px" />
 
 You can also use [this QR code generator](https://nightscout.github.io/pages/configure/) and the menu item `Scan NS-Autoconfig QR Code` to copy the information.
 
@@ -110,10 +120,12 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
 
 ## [xDrip+](https://jamorham.github.io/#xdrip-plus)
 
-!!! info "Mind the syntax!"
-    <span style="font-size:larger;">**`https://API_SECRET@my_nightscout_url/api/v1/`**</span>  
-    `my_nightscout_url` will depend on where your site is hosted (herokuapp.com, railway.app, fly.io, ...)  
-    You will find your `API_SECRET`in your site variables.
+```{admonition} Mind the syntax!
+:class: warning
+<span style="font-size:larger;">**`https://API_SECRET@my_nightscout_url/api/v1/`**</span>  
+`my_nightscout_url` will depend on where your site is hosted (see top of this page)  
+You will find your `API_SECRET`in your site variables.
+```
 
 Here is how it will look like for some vendors:
 
@@ -126,41 +138,39 @@ https://API_SECRET@yoursite.10be.de/api/v1/
 
 </br>
 
-<img src="../img/UploadCFG00.png" style="zoom:80%;" />
+<img src="/uploader/img/UploadCFG00.png" width="900px" />
 
 Facebook Group [xDrip](https://www.facebook.com/groups/xDripG5)
-
-For hosted Nightscout use the QR code from [Uploaders](https://www.t1pal.com/account/sites/my#Uploaders) after selecting the `XDrip` tab.
 
 </br>
 
 ## [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
 
-<img src="../img/UploadCFG02.png" style="zoom:80%;" />
+<img src="/uploader/img/UploadCFG02.png" width="800px" />
 
 </br>
 
 ## [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html)
 
-<img src="../img/UploadCFG11.png" style="zoom:80%;" />
+<img src="/uploader/img/UploadCFG11.png" width="800px" />
 
 </br>
 
 ## [Diabox](https://www.bubblan.org/diabox/)
 
-<img src="../img/UploadCFG03.png" style="zoom:80%;" />
+<img src="/uploader/img/UploadCFG03.png" width="800px" />
 
 </br>
 
 ## [LinkBluCon](https://www.ambrosiasys.com/our-products/linkblucon/)
 
-<img src="../img/UploadCFG04.png" style="zoom:80%;" />
+<img src="/uploader/img/UploadCFG04.png" width="800px" />
 
 </br>
 
 ## [Tomato](http://tomato.cool/)
 
-<img src="../img/UploadCFG05.png" style="zoom:60%;" />
+<img src="/uploader/img/UploadCFG05.png" width="600px" />
 
 </br>
 
@@ -168,7 +178,7 @@ For hosted Nightscout use the QR code from [Uploaders](https://www.t1pal.com/acc
 
 Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure-spike-master).
 
-<img src="../img/UploadCFG10.png" style="zoom:45%;" />
+<img src="/uploader/img/UploadCFG10.png" width="300px" />
 
 Facebook group [Spike App](https://www.facebook.com/groups/spikeapp)
 
@@ -176,6 +186,6 @@ Facebook group [Spike App](https://www.facebook.com/groups/spikeapp)
 
 ## [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/)
 
-<img src="../img/UploadCFG06.png" style="zoom:50%;" />
+<img src="/uploader/img/UploadCFG06.png" width="300px" />
 
 Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838/)

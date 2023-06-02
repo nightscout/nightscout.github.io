@@ -1,36 +1,31 @@
 # Heroku Eco plan
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../img/Heroku.png" style="zoom:80%;" />
+</br>
+
+```{admonition} Too complicated? Not what you're looking for?
+:class: seealso
+Consider a hosted Nightscout service! Check for easier solutions [here](/index.md#nightscout-as-a-service).
+```
 
 </br>
 
-## [End of Free plan](https://blog.heroku.com/next-chapter)
-
-Starting October 26, 2022, Heroku began deleting accounts that have been inactive for over a year.
-
-Starting November 28, 2022, Heroku stopped offering free product plans and start shutting down free dynos and data services. Free accounts are converted to Eco plan with dynos sized zero (i.e. stopped without billing).
-
-This means that if you wish to continue using Heroku you need to upgrade your plan.
-
-</br>
-
-!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../../#nightscout-as-a-service)."  
-<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
-
-</br>
+```{card}
+## Heroku
+![Heroku Eco](/vendors/img/Heroku.png)
+^^^
+Since the [beginning](https://github.com/nightscout/cgm-remote-monitor/pull/98) Heroku has been a very popular platform for Nightscout. Most of the documentation was based on a Heroku Nightscout.  
+On August 25th 2022, Salesforce decided to [drop the free plan](https://blog.heroku.com/next-chapter). 
+You can create your new Nightscout site with Heroku using an Eco plan (5$/month).
 
 **Pros**:  
-
-> Heroku is a reliable platform well known by the community  
-> The Eco plan is made for personal apps  
-> Nightscout fits in 1000 dyno hours per month  
-> Heroku has been hosting Nightscout users for years in the free tier  
+* Large platform with a reliable history
+* Well documented, well known by the community
 
 **Cons**:  
-
->Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
->Paying for an Eco plan doesn't remove DIY maintenance tasks like stack upgrade  
->Eco plan apps will sleep after 30 minutes of inactivity  
+* The Eco plan has the same limitations than the previous Free plan, for 5$ per month
+* For a Nightscout site a 7$ per month Basic plan is not really worth it (compared to hosted solutions)
+* Relying on the MongoDB Atlas database
+```
 
 </br>
 
@@ -38,46 +33,54 @@ This means that if you wish to continue using Heroku you need to upgrade your pl
 
 </br>
 
+```{warning}
+Heroku billing is monthly.</br>
+One minute of Eco plan will be billed 5$ in the current month.</br>
+Switching billable plan during the same month with add another plan billing for the whole month.
+```
+
+</br>
+
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login)
 
-<img src="../../../update/img/UpdateNS15.png" style="zoom:80%;" >
+<img src="/vendors/heroku/img/UpdateNS15.png" width="400px" >
 
 </br>
 
 - Select your app (hidden in yellow)
 
-<img src="../../../update/img/UpdateNS16.png" style="zoom:80%;" >
+<img src="/vendors/heroku/img/UpdateNS16.png" width="600px" >
 
 </br>
 
 - Click `Resources` then select `Change Dyno Type`
 
-<img src="../../heroku/img/HerokuH01.png" style="zoom:90%;" >
+<img src="/vendors/heroku/img/HerokuH01.png" width="600px" >
 
 </br>
 
 - Select `Eco ($5 for 1000 Dyno Hours/Month)` then click `Save`
 
-<img src="../../heroku/img/HerokuE02.png" style="zoom:80%;" >
+<img src="/vendors/heroku/img/HerokuE02.png" width="600px" >
 
 </br>
 
 - Your Nightscout Heroku app is now using an `Eco` plan.
 
-<img src="../../heroku/img/HerokuH03.png" style="zoom:80%;" >
+<img src="/vendors/heroku/img/HerokuH03.png" width="600px" >
 
 - **Make sure your credit card information is up to date!**  
   Go to your `Account settings`.
 
-<img src="../../../nightscout/img/NewNS13.png" style="zoom:80%;" >
+<img src="/vendors/heroku/img/NewNS13.png" width="600px" >
 
 - `Billing`
 
-<img src="../../../nightscout/img/NewNS14.png" style="zoom:80%;" >
+<img src="/vendors/heroku/img/NewNS14.png" width="600px" >
 
 - Verify the credit card you used is still valid, in case of doubt `Change credit card` and enter a valid credit card.
 
-<img src="../../heroku/img/HerokuH04.png" style="zoom:80%;" >
+<img src="/vendors/heroku/img/HerokuH04.png" width="600px" >
 
 </br>
 
@@ -85,8 +88,10 @@ This means that if you wish to continue using Heroku you need to upgrade your pl
 
 ### Prevent your Nightscout app from falling asleep
 
-!!!warning "Use with caution"  
-    If an app fails and crashes at startup (database full), if you entered wrong credentials and the app stops for missing data activity, using this trick to keep it alive will not help. It might even make things worse in the case of wrong Dexcom credentials and lead to a locked account.
+```{admonition} Use with caution
+:class: warning
+If an app fails and crashes at startup (database full), if you entered wrong credentials and the app stops for missing data activity, using this trick to keep it alive will not help. It might even make things worse in the case of wrong Dexcom credentials and lead to a locked account.
+```
 
 This is necessary if you don't have an uploader sending data to Nightscout, or a follower polling data from it.  
 For example using the bridge plugin.

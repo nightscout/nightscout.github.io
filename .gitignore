@@ -8,3 +8,5 @@ src/
 .*.sw?
 docs/build
 site/
+gh-pages
+_build/

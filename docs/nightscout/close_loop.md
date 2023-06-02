@@ -1,4 +1,4 @@
-# Nightscout and closed loop systems.
+# Closed loop systems
 
 </br>
 

@@ -1,14 +1,14 @@
-# Reports
+# Create Reports
 
 Nightscout offers some fantastic data-crunching report tools in the drawer menu, 
 
-<img src="../img/UseNS21.png" style="zoom:80%;" />
+<img src="/nightscout/img/UseNS21.png" width="300px" />
 
 </br>
 
 Select `Reports` to open the reports page.
 
-<img src="../img/Reports00.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports00.png" width="600px" />
 
 </br>
 
@@ -20,19 +20,19 @@ Then select the period for which you want your data analyzed.
 
 Enable the check box and either select `From:` and `To: `dates or `Today`, `Last 2 days`, `Last 3 days`, `Last week`, `Last 2 weeks`, `Last Month`, `Last 3 months`.
 
-<img src="../img/Reports01.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports01.png" width="600px" />
 
 </br>
 
 You can filter your data using key `Notes` or `Event type` (select one in the drop down list).
 
-<img src="../img/Reports02.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports02.png" width="300px" />
 
 </br>
 
 You can select which week days to use in order to better analyze patterns.
 
-<img src="../img/Reports03.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports03.png" width="300px" />
 
 </br>
 
@@ -40,27 +40,27 @@ Confirm your `Target BT range` `bottom` and `top` for your TIR and graph range l
 
 You can also sort the report from older to newer or newer first.
 
-<img src="../img/Reports04.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports04.png" width="600px" />
 
 </br>
 
 Click `SHOW` and wait for data to load and rendering to complete. This might take some time if the period is long.
 
-<img src="../img/Reports05.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports05.png" width="300px" />
 
 </br>
 
-### Day To day
+## Day To day
 
 This report will show your BG, day by day, including the treatments you select.
 
-<img src="../img/Reports06.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports06.png" width="800px" />
 
 </br>
 
 If you want to change selections, you need to click again `SHOW` to update the view.
 
-<img src="../img/Reports07.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports07.png" width="800px" />
 
 </br>
 
@@ -68,7 +68,7 @@ If you select `Insulin distribution` you will get a short report.
 
 Note: You need `Basal rate` enabled to see bolus vs basal information.
 
-<img src="../img/Reports08.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports08.png" width="300px" />
 
 </br>
 
@@ -76,35 +76,35 @@ You can change the vertical scale to `Logarithmic` or `Linear`.
 
 You can change the graph `Size`.
 
-<img src="../img/Reports09.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports09.png" width="500px" />
 
 </br>
 
-### Week to Week
+## Week to Week
 
 This report will give you a week by week view, with color code for week days selected.
 
-<img src="../img/Reports10.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports10.png" width="800px" />
 
 </br>
 
-### Daily stats
+## Daily stats
 
 This report will give you a daily distribution view.
 
-<img src="../img/Reports11.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports11.png" width="800px" />
 
 </br>
 
-### Distribution
+## Distribution
 
 This report will give you a complete distribution view with a lot of information on the dates range you selected.
 
 You also can filter by hours (scroll to the bottom of the page).
 
-<img src="../img/Reports18.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports18.png" width="400px" />
 
-<img src="../img/Reports12.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports12.png" width="800px" />
 
 A1c is only a rough estimation that can be very inaccurate and does not replace actual blood testing. The formula used is taken from:Nathan, David M., et al. "Translating the A1C assay into estimated average glucose values." *Diabetes care* 31.8 (2008): 1473-1478.
 
@@ -120,61 +120,61 @@ GVI (Glycemic Variability Index) and PGS (Patient Glycemic Status) are measures 
 
 </br>
 
-### Hourly stats
+## Hourly stats
 
 This report will give you an hourly distribution view with a box plot and additional hour by hour statistics.
 
-<img src="../img/Reports13.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports13.png" width="800px" />
 
 </br>
 
-### Percentile Chart
+## Percentile Chart
 
 This report will give you an percentile distribution view of the range you selected.
 
-<img src="../img/Reports16.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports16.png" width="800px" />
 
 </br>
 
-### Weekly Distribution
+## Weekly Distribution
 
 This report will give you an weekly view of your statistics.
 
-<img src="../img/Reports14.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports14.png" width="1000px" />
 
 </br>
 
-### Calibrations
+## Calibrations
 
 This will give you a a table of your calibrations, if your uploader sends the correct event and data.
 
-<img src="../img/Reports22.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports22.png" width="800px" />
 
 </br>
 
-### Treatments
+## Treatments
 
 This will give you a a table of your treatments, day by day.
 
-<img src="../img/Reports15.png" style="zoom:80%;" />
+<img src="/nightscout/img/Reports15.png" width="800px" />
 
 </br>
 
-### Profiles
+## Profiles
 
 This report will display [profiles](../nightscout/profile_editor.md) used in the time range.
 
-<img src="../img/Reports17.png" style="zoom:60%;" />
+<img src="/nightscout/img/Reports17.png" width="800px" />
 
 </br>
 
-### Loopalyzer
+## Loopalyzer
 
 Loopalyzer is an utility made to help analyze and tune closed loop systems. It may work with other setups as well, both closed and open loop, and non loop. 
 
 Select the period on which you want to run the report then click `Show`. A set of graphs will display top to bottom your basal profile, blood glucose, loop deviation from basal (that should be minimized for an optimized closed loop system), insulin on board and carbs on board. On the last two graphs, treatments are represented by vertical black bars.
 
-<img src="../img/Reports19.png" style="zoom:60%;" />
+<img src="/nightscout/img/Reports19.png" width="800px" />
 
 </br>
 
@@ -182,15 +182,18 @@ Using the dedicated menu you can display your profiles below the graph and use `
 
 You can navigate day to day with `< Previous day` and `Next day >` or by period length with `<< Previous` and `Next >>` (i.e. if you selected a week it will go backwards and forward week by week).
 
- <img src="../img/Reports20.png" style="zoom:60%;" />
+ <img src="/nightscout/img/Reports20.png" width="400px" />
 
 `Timeshift` will allow you to  synchronize meals within a time range in order to better analyze your data. Obviously the rest of the day will not make sense since the shift only highlights the time range you are analyzing now. For example below: dinner analysis.
 
-<img src="../img/Reports21.png" style="zoom:60%;" />
+<img src="/nightscout/img/Reports21.png" width="600px" />
 
 </br>
 
 You might also be interested by [AutoTune](https://autotuneweb.azurewebsites.net/).
+
+!!!note  
+    Make sure to temporarily [disable authentication](/nightscout/security.md#how-to-turn-off-unauthorized-access) before running AutoTune.
 
 </br>
 
@@ -198,7 +201,7 @@ You might also be interested by [AutoTune](https://autotuneweb.azurewebsites.net
 
 [https://nightscout-reporter.zreptil.de/](https://nightscout-reporter.zreptil.de/) can be used to generate PDF documents with the data stored at Nightscout.
 
-You need to add [`cors`](../setup_variables/#cors-cors) to your [`ENABLE`](../setup_variables/#enable) variables
+You need to add [`cors`](/nightscout/setup_variables.md#cors-cors) to your [`ENABLE`](/nightscout/setup_variables.md#enable) variables
 
 Facebook group [Nightscout Reporter](https://www.facebook.com/nightrep)
 

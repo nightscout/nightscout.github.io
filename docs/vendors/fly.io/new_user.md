@@ -1,33 +1,68 @@
 
-# Fly.io Nightscout
-
-<span style="font-size:smaller;">**APPLIES TO:**</span> <img src="../../../vendors/img/flyio-logo.png" style="zoom:60%;" />+<img src="../../../vendors/img/Atlas.png" style="zoom:80%;" />
+# Nightscout in Fly.io
 
 </br>
 
-!!!info "Too complicated? Not what you're looking for? Consider a hosted Nightscout service! Check for easier solutions [here](../../../#nightscout-as-a-service)."  
-<span style="font-size:larger;">Interested in building a Nightscout DIY site?  Make sure you **read and understand [this](/#how-much-does-it-cost)** before starting.</span>
+```{admonition} Too complicated? Not what you're looking for?
+:class: seealso
+Consider a hosted Nightscout service! Check for easier solutions [here](/index.md#nightscout-as-a-service).
+```
 
 </br>
+
+```{card}
+## Fly.io
+![Fly.io](/vendors/img/Fly.io.png)
+^^^
+Fly.io proposes a [simple migration wizard from Heroku](/vendors/fly.io/migrate.md) and you can create your new Nightscout site in Fly.io. Using a computer is mandatory with Fly.io as managing your site will require the use of a command line utility. **Not recommended for beginners.**
 
 **Pros**:  
-
-> Pay-as-you-go Hobby plan allows you to run Nightscout [for free](https://fly.io/docs/about/pricing/#plans) 
+* Nightscout fits in the free tier  
+* Easy to migrate an existing site from Heroku 
 
 **Cons**:  
+* **Maintaining your site requires the use of a computer with command line instructions, not very intuitive**  
+* Migrated Heroku sites store variables as secrets  
+* Relying on the MongoDB Atlas database
+```
 
->Using the M0 [MongoDB Atlas](../../mongodb/atlas/) database  
->Creation, maintenance and upgrade involve CLI and are complex  
+</br>
 
-</br></span>
+## Step 0: Create a database
+
+```{admonition} Fly.io doesn't include a database
+:class: note
+Make sure you [created one](/nightscout/database) before starting your Nightscout web app creation with Fly.io.
+Come back here when you have a `MONGODB_URI` connection string.
+```
+
+
+
+```{admonition} Migrating?
+:class: tip
+Copy the connection string from your previous platform: [edit the variables](/nightscout/setup_variables.md#nightscout-configuration) and look for `MONGODB_URI`.
+If you don't see `MONGODB_URI` but see `MONGO_CONNECTION` (**NOT** `MONGO_COLLECTION`): use its value.
+```
 
 </br>
 
 ## Step 1: Create a GitHub account and fork the Nightscout project
 
-If you already have a GitHub account, [update](../../../nightscout/github/#update-your-nightscout-fork) your Nightscout project.
+```{tab-set}
 
-If you don't have a GitHub account [create one](../../../nightscout/github/#create-a-github-account) then [fork the Nightscout project](../../../nightscout/github/#fork-the-nightscout-project) and come back.
+:::{tab-item} I don't have a GitHub Account
+### Create a GitHub account
+::: {include} /vendors/github/create.md
+### Fork the Nightscout project
+:::{include} /vendors/github/fork.md
+:::
+
+:::{tab-item} I already have a GitHub Account
+### Update your Nightscout fork
+:::{include} /vendors/github/update_b.md
+:::
+
+```
 
 </br>
 
@@ -44,25 +79,19 @@ Sign up with Github.
 
 </br>
 
-b) Authorize Fly.io for GitHub:
+b) `Authorize Fly.io` for GitHub:
 
-<img src="../img/fly.io-github-auth.png" style="zoom:80%;" />
+<img src="/vendors/fly.io/img/FlyIOA3.png" width="400px" />
 
 </br>
 
 c) You don't need to input card information to get Nightscout running so click the `Try fly.io for free` button:
 
-<img src="../img/try-fly.io-free.png" style="zoom:80%;" />
-
-</br>
-
-## Step 4: Create an Atlas account
-
-Follow [these steps](../../../vendors/mongodb/atlas/#create-an-atlas-database) and come back with your `MONGODB_URI` connection string.
+<img src="/vendors/fly.io/img/FlyIOA1.png" width="400px" />
 
 </br></br>
 
-## Step 5: Locally fork and deploy cgm-remote-monitor
+## Step 4: Locally fork and deploy cgm-remote-monitor
 
 a) Clone the `cgm-remote-monitor` repository locally:
 
@@ -70,33 +99,37 @@ If necessary install [Git](https://git-scm.com/downloads) on your computer (pick
 
 Open a PowerShell (Windows) or a terminal (OSX/Linux), and type (replace `yourGitHubNameHere` by your own GitHub account name):
 
-```
-git clone https://github.com/yourGitHubNameHere/cgm-remote-monitor
-```
+`git clone https://github.com/yourGitHubNameHere/cgm-remote-monitor`
 
-<img src="../img/FlyIO01.png" style="zoom:80%;" />
+<img src="/vendors/fly.io/img/FlyIO01.png" width="600px" />
 
 </br>
 
 b) Navigate to the directory where you code has been cloned locally
 
-```
-cd cgm-remote-monitor
+`cd cgm-remote-monitor`
+
+</br>
+
+c) Download this [**fly.toml template**](/_static/fly.toml) deployment file and save it/copy it into your `cgm-remote-monitor` folder.
+
+</br>
+
+```{warning}
+Do NOT sync your local fly,toml with GitHub to avoid exposing all your passwords on GitHub!!!
 ```
 
 </br>
 
-c) Download this [`fly.toml`](fly.toml) deployment file and save it/copy it into your `cgm-remote-monitor` folder.
-
-</br>
-
-## Step 6: Setting Variables
+## Step 5: Setting Variables
 
 Open the `fly.toml` configuration file in your `cgm-remote-monitor` folder and customize it.
 
 a) `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
 
-!!!warning "The API_SECRET is the **main password allowing full access to your Nightscout site**. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and **do no not share it publicly**. If you think you exposed it by mistake, it is recommended that you **change it**."
+```{warning}
+The API_SECRET is the **main password allowing full access to your Nightscout site**. Make sure it's reasonably secure (mix uppercase and lowercase letters, plus digits) and **do no not share it publicly**. If you think you exposed it by mistake, it is recommended that you **change it**.
+```
 
 </br>
 
@@ -108,41 +141,56 @@ c) Now you need the connection string you defined during the Atlas cluster creat
 
 Make sure it looks like this one below and NOTE: THERE ARE NO < AND > CHARACTERS:
 
-`MONGODB_URI="mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/mycgmic?retryWrites=true&w=majority"`
+Example for MongoDB Atlas:
 
-!!! info
-    Ensure you have `" "` surrounding your URI to make sure all of it is captured within the variable.
+`mongodb+srv://nightscout:soo5ecret@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority`
+
+Example for a MongoDB database:
+
+`mongodb://nightscout:soo5ecret@mydbhosting.fqd/mydatabase`
+
+```{hint}
+Ensure you have `" "` surrounding your URI to make sure all of it is captured within the variable.
+```
 
 </br>
 
 d) If you want to link your Dexcom Share account as a data source, complete the following lines: `BRIDGE_USER_NAME`, `BRIDGE_PASSWORD` and `BRIDGE_SERVER`.
 
-!!!note  
-    If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing using Dexcom Share and the `bridge` plugin.
+```{note}
+If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing using Dexcom Share and the `bridge` plugin.
+```
 
 </br>
 
-!!!info "MOST COMMON ERRORS"
-    The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [here](../../../troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
+```{admonition} MOST COMMON ERRORS
+:class: hint
+The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead. See [here](/troubleshoot/dexcom_bridge/) for troubleshooting tips and information on your Dexcom account.
+```
 
-!!! note "Password"
-    *Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
+```{admonition} Password
+:class: note
+*Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.*
+```
 
-!!! info
-    You need to have at least one follower to use Dexcom Share. See [here](../../../uploader/setup/#dexcom).
+```{hint}
+You need to have at least one follower to use Dexcom Share. See [here](/uploader/setup.md#dexcom).
+```
 
  </br>
 
-e) For the ENABLE variable, copy and paste the following words (separated by a space) so that won't have to think about which you want now:
+e) In [`ENABLE`](/nightscout/setup_variables.md#enable), copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
 
-If you are using your Dexcom share account as a data source also add bridge at the end, after a space like this:
+**If you are using your Dexcom share account as a data source** also add `bridge` at the end, after a space like this:
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge`
 
-!!! info
-    Ensure you have `" "` surrounding your words to make sure all of it is captured within the variable.
+
+```{hint}
+Ensure you have `" "` surrounding your words to make sure all of them are captured within the variable.
+```
 
 </br>
 
@@ -153,9 +201,7 @@ f) You can customize other variables or leave default values.
 g) You can now deploy your site with Fly.io.  
 Type the following command:
 
-```
-flyctl launch
-```
+`flyctl launch`
 
 </br>
 
@@ -165,7 +211,7 @@ To the question: `App Name (leave blank to use an auto-generated name):` answer 
 
 To the question  `Select region: ` select the region closer to where you live (using the up and down arrows).
 
-<img src="../img/FlyIO03.png" style="zoom:80%;" />
+<img src="/vendors/fly.io/img/FlyIO03.png" width="600px" />
 
 To the question `Would you like to set up an Postgresql database now?` answer `N` (no).
 
@@ -173,102 +219,47 @@ To the question `Would you like to set up an Upstash Redis database now?` answer
 
 To the question `Would you like to deploy now?` answer `Y` (yes). 
 
-<img src="../img/FlyIO02.png" style="zoom:80%;" />
+<img src="/vendors/fly.io/img/FlyIO02.png" width="600px" />
 
 </br>
 
 Deploy will take some time. Do not interrupt the process.
 
-<img src="../img/FlyIO04.png" style="zoom:80%;" />
+<img src="/vendors/fly.io/img/FlyIO04.png" width="600px" />
 
 </br>
 
 If you see the following text:
 
-```
- 1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]
-```
+`1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]`
 
 You have successfully deployed Nightscout in Fly.io. Congratulations.
 
 If you see an unhealthy condition, check your `fly.toml` configuration (for missing " " for example) and type:
 
+`flyctl deploy`
+
+</br>
+
+h) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard at [https://fly.io/dashboard](https://fly.io/dashboard) click on the application (not the builder):
+
+<img src="/vendors/fly.io/img/FlyIOA2.png" width="700px" />
+
+</br>
+
+i) Inside your app you should see that it is running and has a clickable hostname.
+
+<img src="/vendors/fly.io/img/FlyIO05.png" width="500px" />
+
+</br>
+
+```{include} /nightscout/first_setup.md
+
 ```
-flyctl deploy
-```
 
 </br>
 
-## Step 7: Nightscout Application Configuration
-
-a) Once your site has processed the variables and redeployed itself it will be ready to use. In your fly.io dashboard at [https://fly.io/dashboard](https://fly.io/dashboard) click on the application (not the builder):
-
-<img src="../img/fly.io-dashboard.png" style="zoom:80%;" />
-
-</br>
-
-b) Inside your app you should see that it is running and has a clickable hostname.
-
-<img src="../img/fly.io-application-dashboard.png" style="zoom:80%;" />
-
-</br>
-
-c) Your Nightscout site should now be ready to open and direct you to a new profile creation.
-
-<img src="../../../nightscout/img/NewNS50.png" style="zoom:100%;" />
-
-</br>
-
-d) Setup your `Time zone` and eventually all other fields. Do not leave any fields empty. If you don't know which value to use, just use the default value. You can change these values later at any time.
-
-<img src="../../../nightscout/img/NewNS44.png" style="zoom:80%;" />
-
-</br>
-
-e) Browse down to `Authentication status` and click `Authenticate`. Enter your API secret. Click `Update`.
-
-<img src="../../../nightscout/img/NewNS45.png" style="zoom:80%;" />
-
-</br>
-
-f) Click `Save`.
-
-<img src="../../../nightscout/img/NewNS46.png" style="zoom:80%;" />
-
-</br>
-
-g) If the following pop-up shows up click `OK`, and check status (upper right of the window).
-
-<img src="../../../nightscout/img/NewNS47.png" style="zoom:80%;" />
-
-</br>
-
-h) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select `Profile Editor`.
-
-<img src="../../../nightscout/img/NewNS43.png" style="zoom:80%;" />
-
-</br>
-
-!!!warning "Privacy warning"
-    Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable [security](../../../nightscout/security) to your site once you're done with the setup.  
-
-</br>
-
-i) Dexcom Share users should see data flowing in after some minutes. Other uploaders like xDrip+, Spike, xDrip4iOS, etc will need to be setup with the Nightscout address and API secret in the app.
-
-<img src="../../../nightscout/img/NewNS48.png" style="zoom:80%;" />
-
-</br></br>
-
-## Step 8: Uploader setup
-
-</br>
-
-Continue to [uploader](../../../uploader/setup/) setup.
-
-</br>
-
-</br>
+<!-- Somhow this natural anchor link doesn't work -->
 
 ## Editing Config Vars in Fly.io
 
@@ -286,17 +277,13 @@ If you deployed a new site as explained in this documentation they will be envir
 
 Environment variables can be viewed with [flyctl](https://fly.io/docs/hands-on/install-flyctl) using the following command:
 
-```
-flyctl config env
-```
+`flyctl config env`
 
-If you want to modify a configuration variable you need to edit the `fly.toml` file in your local `cgm-remote-monitor` copy (the one you created at [step 6](#step-6-setting-variables) above).
+If you want to modify a configuration variable you need to edit the `fly.toml` file in your local `cgm-remote-monitor` copy (the one you created at [step 5](#step-5-setting-variables) above).
 
 Once variable(s) modified, save the file and run the following command (from inside your `cgm-remote-monitor`).
 
-```
-flyctl deploy
-```
+`flyctl deploy`
 
 </br>
 
@@ -304,21 +291,23 @@ flyctl deploy
 
 Your variables are stored as secrets if you used the migration wizard.
 
-!!!warning "Secrets"  
-    You **cannot see the values of your secret variables as they are secret**.  
-    You can only delete them and set them: you **cannot edit them**.  
-    Please make sure you write them down somewhere!
+```{admonition} Secrets
+:class: warning
+You **cannot see the values of your secret variables as they are secret**.
+You can only delete them and set them: you **cannot edit them**.
+Please make sure you write them down somewhere!
+```
 
 </br>
 
 **Once Nightscout deployed, you need to install [flyctl](https://fly.io/docs/hands-on/install-flyctl/) to access your variables in order to change or customize your site.**
-Variables are described [here](../../../nightscout/setup_variables/#nightscout-config-vars).
+Variables are described [here](/nightscout/setup_variables.md#nightscout-config-vars).
 
 [Sign in with GitHub](https://fly.io/docs/hands-on/sign-in/) in your CLI interface (Powershell/Terminal).  
 A new browser will open. Select the entry with your email address.  
 If required, authenticate through GitHub.
 
-<img src="../img/FlyM16.png" style="zoom:80%;" />
+<img src="/vendors/fly.io/img/FlyM16.png" style="zoom:80%;" />
 
 </br>
 
@@ -330,9 +319,7 @@ Look [here](https://fly.io/docs/getting-started/working-with-fly-apps/#working-w
 If you want to create a new variable or modify an existing one you need to use the `flyctl secrets set` command.  
 For example if you want to set your Nightscout site vertical scale to linear:
 
-```
-flyctl secrets set SCALE_Y="linear" -a yourappname
-```
+`flyctl secrets set SCALE_Y="linear" -a yourappname`
 
 If your `SCALE_Y` variable was already set to `linear` you will see the following message:  
 `Error No change detected to secrets. Skipping release.`

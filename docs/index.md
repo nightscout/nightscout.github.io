@@ -1,32 +1,29 @@
-![](./img/cropped-Header3.png)
-
 # Welcome to Nightscout
 
-</br>
- <img src="./img/nightscout_screenshot_600.png" width="600px">
+</br>   ![Nightscout](/images/nightscout_screenshot_600.png)
 </br>
 
 ## Introduction
 
-**Nightscout** (also known as **"CGM in the Cloud"**) is an open-source cloud application **used by people with diabetes and parents of kids with diabetes** to visualize, store and share the data from their **Continuous Glucose Monitoring** sensors in real-time. Once setup, Nightscout acts as a central repository of blood glucose and insulin dosing/treatment data for a single person, allowing you to view the CGM graph and treatment data anywhere using just a web browser connected to the internet.
+Nightscout (also known as CGM in the Cloud) is an open-source cloud application used by people with diabetes and parents of kids with diabetes to visualize, store and share the data from their Continuous Glucose Monitoring sensors in real-time. Once setup, Nightscout acts as a central repository of blood glucose and insulin dosing/treatment data for a single person, allowing you to view the CGM graph and treatment data anywhere using just a web browser connected to the internet.
 
-There are several parts to this system. You need somewhere online to store/process/visualize this data (**a Nightscout Site**), something to upload CGM data to your Nightscout (**an Uploader**), and then optionally you can use other devices to access/view this data (**one - or more - Follower**):
+There are several parts to this system. You need somewhere online to store, process and visualize this data (a Nightscout Site), something to upload CGM data to your Nightscout (an Uploader), and then optionally you can use other devices to access or view this data (one - or more - Follower).
 
-#### Nightscout Site
 
-The Nightscout cloud application can be installed by yourself using hosting services from various cloud service providers.
+### Nightscout Site
 
-Although not necessary, you might prefer to use paid hosting services for your database (to avoid future maintenance tasks) or indeed pay to use a fully-managed Nightscout hosting service to avoid having to personally build and maintain your site yourself.
+- The Nightscout cloud application can be installed by yourself (Do It Yourself, in short: DIY) using hosting services from various cloud service providers.
+- You can also pay to use a fully-managed Nightscout hosting service and avoid having to personally build and maintain your site.
 
-#### Uploader
+### Uploader
 
-The CGM data is usually sent to Nightscout by an **uploader device** (often known as an **"Uploader"**) such as a mobile/cellphone running an app such as xDrip+, Spike, xDrip4iOS or Medtronic Uploader. Alternatively, the CGM data can be pulled directly from your online Dexcom or Medtronic CareLink accounts. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have. Once you've read this page (yes - all the way to the bottom!), you can find more information here about [Uploaders](./uploader/uploaders.md).
+The CGM data is usually sent to Nightscout by an uploader device such as a mobile cellphone running an app like xDrip+, Spike, xDrip4iOS, Medtronic Uploader and others. Alternatively, the CGM data can be pulled directly from your online Dexcom account. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have.
 
-#### Followers
+### Followers
 
-In addition to viewing the data using a web browser, there are also applications available for mobile devices, smartwatches, electronic devices and other cloud-based services which allow you alternative ways to view and interact with the information stored within your Nightscout site (often known as **"Followers"**).
+In addition to viewing the data using a web browser, there are also applications available for mobile devices, smartwatches, electronic devices and other cloud-based services which allow you alternative ways to view and interact with the information stored within your Nightscout site (often known as "Followers").
 
-<img src="./img/nscloud.png" width="800px">
+   ![Nightscout Environment](/images/nscloud.png)
 
 ## Development History
 
@@ -43,51 +40,55 @@ Nightscout's **longevity**, the application, the ecosystem, and the culture dema
 
 ## What Do I Need?
 
-You really don't need too much to get Nightscout up and running but let's start with the basics.
-
-Are you sitting comfortably? Then let's begin.
-
 You will need:
 
--   A CGM sensor: Dexcom, Medtronic, Libre (plus an additional transmitter) or Eversense
+-   A CGM sensor
 
--   A way to [upload](./uploader/uploaders.md) your data, to be stored in Nightscout (this is generally an internet-connected mobile phone with a matching uploader app)
+-   A way to [upload](uploader/uploaders.md) your data, to be stored in Nightscout (this is generally an internet-connected mobile phone with a matching uploader app)
 
 -   Internet access
 
--   A few hours of "quiet" time (a <s>beer</s> nice cup of coffee is optional but highly recommended)
+- Basic computer skills and the ability to ***carefully*** follow the installation guides shown on this site
 
--   Basic computer skills and the ability to ***carefully*** follow the installation guides shown on this site
+  ***"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.*
 
-    ***"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.*
+```{admonition} IMPORTANT
+:class: danger
 
-!!!warning "IMPORTANT"
-    Before using Nightscout, it is important to understand that this project:
+Before using Nightscout, it is important to understand that this project:
 
-    - is an open-source, community-based project and is not supported by any company
-    - is not officially approved or regulated for diabetes therapy and/or treatment in any way
-    
-    **You must understand that you take full responsibility for building and running this system and you agree to do so at your own risk.**
+- is an open-source, community-based project and is not supported by any company
+- is not officially approved or regulated for diabetes therapy and/or treatment in any way
 
-!!!warning "SAFETY"
-    - This project requires a working internet connection and availability of third-party cloud services
-        - Do not rely only on Nightscout as the only way you have of knowing your blood glucose values and trends
-        - Make sure you're ready to cope with an unexpected failure and always have alternative ways to check your blood glucose levels
+**If you will be using DIY: You must understand that you take full responsibility for building and running this system and you agree to do so at your own risk.**
+```
+
+```{admonition} SAFETY
+:class: danger
+
+- This project requires a working internet connection and availability of third-party cloud services
+- Do not rely only on Nightscout as the only way you have of knowing your blood glucose values and trends
+- Make sure you're ready to cope with an unexpected failure and always have alternative ways to check your blood glucose levels
+```
 
 ## How Much Does It Cost?
 
 There's no simple answer to this. You basically have two options:
 
-1. **DIY** Use instructions on this website or your computing skills to create your own installation. Depending on your skill and choice of platform, this can take anywhere from minutes to hours to accomplish. Additionally, you will need to maintain this installation yourself. Having said that, there are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be **free** - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it. Additionally, it's important to understand that if you're using a free tier of a hosting service to run Nightscout, your hosting costs are being paid by the hosting provider you're using.
-2. **Use a service** You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), and [Nightscout.Pro](#nightscoutpro)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+1. **DIY**: Use instructions on this website to create your own installation. You will need to maintain this installation yourself. There are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be free - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it.
+2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), and [Nightscout.Pro](#nightscout-pro)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
 
 The Nightscout development community actively supports both of these choices.
 
 ## Build your own Nightscout DIY site
 
-<span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions [here](../nightscout/new_user/).</span>
+```{tip}
+</br><span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions ⇒ [**HERE**](../nightscout/new_user/) ⇐.</span></br></br>
+```
 
-**Note:** DIY users of Nightscout have been historically using platforms like [Digital Ocean](https://github.com/jasoncalabrese/project-glu/blob/master/README.md), [Microsoft Azure](https://docs.google.com/document/d/1RP-0KAX0Z46iGmShBdygY7_vQN1d-xEgtK_dSsjCA20/edit) and then Salesforce Heroku to host their sites. If you have the time to author instructions for this purpose, new documentation [pull requests](https://github.com/nightscout/nightscout.github.io/pulls?q=is%3Apr) are extremely welcome as well as [comments](https://github.com/nightscout/nightscout.github.io/issues).
+**Note:** DIY users of Nightscout have been historically using platforms like [Digital Ocean](https://github.com/jasoncalabrese/project-glu/blob/master/README.md), [Microsoft Azure](https://docs.google.com/document/d/1RP-0KAX0Z46iGmShBdygY7_vQN1d-xEgtK_dSsjCA20/edit) and then Salesforce Heroku to host their sites. With time, more platforms were added.
+
+If you have the time to author instructions for this purpose, new documentation [pull requests](https://github.com/nightscout/nightscout.github.io/pulls?q=is%3Apr) are extremely welcome as well as [comments](https://github.com/nightscout/nightscout.github.io/issues).
 
 ## Nightscout as a Service
 
@@ -95,19 +96,21 @@ If you want to save time and avoid the need to maintain a DIY solution, you have
 
 ### T1Pal
 
+```{card}
 ![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)
-
++++
 [T1Pal](https://t1pal.com) directly supports the sustainability of the Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.
 
 The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project. Database and server administration is automated and managed automatically as part of the service. Contact T1Pal support to request specific features or versions.
 
 If you need help with T1Pal, please file a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get Support" from [My Account](https://www.t1pal.com/account/).
-
+```
 
 ### NS10BE
 
+```{card}
 <img src="https://ns.10be.de/templates/images/ns.10be.de-logo_halb_klein.jpg" width="400" height="155">
-
++++
 [ns.10BE.de](https://ns.10be.de/) was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits. A backup of your database and settings is performed every 6-8 hours. You can import data from your old Nightscout instance or MongoDB database, also upload data (Freestyle, Dexcom, Omnipod, ...) via CSV files. The servers are located in different fail-safe data centers in Germany, Finland or France (can be selected) . They are monitored by [uptimerobot](https://ns.10be.de/en/status.html) and own Slackbot. When a server goes down, it restarts itself and sends a twitter message.
 
 A Nightscout Instance at NS10BE costs €4.99/month, with discounts when increasing subscription duration.
@@ -115,42 +118,28 @@ A Nightscout Instance at NS10BE costs €4.99/month, with discounts when increas
 To see more about NS10 features and costs, take a look at the [features page](https://10be.de/en/pricing.html). The registration is free.
 
 ***Support:*** ***support*** at ***ns.10be.de*** or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
+```
 
+### Nightscout Pro
 
-### Nightscout.Pro
-
+```{card}
 <img src="https://nightscout.pro/wp-content/uploads/2022/12/nightscoutsocial.jpg" width="400">
-
++++
 [Nightscout.Pro](https://nightscout.pro/) was founded in 2022 by **Andy Low** - A type 1 diabetic web developer from Scotland, UK. Nightscout.Pro offer a completely 'hands-off' approach to Nightscout hosting, meaning all you need to do is subscribe via the website, and your Nightscout site will be created for you, with little to no configuration needed. Your site will be set up in a 'default' configuration, which can be modified by contacting **support** via [Email](mailto:support@nightscout.pro), [Facebook](https://www.facebook.com/nightscoutpro) or [Discord](https://discord.gg/7hYrkqVavU).
 
 The site is  translated into multiple languages, with more in line to be added over time, and can accept payment in various local currencies.
 
 **Pricing per month**
-<table>
-    <tr>
-        <td>Currency</td>
-        <td>Price</td>
-    </tr>
-    <tr>
-        <td>GBP</td>
-        <td>£3</td>
-    </tr>
-    <tr>
-        <td>USD</td>
-        <td>$4</td>
-    </tr>
-    <tr>
-        <td>EUR</td>
-        <td>€4</td>
-    </tr>
-    <tr>
-        <td>PLN</td>
-        <td>18 zł</td>
-    </tr>
-</table>
+
+| Currency | Price |
+| -------- | ----- |
+| GBP      | £3    |
+| USD      | $4    |
+| EUR      | €4    |
+| PLN      | 18 zł |
 
 More information about the companies background and processes can be found on the website at [Welcome to Nightscout.Pro.](https://nightscout.pro/welcome-to-nightscout-pro/)
-
+```
 
 ## Who Can Help Me?
 
@@ -160,28 +149,32 @@ The main group for all Nightscout support is the "[CGM in the Cloud](https://www
 
 There are also many local Nightscout communities and you'll probably be able to find one in your own country and language if this helps.
 
-!!!warning "Technical Support"
-    This project is often considered "**Do It Yourself**" (DIY) and supported by volunteers. Whilst you will almost certainly always will find someone ready to help you for free, building your own Nightscout site **doesn't entitle you to any form of support** from anybody.
-    
+```{admonition} Technical Support
+:class: warning
 
-    The open-source diabetes movement is founded on the idea of **paying it forward** and helping others to learn things that others took their time to help teach you about.
-    
-    *Ask nicely, and nice people will always do nice things and help you.*
-    
-    Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not only supporting users. (This means **do not** send them private messages or friend requests just to help fix something that is already clearly documented or for help that can be easily requested in the CGM in the Cloud group)
+Unless you're paying for a hosted Nightscout including support, this project is "**Do It Yourself**" (DIY) and supported by volunteers. Whilst you will almost certainly always will find someone ready to help you for free, building your own Nightscout site **doesn't entitle you to any form of support** from anybody.
 
-!!!info "Facebook Privacy"
-    You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.
+The open-source diabetes movement is founded on the idea of **paying it forward** and helping others to learn things that others took their time to help teach you about.
+
+*Ask nicely, and nice people will always do nice things and help you.*
+
+Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not only supporting users. (This means **do not** send them private messages or friend requests just to help fix something that is already clearly documented or for help that can be easily requested in the CGM in the Cloud group)  
+```
+
+```{admonition} Facebook Privacy
+:class: tip
+
+You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.   
+```
 
 ## How to Use These Docs
 
-* Use the navigation menu at the top of the screen to find the section that you are looking for.
+* Use the navigation menu at the top on the left of the screen to find the section that you are looking for.
 
 * A Table of Contents for the current page is always displayed on the left side of the screen.
 
-* You can search the Nightscout Docs site by clicking the Search icon at the top of every page:
+* You can search the Nightscout Docs site by entering your search string (only English) below the Nightscout main logo top left. 
 
-    <img src="img/search_icon_screenshot.png" width="254px"> 
 
 ## How Can I Help?
 
@@ -190,3 +183,100 @@ You'll find the source repository for this documentation [here](https://github.c
 You're also welcome to contribute or report any error, unclear explanation, typo, broken link etc. by going to GitHub and opening an [issue](https://github.com/nightscout/nightscout.github.io/issues).
 
 Finally, to help on the development of Nightscout itself, feel free to join in at our [Discord Channel](https://discord.gg/zg7CvCQ).
+
+<!-- Below this is the main table of contents displaying on the left of all pages -->
+
+```{toctree}
+:hidden:
+uploader/uploaders.md
+```
+
+```{toctree}
+:hidden:
+:caption: CREATE YOUR NIGHTSCOUT
+nightscout/new_user.md
+nightscout/wizard.md
+```
+
+```{toctree}
+:hidden:
+:caption: CREATE YOUR DATABASE
+nightscout/database.md
+vendors/mongodb/atlas.md
+vendors/railway/database.md
+vendors/northflank/database.md
+```
+
+```{toctree}
+:hidden:
+:caption: CREATE YOUR WEB APP
+nightscout/platform.md
+vendors/railway/new_user.md
+vendors/northflank/new_user.md
+vendors/azure/new_user.md
+vendors/heroku/new_user.md
+vendors/fly.io/new_user.md
+```
+
+```{toctree}
+:hidden:
+:caption: SETUP NIGHTSCOUT
+nightscout/profile_editor.md
+uploader/setup.md
+nightscout/downloaders.md
+nightscout/wearable.md
+nightscout/setup_variables.md
+uploader/xdripcarelink.md
+troubleshoot/dexcom_bridge.md
+```
+
+```{toctree}
+:hidden:
+:caption: USE NIGHTSCOUT
+nightscout/discover.md
+nightscout/reports.md
+nightscout/security.md
+nightscout/admin_tools.md
+nightscout/close_loop.md
+nightscout/ifttt.md
+nightscout/pushover.md
+troubleshoot/troubleshoot.md
+update/update.md
+update/dev_branch.md
+update/downgrade.md
+```
+
+```{toctree}
+:hidden:
+:caption: ADVANCED DIY
+nightscout/advanced.md
+vendors/VPS/ubuntu.md
+vendors/VPS/docker.md
+vendors/NAS/synology.md
+```
+
+```{toctree}
+:hidden:
+:caption: VENDORS
+nightscout/multiadmin.md
+vendors/github/update.md
+update/redeploy.md
+troubleshoot/github.md
+troubleshoot/atlas.md
+troubleshoot/heroku.md
+vendors/heroku/migrate.md
+vendors/heroku/ecoplan.md
+vendors/heroku/hobbyplan.md
+vendors/heroku/mfa.md
+update/upd_stack.md
+troubleshoot/railway.md
+troubleshoot/fly.io.md
+nightscout/dns.md
+```
+
+<!--  
+:hidden:
+:caption: TRANSLATE
+translate.md  
+{toctree}  
+-->

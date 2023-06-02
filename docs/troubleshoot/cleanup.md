@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Cleanup
 
 After unsuccessful attempts you might want to cleanup the various accounts to avoid confusion.
@@ -10,28 +14,25 @@ If you have a large amount of CGM data, be extra cautious when performing Atlas 
 
 ## [GitHub](https://github.com/login)
 
-The most efficient way to cleanup GitHub and restart with an up-to-date Nightscout project is:
+The most efficient way to cleanup GitHub and restart with an up-to-date Nightscout project is to [redeploy](/update/redeploy.md) it.
 
-- [Delete your current cgm-remote-monitor fork.](../../../nightscout/github/#delete-your-own-fork-of-cgm-remote-monitor)
-- [Fork the current Nightscout cgm-remote-monitor project](../../../nightscout/github/#fork-the-nightscout-project).
-
-You will need to reconnect your repository to [Heroku](../../../troubleshoot/heroku/#cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible) or [Railway](../../../troubleshoot/railway/#reconnect-github-to-your-project).
+You will then need to reconnect your repository to [Heroku](/troubleshoot/heroku.md#cannot-find-cgm-remote-monitor-in-heroku-item-cannot-be-retrieved) or [Railway](/troubleshoot/railway.md#reconnect-github-to-your-project).
 
 </br>
 
 ## [Heroku](https://id.heroku.com/)
 
-Look [here](../heroku/#cleanup).
+Look [here](/troubleshoot/heroku.md#cleanup).
 
 </br>
 
 ## [Atlas](https://account.mongodb.com/account/login)
 
-Look [here](../atlas/#cleanup).
+Look [here](/troubleshoot/atlas.md#cleanup).
 
 </br>
 
 ## [Railway](https://railway.app)
 
-Look [here](../railway/#cleanup).
+Look [here](/troubleshoot/railway.md#cleanup).
 

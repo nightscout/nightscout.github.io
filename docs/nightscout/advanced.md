@@ -2,8 +2,10 @@
 
 </br>
 
-<span style="font-size:larger;">Too complicated? Not what you're looking for? </br>Maybe you're on the wrong page. Check [here](../new_user) first.</span></br></br>
-Interested in building a Nightscout DIY site?  Make sure you read and understand [this](/#how-much-does-it-cost) before starting.
+```{admonition} Too complicated? Not what you're looking for?
+:class: seealso
+Consider a hosted Nightscout service! Check for easier solutions [here](/index.md#nightscout-as-a-service).
+```
 
 </br>
 
@@ -11,7 +13,9 @@ Interested in building a Nightscout DIY site?  Make sure you read and understand
 
 You can run your Nightscout site in several vendors platforms, using free or paid accounts.  
 
-Below is a list of useable platforms. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
+We documented Heroku, Azure, Railway, Northflank and Fly.io. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
+
+</br>
 
 ## Building Nightscout DIY in a virtual server
 
@@ -22,17 +26,14 @@ You can use step by step Linux commands or deploy with a **simple** scripted ins
 
 Below is a list of some VPS. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
 
-First select your VPS:
-
-[Google Cloud](../../vendors/google/new_user) with a [Scripted deployment](../xdripteam) (one command).  
-[Oracle](../../vendors/oracle/new_user)  and extensive documentation (npm and Docker).  
-[Digital Ocean](../../vendors/digitalocean/new_user) (example). There are many others that can be used either command by command or using the [Scripted deployment](../xdripteam).  
+[Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html) with a Scripted deployment (one command).  
+[Oracle](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)  and extensive documentation (npm and Docker).  
 [Amazon Web Service](https://github.com/rajdeut/terraform-aws-nightscout#readme)
 
 Some common deployment methods:
 
-[Ubuntu](../ubuntu) commands.  
-[Docker](../nightscout/docker) container.
+[Ubuntu](/vendors/VPS/ubuntu) commands.  
+[Docker](/vendors/VPS/docker) container.
 
 </br>
 
@@ -40,14 +41,14 @@ Some common deployment methods:
 
 Don't buy a NAS device just for this, but if you already have one that's worth a try!
 
-You can host your Nightscout site in your [Synology](../../vendors/synology/new_user) NAS.  
+You can host your Nightscout site in your [Synology](/vendors/NAS/synology) NAS.  
 You can also try with your [QNAP](https://docs.google.com/document/d/1zpF6Y3kPQqc9KOsClIQt686HDLhGfFxwz4vGfq8E254/edit) NAS.
 
 </br>
 
 ## Building Nightscout with a Raspberry PI 4
 
-If you own one, you can use it to host your Nightscout, see [here](../../vendors/raspberry-pi/new_user). 
+If you own one, you can use it to host your Nightscout, see [here](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705). 
 
 </br>
 

@@ -1,4 +1,4 @@
-# MongoDB Atlas Troubleshooting
+# Troubleshoot MongoDB Atlas
 
 </br>
 
@@ -6,36 +6,36 @@
 
 When creating a new site or migrating (usually not the first attempt), when reaching `Target Cluster`.
 
-<img src="../img/TShoot17.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot17.png" width="800px" >
 
 - Click the leaf top left in your Atlas account. Look at the `Project Name` you wanted to use when creating your new cluster, it shouldn't contain a cluster yet (like the example below, I tried to create a new Nightscout site but there is already a cluster inside the project I wanted to use). You can't have two clusters in a free project. Click your `Project Name`.
 - This should not happen in normal conditions. Before deleting a cluster, check it doesn't contain your data!
 
-<img src="../img/TShoot18.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot18.png" width="800px" >
 
 - Click on `Collections` in the cluster you selected.
 
-<img src="../img/TShoot19.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot19.png" width="300px" >
 
 - Click on `entries`
 
-<img src="../img/TShoot20.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot20.png" width="300px" >
 
 - In the case there is data, like in the example below, **don't use this cluster**. Leave it like this and create a new one.
 
-<img src="../img/TShoot21.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot21.png" width="800px" >
 
 - **If there no data**, you can safely delete it.
 
-<img src="../img/TShoot22.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot22.png" width="400px" >
 
 - In this cluster you want to delete click `...` then `Terminate`
 
-<img src="../img/TShoot23.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot23.png" width="500px" >
 
 - Copy the cluster name to confirm then click `Terminate`
 
-<img src="../img/TShoot24.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot24.png" width="600px" >
 
 - Wait until the operation completes.
 - You can now use this project name to create a new site.
@@ -44,13 +44,12 @@ When creating a new site or migrating (usually not the first attempt), when reac
 
 ## Meet your connection string
 
-<span style="font-size:smaller;">**APPLIES TO:**</span>	<img src="../../vendors/img/Atlas.png" style="zoom:80%;" />
-
 For technical details look [here](https://docs.mongodb.com/manual/reference/connection-string/#mongodb-uri).
 
 A typical mLab migrated string will look like this:
 
-`mongodb+srv://heroku_0v50k8rf:ddfsjcpfu8fcoj9n6dueabfd5u@cluster0.g03wh.mongodb.net/heroku_0v50k8rf?retryWrites=true&w=majority`
+`mongodb+srv://heroku_0v50k8rf:ddfsjcpfu8fcoj9n6dueabfd5u@cluster0.g03wh.mongodb.net/  `
+`heroku_0v50k8rf?retryWrites=true&w=majority`
 
 A typical new string created with Atlas will look like this:
 
@@ -72,27 +71,53 @@ A typical new string created with Atlas will look like this:
 
 ## Unable to connect to Mongo
 
-<img src="../img/TShoot54.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot54.png" width="800px" >
 
 Common reasons:
 
-- The database Heroku is pointing to is not available (mLab services stopped in Dec 2020).  [Attach a new Atlas database](../../update/newdatabase/).
+- The database is not available. If you don't have a database yet, create a new one.  
+  If you do have a database, check it's functional then restart your web app:
+
+```{tab-set}
+
+:::{tab-item} Heroku
+[Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
+:::
+
+:::{tab-item} Railway/Northflank/Azure/Fly.io
+[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+```
+
 - Your Atlas connection string is incorrect. Check [here](#bad-connection-string).
 
 ### MongoDB paused
 
-- If you haven't been using Nightscout for a while and it was working before, check your MongoDB Atlas database didn't go to sleep mode. If it did, select `Resume` to restart it.  
-  Once done, if using Heroku, [restart all dynos](../../troubleshoot/heroku/#restart-all-dynos).
+- If you haven't been using Nightscout for a while but it was working before, check the database didn't go to sleep mode. If it did, select `Resume` to restart it.
+- Once done:
 
-<img src="../img/TShoot53.png" style="zoom:80%;" >
+```{tab-set}
+
+:::{tab-item} Heroku
+[Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
+:::
+
+:::{tab-item} Railway/Northflank/Azure/Fly.io
+[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+```
+
+<img src="/vendors/mongodb/img/TShoot53.png" width="800px" >
 
 </br>
 
 If you see this message
 
-<img src="../img/TShoot06.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot06.png" width="800px" >
 
-- [Update to latest version](../../update/update/) and come back after you have a more accurate error message.
+- [Update to latest version](/vendors/github/update/) and come back after you have a more accurate error message.
 
 </br>
 
@@ -100,17 +125,29 @@ If you see this message
 
 If you see this message:
 
-<img src="../img/TShoot44.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot44.png" width="800px" >
 
-- Verify your Atlas database is not read only, if migration went well on the first time it should be like this, else click `Edit`
+- Verify your database is not read only, else click `Edit`
 
-<img src="../img/TShoot15.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot15.png" width="800px" >
 
 - Change the permissions to `Atlas Admin` and `Update User`
 
-<img src="../img/TShoot16.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot16.png" width="800px" >
 
-- Restart all dynos if using Heroku
+- Once done:
+
+```{tab-set}
+
+:::{tab-item} Heroku
+[Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
+:::
+
+:::{tab-item} Railway/Northflank/Azure/Fly.io
+[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+```
 
 </br>
 
@@ -118,10 +155,25 @@ If you see this message:
 
 If you see this message:
 
-<img src="../img/TShoot45.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot45.png" width="800px" >
 
-- If you forgot to migrate to Atlas you need to [attach a new Atlas database](../../update/newdatabase/).
-- If you know you migrated, and your Nightscout was still functional after November 11th 2020, continue [below](./#bad-connection-string) to recover:
+-  If you don't have a database yet, create a new one.
+-  It might be a transient error in MongoDB Atlas, try to restartyour web app:
+
+```{tab-set}
+
+:::{tab-item} Heroku
+[Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
+:::
+
+:::{tab-item} Railway/Northflank/Azure/Fly.io
+[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+```
+
+-  Check your [database is not full](#database-full)!
+-  If your Nightscout was still functional after November 11th 2020, continue [below](#bad-connection-string) to recover:
 
 </br>
 
@@ -129,18 +181,30 @@ If you see this message:
 
 If you see this message:
 
-<img src="../img/TShoot47.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot47.png" width="800px" >
 
 - Check you authorized all IPs to access your Atlas database:
 - Open your Atlas cluster and select your Nightscout project, then `Network access`
 
-<img src="../img/TShoot48.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot48.png" width="800px" >
 
 - If you see an IP (in red above) instead of 0.0.0.0/0 click `Edit` select `ALLOW ACCESS FROM ANYWHERE` then `Confirm`.
 
-<img src="../img/TShoot49.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot49.png" width="600px" >
 
-- Restart all dynos in Heroku
+- Once done:
+
+```{tab-set}
+
+:::{tab-item} Heroku
+[Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
+:::
+
+:::{tab-item} Railway/Northflank/Azure/Fly.io
+[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+```
 
 </br>
 
@@ -148,20 +212,18 @@ If you see this message:
 
 If you see this message:
 
-<img src="../img/TShoot46.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot46.png" width="800px" >
 
 </br>
 
-For Heroku: [Edit your `Config Variables`.](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku)
+- [Edit your Nightscout configuration](/nightscout/setup_variables) and search for a variable called `MONGODB_URI` or `MONGO_CONNECTION`. 
 
-For Railway: [Go to your `Variables` page](../../../vendors/railway/new_user/#editing-config-vars-in-railway).
+- If you find none, go [here](#recover-your-connection-string).
 
-</br>
-
-- Search for a variable called `MONGODB_URI` or `MONGO_CONNECTION`. If you find none, go [here](./#recover-your-connection-string).
-
-!!!warning " `MONGODB_URI` or `MONGO_CONNECTION`"
-    There should be at least one and only one of them, not both.
+```{admonition} MONGODB_URI or MONGO_CONNECTION
+:class: warning
+There should be at least one and only one of them, not both.
+```
 
 If you migrated from mLab Heroku add-on it is usually `MONGO_CONNECTION`
 
@@ -310,14 +372,15 @@ function Analyze()
 
 </script>
 
-!!! note
-    If you migrated from Heroku mLab add-on, your database username and database name should be identical.
+```{hint}
+If you migrated from Heroku mLab add-on, your database username and database name should be identical.
+```
 
-<img src="../img/TShoot41.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot41.png" width="800px" >
 
 </br>
 
-If you've just created a new site, try to use [this help page](../../nightscout/stringhelp.html) to verify or recreate it.
+If you've just created a new site, try to use [this help page](/_static/stringhelp.html) to verify or recreate it.
 
 </br>
 
@@ -327,7 +390,7 @@ If you're still in trouble continue below:
 
 ## Recover your connection string
 
-If you've tried several times to deploy or migrate, you might end-up with many useless items in your accounts. At this point, you could benefit doing some cleanup in order to identify the correct Atlas database you want to connect to. Consider [cleanup](../cleanup/) before continuing.
+If you've tried several times to deploy or migrate, you might end-up with many useless items in your accounts. At this point, you could benefit doing some cleanup in order to identify the correct Atlas database you want to connect to. Consider [cleanup](#cleanup) before continuing.
 
 </br>
 
@@ -335,27 +398,27 @@ a) Go to your MongDB account. Log in if necessary [https://cloud.mongodb.com/](h
 
 b) Click `Connect` below your cluster name (in the example below `Cluster0`, but it might have another name)
 
-<img src="../img/TShoot07.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot07.png" width="400px" >
 
 </br>
 
 c) Click `Connect your application`
 
-<img src="../img/TShoot09.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot09.png" width="600px" >
 
 </br>
 
-d) A new view opens, in  `(2) Add your connection string into your application code` you will find your MONGODB_URI or MONGO_CONNECTION string.
+d) A new view opens, in  `(2) Add your connection string into your application code` you will find your `MONGODB_URI` or `MONGO_CONNECTION` string.
 
 Click `Copy` then `Close`
 
-<img src="../img/TShoot10.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot10.png" width="600px" >
 
 </br>
 
 e) Paste it into a place where you can edit the text (i.e. a Word or a Notepad document).
 
-Edit your string so that you add the database user password after the database user info. You defined them during your MongoDB Atlas database creation, when you reached [step **e)**](../../../vendors/mongodb/atlas/).
+Edit your string so that you add the database user password after the database user info. You defined them during your MongoDB Atlas database creation, when you reached [step **e)**](/vendors/mongodb/atlas/).
 
 Here’s an example of how the string is built up (`myFirstDatabase` might not show, this is normal):
 
@@ -374,12 +437,13 @@ If you don't see a database name like `myFirstDatabase` before the question mark
 
 </br>
 
-h) Copy this resulting string above into your Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration). There must be only one of these variables, not both.  
-Open [this link for Heroku](../../../vendors/heroku/new_user/#editing-config-vars-in-heroku) or [this link for Railway](../../../vendors/railway/new_user/#editing-config-vars-in-railway) in another tab to see how to edit your Heroku variables.
+h) Copy this resulting string above into your `MONGODB_URI` or `MONGO_CONNECTION` variable. There must be only one of these variables, not both.  
+
+See [here](/nightscout/setup_variables) how to edit your configuration variables.
 
 i) If there is neither one nor the other create a new `MONGODB_URI` variable and paste the string in the value field.
 
-j) If you remembered your password restart all dynos in Heroku, and you should be done.
+j) If you remembered your password restart your web app, and you should be done.
 
 k) If you changed your password or your Nightscout page still fails to open continue.
 
@@ -391,38 +455,40 @@ k) If you changed your password or your Nightscout page still fails to open cont
 
 - Click `Database Access`
 
-<img src="../img/TShoot11.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot11.png" width="400px" >
 
 </br>
 
 - At the end of the line, click `Edit`
 
-<img src="../img/TShoot08.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot08.png" width="800px" >
 
 </br>
 
 - In `Password` click `Edit Password`
 
-  ***Note:*** *take a look at the top of this view, after `Edit User` you can see your database user name before `@`. Check it's matching the one in your connection string.* 
+```{hint}
+*Take a look at the top of this view, after `Edit User` you can see your database user name before `@`. Check it's matching the one in your connection string.* 
+```
 
-<img src="../img/TShoot12.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot12.png" width="600px" >
 
 </br>
 
 - If you forgot your password invent a new one (use only letters and numbers: no special characters) or better: use `Autogenerate Secure Password` and click `Copy`
-- Else make it the same than the one in your Heroku `MONGODB_URI` connection string variable
+- Else make it the same than the one in your `MONGODB_URI` connection string variable
 
-<img src="../img/TShoot13.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot13.png" width="600px" >
 
 </br>
 
 - Click `Update User`
 
-<img src="../img/TShoot14.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot14.png" width="600px" >
 
 </br>
 
-- Make sure the password matches in your connection string Heroku variable `MONGODB_URI` (new Nightscout) or `MONGO_CONNECTION` (migration)
+- Make sure the password matches in your connection string variable `MONGODB_URI` or `MONGO_CONNECTION`
 
 </br>
 
@@ -430,56 +496,82 @@ k) If you changed your password or your Nightscout page still fails to open cont
 
 Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying for an M2 or M5 Shared cluster.
 
-**Note:** *If you consider paying for a database upgrade, also think about a [paid hosting service](/#nightscout-as-a-service).*
+**Note:** *If you consider paying for a database upgrade, also think about a [paid hosting service](/index.md#nightscout-as-a-service).*
 
-- Make sure your Nightscout site has `Database Size` enabled to monitor database capacity. Look [here](../../nightscout/setup_variables/#dbsize-database-size) for more information on this plugin.
+```{warning}
+Make sure your Nightscout site has `Database Size` enabled to monitor database capacity. Look [here](/nightscout/setup_variables.md#dbsize-database-size) for more information on this plugin.
+```
 
-<img src="../img/TShoot35.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot35.png" width="600px" >
 
 </br>
 
+```{hint}
+Your database size might not decrease immediately (it might even increase temporarily) after you perform cleanup with Admin Tools (see below: Normal cleanup). Allow a few hours to see the effects. In the meantime your site should recover functionality.
+```
+
+</br>
+
+**Try to recover temporary access to Nightscout to perform normal cleanup:**
+
+```{tab-set}
+
+:::{tab-item} Heroku
+[Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
+:::
+
+:::{tab-item} Railway/Northflank/Azure/Fly.io
+[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+```
+
+### Normal cleanup
+
+You can cleanup (enter the number of days to keep) or delete your devices status (recommended as a first recovery action):
+
+<img src="/vendors/mongodb/img/TShoot37.png" width="800px" >
+
+Same for `Treatments`:
+
+<img src="/vendors/mongodb/img/TShoot38.png" width="800px" >
+
+And `Glucose entries`. If you are reluctant to lose historical data you should consider opting for a paid database solution or [hosted](/index.md#nightscout-as-a-service) Nightscout.
+
+<img src="/vendors/mongodb/img/TShoot39.png" width="800px" >
+
 If your Nightscout page doesn't open after restarting your app and you want to rule out a full database, you can try an emergency cleanup of the less important part of your Nightscout site: `devicestatus`.
 
-##### Atlas database size verification
+</br>
+
+**If you can't manage to run normal cleanup, check database size and eventually perform an emergency cleanup.**
+
+### Atlas database size verification
 
 - Log in [Atlas](https://account.mongodb.com/account/login)
 - Open your Nightscout cluster and select `Collections`
 
-<img src="../img/TShoot32.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot32.png" width="800px" >
 
 </br>
 
 - Click your database name (hidden left). Check the`DATABASE SIZE` is indeed close to or at the limit then look at these three collections `Documents size`: `devicestatus`, `entries` and `treatments`.
 
-<img src="../img/TShoot36.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot36.png" width="800px" >
 
-- Open Nightscout  [`Admin tools`](../../nightscout/discover/#drawer-menu). If your site doesn't open jump to [Emergency cleanup](#emergency-cleanup).
+- Open Nightscout  [`Admin tools`](/nightscout/discover.md#drawer-menu). If your site doesn't open jump to [Emergency cleanup](#emergency-cleanup).
 - Depending on the collection you identified above, choose which of the following you want to cleanup:
 
-##### Normal cleanup
-
-You can cleanup (enter the number of days to keep) or delete your devices status:
-
-<img src="../img/TShoot37.png" style="zoom:80%;" >
-
-Same for `Treatments`:
-
-<img src="../img/TShoot38.png" style="zoom:80%;" >
-
-And `Glucose entries`. If you are reluctant to lose historical data you should consider opting for a paid database solution or [hosted](/#nightscout-as-a-service) Nightscout.
-
-<img src="../img/TShoot39.png" style="zoom:80%;" >
-
-##### Emergency cleanup
+### Emergency cleanup
 
 In the Atlas cluster view you opened [above](#atlas-database-size-verification), select the `devicestatus` collection and click the bin icon to delete it.  
 You will lose all device status history (battery, ..) but you won't lose neither BG, treatments nor profiles.
 
-<img src="../img/TShoot55.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot55.png" width="300px" >
 
 Write `devicestatus` in the box then click `Drop`
 
-<img src="../img/TShoot56.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot56.png" width="300px" >
 
 Restart your site and when it opens, consider [cleanup](#cleanup) from Admin Tools if your database size exceeds 80%.
 
@@ -498,19 +590,19 @@ Log in to Atlas [https://account.mongodb.com/account/login](https://account.mong
 
 Select your cluster then `COLLECTIONS`
 
-<img src="../img/TShoot50.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot50.png" width="800px" >
 
 </br>
 
 Select the `profile` collection and click the bin icon to delete all profiles.
 
-<img src="../img/TShoot51.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot51.png" width="300px" >
 
 </br>
 
 Write `profile` in the box then click `Drop`
 
-<img src="../img/TShoot52.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot52.png" width="400px" >
 
 </br>
 
@@ -522,23 +614,27 @@ If you are using Loop, temporarily change a basal rate in Loop, and confirm your
 
 ## Data in the future
 
+First try to [remove future items with the Admin Tools](/admin_tools.md#remove-future-items-from-database).
+
+If it doesn't give the expected result:
+
 - Check in [Atlas](https://account.mongodb.com/account/login)
 
 - Open your Nightscout cluster and select `Collections`
 
-<img src="../img/TShoot32.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot32.png" width="800px" >
 
 </br>
 
 - In `Entries` type `{date:-1}` and click `Find`
 
-<img src="../img/TShoot33.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot33.png" width="800px" >
 
 </br>
 
 - Delete the entries in the future (manually) with the bin icon
 
-<img src="../img/TShoot34.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/TShoot34.png" width="500px" >
 
 </br>
 
@@ -553,29 +649,29 @@ The structure from top to bottom is: Organization, Projects and Databases. You c
 
 If you want to cleanup Atlas, unless you don't have data, you must first find out which database contains your data. For this, start from `View All Organizations`:
 
-<img src="../img/Cleanup03.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup03.png" width="400px" >
 
 You can delete empty organizations (those without any project inside).
 
-<img src="../img/Cleanup04.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup04.png" width="800px" >
 
 Select the organization, then top left the cog wheel to go in `Settings`, then scroll down to `Delete Organization`: `Delete`.
 
-<img src="../img/Cleanup06.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup06.png" width="800px" >
 
 If an organization is connected to mLab delete it only if you don't want to migrate the database or if you're done it with another organization. Deleting an organization without projects will not delete your data. 
 
-<img src="../img/Cleanup05.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup05.png" width="600px" >
 
 ------
 
 Once inside an organization, you will see its projects. You can safely delete projects without clusters.
 
-<img src="../img/Cleanup07.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup07.png" width="800px" >
 
 Deleting an empty project doesn't delete your Nightscout data.
 
-<img src="../img/Cleanup08.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup08.png" width="600px" >
 
 For non-empty projects continue reading before deciding to delete them.
 
@@ -583,11 +679,11 @@ For non-empty projects continue reading before deciding to delete them.
 
 You can then move to your project (select it) and check its database(s) selecting `COLLECTIONS`
 
-<img src="../img/Cleanup09.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup09.png" width="800px" >
 
-An empty project will look like below, and this is typically what you have before deploying Nightscout in Heroku. Once Nightscout is deployed in a project, a new database will be created there.
+An empty project will look like below, and this is typically what you have before deploying Nightscout. Once Nightscout is deployed in a project, a new database will be created there.
 
-<img src="../img/Cleanup10.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup10.png" width="400px" >
 
 The database currently used by your Nightscout is the one specified in the connection string, in the example below `dbname`. Whenever you change the database name in the connection string, a new database will be created in your project.
 
@@ -595,35 +691,35 @@ The database currently used by your Nightscout is the one specified in the conne
 
 There is usually one database for Nightscout, if there are several, select one and then the other(s) to understand which one contains your data. For this, select `entries`.
 
-<img src="../img/Cleanup11.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup11.png" width="800px" >
 
 A large database is most probably one you want to keep.
 
-<img src="../img/Cleanup12.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup12.png" width="600px" >
 
 You can safely delete empty databases (check the size first).
 
-<img src="../img/Cleanup13.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup13.png" width="600px" >
 
 !!!warning "If you're not sure you're deleting the right database, just leave it."
 
 Hover on the database name and click the bin icon. Confirm deletion by copying the database name and click `Drop`.
 
-<img src="../img/Cleanup14.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup14.png" width="700px" >
 
-If your database gets recreated after you deleted it this means you MONGODB_URI or MONGO_CONNECTION string is pointing to it.
+If your database gets recreated after you deleted it this means your `MONGODB_URI` or `MONGO_CONNECTION` string is pointing to it.
 
 </br>
 
 <span style="font-size:larger;">If you want to delete a non-empty Project you need to terminate all clusters belonging to it.</span></span>
 
-<img src="../img/Cleanup15.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup15.png" width="700px" >
 
 !!!warning "Terminating a cluster will delete all information and databases in this cluster!"
 
 Confirm with your cluster name and wait until shutdown is complete.
 
-<img src="../img/Cleanup16.png" style="zoom:80%;" >
+<img src="/vendors/mongodb/img/Cleanup16.png" width="600px" >
 
 You can then delete the empty project.
 
@@ -631,15 +727,17 @@ You can then delete the empty project.
 
 ## Backup your database
 
-!!!warning "Not a normal operation"  
-    Making a backup of your database is either a good idea or necessary if you want to migrate it to another database.  
-    This is not an easy operation and requires command line instructions using a computer.
+```{admonition} Not a normal operation
+:class: warning
+Making a backup of your database is either a good idea or necessary if you want to migrate it to another database.
+This is not an easy operation and requires command line instructions using a computer.
+```
 
-#### Install the database tools
+### Install the database tools
 
 Follow [this link](https://www.mongodb.com/docs/database-tools/installation/installation/) to install the CLI tool on your computer.
 
-#### Dump your database
+### Dump your database
 
 Get your `MONGODB_URI` handy to find the missing pieces (password and database name).
 
@@ -649,19 +747,19 @@ Log in your MongoDB account [https://cloud.mongodb.com/](https://cloud.mongodb.c
 2. Select your database
 3. In the advanced options menu, select `Command line tools`
 
-<img src="../../vendors/mongodb/img/AtlasX01.png" style="zoom:80%;" />
+<img src="/vendors/mongodb/img/AtlasX01.png" width="800px" />
 
 </br>
 
 Scroll down to `Binary import and Export tools`, copy the `mongodump` command line.
 
-<img src="../../vendors/mongodb/img/AtlasX02.png" style="zoom:80%;" />
+<img src="/vendors/mongodb/img/AtlasX02.png" width="700px" />
 
 Paste the command line in a text editor.
 
 Look into your `MONGODB_URI` and replace `<PASSWORD>` with your database password and entually (if you have one) `<DATABASE>` with your database name.
 
-<img src="../../vendors/mongodb/img/AtlasX03.png" style="zoom:80%;" />
+<img src="/vendors/mongodb/img/AtlasX03.png" width="1000px" />
 
 </br>
 
@@ -670,12 +768,12 @@ For example in Windows 64bits it's in `C:\Program Files\MongoDB\Tools\100\bin`.
 
 Copy and paste your `mongodump` command, run it.
 
-<img src="../../vendors/mongodb/img/AtlasX04.png" style="zoom:80%;" />
+<img src="/vendors/mongodb/img/AtlasX04.png" width="800px" />
 
 </br>
 
 You will find the database dump in a subfolder called `dump` with your database name in a subfolder.
 
-<img src="../../vendors/mongodb/img/AtlasX07.png" style="zoom:80%;" />
+<img src="/vendors/mongodb/img/AtlasX07.png" width="600px" />
 
 </br>

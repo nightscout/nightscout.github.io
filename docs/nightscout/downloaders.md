@@ -1,13 +1,17 @@
-# How to display your Nightscout data outside of a web browser.
+# Setup Downloaders - Followers
 
 </br>
 
-!!!note "Smartwatches"
-    See the dedicated page [here](../wearable/).
+```{admonition} Smartwatches
+:class: tip
+
+See the dedicated page [**here**](/nightscout/wearable.md).
+<img src="/nightscout/img/IconSW.png" width="75px" />
+```
 
 </br>
 
-Note: <img src="../img/LockOK.png" style="zoom:15%;" /> indicates applications compliant to [Nightscout secure settings](./security.md).
+Note: <img src="/nightscout/img/LockOK.png" width="25px" /> indicates applications compliant to [Nightscout access tokens](/nightscout/security.md).
 
 </br>
 
@@ -15,9 +19,9 @@ Note: <img src="../img/LockOK.png" style="zoom:15%;" /> indicates applications c
 
 ### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="https://xdrip-plus.firebaseapp.com/cdn/xdrip-plus-slides/img/xdrip-plus-high-low-alarms.png" style="zoom:50%;" />
+<img src="https://xdrip-plus.firebaseapp.com/cdn/xdrip-plus-slides/img/xdrip-plus-high-low-alarms.png" width="400px" />
 
 Select the Nightscout Follower data source and type your Nightscout URL:
 
@@ -27,7 +31,7 @@ For a secured site add the token and @ before:
 
  *Example:* `https://token@name.domain.tld`
 
-<img src="../img/Follower00.png" style="zoom:80%;" />
+<img src="/nightscout/img/Follower00.png" width="500px" />
 
 Facebook group [xDrip](https://www.facebook.com/groups/xDripG5/)
 
@@ -35,7 +39,7 @@ Facebook group [xDrip](https://www.facebook.com/groups/xDripG5/)
 
 ### [AndroidAPS NSClient](https://github.com/nightscout/AndroidAPS/releases)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
 Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUsers)
 
@@ -43,17 +47,17 @@ Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUser
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Google Play Store)
 
-<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
 Monitor your Nightscout glucose levels on your Android phone or tablet. Dark UI, large readings and buttons, designed for usage at night.
 
-<img src="../img/Follower10.png" style="zoom:80%;" />
+<img src="/nightscout/img/Follower10.png" width="400px" />
 
 </br>
 
 ### [Nightwatch](https://github.com/StephenBlackWasAlreadyTaken/NightWatch/releases) (legacy)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />
 
 CGM data on your Android Phone and Android Wear Watch!
 
@@ -63,21 +67,21 @@ Nightwatch is not maintained anymore and might not work with recent Android vers
 
 ### [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
 In Settings, Cloud, Nightscout, select Download only and type your Nightscout URL. Use a token or API_SECRET for a secure site.
 
-<img src="../img/Follower06.png" style="zoom:80%;" />
+<img src="/nightscout/img/Follower06.png" width="700px" />
 
 </br>
 
 ### [Diabox](https://www.bubblan.org/diabox/)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockNO.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
 
 In Settings, set Data Collection to Follower, select Nightscout and type your Nightscout URL.
 
-<img src="../img/Follower07.png" style="zoom:80%;" />
+<img src="/nightscout/img/Follower07.png" width="700px" />
 
 </br>
 
@@ -85,33 +89,33 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 ### [Nightscout](https://apps.apple.com/us/app/nightscout/id949973872)
 
-<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="../img/Follower03.png" style="zoom:60%;" />	
+<img src="/nightscout/img/Follower03.png" width="300px" />	
 
 </br>
 
 ### [Nightscout X](https://apps.apple.com/us/app/nightscout-x/id1333154219)
 
-<img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="../img/Follower04.png" style="zoom:60%;" />	
+<img src="/nightscout/img/Follower04.png" width="300px" />	
 
 </br>
 
 ### [Nightguard](https://apps.apple.com/us/app/nightguard/id1116430352)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockNO.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
 
 [GitHub](https://github.com/nightscout/nightguard)
 
-<img src="https://raw.githubusercontent.com/nightscout/nightguard/master/images/nightguard24.jpg" style="zoom:25%;" />
+<img src="https://raw.githubusercontent.com/nightscout/nightguard/master/images/nightguard24.jpg" width="400px" />
 
 </br>
 
 ### [Nightscouter](https://testflight.apple.com/join/UczafrJp)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockNO.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
 
 [GitHub](https://github.com/someoneAnyone/Nightscouter)
 
@@ -119,15 +123,15 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 ### [Loop Follow](https://sweloop.se/LoopFollow/index.html)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
 </br>
 
 ### [Spike](https://spike-app.com/)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="https://spike-app.com/wp-content/uploads/2019/03/iPhoneXSpikeHome2019.png" style="zoom:30%;" />
+<img src="https://spike-app.com/wp-content/uploads/2019/03/iPhoneXSpikeHome2019.png" width="350px" />
 
 Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure-spike-follower-manually).
 
@@ -135,12 +139,12 @@ Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure
 
 ### [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
 Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.  
 If you're using a secured Nightscout site, enter your token in the matching field.
 
-<img src="../img/Follower01.png" style="zoom:50%;" />
+<img src="/nightscout/img/Follower01.png" width="300px" />
 
 Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 
@@ -148,35 +152,35 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 
 ### [sugarmate](https://sugarmate.io/)
 
-!!!note "Important limitation"  
-    Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.  
-    If you need this data source: enable [obscuration](../setup_variables/#bridge-share2nightscout-bridge) variables.
+```{admonition} Important limitation
+:class: warning
+**Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.**
+If you need this data source: enable [obscuration](/nightscout/setup_variables.md#bridge-share2nightscout-bridge) variables.
+```
 
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
-
-<img src="../img/Follower05.png" style="zoom:60%;" />
+<img src="/nightscout/img/Follower05.png" width="300px" />
 
 Add Nightscout as a data source, type your Nightscout URL.
 
-<img src="../img/Follower02.png" style="zoom:80%;" />
+<img src="/nightscout/img/Follower02.png" width="800px" />
 
 </br>
 
 ### [Diabetes Cockpit](https://apps.apple.com/us/app/diabetes-cockpit/id1580577116)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="../img/Follower08.png" style="zoom:80%;" />
+<img src="/nightscout/img/Follower08.png" width="600px" />
 
 </br>
 
 ### [Gluco-Tracker](https://apps.apple.com/it/app/gluco-tracker/id1526976290)
 
-<img src="../img/IconSW.png" style="zoom:30%;" /><img src="../img/IconPhone.png" style="zoom:30%;" /><img src="../img/IconTablet.png" style="zoom:30%;" />	<img src="../img/LockOK.png" style="zoom:15%;" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="../img/Follower09.png" style="zoom:80%;" />
+<img src="/nightscout/img/Follower09.png" width="400px" />
 
 </br>
 
@@ -192,7 +196,7 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 Show your current BG in the system bar at the top of your screen on Mac (including Loop details). Available directly through the [Apple Store](https://apps.apple.com/au/app/nightscout-menu-bar/id1639776072?mt=12).
 
-<img src="../img/nightscout-macos-menu-bar.png" style="zoom:30%;" /> 
+<img src="/nightscout/img/Follower11.png" width="600px" /> 
 
 </br>
 
@@ -200,35 +204,35 @@ Show your current BG in the system bar at the top of your screen on Mac (includi
 
 ### [FloatingGlucose](https://github.com/dabear/FloatingGlucose)
 
-<img src="../img/LockOK.png" style="zoom:15%;" /> 
+<img src="/nightscout/img/LockOK.png" width="25px" /> 
 
 </br>
 
 ## Displays
 
-### [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon)
+### [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki)
 
-<img src="../img/LockOK.png" style="zoom:15%;" /> Facebook group [M5STACK NIGHTSCOUT](https://www.facebook.com/groups/606295776549008)
+<img src="/nightscout/img/LockOK.png" width="25px" /> Facebook group [M5STACK NIGHTSCOUT](https://www.facebook.com/groups/606295776549008)
 
-<img src="https://raw.githubusercontent.com/mlukasek/M5_NightscoutMon/master/images/M5NS_mon_2019-06-20_page1.jpg" style="zoom:20%;" />
+<img src="https://raw.githubusercontent.com/mlukasek/M5_NightscoutMon/master/images/M5NS_mon_2019-06-20_page1.jpg" width="400px" />
 
 ### [M5Stick NightscoutMon](https://github.com/mlukasek/M5StickC_NightscoutMon)
 
-<img src="https://raw.githubusercontent.com/mlukasek/M5StickC_NightscoutMon/master/images/M5StickC_Nightscout_w-speaker.jpg" style="zoom:20%;" />
+<img src="https://raw.githubusercontent.com/mlukasek/M5StickC_NightscoutMon/master/images/M5StickC_Nightscout_w-speaker.jpg" width="400px" />
 
-<img src="../img/LockOK.png" style="zoom:15%;" /> </br>
+<img src="/nightscout/img/LockOK.png" width="25px" /> </br>
 
 </br>
 
 ### [BGBuddy](https://github.com/VeryKross/BGBuddy)
 
-<img src="https://user-images.githubusercontent.com/11561147/208538830-5ceb35ea-0ee1-4cdb-b980-db8bcfabd936.jpg" style="zoom:10%;" />
+<img src="https://user-images.githubusercontent.com/11561147/208538830-5ceb35ea-0ee1-4cdb-b980-db8bcfabd936.jpg" width="400px" />
 
 </br>
 
 ### [SugarPiDisplay](https://github.com/bassettb/SugarPiDisplay)
 
-<img src="https://raw.githubusercontent.com/bassettb/SugarPiDisplay/master/docs/image2.jpg" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/bassettb/SugarPiDisplay/master/docs/image2.jpg" width="200px" />
 
 </br>
 
