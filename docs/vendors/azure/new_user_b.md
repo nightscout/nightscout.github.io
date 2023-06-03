@@ -2,31 +2,40 @@
 orphan: true
 ---
 
-c) Open a new browser tab or window and Log in [Heroku](https://id.heroku.com/login), select your app
+```{tab-set}
 
-<img src="/vendors/heroku/img/SetupNS00.png" width="800px" /></br>
+:::{tab-item} Migrating from Heroku
+c) Open a new browser tab or window and Log in [Heroku](https://id.heroku.com/login), select your app</br></br>
+<img src="/vendors/heroku/img/SetupNS00.png" width="800px" /></br></br>
+d) Click `Settings`</br></br>
+<img src="/vendors/heroku/img/SetupNS01.png" width="800px" /></br></br>
+e) Scroll down and click `Reveal Config Vars`</br></br>
+<img src="/vendors/heroku/img/SetupNS02.png" width="800px" /></br></br>
+f) Put the two windows Heroku and Azure side by side</br></br>
+<img src="/vendors/azure/img/Azure16.png" width="800px" /></br></br>
+Now for every (no, not necessarily, read until **i** and come back) variable you need to do the following:</br></br>
+:::
+
+:::{tab-item} Migrating from Railway
+c) Open [Railway](https://railway.app) and click `login`. Login with GitHub.</br></br>
+<img src="/vendors/railway/img/Railway00.png" width="600px" /></br></br>
+<img src="/vendors/railway/img/Railway01.png" width="300px" /></br></br>
+d) Select your Nightscout project.</br></br>
+<img src="/vendors/railway/img/RailwayM15.png" width="400px" /></br></br>
+Select your web app.</br></br>
+<img src="/vendors/railway/img/RailwayM16.png" width="300px" /></br></br>
+e) Click on `Variables`.</br></br>
+<img src="/vendors/railway/img/RailwayM17.png" width="400px" /></br></br>
+Click on `RAW Editor` top right</br></br>
+<img src="/vendors/railway/img/Railway39.png" width="600px" /></br></br>
+f) Put the two windows Railway and Azure side by side</br></br>
+<img src="/vendors/azure/img/Azure16r.png" width="800px" /></br></br>
+Now for every variable you need to do the following:</br></br>
+:::
+
+```
 
 </br>
-
-d) Click `Settings`
-
-<img src="/vendors/heroku/img/SetupNS01.png" width="800px" /></br>
-
-</br>
-
-e) Scroll down and click `Reveal Config Vars`
-
-<img src="/vendors/heroku/img/SetupNS02.png" width="800px" /></br>
-
-</br>
-
-f) Put the two windows Heroku and Azure side by side
-
-<img src="/vendors/azure/img/Azure16.png" width="800px" /></br>
-
-</br>
-
-Now for every (no, not necessarily, read until **i** and come back) variable you need to do the following:
 
 g) Click + New application setting
 
@@ -34,8 +43,8 @@ g) Click + New application setting
 
 </br>
 
-h) In Name write the variable name from the first column in Heroku  
-Then, in the line below, Value, paste the value from the second column in Heroku.
+h) In Name write the variable name from the first column in Heroku or the one in red with Railway  
+Then, in the line below, Value, paste the value from the second column in Heroku or the one in green with Railway.
 
 <img src="/vendors/azure/img/Azure38.png" width="300px" /></br>
 

@@ -192,7 +192,7 @@ b) In the left menu select Configuration
 :::{include} /vendors/azure/new_user_a.md
 :::
 
-:::{tab-item} I'm migrating from Heoku
+:::{tab-item} I'm migrating from another platform
 :::{include} /vendors/azure/new_user_b.md
 :::
 
