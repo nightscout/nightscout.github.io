@@ -58,8 +58,8 @@ function Validate()
 	sel = document.getElementById("COST");
 	switch(sel.selectedIndex)
 	{
-		case 0: dbNort=0; nsHero=0; dbAtlaP=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; break
-		case 1: dbNort=0; nsHero=0; dbAtlaP=0; nsT1Pal=0; ns10be=0; nsPro=0; break
+		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; break
+		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; break
 		case 2: dbAtlaP=0; nsT1Pal=0; break
 		case 3: nsT1Pal=0; break
 		case 4: break
@@ -73,7 +73,7 @@ function Validate()
 	}
 	if(dbAtla) sDB=sDB+" - Free MongoDB Atlas (limited to 512MiB) <br />"
 	if(dbAtlaP) sDB=sDB+" - M2 MongoDB Atlas (9$/month) <br />"
-	if(dbRail) sDB=sDB+" - Railway Mongo database (free if <300MiB) <br />"
+	if(dbRail) sDB=sDB+" - Railway Mongo database (10$/GiB/month)<br />"
 	if(dbNort) sDB=sDB+" - Northflank Mongo database (0.3$/GiB/month) <br />"
 	if(dbVPS) sDB=sDB+" - VPS Mongo database (Oracle, Google, ...) <br />"
 	if(nsT1Pal|ns10be|nsPro) sDB=sDB+" - Database included in the hosted service <br />"
@@ -85,7 +85,7 @@ function Validate()
 		if(sDB!=" - Database included in Google Cloud <br />"&sDB!=" - Database included in the hosted service <br /> - Database included in Google Cloud <br />")
 		{
 			if(nsHero) sNS=sNS+" - Heroku Eco plan (5$/month) <br />"
-			if(nsRail) sNS=sNS+" - Railway Free Developer plan <br />"
+			if(nsRail) sNS=sNS+" - Railway Hobby plan (5$/month)<br />"
 			if(nsNort) sNS=sNS+" - Northflank Free Developer plan <br />"
 			if(nsAzur) sNS=sNS+" - Azure Basic plan (using always free services) <br />"
 			if(nsVPS) sNS=sNS+" - Oracle Cloud Free E2.1 micro tier <br />"

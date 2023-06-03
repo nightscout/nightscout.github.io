@@ -9,6 +9,13 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 
 </br>
 
+```{danger}
+The free plan will be removed Jul 3rd for new users and Aug 1st for existing users.</br>
+Documentation will be updated to reflect the changes when visible.
+```
+
+</br>
+
 ```{card}
 ## Railway.app
 ![Railway](/vendors/img/Railway.png)
@@ -16,7 +23,7 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 You can easily create a new Railway Nightscout site with a [MongoDB Atlas](/vendors/mongodb/atlas) database or a [Railway MongoDB database](/vendors/railway/database).
 
 **Pros**:  
-* Nightscout fits in the free tier using a developer account  
+* Nightscout fits in the 5$/month Hobby account  
 * Easy to deploy or migrate an existing site from Heroku  
 * Simple to use and troubleshoot  
 * Can use a native Railway MongoDB database ($)  
@@ -119,6 +126,13 @@ e) Scroll down and click `I will not deploy any of that`.
 
 </br>
 
+```{danger}
+The free plan will be removed Jul 3rd for new users and Aug 1st for existing users.</br>
+Documentation will be updated to reflect the changes when visible.
+```
+
+</br>
+
 f) You should now see this. You've created your Railway account.  
 If it still shows 200 hours, refresh your browser page.
 
@@ -126,27 +140,17 @@ If it still shows 200 hours, refresh your browser page.
 
 </br>
 
-g) You need to use Nightscout for more than 500 hours per month: upgrade your account to a Developer plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
+g) You need to use Nightscout for more than one month: upgrade your account to a Hobby plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
 
 <img src="/vendors/railway/img/Railway06b.png" width="300px" />
 
 </br>
 
-Enter your credit card information and select `Subscribe to a Developer Plan`.
+Enter your credit card information and select `Subscribe to a Hobby Plan`.
 
 <img src="/vendors/railway/img/Railway06c.png" width="600px" />
 
 Your card will be billed 1$ that will be refund immediately. Bank fees won't be refund.
-
-</br>
-
-```{admonition} One-off purchase
-:class: note
-<img src="/vendors/railway/img/Railway06e.png" width="500px" />
-
-If you are reluctant to leave a billing method to Railway, you can **opt for a one-off 5$ purchase guaranteeing you access to a Developer plan** until this credit will be used (which is also an insurance against seeing your site stop unexpectedly).  
-No billing will occur after the initial credits are fully used. They will transfer month to month with no known limit in time.    
-```
 
 </br>
 

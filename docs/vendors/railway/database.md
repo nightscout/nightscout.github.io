@@ -18,13 +18,11 @@ Railway offers a Mongo database.
 **Pros**:  
 * Simple to create  
 * Less overhead than Atlas (more space)  
-* Mongo database cost is $0.000231/GB/Minute, a small database will be free
-* The developer [plan](https://docs.railway.app/reference/plans) is meant for hobbyist workloads
+* Mongo database cost is $0.000231/GB/Minute, a small database will fir in the Hobby plan without additional charges
 
 **Cons**:  
-* Running a standalone database (without a Railway Nightscout site) will start billing above ~300MiB used  
-* Running a database together with a Railway Nightscout site will start billing above ~200MiB used
-* You need to carefully monitor your database size and clean it up regularly to remain below billing threshold
+* Running a database together with a Railway Nightscout site will increase charges above ~200MiB used
+* You need to carefully monitor your database size and clean it up regularly to remain within the Hobby plan 5$/month limits
 * Simple Mongo 4.4 database
 ```
 
@@ -92,29 +90,22 @@ f) You should now see this. You've created your Railway account.
 
 </br>
 
-g) You need to use your database for more than 200 hours per month: upgrade your account to a Developer plan. Click on the `Unverified` and select `Remove Resource Limits`.
+g) Upgrade your account to a Developer plan. Click on the `Unverified` and select `Remove Resource Limits`.
 
 <img src="/vendors/railway/img/Railway06b2.png" width="300px" />
 
 </br>
 
-Enter your credit card information and select `Subscribe to a Developer Plan`.
+```{danger}
+The free plan will be removed Jul 3rd for new users and Aug 1st for existing users.</br>
+Documentation will be updated to reflect the changes when visible.
+```
+
+Enter your credit card information and select `Subscribe to a Hobby Plan`.
 
 <img src="/vendors/railway/img/Railway06c.png" width="500px" />
 
 Your card will be billed 1$ that will be refund immediately. Bank fees won't be refund.
-
-</br>
-
-```{admonition} One-off purchase
-:class: hint
-If you are reluctant to leave a billing method to Railway, you can **opt for a one-off 5$ purchase guaranteeing you access to a Developer plan** until this credit will be used (which is also a good solution to monitor your database use).</br>
-No billing will occur after the initial credits are fully used. They will transfer month to month with no known limit in time.
-```
-
-<img src="/vendors/railway/img/Railway06d.png" width="500px" />  
-
-<img src="/vendors/railway/img/Railway06e.png" width="500px" />
 
 </br>
 

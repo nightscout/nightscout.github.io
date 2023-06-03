@@ -4,6 +4,15 @@
 
 ## Nothing here
 
+</br>
+
+```{danger}
+The free plan will be removed Jul 3rd for new users and Aug 1st for existing users.</br>
+Documentation will be updated to reflect the changes when visible.
+```
+
+</br>
+
 It has been running fine for the first 200/500 hours and now it's gone. Even the project disappeared in Railway.
 
 <img src="/vendors/railway/img/RailwayT12.png" width="300px" />

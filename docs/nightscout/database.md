@@ -79,11 +79,10 @@ Railway offers a Mongo database.
 **Pros**:  
 * Simple to create  
 * Less overhead than Atlas (more space)  
-* Free small database
+* A small database fits in the Hobby plan without additional charges
 
 **Cons**:  
-* Running a standalone database (without a Railway Nightscout site) will start billing above ~300MiB used  
-* Running a database together with a Railway Nightscout site will start billing above ~200MiB used
+* Running a database together with a Railway Nightscout site will increase billing above ~200MiB used
 * Simple Mongo 4.4 database
 +++
 Follow [these instructions](/vendors/railway/database.md) to create a database in Railway.

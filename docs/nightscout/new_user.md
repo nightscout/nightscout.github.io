@@ -1178,7 +1178,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   <td height=20 class=xl77543 width=113 style='height:15.35pt;border-top:none;
   width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Railway</td>
   <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Free Developer plan</td>
+  border-top:0.05rem solid var(--md-typeset-table-color)'>5$ Hobby plan</td>
   <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
   <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
