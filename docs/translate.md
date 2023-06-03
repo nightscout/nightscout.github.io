@@ -1,54 +1,54 @@
 # Google Translate links
 
-[عربي](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ar)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ar">عربي</a>
 
-[Български](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=bg)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=bg">Български</a>
 
-[Čeština](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=cs)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=cs">Čeština</a>
 
-[Deutsch](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=de)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=de">Deutsch</a>
 
-[Dansk](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=da)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=da">Dansk</a>
 
-[Ελληνικά](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=el)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=el">Ελληνικά</a>
 
-[English](https://nightscout.github.io)
+<a href="https://nightscout.github.io">English</a>
 
-[Español](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=es)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=es">Español</a>
 
-[日本](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ja)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ja">日本</a>
 
-[Suomi](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=fi)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=fi">Suomi</a>
 
-[Français](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=fr)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=fr">Français</a>
 
-[עברית](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=iw)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=iw">עברית</a>
 
-[Hrvatski](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=hr)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=hr">Hrvatski</a>
 
-[Italiano](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=it)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=it">Italiano</a>
 
-[한국어](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ko)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ko">한국어</a>
 
-[Norsk](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=no)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=no">Norsk</a>
 
-[Nederlands](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=nl)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=nl">Nederlands</a>
 
-[Polski](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=pl)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=pl">Polski</a>
 
-[Português](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=pt)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=pt">Português</a>
 
-[Română](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ro)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ro">Română</a>
 
-[Русский](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ru)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=ru">Русский</a>
 
-[Slovenčina](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=sk)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=sk">Slovenčina</a>
 
-[Svenska](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=sv)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=sv">Svenska</a>
 
-[Turkish](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=tr)
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=tr">Turkish</a>
 
-中文（[简体](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh-CN))
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh-CN">中文（简体</a>
 
-中文（[繁體](https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh-TW))
+<a href="https://nightscout-github-io.translate.goog/?_x_tr_sl=auto&_x_tr_tl=zh-TW">中文（繁體</a>
 
