@@ -44,7 +44,7 @@ You will need:
 
 -   A CGM sensor
 
--   A way to [upload](uploader/uploaders.md) your data, to be stored in Nightscout (this is generally an internet-connected mobile phone with a matching uploader app)
+-   A way to [upload](uploader/uploaders) your data, to be stored in Nightscout (this is generally an internet-connected mobile phone with a matching uploader app)
 
 -   Internet access
 
@@ -83,7 +83,7 @@ The Nightscout development community actively supports both of these choices.
 ## Build your own Nightscout DIY site
 
 ```{tip}
-</br><span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions ⇒ [**HERE**](../nightscout/new_user/) ⇐.</span></br></br>
+</br><span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions ⇒ [**HERE**](/nightscout/new_user/) ⇐.</span></br></br>
 ```
 
 **Note:** DIY users of Nightscout have been historically using platforms like [Digital Ocean](https://github.com/jasoncalabrese/project-glu/blob/master/README.md), [Microsoft Azure](https://docs.google.com/document/d/1RP-0KAX0Z46iGmShBdygY7_vQN1d-xEgtK_dSsjCA20/edit) and then Salesforce Heroku to host their sites. With time, more platforms were added.
@@ -188,94 +188,95 @@ Finally, to help on the development of Nightscout itself, feel free to join in a
 
 ```{toctree}
 :hidden:
-uploader/uploaders.md
+uploader/uploaders/
 ```
 
 ```{toctree}
 :hidden:
 :caption: CREATE YOUR NIGHTSCOUT
-nightscout/new_user.md
-nightscout/wizard.md
+nightscout/new_user/
+nightscout/wizard/
 ```
 
 ```{toctree}
 :hidden:
 :caption: CREATE YOUR DATABASE
-nightscout/database.md
-vendors/mongodb/atlas.md
-vendors/railway/database.md
-vendors/northflank/database.md
+nightscout/database/
+vendors/mongodb/atlas/
+vendors/railway/database/
+vendors/northflank/database/
 ```
 
 ```{toctree}
 :hidden:
 :caption: CREATE YOUR WEB APP
-nightscout/platform.md
-vendors/railway/new_user.md
-vendors/northflank/new_user.md
-vendors/azure/new_user.md
-vendors/heroku/new_user.md
-vendors/fly.io/new_user.md
+nightscout/platform/
+vendors/azure/new_user/
+vendors/northflank/new_user/
+vendors/railway/new_user/
+vendors/heroku/new_user/
+vendors/fly.io/new_user/
 ```
 
 ```{toctree}
 :hidden:
 :caption: SETUP NIGHTSCOUT
-nightscout/profile_editor.md
-uploader/setup.md
-nightscout/downloaders.md
-nightscout/wearable.md
-nightscout/setup_variables.md
-uploader/xdripcarelink.md
-troubleshoot/dexcom_bridge.md
+nightscout/profile_editor/
+uploader/setup/
+nightscout/downloaders/
+nightscout/wearable/
+nightscout/setup_variables/
+uploader/xdripcarelink/
+troubleshoot/dexcom_bridge/
 ```
 
 ```{toctree}
 :hidden:
 :caption: USE NIGHTSCOUT
-nightscout/discover.md
-nightscout/reports.md
-nightscout/security.md
-nightscout/admin_tools.md
-nightscout/close_loop.md
-nightscout/ifttt.md
-nightscout/pushover.md
-troubleshoot/troubleshoot.md
-update/update.md
-update/dev_branch.md
-update/downgrade.md
+nightscout/discover/
+nightscout/reports/
+nightscout/security/
+nightscout/admin_tools/
+nightscout/close_loop/
+nightscout/ifttt/
+nightscout/pushover/
+troubleshoot/troubleshoot/
+update/update/
+update/dev_branch/
+update/downgrade/
 ```
 
 ```{toctree}
 :hidden:
 :caption: ADVANCED DIY
-nightscout/advanced.md
-vendors/VPS/ubuntu.md
-vendors/VPS/docker.md
-vendors/NAS/synology.md
+nightscout/advanced/
+vendors/VPS/ubuntu/
+vendors/VPS/docker/
+vendors/NAS/synology/
 ```
 
 ```{toctree}
 :hidden:
 :caption: VENDORS
-nightscout/multiadmin.md
-vendors/github/update.md
-update/redeploy.md
-troubleshoot/github.md
-troubleshoot/atlas.md
-troubleshoot/heroku.md
-vendors/heroku/migrate.md
-vendors/heroku/ecoplan.md
-vendors/heroku/hobbyplan.md
-vendors/heroku/mfa.md
-update/upd_stack.md
-troubleshoot/railway.md
-troubleshoot/fly.io.md
-nightscout/dns.md
+nightscout/multiadmin/
+vendors/github/update/
+update/redeploy/
+troubleshoot/github/
+troubleshoot/atlas/
+troubleshoot/azure/
+troubleshoot/heroku/
+vendors/heroku/migrate/
+vendors/heroku/ecoplan/
+vendors/heroku/hobbyplan/
+vendors/heroku/mfa/
+update/upd_stack/
+troubleshoot/railway/
+troubleshoot/fly.io/
+nightscout/dns/
 ```
 
 ```{toctree}
 :hidden:
 :caption: TRANSLATE
-translate.md
+translate/
 ```
