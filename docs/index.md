@@ -211,9 +211,9 @@ vendors/northflank/database/
 :hidden:
 :caption: CREATE YOUR WEB APP
 nightscout/platform/
-vendors/railway/new_user/
-vendors/northflank/new_user/
 vendors/azure/new_user/
+vendors/northflank/new_user/
+vendors/railway/new_user/
 vendors/heroku/new_user/
 vendors/fly.io/new_user/
 ```
@@ -263,6 +263,7 @@ vendors/github/update/
 update/redeploy/
 troubleshoot/github/
 troubleshoot/atlas/
+troubleshoot/azure/
 troubleshoot/heroku/
 vendors/heroku/migrate/
 vendors/heroku/ecoplan/
