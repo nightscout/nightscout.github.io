@@ -29,14 +29,19 @@ $ pip install -r requirements.txt
 
 ```bash
 $ cd <nightscout docs location>/docs
-$ ./make.bat html
+$ ./make.bat dirhtml
 ```
 
-* Open the resulting documentation html file from the build folder
+* Start a local http server to view the documentation
 
 ```bash
-$ https://<nightscout docs location>/_build/html/index.html
+$ cd <nightscout docs location>/_build/dirhtml
+$ python -m http.server
 ```
+
+* You can now browse the documentation locally at  [http://localhost:8000/](http://localhost:8000/) 
+
+
 
 * Optionally, you can share the preview with others by building them in your repository with GitHub pages. You need to enable GitHub pages in your repository fork. The workflow in `.github/workflows/documentation.yaml` will automatically create and deploy your pages. 
 
