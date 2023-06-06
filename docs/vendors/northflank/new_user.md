@@ -159,7 +159,12 @@ To open your Nightscout site, navigate to your project `Services` and click the 
 
 ## Change your Northflank Nightscout site name
 
-You [cannot](https://northflank.com/docs/v1/application/network/configure-ports#public-ports) override the default name if you don't have a DNS. You can use a free [dynamic DNS](/nightscout/dns) service to do this in order to have something easier to remember.
+You [cannot](https://northflank.com/docs/v1/application/network/configure-ports#public-ports) override the default name if you don't have a DNS.  
+You can use [TinyURL](https://tinyurl.com/) to get a shorter name.
+
+<img src="/vendors/northflank/img/TinyURL.png" width="300px" />
+
+You can also use a free [dynamic DNS](/nightscout/dns) service to do this in order to have something easier to remember.
 
 Keep the original Northflank URL in your [uploaders](/uploader/setup/) and [followers](/nightscout/downloaders/).
 
