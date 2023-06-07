@@ -573,7 +573,7 @@ Write `devicestatus` in the box then click `Drop`
 
 <img src="/vendors/mongodb/img/TShoot56.png" width="300px" >
 
-Restart your site and when it opens, consider [cleanup](#cleanup) from Admin Tools if your database size exceeds 80%.
+Restart your site and when it opens, consider [cleanup](#normal-cleanup) from Admin Tools if your database size exceeds 80%.
 
 </br>
 
@@ -614,7 +614,7 @@ If you are using Loop, temporarily change a basal rate in Loop, and confirm your
 
 ## Data in the future
 
-First try to [remove future items with the Admin Tools](/admin_tools.md#remove-future-items-from-database).
+First try to [remove future items with the Admin Tools](/nightscout/admin_tools.md#remove-future-items-from-database).
 
 If it doesn't give the expected result:
 
@@ -644,8 +644,9 @@ It is very easy to get lost in Atlas.
 
 The structure from top to bottom is: Organization, Projects and Databases. You can have several organizations, each of them several projects and each of them several databases.
 
-!!!note
-    If you are deploying a brand new Nightscout make sure you have one organization, one project and one cluster created. No more no less.
+```{hint}
+If you are deploying a brand new Nightscout make sure you have one organization, one project and one cluster created. No more no less.
+```
 
 If you want to cleanup Atlas, unless you don't have data, you must first find out which database contains your data. For this, start from `View All Organizations`:
 

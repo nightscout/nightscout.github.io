@@ -6,6 +6,10 @@ Nightscout offers some fantastic data-crunching report tools in the drawer menu,
 
 </br>
 
+An interesting video on how to use them [with Gary Scheiner](https://www.youtube.com/watch?v=hfzuFumN03o).
+
+</br>
+
 Select `Reports` to open the reports page.
 
 <img src="/nightscout/img/Reports00.png" width="600px" />
