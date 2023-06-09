@@ -43,7 +43,7 @@ Click OK.
 </br>
 
 f) Click again + New application setting and write `DISPLAY_UNITS` in Name.  
-Acceptable choices for the units used in Nightcout are `mg/dl` or `mmol/L` (or just `mmol`).
+Acceptable choices for the units used in Nightscout are `mg/dl` or `mmol/L` (or just `mmol`).
 
 <img src="/vendors/azure/img/Azure38.png" width="300px" /></br>
 

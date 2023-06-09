@@ -614,7 +614,7 @@ If you are using Loop, temporarily change a basal rate in Loop, and confirm your
 
 ## Data in the future
 
-First try to [remove future items with the Admin Tools](/nightscout/admin_tools.md#remove-future-items-from-database).
+First try to [remove future items with the Admin Tools](/nightscout/admin_tools/#remove-future-items-from-database).
 
 If it doesn't give the expected result:
 
