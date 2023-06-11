@@ -30,30 +30,30 @@ If it's simple and reliable it might not be free
 function Validate()
 {
 	var dbAtla, dbAtlaP, dbRail, dbNort, dbVPS
-	var nsHero, nsRail, nsNort, nsAzur, nsVPS, nsFly, nsGoog, nsT1Pal, ns10be, nsPro
+	var nsHero, nsRail, nsNort, nsAzur, nsVPS, nsFly, nsRend, nsGoog, nsT1Pal, ns10be, nsPro
 	var sDB, sNS
 	sDB=""; sNS=""
 	dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1;
-	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1
+	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1
 	sel = document.getElementById("CONT");
 	switch(sel.selectedIndex)
 	{
 	    case 0: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0;
-		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsGoog=0; ns10be=0; nsPro=0;
+		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsRend=0; nsGoog=0; ns10be=0; nsPro=0;
 		break;
 	}
 	sel = document.getElementById("SIMPLE");
 	switch(sel.selectedIndex)
 	{
 		case 0: dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1; nsHero=1; nsRail=1;
-	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; 
+	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; 
 	    		sDB="[Reliability constrains removed for IT knowledgeable user]<br />";
 	    		sNS="[Reliability constrains removed for IT knowledgeable user]<br />"
 	    		break
 		case 1: dbVPS=0; nsFly=0; nsVPS=0; break
-		case 2: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0; nsFly=0; nsVPS=0; break
+		case 2: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0; nsFly=0; nsRend=0; nsVPS=0; break
 		case 3: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0; nsGoog=0; nsHero=0; nsRail=0; nsNort=0;
-				nsAzur=0; nsFly=0; nsGoog=0; nsVPS=0; break
+				nsAzur=0; nsFly=0; nsRend=0; nsGoog=0; nsVPS=0; break
 	}
 	sel = document.getElementById("COST");
 	switch(sel.selectedIndex)
@@ -67,7 +67,7 @@ function Validate()
 	sel = document.getElementById("RELY");
 	switch(sel.selectedIndex)
 	{
-		case 0: nsHero=0; dbAtla=0; dbRail=0; dbVPS=0; nsFly=0; nsGoog=0; nsVPS=0; break
+		case 0: nsHero=0; dbAtla=0; dbRail=0; dbVPS=0; nsFly=0; nsRend=0; nsGoog=0; nsVPS=0; break
 		case 1: nsFly=0; break
 		case 2: break
 	}
@@ -90,6 +90,7 @@ function Validate()
 			if(nsAzur) sNS=sNS+" - Azure Basic plan (using always free services) <br />"
 			if(nsVPS) sNS=sNS+" - Oracle Cloud Free E2.1 micro tier <br />"
 			if(nsFly) sNS=sNS+" - Fly.io Free Hobby plan <br />"
+            if(nsRend) sNS=sNS+" - Render Free Instance <br />"
 		}
 		if(nsGoog) sNS=sNS+" - Google Cloud Free e2-micro tier <br />"
 	}
@@ -100,6 +101,7 @@ function Validate()
 	document.getElementById("resultNS").innerHTML = sNS;
 }
 </script>
+
 
 </br>
 
@@ -141,7 +143,8 @@ VPS Mongo Database
 [Railway](/vendors/railway/new_user.md)  
 [Northflank](/vendors/northflank/new_user.md)  
 [Fly.io](/vendors/fly.io/new_user.md)  
-[Azure](/vendors/azure/new_user.md)
+[Azure](/vendors/azure/new_user.md)  
+[Render](/vendors/render/new_user.md)
 
 ## <u>VPS</u>
 

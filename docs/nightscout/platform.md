@@ -140,3 +140,22 @@ A scripted Nightscout installation in Google Cloud is a new complete solution pr
 Follow [these instructions](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html) to build your Nightscout site in Google Cloud.
 ```
 
+```{card}
+## Render
+![xDrip+](/vendors/img/Render.png)
+^^^
+A free solution with little experience.
+
+**Pros**:  
+* No credit card required
+
+**Cons**:
+* The free plan doesn't guarantee any reliability
+* App will sleep after 15 minutes
+* Render URLs are considered unsafe by some internet providers
+* Relying on the MongoDB Atlas database
+
++++
+Follow [these instructions](/vendors/render/new_user.md) to build your Nightscout site in Render.
+```
+

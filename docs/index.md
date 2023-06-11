@@ -213,6 +213,7 @@ vendors/northflank/database/
 nightscout/platform/
 vendors/azure/new_user/
 vendors/northflank/new_user/
+vendors/render/new_user/
 vendors/railway/new_user/
 vendors/heroku/new_user/
 vendors/fly.io/new_user/

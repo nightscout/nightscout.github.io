@@ -13,13 +13,6 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 
 </br>
 
-```{danger}
-**Deploying Nightscout in Render is in exploration phase.**</br>
-**Do not use it if you expect a reliable Nightscout site.**
-```
-
-</br>
-
 ```{card}
 ## Render
 ![Render Free](/vendors/img/Render.png)

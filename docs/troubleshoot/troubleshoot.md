@@ -32,6 +32,24 @@ Check the services you're using are available
 
 ------
 
+## Application crashed
+
+Not knowing if it's a permanent issue, first try to restart it...
+
+```{tab-set}
+
+:::{tab-item} Heroku
+[Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
+:::
+
+:::{tab-item} Railway/Northflank/Azure/Fly.io
+[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+```
+
+-----------
+
 ## GitHub
 
 Follow [these](/troubleshoot/github) instructions.

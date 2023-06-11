@@ -1196,6 +1196,17 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl105543 style='border-top:none'>&nbsp;</td>
  </tr>
+ <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
+  <td height=20 class=xl77543 width=113 style='height:15.35pt;border-top:none;
+  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Render</td>
+  <td class=xl104543 width=142 style='border-top:none;width:107pt'>Free
+  Instance</td>
+  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
+  border-top:0.05rem solid var(--md-typeset-table-color)'>No</td>
+  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
+  border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
+  <td class=xl105543 style='border-top:none'>&nbsp;</td>
+ </tr>
  <tr height=21 style='height:16.0pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
   <td height=21 class=xl70543 width=113 style='height:16.0pt;width:85pt;
   box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Fly.io</td>
@@ -1335,6 +1346,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
  <![endif]>
 </table>
 </div>
+
 
 
 </body>
