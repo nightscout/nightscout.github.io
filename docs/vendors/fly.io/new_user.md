@@ -253,6 +253,13 @@ i) Inside your app you should see that it is running and has a clickable hostnam
 
 </br>
 
+j) Recent versions of flyctl will make the app high availability (2 machines) by default, and this might generate problems for Nightscout.  
+Make sure to downscale your app with the following command (replace ***`app_name`*** with your own app name):
+
+`flyctl scale --app `***`app_name`***` count 1`
+
+</br>
+
 ```{include} /nightscout/first_setup.md
 
 ```
