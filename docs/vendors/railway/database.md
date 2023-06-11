@@ -9,6 +9,13 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 
 </br>
 
+```{danger}
+The free plan will be removed Jul 3rd for new users and Aug 1st for existing users.</br>
+Documentation will be updated to reflect the changes when visible.
+```
+
+</br>
+
 ```{card}
 ## Railway Mongo Database
 ![Railway](/vendors/img/Railway.png) ![MongoDB](/vendors/img/MongoDB.png)
@@ -18,10 +25,9 @@ Railway offers a Mongo database.
 **Pros**:  
 * Simple to create  
 * Less overhead than Atlas (more space)  
-* Mongo database cost is $0.000231/GB/Minute, a small database will fir in the Hobby plan without additional charges
+* Mongo database cost is $0.000231/GB/Minute
 
 **Cons**:  
-* Running a database together with a Railway Nightscout site will increase charges above ~200MiB used
 * You need to carefully monitor your database size and clean it up regularly to remain within the Hobby plan 5$/month limits
 * Simple Mongo 4.4 database
 ```
