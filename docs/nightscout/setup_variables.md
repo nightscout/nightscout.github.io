@@ -22,6 +22,10 @@ Nightscout configuration is held in variables , their content can be modified to
 [**→ Here**](/vendors/azure/new_user.md#editing-config-vars-in-azure)
 :::
 
+:::{tab-item} Render
+[**→ Here**](/vendors/render/new_user.md#editing-variables-in-render)
+:::
+
 :::{tab-item} Fly.io
 [**→ Here**](/vendors/fly.io/new_user.md#editing-config-vars-in-fly-io)
 :::

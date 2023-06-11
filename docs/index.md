@@ -273,6 +273,7 @@ vendors/heroku/mfa/
 update/upd_stack/
 troubleshoot/railway/
 troubleshoot/fly.io/
+troubleshoot/render/
 nightscout/dns/
 ```
 

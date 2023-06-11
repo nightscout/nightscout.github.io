@@ -46,6 +46,10 @@ Not knowing if it's a permanent issue, first try to restart it...
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
 :::
 
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
+:::
+
 ```
 
 -----------
@@ -117,7 +121,8 @@ CareLink with mmconnect data source stopped functioning for 7xx pumps.
 
 First verify you can see your BG in Clarity.
 
-If you're using Heroku, check the web app is not [sleeping](/troubleshoot/heroku.md#sleeping-app).
+If you're using Heroku, check the web app is not [sleeping](/troubleshoot/heroku.md#sleeping-app).  
+You might need to setup an Uptime robot for Heroku Eco plan and Render.
 
 ```{admonition} UpTime Robot
 Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account ([Dexcom](/troubleshoot/dexcom_bridge.md#account-lock)).
