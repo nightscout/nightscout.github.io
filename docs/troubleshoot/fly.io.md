@@ -149,6 +149,17 @@ Type the command:
 
 Deploy will take some time and should complete with the message `1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]`.
 
+</br>
+
+[Check your app is running on only one machine.](https://fly.io/dashboard/personal/machines)  
+If you only deployed one app and you see two machine like this:
+
+<img src="/vendors/fly.io/img/FlyT07.png" width="600px" />
+
+Then [downscale your app](#downscale-your-app) and come back.
+
+</br>
+
 If you decided to keep the variables secret you have completed recovery.
 
 </br>
@@ -192,3 +203,26 @@ Your `fly.toml` contains confidential information that might be visible to anybo
 ```
 
 Congratulations. You can now easily [modify your Nightscout Fly.io variables](/vendors/fly.io/new_user.md#env-variables) and [update](/update/update) your site.
+
+</br>
+
+## Downscale your app
+
+March 31st 2023, apps deploy in V2 and V1 apps are automatically migrated too.  
+This causes some issues as V2 automatically deploys in a more than one machine, your Nightscout site might not work correctly.
+
+You cannot downscale your app unless you've made it [maintainable](#make-your-migrated-app-maintainable).
+
+Type the following command in your `cgm-remote-monitor` local folder (replace ***`app_name`*** with your own app name):
+
+`flyctl scale --app `***`app_name`***` count 1`
+
+<img src="/vendors/fly.io/img/FlyT08.png" width="600px" />
+
+Your app should now only be running on one machine. Check [here](https://fly.io/dashboard/personal/machines).
+
+***Note:*** *the builder app is normal, it is stopped: don't worry about it.*
+
+<img src="/vendors/fly.io/img/FlyT09.png" width="600px" />
+
+</br>
