@@ -6,7 +6,7 @@
 
 ```{tab-set}
 
-:::{tab-item} Heroku Railway Northflank
+:::{tab-item} Heroku Railway Northflank Render
 </br>You need to update your GitHub repository.
 </br>
 :::{include} /vendors/github/update_b.md

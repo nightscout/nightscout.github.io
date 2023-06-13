@@ -1,12 +1,22 @@
 # Update Nightscout
 
+```{tip}
+You don't need to follow these instructions if you use a hosted service.</br>Contact the vendor to learn more about possible updates.
+```
+
+</br>
+
 [See here which is the current released version](https://github.com/nightscout/cgm-remote-monitor/releases) before updating.
 
 </br>
 
 ## Step 1: Update your repository in GitHub
 
-Check **[here](/vendors/github/update)** if this is necessary.
+```{tip}
+Skip this step if you're using Azure, Google Cloud xDrip+ scripted deployment or Fly.io from the orignal `cgm-remote-monitor` repository.
+```
+
+Follow [these instructions](/vendors/github/update/) and come back.
 
 </br>
 
@@ -77,11 +87,7 @@ Deploy will take some time and should complete with the message</br>
 </br>
 :::
 
-:::{tab-item} Railway
-</br>Once GitHub updated, your Nightscout should automatically deploy with the latest version.</br></br>
-:::
-
-:::{tab-item} Northflank
+:::{tab-item} Railway Northflank Render
 </br>Once GitHub updated, your Nightscout should automatically deploy with the latest version.</br></br>
 :::
 
