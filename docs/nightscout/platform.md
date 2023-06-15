@@ -95,7 +95,7 @@ You can create your new Northflank Nightscout site, with its own Northflank data
 * Can use a native Northflank MongoDB database ($)  
 
 **Cons**:  
-* The Nightscout address generated for your site is impossible to remember, you can fix this with a [DNS service](/nightscout/dns) 
+* The Nightscout address generated for your site is impossible to remember
 
 +++
 Follow [these instructions](/vendors/northflank/new_user.md) to build your Nightscout site in Northflank.

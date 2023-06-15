@@ -22,7 +22,7 @@ You can create your new Northflank Nightscout site with a [MongoDB Atlas](/vendo
 * Can use a native Northflank MongoDB database ($)  
 
 **Cons**:  
-* The Nightscout address generated for your site is impossible to remember, you can fix this with a [DNS service](/nightscout/dns) 
+* The Nightscout address generated for your site is impossible to remember
 ```
 
 </br>

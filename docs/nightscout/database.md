@@ -56,21 +56,6 @@ Follow [these instructions](/vendors/mongodb/atlas.md) to build a small database
 ```
 
 ```{card}
-## Azure Cosmos Database
-![Azure Cosmos](/vendors/img/Cosmos.png)
-**Not recommended.**
-^^^
-Nightscout Azure DIY was [originally](https://github.com/rnpenguin/cgm-remote-monitor) created using an **external** mLab (now MongoDB) database.
-
-**Pros**:  
-* Can deploy during the Azure Nightscout site creation  
-
-**Cons**:  
-* Creation fails in some regions  
-* The Cosmos database doesn't integrate correctly with Nightscout
-```
-
-```{card}
 ## Railway Mongo Database
 ![Railway](/vendors/img/Railway.png) ![MongoDB](/vendors/img/MongoDB.png)
 ^^^

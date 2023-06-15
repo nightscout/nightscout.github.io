@@ -1,3 +1,12 @@
+---
+orphan: true
+---
+
+```{warning}
+Developers advice: not a good idea.</br>
+Stay tuned for a serious solution.
+```
+
 # Use a Dynamic DNS
 
 </br>

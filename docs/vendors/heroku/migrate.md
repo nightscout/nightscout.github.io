@@ -69,7 +69,7 @@ We really liked the Railway solution when we found it: it's very simple to migra
 
 ***Everybody else is going for Railway and you prefer a safer alternative because you're not afraid of an ugly Nightscout site name or adding a DDNS? Northflank is a good idea.***
 
-Not very sponsored, Northflank is also a good option, simple of use and offering a migration utility. The only issue is trying to remember your Nightscout site name (try `night--spicy-steam--nightscout--ci95-l9xw.code.run` for example). But this can be fixed easily using a free [DDNS](/nightscout/dns) service.
+Not very sponsored, Northflank is also a good option, simple of use and offering a migration utility. The only issue is trying to remember your Nightscout site name (try `night--spicy-steam--nightscout--ci95-l9xw.code.run` for example).
 
 ## **[Fly.io](/vendors/fly.io/migrate)**
 
