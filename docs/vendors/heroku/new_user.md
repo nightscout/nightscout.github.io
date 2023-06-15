@@ -25,6 +25,7 @@ You can create your new Nightscout site with Heroku using an Eco plan (5$/month)
 * The Eco plan has the same limitations than the previous Free plan, for 5$ per month
 * For a Nightscout site a 7$ per month Basic plan is not really worth it (compared to hosted solutions)
 * Relying on the MongoDB Atlas database
+* New sites naming add an identifier after the app name making it harder to remember
 ```
 
 </br>
@@ -193,6 +194,10 @@ Below you'll see the minimum required configuration, you can modify the variable
 </br>
 
 c) Enter your CGM in the Cloud site name: invent a name you will use to see your BG in the cloud. Confirm that the name is available.
+
+```{hint}
+Starting June 14th 2023, site names will include an [application name identifier](https://devcenter.heroku.com/articles/custom-domains) after your app name.
+```
 
 d) Don’t change the region.
 
@@ -386,6 +391,11 @@ You have completed a new Nightscout site creation. The following section provide
 </br>
 
 ### Renaming your Nightscout site
+
+```{warning}
+Starting June 14th 2023, site names will include an [application name identifier](https://devcenter.heroku.com/articles/custom-domains) after your app name.</br>
+Keep this in mind if you want to rename your site: the result might not be as simple as it was before.
+```
 
 You can rename your Nightscout site URL in your app `Settings`.
 
