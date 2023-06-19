@@ -141,6 +141,18 @@ The site is  translated into multiple languages, with more in line to be added o
 More information about the companies background and processes can be found on the website at [Welcome to Nightscout.Pro.](https://nightscout.pro/welcome-to-nightscout-pro/)
 ```
 
+### Glycemia IO
+
+```{card}
+<img src="https://www.glycemia.io/images/logo.svg" width="400">
++++
+[Glycemia.IO](https://www.glycemia.io/) was created in 2023 by a Type 1 Diabetic & software engineer from Portugal. This project aims to deliver NightScout instances free (for 30 days), offers a migration tool to migrate data from your old instance.
+
+The planned cost of the instances (after the free period) is 3 EUR.
+
+Support is currently available by Facebook Messenger and/or support@glycemia.io.
+```
+
 ## Who Can Help Me?
 
 You will find many willing and open-hearted people in the Facebook groups. 
