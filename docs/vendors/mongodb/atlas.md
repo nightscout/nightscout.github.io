@@ -15,13 +15,13 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 ^^^
 MongoDB bought [mLab](https://twitter.com/chrisckchang/status/506959446753284096) in 2018 and shutdown its service in 2020. Most users migrated to MongoDB Atlas, using a free M0 database with a limited 512MB capacity. Leaving the database grow uncontrolled usually leads to a Nightscout crash.
 
-**Pros**:  
-* The M0 cluster is free  
+**Pros**:
+* The M0 cluster is free
 * Nightscout was adapted to MongoDB Atlas
 
-**Cons**:  
-* M0 clusters are designed for learning and testing, not production  
-* There is no warranty the M0 cluster will remain in the future  
+**Cons**:
+* M0 clusters are designed for learning and testing, not production
+* There is no warranty the M0 cluster will remain in the future
 * A larger M2 cluster costs 9$ per month (consider hosted Nightscout)
 * A full M0 database crashes Nightscout, this is a common issue for DIY closed loop system users
 ```
@@ -149,7 +149,7 @@ k) If displayed, click on `Choose a connection method` (else skip)
 
 </br>
 
-l) Select `Connect your application`
+l) Select `Drivers`
 
 <img src="./img/NewNS27.png" width="600px" />
 
@@ -241,8 +241,7 @@ p) If you want to do it manually: replace `<password>` with your database passwo
 
 </br>
 
-You have completed a MongoDB Atlas database creation.  
+You have completed a MongoDB Atlas database creation.
 Now that you have **copied** the resulting `MONGODB_URI` string to a **safe place**, go back to the instructions page you were following.
 
 </br>
-
