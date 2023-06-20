@@ -155,7 +155,7 @@ l) Select `Drivers`
 
 </br>
 
-m) Copy the connection string: click `Copy` and paste it somewhere to edit it (like Notepad).
+m) Scroll down (do not change any value) and copy the connection string: click `Copy` and paste it somewhere to edit it (like Notepad).
 
 <img src="./img/NewNS28.png" width="600px" />
 
