@@ -2,17 +2,17 @@
 
 </br>
 
-The most complete guide for building your site step by step is the one used for [Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf).  
-Just skip Oracle specific instructions and follow the flow.
+```{tip}
+<span style="font-size:larger;">The most complete guide for building your site step by step is the one used for [Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf).  
+If you use another hosting provider, skip Oracle specific instructions and follow the flow.</span>
+```
+
+</br>
 
 Original documentation from [Jason](https://github.com/nightscout/nightscout-docker).  
 More from [Andries](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705) and [Peter](https://github.com/peterleimbach/TestNightscoutDockerUbuntuServer22.04LTS) (traefik as below), [justmara](https://github.com/justmara/ns-setup) and [Ireneusz](https://github.com/ireneusz-ptak/ns-docker).
 
 A comprehensive description of the yaml file for mongo and Nightscout setup [here](https://github.com/LostOnTheLine/Nightscout_Docker-Compose).
-
-A dialog based script inspired from the xDrip+ team [here](https://github.com/psonnera/NSDockVPS).
-
-</br>
 
 If you don't own a domain name, get a DDNS name now: see [here](/nightscout/dns).
 

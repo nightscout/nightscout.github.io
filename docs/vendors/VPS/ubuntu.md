@@ -2,12 +2,14 @@
 
 </br>
 
-The most complete guide for building your site step by step is the one used for [Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf).  
-Just skip Oracle specific instructions and follow the flow.
-
-Deploying in Ubuntu is very popular for skilled people, see also [here](https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6) and [here](https://www.michael-schloemp.de/2021/10/25/nightscout-installation-auf-ubuntu-20-04-1blu-vps/).</br>
+```{tip}
+<span style="font-size:larger;">The most complete guide for building your site step by step is the one used for [Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf).  
+If you use another hosting provider, skip Oracle specific instructions and follow the flow.</span>
+```
 
 </br>
+
+Deploying in Ubuntu is very popular for skilled people, see also [here](https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6) and [here](https://www.michael-schloemp.de/2021/10/25/nightscout-installation-auf-ubuntu-20-04-1blu-vps/).</br>
 
 If you don't own a domain, get one now, see [here](/nightscout/dns).
 
