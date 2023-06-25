@@ -2,11 +2,8 @@
 orphan: true
 ---
 
-Yes. That's a typo.
 
-Update your [link](/troubleshoot/troubleshoot).
-
-```{include} /troubleshoot/troubleshoot.md
-
-```
+<head>
+  <meta http-equiv="Refresh" content="0; URL=https://nightscout.github.io/troubleshoot/troubleshoot/" />
+</head>
 
