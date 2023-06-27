@@ -30,23 +30,23 @@ If it's simple and reliable it might not be free
 function Validate()
 {
 	var dbAtla, dbAtlaP, dbRail, dbNort, dbVPS
-	var nsHero, nsRail, nsNort, nsAzur, nsVPS, nsFly, nsRend, nsGoog, nsT1Pal, ns10be, nsPro
+	var nsHero, nsRail, nsNort, nsAzur, nsVPS, nsFly, nsRend, nsGoog, nsT1Pal, ns10be, nsPro, nsGlycemia
 	var sDB, sNS
 	sDB=""; sNS=""
 	dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1;
-	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1
+	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1;nsGlycemia=1;
 	sel = document.getElementById("CONT");
 	switch(sel.selectedIndex)
 	{
 	    case 0: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0;
-		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsRend=0; nsGoog=0; ns10be=0; nsPro=0;
+		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsRend=0; nsGoog=0; ns10be=0; nsPro=0;nsGlycemia=0;
 		break;
 	}
 	sel = document.getElementById("SIMPLE");
 	switch(sel.selectedIndex)
 	{
 		case 0: dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1; nsHero=1; nsRail=1;
-	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; 
+	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1;nsGlycemia=1; 
 	    		sDB="[Reliability constrains removed for IT knowledgeable user]<br />";
 	    		sNS="[Reliability constrains removed for IT knowledgeable user]<br />"
 	    		break
@@ -58,8 +58,8 @@ function Validate()
 	sel = document.getElementById("COST");
 	switch(sel.selectedIndex)
 	{
-		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; break
-		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; break
+		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsGlycemia=0; nsRail=0; break
+		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsGlycemia=0; nsRail=0; break
 		case 2: dbAtlaP=0; nsT1Pal=0; break
 		case 3: nsT1Pal=0; break
 		case 4: break
@@ -76,7 +76,7 @@ function Validate()
 	if(dbRail) sDB=sDB+" - Railway Mongo database (10$/GiB/month)<br />"
 	if(dbNort) sDB=sDB+" - Northflank Mongo database (0.3$/GiB/month) <br />"
 	if(dbVPS) sDB=sDB+" - VPS Mongo database (Oracle, Google, ...) <br />"
-	if(nsT1Pal|ns10be|nsPro) sDB=sDB+" - Database included in the hosted service <br />"
+	if(nsT1Pal|ns10be|nsPro|nsGlycemia) sDB=sDB+" - Database included in the hosted service <br />"
 	if(nsGoog) sDB=sDB+" - Database included in Google Cloud <br />"
 	if(sDB=="") sDB="Uh... not many choices there, try to change some options and retry."
 	document.getElementById("resultDB").innerHTML = sDB;
@@ -97,6 +97,7 @@ function Validate()
 	if(nsT1Pal) sNS=sNS+" - T1Pal Hosted Nightscout (11.99$/month) <br />"
 	if(ns10be) sNS=sNS+" - NS10BE Hosted Nightscout (from €4.99/month) <br />"
 	if(nsPro) sNS=sNS+" - Nightscout Pro Hosted service (3£/month) <br />"
+	if(nsGlycemia) sNS=sNS+" - Glycemia.IO Hosted service (Free Trial, then 3€/month) <br />"
 	if(sNS=="") sNS="Uh... not many choices there, try to change some options and retry."
 	document.getElementById("resultNS").innerHTML = sNS;
 }
@@ -127,7 +128,8 @@ Made you mind? Have a look at your options:
 
 [T1Pal](/index.md#t1pal)  
 [NS10BE](/index.md#ns10be)  
-[Nightscout.pro](/index.md#nightscout-pro)
+[Nightscout.pro](/index.md#nightscout-pro)  
+[Glycemia.IO](/index.md#glycemia-io)  
 
 ## <u>Database</u>
 

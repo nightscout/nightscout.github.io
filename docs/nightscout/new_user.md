@@ -1139,6 +1139,13 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   <td class=xl97543 width=94 style='width:71pt'>Low</td>
   <td class=xl98543>&nbsp;</td>
  </tr>
+ <tr height=20 style='border-top:1px solid black'>
+  <td class=xl69543>Glycemia.IO</td>
+  <td class=xl108543>Free Trial/3€</td>
+  <td class=xl104543>Yes</td>
+  <td class=xl104543>Low</td>
+  <td class=xl105543>&nbsp;</td>
+ </tr>
  <tr height=25 style='height:18.7pt'>
   <td colspan=5 height=25 class=xl84543 style='border-right:1.0pt solid black;
   height:18.7pt'>Platforms as a service</td>

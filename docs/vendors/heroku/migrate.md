@@ -33,6 +33,12 @@ You can create Nightscout with a few clicks and won't have to worry about mainte
 
 A completely 'hands-off' approach to Nightscout. Simply subscribe via the [website](https://nightscout.pro/) and you'll receive an email once your site is ready. Enjoy unlimited database and resources and do not have to worry about updating your nightscout site as it all taken care of for you.
 
+## **[Glycemia.IO](/index.md#glycemia-io)**
+
+***You need a simple reliable Nightscout but don't want to build it and maintain it?***
+
+A fully managed solution, deployed in minutes for free (30day trial) with daily backups. Each instance has it's own container and mongoDB database and you can update it whenever you want using our portal. Also offering a migration tool so you can move data from your old instance to the new one.
+
 ## **[Heroku](/vendors/heroku/ecoplan)**
 
 ***You liked the Heroku experience and don't want to change? An Eco plan subscription is all it takes to continue like that.***
