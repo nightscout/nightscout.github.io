@@ -3,7 +3,7 @@
 #
 
 #---------------------------------------------------------------------------------
-# CHange the app value to your site name. (i.e. sitename to have sitename.fly.io
+# Change the app value to your site name. (i.e. sitename to have sitename.fly.io
 #---------------------------------------------------------------------------------
 app = "CHANGE ME TO YOUR SITE NAME!"
 kill_signal = "SIGINT"

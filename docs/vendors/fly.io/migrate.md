@@ -179,19 +179,7 @@ Save this information in a safe place!
 
 </br>
 
-## Step 4 - Install Fly.io command line interface 
-
-```{admonition} Fly.io flyctl
-:class: warning
-You MUST be able to use this program in order to maintain your Fly.io Nightscout app.
-```
-
-Follow the example [here](/vendors/fly.io/new_user.md#editing-config-vars-in-flyio) and confirm you can get it to behave as expected.  
-Your Fly.io app name is the one you defined above in step 1.f.
-
-</br>
-
-## Step 5 - Update your uploaders and downloaders
+## Step 4 - Update your uploaders and downloaders
 
 Now you will need to update all the devices connected to Nightscout with the new web address.
 
