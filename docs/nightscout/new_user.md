@@ -42,6 +42,12 @@ Below is a list of most used platforms. There are probably others, don't hesitat
 
 ## Vendors comparison table
 
+### Hosted services
+
+<img src="./img/Comparison.png"  width="800px" />
+
+### Free DIY
+
 <head>
 <style id="Book1_543_Styles"><!--table
 	{mso-displayed-decimal-separator:"\.";
@@ -1101,67 +1107,8 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   <td class=xl68543 width=321 style='width:241pt'>Limitations</td>
  </tr>
  <tr height=25 style='height:18.7pt'>
-  <td colspan=5 height=25 class=xl101543 style='border-right:1.0pt solid black;
-  height:18.7pt'>Hosted solutions</td>
- </tr>
- <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl74543 width=113 style='height:15.35pt;border-top:none;
-  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>T1Pal</td>
-  <td class=xl108543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'><span
-  style='mso-spacerun:yes'> </span>11.99$<span
-  style='mso-spacerun:yes'> </span></td>
-  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Low</td>
-  <td class=xl105543 style='border-top:none'>Loop remote carbs/bolus require
-  extra service</td>
- </tr>
- <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl74543 width=113 style='height:15.35pt;border-top:none;
-  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>NS10BE</td>
-  <td class=xl108543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'><span
-  style='mso-spacerun:yes'> </span>&lt; 5€<span
-  style='mso-spacerun:yes'> </span></td>
-  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Low</td>
-  <td class=xl105543 style='border-top:none'>&nbsp;</td>
- </tr>
- <tr height=21 style='height:16.0pt'>
-  <td height=21 class=xl69543 width=113 style='height:16.0pt;width:85pt'>Nightscout
-  Pro</td>
-  <td class=xl109543 width=142 style='width:107pt'>3£</td>
-  <td class=xl97543 width=72 style='width:54pt'>Yes</td>
-  <td class=xl97543 width=94 style='width:71pt'>Low</td>
-  <td class=xl98543>&nbsp;</td>
- </tr>
- <tr height=25 style='height:18.7pt'>
   <td colspan=5 height=25 class=xl84543 style='border-right:1.0pt solid black;
   height:18.7pt'>Platforms as a service</td>
- </tr>
- <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
-  <td rowspan=2 height=40 class=xl75543 width=113 style='border-bottom:.5pt solid black;
-  height:30.7pt;border-top:none;width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Heroku</td>
-  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>5$ Eco plan</td>
-  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>No</td>
-  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl105543 style='border-top:none'>Will sleep without an active
-  up/downloader</td>
- </tr>
- <tr height=20 style='height:15.35pt'>
-  <td height=20 class=xl106543 width=142 style='height:15.35pt;width:107pt'>7$
-  Basic plan</td>
-  <td class=xl106543 width=72 style='width:54pt'>No</td>
-  <td class=xl106543 width=94 style='width:71pt;box-sizing: inherit;border-top:
-  0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl107543>&nbsp;</td>
  </tr>
  <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
   <td height=20 class=xl77543 width=113 style='height:15.35pt;border-top:none;
@@ -1173,18 +1120,6 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
   border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl105543 style='border-top:none'>Basic B1 is too limited for FAPSX</td>
- </tr>
- <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
-  <td height=20 class=xl77543 width=113 style='height:15.35pt;border-top:none;
-  width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Railway</td>
-  <td class=xl104543 width=142 style='border-top:none;width:107pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>5$ Hobby plan</td>
-  <td class=xl104543 width=72 style='border-top:none;width:54pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Yes</td>
-  <td class=xl104543 width=94 style='border-top:none;width:71pt;box-sizing: inherit;
-  border-top:0.05rem solid var(--md-typeset-table-color)'>Medium</td>
-  <td class=xl105543 style='border-top:none'>Some followers experience issues</td>
- </tr>
  <tr height=20 style='height:15.35pt;box-sizing: inherit;transition: background-color 125ms ease 0s'>
   <td height=20 class=xl77543 width=113 style='height:15.35pt;border-top:none;
   width:85pt;box-sizing: inherit;border-top:0.05rem solid var(--md-typeset-table-color)'>Northflank</td>
@@ -1215,7 +1150,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
   <td class=xl99543 width=72 style='width:54pt;box-sizing: inherit;border-top:
   0.05rem solid var(--md-typeset-table-color)'>No</td>
   <td class=xl99543 width=94 style='width:71pt;box-sizing: inherit;border-top:
-  0.05rem solid var(--md-typeset-table-color)'>High</td>
+  0.05rem solid var(--md-typeset-table-color)'>Medium</td>
   <td class=xl100543>&nbsp;</td>
  </tr>
  <tr height=25 style='height:18.7pt'>
@@ -1346,6 +1281,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
  <![endif]>
 </table>
 </div>
+
 
 
 
@@ -2381,6 +2317,8 @@ Below is a list of most used platforms. There are probably others, don't hesitat
 	white-space:normal;}
 --></style>
 </head>
+</br>
+
 
 - Do not use the same password for all your accounts, and choose passwords that are not easy to guess.
 - Do not use the `API_SECRET` for the Atlas database password.
