@@ -42,9 +42,11 @@ Below is a list of most used platforms. There are probably others, don't hesitat
 
 ## Vendors comparison table
 
-### Hosted services
+</br>
 
 <img src="./img/Comparison.png"  width="800px" />
+
+</br>
 
 ### Free DIY
 
