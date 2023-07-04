@@ -6,14 +6,6 @@ orphan: true
 
 </br>
 
-```{admonition} Migration is not recommended!
-:class: warning
-If you want to migrate your site in Fly.io make sure you will be able to **maintain it**.</br>
-It might be better to [deploy a new Fly.io Nightscout](/vendors/fly.io/new_user) site and copy your Heroku variables.
-```
-
-</br>
-
 ```{admonition} Too complicated? Not what you're looking for?
 :class: seealso
 Consider a hosted Nightscout service! Check for easier solutions [here](/index.md#nightscout-as-a-service).
@@ -25,14 +17,14 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 ## Fly.io
 ![Fly.io](/vendors/img/Fly.io.png)
 ^^^
-Fly.io proposes a simple migration wizard from Heroku] and you can create your new Nightscout site in Fly.io. Using a computer is mandatory with Fly.io as managing your site will require the use of a command line utility. **Not recommended for beginners.**
+Fly.io proposes a simple migration wizard from Heroku] and you can create your new Nightscout site in Fly.io. Managing your site will require the use of a command line utility.
 
 **Pros**:  
 * Nightscout fits in the free tier  
 * Easy to migrate an existing site from Heroku 
 
 **Cons**:  
-* **Maintaining your site requires the use of a computer with command line instructions, not very intuitive**  
+* **Maintaining your site requires the use command line instructions, not very intuitive**  
 * Migrated Heroku sites store variables as secrets  
 * Relying on the MongoDB Atlas database
 ```
