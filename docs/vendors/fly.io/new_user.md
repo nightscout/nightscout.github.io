@@ -57,6 +57,8 @@ Whenever requested, add one to prove you're a real person:
 
 <img src="/vendors/fly.io/img/FlyIOA1.png" width="400px" />
 
+<img src="/vendors/fly.io/img/FlyM10.png" width="400px" />
+
 </br>
 
 Nightscout should run for free within the [allowances](https://fly.io/docs/about/pricing/#free-allowances). If you get billed, please report costs [here](https://github.com/nightscout/nightscout.github.io/issues/new) to have the documentation updated.
