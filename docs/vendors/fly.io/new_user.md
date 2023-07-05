@@ -52,10 +52,14 @@ If you don't see `MONGODB_URI` but see `MONGO_CONNECTION` (**NOT** `MONGO_COLLEC
 
 </br>
 
-You don't need to input card information to get Nightscout running.  
-Click the `Try fly.io for free` button:
+You will need to add credit card information to get Nightscout running.  
+Whenever requested, add one to prove you're a real person:
 
 <img src="/vendors/fly.io/img/FlyIOA1.png" width="400px" />
+
+</br>
+
+Nightscout should run for free within the [allowances](https://fly.io/docs/about/pricing/#free-allowances). If you get billed, please report costs [here](https://github.com/nightscout/nightscout.github.io/issues/new) to have the documentation updated.
 
 </br></br>
 
