@@ -64,9 +64,9 @@ Railway offers a Mongo database.
 **Pros**:  
 * Simple to create  
 * Less overhead than Atlas (more space)  
-* A small database fits in the Hobby plan without additional charges
 
 **Cons**:  
+* Requires a 5$/month hobby plan as billing starting amount
 * Running a database together with a Railway Nightscout site will increase billing above ~200MiB used
 * Simple Mongo 4.4 database
 +++
@@ -86,6 +86,7 @@ Northflank offers a Mongo database.
 
 **Cons**:  
 * Billing will occur but the cost is really limited: 0.3$ per GiB (it usually takes years to reach 1GB for Nightscout)
+* There is no warranty this offer will be maintained in the future
 +++
 Follow [these instructions](/vendors/northflank/database.md) to create a database in Northflank.
 ```
