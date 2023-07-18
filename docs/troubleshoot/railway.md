@@ -93,7 +93,7 @@ If your GitHub repository `cgm-remote-monitor` was changed (updated for example)
 
 ## Cleanup
 
-After several deployment attempts your Railway account might show more than one app. Since there is a 5$ limit before billing, depending on how you use it, it is important to make sure you don't have useless apps wasting CPU time and memory.
+After several deployment attempts your Railway account might show more than one app. Since there is a 5$ limit to hobby plan before increased billing, depending on how you use it, it is important to make sure you don't have useless apps wasting CPU time and memory.
 
 Open [Railway](https://railway.app) and click `login`. Login with GitHub.
 

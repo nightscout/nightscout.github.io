@@ -68,12 +68,12 @@ Follow [these instructions](/vendors/azure/new_user.md) to build your Nightscout
 You can easily create a new Railway Nightscout site with a MongoDB Atlas or a Railway MongoDB database.
 
 **Pros**:  
-* Nightscout fits in the free tier using a developer account  
-* Easy to deploy or migrate an existing site from Heroku  
+* Easy to deploy or migrate an existing site from Heroku (but not worth it without free tier)
 * Simple to use and troubleshoot  
 * Can use a native Railway MongoDB database ($)  
 
 **Cons**:
+* The free tier has been removed, only active developers can have 5$ credit per month
 * Your GitHub account must have been created more than 3 months ago
 * The railway.app domain is blocked for safety by some companies  
 * Railway network model causes issues with some follower app and devices 
