@@ -242,14 +242,7 @@ d) Install `nodejs` and `npm`.
 
 **Mind some small VPS will not be powerful enough to deploy with npm, consider using a [Docker container](/vendors/VPS/docker) in this case.**
 
-*Note: you can also try simply to install the latest versions with with `sudo apt-get install -y nodejs npm` if your VPS is powerful enough. Small VPS will fail to run Nightscout with recent node.js versions.*
-
-```
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-**Keep in mind updating your VPS will update node hence prevent future deploys. If you want to keep node to a fixed version you should use the following commands (node 14 as an example):**
+The example below is with the **latest supported npm version**: 16.20.1
 
 ```
 sudo apt install nodejs
@@ -257,10 +250,8 @@ sudo apt install build-essential checkinstall
 sudo apt install libssl-dev
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 source /etc/profile
-nvm ls-remote
-nvm install 14.18.1
-nvm list
-nvm use 14.18.1
+nvm install 16.20.1
+nvm use 16.20.1
 ```
 
 Once complete, install npm
@@ -280,10 +271,12 @@ ln -s cgm-remote-monitor nightscout
 cd nightscout
 ```
 
-!!!warning "Make sure you're in your `nightscout` directory"  
-    Should you exit your terminal and resume working later make sure to return to this state.  
+```{admonition} Make sure you're in your `nightscout` directory
+:class: warning
+Should you exit your terminal and resume working later make sure to return to this state.  
     1- you're using your nightscout user  
     2- you are in your nightscout directory
+```
 
 f) Install Nightscout.
 
@@ -309,10 +302,12 @@ You can use the [**helper page**](/_static/NightscoutVariablesUbuntu.html) in a 
 
 File all necessary fields, click on the Validate button at the bottom of the form, if no error is seen you will have all variables displayed in the text box at the bottom, click on the Copy All button.
 
-!!!note "Variables format"  
-    1- do not add`export` before the variable name  
-    2- safe format is `VARIABLE="value"`  
-    3- all spaces in the values must be replaced by `%20`
+```{admonition} Variables format
+:class: tip
+1- do not add`export` before the variable name  
+2- safe format is `VARIABLE="value"`  
+3- all spaces in the values must be replaced by `%20`
+```
 
 b) Return to the text editor. Paste the result in `nano`.
 
