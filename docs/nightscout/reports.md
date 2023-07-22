@@ -203,7 +203,7 @@ You might also be interested by [AutoTune](https://autotuneweb.azurewebsites.net
 
 ## Nightscout Reporter
 
-[https://nightscout-reporter.zreptil.de/](https://nightscout-reporter.zreptil.de/) can be used to generate PDF documents with the data stored at Nightscout.
+[https://nightrep.zreptil.de/](https://nightrep.zreptil.de/) can be used to generate PDF documents with the data stored at Nightscout.
 
 You need to add [`cors`](/nightscout/setup_variables.md#cors-cors) to your [`ENABLE`](/nightscout/setup_variables.md#enable) variables
 
