@@ -206,6 +206,15 @@ e) You can perform various operations on your variables:
 2. Edit variables values directly in the table
 3. Delete a variable with the bin icon
 
+~~~{note}
+Multiple lines values should be typed with `\n` separating each original line.</br>
+Example:</br>
+<img src="/nightscout/img/APNKeys.png" width="600px" /></br>
+```
+----BEGIN PRIVATE KEY-----\nMIGTAgEAMBMGBygGSM49AwEHBHkwdwIBAQQg7c8w00t5ju7N980r\nerN8N+isnJoec+ohIEuD0teRbPmgCgYIKoZIzj0DAQehRANCAAREnRISLSiFgdn4\nLbf44yIKspXKr7GpPBVshv3ShOms2qHTdAFriXXRPmbq7eAJuFrxpYOduU1dl9vo\nouciW0je\n-----END PRIVATE KEY-----
+```
+~~~
+
 Don't forget to `Update & restart` when you're done editing.
 
 </br>
