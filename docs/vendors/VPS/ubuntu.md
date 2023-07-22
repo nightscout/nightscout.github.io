@@ -271,7 +271,7 @@ ln -s cgm-remote-monitor nightscout
 cd nightscout
 ```
 
-```{admonition} Make sure you're in your `nightscout` directory
+```{admonition} Make sure you're in your nightscout directory
 :class: warning
 Should you exit your terminal and resume working later make sure to return to this state.  
     1- you're using your nightscout user  
