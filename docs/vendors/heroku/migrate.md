@@ -1,12 +1,12 @@
 # Migration?
 
-The [deadline](https://blog.heroku.com/next-chapter) is in the past now, but if you used Heroku and would like to revive your site, one question remains: "What should I do with my Nightscout, should I migrate, where? What is recommended?"
+As Heroku and Railway stopped their free plan, if you would like to revive your site, one question remains: "What should I do with my Nightscout, should I migrate, where? What is recommended?"
 
 There is no universal solution. So, you'll have to read between the lines and understand what's the best strategy for you, as we have different needs, skills and budgets.
 
 ## **[TANSTAAFL](https://en.wiktionary.org/wiki/TANSTAAFL)**
 
-This is an important concept everybody needs to understand: what we call free means we don't have to pay for it but it also means someone else is paying for it. It doesn't mean it's bad, we all know the price of T1D is already too high for us and our kids but we can't **pretend** that someone else will pay for it. Whoever offers a free service should have our respect and gratitude, and when they decide the weight of free users is too high and decide to start billing, we should accept it.
+This is an important concept everybody needs to understand: what we call free means we don't have to pay for it but it also means someone else is paying for it. It doesn't mean it's bad, we all know the price of T1D is already too high for us and our kids but we can't **pretend** that someone else will pay for it. Whoever offers a free service should have our respect and gratitude, and when they understand the weight of free users is too high and decide to start billing, we should accept it.
 
 ```{admonition} Confusing?
 :class: hint
@@ -63,7 +63,7 @@ Since they bought mLab, most have a database in MongoDB. This is a weak point of
 
 ***You want an alternative to Heroku? Railway costs the same than the Eco plan.***
 
-We really liked the Railway solution when we found it: it's very simple to migrate and the platform is simple to use. Still, we discovered some Nightscout followers are suffering network related issues. The free plan has been removed and the Hobby plan is starting at 5$ per month (which should be enough for a single Nightscout site).
+We really liked the Railway solution when we found it: it's very simple to migrate from Heroku and the platform is simple to use. Still, we discovered some Nightscout followers are suffering network related issues. The free plan has been removed and the Hobby plan is starting at 5$ per month (which should be enough for a single Nightscout site).
 
 ## **[Northflank](/vendors/northflank/new_user)**
 
@@ -73,7 +73,7 @@ Not very sponsored, Northflank is also a good option, simple of use and offering
 
 ## **[Fly.io](/vendors/fly.io/migrate)**
 
-***You're desperate to migrate now because it's too late for choices and you don't care about the future? Fly.io migration is the easiest immediate choice... but if you don't like typing commands on your computer you'll short be facing a hard stop.***
+***Fly.io still offers a free tier but if you don't like typing commands on your computer you'll short be facing a hard stop.***
 
 Fly.io was immediately popular due to the ease of migration from Heroku (for those not forgetting to unlink Heroku afterwards). Now, if you want to maintain your site you'll have to use command line instructions in the web terminal. On the other hand, it is a good solution.
 
