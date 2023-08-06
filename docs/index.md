@@ -259,6 +259,7 @@ vendors/NAS/synology/
 ```{toctree}
 :hidden:
 :caption: VENDORS
+vendors/heroku/migrate/
 nightscout/multiadmin/
 vendors/github/update/
 update/redeploy/
@@ -266,7 +267,6 @@ troubleshoot/github/
 troubleshoot/atlas/
 troubleshoot/azure/
 troubleshoot/heroku/
-vendors/heroku/migrate/
 vendors/heroku/ecoplan/
 vendors/heroku/hobbyplan/
 vendors/heroku/mfa/

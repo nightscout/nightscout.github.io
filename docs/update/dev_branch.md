@@ -40,11 +40,13 @@ Do not deploy `dev` or a branch other than `master` unless directed to do so (ex
 
 <img src="/vendors/github/img/Dev04.png" width="500px" >
 
-- If you ran into trouble, try to [Redeploy](/update/redeploy.md).
+- If you ran into trouble, try to [Redeploy](/update/redeploy.md) (and this is **mandatory** if you don't see `dev` in GitHub.)
 
 </br>
 
 ## Step 2: Deploy
+
+Select your platform below:
 
 ```{tab-set}
 
@@ -117,6 +119,10 @@ Or whichever version (change `filter tag` find the version) in the [list]</br></
 - Click Save (or Discard if you don't want to save).</br>
   Your site will redeploy if you changed the configuration. Expect a few minutes before it comes back online.</br></br>
 <img src="/vendors/azure/img/Dev13.png" width="400px" /></br></br>
+:::
+
+:::{tab-item} Google Cloud
+[Here](https://navid200.github.io/xDrip/docs/Nightscout/Customize.html)</br>
 :::
 
 :::{tab-item} Fly.io
