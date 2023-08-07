@@ -126,16 +126,18 @@ Or whichever version (change `filter tag` find the version) in the [list]</br></
 :::
 
 :::{tab-item} Fly.io
-Make sure you have a local fork of `cgm-remote-monitor` and the current fly.toml before continuing.</br>
-If you don't, first perform [these operations](/troubleshoot/fly.io.md#make-your-migrated-app-maintainable).</br></br>
-a) Open a PowerShell (Windows) or a terminal (OSX/Linux), and type:</br></br>
+a) Open a [Web Terminal](/vendors/fly.io/new_user.md#step-2-open-the-web-terminal), and type:</br></br>
+`git clone https://github.com/nightscout/cgm-remote-monitor`</br></br>
 `cd cgm-remote-monitor`</br></br>
 b) Update your local fork</br></br>
+`git config pull.rebase true`</br></br>
 `git pull origin dev`</br></br>
-c) Deploy the changes.</br></br>
-`flyctl deploy`</br></br>
-Deploy will take some time and should complete with the message</br>
-`1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]`.</br>
+c) Deploy the changes (replace *yourappname* by the actual name of your fly.io Nightscout app).</br></br>
+`flyctl deploy -a yourappname`</br></br>
+Deploy will take some time and should complete with the message</br></br>
+`Visit your newly deployed app at https://yourappname.fly.dev`.</br>
+d) Don't forget to downscale the app!</br></br>
+`flyctl scale count 1`</br></br>
 :::
 
 

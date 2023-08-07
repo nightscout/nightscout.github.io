@@ -99,9 +99,7 @@ Use the web terminal to modify your Fly.io deployment.
 March 31st 2023, apps deploy in V2 and V1 apps are automatically migrated too.  
 This causes some issues as V2 automatically deploys in a more than one machine, your Nightscout site might not work correctly.
 
-You cannot downscale your app unless you've made it [maintainable](#make-your-migrated-app-maintainable).
-
-Type the following command in your `cgm-remote-monitor` local folder (replace ***`app_name`*** with your own app name):
+Type the following command in a [web terminal](#use-a-web-terminal) (replace ***`app_name`*** with your own app name):
 
 `flyctl scale --app `***`app_name`***` count 1`
 
