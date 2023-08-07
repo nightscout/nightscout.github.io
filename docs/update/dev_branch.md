@@ -135,7 +135,7 @@ b) Update your local fork</br></br>
 c) Deploy the changes (replace *yourappname* by the actual name of your fly.io Nightscout app).</br></br>
 `flyctl deploy -a yourappname`</br></br>
 Deploy will take some time and should complete with the message</br></br>
-`Visit your newly deployed app at https://yourappname.fly.dev`.</br>
+`Visit your newly deployed app at https://yourappname.fly.dev`</br></br>
 d) Don't forget to downscale the app!</br></br>
 `flyctl scale count 1`</br></br>
 :::
