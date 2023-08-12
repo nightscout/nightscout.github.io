@@ -113,6 +113,7 @@ f) Change the plan size.
 <img src="/vendors/azure/img/Azure26.png" width="600px" />
 
 ```{admonition} Limited CPU usage
+:class: warning
 The Free F1 plan includes 60 CPU minutes per day. It usually is enough for a moderate Nightscout usage but can also be insufficient and provoke interruptions in your Nightscout site. Not recommended for FreeAPS X and OpenAPS users.
 If you want a more reliable CPU, consider another plan like Shared D1 ($).
 ```

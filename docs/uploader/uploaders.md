@@ -46,7 +46,11 @@ Most of the useable transmitters that fall into this category at the present tim
 
 ## Medtronic
 
-If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore with recent pumps (7xx series and above)** without an Android bridge device running xDrip+.
+If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore with recent pumps (7xx series and above)**.
+
+```{hint}
+A new [plugin](/nightscout/plugins-v15/) is under test with the development branch of Nightscout... stay tuned!
+```
 
 <img src="./img/Upload04.png"  width="600px"/>
 

@@ -45,7 +45,7 @@ With the xDrip+ team trying to make it so easy that the solutions above will loo
 
 ***You need a reliable engine for your Nightscout site, well Azure sure is the way to go.***
 
-Azure is back hurrah hurrah. Wait, why did we leave it some years ago? Ah, sure, costs. But we believe we have a free solution thanks to [Scott](https://www.youtube.com/watch?v=EDADrteGBnY). Shame the Cosmos database doesn't always meet expectations... And keep in mind the free tier is designed for testing, not production.
+Azure is back hurrah hurrah. Wait, why did we leave it some years ago? Ah, sure, costs. But we believe we have a free solution thanks to Scott. Shame the Cosmos database doesn't always meet expectations... And keep in mind the free tier is designed for testing, not production.
 
 ## **[Heroku](/vendors/heroku/ecoplan)**
 

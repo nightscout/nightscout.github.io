@@ -100,6 +100,10 @@ The most common error on initial Nightscout setups is that people incorrectly us
 The `mmconnect` plugin is **NOT** functional anymore with recent pumps (7xx) in cloud Nightscout sites.
 ```
 
+```{hint}
+A new [plugin](/nightscout/plugins-v15/) is under test with the development branch of Nightscout... stay tuned!
+```
+
 You can use an Android phone with a private version of xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up.
 
 </br>
