@@ -37,7 +37,7 @@ Remove the word `bridge` from the `ENABLE` variable list.
 
 `CONNECT_SOURCE=dexcomshare`
 
-`CONNECT_SHARE_SERVER=eu`				Add this variable **only** if you're not in the US. **Else don't add it.**
+`CONNECT_SHARE_SERVER=ous`			  Add this variable **only** if you're not in the US. **Else don't add it (us).**
 
 `CONNECT_SHARE_ACCOUNT_NAME=`		The username on your master device (the one connected to the sensor)
 
