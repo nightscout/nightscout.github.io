@@ -113,7 +113,7 @@ Select your platform below:
 <img src="/vendors/azure/img/Azure43.png" width="400px" /></br></br>
 - In the left menu select Deployment Center, in Full Image Name and Tag change the version to:</br></br>
 `nightscout/cgm-remote-monitor:latest_dev`	(example for dev)</br></br>
-Or whichever version (change `filter tag` find the version) in the [list]</br></br>(https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags).</br></br>
+Or whichever version (change `filter tag` find the version) in the [list](https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags).</br></br>
 `nightscout/cgm-remote-monitor:14.2.6`	(example for 14.2.6)</br></br>
 <img src="/vendors/azure/img/Dev12.png" width="600px" /></br></br>
 - Click Save (or Discard if you don't want to save).</br>
