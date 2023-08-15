@@ -76,7 +76,7 @@ Before using Nightscout, it is important to understand that this project:
 There's no simple answer to this. You basically have two options:
 
 1. **DIY**: Use instructions on this website to create your own installation. You will need to maintain this installation yourself. There are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be free - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it.
-2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), and [Nightscout.Pro](#nightscout-pro)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), [Nightscout.Pro](#nightscout-pro), [Serendipity Bio](#serendipity-bio)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
 
 The Nightscout development community actively supports both of these choices.
 
@@ -139,6 +139,34 @@ The site is  translated into multiple languages, with more in line to be added o
 | PLN      | 18 zł |
 
 More information about the companies background and processes can be found on the website at [Welcome to Nightscout.Pro.](https://nightscout.pro/welcome-to-nightscout-pro/)
+```
+
+### Serendipity Bio
+
+```{card}
+![](https://serendipitybio.com/static/media/Serendipity+Bio+Logo.png)
++++
+[Serendipity Bio](https://serendipitybio.com) was founded in 2020 to help T1 and T2 diabetics.
+
+Serendipity provides single-click deployment of Nightscout, literally.
+
+At the click of a button:
+- We launch your Nightscout server
+- We launch your own Mongo database
+- We provide you a secure, shareable URL
+
+Never worry about:
+- Database size
+- Reliabiity of your server
+- Upgrading versions
+
+Serendipity Bio fully manages your Nightscout server and database.
+
+Concerned about reliability or sustainability?  Serendipity Bio is built using Amazon Web Services, which also hosts all your favorite websites like Netflix, Apple, AirBnB, and ESPN.
+
+Coming soon, the service will feature additional, enhanced reporting and alerting alongside Nightscout's current features!
+
+Available globally, a monthly subscription is priced at $12.99 USD per month, payable online via credit card.
 ```
 
 ## Who Can Help Me?
