@@ -28,8 +28,8 @@ $ pip install -r requirements.txt
 * Compile the documentation
 
 ```bash
-$ cd <nightscout docs location>/docs
-$ ./make.bat dirhtml
+$ cd <nightscout docs location>
+$ sphinx-build -b dirhtml docs _build
 ```
 
 * Start a local http server to view the documentation
