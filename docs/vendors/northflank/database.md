@@ -155,7 +155,7 @@ g) Enter your password and click `Confirm` to see your MongoDB information.
 
 </br>
 
-h) Click the copy icon of the line `EXTERNAL_SRV`.
+h) Click the copy icon of the line `MONGO_SRV`.
 
 <img src="/vendors/northflank/img/NorthflankDB05.png" width="600px" />
 
