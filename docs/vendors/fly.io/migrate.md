@@ -158,7 +158,7 @@ Your Fly.io Nightscout is now independent from Heroku.
 
 ```{admonition} Heroku Variables
 :class: warning
-You cannot see your variable values in Fly.io.</br>
+You cannot see your variables values in Fly.io.</br>
 You cannot edit them.</br>
 You MUST have a backup of your Heroku variables for maintenance purposes.</br>
 ```
@@ -171,7 +171,15 @@ Save this information in a safe place!
 
 </br>
 
-## Step 4 - Update your uploaders and downloaders
+## Step 4 - Downscale your webapp
+
+You app will most probably be deployed on several virtual resources and this will generate costs!
+
+Follow [these guidelines](/troubleshoot/fly.io.md#downscale-your-app) to downscale it to one machine only.
+
+</br>
+
+## Step 5 - Update your uploaders and downloaders
 
 Now you will need to update all the devices connected to Nightscout with the new web address.
 
