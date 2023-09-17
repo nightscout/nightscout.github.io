@@ -5,10 +5,11 @@
 #
 ######################################################################################################
 git clone https://github.com/nightscout/cgm-remote-monitor;cd cgm-remote-monitor;cat > fly.toml << "EOF"
-app = "nightscout"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
+[env]
+PORT = "1337"
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
