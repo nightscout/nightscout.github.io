@@ -535,7 +535,7 @@ Wait until setting secrets complete.
 
 a) In the terminal type:
 
-`fly deploy`
+`flyctl deploy`
 
 You app will deploy. It will take time (about 10 minutes).
 

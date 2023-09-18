@@ -88,9 +88,85 @@ You don't have a local repository.
 
 ## Make your migrated app maintainable
 
-```{deprecated} July 2023
-Use the web terminal to modify your Fly.io deployment.
-```
+If you migrated Nightscout from Heroku using Fly.io migration utility you need to fix your deployment to update it.
+
+Open a [web terminal](#use-a-web-terminal).
+
+a) Type (or copy and paste) the following command in the terminal:</br>
+
+`curl https://nightscout.github.io/_static/flyboot.sh | bash`</br>
+
+<img src="/vendors/fly.io/img/FlyIO01.png" width="600px" />
+
+</br>
+
+b) Navigate to the Nightscout code directory copied locally by typing:
+
+`cd cgm-remote-monitor`
+
+<img src="/vendors/fly.io/img/FlyIO02.png" width="600px" />
+
+</br>
+
+c) Deploy your site with Fly.io.  
+Type the following command:
+
+`flyctl launch`
+
+<img src="/vendors/fly.io/img/FlyIO13.png" width="600px" />
+
+</br>
+
+To the question `Would you like to copy its configuration to the new app?` answer `Y` (yes). 
+
+To the question: `App Name (leave blank to use an auto-generated name):` answer with **the name of your current Nightscout app**.
+
+<img src="/vendors/fly.io/img/FlyIO14.png" width="600px" />
+
+</br>
+
+The app should already exist, confirm you want to launch into it.
+
+<img src="/vendors/fly.io/img/FlyIO16.png" width="600px" />
+
+</br>
+
+d) In the terminal type:
+
+`fly deploy`
+
+You app will deploy. It will take time (about 10 minutes).
+
+<img src="/vendors/fly.io/img/FlyIO17.png" width="600px" />
+
+</br>
+
+Do not interrupt the process.
+
+</br>
+
+When deploy completes you should see your full Nightscout site name.
+
+<img src="/vendors/fly.io/img/FlyIO18.png" width="600px" />
+
+</br>
+
+e) Last but not least: make sure to downscale your app with the following command:
+
+`flyctl scale count 1`
+
+<img src="/vendors/fly.io/img/FlyIO19.png" width="600px" />
+
+Enter `y` to confirm.
+
+<img src="/vendors/fly.io/img/FlyIO20.png" width="600px" />
+
+</br>
+
+f) Exit the terminal typing `exit` or pressing `Ctrl D` (`⌘ D` with a Mac).
+
+Keep in mind you'll need some time to reopen it if you need to (as explained in step 2 above).  
+Close the browser tab.
 
 </br>
 

@@ -70,20 +70,9 @@ If you ran into trouble, try the [Redeploy](/update/redeploy.md) method</br>
 
 :::{tab-item} Fly.io
 - ***Site maintainability***</br>
-Make sure you have a local fork of `cgm-remote-monitor` and the current `fly.toml` before continuing.
-If you don't, first perform [these operations](/troubleshoot/fly.io.md#make-your-migrated-app-maintainable).
+Perform [these operations](/troubleshoot/fly.io.md#make-your-migrated-app-maintainable).
 </br></br>
-a) Open a PowerShell (Windows) or a terminal (OSX/Linux), and type:</br>
-`cd cgm-remote-monitor`
-</br></br>
-b) Update your local fork</br>
-`git pull origin master`
-</br></br>
-c) Deploy the changes.</br>
-Type the command:</br>
-`flyctl deploy`</br></br>
-Deploy will take some time and should complete with the message</br>
-`1 desired, 1 placed, 1 healthy, 0 unhealthy [health checks: 1 total, 1 passing]`.
+Your deployment will update automatically.
 </br>
 :::
 
