@@ -408,7 +408,7 @@ function Validate()
 function CopyAll()
 {
   var sBuffer, sLine, sel;
-  sBuffer = "";
+  sBuffer = "#\n";
 sel = document.getElementById("ALARM_LOW");
   sLine = "fly secrets set ALARM_LOW=\"" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
   sBuffer = sBuffer + "\"\n";
@@ -469,7 +469,7 @@ sLine = "fly secrets set ENABLE=\"" + document.getElementById("ENABLE").value; s
 sLine = "fly secrets set MONGODB_URI=\"" + document.getElementById("MONGODB_URI").value; sBuffer = sBuffer + sLine;
   sBuffer = sBuffer + "\"\n";
 sLine = "fly secrets set SHOW_PLUGINS=\"" + document.getElementById("SHOW_PLUGINS").value; sBuffer = sBuffer + sLine;
-  sBuffer = sBuffer + "\"\n";
+  sBuffer = sBuffer + "\"\n#\n";
   document.getElementById("NSVARS").innerHTML = sBuffer;
 };
 function CopyToClipboard() {
