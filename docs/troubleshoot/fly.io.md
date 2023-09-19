@@ -133,7 +133,7 @@ The app should already exist, confirm you want to launch into it.
 
 d) In the terminal type:
 
-`fly deploy`
+`flyctl deploy`
 
 You app will deploy. It will take time (about 10 minutes).
 
