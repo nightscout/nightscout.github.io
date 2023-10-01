@@ -20,11 +20,11 @@ If it's simple and reliable it might not be free
 
 </br>
 
-| I want to contribute to Nightscout research and development.</br><select name="cont" id="CONT"><br/>  <option value="yes" selected="selected">Yes</option><br/>  <option value="no">No</option><br/></select> |
+| I want to contribute to Nightscout research and development.</br><select name="cont" id="CONT"><br/>  <option value="yes">Yes</option><br/>  <option value="no" selected="selected">No</option><br/></select> |
 | ------------------------------------------------------------ |
-| **What is the maximum acceptable cost per month  per site?**</br><select name="cost" id="COST"><br/>  <option value="free">It MUST be free even if it requires a lot of work</option><br/>  <option value="cent">Less than 10c</option><br/>  <option value="pay1">Less than 6$</option><br/>  <option value="pay2">Less than 10$</option><br/>  <option value="pay3" selected="selected">Less than 15$</option><br/></select> |
-| **How much of an issue is it when Nightscout is down?**</br><select name="rely" id="RELY"><br/>  <option value="serious" selected="selected">Serious: I need it back up ASAP</option><br/>  <option value="mild">Disturbing: If I can get it back up in less than a week I'm ok</option><br/>  <option value="none">It happens: I'll do without until I can get it fixed</option><br/></select> |
-| **How much time are you ready to spend on creating and maintaining it?**</br><select name="simple" id="SIMPLE"><br/>  <option value="high">I've got good IT knowledge</option><br/>  <option value="medium">I can follow detailed instructions and take care of it</option><br/>  <option value="easy">I can follow simple instructions and take care of it</option><br/>  <option value="pay" selected="selected">I want someone else to do it for me</option><br/></select> |
+| **What is the maximum acceptable cost per month  per site?**</br><select name="cost" id="COST"><br/>  <option value="free">It MUST be free even if it requires a lot of work</option><br/>  <option value="cent" selected="selected">Less than 10c</option><br/>  <option value="pay1">Less than 6$</option><br/>  <option value="pay2">Less than 10$</option><br/>  <option value="pay3">Less than 15$</option><br/></select> |
+| **How much of an issue is it when Nightscout is down?**</br><select name="rely" id="RELY"><br/>  <option value="serious">Serious: I need it back up ASAP</option><br/>  <option value="mild">Disturbing: If I can get it back up in less than a week I'm ok</option><br/>  <option value="none" selected="selected">It happens: I'll do without until I can get it fixed</option><br/></select> |
+| **How much time are you ready to spend on creating and maintaining it?**</br><select name="simple" id="SIMPLE"><br/>  <option value="high">I've got good IT knowledge</option><br/>  <option value="medium" selected="selected">I can follow detailed instructions and take care of it</option><br/>  <option value="easy">I can follow simple instructions and take care of it</option><br/>  <option value="pay">I want someone else to do it for me</option><br/></select> |
 
 <script>
 function Validate()
@@ -58,8 +58,8 @@ function Validate()
 	sel = document.getElementById("COST");
 	switch(sel.selectedIndex)
 	{
-		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0;  break
-		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; break
+		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0;  break
+		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0; break
 		case 2: dbAtlaP=0; nsT1Pal=0; nsSerendipity=0; break
 		case 3: nsT1Pal=0; nsSerendipity=0; break
 		case 4: break
@@ -104,6 +104,7 @@ function Validate()
 </script>
 
 
+
 </br>
 
 Now click SHOW below to validate your choices.  
@@ -128,13 +129,12 @@ Made you mind? Have a look at your options:
 
 [T1Pal](/index.md#t1pal)  
 [NS10BE](/index.md#ns10be)  
-[Nightscout.pro](/index.md#nightscout-pro)  
+[Nightscout Pro](/index.md#nightscout-pro)  
 [Serendipity Bio](/index.md#serendipity-bio)
 
 ## <u>Database</u>
 
 [MongoDB Atlas](/vendors/mongodb/atlas.md)  
-MongoDB Atlas M2 - Not documented: Hosted solutions are more economic  
 [Railway Mongo Database](/vendors/railway/database.md)  
 [Northflank Mongo Database](/vendors/northflank/database.md)  
 VPS Mongo Database
