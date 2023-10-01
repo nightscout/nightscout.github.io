@@ -149,6 +149,14 @@ To open your Nightscout site, navigate to your project `Services` and click the 
 
 </br>
 
+**Good time to check you selected the right plan.**
+
+Make sure you selected the developer sandbox plan to avoid unexpected fees.
+
+<img src="/vendors/northflank/img/NorthflankSP.png" width="400px" />
+
+</br>
+
 ```{include} /nightscout/first_setup.md
 
 ```
