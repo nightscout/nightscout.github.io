@@ -87,14 +87,6 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 ## iOS
 
-### [Nightscout](https://apps.apple.com/us/app/nightscout/id949973872)
-
-<img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
-
-<img src="/nightscout/img/Follower03.png" width="300px" />	
-
-</br>
-
 ### [Nightscout X](https://apps.apple.com/us/app/nightscout-x/id1333154219)
 
 <img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
