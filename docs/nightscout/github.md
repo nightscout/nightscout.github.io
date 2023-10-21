@@ -8,6 +8,10 @@ You will need your own GitHub account if you want to deploy Nightscout in some p
 
 ````{tab-set}
 
+:::{tab-item} Select your platform ->
+</br>
+:::
+
 :::{tab-item} Heroku/Railway/Northflank
 You need your own GitHub account and `cgm-remote-monitor` fork (copy).
 :::

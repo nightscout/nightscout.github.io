@@ -3,8 +3,7 @@ orphan: true
 ---
 
 ```{warning}
-Developers advice: not a good idea.</br>
-Stay tuned for a serious solution.
+Nightscout developers advice: not a good idea.
 ```
 
 # Use a Dynamic DNS
@@ -12,6 +11,11 @@ Stay tuned for a serious solution.
 </br>
 
 Either because running a VPS, Northflank or simply because you'd like an alternate name to your Nightscout page, you can use either you own DNS name or free services like those below.
+
+```{warning}
+Adding a free DNS service to your Nightscout setup increases the possibility of unexpected outage.</br>
+Paid DNS services are available at 1$ per month.
+```
 
 </br>
 

@@ -11,6 +11,10 @@ You must create a database unless it's already included in the platform you sele
 
 ````{tab-set}
 
+:::{tab-item} Select your platform ->
+</br>
+:::
+
 :::{tab-item} Heroku/Railway/Azure/Northflank/Fly.io
 You need to create a database.
 :::

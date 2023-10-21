@@ -6,6 +6,10 @@ Nightscout configuration is held in variables , their content can be modified to
 
 ````{tab-set}
 
+:::{tab-item} Select your platform ->
+</br>
+:::
+
 :::{tab-item} Heroku
 [**→ Here**](/vendors/heroku/new_user.md#editing-config-vars-in-heroku)
 :::

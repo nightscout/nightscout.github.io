@@ -24,6 +24,10 @@ Follow [these instructions](/vendors/github/update/) and come back.
 
 ```{tab-set}
 
+:::{tab-item} Select your platform ->
+</br>
+:::
+
 :::{tab-item} Heroku
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login) </br>
 </br><img src="/vendors/heroku/img/UpdateNS15.png" width="400px" ></br></br>

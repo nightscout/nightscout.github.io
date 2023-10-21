@@ -50,6 +50,9 @@ Select your platform below:
 
 ```{tab-set}
 
+:::{tab-item} Select your platform ->
+</br>
+:::
 
 :::{tab-item} Heroku
 - Log in Heroku [https://id.heroku.com/login](https://id.heroku.com/login)</br></br>

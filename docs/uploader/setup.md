@@ -11,7 +11,13 @@ You usually should express the Nightscout URL in secure `**https://**`, not only
 
 This is the address you type in any browser to display your Nightscout web site.
 
+If you're using a hosted service, ask the vendor.
+
 ````{tab-set}
+
+:::{tab-item} Select your platform ->
+</br>
+:::
 
 :::{tab-item} Heroku
 Your `Nightscout URL` defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser.
