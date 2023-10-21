@@ -4,6 +4,8 @@ If you need to return to the previous Nightscout version, or in rare occasions, 
 
 Do not deploy `dev` or a branch other than `master` unless directed to do so (except if you know why you are doing so).
 
+AAPS users: mind the [compatibility matrix](../nightscout/close_loop.md#aaps)!
+
 ## Step 1: Update your repository in GitHub
 
 - Skip this step if you're using Azure.

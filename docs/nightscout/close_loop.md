@@ -30,6 +30,15 @@ Facebook group: [Looped](https://www.facebook.com/groups/TheLoopedGroup)
 
 ## [AAPS](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Nightscout.html)
 
+```{admonition} Mind the compatibility matrix!
+:class: warning
+|                   | AAPS 2.x | AAPS 3.0 | AAPS 3.1 | AAPS 3.2 |
+| ----------------- | :------: | :------: | :------: | :------: |
+| **Nightscout 13** |    X     |    X     |    X     |          |
+| **Nightscout 14** |    X     |    X     |    X     |          |
+| **Nightscout 15** |          |          |          |    X     |
+```
+
 AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones.
 
 Facebook group: [Android APS Users](https://www.facebook.com/groups/AndroidAPSUsers)

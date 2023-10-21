@@ -2,6 +2,10 @@
 
 </br>
 
+AAPS users: mind the [compatibility matrix](../nightscout/close_loop.md#aaps)!
+
+</br>
+
 It is good practice to maintain your Heroku stack up to date. Either when you receive an email from Heroku or when you [update your Nightscout site](/update/update) (which is also a good habit).
 
 </br>
