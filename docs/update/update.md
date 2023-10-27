@@ -8,8 +8,6 @@ You don't need to follow these instructions if you use a hosted service.</br>Con
 
 [See here which is the current released version](https://github.com/nightscout/cgm-remote-monitor/releases) before updating.
 
-AAPS users: mind the [compatibility matrix](../nightscout/close_loop.md#aaps)!
-
 </br>
 
 ## Step 1: Update your repository in GitHub
