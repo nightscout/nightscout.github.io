@@ -1,6 +1,13 @@
 # Welcome to Nightscout
 
-</br>   ![Nightscout](/images/nightscout_screenshot_600.png)
+</br>
+
+   ![Nightscout](/images/nightscout_screenshot_600.png)
+
+</br>
+
+Health professional? You might not want to build a Nightscout site and just need to find out how to get data from it, [jump to the dedicated pages here](/clinicians/home/).
+
 </br>
 
 ## Introduction
@@ -302,6 +309,14 @@ update/upd_stack/
 troubleshoot/railway/
 troubleshoot/fly.io/
 troubleshoot/render/
+```
+
+```{toctree}
+:hidden:
+:caption: CLINICIANS
+clinicians/home/
+clinicians/setup/
+clinicians/reports/
 ```
 
 ```{toctree}

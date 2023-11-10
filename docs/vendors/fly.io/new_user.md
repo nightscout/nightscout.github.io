@@ -652,3 +652,5 @@ This will avoid your app to redeploy every time.
 ```
 
 </br>
+
+If the app didn't deploy automatically continue [here](#step-6-deploy-nightscout).

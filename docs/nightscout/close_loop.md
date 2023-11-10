@@ -8,6 +8,8 @@ Look into the specific app documentation to know more about optimal Nightscout s
 
 The heading for each section is a link to the Nightscout overview page for that closed-loop system.
 
+You will also find general support in [Loop and Learn](https://www.loopnlearn.org/).
+
 </br>
 
 ## [Loop](https://loopkit.github.io/loopdocs/nightscout/overview/)

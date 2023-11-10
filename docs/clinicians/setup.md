@@ -77,3 +77,11 @@ Loop adds rich details to Nightscout real time display, like food types and visu
 Hovering on the DIY closed loop system pill (Loop/OpenAPS) will show insights of the algorithm decisions.
 
 <img src="./img/Clinic13.png" width="400px" />
+
+</br>
+
+## Next step:
+
+Follow the link below.
+
+- [Generate reports](reports).
