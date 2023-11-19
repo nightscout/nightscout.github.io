@@ -11,11 +11,11 @@ If you're developing an uploader, you'll find the API information in your own Ni
 
 ## Dexcom
 
-### Dexcom G5/G6/ONE
+### Dexcom G5/G6/ONE/G7
 
 <img src="./img/Upload02.png" width="600px" />
 
-If you are using the Dexcom G5 and G6 sensors connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device.  
+If you are using the Dexcom sensor (except ONE) connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device.  
 
 ```{note}
 Dexcom Share is not available with Dexcom ONE. Use xDrip+ or xDrip4iOS.
@@ -27,11 +27,11 @@ For this to work, Nightscout must be configured to use the `bridge` plug-in and 
 If you use a [DIY closed loop system](/nightscout/close_loop) it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and the `bridge` plugin.
 ```
 
-*Please note that at this time (early 2023), the Dexcom G5 system is effectively obsolete but some people are still using stocks of old sensors and transmitters.*
+*Please note that at this time (end 2023), the Dexcom G5 system is effectively obsolete but some people are still using stocks of old sensors and transmitters.*
 
-If you don't want to use the official Dexcom apps, then you can use **open-source software** apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:
+If you don't want to use the official Dexcom apps, you can use **open-source software** apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:
 
-**Android**: xDrip+ for G5, G6 and ONE. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
+**Android**: xDrip+ for G5, G6, ONE and G7. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
 
 **iOS**:   
 	Spike for G5 and older G6 transmitters (**not Firefly**) <!-- Spike or xDrip4iOS for G4 (1)(3) -->  
@@ -46,11 +46,9 @@ Most of the useable transmitters that fall into this category at the present tim
 
 ## Medtronic
 
-If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` plugin. Unfortunately, this is **not possible anymore with recent pumps (7xx series and above)**.
+If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` (deprecated) plugin. Unfortunately, this is **not possible anymore with recent pumps (7xx series and above)**.
 
-```{hint}
-A new [plugin](/nightscout/plugins-v15/) is under test with the development branch of Nightscout... stay tuned!
-```
+
 
 <img src="./img/Upload04.png"  width="600px"/>
 
@@ -86,9 +84,11 @@ Most of the transmitters have their own proprietary apps. Nearly all of these su
 You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre).  
 Other Libre 2 sensors can be used directly with [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html) and Diabox.
 
-### Libre 3
+### Libre 2/3
 
 You can use the sensor connected with [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html) or upload to Nightscout automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip+ to perform this operation.
+
+A new plugin in Nightscout 15 (under development) will integrate the project above.
 
 ## Eversense
 
@@ -99,3 +99,5 @@ In order to get data from the Eversense CGM system, you will need to use the [ES
 ## Diasend
 
 [disaend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout. A 30 minutes delay might occur.
+
+A new plugin in Nightscout 15 (under development) will integrate the project above.

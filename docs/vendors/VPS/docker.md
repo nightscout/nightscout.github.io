@@ -178,6 +178,20 @@ Note that you need to start it if you modify your `docker-compose.yml` configura
 
 </br>
 
+## Update or downgrade
+
+Edit your `docker-compose.yml` configuration and change the image to whichever you want in the [community maintained images](https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags).
+
+If you're using `image: nightscout/cgm-remote-monitor:latest` and you want to upgrade it to latest release, don't change anything. You can update to `cgm-remote-monitor:latest_dev` or choose an older version like `cgm-remote-monitor:14.2.6`
+
+```
+sudo docker compose down
+sudo docker compose pull
+nohup sudo docker compose up -d &
+```
+
+</br>
+
 ## Deploy multiple instances
 
 Hints from [justmara](https://github.com/justmara)

@@ -66,10 +66,10 @@ You can find it in [Status - Hostname](https://navid200.github.io/xDrip/docs/Nig
 
 ## Dexcom
 
-You need at least one follower to use Dexcom Share.
+You need at least one follower to use Nightscout `share` or `nightscout-connect` plugins.
 
 ```{hint}
-If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and the `bridge` plugin.
+If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and a Nightscout plugin.
 ```
 
 On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.
@@ -78,13 +78,32 @@ On your master phone, touch the Share icon, enable Sharing. If you have no follo
 
 </br>
 
-Verify, update or add these variables:
+```{tab-set}
 
-`BRIDGE_USER_NAME 
-BRIDGE_PASSWORD 
-BRIDGE_SERVER`
+:::{tab-item} Select Nightscout version ->
+</br>
+:::
 
+:::{tab-item} 14 and previous
+Verify, update or add these variables:</br></br>
+`BRIDGE_USER_NAME`</br>
+`BRIDGE_PASSWORD`</br>
+`BRIDGE_SERVER`</br>
+</br>
 You need to add `bridge` in the `ENABLE` variable. Do not delete other entries, just add `bridge` after a space.
+:::
+
+:::{tab-item} 15
+Verify, update or add these variables:</br></br>
+`CONNECT_SOURCE` set to `dexcomshare`</br>
+`CONNECT_SHARE_ACCOUNT_NAME`</br> 
+`CONNECT_SHARE_PASSWORD`</br> 
+`CONNECT_SHARE_SERVER` (must be set to `ous` if outside of the US, else don't add this variable)</br>
+</br>
+You need to add `connect` in the `ENABLE` variable. Do not delete other entries, just add `connect` after a space.
+:::
+
+```
 
 </br>
 
@@ -103,14 +122,40 @@ The most common error on initial Nightscout setups is that people incorrectly us
 ## Medtronic CareLink
 
 ```{warning}
-The `mmconnect` plugin is **NOT** functional anymore with recent pumps (7xx) in cloud Nightscout sites.
+The `mmconnect` plugin is **NOT** functional anymore with recent pumps (7xx).
 ```
 
-```{hint}
-A new [plugin](/nightscout/plugins-v15/) is under test with the development branch of Nightscout... stay tuned!
-```
+You can use an Android phone with xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up.
 
-You can use an Android phone with a private version of xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up.
+</br>
+
+```{tab-set}
+
+:::{tab-item} Select Nightscout version ->
+</br>
+:::
+
+:::{tab-item} 14 and previous
+Verify, update or add these variables:</br></br>
+`CARELINK_USER_NAME`</br>
+`CARELINK_PASSWORD`</br>
+`MMCONNECT_SERVER`(must be set to `US` if inside the US, or else `EU`)</br>
+</br>
+You need to add `mmconnect` in the `ENABLE` variable. Do not delete other entries, just add `mmconnect` after a space.
+:::
+
+:::{tab-item} 15
+Verify, update or add these variables:</br></br>
+`CONNECT_SOURCE` set to `minimedcarelink`</br>
+`CONNECT_CARELINK_USERNAME`</br> 
+`CONNECT_CARELINK_PASSWORD`</br> 
+`CONNECT_CARELINK_REGION` (must be set to `us` if inside the US, or else `eu`)</br>
+`CONNECT_CARELINK_PATIENT_USERNAME` must be set to the patient name if more than one in present in Carelink.</br>
+</br>
+You need to add `connect` in the `ENABLE` variable. Do not delete other entries, just add `connect` after a space.
+:::
+
+```
 
 </br>
 

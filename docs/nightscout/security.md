@@ -126,4 +126,9 @@ In order to make your site visible to anybody, set  [`AUTH_DEFAULT_ROLES`](/nigh
 
 ## Developers: API authorization
 
-See [this page](https://github.com/nightscout/cgm-remote-monitor/wiki/API-v1-Security) for how to authenticate your app in the API calls.
+See [this page](https://github.com/nightscout/cgm-remote-monitor/wiki/API-v1-Security) for how to authenticate your app in the API V1 calls.
+
+The API documentation is visible on your Nightscout site using this extension to your site address:
+
+https://YOUR-SITE.com/api-docs/ and https://YOUR-SITE.com/api3-docs/.
+

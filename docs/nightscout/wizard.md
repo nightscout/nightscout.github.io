@@ -7,15 +7,7 @@
 This set of questions will hopefully help choose the best solution for you, or at least give you hints on where to start. 
 
 ```{hint}
-*This wizard is thought for one Nightscout site (one patient with diabetes). If you need more Nightscout sites you might need more accounts. Some hosted providers provide discounts and T1Pal support up to 5 patients per subscription.*
-```
-
-```{admonition} Nightscout DIY rules
-:class: note
-If it's cheap and easy it might not be as reliable as you'd like  
-If it's cheap and reliable it might be difficult to build or maintain  
-If it's simple and reliable it might not be free  
-**Free, simple and reliable is not available.**
+*This wizard is thought for one Nightscout site (one patient with diabetes). If you need more Nightscout sites you might need more accounts. Some hosted providers provide discounts, T1Pal support up to 5 patients per subscription.*
 ```
 
 </br>
@@ -23,7 +15,7 @@ If it's simple and reliable it might not be free
 | I want to contribute to Nightscout research and development.</br><select name="cont" id="CONT"><br/>  <option value="yes">Yes</option><br/>  <option value="no" selected="selected">No</option><br/></select> |
 | ------------------------------------------------------------ |
 | **What is the maximum acceptable cost per month  per site?**</br><select name="cost" id="COST"><br/>  <option value="free">It MUST be free even if it requires a lot of work</option><br/>  <option value="cent" selected="selected">Less than 10c</option><br/>  <option value="pay1">Less than 6$</option><br/>  <option value="pay2">Less than 10$</option><br/>  <option value="pay3">Less than 15$</option><br/></select> |
-| **How much of an issue is it when Nightscout is down?**</br><select name="rely" id="RELY"><br/>  <option value="serious">Serious: I need it back up ASAP</option><br/>  <option value="mild">Disturbing: If I can get it back up in less than a week I'm ok</option><br/>  <option value="none" selected="selected">It happens: I'll do without until I can get it fixed</option><br/></select> |
+| **How much of an issue is it when Nightscout is down?**</br><select name="rely" id="RELY"><br/>  <option value="serious">Serious: I need someone to fix it ASAP</option><br/>  <option value="mild" selected="selected">Disturbing: I will look for help and try to fix it myself</option><br/></select> |
 | **How much time are you ready to spend on creating and maintaining it?**</br><select name="simple" id="SIMPLE"><br/>  <option value="high">I've got good IT knowledge</option><br/>  <option value="medium" selected="selected">I can follow detailed instructions and take care of it</option><br/>  <option value="easy">I can follow simple instructions and take care of it</option><br/>  <option value="pay">I want someone else to do it for me</option><br/></select> |
 
 <script>
@@ -67,9 +59,8 @@ function Validate()
 	sel = document.getElementById("RELY");
 	switch(sel.selectedIndex)
 	{
-		case 0: nsHero=0; dbAtla=0; dbRail=0; dbVPS=0; nsFly=0; nsRend=0; nsGoog=0; nsVPS=0; break
-		case 1: nsFly=0; break
-		case 2: break
+		case 0: nsHero=0; dbAtla=0; dbRail=0; dbVPS=0; nsFly=0; nsRend=0; nsGoog=0; nsVPS=0; nsFly=0; break
+		case 1: break
 	}
 	if(dbAtla) sDB=sDB+" - Free MongoDB Atlas (limited to 512MiB) <br />"
 	if(dbAtlaP) sDB=sDB+" - M2 MongoDB Atlas (9$/month) <br />"
@@ -102,6 +93,7 @@ function Validate()
 	document.getElementById("resultNS").innerHTML = sNS;
 }
 </script>
+
 
 
 
