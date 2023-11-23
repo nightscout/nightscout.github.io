@@ -43,60 +43,9 @@ sudo apt install nano -y
 
 ## Step 1 - Install MongoDB
 
-If you use Ubuntu 22.04 skip this and continue to a2).
+a) Follow the vendor instructions
 
-a1) Install MongoDB with Ubuntu 20.04
-
-```bash
-sudo apt install mongodb -y
-```
-
-Wait until it completes, continue to b).
-
-a2) Install MongoDB with Ubuntu 22.04
-
-You first need to install ssl 1.1.
-
-Mind your architecture, check first:
-
-```
-dpkg --print-architecture
-```
-
-For arm64:
-
-```bash
-sudo -i
-wget http://launchpadlibrarian.net/475575244/libssl1.1_1.1.1f-1ubuntu2_arm64.deb
-apt install -y ./libssl1.1_1.1.1f-1ubuntu2_arm64.deb
-```
-
-For amd64:
-
-```
-sudo -i
-wget http://launchpadlibrarian.net/475575244/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
-apt install -y ./libssl1.1_1.1.1f-1ubuntu2_amd64.deb
-```
-
-You can now install Mongo dependencies.
-
-```
-apt-get update
-apt-get install gnupg
-wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org
-/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
-```
-
-And Mongo server.
-
-```
-apt-get update
-apt-get install -y mongodb-org
-systemctl start mongod
-systemctl status mongodsystemctl enable mongod
-```
+[MongoDB 5 with Ubuntu 20.04](https://www.mongodb.com/docs/v5.0/tutorial/install-mongodb-on-ubuntu/) or [MongoDB 6 with Ubuntu 22.04](https://www.mongodb.com/docs/v6.0/tutorial/install-mongodb-on-ubuntu/)
 
 b) Enter in Mongo shell
 

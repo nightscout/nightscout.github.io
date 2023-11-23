@@ -12,7 +12,7 @@ This set of questions will hopefully help choose the best solution for you, or a
 
 </br>
 
-| I want to contribute to Nightscout research and development.</br><select name="cont" id="CONT"><br/>  <option value="yes">Yes</option><br/>  <option value="no" selected="selected">No</option><br/></select> |
+| I want to contribute to Nightscout research and development.</br><button>[Yes              ►](https://t1pal.com/)</button> |
 | ------------------------------------------------------------ |
 | **What is the maximum acceptable cost per month  per site?**</br><select name="cost" id="COST"><br/>  <option value="free">It MUST be free even if it requires a lot of work</option><br/>  <option value="cent" selected="selected">Less than 10c</option><br/>  <option value="pay1">Less than 6$</option><br/>  <option value="pay2">Less than 10$</option><br/>  <option value="pay3">Less than 15$</option><br/></select> |
 | **How much of an issue is it when Nightscout is down?**</br><select name="rely" id="RELY"><br/>  <option value="serious">Serious: I need someone to fix it ASAP</option><br/>  <option value="mild" selected="selected">Disturbing: I will look for help and try to fix it myself</option><br/></select> |
@@ -27,13 +27,6 @@ function Validate()
 	sDB=""; sNS=""
 	dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1;
 	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; 
-	sel = document.getElementById("CONT");
-	switch(sel.selectedIndex)
-	{
-	    case 0: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0;
-		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsRend=0; nsGoog=0; ns10be=0; nsPro=0; nsSerendipity=0; 
-		break;
-	}
 	sel = document.getElementById("SIMPLE");
 	switch(sel.selectedIndex)
 	{
@@ -93,6 +86,7 @@ function Validate()
 	document.getElementById("resultNS").innerHTML = sNS;
 }
 </script>
+
 
 
 
