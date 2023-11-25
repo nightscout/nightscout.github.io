@@ -24,7 +24,7 @@ Find a list of commonly used hosting services below, decide which one you'll wan
 ^^^
 Since the [beginning](https://github.com/nightscout/cgm-remote-monitor/pull/98) Heroku has been a very popular platform for Nightscout. Most of the documentation was based on a Heroku Nightscout.  
 On August 25th 2022, Salesforce decided to [drop the free plan](https://blog.heroku.com/next-chapter). 
-You can [create your new Nightscout site with Heroku](/vendors/heroku/new_user) using an Eco plan (5$/month).
+You can [create your new Nightscout site with Heroku](/vendors/heroku/new_user) using an [Eco plan](https://www.heroku.com/pricing) (5$/month).
 
 **Pros**:  
 * Large platform with a reliable history
@@ -33,7 +33,7 @@ You can [create your new Nightscout site with Heroku](/vendors/heroku/new_user) 
 **Cons**:  
 * The Eco plan has the same limitations than the previous Free plan, for 5$ per month
 * For a Nightscout site a 7$ per month Basic plan is not really worth it (compared to hosted solutions)
-* Relying on the MongoDB Atlas database
+* **Doesn't include a database**
 
 +++
 Follow [these instructions](/vendors/heroku/new_user.md) to build your Nightscout site in Heroku.
@@ -44,7 +44,7 @@ Follow [these instructions](/vendors/heroku/new_user.md) to build your Nightscou
 ![Azure](/vendors/img/Azure.png)
 ^^^
 Nightscout DIY was [originally](https://github.com/rnpenguin/cgm-remote-monitor) created with Azure but most users dropped it after costs increased.  
-A new deployment method has [been created using a Docker container](/vendors/azure/new_user).  
+A new deployment method fitting in the [free tier](https://azure.microsoft.com/en-us/pricing/free-services) has [been created using a Docker container](/vendors/azure/new_user).  
 
 **Pros**:  
 * Large platform with a reliable history
@@ -55,7 +55,7 @@ A new deployment method has [been created using a Docker container](/vendors/azu
 * Trial account lasts maximum 12 months
 * Basic plan and pay as you go is free if you stay within quotas
 * The F1 free app service plan is designed for testing, not production
-**The Cosmos database doesn't integrate correctly with Nightscout**
+* **The Cosmos database doesn't integrate correctly with Nightscout**
 
 +++
 Follow [these instructions](/vendors/azure/new_user.md) to build your Nightscout site in Azure.
@@ -65,12 +65,12 @@ Follow [these instructions](/vendors/azure/new_user.md) to build your Nightscout
 ## Railway.app
 ![Railway](/vendors/img/Railway.png)
 ^^^
-You can easily create a new Railway Nightscout site with a MongoDB Atlas or a Railway MongoDB database.
+You can easily create a new Railway Nightscout site with a MongoDB Atlas or a Railway MongoDB database. The [Hobby plan](https://railway.app/pricing) (5$ per month) allows one Nightscout site and a small database.
 
 **Pros**:  
 * Easy to deploy or migrate an existing site from Heroku (but not worth it without free tier)
 * Simple to use and troubleshoot  
-* Can use a native Railway MongoDB database ($)  
+* Can use a reliable native Railway MongoDB database, the cost will add-up within the subscription ($)  
 
 **Cons**:
 * The free tier has been removed, only active developers can have 5$ credit per month
@@ -86,13 +86,13 @@ Follow [these instructions](/vendors/railway/new_user.md) to build your Nightsco
 ## Northflank
 ![](/vendors/img/Northflank.png)
 ^^^
-You can create your new Northflank Nightscout site, with its own Northflank database or with a MongoDB Atlas database.
+You can create your new [free](https://northflank.com/pricing) Northflank Nightscout site, with its own Northflank database or with a MongoDB Atlas database.
 
 **Pros**:  
 * Nightscout fits in the free tier  
 * Easy to deploy or migrate an existing site from Heroku  
 * Simple to use and troubleshoot  
-* Can use a native Northflank MongoDB database ($)  
+* Can use a professional native Northflank MongoDB database ($)  
 
 **Cons**:  
 * The Nightscout address generated for your site is impossible to remember
@@ -112,9 +112,8 @@ Fly.io proposed a simple migration wizard from Heroku and you can create your ne
 * Easy to migrate an existing site from Heroku 
 
 **Cons**:  
-* **Maintaining your site requires the use of a computer with command line instructions, not very intuitive**  
-* Migrated Heroku sites store variables as secrets  
-* Relying on the MongoDB Atlas database  
+* **Maintaining your site requires the use of command line instructions, not very intuitive** 
+* **Doesn't include a database**  
 
 +++
 Follow [these instructions](/vendors/fly.io/new_user.md) to build your Nightscout site in Fly.io.
@@ -153,7 +152,7 @@ A free solution with little experience.
 * The free plan doesn't guarantee any reliability
 * App will sleep after 15 minutes
 * Render URLs are considered unsafe by some internet providers
-* Relying on the MongoDB Atlas database
+* **Doesn't include a database**
 
 +++
 Follow [these instructions](/vendors/render/new_user.md) to build your Nightscout site in Render.

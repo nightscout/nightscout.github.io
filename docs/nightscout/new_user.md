@@ -48,7 +48,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
 Hosted services include everything: platform, database and support.
 ```
 
-
+[T1Pal](https://t1pal.com/), [NS10BE](https://ns.10be.de/de/index.html), [Nightscout Pro](https://nightscout.pro/), [Serendipity Bio](https://serendipitybio.com/)
 
 <img src="./img/Comparison.png"  width="800px" />
 
@@ -62,6 +62,8 @@ These are the current solutions not involving, or limiting to a strict minimum, 
 Most vendors will require a credit card to authenticate users and avoid abuse.
 ```
 
+[Azure](/vendors/azure/new_user), [Northflank](/vendors/northflank/new_user), [Fly.io](/vendors/fly.io/new_user), [Render](/vendors/render/new_user), [Atlas](/vendors/mongodb/atlas), [Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html), [Oracle](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)
+
 <img src="./img/Comparison2.png"  width="700px" />
 
 </br>
@@ -73,6 +75,8 @@ These solutions require a monthly fee.
 ```{note}
 Paying for a platform doesn't imply your database is included and covered by the plan.
 ```
+
+[Heroku](/vendors/heroku/new_user), [Railway](/vendors/railway/new_user) with [database](/vendors/railway/database), [Northflank database](/vendors/northflank/database) or [NAS](/advanced.md#building-nightscout-inside-your-nas)
 
 <img src="./img/Comparison3.png"  width="700px" />
 
