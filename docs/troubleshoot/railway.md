@@ -6,9 +6,8 @@
 
 </br>
 
-```{danger}
-The free plan will be removed Jul 3rd for new users and Aug 1st for existing users.</br>
-Documentation will be updated to reflect the changes when visible.
+```{warning}
+The free plan has been removed Jul 3rd for new users and Aug 1st for existing users.
 ```
 
 </br>
@@ -17,7 +16,7 @@ It has been running fine for the first 200/500 hours and now it's gone. Even the
 
 <img src="/vendors/railway/img/RailwayT12.png" width="300px" />
 
-This is because you need a Developer plan to run your Nightscout app in Railway, it doesn't mean you'll have to pay if your project cost remains below 5$, and this is usually the case.
+This is usually because you need a Developer plan to run your Nightscout app in Railway.
 
 </br>
 
