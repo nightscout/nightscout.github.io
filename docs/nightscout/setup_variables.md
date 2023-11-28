@@ -38,6 +38,10 @@ Nightscout configuration is held in variables , their content can be modified to
 [**→ Here**](https://navid200.github.io/xDrip/docs/Nightscout/NS_Variables.html)
 :::
 
+:::{tab-item} Hosted Nightscout
+If you use a hosted service, open the vendor web interface to access your Nightcsout site variables configuration or contact support.
+:::
+
 ````
 
 ------
