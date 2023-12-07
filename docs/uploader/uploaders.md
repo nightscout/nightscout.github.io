@@ -92,7 +92,7 @@ A new plugin in Nightscout 15 (under development) will integrate the project abo
 
 ## Eversense
 
-In order to get data from the Eversense CGM system, you will need to use the [ESEL](https://github.com/BernhardRo/Esel/releases) app running on an Android phone with the [modified](https://cr4ck3d3v3r53n53.club/) vendor app.
+In order to get data from the Eversense CGM system, you will need to use the [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/debug/app-debug.apk) app running on an Android phone with the [modified](https://cr4ck3d3v3r53n53.club/) vendor app.
 
 <img src="./img/Upload06.png"  width="500px"/>
 
