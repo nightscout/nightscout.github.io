@@ -8,6 +8,11 @@ If it's too complex for you the web terminal is an easy alternative.
 
 ## Use a web terminal
 
+```{warning}
+The web terminal feature was removed from Fly.io.
+Documentation will be updated to use a computer and flyctl.
+```
+
 a) In a new browser tab, [sign-in](https://fly.io/app/sign-in) with your fly.io account,then open a web [terminal](https://fly.io/terminal).
 If you just closed the terminal, you might need to wait some time (20 minutes) before you can open a new session (the message below appears).
 
@@ -186,5 +191,37 @@ Your app should now only be running on one machine. Check [here](https://fly.io/
 ***Note:*** *the builder app is normal, it is stopped: don't worry about it.*
 
 <img src="/vendors/fly.io/img/FlyT09.png" width="600px" />
+
+</br>
+
+## Obtain a free shared IP
+
+Apps migrated from Heroku will use a dedicated IP billed $1.90/month.
+
+If you want to run your Nightscout site in Fly.io for free, you will need to release the IP and request a shared IP.
+
+Follow the instructions below. The IP 137.66.11.78 and the site name `example-ns` are examples, yours will be different. Use your own IP and site name.
+
+```
+$ flyctl auth login  # This will open a browser and ask me to authenticate 
+
+$ flyctl app list
+NAME    OWNER           STATUS          PLATFORM        LATEST DEPLOY
+example-ns   personal        deployed        machines        2023-05-26T07:24:51Z
+
+
+$ flyctl ips list -a example-ns
+VERSION IP                      TYPE    REGION  CREATED AT
+v4      137.66.11.78            public  global  2022-09-13T14:17:58Z
+v6      3b09:8280:1::3:723c     public  global  2022-09-13T14:18:00Z
+
+$ flyctl ips release 137.66.11.78 -a example-ns
+Released 137.66.11.78 from example-ns
+
+$ flyctl ips allocate-v4 --shared -a example-ns
+v4      <new-ip-assigned> shared  global
+```
+
+You do not need to remember your new IP, just continue using your site name as before: https://yoursitename.fly.dev
 
 </br>

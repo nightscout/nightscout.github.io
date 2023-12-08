@@ -120,6 +120,13 @@ n) If you open this URL you will see it's replicating real time your Heroku Nigh
 
 </br>
 
+```{warning}
+Migrated sites will use a dedicated IP, that is a billable feature ($1.90/month).
+You will need to release the address and get a shared one. See [here](/troubleshoot/fly.io.md#obtain-a-free-shared-ip) how to proceed.
+```
+
+</br>
+
 ## Step 2 - Remove the Heroku webhook to Fly.io
 
 a) By defaut Fly.io has made a link to Heroku so that whatever happens in Heroku (updates, variables changes, etc...) is mirrored to Fly.io.  

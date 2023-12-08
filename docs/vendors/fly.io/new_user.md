@@ -67,6 +67,11 @@ Nightscout should run for free within the [allowances](https://fly.io/docs/about
 
 ## Step 2: Open the web terminal
 
+```{warning}
+The web terminal feature was removed from Fly.io.
+Documentation will be updated to use a computer and flyctl.
+```
+
 a) In a new browser tab, open the [terminal](https://fly.io/terminal). Sign-in with the account you created above, if requested.</br>
 If you just closed the terminal, you might need to wait some time (20 minutes) before you can open a new session (the message below appears).
 
