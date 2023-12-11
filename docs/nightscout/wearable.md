@@ -161,13 +161,7 @@ You can setup sugarmate as a calendar complication to display Nightscout on your
 
 </br>
 
-### [nsapple](https://github.com/Perceptus/nsapple)
-
-nsapple is an apple watch app for Nightscout / Loop followers.
-
-</br>
-
-### [Loop Follow](https://sweloop.se/LoopFollow/index.html)
+### [Loop Follow](https://sweloop.se/loop-follow.html)
 
 You can setup Loop Follow as a calendar complication to display Nightscout on your Apple watch.
 
