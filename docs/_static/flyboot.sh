@@ -4,7 +4,9 @@
 #  Nightscout in Fly.io Scripted Deployment
 #
 ######################################################################################################
-git clone https://github.com/nightscout/cgm-remote-monitor;cd cgm-remote-monitor;cat > fly.toml << "EOF"
+git clone https://github.com/nightscout/cgm-remote-monitor
+cd cgm-remote-monitor
+cat > fly.toml << "EOF"
 app = "nightscout"
 kill_signal = "SIGINT"
 kill_timeout = 5
