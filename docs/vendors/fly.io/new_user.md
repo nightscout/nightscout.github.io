@@ -65,35 +65,16 @@ Nightscout should run for free within the [allowances](https://fly.io/docs/about
 
 </br></br>
 
-## Step 2: Open the web terminal
+## Step 2: Install `flyctl`
 
 ```{warning}
 The web terminal feature was removed from Fly.io.
-Documentation will be updated to use a computer and flyctl.
+You need a computer with flyctl.
 ```
 
-a) In a new browser tab, open the [terminal](https://fly.io/terminal). Sign-in with the account you created above, if requested.</br>
-If you just closed the terminal, you might need to wait some time (20 minutes) before you can open a new session (the message below appears).
+Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
 
-<img src="/vendors/fly.io/img/FlyIO07.png" width="500px" />
-
-</br>
-
-b) Click on the image with code (`Launch Web CLI`).
-
-<img src="/vendors/fly.io/img/FlyIO06.png" width="500px" />
-
-</br>
-
-c) Wait until the web terminal is ready.
-
-<img src="/vendors/fly.io/img/FlyIO08.png" width="600px" />
-
-</br>
-
-d) A command prompt will open. You will either type the few required commands there or copy/paste them from the documentation.
-
-<img src="/vendors/fly.io/img/FlyIO09.png" width="600px" />
+*Note for Windows: do not use Git Bash on your PC, prefer a PowerShell terminal.*
 
 </br></br>
 
@@ -101,50 +82,71 @@ d) A command prompt will open. You will either type the few required commands th
 
 Type (or copy and paste) the following command in the terminal:</br>
 
-`curl https://nightscout.github.io/_static/flyboot.sh | bash`</br>
+a) Authenticate in Fly.io:
 
-<img src="/vendors/fly.io/img/FlyIO01.png" width="600px" />
+`flyctl auth login`
+
+Clone the official Nightscout repository:
+
+`git clone https://github.com/nightscout/cgm-remote-monitor`
 
 </br>
 
-b) Navigate to the Nightscout code directory copied locally by typing:
+b) Navigate to the Nightscout code directory copied locally with:
 
 `cd cgm-remote-monitor`
 
-<img src="/vendors/fly.io/img/FlyIO02.png" width="600px" />
-
 </br>
 
-c) Deploy your site with Fly.io.  
-Type the following command:
+c) Deploy your site with Fly.io.
 
 `flyctl launch`
 
+<img src="/vendors/fly.io/img/FlyIO06.png" width="600px" />
+
+</br>
+
+To the question `Would you like to tweak these setting before proceeding?` answer `Y` (yes).
+
+A web page to your new project will open in Fly.io.
+
+ d) Type your new Nightscout site name, make sure it is valid and isn't already used by someone else.
+
+<img src="/vendors/fly.io/img/FlyIO07.png" width="600px" />
+
+</br>
+
+e) Select the region closest to where you live, but make sure it doesn't require a paid plan.
+
+<img src="/vendors/fly.io/img/FlyIO08.png" width="600px" />
+
+<img src="/vendors/fly.io/img/FlyIO09.png" width="600px" />
+
+</br>
+
+f) In services set the port to `3000`.
+
+<img src="/vendors/fly.io/img/FlyIO10.png" width="600px" />
+
+</br>
+
+g) Make sure to select a `shared CPU 1x` with only `256MB` of memory to remain within the [free allowances](https://fly.io/docs/about/pricing/#free-allowances) limits.
+
+<img src="/vendors/fly.io/img/FlyIO11.png" width="600px" />
+
+</br>
+
+h) Don't select any database and `Confirm Settings`.
+
+<img src="/vendors/fly.io/img/FlyIO12.png" width="600px" />
+
+</br>
+
+i) Deployment will start. Wait until it completes.
+
 <img src="/vendors/fly.io/img/FlyIO13.png" width="600px" />
 
-</br>
-
-To the question `Would you like to copy its configuration to the new app?` answer `Y` (yes). 
-
-To the question: `App Name (leave blank to use an auto-generated name):` answer with the name you want for your new Nightscout site (lowercase letters, numbers, `-` but **no space or special characters**.
-
 <img src="/vendors/fly.io/img/FlyIO14.png" width="600px" />
-
-</br>
-
-If you see an `Error` message, the name is either unauthorized or already taken.
-
-Go back to **c)** and try another one.
-
-<img src="/vendors/fly.io/img/FlyIO15.png" width="600px" />
-
-</br>
-
-If you see `Configuration is valid`, you can continue.
-
-The name you chose will be your Nightscout site name (followed by `fly.dev`).
-
-<img src="/vendors/fly.io/img/FlyIO16.png" width="600px" />
 
 </br></br>
 
@@ -558,38 +560,27 @@ When deploy completes you should see your new Nightscout site name.
 
 </br>
 
-b) Last but not least: make sure to downscale your app with the following command:
+b) Last but not least: downscale your app typing the following command (replace *`myflynightscout`* with your own name): 
 
-`flyctl scale count 1`
+`flyctl scale --app `*`myflynightscout`*` count 1`
 
-<img src="/vendors/fly.io/img/FlyIO19.png" width="600px" />
+Confirm with `y` when asked.
 
-Enter `y` to confirm.
-
-<img src="/vendors/fly.io/img/FlyIO20.png" width="600px" />
+<img src="/vendors/fly.io/img/FlyIO15.png" width="800px" />
 
 </br>
 
-c) Exit the terminal typing `exit` or pressing `Ctrl D` (`⌘ D` with a Mac).
-
-Keep in mind you'll need some time to reopen it if you need to (as explained in step 2 above).  
-Close the browser tab.
-
-</br>
-
-d) You can now see your site in the fly.io dashboard at [https://fly.io/dashboard](https://fly.io/dashboard) click on the application (not the builder):
+c) You can now see your site in the fly.io dashboard at [https://fly.io/dashboard](https://fly.io/dashboard) click on the application (not the builder):
 
 <img src="/vendors/fly.io/img/FlyIOA2.png" width="700px" />
 
 </br>
 
-e) Inside your app you should see that it is running and has a clickable hostname.
+d) Inside your app you should see that it is running and has a clickable hostname.
 
 <img src="/vendors/fly.io/img/FlyIO05.png" width="500px" />
 
-</br>
-
-</br>
+</br></br></br>
 
 ```{include} /nightscout/first_setup.md
 
@@ -601,12 +592,20 @@ e) Inside your app you should see that it is running and has a clickable hostnam
 
 ## Editing Config Vars in Fly.io
 
-### Open a web terminal
+```{warning}
+The web terminal feature was removed from Fly.io.
+You need a computer with flyctl.
+```
 
-In a new browser tab, [sign-in](https://fly.io/app/sign-in) with your fly.io account, then open a web [terminal](https://fly.io/terminal).</br>
-(See [here](/troubleshoot/fly.io.md#use-a-web-terminal) the detailed sequence).
+Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
 
-</br>
+*Note for Windows: do not use Git Bash on your PC, prefer a PowerShell terminal.*
+
+Authenticate in Fly.io:
+
+`flyctl auth login`
+
+</br></br>
 
 ```{admonition} Secrets
 :class: warning
@@ -622,7 +621,7 @@ If you want to create a new secret or modify an existing one you need to use the
 In the command line below replace `yourappname` by the app name (usually your Nightscout site name: **`yourappname`**`.fly.dev`). 
 For example if you want to set your Nightscout site vertical scale to linear:
 
-`flyctl secrets set SCALE_Y="linear" -a yourappname`
+`flyctl secrets set SCALE_Y="linear" -a `*`yourappname`*`
 
 If your `SCALE_Y` secret was already set to `linear` you will see the following message:  
 
