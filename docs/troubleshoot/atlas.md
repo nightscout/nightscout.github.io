@@ -660,7 +660,7 @@ Select the organization, then top left the cog wheel to go in `Settings`, then s
 
 <img src="/vendors/mongodb/img/Cleanup06.png" width="800px" >
 
-If an organization is connected to mLab delete it only if you don't want to migrate the database or if you're done it with another organization. Deleting an organization without projects will not delete your data. 
+Deleting an organization without projects will not delete your data. 
 
 <img src="/vendors/mongodb/img/Cleanup05.png" width="600px" >
 
@@ -702,7 +702,9 @@ You can safely delete empty databases (check the size first).
 
 <img src="/vendors/mongodb/img/Cleanup13.png" width="600px" >
 
-!!!warning "If you're not sure you're deleting the right database, just leave it."
+```{warning}
+If you're not sure you're deleting the right database, just leave it.
+```
 
 Hover on the database name and click the bin icon. Confirm deletion by copying the database name and click `Drop`.
 
@@ -716,7 +718,9 @@ If your database gets recreated after you deleted it this means your `MONGODB_UR
 
 <img src="/vendors/mongodb/img/Cleanup15.png" width="700px" >
 
-!!!warning "Terminating a cluster will delete all information and databases in this cluster!"
+```{warning}
+Terminating a cluster will delete all information and databases in this cluster!
+```
 
 Confirm with your cluster name and wait until shutdown is complete.
 
