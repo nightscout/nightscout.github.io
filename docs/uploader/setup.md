@@ -98,7 +98,7 @@ Verify, update or add these variables:</br></br>
 `CONNECT_SOURCE` set to `dexcomshare`</br>
 `CONNECT_SHARE_ACCOUNT_NAME`</br> 
 `CONNECT_SHARE_PASSWORD`</br> 
-`CONNECT_SHARE_SERVER` (must be set to `ous` if outside of the US, else don't add this variable)</br>
+`CONNECT_SHARE_REGION` (must be set to `ous` if outside of the US, else don't add this variable)</br>
 </br>
 You need to add `connect` in the `ENABLE` variable. Do not delete other entries, just add `connect` after a space.
 :::
