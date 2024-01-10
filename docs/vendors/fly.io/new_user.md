@@ -14,11 +14,10 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 ## Fly.io
 ![Fly.io](/vendors/img/Fly.io.png)
 ^^^
-Fly.io proposes a [simple migration wizard from Heroku](/vendors/fly.io/migrate.md) and you can create your new Nightscout site in Fly.io.
+You can create your new Nightscout site in Fly.io.
 
 **Pros**:  
 * Nightscout fits in the free tier  
-* Easy to migrate an existing site from Heroku 
 
 **Cons**:  
 * **Maintaining your site requires the use of command line instructions, not very intuitive**  
@@ -97,6 +96,11 @@ b) Navigate to the Nightscout code directory copied locally with:
 `cd cgm-remote-monitor`
 
 </br>
+
+```{warning}
+The "tweaking" web interface has been removed from fly.io.
+This guide is not useable now.
+```
 
 c) Deploy your site with Fly.io.
 
