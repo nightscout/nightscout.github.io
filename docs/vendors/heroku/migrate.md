@@ -67,15 +67,15 @@ We really liked the Railway solution when we found it: it's very simple to migra
 
 ## **[Northflank](/vendors/northflank/new_user)**
 
-***Everybody else is going for Railway and you prefer a safer alternative because you're not afraid of an ugly Nightscout site name or adding a DDNS? Northflank is a good idea.***
+***Everybody else is going for Railway and you prefer a safer alternative because you're not afraid of an ugly Nightscout site name? Northflank is a good idea.***
 
 Not very sponsored, Northflank is also a good option, simple of use and offering a migration utility. The only issue is trying to remember your Nightscout site name (try `night--spicy-steam--nightscout--ci95-l9xw.code.run` for example). Still, Northflank is a reliable provider. But they will most probably review their free plan in the future.
 
-## **[Fly.io](/vendors/fly.io/migrate)**
+## **Fly.io**
 
 ***Fly.io still offers a free tier but if you don't like typing commands on your computer you'll short be facing a hard stop.***
 
-Fly.io was immediately popular due to the ease of migration from Heroku (for those not forgetting to unlink Heroku afterwards). Now, if you want to maintain your site you'll have to use command line instructions in the web terminal. On the other hand, it is a good solution.
+Fly.io was immediately popular due to the ease of migration from Heroku (the migration wizard has been removed). Now, if you want to maintain your site you'll have to use command line instructions in the web terminal. On the other hand, it is a good solution.
 
 ## [**Oracle Cloud**](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)
 
