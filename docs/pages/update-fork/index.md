@@ -22,4 +22,5 @@ orphan: true
 | <img src="/vendors/img/Azure.png" width="100px" />       | [Update](/update/update/)                                    |
 | <img src="/vendors/img/Fly.io.png" width="100px" />      | [Update](/update/update/)                                    |
 | <img src="/vendors/img/Render.png" width="100px" />      | [Update](/update/update/)                                    |
+| <img src="/vendors/img/Nightscout4u.png" width="100px" /> | Contact [Nightscout4u](https://www.nightscout4u.com/index.php/contact) |
 

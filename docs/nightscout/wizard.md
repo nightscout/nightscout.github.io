@@ -22,16 +22,16 @@ This set of questions will hopefully help choose the best solution for you, or a
 function Validate()
 {
 	var dbAtla, dbAtlaP, dbRail, dbNort, dbVPS
-	var nsHero, nsRail, nsNort, nsAzur, nsVPS, nsFly, nsRend, nsGoog, nsT1Pal, ns10be, nsPro, nsSerendipity
+	var nsHero, nsRail, nsNort, nsAzur, nsVPS, nsFly, nsRend, nsGoog, nsT1Pal, ns10be, nsPro, nsSerendipity, ns4u
 	var sDB, sNS
 	sDB=""; sNS=""
 	dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1;
-	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; 
+	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; ns4u=1;
 	sel = document.getElementById("SIMPLE");
 	switch(sel.selectedIndex)
 	{
 		case 0: dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1; nsHero=1; nsRail=1;
-	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; 
+	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; ns4u=1;
 	    		sDB="[Reliability constrains removed for IT knowledgeable user]<br />";
 	    		sNS="[Reliability constrains removed for IT knowledgeable user]<br />"
 	    		break
@@ -43,10 +43,10 @@ function Validate()
 	sel = document.getElementById("COST");
 	switch(sel.selectedIndex)
 	{
-		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0;  break
-		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0; break
-		case 2: dbAtlaP=0; nsT1Pal=0; nsSerendipity=0; break
-		case 3: nsT1Pal=0; nsSerendipity=0; break
+		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0; ns4u=1; break
+		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0; ns4u=1; break
+		case 2: dbAtlaP=0; nsT1Pal=0; nsSerendipity=0; ns4u=1; break
+		case 3: nsT1Pal=0; nsSerendipity=0; ns4u=1; break
 		case 4: break
 	}
 	sel = document.getElementById("RELY");
@@ -60,7 +60,7 @@ function Validate()
 	if(dbRail) sDB=sDB+" - Railway Mongo database (10$/GiB/month)<br />"
 	if(dbNort) sDB=sDB+" - Northflank Mongo database (0.3$/GiB/month) <br />"
 	if(dbVPS) sDB=sDB+" - VPS Mongo database (Oracle, Google, ...) <br />"
-	if(nsT1Pal|ns10be|nsPro|nsSerendipity) sDB=sDB+" - Database included in the hosted service <br />"
+	if(nsT1Pal|ns10be|nsPro|nsSerendipity|ns4u) sDB=sDB+" - Database included in the hosted service <br />"
 	if(nsGoog) sDB=sDB+" - Database included in Google Cloud <br />"
 	if(sDB=="") sDB="Uh... not many choices there, try to change some options and retry."
 	document.getElementById("resultDB").innerHTML = sDB;
@@ -82,6 +82,7 @@ function Validate()
 	if(ns10be) sNS=sNS+" - NS10BE Hosted Nightscout (from €4.99/month) <br />"
 	if(nsPro) sNS=sNS+" - Nightscout Pro Hosted service (3£/month) <br />"
 	if(nsSerendipity) sNS=sNS+" - Serendipity Bio  Hosted service (12.99$/month) <br />"
+	if(ns4u) sNS=sNS+" - Nightscout4u Hosted service (Free) <br />"
 	if(sNS=="") sNS="Uh... not many choices there, try to change some options and retry."
 	document.getElementById("resultNS").innerHTML = sNS;
 }
@@ -116,7 +117,8 @@ Made you mind? Have a look at your options:
 [T1Pal](/index.md#t1pal)  
 [NS10BE](/index.md#ns10be)  
 [Nightscout Pro](/index.md#nightscout-pro)  
-[Serendipity Bio](/index.md#serendipity-bio)
+[Serendipity Bio](/index.md#serendipity-bio)  
+[Nightscout4u](/index.md#nightscout4u)  
 
 ## <u>Database</u>
 

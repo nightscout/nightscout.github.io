@@ -83,7 +83,7 @@ Before using Nightscout, it is important to understand that this project:
 There's no simple answer to this. You basically have two options:
 
 1. **DIY**: Use instructions on this website to create your own installation. You will need to maintain this installation yourself. There are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be free - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it.
-2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), [Nightscout.Pro](#nightscout-pro), [Serendipity Bio](#serendipity-bio)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), [Nightscout.Pro](#nightscout-pro), [Serendipity Bio](#serendipity-bio), and [Nightscout4u](#nightscout4u)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
 
 The Nightscout development community actively supports both of these choices.
 
@@ -174,6 +174,17 @@ Concerned about reliability or sustainability?  Serendipity Bio is built using A
 Coming soon, the service will feature additional, enhanced reporting and alerting alongside Nightscout's current features!
 
 Available globally, a monthly subscription is priced at $12.99 USD per month, payable online via credit card.
+```
+### Nightscout4u
+
+```{card}
+<img src="https://www.nightscout4u.com/images/LogoNightscout4u0002.png" height="155">
++++
+[Nightscout4u.com](https://www.nightscout4u.com/) started its service in 2023 and offers a simple one-click hosted Nightscout service solution. It is possible to create and use multiple Nightscout instances with one account.
+
+As the service does not cover any guarantee in a production environment, it is completely **free of charge** and suitable for beginners to make their first steps and get used to Nightscout.
+
+Check out the easy way of a [hosted Nightscout solution](https://www.nightscout4u.com/).
 ```
 
 ## Who Can Help Me?
