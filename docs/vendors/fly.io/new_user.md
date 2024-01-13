@@ -73,7 +73,7 @@ You need a computer with flyctl.
 
 Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
 
-*Note for Windows: do not use Git Bash on your PC, prefer a PowerShell terminal.*
+*Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*
 
 </br></br>
 
@@ -96,11 +96,6 @@ b) Navigate to the Nightscout code directory copied locally with:
 `cd cgm-remote-monitor`
 
 </br>
-
-```{warning}
-The "tweaking" web interface has been removed from fly.io.
-This guide is not useable now.
-```
 
 c) Deploy your site with Fly.io.
 
