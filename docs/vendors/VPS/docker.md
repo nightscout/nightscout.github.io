@@ -18,6 +18,8 @@ A comprehensive description of the yaml file for mongo and Nightscout setup [her
 
 If you don't own a domain name, get a DDNS name now: see [here](/nightscout/dns).
 
+You can also use [Caddy as reverse proxy](https://github.com/Alderskog/nightscout-in-OCN).
+
 </br>
 
 ## Update your system
