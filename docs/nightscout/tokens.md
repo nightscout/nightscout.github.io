@@ -68,7 +68,7 @@ You can also add the token to the site URL to authenticate using a token. Your s
 Anybody with this link can use your Nightscout with the role defined for this token.
 
 ```{hint}
-If the user copies only your core URL into a browser, and your site is readable by default, the token will be bypassed. (Possible strategies to ensure the user puts the role-based URL into a browser include using a [tinyurl]<https://tinyurl.com/app> or [bit.ly]<https://bitly.com/>.)
+If the user copies only your core URL into a browser, and your site is readable by default, the token will be bypassed. (Possible strategies to ensure the user puts the role-based URL into a browser include using a [tinyurl](https://tinyur.com/app) or [bit.ly](https://bitly.com).)
 ```
 
 - You can edit a subject by clicking the edit icon, making changes, and saving.
