@@ -7,7 +7,7 @@ The web terminal feature was removed from Fly.io.
 You need a computer with flyctl.
 ```
 
-Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
+Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.  You also need to [install git](https://git-scm.com/downloads) if you're using a Windows computer.
 
 *Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*
 

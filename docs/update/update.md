@@ -114,6 +114,8 @@ Updating existing machines in 'example-ns' with rolling strategy
 
 Visit your newly deployed app at https://example-ns.fly.dev/
 ```
+- Downscale the app if you haven't yet
+`flyctl scale --app example-ns count 1`
 </br>
 :::
 

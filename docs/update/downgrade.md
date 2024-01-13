@@ -20,7 +20,7 @@ If you use Heroku and you want to return to the previous version, see [Roll back
 
 **Experienced users only - not recommended**
 
-Deploying an archived release of Nightscout is complex and involves installing Git on your computer.
+Deploying an archived release of Nightscout is complex and involves using Git on your computer (You need to [install git](https://git-scm.com/downloads) if you're using a Windows computer).
 
 Before starting you need to have the project `nightscout/cgm-remote-monitor` forked in your GitHub repository, with not only the master fork copied (look out for the check box!). It is recommended to [redeploy](/update/redeploy) paying attention to this step.
 
