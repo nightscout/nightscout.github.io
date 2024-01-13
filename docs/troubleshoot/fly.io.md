@@ -9,9 +9,43 @@ You need a computer with flyctl.
 
 Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
 
-*Note for Windows: do not use Git Bash on your PC, prefer a PowerShell terminal.*
+*Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*
 
 </br></br>
+
+## Restart your app
+
+Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
+
+*Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*
+
+- Log in Fly.io:
+
+`flyctl auth login` 
+
+- Restart your app (replace `yourappname` by the name of your Nightscout app in Fly.io)
+
+`flyctl machine restart --app yourappname`
+
+</br>
+
+## Recover `fly.toml`
+
+Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
+
+*Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*
+
+- Log in Fly.io:
+
+`flyctl auth login` 
+
+- Copy your Nightscout app (replace `yourappname` with your own) configuration file `fly.toml`.
+
+`flyctl config save --app yourappname`
+
+- Keep this file in a safe place as you'll need it to redeploy or upgrade your Nightscout.
+
+</br>
 
 ## Cleanup
 
@@ -54,11 +88,16 @@ If you delete the builder (like in the picture above) you won't be able to deplo
 
 ### Delete your local repository
 
-#### If you deployed with your own computer (old method).
+#### If you deployed with your own computer.
+
+```{warning}
+Make a backup of the `fly.toml` file present in the `cgm-remote-monitor` folder!
+This is essential to make your site maintainable!
+```
 
 You can delete the `cgm-remote-monitor` folder on your computer and fork it again. 
 
-If you run PowerShell in Windows, exit the folder before deleting it, in task manager end the `flyctl.exe` task. 
+Exit the folder before deleting it, in task manager end the `flyctl.exe` task. 
 
 #### If you deployed from the web terminal.
 
@@ -68,14 +107,9 @@ You don't have a local repository.
 
 ## Downscale your app
 
-```{warning}
-The web terminal feature was removed from Fly.io.
-You need a computer with flyctl.
-```
-
 Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
 
-*Note for Windows: do not use Git Bash on your PC, prefer a PowerShell terminal.*
+*Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*
 
 </br>
 
@@ -104,14 +138,9 @@ Your app should now only be running on one machine. Check [here](https://fly.io/
 
 ## Obtain a free shared IP
 
-```{warning}
-The web terminal feature was removed from Fly.io.
-You need a computer with flyctl.
-```
-
 Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.
 
-*Note for Windows: do not use Git Bash on your PC, prefer a PowerShell terminal.*
+*Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*
 
 </br>
 
@@ -163,3 +192,61 @@ v4      <new-ip-assigned> shared  global
 You do not need to remember your new IP, just continue using your site name as before: https://yoursitename.fly.dev
 
 </br>
+
+## Migrate from Heroku
+
+Log into Heroku.
+
+- Write down your Nightscout app name from the [dashboard](https://dashboard.heroku.com/apps).
+- Get your **API Key** from your [account settings](https://dashboard.heroku.com/account). Do not share it publicly.
+
+Look into [this list](https://fly.io/docs/reference/regions/) and find a free region close to where you live. This is a 3 letters code, for example `ams`.
+
+Open a terminal or an elevated command prompt.
+
+*Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*
+
+- Log in Fly.io:
+
+`flyctl auth login` 
+
+- Replace `yourappname` with your Nightscout app from Heroku, `API-Key` with your Heroku API Key and `xxx` with the region you selected.
+
+`flyctl turboku yourappname API-Key --region xxx`
+
+- Your Heroku app will deploy in Fly.io. Wait until deployment completes.
+- You'll see the name of your new Nightscout site with Fly.io.
+
+```
+Finished launching new machines
+-------
+ ✔ Machine 784e290f461048 [app] update finished: success
+-------
+Visit your newly deployed app at https://yourappname.fly.dev/
+```
+
+- Downscale the app, confirm when requested.
+
+`flyctl scale --app yourappname count 1`
+
+- Turn your Heroku site off (the switch `web node lib/server/server.js`) and check your new Fly.io Nightscout is running.
+- Log into Fly.io, [select your app](https://fly.io/apps) and verify it's using a share V4 IP, release the V6 IP.
+
+</br>
+
+```{warning}
+Make a backup of your fly.toml!
+This is essential to make your site maintainable!
+```
+
+- Fly deployment created a folder with your app name, you'll find your `fly.toml` file inside. This file is all what you need to redeploy your project. You will need it to upgrade your Nightscout site or redeploy it.
+
+
+
+```{warning}
+Make a [backup of your Heroku variables](/troubleshoot/heroku.md#backup-your-site-variables)!
+Fly.io will store then as secrets and you won't be able to read them!
+```
+
+</br>
+

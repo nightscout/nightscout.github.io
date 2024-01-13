@@ -42,8 +42,12 @@ Not knowing if it's a permanent issue, first try to restart it...
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
+:::{tab-item} Railway/Northflank/Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
 :::
 
 :::{tab-item} Render
@@ -84,7 +88,9 @@ Else go [there](/troubleshoot/railway).
 
 ## Fly.io
 
-Fly.io troubleshooting is complex if you didn't [make your app maintainable](/troubleshoot/fly.io.md#make-your-migrated-app-maintainable).
+Fly.io troubleshooting is complex if you didn't save your `fly.toml` configuration. Check in your local clone of the `cgm-remote-monitor` project. If you can't find it, [recover it](/troubleshoot/fly.io#recover-fly-toml) first.
+
+Try to redeploy your app.
 
 Once done, issues are most probably due to your `fly.toml` contents or variables.
 
