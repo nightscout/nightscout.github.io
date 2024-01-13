@@ -23,9 +23,13 @@ Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to ins
 
 `flyctl auth login` 
 
-- Restart your app (replace `yourappname` by the name of your Nightscout app in Fly.io)
+- Verify your Nightscout app name
 
-`flyctl machine restart --app yourappname`
+`flyctl app list`
+
+- Restart your app (replace `example-ns` by the name of your Nightscout app in Fly.io)
+
+`flyctl machine restart --app example-ns`
 
 </br>
 
@@ -39,9 +43,13 @@ Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to ins
 
 `flyctl auth login` 
 
-- Copy your Nightscout app (replace `yourappname` with your own) configuration file `fly.toml`.
+- Verify your Nightscout app name
 
-`flyctl config save --app yourappname`
+`flyctl app list`
+
+- Copy your Nightscout app (replace `example-ns` with your own) configuration file `fly.toml`.
+
+`flyctl config save --app example-ns`
 
 - Keep this file in a safe place as you'll need it to redeploy or upgrade your Nightscout.
 
@@ -116,19 +124,25 @@ Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to ins
 March 31st 2023, apps deploy in V2 and V1 apps are automatically migrated too.  
 This causes some issues as V2 automatically deploys in a more than one machine, your Nightscout site might not work correctly.
 
-Type the following command in the terminal (replace ***`app_name`*** with your own app name):
+Type the following command in the terminal (replace ***`example-ns`*** with your own app name):
 
-Authenticate in Fly.io:
+- Authenticate in Fly.io:
+
 
 `flyctl auth login`
 
-Downscale your app:
+- Verify your Nightscout app name
 
-`flyctl scale --app `***`app_name`***` count 1`
+`flyctl app list`
+
+- Downscale your app:
+
+`flyctl scale --app `***`example-ns`***` count 1`
 
 <img src="/vendors/fly.io/img/FlyT08.png" width="600px" />
 
-Your app should now only be running on one machine. Check [here](https://fly.io/dashboard/personal/machines).
+- Your app should now only be running on one machine. Check [here](https://fly.io/dashboard/personal/machines).
+
 
 ***Note:*** *the builder app is normal, it is stopped: don't worry about it.*
 
@@ -210,9 +224,9 @@ Open a terminal or an elevated command prompt.
 
 `flyctl auth login` 
 
-- Replace `yourappname` with your Nightscout app from Heroku, `API-Key` with your Heroku API Key and `xxx` with the region you selected.
+- Replace `example-ns` with your Nightscout app from Heroku, `API-Key` with your Heroku API Key and `xxx` with the region you selected.
 
-`flyctl turboku yourappname API-Key --region xxx`
+`flyctl turboku example-ns API-Key --region xxx`
 
 - Your Heroku app will deploy in Fly.io. Wait until deployment completes.
 - You'll see the name of your new Nightscout site with Fly.io.
@@ -222,12 +236,12 @@ Finished launching new machines
 -------
  ✔ Machine 784e290f461048 [app] update finished: success
 -------
-Visit your newly deployed app at https://yourappname.fly.dev/
+Visit your newly deployed app at https://example-ns.fly.dev/
 ```
 
 - Downscale the app, confirm when requested.
 
-`flyctl scale --app yourappname count 1`
+`flyctl scale --app example-ns count 1`
 
 - Turn your Heroku site off (the switch `web node lib/server/server.js`) and check your new Fly.io Nightscout is running.
 - Log into Fly.io, [select your app](https://fly.io/apps) and verify it's using a share V4 IP, release the V6 IP.
