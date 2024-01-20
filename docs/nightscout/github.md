@@ -34,12 +34,3 @@ You don't need a GitHub account.
 ```
 
 </br>
-
-------
-
-## Fork the Nightscout project
-
-```{include} /vendors/github/fork.md
-```
-
-</br>

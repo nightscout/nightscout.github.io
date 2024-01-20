@@ -57,8 +57,6 @@ If you don't see `MONGODB_URI` but see `MONGO_CONNECTION` (**NOT** `MONGO_COLLEC
 :::{tab-item} I don't have a GitHub Account
 ### Create a GitHub account
 ::: {include} /vendors/github/create.md
-### Fork the Nightscout project
-:::{include} /vendors/github/fork.md
 :::
 
 :::{tab-item} I already have a GitHub Account

@@ -8,10 +8,6 @@ When encountering update issues with GitHub, the easiest method it to delete it 
 
 ```
 
-## Fork the Nightscout project
-
-```{include} /vendors/github/fork.md
-
-```
+## [Fork the Nightscout project](/troubleshoot/github.md#fork-the-nightscout-project) 
 
 </br>
