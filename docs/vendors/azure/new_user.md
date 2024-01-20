@@ -89,6 +89,8 @@ Open the list in Resource group and pick your group (the one you created in Step
 
 <img src="/vendors/azure/img/Azure23.png" width="600px" />
 
+If your free trial expired, select Pay-As-You-Go. It will be free if you use free resources like the Free F1 resource (see below).
+
 </br>
 
 d) Decide your site name (only lowercase and you can use `-` as a separator).  
@@ -108,7 +110,7 @@ Make sure it is the same than the database region you selected in Step 2.g.
 
 </br>
 
-f) Change the plan size.
+f) Select the free F1 plan.
 
 <img src="/vendors/azure/img/Azure26.png" width="600px" />
 
@@ -118,19 +120,21 @@ The Free F1 plan includes 60 CPU minutes per day. It usually is enough for a mod
 If you want a more reliable CPU, consider another plan like Shared D1 ($).
 ```
 
-Select Dev /Test, F1 Free and click Apply.
+</br>
 
-<img src="/vendors/azure/img/Azure27.png" width="300px" />
+g) Click Next: Database > down in the page.
+
+<img src="/vendors/azure/img/Azure27.png" width="400px" />
 
 </br>
 
-g) Click Next: Docker > in the lower left of the page.
+g) Do not change anything and click Next: Docker > down in the page.
 
 <img src="/vendors/azure/img/Azure28.png" width="400px" />
 
 </br>
 
-h) In Image source select Docker Hub.
+h) In Image source select **Docker Hub** instead of Quickstart.
 
 <img src="/vendors/azure/img/Azure29.png" width="600px" />
 
