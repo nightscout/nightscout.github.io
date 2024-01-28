@@ -37,6 +37,8 @@ Some common deployment methods:
 
 </br>
 
+(nas)=
+
 ## Building Nightscout inside your NAS
 
 Don't buy a NAS device just for this, but if you already have one that's worth a try!

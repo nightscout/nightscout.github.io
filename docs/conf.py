@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Nightscout Documentation'
-copyright = '2023, #WeAreNotWaiting'
+copyright = '2024, #WeAreNotWaiting'
 author = 'Patrick Sonnerat'
 
 # -- General configuration ---------------------------------------------------

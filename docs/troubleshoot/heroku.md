@@ -2,6 +2,8 @@
 
 </br>
 
+(heroku-nothing-here)=
+
 ## There's nothing here
 
 <img src="/vendors/heroku/img/TShoot57.png" width="400px" >
@@ -37,6 +39,8 @@ When trying to deploy a new Nightscout site, this message appears when clicking 
 - Change browser and retry.
 
 </br>
+
+(heroku-nogit)=
 
 ## Cannot find cgm-remote-monitor in Heroku / No GitHub source visible
 

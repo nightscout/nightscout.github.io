@@ -44,6 +44,12 @@ Common symptoms are:
 
 </br>
 
+## Username is a phone number
+
+New users might have the phone app setup with their phone number including country code and the symbol `+`. This is not supported by Nightscout. Continue below and create a dependent account with an alphanumerical username.
+
+</br>
+
 ## Obtaining a username
 
 Dependent accounts can have a username.
@@ -110,7 +116,7 @@ Variables location will depend on the platform you use:
 :::
 
 :::{tab-item} Fly.io
-[**→ Here**](/vendors/fly.io/new_user.md#editing-config-vars-in-fly-io)
+[**→ Here**](editing-config-vars-in-fly-io)
 :::
 
 :::{tab-item} Google Cloud

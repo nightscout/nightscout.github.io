@@ -57,7 +57,7 @@ It is good practice to maintain your Heroku stack up to date. Either when you re
 - Scroll down to the bottom of the page, select the `master` branch and click `Deploy Branch`
 
 ```{hint}
-If you can't select the `master` branch or `Deploy Branch` doesn't do anything [reconnect GitHub](/troubleshoot/heroku.md#cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible).
+If you can't select the `master` branch or `Deploy Branch` doesn't do anything [reconnect GitHub](heroku-nogit).
 ```
 
 <img src="/vendors/heroku/img/UpdateNS23.png" width="800px" >

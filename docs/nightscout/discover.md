@@ -31,7 +31,7 @@ Optionally you will see other indications (pills) that can be personalized in yo
 
 ## Authenticate yourself
 
-By default you site opens read only, you need to authenticate using your [API secret](/nightscout/setup_variables.md#api_secret) in order to modify settings and add treatments. Click on the lock icon, enter your API secret and click `Update`.
+By default you site opens read only, you need to authenticate using your [API secret](api-secret) in order to modify settings and add treatments. Click on the lock icon, enter your API secret and click `Update`.
 
 <img src="/nightscout/img/UseNS04.png" width="400px" />
 
@@ -139,7 +139,7 @@ You can log physical activities and specify the duration.
 
 ### Insulin Cartridge Change `iage`
 
-Logging these events will help you remember various expirations dates and will update the [corresponding pills](/nightscout/setup_variables.md#age-age-pills) if enabled. 
+Logging these events will help you remember various expirations dates and will update the [corresponding pills](/nightscout/setup_variables.md#age-pills) if enabled. 
 
 <img src="/nightscout/img/UseNS14.png" width="500px" />
 
@@ -255,7 +255,7 @@ You can customize your view using Settings. Changes will only be applied to your
 
 You need to [authenticate](#authenticate-yourself) to save your settings. 
 
-#### [**Units `DISPLAY_UNITS`**](/nightscout/setup_variables.md#display_units)
+#### [**Units `DISPLAY_UNITS`**](display-units)
 
 #### [**Date Format `TIME_FORMAT`**](/nightscout/setup_variables.md#time_format-12)
 
@@ -291,7 +291,7 @@ You need to [authenticate](#authenticate-yourself) to save your settings.
 
 </br>
 
-In order to `Save` your changes you need to Authenticate, click `Authenticate` and enter your [API Secret](/nightscout/setup_variables.md#api_secret).
+In order to `Save` your changes you need to Authenticate, click `Authenticate` and enter your [API Secret](api-secret).
 
 `Reset, and use defaults` will reverse your changes to defaults from your [config variables](/nightscout/setup_variables.md#nightscout-config-vars).
 

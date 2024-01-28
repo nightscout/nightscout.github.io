@@ -587,7 +587,7 @@ d) Inside your app you should see that it is running and has a clickable hostnam
 
 </br>
 
-<!-- Somehow this natural anchor link doesn't work -->
+(editing-config-vars-in-fly-io)=
 
 ## Editing Config Vars in Fly.io
 

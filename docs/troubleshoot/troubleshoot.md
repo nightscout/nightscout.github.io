@@ -66,7 +66,7 @@ Follow [these](/troubleshoot/github) instructions.
 
 Search your issue [there](/troubleshoot/heroku).
 
-[There's nothing here, yet](/troubleshoot/heroku.md#there-s-nothing-here) can be due to billing issues.
+[There's nothing here, yet](heroku-nothing-here) can be due to billing issues.
 
 An [Application error](/troubleshoot/heroku.md#application-error) means Heroku crashed. Restart it and check database size.
 
@@ -88,7 +88,7 @@ Else go [there](/troubleshoot/railway).
 
 ## Fly.io
 
-Fly.io troubleshooting is complex if you didn't save your `fly.toml` configuration. Check in your local clone of the `cgm-remote-monitor` project. If you can't find it, [recover it](/troubleshoot/fly.io#recover-fly-toml) first.
+Fly.io troubleshooting is complex if you didn't save your `fly.toml` configuration. Check in your local clone of the `cgm-remote-monitor` project. If you can't find it, [recover it](recover-fly-toml) first.
 
 Try to redeploy your app.
 

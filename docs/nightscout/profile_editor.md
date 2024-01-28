@@ -2,7 +2,7 @@
 
 <img src="/nightscout/img/SetupNS13a.png" width="300px"/>
 
-The top part will show your site settings: [`Title`](/nightscout/setup_variables.md#custom_title-nightscout), [`Units`](/nightscout/setup_variables.md#display_units) and [`Date Format`](/nightscout/setup_variables.md#time_format-12). 
+The top part will show your site settings: [`Title`](/nightscout/setup_variables.md#custom_title-nightscout), [`Units`](display-units) and [`Date Format`](/nightscout/setup_variables.md#time_format-12). 
 
 <img src="/nightscout/img/Profile00.png" width="600px" />
 

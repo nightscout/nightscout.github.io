@@ -33,6 +33,8 @@ Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to ins
 
 </br>
 
+(recover-fly-toml)=
+
 ## Recover `fly.toml`
 
 Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer.

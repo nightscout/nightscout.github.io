@@ -2,8 +2,6 @@
 orphan: true
 ---
 
-
-
 a) Go to your `Account` `Dashboard` - `Settings` and scroll down to `Import`.  
 Select Heroku.
 
