@@ -2,7 +2,7 @@
 
 </br>
 
-   ![Nightscout](/images/nightscout_screenshot_600.png)
+![Nightscout](/images/nightscout_screenshot_600.png)
 
 </br>
 
@@ -15,7 +15,6 @@ Health professional? You might not want to build a Nightscout site and just need
 Nightscout (also known as CGM in the Cloud) is an open-source cloud application used by people with diabetes and parents of kids with diabetes to visualize, store and share the data from their Continuous Glucose Monitoring sensors in real-time. Once setup, Nightscout acts as a central repository of blood glucose and insulin dosing/treatment data for a single person, allowing you to view the CGM graph and treatment data anywhere using just a web browser connected to the internet.
 
 There are several parts to this system. You need somewhere online to store, process and visualize this data (a Nightscout Site), something to upload CGM data to your Nightscout (an Uploader), and then optionally you can use other devices to access or view this data (one - or more - Follower).
-
 
 ### Nightscout Site
 
@@ -30,7 +29,7 @@ The CGM data is usually sent to Nightscout by an uploader device such as a mobil
 
 In addition to viewing the data using a web browser, there are also applications available for mobile devices, smartwatches, electronic devices and other cloud-based services which allow you alternative ways to view and interact with the information stored within your Nightscout site (often known as "Followers").
 
-   ![Nightscout Environment](/images/nscloud.png)
+![Nightscout Environment](/images/nscloud.png)
 
 ## Development History
 
@@ -40,24 +39,24 @@ When first implemented, Nightscout was a solution specifically for remote monito
 
 ## What are the values of Nightscout
 
-We are compelled in the pursuit of **humane** and **equitable** application of technology to **liberating people from the burden of diabetes**. We are not waiting to deliver the benefits we've found in **sharing _all_ diabetes experiences**.  Nightscout is free to contribute, free to access, free to criticize, free to try, free to depend on, free to modify, and free to distribute. The Nightscout community demands **respect** and **dignity** for all community members. The reputation of the Nightscout community is affected by the **quality** of the source code, the quality of our relationships, the quality of our discussions, what we are known for doing: the way we treat each other.
+We are compelled in the pursuit of **humane** and **equitable** application of technology to **liberating people from the burden of diabetes**. We are not waiting to deliver the benefits we've found in **sharing _all_ diabetes experiences**. Nightscout is free to contribute, free to access, free to criticize, free to try, free to depend on, free to modify, and free to distribute. The Nightscout community demands **respect** and **dignity** for all community members. The reputation of the Nightscout community is affected by the **quality** of the source code, the quality of our relationships, the quality of our discussions, what we are known for doing: the way we treat each other.
 Users of Nightscout are impacted by **reliability**, **security** and **confidentiality** of Nightscout. Therefore, the developers and contributors of Nightscout strive to improve the quality of Nightscout while making these opportunities **accessible** to all.
 
-Nightscout's **longevity**, the application, the ecosystem, and the culture demand we use all tools at our disposable to achieve the values in a **sustainable** way. We are not waiting to do whatever it takes to meet the needs of people affected by the inhumane demands of diabetes.  Our active **collaboration** against the burden of diabetes creates the results we desire.
+Nightscout's **longevity**, the application, the ecosystem, and the culture demand we use all tools at our disposable to achieve the values in a **sustainable** way. We are not waiting to do whatever it takes to meet the needs of people affected by the inhumane demands of diabetes. Our active **collaboration** against the burden of diabetes creates the results we desire.
 
 ## What Do I Need?
 
 You will need:
 
--   A CGM sensor
+- A CGM sensor
 
--   A way to [upload](uploader/uploaders) your data, to be stored in Nightscout (this is generally an internet-connected mobile phone with a matching uploader app)
+- A way to [upload](uploader/uploaders) your data, to be stored in Nightscout (this is generally an internet-connected mobile phone with a matching uploader app)
 
--   Internet access
+- Internet access
 
-- Basic computer skills and the ability to ***carefully*** follow the installation guides shown on this site
+- Basic computer skills and the ability to **_carefully_** follow the installation guides shown on this site
 
-  ***"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.*
+  **\*"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.\*
 
 ```{admonition} IMPORTANT
 :class: danger
@@ -151,16 +150,14 @@ More information about the companies background and processes can be found on th
 ### Serendipity Bio
 
 ```{card}
-![](https://serendipitybio.com/static/media/Serendipity+Bio+Logo.png)
+![](https://media.serendipitybio.com/serendipity-logo.jpg)
 +++
-[Serendipity Bio](https://serendipitybio.com) was founded in 2020 to help T1 and T2 diabetics.
+Serendipity provides instant deployment of Nightscout, literally.
 
-Serendipity provides single-click deployment of Nightscout, literally.
-
-At the click of a button:
-- We launch your Nightscout server
-- We launch your own Mongo database
-- We provide you a secure, shareable URL
+[Create](https://serendipitybio.com/pricing) your account and we'll:
+- Launch your Nightscout server
+- Launch your Mongo database
+- Provide you a secure, shareable URL
 
 Never worry about:
 - Database size
@@ -169,16 +166,18 @@ Never worry about:
 
 Serendipity Bio fully manages your Nightscout server and database.
 
-Concerned about reliability or sustainability?  Serendipity Bio is built using Amazon Web Services, which also hosts all your favorite websites like Netflix, Apple, AirBnB, and ESPN.
+Nightscout is configured for you automatically on start.  Once launched you can use our UI to change your settings to your liking!
 
-Coming soon, the service will feature additional, enhanced reporting and alerting alongside Nightscout's current features!
+Find support documents [here](https://support.serendipitybio.com/) or [email](mailto:support@serendipitybio.com) us any time!
+
+Concerned about reliability or sustainability?  Serendipity Bio is built using Amazon Web Services, which also hosts all your favorite websites like Netflix, Apple, AirBnB, and ESPN.
 
 Available globally, a monthly subscription is priced at $12.99 USD per month, payable online via credit card.
 ```
 
 ## Who Can Help Me?
 
-You will find many willing and open-hearted people in the Facebook groups. 
+You will find many willing and open-hearted people in the Facebook groups.
 
 The main group for all Nightscout support is the "[CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/)" Facebook group.
 
@@ -193,23 +192,22 @@ The open-source diabetes movement is founded on the idea of **paying it forward*
 
 *Ask nicely, and nice people will always do nice things and help you.*
 
-Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not only supporting users. (This means **do not** send them private messages or friend requests just to help fix something that is already clearly documented or for help that can be easily requested in the CGM in the Cloud group)  
+Nightscout developers are busy people and we'd like them to concentrate on maintaining and improving Nightscout, not only supporting users. (This means **do not** send them private messages or friend requests just to help fix something that is already clearly documented or for help that can be easily requested in the CGM in the Cloud group)
 ```
 
 ```{admonition} Facebook Privacy
 :class: tip
 
-You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.   
+You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.
 ```
 
 ## How to Use These Docs
 
-* Use the navigation menu at the top on the left of the screen to find the section that you are looking for.
+- Use the navigation menu at the top on the left of the screen to find the section that you are looking for.
 
-* A Table of Contents for the current page is always displayed on the left side of the screen.
+- A Table of Contents for the current page is always displayed on the left side of the screen.
 
-* You can search the Nightscout Docs site by entering your search string (only English) below the Nightscout main logo top left. 
-
+- You can search the Nightscout Docs site by entering your search string (only English) below the Nightscout main logo top left.
 
 ## How Can I Help?
 
