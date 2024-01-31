@@ -84,12 +84,20 @@ Common reasons:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Northflank/Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
 :::
 
 :::{tab-item} Fly.io
 [Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -524,8 +532,20 @@ Your database size might not decrease immediately (it might even increase tempor
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Northflank/Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```

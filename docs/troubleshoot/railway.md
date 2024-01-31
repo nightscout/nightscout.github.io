@@ -20,6 +20,27 @@ This is usually because you need a Developer plan to run your Nightscout app in 
 
 </br>
 
+## Restart your app
+
+a) Open the [Railway Dashboard](https://railway.app/dashboard) and select your project then your app.
+
+<img src="/vendors/railway/img/RailwayT13.png" width="400px" />
+
+</br>
+
+b) In your `web` deployments select the current one (top of the list) and in the three dots menu on the right, `Restart`.
+
+<img src="/vendors/railway/img/RailwayT14.png" width="600px" />
+
+</br>
+
+b) Confirm Restart. Wait a moment and check your Nightscout site state clicking the URL.  
+If your site crashes again shortly after, verify your [database is not full](/troubleshoot/atlas.md#database-full) if you use MongoDB Atlas.
+
+<img src="/vendors/railway/img/RailwayT15.png" width="400px" />
+
+</br>
+
 ## Reconnect GitHub to your project
 
 a) Open [Railway](https://railway.app) and click `login`. Login with GitHub.

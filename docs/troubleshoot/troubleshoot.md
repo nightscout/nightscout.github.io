@@ -42,7 +42,11 @@ Not knowing if it's a permanent issue, first try to restart it...
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Northflank/Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
 :::
 
