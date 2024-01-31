@@ -88,8 +88,12 @@ Common reasons:
 [Restart your web app](/troubleshoot/railway.md#restart-your-app)
 :::
 
-:::{tab-item} Northflank/Azure
+:::{tab-item} Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
 :::
 
 :::{tab-item} Fly.io
@@ -115,8 +119,24 @@ Common reasons:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -155,8 +175,24 @@ If you see this message:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -178,8 +214,24 @@ If you see this message:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -212,8 +264,24 @@ If you see this message:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -536,8 +604,12 @@ Your database size might not decrease immediately (it might even increase tempor
 [Restart your web app](/troubleshoot/railway.md#restart-your-app)
 :::
 
-:::{tab-item} Northflank/Azure
+:::{tab-item} Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
 :::
 
 :::{tab-item} Fly.io

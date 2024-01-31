@@ -46,8 +46,12 @@ Not knowing if it's a permanent issue, first try to restart it...
 [Restart your web app](/troubleshoot/railway.md#restart-your-app)
 :::
 
-:::{tab-item} Northflank/Azure
+:::{tab-item} Azure
 [Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
 :::
 
 :::{tab-item} Fly.io

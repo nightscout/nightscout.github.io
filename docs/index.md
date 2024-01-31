@@ -299,12 +299,13 @@ update/redeploy/
 troubleshoot/github/
 troubleshoot/atlas/
 troubleshoot/azure/
+troubleshoot/northflank/
+troubleshoot/railway/
 troubleshoot/heroku/
 vendors/heroku/ecoplan/
 vendors/heroku/hobbyplan/
 vendors/heroku/mfa/
 update/upd_stack/
-troubleshoot/railway/
 troubleshoot/fly.io/
 troubleshoot/render/
 ```
