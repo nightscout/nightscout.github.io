@@ -953,34 +953,6 @@ Enabled [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) so o
 
 </br>
 
-#### `dbsize` (Database Size)
-
-<img src="/nightscout/img/SetupNS15.png" width="400px"/>
-
-</br>
-
-Show size of Nightscout Database, as a percentage of declared available space or in MiB.
-
-Many deployments of Nightscout use free tier of MongoDB Atlas on Heroku, which is limited in size to 512MiB. After some time, as volume of stored data grows, it may happen that this limit is reached and system is unable to store new data. This plugin provides pill that indicates size of Database and shows (when configured) alarms regarding reaching space limit.
-
-**IMPORTANT:** This plugin can only check how much space database already takes, *but cannot infer* max size available on server for it. To have correct alarms and realistic percentage, `DBSIZE_MAX` need to be properly set - according to your mongoDB hosting configuration.
-
-**NOTE:** This plugin rely on db.stats() for reporting *logical* size of database, which may be different than *physical* size of database on server. It may work for free tier of MongoDB on Atlas, since it calculate quota according to logical size too, but may fail for other hostings or self-hosted database with quota based on physical size.
-
-**NOTE:** MongoDB Atlas quota is for **all** databases in cluster, while each instance will get only size of **its own database only**. It is ok when you only have **one** database in cluster (most common scenario) but will not work for multiple parallel databases. In such case, spliting known quota equally beetween databases and setting `DBSIZE_MAX` to that fraction may help, but wont be precise.
-
-All sizes are expressed as integers, in *Mebibytes* `1 MiB == 1024 KiB == 1024*1024 B`
-
-Extended settings available:
-
-- `DBSIZE_MAX` (`496`) - Maximal allowed size of database on your mongoDB server, in MiB. You need to adjust that value to match your database hosting limits - default value is for standard Heroku mongoDB free tier.
-- `DBSIZE_WARN_PERCENTAGE` (`60`) - Threshold to show first warning about database size. When database reach this percentage of `DBSIZE_MAX` size - pill will show size in yellow.
-- `DBSIZE_URGENT_PERCENTAGE` (`75`) - Threshold to show urgent warning about database size. When database reach this percentage of `DBSIZE_MAX` size, it is urgent to do backup and clean up old data. At this percentage info pill turns red.
-- `DBSIZE_ENABLE_ALERTS` (`false`) - Set to `true` to enable notifications about database size.
-- `DBSIZE_IN_MIB` (`false`) - Set to `true` to display size of database in MiB-s instead of default percentage.
-
-</br>
-
 ------
 
 ## Extended Settings
@@ -1043,7 +1015,7 @@ With Maker you are able to integrate with all the other [IFTTT Services](https:/
 Plugins can create custom events, but all events sent to IFTTT webhooks will be prefixed with `ns-`. The core events are:
 
 - `ns-event` - This event is sent to the maker service for all alarms and notifications. This is good catch all event for general logging.
-- `ns-allclear` - This event is sent to the maker service when an alarm has been ack'd or when the server starts up without triggering any alarms. For example, you could use this event to turn a light to green.
+- `ns-allclear` - This event is sent to the maker service when an alarm has been acknowledged or when the server starts up without triggering any alarms. For example, you could use this event to turn a light to green.
 - `ns-info` - Plugins that generate notifications at the info level will cause this event to also be triggered. It will be sent in addition to `ns-event`.
 - `ns-warning` - Alarms at the warning level with cause this event to also be triggered. It will be sent in addition to `ns-event`.
 - `ns-urgent` - Alarms at the urgent level with cause this event to also be triggered. It will be sent in addition to `ns-event`.

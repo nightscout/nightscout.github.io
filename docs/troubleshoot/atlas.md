@@ -89,7 +89,7 @@ Common reasons:
 :::
 
 :::{tab-item} Azure
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+[Restart app](/troubleshoot/azure.md#restart-app)
 :::
 
 :::{tab-item} Northflank
@@ -124,7 +124,7 @@ Common reasons:
 :::
 
 :::{tab-item} Azure
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+[Restart app](/troubleshoot/azure.md#restart-app)
 :::
 
 :::{tab-item} Northflank
@@ -180,7 +180,7 @@ If you see this message:
 :::
 
 :::{tab-item} Azure
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+[Restart app](/troubleshoot/azure.md#restart-app)
 :::
 
 :::{tab-item} Northflank
@@ -219,7 +219,7 @@ If you see this message:
 :::
 
 :::{tab-item} Azure
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+[Restart app](/troubleshoot/azure.md#restart-app)
 :::
 
 :::{tab-item} Northflank
@@ -269,7 +269,7 @@ If you see this message:
 :::
 
 :::{tab-item} Azure
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+[Restart app](/troubleshoot/azure.md#restart-app)
 :::
 
 :::{tab-item} Northflank
@@ -579,7 +579,9 @@ Free databases like M0 Sandbox provided by Atlas will only hold a limited amount
 **Note:** *If you consider paying for a database upgrade, also think about a [paid hosting service](/index.md#nightscout-as-a-service).*
 
 ```{warning}
-Make sure your Nightscout site has `Database Size` enabled to monitor database capacity. Look [here](/nightscout/setup_variables.md#dbsize-database-size) for more information on this plugin.
+Make sure your Nightscout site has `Database Size` enabled to monitor database capacity.</br>
+In order to have the database size pill, add `dbsize` in the `ENABLE` variable.</br>
+Look [here](/nightscout/setup_variables.md#dbsize-database-size) for more information on this plugin.
 ```
 
 <img src="/vendors/mongodb/img/TShoot35.png" width="600px" >
@@ -605,7 +607,7 @@ Your database size might not decrease immediately (it might even increase tempor
 :::
 
 :::{tab-item} Azure
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+[Restart app](/troubleshoot/azure.md#restart-app)
 :::
 
 :::{tab-item} Northflank

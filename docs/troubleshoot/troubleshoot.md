@@ -47,7 +47,7 @@ Not knowing if it's a permanent issue, first try to restart it...
 :::
 
 :::{tab-item} Azure
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+[Restart app](/troubleshoot/azure.md#restart-app)
 :::
 
 :::{tab-item} Northflank
