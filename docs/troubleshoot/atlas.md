@@ -647,7 +647,7 @@ If your Nightscout page doesn't open after restarting your app and you want to r
 ### Atlas database size verification
 
 - Log in [Atlas](https://account.mongodb.com/account/login)
-- Open your Nightscout cluster and select `Collections`
+- Open your Nightscout database and select `Collections`
 
 <img src="/vendors/mongodb/img/TShoot32.png" width="800px" >
 
