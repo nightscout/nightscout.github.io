@@ -653,17 +653,17 @@ If your Nightscout page doesn't open after restarting your app and you want to r
 
 </br>
 
-- Click your database name (hidden left). Check the`DATABASE SIZE` is indeed close to or at the limit then look at these three collections `Documents size`: `devicestatus`, `entries` and `treatments`.
+- Click your database name (hidden left). Check the`DATABASE SIZE` is indeed close to or at the limit (512MB) then look at these three collections `Documents size`: `devicestatus`, `entries` and `treatments`.
 
 <img src="/vendors/mongodb/img/TShoot36.png" width="800px" >
 
 - Open Nightscout  [`Admin tools`](/nightscout/discover.md#drawer-menu). If your site doesn't open jump to [Emergency cleanup](#emergency-cleanup).
-- Depending on the collection you identified above, choose which of the following you want to cleanup:
+- Depending on the collection you identified above, choose which of the following you want to cleanup below.
 
 ### Emergency cleanup
 
 In the Atlas cluster view you opened [above](#atlas-database-size-verification), select the `devicestatus` collection and click the bin icon to delete it.  
-You will lose all device status history (battery, ..) but you won't lose neither BG, treatments nor profiles.
+You will lose all device status history (battery, ..) but **you won't lose neither BG, treatments nor profiles**.
 
 <img src="/vendors/mongodb/img/TShoot55.png" width="300px" >
 
