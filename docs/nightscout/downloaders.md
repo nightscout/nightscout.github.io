@@ -113,7 +113,7 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 </br>
 
-### [Loop Follow](https://sweloop.se/LoopFollow/index.html)
+### [Loop Follow](https://www.loopandlearn.org/loop-follow/)
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
