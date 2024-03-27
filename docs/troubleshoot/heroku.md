@@ -130,8 +130,8 @@ Maintenance mode is useful to troubleshoot Dexcom and CareLink accounts locked a
 You can also put your Nightscout in maintenance mode if you won't use it for an extended period of time.
 
 ```{warning}
-Putting your site in maintenance won't stop billing!</br>
-You also need to disable the web service for this.</br>
+**Putting your site in maintenance mode won't stop billing!**</br></br>
+You also need to disable the web service for this.</br></br>
 <img src="/vendors/heroku/img/TShoot59.png" width="600px" >
 ```
 
@@ -257,5 +257,27 @@ You can use it like this or upgrade to the latest released version later on.
 - If you change your mind later you can rollback prior to your rollback and return to the starting point.
 
 <img src="/vendors/heroku/img/Downgrade03.png" width="400px" >
+
+</br>
+
+## Stop using Heroku
+
+If you want to migrate your data, it is recommended that you do it **before** switching off your Heroku Nightscout.
+
+To stop using Heroku and suspend billing, you only need to switch off all apps like this:
+
+- [Log](https://id.heroku.com/login) into Heroku.
+- Select your app(s) in the dashboard.
+
+<img src="/vendors/heroku/img/MultiNS00.png" width="800px" >
+
+- In `Resources`, edit (pen icon) and turn off the `web` server switch.
+
+<img src="/vendors/heroku/img/Cleanup03.png" width="800px" >
+
+- Your Heroku Nightscout site will stop and **only the current month** will be billed.
+- You can keep your Heroku account and leave the credit card, once no app is active billing will stop.
+- Your data will not be deleted, make a copy of the `MONGODB_URI` variable if you want to reuse it with another platform, or migrate your database.
+- If you decide you will not use it anymore, once last billing has occurred, you can delete your app(s), credit card and Heroku account.
 
 </br>
