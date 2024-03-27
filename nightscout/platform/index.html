@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose your platform &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Nightscout in Azure (Docker)" href="../../vendors/azure/new_user/" />
+    <link rel="prev" title="Northflank Database" href="../../vendors/northflank/database/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wizard/">Help me choose</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Choose your platform</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/platform.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="choose-your-platform">
+<h1>Choose your platform<a class="headerlink" href="#choose-your-platform" title="Permalink to this heading"></a></h1>
+<div class="seealso admonition">
+<p class="admonition-title">Too complicated? Not what you’re looking for?</p>
+<p>Consider a hosted Nightscout service! Check for easier solutions <a class="reference internal" href="../../#nightscout-as-a-service"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<p>Various platforms are available to host your Nightscout site in the cloud.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Creating a <a class="reference internal" href="../database/"><span class="doc std std-doc">database</span></a> is mandatory if you want to use: Heroku, Railway, Northflank, Fly.io or Azure.</strong>
+Make sure you have one before creating a Nightscout web app in these platforms.</p>
+</div>
+<p>Find a list of commonly used hosting services below, decide which one you’ll want to use.</p>
+</br>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="heroku">Heroku</h2>
+<p class="sd-card-text"><img alt="Heroku Eco" src="../../_images/Heroku.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Since the <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/pull/98">beginning</a> Heroku has been a very popular platform for Nightscout. Most of the documentation was based on a Heroku Nightscout.<br />
+On August 25th 2022, Salesforce decided to <a class="reference external" href="https://blog.heroku.com/next-chapter">drop the free plan</a>.
+You can <a class="reference internal" href="../../vendors/heroku/new_user/"><span class="doc std std-doc">create your new Nightscout site with Heroku</span></a> using an <a class="reference external" href="https://www.heroku.com/pricing">Eco plan</a> (5$/month).</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Large platform with a reliable history</p></li>
+<li><p class="sd-card-text">Well documented, well known by the community</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The Eco plan has the same limitations than the previous Free plan, for 5$ per month</p></li>
+<li><p class="sd-card-text">For a Nightscout site a 7$ per month Basic plan is not really worth it (compared to hosted solutions)</p></li>
+<li><p class="sd-card-text"><strong>Doesn’t include a database</strong></p></li>
+</ul>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Follow <a class="reference internal" href="../../vendors/heroku/new_user/"><span class="std std-doc">these instructions</span></a> to build your Nightscout site in Heroku.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="azure">Azure</h2>
+<p class="sd-card-text"><img alt="Azure" src="../../_images/Azure.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Nightscout DIY was <a class="reference external" href="https://github.com/rnpenguin/cgm-remote-monitor">originally</a> created with Azure but most users dropped it after costs increased.<br />
+A new deployment method fitting in the <a class="reference external" href="https://azure.microsoft.com/en-us/pricing/free-services">free tier</a> has <a class="reference internal" href="../../vendors/azure/new_user/"><span class="doc std std-doc">been created using a Docker container</span></a>.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Large platform with a reliable history</p></li>
+<li><p class="sd-card-text">Well known by the community IT specialists</p></li>
+<li><p class="sd-card-text">Using a basic plan and free services keep it free</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Trial account lasts maximum 12 months</p></li>
+<li><p class="sd-card-text">Basic plan and pay as you go is free if you stay within quotas</p></li>
+<li><p class="sd-card-text">The F1 free app service plan is designed for testing, not production</p></li>
+<li><p class="sd-card-text"><strong>The Cosmos database doesn’t integrate correctly with Nightscout</strong></p></li>
+</ul>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Follow <a class="reference internal" href="../../vendors/azure/new_user/"><span class="std std-doc">these instructions</span></a> to build your Nightscout site in Azure.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="railway-app">Railway.app</h2>
+<p class="sd-card-text"><img alt="Railway" src="../../_images/Railway.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">You can easily create a new Railway Nightscout site with a MongoDB Atlas or a Railway MongoDB database. The <a class="reference external" href="https://railway.app/pricing">Hobby plan</a> (5$ per month) allows one Nightscout site and a small database.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Easy to deploy or migrate an existing site from Heroku (but not worth it without free tier)</p></li>
+<li><p class="sd-card-text">Simple to use and troubleshoot</p></li>
+<li><p class="sd-card-text">Can use a reliable native Railway MongoDB database, the cost will add-up within the subscription ($)</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The free tier has been removed, only active developers can have 5$ credit per month</p></li>
+<li><p class="sd-card-text">Your GitHub account must have been created more than 3 months ago</p></li>
+<li><p class="sd-card-text">The railway.app domain is blocked for safety by some companies</p></li>
+<li><p class="sd-card-text">Railway network model causes issues with some follower app and devices</p></li>
+</ul>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Follow <a class="reference internal" href="../../vendors/railway/new_user/"><span class="std std-doc">these instructions</span></a> to build your Nightscout site in Railway.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="northflank">Northflank</h2>
+<p class="sd-card-text"><img alt="" src="../../_images/Northflank.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">You can create your new <a class="reference external" href="https://northflank.com/pricing">free</a> Northflank Nightscout site, with its own Northflank database or with a MongoDB Atlas database.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Nightscout fits in the free tier</p></li>
+<li><p class="sd-card-text">Easy to deploy or migrate an existing site from Heroku</p></li>
+<li><p class="sd-card-text">Simple to use and troubleshoot</p></li>
+<li><p class="sd-card-text">Can use a professional native Northflank MongoDB database ($)</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The Nightscout address generated for your site is impossible to remember</p></li>
+</ul>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Follow <a class="reference internal" href="../../vendors/northflank/new_user/"><span class="std std-doc">these instructions</span></a> to build your Nightscout site in Northflank.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="fly-io">Fly.io</h2>
+<p class="sd-card-text"><img alt="Fly.io" src="../../_images/Fly.io.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Fly.io proposed a simple migration wizard from Heroku and you can create your new Nightscout site in Fly.io. Using a computer is mandatory with Fly.io as managing your site will require the use of a command line utility. Not recommended for beginners.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Nightscout fits in the free tier</p></li>
+<li><p class="sd-card-text">Easy to migrate an existing site from Heroku</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Maintaining your site requires the use of command line instructions, not very intuitive</strong></p></li>
+<li><p class="sd-card-text"><strong>Doesn’t include a database</strong></p></li>
+</ul>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Follow <a class="reference internal" href="../../vendors/fly.io/new_user/"><span class="std std-doc">these instructions</span></a> to build your Nightscout site in Fly.io.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="google-cloud">Google Cloud</h2>
+<p class="sd-card-text"><img alt="xDrip+" src="../../_images/GoogleCloud.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">A scripted Nightscout installation in Google Cloud is a new complete solution proposed by the xDrip+ developers team. Whilst deploying Nightscout manually in Ubuntu can be complex, their approach makes is rather simple for non-technical people.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Complete solution offering a large free database</p></li>
+<li><p class="sd-card-text">A web interface to edit your variables</p></li>
+<li><p class="sd-card-text">Tools provided to migrate the database from another platform</p></li>
+<li><p class="sd-card-text">Virtually free (&lt;5c/month)</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Not available for free for Australia and Cina users</p></li>
+<li><p class="sd-card-text">Relying on a free DNS provider</p></li>
+</ul>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Follow <a class="reference external" href="https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html">these instructions</a> to build your Nightscout site in Google Cloud.</p>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="render">Render</h2>
+<p class="sd-card-text"><img alt="xDrip+" src="../../_images/Render.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">A free solution with little experience.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">No credit card required</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The free plan doesn’t guarantee any reliability</p></li>
+<li><p class="sd-card-text">App will sleep after 15 minutes</p></li>
+<li><p class="sd-card-text">Render URLs are considered unsafe by some internet providers</p></li>
+<li><p class="sd-card-text"><strong>Doesn’t include a database</strong></p></li>
+</ul>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Follow <a class="reference internal" href="../../vendors/render/new_user/"><span class="std std-doc">these instructions</span></a> to build your Nightscout site in Render.</p>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

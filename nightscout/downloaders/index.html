@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup Downloaders - Followers &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Nightscout on your Watch" href="../wearable/" />
+    <link rel="prev" title="Setup Uploaders" href="../../uploader/setup/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wizard/">Help me choose</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup Downloaders - Followers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#android">Android</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#xdrip">xDrip+</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#androidaps-nsclient">AndroidAPS NSClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nightwatch-google-play-store">Nightwatch (Google Play Store)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nightwatch-legacy">Nightwatch (legacy)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glimp">Glimp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diabox">Diabox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ios">iOS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nightscout-x">Nightscout X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nightguard">Nightguard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nightscouter">Nightscouter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loop-follow">Loop Follow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spike">Spike</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xdrip4ios">xDrip4iOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sugarmate">sugarmate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diabetes-cockpit">Diabetes Cockpit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gluco-tracker">Gluco-Tracker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nightscoutmenubar">NightscoutMenuBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bitbar-nightscout">BitBar Nightscout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mac">Mac</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nightscout-macos-menu-bar">Nightscout MacOS Menu Bar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#floatingglucose">FloatingGlucose</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#displays">Displays</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#m5stack-nightscoutmon">M5Stack NightscoutMon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#m5stick-nightscoutmon">M5Stick NightscoutMon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bgbuddy">BGBuddy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sugarpidisplay">SugarPiDisplay</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Setup Downloaders - Followers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/downloaders.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setup-downloaders-followers">
+<h1>Setup Downloaders - Followers<a class="headerlink" href="#setup-downloaders-followers" title="Permalink to this heading"></a></h1>
+</br>
+<div class="tip admonition">
+<p class="admonition-title">Smartwatches</p>
+<p>See the dedicated page <a class="reference internal" href="../wearable/"><span class="std std-doc"><strong>here</strong></span></a>.
+<a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 75px;" /></a></p>
+</div>
+</br>
+<p>Note: <a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a> indicates applications compliant to <a class="reference internal" href="../security/"><span class="std std-doc">Nightscout access tokens</span></a>.</p>
+</br>
+<section id="android">
+<h2>Android<a class="headerlink" href="#android" title="Permalink to this heading"></a></h2>
+<section id="xdrip">
+<h3><a class="reference external" href="https://github.com/NightscoutFoundation/xDrip/releases">xDrip+</a><a class="headerlink" href="#xdrip" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<a class="reference internal image-reference" href="https://xdrip-plus.firebaseapp.com/cdn/xdrip-plus-slides/img/xdrip-plus-high-low-alarms.png"><img alt="https://xdrip-plus.firebaseapp.com/cdn/xdrip-plus-slides/img/xdrip-plus-high-low-alarms.png" src="https://xdrip-plus.firebaseapp.com/cdn/xdrip-plus-slides/img/xdrip-plus-high-low-alarms.png" style="width: 400px;" /></a>
+<p>Select the Nightscout Follower data source and type your Nightscout URL:</p>
+<p><em>Example:</em> <code class="docutils literal notranslate"><span class="pre">https://name.domain.tld</span></code></p>
+<p>For a secured site add the token and &#64; before:</p>
+<p><em>Example:</em> <code class="docutils literal notranslate"><span class="pre">https://token&#64;name.domain.tld</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Follower00.png"><img alt="../../_images/Follower00.png" src="../../_images/Follower00.png" style="width: 500px;" /></a>
+<p>Facebook group <a class="reference external" href="https://www.facebook.com/groups/xDripG5/">xDrip</a></p>
+</br>
+</section>
+<section id="androidaps-nsclient">
+<h3><a class="reference external" href="https://github.com/nightscout/AndroidAPS/releases">AndroidAPS NSClient</a><a class="headerlink" href="#androidaps-nsclient" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<p>Facebook group <a class="reference external" href="https://www.facebook.com/groups/AndroidAPSUsers">AndroidAPS Users</a></p>
+</br>
+</section>
+<section id="nightwatch-google-play-store">
+<h3><a class="reference external" href="https://play.google.com/store/apps/details?id=se.cornixit.nightwatch">Nightwatch</a> (Google Play Store)<a class="headerlink" href="#nightwatch-google-play-store" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<p>Monitor your Nightscout glucose levels on your Android phone or tablet. Dark UI, large readings and buttons, designed for usage at night.</p>
+<a class="reference internal image-reference" href="../../_images/Follower10.png"><img alt="../../_images/Follower10.png" src="../../_images/Follower10.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="nightwatch-legacy">
+<h3><a class="reference external" href="https://github.com/StephenBlackWasAlreadyTaken/NightWatch/releases">Nightwatch</a> (legacy)<a class="headerlink" href="#nightwatch-legacy" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a></p>
+<p>CGM data on your Android Phone and Android Wear Watch!</p>
+<p>Nightwatch is not maintained anymore and might not work with recent Android versions. Switching to xDrip+ is recommended.</p>
+</br>
+</section>
+<section id="glimp">
+<h3><a class="reference external" href="https://play.google.com/store/apps/details?id=it.ct.glicemia">Glimp</a><a class="headerlink" href="#glimp" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<p>In Settings, Cloud, Nightscout, select Download only and type your Nightscout URL. Use a token or API_SECRET for a secure site.</p>
+<a class="reference internal image-reference" href="../../_images/Follower06.png"><img alt="../../_images/Follower06.png" src="../../_images/Follower06.png" style="width: 700px;" /></a>
+</br>
+</section>
+<section id="diabox">
+<h3><a class="reference external" href="https://www.bubblan.org/diabox/">Diabox</a><a class="headerlink" href="#diabox" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockNO.png"><img alt="../../_images/LockNO.png" src="../../_images/LockNO.png" style="width: 25px;" /></a></p>
+<p>In Settings, set Data Collection to Follower, select Nightscout and type your Nightscout URL.</p>
+<a class="reference internal image-reference" href="../../_images/Follower07.png"><img alt="../../_images/Follower07.png" src="../../_images/Follower07.png" style="width: 700px;" /></a>
+</br>
+</section>
+</section>
+<section id="ios">
+<h2>iOS<a class="headerlink" href="#ios" title="Permalink to this heading"></a></h2>
+<section id="nightscout-x">
+<h3><a class="reference external" href="https://apps.apple.com/us/app/nightscout-x/id1333154219">Nightscout X</a><a class="headerlink" href="#nightscout-x" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<a class="reference internal image-reference" href="../../_images/Follower04.png"><img alt="../../_images/Follower04.png" src="../../_images/Follower04.png" style="width: 300px;" /></a>
+</br>
+</section>
+<section id="nightguard">
+<h3><a class="reference external" href="https://apps.apple.com/us/app/nightguard/id1116430352">Nightguard</a><a class="headerlink" href="#nightguard" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockNO.png"><img alt="../../_images/LockNO.png" src="../../_images/LockNO.png" style="width: 25px;" /></a></p>
+<p><a class="reference external" href="https://github.com/nightscout/nightguard">GitHub</a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/nightscout/nightguard/master/images/nightguard24.jpg"><img alt="https://raw.githubusercontent.com/nightscout/nightguard/master/images/nightguard24.jpg" src="https://raw.githubusercontent.com/nightscout/nightguard/master/images/nightguard24.jpg" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="nightscouter">
+<h3><a class="reference external" href="https://testflight.apple.com/join/UczafrJp">Nightscouter</a><a class="headerlink" href="#nightscouter" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockNO.png"><img alt="../../_images/LockNO.png" src="../../_images/LockNO.png" style="width: 25px;" /></a></p>
+<p><a class="reference external" href="https://github.com/someoneAnyone/Nightscouter">GitHub</a></p>
+</br>
+</section>
+<section id="loop-follow">
+<h3><a class="reference external" href="https://www.loopandlearn.org/loop-follow/">Loop Follow</a><a class="headerlink" href="#loop-follow" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+</br>
+</section>
+<section id="spike">
+<h3><a class="reference external" href="https://spike-app.com/">Spike</a><a class="headerlink" href="#spike" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<a class="reference internal image-reference" href="https://spike-app.com/wp-content/uploads/2019/03/iPhoneXSpikeHome2019.png"><img alt="https://spike-app.com/wp-content/uploads/2019/03/iPhoneXSpikeHome2019.png" src="https://spike-app.com/wp-content/uploads/2019/03/iPhoneXSpikeHome2019.png" style="width: 350px;" /></a>
+<p>Look <a class="reference external" href="https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure-spike-follower-manually">here</a>.</p>
+</br>
+</section>
+<section id="xdrip4ios">
+<h3><a class="reference external" href="https://xdrip4ios.readthedocs.io/en/latest/">xDrip4iOS</a><a class="headerlink" href="#xdrip4ios" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<p>Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.<br />
+If you’re using a secured Nightscout site, enter your token in the matching field.</p>
+<a class="reference internal image-reference" href="../../_images/Follower01.png"><img alt="../../_images/Follower01.png" src="../../_images/Follower01.png" style="width: 300px;" /></a>
+<p>Facebook group <a class="reference external" href="https://www.facebook.com/groups/853994615056838">xDrip4iOS</a></p>
+</br>
+</section>
+<section id="sugarmate">
+<h3><a class="reference external" href="https://sugarmate.io/">sugarmate</a><a class="headerlink" href="#sugarmate" title="Permalink to this heading"></a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Important limitation</p>
+<p><strong>Sugarmate doesn’t allow Nightscout as a data source if you included <code class="docutils literal notranslate"><span class="pre">bridge</span></code> in <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code>.</strong>
+If you need this data source: enable <a class="reference internal" href="../setup_variables/#bridge-share2nightscout-bridge"><span class="std std-ref">obscuration</span></a> variables.</p>
+</div>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<a class="reference internal image-reference" href="../../_images/Follower05.png"><img alt="../../_images/Follower05.png" src="../../_images/Follower05.png" style="width: 300px;" /></a>
+<p>Add Nightscout as a data source, type your Nightscout URL.</p>
+<a class="reference internal image-reference" href="../../_images/Follower02.png"><img alt="../../_images/Follower02.png" src="../../_images/Follower02.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="diabetes-cockpit">
+<h3><a class="reference external" href="https://apps.apple.com/us/app/diabetes-cockpit/id1580577116">Diabetes Cockpit</a><a class="headerlink" href="#diabetes-cockpit" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<a class="reference internal image-reference" href="../../_images/Follower08.png"><img alt="../../_images/Follower08.png" src="../../_images/Follower08.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="gluco-tracker">
+<h3><a class="reference external" href="https://apps.apple.com/it/app/gluco-tracker/id1526976290">Gluco-Tracker</a><a class="headerlink" href="#gluco-tracker" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/IconSW.png"><img alt="../../_images/IconSW.png" src="../../_images/IconSW.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconPhone.png"><img alt="../../_images/IconPhone.png" src="../../_images/IconPhone.png" style="width: 25px;" /></a><a class="reference internal" href="../../_images/IconTablet.png"><img alt="../../_images/IconTablet.png" src="../../_images/IconTablet.png" style="width: 25px;" /></a>	<a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a></p>
+<a class="reference internal image-reference" href="../../_images/Follower09.png"><img alt="../../_images/Follower09.png" src="../../_images/Follower09.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="nightscoutmenubar">
+<h3><a class="reference external" href="https://github.com/mpangburn/NightscoutMenuBar">NightscoutMenuBar</a><a class="headerlink" href="#nightscoutmenubar" title="Permalink to this heading"></a></h3>
+</section>
+<section id="bitbar-nightscout">
+<h3><a class="reference external" href="https://github.com/pdaddyo/bitbar-nightscout">BitBar Nightscout</a><a class="headerlink" href="#bitbar-nightscout" title="Permalink to this heading"></a></h3>
+</br>
+</section>
+</section>
+<section id="mac">
+<h2>Mac<a class="headerlink" href="#mac" title="Permalink to this heading"></a></h2>
+<section id="nightscout-macos-menu-bar">
+<h3><a class="reference external" href="https://github.com/adamd9/Nightscout-MacOS-Menu-Bar">Nightscout MacOS Menu Bar</a><a class="headerlink" href="#nightscout-macos-menu-bar" title="Permalink to this heading"></a></h3>
+<p>Show your current BG in the system bar at the top of your screen on Mac (including Loop details). Available directly through the <a class="reference external" href="https://apps.apple.com/au/app/nightscout-menu-bar/id1639776072?mt=12">Apple Store</a>.</p>
+<a class="reference internal image-reference" href="../../_images/Follower11.png"><img alt="../../_images/Follower11.png" src="../../_images/Follower11.png" style="width: 600px;" /></a>
+</br>
+</section>
+</section>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h2>
+<section id="floatingglucose">
+<h3><a class="reference external" href="https://github.com/dabear/FloatingGlucose">FloatingGlucose</a><a class="headerlink" href="#floatingglucose" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a>
+</br>
+</section>
+</section>
+<section id="displays">
+<h2>Displays<a class="headerlink" href="#displays" title="Permalink to this heading"></a></h2>
+<section id="m5stack-nightscoutmon">
+<h3><a class="reference external" href="https://github.com/mlukasek/M5_NightscoutMon/wiki">M5Stack NightscoutMon</a><a class="headerlink" href="#m5stack-nightscoutmon" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a> Facebook group <a class="reference external" href="https://www.facebook.com/groups/606295776549008">M5STACK NIGHTSCOUT</a></p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/mlukasek/M5_NightscoutMon/master/images/M5NS_mon_2019-06-20_page1.jpg"><img alt="https://raw.githubusercontent.com/mlukasek/M5_NightscoutMon/master/images/M5NS_mon_2019-06-20_page1.jpg" src="https://raw.githubusercontent.com/mlukasek/M5_NightscoutMon/master/images/M5NS_mon_2019-06-20_page1.jpg" style="width: 400px;" /></a>
+</section>
+<section id="m5stick-nightscoutmon">
+<h3><a class="reference external" href="https://github.com/mlukasek/M5StickC_NightscoutMon">M5Stick NightscoutMon</a><a class="headerlink" href="#m5stick-nightscoutmon" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/mlukasek/M5StickC_NightscoutMon/master/images/M5StickC_Nightscout_w-speaker.jpg"><img alt="https://raw.githubusercontent.com/mlukasek/M5StickC_NightscoutMon/master/images/M5StickC_Nightscout_w-speaker.jpg" src="https://raw.githubusercontent.com/mlukasek/M5StickC_NightscoutMon/master/images/M5StickC_Nightscout_w-speaker.jpg" style="width: 400px;" /></a>
+<p><a class="reference internal" href="../../_images/LockOK.png"><img alt="../../_images/LockOK.png" src="../../_images/LockOK.png" style="width: 25px;" /></a> </br></p>
+</br>
+</section>
+<section id="bgbuddy">
+<h3><a class="reference external" href="https://github.com/VeryKross/BGBuddy">BGBuddy</a><a class="headerlink" href="#bgbuddy" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="https://user-images.githubusercontent.com/11561147/208538830-5ceb35ea-0ee1-4cdb-b980-db8bcfabd936.jpg"><img alt="https://user-images.githubusercontent.com/11561147/208538830-5ceb35ea-0ee1-4cdb-b980-db8bcfabd936.jpg" src="https://user-images.githubusercontent.com/11561147/208538830-5ceb35ea-0ee1-4cdb-b980-db8bcfabd936.jpg" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="sugarpidisplay">
+<h3><a class="reference external" href="https://github.com/bassettb/SugarPiDisplay">SugarPiDisplay</a><a class="headerlink" href="#sugarpidisplay" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/bassettb/SugarPiDisplay/master/docs/image2.jpg"><img alt="https://raw.githubusercontent.com/bassettb/SugarPiDisplay/master/docs/image2.jpg" src="https://raw.githubusercontent.com/bassettb/SugarPiDisplay/master/docs/image2.jpg" style="width: 200px;" /></a>
+</br>
+</section>
+</section>
+<section id="other">
+<h2>Other<a class="headerlink" href="#other" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://www.home-assistant.io/integrations/nightscout/">Home assistant</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

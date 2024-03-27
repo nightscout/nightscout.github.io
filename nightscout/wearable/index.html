@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightscout on your Watch &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Nightscout Configuration" href="../setup_variables/" />
+    <link rel="prev" title="Setup Downloaders - Followers" href="../downloaders/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wizard/">Help me choose</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nightscout on your Watch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pebble-smartwatches">Pebble Smartwatches</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#urchin">urchin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xdrip">xDrip+</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#android-wear-os-smartwatches">Android Wear OS smartwatches</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">xDrip+</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#androidaps">AndroidAPS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glimp">Glimp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nightwear">NightWear</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#amazfit-pace-stratos">Amazfit Pace &amp; Stratos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">xDrip+</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#xiaomi-miband-2-3-4-5-and-6">Xiaomi MiBand 2, 3, 4, 5 and 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#amazfit-band-5-bip-bip-lite-bip-s-and-bip-s-lite-t-rex-pro">Amazfit Band 5, Bip, Bip Lite, Bip S and Bip S lite, T-Rex Pro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#amazfit-gtr2-gtr2e-gts2-gts-2-mini-gts2e-gtr42-and-47">Amazfit GTR2, GTR2e, GTS2, GTS 2 mini, GTS2e, GTR42 and 47</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">xDrip+</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#apple-watch">Apple Watch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nightguard">Nightguard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sugarmate">sugarmate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gluco-tracker">Gluco-Tracker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loop-follow">Loop Follow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fitbit">Fitbit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nightscout-monitor">Nightscout Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glance">Glance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sentinel">Sentinel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marclock">Marclock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analog-watchfaces">Analog watchfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#analog-cgm">Analog CGM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orbits-ns">Orbits NS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#radial-cgm">Radial CGM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#samsung-gear-smartwatches">Samsung Gear Smartwatches</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#xdrip-with-tasker">xDrip+ with Tasker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#g-watch-app">G-Watch app</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#garmin-smartwatches-and-computers">Garmin Smartwatches and Computers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#karoo-karoo-2">Karoo/Karoo 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nightscout on your Watch</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/wearable.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nightscout-on-your-watch">
+<h1>Nightscout on your Watch<a class="headerlink" href="#nightscout-on-your-watch" title="Permalink to this heading"></a></h1>
+</br>
+<section id="pebble-smartwatches">
+<h2>Pebble Smartwatches<a class="headerlink" href="#pebble-smartwatches" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/PebbleNSFoundation.jpeg"><img alt="../../_images/PebbleNSFoundation.jpeg" src="../../_images/PebbleNSFoundation.jpeg" style="width: 400px;" /></a>
+<p>Pebble smartwatch use is a historic milestone of CGM in the Cloud. Pebble has been bought by Fitbit in 2016 and necessary resources have moved to archives and <a class="reference external" href="https://rebble.io/">rebble.io</a>. Pebble support is still maintained in Loop, AndroidAPS, FreeAPS and xDrip+.</p>
+<p>You still can find the Pebble app for iOS in the <a class="reference external" href="https://apps.apple.com/us/app/pebble/id957997620">Apple Store</a>. For Android you need to download it from <a class="reference external" href="https://www.apkmirror.com/apk/pebble-technology-corp/pebble/pebble-4-4-2-1405-62d45d7d7-endframe-release/pebble-4-4-2-1405-62d45d7d7-endframe-android-apk-download/">APKMirror</a> or <a class="reference external" href="https://apkpure.com/it/pebble/com.getpebble.android.basalt">APKPure</a>.</p>
+<p>For authentication and getting the watchfaces, the original server closed so you’ll need to register with <a class="reference external" href="https://auth.rebble.io/auth/">Rebble</a>.</p>
+<p>You’ll find Nightscout watchfaces <a class="reference external" href="https://apps.rebble.io/en_US/search/watchfaces/1">here</a>. Search for Nightscout, CGM, …</p>
+<p>Configure the watchface with your Nightscout site URL.</p>
+</br>
+<section id="urchin">
+<h3><a class="reference external" href="https://github.com/mddub/urchin-cgm">urchin</a><a class="headerlink" href="#urchin" title="Permalink to this heading"></a></h3>
+<p>A Pebble watchface to view data from a continuous glucose monitor in graph format.</p>
+</br>
+<p>If you want to use your Pebble with Loop look <a class="reference external" href="https://loopkit.github.io/loopdocs/nightscout/pebble/">here</a>, for AndroidAPS <a class="reference external" href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Watchfaces.html#pebble">here</a> and FreeAPS <a class="reference external" href="https://github.com/mddub/pancreabble">here</a>.</p>
+</br>
+</section>
+<section id="xdrip">
+<h3><a class="reference external" href="https://github.com/NightscoutFoundation/xDrip/releases">xDrip+</a><a class="headerlink" href="#xdrip" title="Permalink to this heading"></a></h3>
+<p>Enable Pebble Integration in Smartwatch features.</p>
+<a class="reference internal image-reference" href="../../_images/Watch02.png"><img alt="../../_images/Watch02.png" src="../../_images/Watch02.png" style="width: 800px;" /></a>
+</br>
+<p>You can answer no to default watchface install so that you will be able to select another one. You can then decide to install or not the snooze control.</p>
+<a class="reference internal image-reference" href="../../_images/Watch03.png"><img alt="../../_images/Watch03.png" src="../../_images/Watch03.png" style="width: 600px;" /></a>
+</br>
+</section>
+</section>
+<section id="android-wear-os-smartwatches">
+<h2><a class="reference external" href="https://wearos.google.com/#hands-free-help">Android Wear OS smartwatches</a><a class="headerlink" href="#android-wear-os-smartwatches" title="Permalink to this heading"></a></h2>
+<p>With an Android smartphone.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Android Wear 1</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Recommended: Install an old version of Android Wear on your phone (search APKMirror for example: Android Wear 2.9.0.185084575.gms) and pair your watch. Make sure to allow GPS and Wear OS access to position on the watch. Allow Wear OS to run in background on your phone.</p></li>
+</ul>
+<p><em><strong>Note:If you installed Wear OS, you will need to manually update the watch Google Play Services see <a class="reference external" href="https://androidaps.readthedocs.io/en/latest/EN/Usage/SonySW3.html">here</a>.</strong></em></p>
+<ul class="simple">
+<li><p>Once your smartwatch Google Play Service has been updated to a version above 9.x you can safely update Android Wear to Wear OS.</p></li>
+<li><p>Change the watchface to match your app (in Wear OS or on your watch).</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Android Wear 2</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Install <a class="reference external" href="https://play.google.com/store/apps/details?id=com.google.android.wearable.app">Wear OS</a> on your phone and pair your watch. Make sure to allow GPS and Wear OS access to position on the watch. Allow Wear OS to run in background on your phone.</p></li>
+<li><p><a class="reference external" href="https://support.google.com/wearos/answer/7314014?hl=en">Install</a> your app wear extension from the smartwatch Google Play store, selecting the apps installed on your phone.<em>Note: Newer versions of Wear OS do not support this feature anymore, use <a class="reference external" href="https://youtu.be/8HsfWPTFGQI">Wear Installer</a> or Use <a class="reference external" href="https://play.google.com/store/apps/details?id=com.geminiman.wearosmanager">GeminiMan Wear OS Manager</a> or <a class="reference external" href="https://play.google.com/store/apps/details?id=de.agondev.easyfiretools">Easy Fire Tools</a>.</em></p></li>
+<li><p>Change the watchface to match your app (in Wear OS or on your watch).</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Android Wear 3</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Install <a class="reference external" href="https://play.google.com/store/apps/details?id=com.google.android.wearable.app">Wear OS</a> on your phone and pair your watch. Make sure to allow GPS and Wear OS access to position on the watch. Allow Wear OS to run in background on your phone.</p></li>
+<li><p>Use <a class="reference external" href="https://youtu.be/8HsfWPTFGQI">Wear Installer</a> or Use <a class="reference external" href="https://play.google.com/store/apps/details?id=com.geminiman.wearosmanager">GeminiMan Wear OS Manager</a> or <a class="reference external" href="https://play.google.com/store/apps/details?id=de.agondev.easyfiretools">Easy Fire Tools</a>.</p></li>
+<li><p>Change the watchface to match your app (in Wear OS or on your watch).</p></li>
+</ul>
+</div>
+</div>
+</br>
+<section id="id1">
+<h3><a class="reference external" href="https://github.com/NightscoutFoundation/xDrip/releases">xDrip+</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Enable Android Wear Integration to send xDrip+ BG to the smartwatch. Do not enable neither Collection nor Force Collection.</p>
+<a class="reference internal image-reference" href="../../_images/Watch00.png"><img alt="../../_images/Watch00.png" src="../../_images/Watch00.png" style="width: 800px;" /></a>
+<p>Full xDrip+ wear documentation <a class="reference external" href="https://github.com/jamorham/xDrip-plus/blob/master/Documentation/WatchGuide.md">here</a>.</p>
+<p><em>NB: you can also use <a class="reference internal" href="#xdrip-with-tasker">Tasker</a>.</em></p>
+</section>
+<section id="androidaps">
+<h3><a class="reference external" href="https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html">AndroidAPS</a><a class="headerlink" href="#androidaps" title="Permalink to this heading"></a></h3>
+<p>For AndroidAPS <a class="reference external" href="https://androidaps.readthedocs.io/en/latest/EN/Configuration/Watchfaces.html#aaps-on-wear-os-smartwatch">here</a>.</p>
+</section>
+<section id="glimp">
+<h3><a class="reference external" href="https://play.google.com/store/apps/details?id=it.ct.glicemia">Glimp</a><a class="headerlink" href="#glimp" title="Permalink to this heading"></a></h3>
+<p>Select your Wearable device and enable the Glimp watchface.</p>
+<a class="reference internal image-reference" href="../../_images/Watch01.png"><img alt="../../_images/Watch01.png" src="../../_images/Watch01.png" style="width: 700px;" /></a>
+</section>
+<section id="nightwear">
+<h3><a class="reference external" href="https://github.com/rahim/nightwear">NightWear</a><a class="headerlink" href="#nightwear" title="Permalink to this heading"></a></h3>
+<p>NightWear is a minimal Wear OS watch face and complication available in the <a class="reference external" href="https://play.google.com/store/apps/details?id=im.rah.nightwear">Google Play Store</a> directly from your watch.</p>
+<p>It uses Wear’s standalone app support, so requires no companion app installed on the phone, or no phone at all as long as the watch has an internet connection. This also means it’s possible to display Nightscout data on a Google Wear OS watch paired with an Apple iPhone.</p>
+</br>
+</section>
+</section>
+<section id="amazfit-pace-stratos">
+<h2>Amazfit Pace &amp; Stratos<a class="headerlink" href="#amazfit-pace-stratos" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><a class="reference external" href="https://github.com/NightscoutFoundation/xDrip/releases">xDrip+</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Install the <a class="reference external" href="https://play.google.com/store/apps/details?id=com.huami.watch.hmwatchmanager">Amazfit watch app</a> on your phone.</p></li>
+<li><p>Install the <a class="reference external" href="https://forum.xda-developers.com/t/tool-pace-stratos-verge-tool-all-in-one-drivers-unlock-twrp-factory-image.3874802/">Amazfit tool</a> on a Windows PC.</p></li>
+<li><p>Download the <a class="reference external" href="https://github.com/Klaus3d3/XdripWidgetForAmazfit-Klaus/releases">widget</a> from the project author (Klaus3d3) GitHub <a class="reference external" href="https://github.com/Klaus3d3/XdripWidgetForAmazfit-Klaus">repository</a>.</p></li>
+<li><p>OEM unlock and enable USB debug on the watch, run TOOL ALL IN ONE and click the APK Installer button, select the widget apk file and INSTALL it. Close the install window and click Reboot System.</p></li>
+<li><p>In xDrip+, enable the Amazfit service and select the options you want to enable.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Watch04.png"><img alt="../../_images/Watch04.png" src="../../_images/Watch04.png" style="width: 800px;" /></a>
+<p><em>Original instructions <a class="reference external" href="https://crazyinfo.de/2018/07/25/xdrip-smartwatch-widget-fuer-amazfit-pace-stratos">here</a>.</em></p>
+</br>
+</section>
+</section>
+<section id="xiaomi-miband-2-3-4-5-and-6">
+<h2>Xiaomi MiBand 2, 3, 4, 5 and 6<a class="headerlink" href="#xiaomi-miband-2-3-4-5-and-6" title="Permalink to this heading"></a></h2>
+</section>
+<section id="amazfit-band-5-bip-bip-lite-bip-s-and-bip-s-lite-t-rex-pro">
+<h2>Amazfit Band 5, Bip, Bip Lite, Bip S and Bip S lite, T-Rex Pro<a class="headerlink" href="#amazfit-band-5-bip-bip-lite-bip-s-and-bip-s-lite-t-rex-pro" title="Permalink to this heading"></a></h2>
+</section>
+<section id="amazfit-gtr2-gtr2e-gts2-gts-2-mini-gts2e-gtr42-and-47">
+<h2>Amazfit GTR2, GTR2e, GTS2, GTS 2 mini, GTS2e, GTR42 and 47<a class="headerlink" href="#amazfit-gtr2-gtr2e-gts2-gts-2-mini-gts2e-gtr42-and-47" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3>xDrip+<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Follow Artem’s instructions <a class="reference external" href="https://bigdigital.home.blog/">here</a>.</p>
+</br>
+</section>
+</section>
+<section id="apple-watch">
+<h2>Apple Watch<a class="headerlink" href="#apple-watch" title="Permalink to this heading"></a></h2>
+<section id="nightguard">
+<h3><a class="reference external" href="https://apps.apple.com/us/app/nightguard/id1116430352#?platform=appleWatch">Nightguard</a><a class="headerlink" href="#nightguard" title="Permalink to this heading"></a></h3>
+<p>Apple Watch series 3 and above.</p>
+<p><a class="reference external" href="https://github.com/nightscout/nightguard">GitHub</a></p>
+</br>
+</section>
+<section id="sugarmate">
+<h3><a class="reference external" href="https://sugarmate.io/">sugarmate</a><a class="headerlink" href="#sugarmate" title="Permalink to this heading"></a></h3>
+<div class="warning admonition">
+<p class="admonition-title">Important limitation</p>
+<p><strong>Sugarmate doesn’t allow Nightscout as a data source if you included <code class="docutils literal notranslate"><span class="pre">bridge</span></code> in <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code>.</strong>
+If you need this data source: enable <a class="reference internal" href="../setup_variables/#bridge-share2nightscout-bridge"><span class="std std-ref">obscuration</span></a> variables.</p>
+</div>
+<p>You can setup sugarmate as a calendar complication to display Nightscout on your Apple watch.</p>
+</br>
+</section>
+<section id="gluco-tracker">
+<h3><a class="reference external" href="https://apps.apple.com/it/app/gluco-tracker/id1526976290?platform=appleWatch">Gluco-Tracker</a><a class="headerlink" href="#gluco-tracker" title="Permalink to this heading"></a></h3>
+</br>
+</section>
+<section id="loop-follow">
+<h3><a class="reference external" href="https://www.loopandlearn.org/loop-follow/">Loop Follow</a><a class="headerlink" href="#loop-follow" title="Permalink to this heading"></a></h3>
+<p>You can setup Loop Follow as a calendar complication to display Nightscout on your Apple watch.</p>
+</br>
+</section>
+</section>
+<section id="fitbit">
+<h2>Fitbit<a class="headerlink" href="#fitbit" title="Permalink to this heading"></a></h2>
+<section id="nightscout-monitor">
+<h3><a class="reference external" href="https://gallery.fitbit.com/details/eaed806d-9ff5-4aa9-a2c8-518f1f852f5a">Nightscout Monitor</a><a class="headerlink" href="#nightscout-monitor" title="Permalink to this heading"></a></h3>
+<p>Ionic/Sense/Versa/Versa 2/Versa 3/Versa Lite</p>
+<p><a class="reference external" href="https://github.com/sulkaharo/nsfitbit">Repository</a></p>
+</br>
+</section>
+<section id="glance">
+<h3><a class="reference external" href="https://gallery.fitbit.com/details/7b5d9822-7e8e-41f9-a2a7-e823548c001c">Glance</a><a class="headerlink" href="#glance" title="Permalink to this heading"></a></h3>
+<p>Ionic/Sense/Versa/Versa 2/Versa 3/Versa 4/Versa Lite</p>
+<p><a class="reference external" href="https://glancewatchface.com/">Web site</a></p>
+</br>
+</section>
+<section id="sentinel">
+<h3><a class="reference external" href="https://gallery.fitbit.com/developer/b50ac7f5-b932-441a-be18-e258b17c736b">Sentinel</a><a class="headerlink" href="#sentinel" title="Permalink to this heading"></a></h3>
+<p>Ionic/Sense/Versa/Versa 2/Versa Lite</p>
+<p>Facebook group: <a class="reference external" href="https://www.facebook.com/groups/3185325128159614">Sentinel</a></p>
+</br>
+</section>
+<section id="marclock">
+<h3><a class="reference external" href="https://gallery.fitbit.com/details/9eacf714-5b23-40c8-9621-ded74bd9edf9">Marclock</a><a class="headerlink" href="#marclock" title="Permalink to this heading"></a></h3>
+<p>Ionic/Sense/Versa/Versa 2/Versa Lite</p>
+<p><a class="reference external" href="https://github.com/cramis1/Marclock-with-CGM-weather/blob/master/README.md">Instructions</a></p>
+</br>
+</section>
+<section id="analog-watchfaces">
+<h3>Analog watchfaces<a class="headerlink" href="#analog-watchfaces" title="Permalink to this heading"></a></h3>
+<section id="analog-cgm">
+<h4><a class="reference external" href="https://gallery.fitbit.com/details/4d7b46b1-aaba-49b4-aa10-183321014dd3">Analog CGM</a><a class="headerlink" href="#analog-cgm" title="Permalink to this heading"></a></h4>
+</section>
+<section id="orbits-ns">
+<h4><a class="reference external" href="https://gallery.fitbit.com/details/44de5c81-b77c-4f90-baa8-38f3e3d28695">Orbits NS</a><a class="headerlink" href="#orbits-ns" title="Permalink to this heading"></a></h4>
+</section>
+<section id="radial-cgm">
+<h4><a class="reference external" href="https://gallery.fitbit.com/details/0173730e-5381-4495-bc6e-6ec93c8df029">Radial CGM</a><a class="headerlink" href="#radial-cgm" title="Permalink to this heading"></a></h4>
+<p>Ionic/Versa/Versa 2/Versa Lite/Versa 3/Sense</p>
+</br>
+</section>
+</section>
+</section>
+<section id="samsung-gear-smartwatches">
+<h2>Samsung Gear Smartwatches<a class="headerlink" href="#samsung-gear-smartwatches" title="Permalink to this heading"></a></h2>
+<section id="xdrip-with-tasker">
+<h3>xDrip+ with Tasker<a class="headerlink" href="#xdrip-with-tasker" title="Permalink to this heading"></a></h3>
+<p><em>Note: also available for Android Wear devices</em></p>
+<p><a class="reference external" href="https://github.com/FreDiabetics/xDrip--Tasker-Tizen-Watchface-Integration/blob/master/README.md">Instructions</a></p>
+</br>
+</section>
+<section id="g-watch-app">
+<h3><a class="reference external" href="https://play.google.com/store/apps/details?id=sk.trupici.g_watch">G-Watch app</a><a class="headerlink" href="#g-watch-app" title="Permalink to this heading"></a></h3>
+<p>Facebook group: <a class="reference external" href="https://www.facebook.com/gwatchapp">G-Watch App</a></p>
+</br>
+</section>
+</section>
+<section id="garmin-smartwatches-and-computers">
+<h2>Garmin Smartwatches and Computers<a class="headerlink" href="#garmin-smartwatches-and-computers" title="Permalink to this heading"></a></h2>
+<p>By <a class="reference external" href="https://apps.garmin.com/en-US/developer/74d80f40-f80a-45c2-b934-321cc86f9dac/apps">Phimby</a></p>
+<p>By <a class="reference external" href="https://apps.garmin.com/en-US/developer/e985e9ec-bcf6-4aef-bfe9-77c1c93fc854/apps">Horsetooth</a></p>
+<p>By <a class="reference external" href="https://apps.garmin.com/en-US/developer/f9420c47-810f-47ac-a7dd-9fa7b8ecd22d/apps">andreas-may</a></p>
+<p>By <a class="reference external" href="https://apps.garmin.com/en-US/developer/c3842ca7-a645-4758-b9ed-4ee6f8e3abec/apps">Fredrik_S</a></p>
+<p>By <a class="reference external" href="https://apps.garmin.com/en-US/developer/b2d30711-2708-4f3a-8e83-009c16d07081/apps">John_</a></p>
+<p>By <a class="reference external" href="https://apps.garmin.com/en-US/apps/488ffa72-5994-4d0f-90ff-3eeb99f3ea41">floheigl</a></p>
+</br>
+</section>
+<section id="karoo-karoo-2">
+<h2>Karoo/Karoo 2<a class="headerlink" href="#karoo-karoo-2" title="Permalink to this heading"></a></h2>
+<p>By <a class="reference external" href="https://github.com/haspden/INFLITE-TYPE-ONE-Hammerhead-CGM#readme">Henry Haspden</a></p>
+</br>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

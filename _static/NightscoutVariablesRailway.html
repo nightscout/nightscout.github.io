@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  <style> html * { font-family: Verdana, sans-serif; } </style>
+  <h1>Configure your Nightscout variables</h1>
+With this form you can easily decide which features to enable and customize your Nightscout.
+  </br></br>
+  <h2>Mandatory variables</h2>
+  <h3>These three variables below must have a value.</h3></br></br>
+  <table>
+    <tr>
+	  <td>MONGODB_URI</td>
+	  <td><input type="text" id="MONGODB_URI" value="" size="100"></td>
+	</tr>
+	<tr>
+	  <td></td>
+	  <td>The MongoDB Connection String to connect to your MongoDB cluster. If you don't have this from your Mongo database, please re-read installation instructions at <a href="https://nightscout.github.io/nightscout/database.html">Nightscout database</a> before continuing.</br></br></td>
+	</tr>
+    <tr>
+	  <td>API_SECRET</td>
+	  <td><input type="text" id="API_SECRET" value="" size="40"></td>
+	  <tr>
+	    <td></td>
+		<td>A passphrase that must be at least 12 characters long. Avoid 'special' characters, which can cause problems in some cases.</br></br></td>
+    </tr>
+    <tr>
+	  <td>DISPLAY_UNITS</td>
+	  <td><select id="DISPLAY_UNITS">
+	    <option value="MGDL" selected="selected">mg/dl</option>
+		<option value="MMOL">mmol/l</option></select>
+	  </td>
+      <tr>
+	    <td></td>
+		<td>Preferred BG units for the site: 'mg/dl' or 'mmol/l' (or just 'mmol').</br></br></td>
+    </tr>
+  </table>
+  <h2>Customizations</h2>
+  <h4>Leave default values if you don't want to change them.</h4>
+  </br></br>
+  <table>
+  <tr>
+    <td>CUSTOM_TITLE</td>
+	<td><input type=text id=CUSTOM_TITLE value="Nightscout" size=40></td>
+  </tr>
+  <tr>
+    <td></td>
+	<td>The display name for the Nightscout site. Appears in the upper left of the main view. Often set to the name of the CGM wearer.</br></br></td>
+  </tr>
+<tr>
+    <td>THEME</td>
+	<td><select id="THEME">
+      <option value="COLORS" selected="selected">colors</option>
+      <option value="DEFAULT">default</option>
+      <option value="COLORBLINDFRIENDLY">colorblindfriendly</option></select>
+	</td>
+    <tr>
+	  <td></td>
+	  <td>Default setting for new browser views for the color theme of the CGM graph. ('default' 'colors' or 'colorblindfriendly')</br></br></td>
+	</tr>
+    <tr>
+	  <td>ENABLE</td>
+	  <td><input type=text id=ENABLE value="careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors" size=150></td>
+	 </tr>
+     <tr>
+	   <td></td>
+	   <td>Plugins to enable for your site. Must be a space-delimited lower-case list. Include the word 'bridge' here if you are receiving data from the Dexcom Share service.</br></br></td>
+	 </tr>
+    <tr>
+	  <td>SHOW_PLUGINS</td>
+	  <td><input type=text id=SHOW_PLUGINS value="careportal dbsize" size=100></td>
+	</tr>
+    <tr>
+	  <td></td>
+	  <td>Default setting for whether or not these plugins are checked (active) by default not merely enabled. Include plugins here as in the ENABLE line; space-separated and lower-case.</br></br></td>
+	</tr>
+    <tr>
+	  <td>TIME_FORMAT</td>
+	  <td><select id="TIME_FORMAT">
+        <option value="TWELVE" selected="selected">12</option>
+        <option value="TWENTYFOUR">24</option></select>
+      </td>
+    </tr>
+    <tr>
+	  <td></td>
+	  <td>Default setting for new browser views for the time mode. ('12' or '24')</br></br></td>
+	</tr>
+    <tr>
+	  <td>NIGHT_MODE</td>
+	  <td><select id="NIGHT_MODE">
+        <option value="OFF" selected="selected">off</option>
+        <option value="ON">on</option>
+	  </td>
+	</tr>
+    <tr>
+	  <td></td>
+	  <td>Default setting for new browser views for whether Night Mode should be enabled. ('on' or 'off')</br></br></td>
+	</tr>
+    <tr>
+	  <td>BOLUS_RENDER_OVER</td>
+	  <td><input type=text id=BOLUS_RENDER_OVER value="1" size=10></td>
+	</tr>
+    <tr>
+	  <td></td>
+	  <td>U value over which the bolus values are rendered on the chart if the 'x U and Over' option is selected.</br></br></td>
+	</tr>
+  </table>
+  <h2>Dexcom Share</h2>
+  <h3>If you want Nightscout to import direcly from Dexcom Share</h3>
+  </br>
+  </br>
+  <table>
+    <tr>
+	  <td>BRIDGE_USER_NAME</td>
+	  <td><input type=text id=BRIDGE_USER_NAME value="" size=40></td>
+	</tr>
+    <tr>
+	  <td></td>
+	  <td>Your Dexcom account username to receive CGM data from the Dexcom Share service. Also make sure to include 'bridge' in your ENABLE line.</br></br></td>
+    </tr>
+    <tr>
+	  <td>BRIDGE_PASSWORD</td>
+	  <td><input type=text id=BRIDGE_PASSWORD value="" size=40></td>
+	</tr>
+    <tr>
+	  <td></td>
+	  <td>Your Dexcom account password to receive CGM data from the Dexcom Share service. Also make sure to include 'bridge' in your ENABLE line.</br></br></td>
+	</tr>
+    <tr>
+	  <td>BRIDGE_SERVER</td>
+      <td><select id="BRIDGE_SERVER">
+        <option value="US" selected="selected">US</option>
+        <option value="EU">EU</option></select>
+	  </td>
+	</tr>
+    <tr>
+      <td></td>
+	  <td>If you are bridging from the Dexcom Share service and are anywhere *outside* the US change this to EU. ('US' or 'EU')</br></br></td>
+	  </tr>
+    </table>
+  <h2>Alarms</h2>
+  <h3>You can customize alarms or leave them to default values</h3>
+  </br>
+  </br>
+<table>
+<tr><td>ALARM_TYPES</td>    <td><select id="ALARM_TYPES">
+    <option value="SIMPLE" selected="selected">simple</option>
+    <option value="PREDICT">predict</option>
+    <option value="SIMPLEPREDICT">simple predict</option></select>
+</td></tr>
+<tr><td></td><td>simple' and/or 'predict'. Simple alarms trigger when BG crosses the various thresholds set below. Predict alarms use a formula that forecasts where the BG is going based on its trend. You will *not* get warnings when crossing the BG thresholds set below when using the predict type.</br></br></td></tr>
+<tr><td>ALARM_URGENT_HIGH</td><td><select id="ALARM_URGENT_HIGH">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></td></tr>
+<tr><td></td><td>Default setting for new browser views for the Urgent High alarm (triggered when BG crosses BG_HIGH). ('on' or 'off')</br></br></td></tr>
+<tr><td>BG_HIGH</td><td><input type=text id=BG_HIGH value="260" size=20></td></tr>
+<tr><td></td><td>Urgent High BG threshold triggers the ALARM_URGENT_HIGH alarm. Set in mg/dL or mmol/L as set in DISPLAY_UNITS variable.</br></br></td></tr>
+<tr><td>ALARM_URGENT_LOW</td><td><select id="ALARM_URGENT_LOW">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></td></tr>
+<tr><td></td><td>Default setting for new browser views for the Urgent Low alarm (triggered when BG crosses BG_LOW). ('on' or 'off')</br></br></td></tr>
+<tr><td>BG_LOW</td><td><input type=text id=BG_LOW value="55" size=20></td></tr>
+<tr><td></td><td>Urgent Low BG threshold triggers the ALARM_URGENT_LOW alarm. Set in mg/dL or mmol/L as set in DISPLAY_UNITS variable.</br></br></td></tr>
+<tr><td>ALARM_HIGH</td><td><select id="ALARM_HIGH">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></td></tr>
+<tr><td></td><td>Default setting for new browser views for the High alarm (triggered when BG crosses BG_TARGET_TOP). ('on' or 'off')</br></br></td></tr>
+<tr><td>BG_TARGET_TOP</td><td><input type=text id=BG_TARGET_TOP value="180" size=20></td></tr>
+<tr><td></td><td>High BG threshold triggers the ALARM_HIGH alarm. Set in mg/dL or mmol/L as set in DISPLAY_UNITS variable.</br></br></td></tr>
+<tr><td>ALARM_LOW</td><td><select id="ALARM_LOW">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></td></tr>
+<tr><td></td><td>Default setting for new browser views for the Low alarm (triggered when BG crosses BG_TARGET_BOTTOM). ('on' or 'off')</br></br></td></tr>
+<tr><td>BG_TARGET_BOTTOM</td><td><input type=text id=BG_TARGET_BOTTOM value="70" size=20></td></tr>
+<tr><td></td><td>Low BG threshold triggers the ALARM_LOW alarm. Set in mg/dL or mmol/L as set in DISPLAY_UNITS variable.</br></br></td></tr>
+<tr><td>ALARM_TIMEAGO_URGENT</td><td><select id="ALARM_TIMEAGO_URGENT">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></td></tr>
+<tr><td></td><td>Default setting for new browser views for an urgent alarm when CGM data hasn't been received in the number of minutes set in ALARM_TIMEAGO_URGENT_MINS. ('on' or 'off')</br></br></td></tr>
+<tr><td>ALARM_TIMEAGO_URGENT_MINS</td><td><input type=text id=ALARM_TIMEAGO_URGENT_MINS value="30" size=20></td></tr>
+<tr><td></td><td>Default setting for new browser views for the number of minutes since the last CGM reading to trigger an ALARM_TIMEAGO_URGENT alarm.</br></br></td></tr>
+<tr><td>ALARM_TIMEAGO_WARN</td><td><select id="ALARM_TIMEAGO_WARN">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></td></tr>
+<tr><td></td><td>Default setting for new browser views for a warning alarm when CGM data hasn't been received in the number of minutes set in ALARM_TIMEAGO_WARN_MINS. ('on' or 'off')</br></br></td></tr>
+<tr><td>ALARM_TIMEAGO_WARN_MINS</td><td><input type=text id=ALARM_TIMEAGO_WARN_MINS value="15" size=20></td></tr>
+<tr><td></td><td>Default setting for new browser views for the number of minutes since the last CGM reading to trigger an ALARM_TIMEAGO_WARN alarm.</br></br></td></tr>
+</table>
+<script>
+function Validate()
+{
+  var s, e1, e2, e3;
+  e1 = "";
+  e2 = "";
+  e3 = "";
+  s = document.getElementById("MONGODB_URI").value;
+  if(s.search("mongodb")==-1) { e1 = "Bad MONGODB_URI: it should be a mongodb connection string."}
+  else if(s.search("://")==-1) { e1 = "Bad MONGODB_URI: it should be a mongodb connection string."}
+  else if(s.search(" ")!=-1) {e1 = "MONGODB_URI should not contain spaces."}
+  else if(s.search("<")!=-1) {e1 = "MONGODB_URI should not contain < or > characters."}
+  else if(s.search(">")!=-1) {e1 = "MONGODB_URI should not contain < or > characters."}
+  else if(s.indexOf("@")!=s.lastIndexOf("@")) {e1 = "Do not use the character @ in your MONGODB_URI password or user name."};
+  document.getElementById("result1").innerHTML = e1;
+  s = document.getElementById("API_SECRET").value;
+  if(s.search("@")!=-1) { e2 = "Problematic API_SECRET: do not use special characters."}
+  else if(s.search(":")!=-1) { e2 = "Problematic API_SECRET: do not use special characters."}
+  else if(s.search("/")!=-1) { e2 = "Problematic API_SECRET: do not use special characters."}
+  else if(s.search(" ")!=-1) { e2 = "Bad API_SECRET: do not use spaces."}
+  else if(s.length<12) { e2 = "Bad API_SECRET: too short - minimum 12 characters."}
+  document.getElementById("result2").innerHTML = e2;
+  s = document.getElementById("BRIDGE_USER_NAME").value;
+  if(s.length) { s = document.getElementById("BRIDGE_PASSWORD").value;
+  if(s.length) { s = document.getElementById("ENABLE").value;
+  if(s.search("bridge")==-1) { e3 = "Add bridge in ENABLE to get values from Dexcom Share." } } }
+  s = document.getElementById("BRIDGE_USER_NAME").value;
+  if(!s.length) { s = document.getElementById("BRIDGE_PASSWORD").value;
+  if(!s.length) { s = document.getElementById("ENABLE").value;
+  if(s.search("bridge")!=-1) { e3 = "Remove bridge from ENABLE if you don't use Dexcom Share directly to Nightscout." } } }
+  document.getElementById("result3").innerHTML = e3;
+  if((e1.length + e2.length + e3.length)<1)
+  {
+    document.getElementById("result1").innerHTML = "Validation is PASS.";
+    document.getElementById("result3").innerHTML = "Click on the Copy All button below. Go back into Railway raw editor, ENV and paste.";
+    CopyAll();
+  }
+};
+function CopyAll()
+{
+  var sBuffer, sLine, sel;
+  sBuffer = "";
+  sel = document.getElementById("ALARM_HIGH");
+  sLine = "ALARM_HIGH=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sLine + "\n";
+sel = document.getElementById("ALARM_LOW");
+  sLine = "ALARM_LOW=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_TIMEAGO_URGENT");
+  sLine = "ALARM_TIMEAGO_URGENT=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_TYPES");
+  sLine = "ALARM_TYPES=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_TIMEAGO_WARN");
+  sLine = "ALARM_TIMEAGO_WARN=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_URGENT_HIGH");
+  sLine = "ALARM_URGENT_HIGH=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_URGENT_LOW");
+  sLine = "ALARM_URGENT_LOW=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("BRIDGE_SERVER");
+  sLine = "BRIDGE_SERVER=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("DISPLAY_UNITS");
+  sLine = "DISPLAY_UNITS=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("NIGHT_MODE");
+  sLine = "NIGHT_MODE=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("THEME");
+  sLine = "THEME=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("TIME_FORMAT");
+  sLine = "TIME_FORMAT=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "ALARM_TIMEAGO_URGENT_MINS=" + document.getElementById("ALARM_TIMEAGO_URGENT_MINS").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "ALARM_TIMEAGO_WARN_MINS=" + document.getElementById("ALARM_TIMEAGO_WARN_MINS").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "API_SECRET=" + document.getElementById("API_SECRET").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BG_HIGH=" + document.getElementById("BG_HIGH").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BG_LOW=" + document.getElementById("BG_LOW").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BG_TARGET_BOTTOM=" + document.getElementById("BG_TARGET_BOTTOM").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BG_TARGET_TOP=" + document.getElementById("BG_TARGET_TOP").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BOLUS_RENDER_OVER=" + document.getElementById("BOLUS_RENDER_OVER").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BRIDGE_PASSWORD=" + document.getElementById("BRIDGE_PASSWORD").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BRIDGE_USER_NAME=" + document.getElementById("BRIDGE_USER_NAME").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "CUSTOM_TITLE=" + document.getElementById("CUSTOM_TITLE").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "ENABLE=" + document.getElementById("ENABLE").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "MONGODB_URI=" + document.getElementById("MONGODB_URI").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "SHOW_PLUGINS=" + document.getElementById("SHOW_PLUGINS").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+  document.getElementById("NSVARS").innerHTML = sBuffer;
+};
+function CopyToClipboard() {
+  var copyText = document.getElementById("NSVARS");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+  navigator.clipboard.writeText(copyText.value);
+   alert("Variables copied, now paste them in Railway Raw Editor.");
+}
+</script>
+</br></br>
+  <h2>Now click on the Validate button below</h2>
+  <button onclick="Validate()">-> Validate</button>
+  <h2>If errors show up, please correct them and click Validate again.</h2>
+  <p id="result1">Click the button above.</p>
+  <p id="result2"></p>
+  <p id="result3"></p>
+</br></br>
+<button onclick="CopyToClipboard()">Copy All</button>
+</br></br>
+<textarea id="NSVARS" name="NSVARS" rows="27" cols="150">
+Once validated you will see all Railway Nightscout variables in this box.
+</textarea>
+</body>
+</html>

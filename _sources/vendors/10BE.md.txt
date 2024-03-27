@@ -1,0 +1,7 @@
+---
+orphan: true
+---
+
+<head>
+  <meta http-equiv="Refresh" content="0; URL=https://ns.10be.de/en/index.html" />
+</head>
