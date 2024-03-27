@@ -244,3 +244,11 @@ Facebook group [Spike App](https://www.facebook.com/groups/spikeapp)
 <img src="/uploader/img/UploadCFG06.png" width="300px" />
 
 Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838/)
+
+</br>
+
+## DIY Closed Loop
+
+See the app documentation in the [dedicated page](/nightscout/close_loop.md).
+
+</br>
