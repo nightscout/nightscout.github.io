@@ -177,7 +177,7 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
 
 ```{admonition} Mind the syntax!
 :class: warning
-<span style="font-size:larger;">**`https://API_SECRET@my_nightscout_url/api/v1/`**</span>  
+**`https://API_SECRET@my_nightscout_url/api/v1/`**  
 `my_nightscout_url` will depend on where your site is hosted (see top of this page)  
 You will find your `API_SECRET`in your site variables.
 ```
