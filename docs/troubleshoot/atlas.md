@@ -589,7 +589,7 @@ Look [here](/nightscout/setup_variables.md#dbsize-database-size) for more inform
 </br>
 
 ```{hint}
-Your database size might not decrease immediately (it might even increase temporarily) after you perform cleanup with Admin Tools (see below: Normal cleanup). Allow a few hours to see the effects. In the meantime your site should recover functionality.
+Your database size might not decrease immediately (it might even increase temporarily) after you perform cleanup with Admin Tools (see below: Normal cleanup). Allow a few hours to see the effects. In the meantime your site should recover functionality.</br>If your site keeps crashing, go ahead to emergency cleanup.
 ```
 
 </br>
@@ -597,6 +597,10 @@ Your database size might not decrease immediately (it might even increase tempor
 **Try to recover temporary access to Nightscout to perform normal cleanup:**
 
 ```{tab-set}
+
+:::{tab-item} Select your platform ->
+</br>
+:::
 
 :::{tab-item} Heroku
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
@@ -622,6 +626,14 @@ Your database size might not decrease immediately (it might even increase tempor
 [Restart service](/troubleshoot/render.md#restart-service)
 :::
 
+:::{tab-item} Google Cloud
+The probability your database is full is very low, make sure you selected the maximum disk size for your compute engine. See [Here](https://navid200.github.io/xDrip/docs/Nightscout/FullDisk.html). 
+:::
+
+:::{tab-item} Hosted services
+Contact your provider. The probability your database is full is virtually null.
+:::
+
 ```
 
 ### Normal cleanup
@@ -642,7 +654,28 @@ If your Nightscout page doesn't open after restarting your app and you want to r
 
 </br>
 
-**If you can't manage to run normal cleanup, check database size and eventually perform an emergency cleanup.**
+**If you can't manage to run normal cleanup, perform an emergency cleanup.**
+
+### Emergency cleanup
+
+- Log in [Atlas](https://account.mongodb.com/account/login)
+- Open your Nightscout database and select `Collections`
+
+<img src="/vendors/mongodb/img/TShoot32.png" width="800px" >
+
+- Select the `devicestatus` collection and click the bin icon to delete it.  
+
+- You will lose all device status history (battery, ..) but **you won't lose neither BG, treatments nor profiles**.
+
+<img src="/vendors/mongodb/img/TShoot55.png" width="300px" >
+
+- Write `devicestatus` in the box then click `Drop`
+
+
+<img src="/vendors/mongodb/img/TShoot56.png" width="300px" >
+
+- Restart your site and when it opens, consider [cleanup](#normal-cleanup) from Admin Tools if your database size exceeds 80%.
+
 
 ### Atlas database size verification
 
@@ -658,20 +691,7 @@ If your Nightscout page doesn't open after restarting your app and you want to r
 <img src="/vendors/mongodb/img/TShoot36.png" width="800px" >
 
 - Open Nightscout  [`Admin tools`](/nightscout/discover.md#drawer-menu). If your site doesn't open jump to [Emergency cleanup](#emergency-cleanup).
-- Depending on the collection you identified above, choose which of the following you want to cleanup below.
-
-### Emergency cleanup
-
-In the Atlas cluster view you opened [above](#atlas-database-size-verification), select the `devicestatus` collection and click the bin icon to delete it.  
-You will lose all device status history (battery, ..) but **you won't lose neither BG, treatments nor profiles**.
-
-<img src="/vendors/mongodb/img/TShoot55.png" width="300px" >
-
-Write `devicestatus` in the box then click `Drop`
-
-<img src="/vendors/mongodb/img/TShoot56.png" width="300px" >
-
-Restart your site and when it opens, consider [cleanup](#normal-cleanup) from Admin Tools if your database size exceeds 80%.
+- Depending on the collection you identified above, choose which of the following you want to cleanup.
 
 </br>
 
