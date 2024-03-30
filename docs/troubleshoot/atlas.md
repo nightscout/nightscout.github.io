@@ -594,6 +594,8 @@ Your database size might not decrease immediately (it might even increase tempor
 
 </br>
 
+### Restart
+
 **Try to recover temporary access to Nightscout to perform normal cleanup:**
 
 ```{tab-set}
@@ -654,8 +656,6 @@ If your Nightscout page doesn't open after restarting your app and you want to r
 
 </br>
 
-**If you can't manage to run normal cleanup, perform an emergency cleanup.**
-
 ### Emergency cleanup
 
 - Log in [Atlas](https://account.mongodb.com/account/login)
@@ -674,8 +674,9 @@ If your Nightscout page doesn't open after restarting your app and you want to r
 
 <img src="/vendors/mongodb/img/TShoot56.png" width="300px" >
 
-- Restart your site and when it opens, consider [cleanup](#normal-cleanup) from Admin Tools if your database size exceeds 80%.
+- [Restart](#restart) your site and when it opens, consider again [cleanup](#normal-cleanup) from Admin Tools if your database size exceeds 80%.
 
+</br>
 
 ### Atlas database size verification
 
