@@ -39,8 +39,12 @@ Facebook group: [Android APS Users](https://www.facebook.com/groups/AndroidAPSUs
 
 iAPS is a open source artificial pancreas system based on the OpenAPS algorithm.
 
+Facebook group: [iAPS](https://www.facebook.com/groups/1351938092206709)
+
 </br>
 
-## [OpenAPS](https://openaps.readthedocs.io/en/latest/index.html)
+## [OpenAPS](https://openaps.org/)
+
+*Mind the documentation is not up to date for Nightscout DIY options.* 
 
 The Open Source Artificial Pancreas System (OpenAPS) is a safe but powerful, advanced but easily understandable, Artificial Pancreas System (APS) designed to automatically adjust an insulin pump’s insulin delivery to keep blood glucose (BG) in a safe range at all times. It does this by communicating with an insulin pump to obtain details of all recent insulin dosing (basal and boluses), by communicating with a Continuous Glucose Monitor (CGM) to obtain current and recent BG estimates, and by issuing commands to the insulin pump to adjust insulin dosing as needed.
