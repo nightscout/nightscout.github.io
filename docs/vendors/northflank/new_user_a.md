@@ -2,6 +2,10 @@
 orphan: true
 ---
 
+```{warning]
+
+```
+
 a) Select `Add new service`.
 
 <img src="/vendors/northflank/img/Northflank08.png" width="400px" /></br>
@@ -23,6 +27,12 @@ c) Select your `cgm-remote-monitor` and the `master` branch.
 d) In `Buid options` select `Buildpack`.
 
 <img src="/vendors/northflank/img/Northflank11.png" width="600px" /></br>
+
+</br>
+
+Open `Advanced build settings` and select `heroku/builder-classic:22`.
+
+<img src="/vendors/northflank/img/Northflank11b.png" width="600px" /></br>
 
 </br>
 
