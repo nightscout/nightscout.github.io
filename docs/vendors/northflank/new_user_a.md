@@ -132,7 +132,9 @@ m) add a 3 to 8 letter code to your URL.
 
 </br>
 
-n) Scroll down and click: `Create Service`
+n) Scroll down and check you're using an `nf-compute-10` plan, then click: `Create Service`
+
+<img src="/vendors/northflank/img/Northflank22a.png" width="600px" /></br>
 
 <img src="/vendors/northflank/img/Northflank22.png" width="600px" /></br>
 
