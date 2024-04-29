@@ -123,7 +123,7 @@ e) Select the region closest to where you live, but make sure it doesn't require
 
 </br>
 
-f) In services set the port to `3000`.
+f) In services set the port to `1337`.
 
 <img src="/vendors/fly.io/img/FlyIO10.png" width="600px" />
 
