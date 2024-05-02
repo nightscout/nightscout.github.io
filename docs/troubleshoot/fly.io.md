@@ -211,6 +211,10 @@ You do not need to remember your new IP, just continue using your site name as b
 
 ## Migrate from Heroku
 
+```{warning}
+Turboku has been removed from the CLI. This section is obsolete.
+```
+
 Log into Heroku.
 
 - Write down your Nightscout app name from the [dashboard](https://dashboard.heroku.com/apps).
