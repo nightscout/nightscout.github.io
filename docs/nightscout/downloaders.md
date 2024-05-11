@@ -198,17 +198,23 @@ Show your current BG in the system bar at the top of your screen on Mac (includi
 
 <img src="/nightscout/img/LockOK.png" width="25px" /> 
 
+<img src="https://raw.githubusercontent.com/dabear/FloatingGlucose/master/floatingglucose.png" width="350px"/>
+
 </br>
 
 ### [Owlet](https://github.com/kashamalasha/nightscout-widget-electron)
 
 <img src="/nightscout/img/LockOK.png" width="25px" /> 
 
+<img src="https://raw.githubusercontent.com/kashamalasha/nightscout-widget-electron/main/docs/screenshot-widget.png" width="350px"/>
+
 </br>
 
 ### [NS2Win](https://github.com/emp-00/NS2Win)
 
 <img src="/nightscout/img/LockOK.png" width="25px" /> 
+
+<img src="https://user-images.githubusercontent.com/60714349/230734030-d6ae822f-1a48-48d2-8df0-cb168146176b.png" width="500px"/>
 
 </br>
 
