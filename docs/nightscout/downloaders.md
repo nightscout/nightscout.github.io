@@ -194,7 +194,19 @@ Show your current BG in the system bar at the top of your screen on Mac (includi
 
 ## Windows
 
-### [FloatingGlucose](https://github.com/dabear/FloatingGlucose)
+### [FloatingGlucose](https://github.com/dabear/FloatingGlucose) (archived)
+
+<img src="/nightscout/img/LockOK.png" width="25px" /> 
+
+</br>
+
+### [Owlet](https://github.com/kashamalasha/nightscout-widget-electron)
+
+<img src="/nightscout/img/LockOK.png" width="25px" /> 
+
+</br>
+
+### [NS2Win](https://github.com/emp-00/NS2Win)
 
 <img src="/nightscout/img/LockOK.png" width="25px" /> 
 
