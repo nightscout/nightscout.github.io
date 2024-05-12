@@ -231,9 +231,9 @@ If you didn't find it, it will show in App Services
 
 <img src="/vendors/azure/img/Azure43.png" width="500px" />
 
-c) In the left menu select Configuration
+c) In the left menu select Environment variables
 
-<img src="/vendors/azure/img/Azure34.png" width="400px" />
+<img src="/vendors/azure/img/Azure34.png" width="500px" />
 
 ### View a variable value
 
@@ -273,15 +273,15 @@ Example: `LOOP_APNS_KEY`</br>
 
 Insert the value like you've done for all the others.
 
-<img src="/vendors/azure/img/Azure48.png" width="400px" />
+<img src="/vendors/azure/img/Azure48.png" width="600px" />
 
-At the top of the Environment variables view, select `Advanced edit`.
+At the top of the Environment variables view, select Advanced edit.
 
-<img src="/vendors/azure/img/Azure49.png" width="400px" />
+<img src="/vendors/azure/img/Azure49.png" width="600px" />
 
 Scroll down the list to your variable name and delete all duplicated `\` so that there will be no more `\\n` separators but only `\n`.
 
-<img src="/vendors/azure/img/Azure50.png" width="400px" />
+<img src="/vendors/azure/img/Azure50.png" width="600px" />
 
 Click `OK` to save the modified variable.
 
