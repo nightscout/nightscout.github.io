@@ -18,6 +18,8 @@ A comprehensive description of the yaml file for mongo and Nightscout setup [her
 
 If you don't own a domain name, get a DDNS name now: see [here](/nightscout/dns).
 
+You can also use [Caddy as reverse proxy](https://github.com/Alderskog/nightscout-in-OCN).
+
 </br>
 
 ## Update your system
@@ -230,7 +232,7 @@ x-ns-common-env: &ns-common-env
   TZ: Europe/Moscow
   TIME_FORMAT: 24
   INSECURE_USE_HTTP: 'true'
-  ENABLE: basal iob cob boluscalc cage sage iage bage pump openaps pushover bgi food rawbg
+  ENABLE: basal iob cob boluscalc cage sage iage bage pump openaps pushover food rawbg
   SHOW_FORECAST: openaps
   PUMP_FIELDS: clock reservoir
   DISPLAY_UNITS: mmol

@@ -2,6 +2,10 @@
 orphan: true
 ---
 
+```{warning]
+
+```
+
 a) Select `Add new service`.
 
 <img src="/vendors/northflank/img/Northflank08.png" width="400px" /></br>
@@ -23,6 +27,12 @@ c) Select your `cgm-remote-monitor` and the `master` branch.
 d) In `Buid options` select `Buildpack`.
 
 <img src="/vendors/northflank/img/Northflank11.png" width="600px" /></br>
+
+</br>
+
+Open `Advanced build settings` and select `heroku/builder-classic:22`.
+
+<img src="/vendors/northflank/img/Northflank11b.png" width="600px" /></br>
 
 </br>
 
@@ -93,14 +103,14 @@ i) You can add alarms values. See [here](/nightscout/setup_variables.md#alarms) 
 
 </br>
 
-j) If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the `API_SECRET`) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](/nightscout/setup_variables.md#auth_default_roles) variable in as `denied`.  
+j) If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the `API_SECRET`) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](auth_default_roles) variable in as `denied`.  
 If you want your site to be visible to anybody leave it as `readable`.
 
 <img src="/vendors/northflank/img/Northflank19.png" width="600px" /></br>
 
 </br>
 
-k) In [`ENABLE`](/nightscout/setup_variables.md#enable), copy and paste the following words (separated by a space) so that won't have to think about which you want now:
+k) In [`ENABLE`](enable), copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
 
@@ -112,7 +122,7 @@ k) In [`ENABLE`](/nightscout/setup_variables.md#enable), copy and paste the foll
 
 </br>
 
-l) You can modify the variables values, check the [documentation](../../../nightscout/setup_variables) for the meaning of each one.
+l) You can modify the variables values, check the [documentation](/nightscout/setup_variables) for the meaning of each one.
 
 </br>
 
@@ -122,7 +132,9 @@ m) add a 3 to 8 letter code to your URL.
 
 </br>
 
-n) Scroll down and click: `Create Service`
+n) Scroll down and check you're using an `nf-compute-10` plan, then click: `Create Service`
+
+<img src="/vendors/northflank/img/Northflank22a.png" width="600px" /></br>
 
 <img src="/vendors/northflank/img/Northflank22.png" width="600px" /></br>
 

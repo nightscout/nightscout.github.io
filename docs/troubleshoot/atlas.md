@@ -84,8 +84,24 @@ Common reasons:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
+[Restart app](/troubleshoot/azure.md#restart-app)
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -103,8 +119,24 @@ Common reasons:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
+[Restart app](/troubleshoot/azure.md#restart-app)
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -143,8 +175,24 @@ If you see this message:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
+[Restart app](/troubleshoot/azure.md#restart-app)
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -166,8 +214,24 @@ If you see this message:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
+[Restart app](/troubleshoot/azure.md#restart-app)
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -200,8 +264,24 @@ If you see this message:
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
+[Restart app](/troubleshoot/azure.md#restart-app)
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
 :::
 
 ```
@@ -499,7 +579,9 @@ Free databases like M0 Sandbox provided by Atlas will only hold a limited amount
 **Note:** *If you consider paying for a database upgrade, also think about a [paid hosting service](/index.md#nightscout-as-a-service).*
 
 ```{warning}
-Make sure your Nightscout site has `Database Size` enabled to monitor database capacity. Look [here](/nightscout/setup_variables.md#dbsize-database-size) for more information on this plugin.
+Make sure your Nightscout site has `Database Size` enabled to monitor database capacity.</br>
+In order to have the database size pill, add `dbsize` in the `ENABLE` variable.</br>
+Look [here](/nightscout/setup_variables.md#dbsize-database-size) for more information on this plugin.
 ```
 
 <img src="/vendors/mongodb/img/TShoot35.png" width="600px" >
@@ -507,21 +589,51 @@ Make sure your Nightscout site has `Database Size` enabled to monitor database c
 </br>
 
 ```{hint}
-Your database size might not decrease immediately (it might even increase temporarily) after you perform cleanup with Admin Tools (see below: Normal cleanup). Allow a few hours to see the effects. In the meantime your site should recover functionality.
+Your database size might not decrease immediately (it might even increase temporarily) after you perform cleanup with Admin Tools (see below: Normal cleanup). Allow a few hours to see the effects. In the meantime your site should recover functionality.</br>If your site keeps crashing, go ahead to emergency cleanup.
 ```
 
 </br>
+
+### Restart
 
 **Try to recover temporary access to Nightscout to perform normal cleanup:**
 
 ```{tab-set}
 
+:::{tab-item} Select your platform ->
+</br>
+:::
+
 :::{tab-item} Heroku
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
+[Restart app](/troubleshoot/azure.md#restart-app)
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
+:::
+
+:::{tab-item} Render
+[Restart service](/troubleshoot/render.md#restart-service)
+:::
+
+:::{tab-item} Google Cloud
+The probability your database is full is very low, make sure you selected the maximum disk size for your compute engine. See [Here](https://navid200.github.io/xDrip/docs/Nightscout/FullDisk.html). 
+:::
+
+:::{tab-item} Hosted services
+Contact your provider. The probability your database is full is virtually null.
 :::
 
 ```
@@ -544,36 +656,43 @@ If your Nightscout page doesn't open after restarting your app and you want to r
 
 </br>
 
-**If you can't manage to run normal cleanup, check database size and eventually perform an emergency cleanup.**
+### Emergency cleanup
+
+- Log in [Atlas](https://account.mongodb.com/account/login)
+- Open your Nightscout database and select `Browse collections` in `Database`
+
+<img src="/vendors/mongodb/img/TShoot32.png" width="800px" >
+
+- Select the `devicestatus` collection and click the bin icon to delete it.  
+
+- You will lose all device status history (battery, ..) but **you won't lose neither BG, treatments nor profiles**.
+
+<img src="/vendors/mongodb/img/TShoot55.png" width="300px" >
+
+- Write `devicestatus` in the box then click `Drop`
+
+
+<img src="/vendors/mongodb/img/TShoot56.png" width="300px" >
+
+- [Restart](#restart) your site and when it opens, consider again [cleanup](#normal-cleanup) from Admin Tools if your database size exceeds 80%.
+
+</br>
 
 ### Atlas database size verification
 
 - Log in [Atlas](https://account.mongodb.com/account/login)
-- Open your Nightscout cluster and select `Collections`
+- Open your Nightscout database and select `Collections`
 
 <img src="/vendors/mongodb/img/TShoot32.png" width="800px" >
 
 </br>
 
-- Click your database name (hidden left). Check the`DATABASE SIZE` is indeed close to or at the limit then look at these three collections `Documents size`: `devicestatus`, `entries` and `treatments`.
+- Click your database name (hidden left). Check the`DATABASE SIZE` is indeed close to or at the limit (512MB) then look at these three collections `Documents size`: `devicestatus`, `entries` and `treatments`.
 
 <img src="/vendors/mongodb/img/TShoot36.png" width="800px" >
 
 - Open Nightscout  [`Admin tools`](/nightscout/discover.md#drawer-menu). If your site doesn't open jump to [Emergency cleanup](#emergency-cleanup).
-- Depending on the collection you identified above, choose which of the following you want to cleanup:
-
-### Emergency cleanup
-
-In the Atlas cluster view you opened [above](#atlas-database-size-verification), select the `devicestatus` collection and click the bin icon to delete it.  
-You will lose all device status history (battery, ..) but you won't lose neither BG, treatments nor profiles.
-
-<img src="/vendors/mongodb/img/TShoot55.png" width="300px" >
-
-Write `devicestatus` in the box then click `Drop`
-
-<img src="/vendors/mongodb/img/TShoot56.png" width="300px" >
-
-Restart your site and when it opens, consider [cleanup](#normal-cleanup) from Admin Tools if your database size exceeds 80%.
+- Depending on the collection you identified above, choose which of the following you want to cleanup.
 
 </br>
 
@@ -614,7 +733,7 @@ If you are using Loop, temporarily change a basal rate in Loop, and confirm your
 
 ## Data in the future
 
-First try to [remove future items with the Admin Tools](/nightscout/admin_tools/#remove-future-items-from-database).
+First try to [remove future items with the Admin Tools](/nightscout/admin_tools.md#remove-future-items-from-database).
 
 If it doesn't give the expected result:
 

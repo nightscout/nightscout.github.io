@@ -2,8 +2,6 @@
 orphan: true
 ---
 
-# </br>
-
 a) Click on `Create a New project`.
 
 <img src="/vendors/railway/img/Railway06.png" width="400px" /></br>

@@ -76,7 +76,7 @@ These solutions require a monthly fee.
 Paying for a platform doesn't imply your database is included and covered by the plan.
 ```
 
-[Heroku](/vendors/heroku/new_user), [Railway](/vendors/railway/new_user) with [database](/vendors/railway/database), [Northflank database](/vendors/northflank/database) or [NAS](/advanced.md#building-nightscout-inside-your-nas)
+[Heroku](/vendors/heroku/new_user), [Railway](/vendors/railway/new_user) with [database](/vendors/railway/database), [Northflank database](/vendors/northflank/database) or [NAS](nas)
 
 <img src="./img/Comparison3.png"  width="700px" />
 

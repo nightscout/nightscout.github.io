@@ -166,7 +166,7 @@ This will give you a table of your treatments, day by day.
 
 ## Profiles
 
-This report will display [profiles](../nightscout/profile_editor.md) used in the time range.
+This report will display [profiles](/nightscout/profile_editor.md) used in the time range.
 
 <img src="/nightscout/img/Reports17.png" width="800px" />
 
@@ -206,7 +206,7 @@ Make sure to temporarily [disable authentication](/nightscout/security.md#how-to
 
 [https://nightrep.zreptil.de/](https://nightrep.zreptil.de/) can be used to generate PDF documents with the data stored at Nightscout.
 
-You need to add [`cors`](/nightscout/setup_variables.md#cors-cors) to your [`ENABLE`](/nightscout/setup_variables.md#enable) variables
+You need to add [`cors`](/nightscout/setup_variables.md#cors-cors) to your [`ENABLE`](enable) variables
 
 Facebook group [Nightscout Reporter](https://www.facebook.com/nightrep)
 

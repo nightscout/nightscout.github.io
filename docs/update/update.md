@@ -22,7 +22,7 @@ Follow [these instructions](/vendors/github/update/) and come back.
 
 ## Step 2: Deploy
 
-```{tab-set}
+````{tab-set}
 
 :::{tab-item} Select your platform ->
 </br>
@@ -73,10 +73,49 @@ If you ran into trouble, try the [Redeploy](/update/redeploy.md) method</br>
 :::
 
 :::{tab-item} Fly.io
-- ***Site maintainability***</br>
-Perform [these operations](/troubleshoot/fly.io.md#make-your-migrated-app-maintainable).
-</br></br>
-Your deployment will update automatically.
+Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/) to install `flyctl` on your computer. You also need to [install git](https://git-scm.com/downloads) if you're using a Windows computer.</br></br>
+*Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.*</br></br>
+- Log in Fly.io:</br></br>
+`flyctl auth login` </br></br>
+- Verify your Nightscout app name, use it to replace `example-ns` in the following lines.</br></br>
+`flyctl app list`</br></br>
+- Verify your app current region (three letters code) and make sure it's in the [free tier](https://fly.io/docs/reference/regions/#fly-io-regions).</br></br>
+`flyctl app list`</br></br>
+- Navigate to the `cgm-remote-monitor` folder from which you deployed Nightscout on your computer. Verify it contains the `fly.toml` configuration file you used to deploy your site.</br></br>
+  - If you don't see this file, recover it:</br></br>
+  `flyctl config save --app example-ns`</br></br>
+- If you migrated from Heroku using the wizard, or if you can't find this folder on your computer, follow the next steps to recover your Fly.io configuration:</br></br>
+  - Fork a copy of the Nightscout repository and change directory</br></br>
+  `git clone https://github.com/nightscout/cgm-remote-monitor`</br></br>
+  `cd cgm-remote-monitor`</br></br>
+  - Download a default `fly.toml` configuration file</br></br>
+  `flyctl config save --app example-ns`</br></br>
+- Update your Nightscout repository</br></br>
+`git pull`</br></br>
+- Edit your `fly.toml` configuration and search this section:</br>
+```
+[[services]]
+  protocol = "tcp"
+  internal_port = 8080
+  processes = ["app"]
+```
+- Change the internal port value to 1337, do not change anything else, do not remove the spaces before `internal_port`.</br></br>
+`internal_port = 1337`</br></br>
+- Save the `fly.toml` file.</br></br>
+- Deploy Nightscout:</br></br>
+`flyctl launch`</br></br>
+- Wait until completion, you site should now be running the latest Nightscout version.</br>
+```
+Updating existing machines in 'example-ns' with rolling strategy
+
+-------
+ ✔ Machine 1781944ae46438 [app] update succeeded
+-------
+
+Visit your newly deployed app at https://example-ns.fly.dev/
+```
+- Downscale the app if you haven't yet
+`flyctl scale --app example-ns count 1`
 </br>
 :::
 
@@ -88,6 +127,7 @@ Your deployment will update automatically.
 </br>Continue [here](https://navid200.github.io/xDrip/docs/Nightscout/update_nightscout.html)</br></br>
 :::
 
-```
+````
 
 </br>
+

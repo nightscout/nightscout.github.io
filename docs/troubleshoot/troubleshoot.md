@@ -42,8 +42,20 @@ Not knowing if it's a permanent issue, first try to restart it...
 [Restart all dynos](/troubleshoot/heroku.md#restart-all-dynos)
 :::
 
-:::{tab-item} Railway/Northflank/Azure/Fly.io
-[Modify any variable](/nightscout/setup_variables) (best choice is `CUSTOM_TITLE`) to force restart
+:::{tab-item} Railway
+[Restart your web app](/troubleshoot/railway.md#restart-your-app)
+:::
+
+:::{tab-item} Azure
+[Restart app](/troubleshoot/azure.md#restart-app)
+:::
+
+:::{tab-item} Northflank
+[Restart](/troubleshoot/northflank.md#restart)
+:::
+
+:::{tab-item} Fly.io
+[Restart your app](/troubleshoot/fly.io.md#restart-your-app)
 :::
 
 :::{tab-item} Render
@@ -62,7 +74,7 @@ Follow [these](/troubleshoot/github) instructions.
 
 Search your issue [there](/troubleshoot/heroku).
 
-[There's nothing here, yet](/troubleshoot/heroku.md#there-s-nothing-here) can be due to billing issues.
+[There's nothing here, yet](heroku-nothing-here) can be due to billing issues.
 
 An [Application error](/troubleshoot/heroku.md#application-error) means Heroku crashed. Restart it and check database size.
 
@@ -84,7 +96,9 @@ Else go [there](/troubleshoot/railway).
 
 ## Fly.io
 
-Fly.io troubleshooting is complex if you didn't [make your app maintainable](/troubleshoot/fly.io.md#make-your-migrated-app-maintainable).
+Fly.io troubleshooting is complex if you didn't save your `fly.toml` configuration. Check in your local clone of the `cgm-remote-monitor` project. If you can't find it, [recover it](recover-fly-toml) first.
+
+Try to redeploy your app.
 
 Once done, issues are most probably due to your `fly.toml` contents or variables.
 

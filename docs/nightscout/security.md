@@ -104,9 +104,9 @@ Make sure [the app you use to see your data](/nightscout/downloaders) can handle
 
 To Take Advantage of Roles, Turn Off Unauthorized Access to Your Site:
 
-If you want to ensure that ONLY someone with permission to view your site (e.g., a token) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](/nightscout/setup_variables.md#auth_default_roles) variable. Set the value as: `denied`.
+If you want to ensure that ONLY someone with permission to view your site (e.g., a token) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](auth_default_roles) variable. Set the value as: `denied`.
 
-Edit (or add) this variable and set it to `denied` (see [here](../setup_variables.md#nightscout-configuration) how to edit variables).
+Edit (or add) this variable and set it to `denied` (see [here](/nightscout/setup_variables.md#nightscout-configuration) how to edit variables).
 
 <img src="/nightscout/img/Admin03.png" width="600px" />
 
@@ -114,7 +114,7 @@ This creates a scenario in which a token will be required for all access (even o
 
 <img src="/nightscout/img/Admin02.png" width="600px" />
 
-In order to make your site visible to anybody, set  [`AUTH_DEFAULT_ROLES`](/nightscout/setup_variables.md#auth_default_roles) variable to `readable`.
+In order to make your site visible to anybody, set  [`AUTH_DEFAULT_ROLES`](auth_default_roles) variable to `readable`.
 
 </br>
 

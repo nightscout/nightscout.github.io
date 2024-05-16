@@ -119,14 +119,14 @@ You can update the alarms values. See [here](/nightscout/setup_variables.md#alar
 
 </br>
 
-If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the `API_SECRET`) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](/nightscout/setup_variables.md#auth_default_roles) variable in as `denied`.  
+If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the `API_SECRET`) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](auth_default_roles) variable in as `denied`.  
 If you want your site to be visible to anybody leave it as `readable`.
 
 <img src="/vendors/railway/img/Railway11.png" width="600px" /></br>
 
 </br>
 
-A common list of [`enable`](/nightscout/setup_variables.md#enable) variables is predefined, you can change them if you know why.  
+A common list of [`enable`](enable) variables is predefined, you can change them if you know why.  
 It's recommended that you leave them like this for now.
 
 Just remember to add `bridge` at the end if your get your BG values from Dexcom Share.

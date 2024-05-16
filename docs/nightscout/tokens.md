@@ -5,7 +5,7 @@ orphan: true
 ***Note: authentication tokens are also called access tokens***
 
 ```{admonition} Changing API_SECRET
-If you change your [`API_SECRET`](/nightscout/setup_variables.md#api_secret) all your tokens will change. Make sure you update your devices and send the new token link to those you allowed to access your Nightscout
+If you change your [`API_SECRET`](api-secret) all your tokens will change. Make sure you update your devices and send the new token link to those you allowed to access your Nightscout
 ```
 
 To access the Authentication options, click the settings panel (three horizontal bars in the top right) in your website and select Admin Tools. The Authentication options are at the top of the Admin page. (Note: you must be logged in with your `API SECRET` to access these tools.)
@@ -68,7 +68,7 @@ You can also add the token to the site URL to authenticate using a token. Your s
 Anybody with this link can use your Nightscout with the role defined for this token.
 
 ```{hint}
-If the user copies only your core URL into a browser, and your site is readable by default, the token will be bypassed. (Possible strategies to ensure the user puts the role-based URL into a browser include using a [tinyurl]<https://tinyurl.com/app> or [bit.ly]<https://bitly.com/>.)
+If the user copies only your core URL into a browser, and your site is readable by default, the token will be bypassed. (Possible strategies to ensure the user puts the role-based URL into a browser include using a [tinyurl](https://tinyur.com/app) or [bit.ly](https://bitly.com).)
 ```
 
 - You can edit a subject by clicking the edit icon, making changes, and saving.

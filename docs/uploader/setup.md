@@ -177,7 +177,7 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
 
 ```{admonition} Mind the syntax!
 :class: warning
-<span style="font-size:larger;">**`https://API_SECRET@my_nightscout_url/api/v1/`**</span>  
+**`https://API_SECRET@my_nightscout_url/api/v1/`**  
 `my_nightscout_url` will depend on where your site is hosted (see top of this page)  
 You will find your `API_SECRET`in your site variables.
 ```
@@ -244,3 +244,11 @@ Facebook group [Spike App](https://www.facebook.com/groups/spikeapp)
 <img src="/uploader/img/UploadCFG06.png" width="300px" />
 
 Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838/)
+
+</br>
+
+## DIY Closed Loop
+
+See the app documentation in the [dedicated page](/nightscout/close_loop.md).
+
+</br>

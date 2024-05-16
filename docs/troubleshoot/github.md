@@ -4,25 +4,13 @@
 
 ## Lost access to GitHub
 
-Not a big problem:
+Not a big problem, just create another account if you can't recover access to the original one:
 
 ### Create a GitHub account
 
 ```{include} /vendors/github/create.md
 
 ```
-
-</br>
-
-------
-
-### Fork the Nightscout project
-
-```{include} /vendors/github/fork.md
-
-```
-
-</br>
 
 You'll need to reconnect your app to GitHub.
 
@@ -40,11 +28,7 @@ When encountering update issues with GitHub, the easiest method it to delete it 
 
 ```
 
-### Fork the Nightscout project
-
-```{include} /vendors/github/fork.md
-
-```
+### [Fork the Nightscout project](/troubleshoot/github.md#fork-the-nightscout-project) 
 
 </br>
 

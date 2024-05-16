@@ -31,7 +31,7 @@ Nightscout configuration is held in variables , their content can be modified to
 :::
 
 :::{tab-item} Fly.io
-[**→ Here**](/vendors/fly.io/new_user.md#editing-config-vars-in-fly-io)
+[**→ Here**](editing-config-vars-in-fly-io)
 :::
 
 :::{tab-item} Google Cloud
@@ -48,22 +48,29 @@ If you use a hosted service, open the vendor web interface to access your Nightc
 
 </br>
 
+```{hint}
+Only most used variables are explained below.</br>
+For the full list consult the [main repository ReadMe](https://github.com/nightscout/cgm-remote-monitor#environment).
+```
+
+</br>
+
 ## Nightscout Config Vars
 
 </br>
 
 ### Required variables
 
-#### **MONGODB_URI **
+#### `MONGODB_URI` (Database connection string)
 
-The connection string required to access your database (where all your data is stored in the cloud).
+The connection string required to access your [Mongo database](/nightscout/new_user.md#basic-concepts) (where all your data is stored in the cloud).
 
 ```{warning}
 **`MONGODB_URI` is handled automatically if you use a hosted service or Google Cloud xDrip+ method.** In these cases you don't need to worry about it and can't or shouldn't change it.</br>
 This string is vital to your Nightscout functioning. A wrong connection string will prevent your site from opening and your data uploading in Nightscout.
 ```
 
-An Atlas database string will look like this:
+An [Atlas database string](/troubleshoot/atlas.md#meet-your-connection-string) will look like this:
 
 `mongodb+svr://sally:sallypass@cluster0.abcdef.mongodb.net/nightscout?retryWrites=true&w=majority`
 
@@ -78,14 +85,16 @@ Only one of these two variables must be present: `MONGODB_URI` or `MONGO_CONNECT
 
 </br>
 
-#### **API_SECRET**
+(api-secret)=
+
+#### `API_SECRET` (Nightscout password)
 
 ```{admonition} This is an important password
 :class: warning
 Knowing your site's API Secret gives anybody full access to your Nightscout data, allows uploading to your site and uncontrolled access. Make sure you keep this password secret and avoid exposing it publicly.
 ```
 
-A passphrase that must be at least 12 characters long.
+A passphrase that must be at least 12 characters long, for example:
 
 ```
 MyV3ry53cr37
@@ -98,9 +107,11 @@ If you need to share Nightscout access but control the access, use an `admin` [t
 
 </br>
 
-#### **DISPLAY_UNITS**
+(display-units)=
 
-Preferred BG units for the site: `mg/dl` or `mmol/L` (or just `mmol`). Setting to `mmol/L` puts the entire server into `mmol/L` mode by default, no further settings needed.
+#### `DISPLAY_UNITS` (Units to use)
+
+Preferred BG units for the site: `mg/dl` or `mmol/L` (or just `mmol`). Setting to `mmol/L` puts the entire server into `mmol/L` mode by default, no further settings needed. Make sure it matches you uploader and followers.
 
 </br>
 
@@ -108,13 +119,44 @@ Preferred BG units for the site: `mg/dl` or `mmol/L` (or just `mmol`). Setting t
 
 ### Features
 
-#### **ENABLE**
+(enable)=
+
+#### `ENABLE` (Enable Plugins)
 
 ```{hint}
 Select the right plugins! Better too many than not enough.
 ```
 
-Plugins to enable for your site. Must be a space-delimited, lower-case list. 
+Select which [Plugins](#plugins) to enable for your site, this is the current list:
+
+- `careportal` (Careportal)
+- `boluscalc` (Bolus Wizard)
+- `food` (Custom Foods)
+- `rawbg` (Raw BG)
+- `iob` (Insulin-on-Board)
+- `cob` (Carbs-on-Board)
+- `bwp` (Bolus Wizard Preview)
+- `cage` (Cannula Age)
+- `sage` (Sensor Age)
+- `iage` (Insulin Age)
+- `bage` (Battery Age)
+- `treatmentnotify` (Treatment Notifications)
+- `basal` (Basal Profile)
+- `bolus` (Bolus Rendering)
+- `connect` (Nightscout Connect) - Beta
+- `bridge` (Share2Nightscout bridge) - Deprecated
+- `mmconnect` (MiniMed Connect bridge) - Deprecated: not functional
+- `pump` (Pump Monitoring)
+- `openaps` (OpenAPS)
+- `loop` (Loop)
+- `override` (Override Mode)
+- `xdripjs` (xDrip-js)
+- `alexa` (Amazon Alexa)
+- `googlehome` (Google Home/DialogFLow)
+- `speech` (Speech)
+- `cors` (CORS)
+
+Must be a space-delimited, lower-case list. 
 
 `careportal basal dbsize`
 
@@ -130,7 +172,7 @@ Note: `mmconnect` is not functional with Heroku (if you wanted to bridge from th
 
 </br>
 
-#### **DISABLE**
+#### `DISABLE` (Disable Plugins)
 
 Used to disable ***default*** features, expects a space delimited list.
 
@@ -140,27 +182,13 @@ For example this will disable the direction arrow and uploader battery informati
 
 </br>
 
-#### **BASE_URL**
+(auth_default_roles)=
 
-Used for building links to your site's API, i.e. Pushover callbacks, usually the URL of your Nightscout site.
-
-</br>
-
-#### **AUTH_DEFAULT_ROLES**
+#### `AUTH_DEFAULT_ROLES` (Authentication)
 
 Possible values `readable`, `denied`, or any valid role name. When `readable`, anyone can view Nightscout without a token. Setting it to `denied` will require a token from every visit, using `status-only` will enable api-secret based login.
 
-</br>
-
-#### **IMPORT_CONFIG**
-
-Used to import settings and extended settings from a url such as a gist. Structure of file should be something like: `{"settings": {"theme": "colors"}, "extendedSettings": {"upbat": {"enableAlerts": true}}}`
-
-</br>
-
-#### **TREATMENTS_AUTH**
-
-Possible values `on` or `off`. Deprecated, if set to `off` the `careportal` role will be added to `AUTH_DEFAULT_ROLES`
+More information on how to setup tokens [here](/nightscout/security.md#create-authentication-tokens-for-users).
 
 </br>
 
@@ -168,9 +196,7 @@ Possible values `on` or `off`. Deprecated, if set to `off` the `careportal` role
 
 These alarm setting affect all delivery methods (browser, Pushover, IFTTT, etc.). Values and settings entered here will be the defaults for new browser views, but will be overridden if different choices are made in the settings UI.
 
-
-
-#### **ALARM_TYPES**  (`simple`) 
+#### `ALARM_TYPES`
 
 ```{admonition} TYPES
 :class: hint
@@ -188,19 +214,19 @@ Predict alarms uses highly tuned formula that forecasts where the BG is going ba
 These values are the ones that will trigger `simple` alarms. They are expressed in the unit you selected with `DISPLAY_UNITS`.
 ```
 
-#### **BG_HIGH** (`260`) 
+#### `BG_HIGH`
 
 Urgent High BG threshold, triggers the `ALARM_URGENT_HIGH` alarm.
 
-#### **BG_LOW**  (`55`) 
+#### `BG_LOW`
 
 Urgent Low BG threshold, triggers the `ALARM_URGENT_LOW` alarm.
 
-#### **BG_TARGET_BOTTOM**  (`80`) 
+#### `BG_TARGET_BOTTOM`
 
 Low BG threshold, triggers the `ALARM_LOW` alarm.
 
-#### **BG_TARGET_TOP**  (`180`) 
+#### `BG_TARGET_TOP`
 
 High BG threshold, triggers the `ALARM_HIGH` alarm.
 
@@ -211,23 +237,23 @@ High BG threshold, triggers the `ALARM_HIGH` alarm.
 You can setup alarms, so that when your Nightscout page is open and the alarm enabled, above (`HIGH`) or below (`LOW`) a certain threshold, a sound might play.  
 ```
 
-#### **ALARM_URGENT_HIGH**  (`on`)
+#### `ALARM_URGENT_HIGH`
 
 Default setting for new browser views, for the Urgent High alarm (triggered when BG crosses `BG_HIGH`). (`on` or `off`)
 
-#### **ALARM_HIGH** (`on`)
+#### `ALARM_HIGH`
 
 Default setting for new browser views, for the High alarm (triggered when BG crosses `BG_TARGET_TOP`). (`on` or `off`)
 
-#### **ALARM_LOW**  (`on`)
+#### `ALARM_LOW`
 
 Default setting for new browser views, for the Low alarm (triggered when BG crosses `BG_TARGET_BOTTOM`). (`on` or `off`)
 
-#### **ALARM_URGENT_LOW**  (`on`)
+#### `ALARM_URGENT_LOW`
 
 Default setting for new browser views, for the Urgent Low alarm (triggered when BG crosses `BG_LOW`). (`on` or `off`)
 
-#### **Other Alarms on by Default***
+#### Other Alarms on by Default
 
 These other two alarms are on by default, so set them to 'off' if you prefer no alarms.
 
@@ -241,27 +267,27 @@ These other two alarms are on by default, so set them to 'off' if you prefer no 
 `ALARM_*_MINS`: Only the first value of the space separated list, for options in browser, will be used for pushover.
 ```
 
-#### **ALARM_URGENT_HIGH_MINS**  (`30 60 90 120`) 
+#### `ALARM_URGENT_HIGH_MINS`
 
 Number of minutes to snooze urgent high alarms.
 
-#### **ALARM_HIGH_MINS**  (`30 60 90 120`) 
+#### `ALARM_HIGH_MINS`
 
 Number of minutes to snooze high alarms.
 
-#### **ALARM_LOW_MINS** (`15 30 45 60`) 
+#### `ALARM_LOW_MINS`
 
 Number of minutes to snooze low alarms.
 
-#### **ALARM_URGENT_LOW_MINS** (`15 30 45`)
+#### `ALARM_URGENT_LOW_MINS`
 
 Number of minutes to snooze urgent low alarms.
 
-#### **ALARM_URGENT_MINS** (`30 60 90 120`)
+#### `ALARM_URGENT_MINS`
 
 Number of minutes to snooze urgent alarms (that aren't tagged as high or low).
 
-#### **ALARM_WARN_MINS** (`30 60 90 120`) 
+#### `ALARM_WARN_MINS`
 
 Number of minutes to snooze warning alarms (that aren't tagged as high or low).
 
@@ -272,19 +298,19 @@ Number of minutes to snooze warning alarms (that aren't tagged as high or low).
 Missing data alarms can also be setup, so that when your Nightscout page is open and the alarm enabled, after a certain time without receiving BG, a sound might play. 
 ```
 
-#### **ALARM_TIMEAGO_URGENT**  (`on`) 
+#### `ALARM_TIMEAGO_URGENT`
 
 Default setting for new browser views, for an urgent alarm when CGM data hasn't been received in the number of minutes set in `ALARM_TIMEAGO_URGENT_MINS`. (`on` or `off`)
 
-#### **ALARM_TIMEAGO_URGENT_MINS**  (`30`) 
+#### `ALARM_TIMEAGO_URGENT_MINS`
 
 Default setting for new browser views, for the number of minutes since the last CGM reading to trigger an `ALARM_TIMEAGO_URGENT` alarm.
 
-#### **ALARM_TIMEAGO_WARN**  (`on`) 
+#### `ALARM_TIMEAGO_WARN`
 
 Default setting for new browser views, for a warning alarm when CGM data hasn't been received in the number of minutes set in `ALARM_TIMEAGO_WARN_MINS`. (`on` or `off`)
 
-#### **ALARM_TIMEAGO_WARN_MINS**  (`15`) 
+#### `ALARM_TIMEAGO_WARN_MINS`
 
 Default setting for new browser views, for the number of minutes since the last CGM reading to trigger an `ALARM_TIMEAGO_WARN` alarm.
 
@@ -292,114 +318,37 @@ Default setting for new browser views, for the number of minutes since the last 
 
 ------
 
-### Core
+### Predefined values for your browser settings (default)
 
-#### MONGO_COLLECTION ( `entries`)
+#### `TIME_FORMAT` (`12`)
 
-**Set as system default from 14.0.7.**  
-The collection where CGM entries are stored. Leave default: `entries`.
-
-<img src="/nightscout/img/SetupNS37.png" width="400px" />
-
-#### **MONGO_TREATMENTS_COLLECTION** (`treatments`) 
-
-The collection used to store treatments entered in the Care Portal, see the [`ENABLE`](#enable) env var above
-
-#### **MONGO_DEVICESTATUS_COLLECTION** (`devicestatus`)
-
-The collection used to store device status information such as uploader battery
-
-#### **MONGO_PROFILE_COLLECTION** (`profile`) 
-
-The collection used to store your profiles
-
-#### **MONGO_FOOD_COLLECTION** (`food`) 
-
-The collection used to store your food database
-
-#### **MONGO_ACTIVITY_COLLECTION** (`activity`) 
-
-The collection used to store activity data
-
-<img src="/nightscout/img/SetupNS38.png" width="400px" />
-
-#### **PORT** (`1337`) 
-
-The port that the node.js application will listen on.
-
-#### **HOSTNAME** 
-
-The hostname that the node.js application will listen on, null by default for any hostname for IPv6 you may need to use `::`.
+Possible values `12` or `24`. This defines the horizontal timeline expressed as AM/PM or 0-24.
 
 </br>
 
-#### **SSL_KEY** 
+#### `NIGHT_MODE` (`off`) 
 
-Path to your ssl key file, so that ssl(https) can be enabled directly in node.js. If using Let's Encrypt, make this variable the path to your privkey.pem file (private key).
-
-#### **SSL_CERT** 
-
-Path to your ssl cert file, so that ssl(https) can be enabled directly in node.js. If using Let's Encrypt, make this variable the path to fullchain.pem file (cert + ca).
-
-#### **SSL_CA** 
-
-Path to your ssl ca file, so that ssl(https) can be enabled directly in node.js. If using Let's Encrypt, make this variable the path to chain.pem file (chain).
+Possible values `on` or `off`. Night mode has a lower brightness and contrast.
 
 </br>
 
-#### **HEARTBEAT** (`60`) 
+#### `SHOW_RAWBG` (`never`)
 
-Number of seconds to wait in between database checks
-
-</br>
-
-#### **DEBUG_MINIFY** (`true`) 
-
-Debug option, setting to `false` will disable bundle minification to help tracking down error and speed up development
-
-</br>
-
-#### **DE_NORMALIZE_DATES**(`true`) 
-
-The Nightscout REST API normalizes all entered dates to UTC zone. Some Nightscout clients have broken date deserialization logic and expect to received back dates in zoned formats. Setting this variable to `true` causes the REST API to serialize dates sent to Nightscout in zoned format back to zoned format when served to clients over REST.
-
-</br>
-
-------
-
-### Predefined values for your browser settings (optional)
-
-#### **TIME_FORMAT** (`12`)
-
-Possible values `12` or `24`
-
-</br>
-
-#### **NIGHT_MODE** (`off`) 
-
-Possible values `on` or `off`
-
-</br>
-
-#### **SHOW_RAWBG** (`never`)
-
-Default setting for new browser views, for the display of raw CGM data (if available). (`always`, `never`, or `noise`)
+Display of raw CGM data (this is a legacy feature). (`always`, `never`, or `noise`)
 
 <img src="/nightscout/img/SetupNS35.png" width="250px" />
 
 </br>
 
-#### **CUSTOM_TITLE** (`Nightscout`)
-
-This will change your Nightscout displayed name (top left) from default.
+#### `CUSTOM_TITLE` (`Nightscout`)
 
 The display name for the Nightscout site. Appears in the upper left of the main view. Often set to the name of the CGM wearer.
 
 <img src="/nightscout/img/SetupNS05.png" width="300px" />
 
-#### **THEME** (`colors`)
+#### `THEME` (`colors`)
 
-Default setting for new browser views, for the color theme of the CGM graph.
+Color theme of the CGM graph.
 
 `default`
 
@@ -415,24 +364,26 @@ Default setting for new browser views, for the color theme of the CGM graph.
 
 </br>
 
-#### **SHOW_PLUGINS**
+#### `SHOW_PLUGINS`
 
 Default setting for whether or not these plugins are checked (active) by default, not merely enabled. Include plugins here as in the `ENABLE` line; space-separated and lower-case.
+
+When you `ENABLE` a plugin, it will be used by Nightscout but might not be visible unless you select it in the [drawer menu](/nightscout/discover.md#settings). If you want a plugin to display by default you need to add it to the `SHOW_PLUGINS` list.
 
 More details [below](#plugins).
 
 </br>
 
-#### **SHOW_FORECAST** (`ar2`)
+#### `SHOW_FORECAST` (`ar2`)
 
 Plugin forecasts that should be shown by default, supports space delimited values such as: 
-`"ar2 openaps loop false"`
+`ar2 openaps loop false`
 
 Note the ar2 forecast is selected by default so if no value is set, it will be AR2. AR2 is an early attempt at forecasting BG and you should not base any medical decisions on it's predictions. 
 
-If you are looping, you can chose instead to use either `"loop"` or `"openaps"` which will use the appropriate algorithm.
+If you are looping, you can chose instead to use either `loop` or `openaps` which will use the appropriate algorithm.
 
-You should also add the parameter to the SHOW_PLUGINS and ENABLE variables.
+You should also add the parameter to the `SHOW_PLUGINS` and `ENABLE` variables.
 
 For example, if you are using the Loop app for iPhone, you should have the following settings (In addition to any others outlined in the docs):
 
@@ -444,7 +395,7 @@ SHOW_FORECAST=loop
 
 </br>
 
-#### **LANGUAGE** (`en`)
+#### `LANGUAGE` (`en`)
 
 Language of Nightscout. If not available English is used.
 
@@ -452,7 +403,7 @@ Currently supported language codes are: `bg` (Български), `cs` (Češti
 
 </br>
 
-#### **SCALE_Y** (`log`)
+#### `SCALE_Y` (`log`)
 
 The type of scaling used for the Y axis of the charts system wide.
 
@@ -470,7 +421,7 @@ The `log-dynamic` is similar to the default `log` options, but uses the same dyn
 
 </br>
 
-#### **EDIT_MODE** (`on`)
+#### `EDIT_MODE` (`on`)
 
 Possible values `on` or `off`. Enables the icon allowing for editing of treatments in the main view. More about edit [here](/nightscout/discover.md#edit-mode-edit).
 
@@ -478,7 +429,7 @@ Possible values `on` or `off`. Enables the icon allowing for editing of treatmen
 
 </br>
 
-#### **BOLUS_RENDER**
+#### `BOLUS_RENDER`
 
 Settings to configure Bolus rendering
 
@@ -489,40 +440,6 @@ Settings to configure Bolus rendering
 `BOLUS_RENDER_FORMAT_SMALL` (`default`) - Possible values are `hidden`, `default` (with leading zero and U), `concise` (with U, without leading zero), and `minimal` (without leading zero and U).
 
 <img src="/nightscout/img/SetupNS43.png" width="600px" />
-
-</br>
-
-------
-
-### Predefined values for your server settings (optional)
-
-#### **INSECURE_USE_HTTP** (`false`)
-
-```{warning}
-Setting this variable to `true` will allow (unsafe) http traffic to your Nightscout instance and is **not recommended**.
-```
-
-Redirect unsafe http traffic to https. Possible values `false`, or `true`. Your site redirects to `https` by default. If you don't want that from Nightscout, but want to implement that with a Nginx or Apache proxy, set `INSECURE_USE_HTTP` to `true`. 
-
-#### **SECURE_HSTS_HEADER** (`true`)
-
-Add HTTP Strict Transport Security (HSTS) header. Possible values `false`, or `true`.
-
-#### **SECURE_HSTS_HEADER_INCLUDESUBDOMAINS** (`false`)
-
-Include subdomains options for HSTS. Possible values `false`, or `true`.
-
-#### **SECURE_HSTS_HEADER_PRELOAD** (`false`)
-
-Ask for preload in browsers for HSTS. Possible values `false`, or `true`.
-
-#### **SECURE_CSP** (`false`)
-
-Add Content Security Policy headers. Possible values `false`, or `true`.
-
-#### **SECURE_CSP_REPORT_ONLY** (`false`)
-
-If set to `true` allows to experiment with policies by monitoring (but not enforcing) their effects. Possible values `false`, or `true`.
 
 </br>
 
@@ -572,7 +489,7 @@ If you want the `ENABLE`'d plugins to **show by default on any browser**, you sh
 
 If you want to specifically disable a plugin (mainly a default plugin) you should place it in the `DISABLE` variable.
 
-You also can decide to visualize them or not on your Nightscout view with the drawer menu. `Authenticate` and `Save` the settings on your browser. Heroku variables will not be modified and only default view will be seen on a new browser window.
+You also can decide to visualize them or not on your Nightscout view with the drawer menu. `Authenticate` and `Save` the settings on your browser. Your site variables will not be modified and only default view will be seen on a new browser window.
 
 <img src="/nightscout/img/SetupNS09.png" width="400px" />
 
@@ -594,11 +511,11 @@ Calculates and displays the change between the last 2 BG values. Delta shows a `
 
 #### `direction` (BG Direction)
 
-Displays the trend direction.
+Displays the trend direction, the arrow change is only based on the difference from the current to the latest measurement.
 
 #### `upbat` (Uploader Battery)
 
-Displays the most recent battery status from the uploader phone. . Use these extended setting to adjust behavior:
+Displays the most recent battery status from the uploader phone(s) and bridge. Use these extended setting to adjust behavior:
 
 `UPBAT_ENABLE_ALERTS` (`false`) - Set to `true` to enable uploader battery alarms via Pushover and IFTTT.
 
@@ -701,7 +618,7 @@ Show size of Nightscout Database, as a percentage of declared available space or
 Many deployments of Nightscout use free tier of MongoDB Atlas on Heroku, which is limited in size to 512MiB. After some time, as volume of stored data grows, it may happen that this limit is reached and system is unable to store new data. This plugin provides pill that indicates size of Database and shows (when configured) alarms regarding reaching space limit.
 
 ```{admonition} IMPORTANT
-This plugin can only check how much space database already takes, *but cannot infer* max size available on server for it. To have correct alarms and realistic percentage, `DBSIZE_MAX` need to be properly set - according to your mongoDB hosting configuration.
+This plugin can only check how much space database already takes, *but cannot infer* max size available on server for it. To have correct alarms and realistic percentage, `DBSIZE_MAX` need to be properly set - according to your own mongoDB hosting configuration.
 ```
 
 **NOTE:** This plugin rely on db.stats() for reporting *logical* size of database, which may be different than *physical* size of database on server. It may work for free tier of MongoDB on Atlas, since it calculate quota according to logical size too, but may fail for other hostings or self-hosted database with quota based on physical size.
@@ -722,9 +639,9 @@ Extended settings available:
 
 ------
 
-## Advanced Plugins:
+### Advanced Plugins:
 
-### `careportal` (Careportal)
+#### `careportal` (Careportal)
 
 An optional form to enter treatments.
 
@@ -734,7 +651,7 @@ Care Portal is an important plugin that gives access to the `Log a treatment` in
 
 </br>
 
-### `boluscalc` (Bolus Wizard)
+#### `boluscalc` (Bolus Wizard)
 
 Bolus Wizard plugin gives access to the `Bolus Wizard` interface. You can access it with the calculator icon top right. 
 
@@ -742,7 +659,7 @@ Bolus Wizard plugin gives access to the `Bolus Wizard` interface. You can access
 
 </br>
 
-### `food` (Custom Foods)
+#### `food` (Custom Foods)
 
 Custom Foods enabled by the variable `food` allows to to customize your food database and adds a `Food Editor` entry in the menu.
 
@@ -750,7 +667,7 @@ Custom Foods enabled by the variable `food` allows to to customize your food dat
 
 </br>
 
-### `rawbg` (Raw BG)
+#### `rawbg` (Raw BG)
 
 Calculates BG using sensor and calibration records from and displays an alternate BG values and noise levels. Defaults that can be adjusted with extended setting. Raw BG will only display if your sensor provides this data, your bridge device transfers it and your uploader sends it to Nightscout.
 
@@ -766,17 +683,17 @@ Calculates BG using sensor and calibration records from and displays an alternat
 
 </br>
 
-### `iob` (Insulin-on-Board) - `cob` (Carbs-on-Board)
+#### `iob` (Insulin-on-Board) - `cob` (Carbs-on-Board)
 
 <img src="/nightscout/img/SetupNS18.png" width="200px" />
 
 </br>
 
-### `iob` (Insulin-on-Board)
+#### `iob` (Insulin-on-Board)
 
 Adds the IOB pill visualization in the client and calculates values that used by other plugins. Uses treatments with insulin doses and the `dia` and `sens` fields from the treatment profile.
 
-### `cob` (Carbs-on-Board)
+#### `cob` (Carbs-on-Board)
 
 Adds the COB pill visualization in the client and calculates values that used by other plugins. Uses treatments with carb doses and the `carbs_hr`, `carbratio`, and `sens` fields from the treatment profile.
 
@@ -784,7 +701,7 @@ When you enter the information with the Care Portal or Nightscout receives if fr
 
 </br>
 
-### `bwp` (Bolus Wizard Preview)
+#### `bwp` (Bolus Wizard Preview)
 
 This plugin in intended for the purpose of automatically snoozing alarms when the CGM indicates high blood sugar but there is also insulin on board (IOB) and secondly, alerting to user that it might be beneficial to measure the blood sugar using a glucometer and dosing insulin as calculated by the pump or instructed by trained medicare professionals. ***The values provided by the plugin are provided as a reference based on CGM data and insulin sensitivity you have configured, and are not intended to be used as a reference for bolus calculation.*** The plugin calculates the bolus amount when above your target, generates alarms when you should consider checking and bolusing, and snoozes alarms when there is enough IOB to cover a high BG. Uses the results of the `iob` plugin and `sens`, `target_high`, and `target_low` fields from the [treatment profile](/nightscout/profile_editor/). Defaults that can be adjusted with extended settings
 
@@ -797,7 +714,7 @@ This plugin in intended for the purpose of automatically snoozing alarms when th
 
 </br>
 
-### `age` (Age pills)
+#### Age pills
 
 <img src="/nightscout/img/SetupNS23.png" width="600px"/>
 
@@ -847,13 +764,13 @@ Calculates the number of days and hours since the last `Pump Battery Change` tre
 
   </br>
 
-### `treatmentnotify` (Treatment Notifications)
+#### `treatmentnotify` (Treatment Notifications)
 
 Generates notifications when a treatment has been entered and snoozes alarms minutes after a treatment. Default snooze is 10 minutes, and can be set using the `TREATMENTNOTIFY_SNOOZE_MINS` extended setting.
 
 </br>
 
-### `basal` (Basal Profile)
+#### `basal` (Basal Profile)
 
 <img src="/nightscout/img/SetupNS26.png" width="200px"/>
 
@@ -875,7 +792,7 @@ or `icicle` (inverted)
 
 </br>
 
-### `bridge` (Share2Nightscout bridge)
+#### `bridge` (Share2Nightscout bridge)
 
 Glucose reading directly from the Dexcom Share service, uses these extended settings (***** mandatory):
 
@@ -893,7 +810,7 @@ Glucose reading directly from the Dexcom Share service, uses these extended sett
 
 </br>
 
-### `mmconnect` (MiniMed Connect bridge)
+#### `mmconnect` (MiniMed Connect bridge)
 
 ```{warning}
 This plugin is **NOT** functional with 7xx pumps do not enable it.
@@ -912,7 +829,7 @@ Transfer real-time MiniMed Connect data from the Medtronic CareLink server into 
 
 </br>
 
-### `pump` (Pump Monitoring)
+#### `pump` (Pump Monitoring)
 
 <img src="/nightscout/img/SetupNS24.png" width="270px"/>
 
@@ -938,7 +855,7 @@ Generic Pump Monitoring for OpenAPS, MiniMed Connect, RileyLink, t:slim, ...
 
 ------
 
-### `openaps` (OpenAPS)
+#### `openaps` (OpenAPS)
 
 <img src="/nightscout/img/SetupNS36.png" width="270px"/>
 
@@ -965,7 +882,7 @@ Also see [Pushover](https://github.com/nightscout/cgm-remote-monitor#pushover) a
 
 ------
 
-### `loop` (Loop)
+#### `loop` (Loop)
 
 <img src="/nightscout/img/SetupNS25.png" width="300px"/>
 
@@ -988,7 +905,7 @@ For remote overrides, the following extended settings must be configured:
 
 </br>
 
-### `override` (Override Mode)
+#### `override` (Override Mode)
 
 Additional monitoring for DIY automated insulin delivery systems to display real-time overrides such as Eating Soon or Exercise Mode:
 
@@ -996,7 +913,7 @@ Additional monitoring for DIY automated insulin delivery systems to display real
 
 </br>
 
-### `xdripjs` (xDrip-js)
+#### `xdripjs` (xDrip-js)
 
 Integrated xDrip-js monitoring, uses these extended settings:
 
@@ -1010,57 +927,29 @@ Integrated xDrip-js monitoring, uses these extended settings:
 
   </br>
 
-### `alexa` (Amazon Alexa)
+#### `alexa` (Amazon Alexa)
 
 Integration with Amazon Alexa, [detailed setup instructions](https://github.com/nightscout/cgm-remote-monitor/blob/master/docs/plugins/alexa-plugin.md)
 
 </br>
 
-### `googlehome` (Google Home/DialogFlow)
+#### `googlehome` (Google Home/DialogFlow)
 
 Integration with Google Home (via DialogFlow), [detailed setup instructions](https://github.com/nightscout/cgm-remote-monitor/blob/master/docs/plugins/googlehome-plugin.md)
 
 </br>
 
-### `speech` (Speech)
+#### `speech` (Speech)
 
 Speech synthesis plugin. When enabled, speaks out the blood glucose values, IOB and alarms. Note you have to set the LANGUAGE setting on the server to get all translated alarms.
 
 </br>
 
-### `cors` (CORS)
+#### `cors` (CORS)
 
 Enabled [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) so other websites can make request to your Nightscout site, uses these extended settings:
 
 - `CORS_ALLOW_ORIGIN` (`*`) - The list of sites that are allow to make requests
-
-</br>
-
-### `dbsize` (Database Size)
-
-<img src="/nightscout/img/SetupNS15.png" width="400px"/>
-
-</br>
-
-Show size of Nightscout Database, as a percentage of declared available space or in MiB.
-
-Many deployments of Nightscout use free tier of MongoDB Atlas on Heroku, which is limited in size to 512MiB. After some time, as volume of stored data grows, it may happen that this limit is reached and system is unable to store new data. This plugin provides pill that indicates size of Database and shows (when configured) alarms regarding reaching space limit.
-
-**IMPORTANT:** This plugin can only check how much space database already takes, *but cannot infer* max size available on server for it. To have correct alarms and realistic percentage, `DBSIZE_MAX` need to be properly set - according to your mongoDB hosting configuration.
-
-**NOTE:** This plugin rely on db.stats() for reporting *logical* size of database, which may be different than *physical* size of database on server. It may work for free tier of MongoDB on Atlas, since it calculate quota according to logical size too, but may fail for other hostings or self-hosted database with quota based on physical size.
-
-**NOTE:** MongoDB Atlas quota is for **all** databases in cluster, while each instance will get only size of **its own database only**. It is ok when you only have **one** database in cluster (most common scenario) but will not work for multiple parallel databases. In such case, spliting known quota equally beetween databases and setting `DBSIZE_MAX` to that fraction may help, but wont be precise.
-
-All sizes are expressed as integers, in *Mebibytes* `1 MiB == 1024 KiB == 1024*1024 B`
-
-Extended settings available:
-
-- `DBSIZE_MAX` (`496`) - Maximal allowed size of database on your mongoDB server, in MiB. You need to adjust that value to match your database hosting limits - default value is for standard Heroku mongoDB free tier.
-- `DBSIZE_WARN_PERCENTAGE` (`60`) - Threshold to show first warning about database size. When database reach this percentage of `DBSIZE_MAX` size - pill will show size in yellow.
-- `DBSIZE_URGENT_PERCENTAGE` (`75`) - Threshold to show urgent warning about database size. When database reach this percentage of `DBSIZE_MAX` size, it is urgent to do backup and clean up old data. At this percentage info pill turns red.
-- `DBSIZE_ENABLE_ALERTS` (`false`) - Set to `true` to enable notifications about database size.
-- `DBSIZE_IN_MIB` (`false`) - Set to `true` to display size of database in MiB-s instead of default percentage.
 
 </br>
 
@@ -1126,7 +1015,7 @@ With Maker you are able to integrate with all the other [IFTTT Services](https:/
 Plugins can create custom events, but all events sent to IFTTT webhooks will be prefixed with `ns-`. The core events are:
 
 - `ns-event` - This event is sent to the maker service for all alarms and notifications. This is good catch all event for general logging.
-- `ns-allclear` - This event is sent to the maker service when an alarm has been ack'd or when the server starts up without triggering any alarms. For example, you could use this event to turn a light to green.
+- `ns-allclear` - This event is sent to the maker service when an alarm has been acknowledged or when the server starts up without triggering any alarms. For example, you could use this event to turn a light to green.
 - `ns-info` - Plugins that generate notifications at the info level will cause this event to also be triggered. It will be sent in addition to `ns-event`.
 - `ns-warning` - Alarms at the warning level with cause this event to also be triggered. It will be sent in addition to `ns-event`.
 - `ns-urgent` - Alarms at the urgent level with cause this event to also be triggered. It will be sent in addition to `ns-event`.

@@ -9,6 +9,16 @@ Once you are clear about the type of sensor and upload system you will be using,
 
 If you're developing an uploader, you'll find the API information in your own Nightscout site  at `/api-docs` and `/api3-docs`.
 
+</br>
+
+## DIY Closed loop Systems
+
+Only your loop app should upload BG to Nightscout.
+
+See this [dedicated page](/nightscout/close_loop) for setup links.
+
+</br>
+
 ## Dexcom
 
 ### Dexcom G5/G6/ONE/G7
@@ -101,3 +111,5 @@ In order to get data from the Eversense CGM system, you will need to use the [ES
 [disaend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout. A 30 minutes delay might occur.
 
 A new plugin in Nightscout 15 (under development) will integrate the project above.
+
+</br>

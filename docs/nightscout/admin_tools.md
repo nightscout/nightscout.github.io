@@ -20,7 +20,7 @@ Make sure you leave [`dbsize`](/nightscout/setup_variables.md#dbsize-database-si
 
 </br>
 
-This panel will give access to basic maintenance actions on various database collections as defined in your site [core](/nightscout/setup_variables.md#core) variables.
+This panel will give access to basic maintenance actions on various database collections.
 
 </br>
 

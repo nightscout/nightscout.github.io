@@ -89,6 +89,8 @@ Open the list in Resource group and pick your group (the one you created in Step
 
 <img src="/vendors/azure/img/Azure23.png" width="600px" />
 
+If your free trial expired, select Pay-As-You-Go. It will be free if you use free resources like the Free F1 resource (see below).
+
 </br>
 
 d) Decide your site name (only lowercase and you can use `-` as a separator).  
@@ -108,7 +110,7 @@ Make sure it is the same than the database region you selected in Step 2.g.
 
 </br>
 
-f) Change the plan size.
+f) Select the free F1 plan.
 
 <img src="/vendors/azure/img/Azure26.png" width="600px" />
 
@@ -118,19 +120,21 @@ The Free F1 plan includes 60 CPU minutes per day. It usually is enough for a mod
 If you want a more reliable CPU, consider another plan like Shared D1 ($).
 ```
 
-Select Dev /Test, F1 Free and click Apply.
+</br>
 
-<img src="/vendors/azure/img/Azure27.png" width="300px" />
+g) Click Next: Database > down in the page.
+
+<img src="/vendors/azure/img/Azure27.png" width="400px" />
 
 </br>
 
-g) Click Next: Docker > in the lower left of the page.
+g) Do not change anything and click Next: Docker > down in the page.
 
 <img src="/vendors/azure/img/Azure28.png" width="400px" />
 
 </br>
 
-h) In Image source select Docker Hub.
+h) In Image source select **Docker Hub** instead of Quickstart.
 
 <img src="/vendors/azure/img/Azure29.png" width="600px" />
 
@@ -227,9 +231,9 @@ If you didn't find it, it will show in App Services
 
 <img src="/vendors/azure/img/Azure43.png" width="500px" />
 
-c) In the left menu select Configuration
+c) In the left menu select Environment variables
 
-<img src="/vendors/azure/img/Azure34.png" width="400px" />
+<img src="/vendors/azure/img/Azure34.png" width="500px" />
 
 ### View a variable value
 
@@ -258,6 +262,28 @@ Select New Application Setting and type variable name and value
 Remember to save modifications when done with your variables!
 
 <img src="/vendors/azure/img/Azure35.png" width="400px" />
+
+~~~{note}
+Multiple lines values with `\n` should be edited manually as the character `\` will be duplicated.</br>
+Example: `LOOP_APNS_KEY`</br>
+```
+----BEGIN PRIVATE KEY-----\nMIGTAgEAMBMGBygGSM49AwEHBHkwdwIBAQQg7c8w00t5ju7N980r\nerN8N+isnJoec+ohIEuD0teRbPmgCgYIKoZIzj0DAQehRANCAAREnRISLSiFgdn4\nLbf44yIKspXKr7GpPBVshv3ShOms2qHTdAFriXXRPmbq7eAJuFrxpYOduU1dl9vo\nouciW0je\n-----END PRIVATE KEY-----
+```
+~~~
+
+Insert the value like you've done for all the others.
+
+<img src="/vendors/azure/img/Azure48.png" width="600px" />
+
+At the top of the Environment variables view, select Advanced edit.
+
+<img src="/vendors/azure/img/Azure49.png" width="600px" />
+
+Scroll down the list to your variable name and delete all duplicated `\` so that there will be no more `\\n` separators but only `\n`.
+
+<img src="/vendors/azure/img/Azure50.png" width="600px" />
+
+Click `OK` to save the modified variable.
 
 </br>
 
