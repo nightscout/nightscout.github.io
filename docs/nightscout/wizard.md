@@ -43,10 +43,10 @@ function Validate()
 	sel = document.getElementById("COST");
 	switch(sel.selectedIndex)
 	{
-		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0; ns4u=1; break
-		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0; ns4u=1; break
-		case 2: dbAtlaP=0; nsT1Pal=0; nsSerendipity=0; ns4u=1; break
-		case 3: nsT1Pal=0; nsSerendipity=0; ns4u=1; break
+		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0; ns4u=0; break
+		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; nsSerendipity=0; ns4u=0; break
+		case 2: dbAtlaP=0; nsT1Pal=0; nsSerendipity=0; ns4u=0; break
+		case 3: nsT1Pal=0; nsSerendipity=0; ns4u=0; break
 		case 4: break
 	}
 	sel = document.getElementById("RELY");
@@ -82,7 +82,7 @@ function Validate()
 	if(ns10be) sNS=sNS+" - NS10BE Hosted Nightscout (from €4.99/month) <br />"
 	if(nsPro) sNS=sNS+" - Nightscout Pro Hosted service (3£/month) <br />"
 	if(nsSerendipity) sNS=sNS+" - Serendipity Bio  Hosted service (12.99$/month) <br />"
-	if(ns4u) sNS=sNS+" - Nightscout4u Hosted service (Free) <br />"
+	if(ns4u) sNS=sNS+" - Nightscout4u Hosted service (€1/instance/month) <br />"
 	if(sNS=="") sNS="Uh... not many choices there, try to change some options and retry."
 	document.getElementById("resultNS").innerHTML = sNS;
 }

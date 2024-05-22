@@ -181,7 +181,7 @@ Available globally, a monthly subscription is priced at $12.99 USD per month, pa
 +++
 [Nightscout4u.com](https://www.nightscout4u.com/) started its service in 2023 and offers a simple one-click hosted Nightscout service solution. It is possible to create and use multiple Nightscout instances with one account.
 
-As the service does not cover any guarantee in a production environment, it is completely **free of charge** and suitable for beginners to make their first steps and get used to Nightscout.
+The service is suitable for beginners to make their first steps and get used to Nightscout for only one Euro per instance and month.
 
 Check out the easy way of a [hosted Nightscout solution](https://www.nightscout4u.com/).
 ```
