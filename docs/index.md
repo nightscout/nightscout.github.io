@@ -261,6 +261,7 @@ vendors/render/new_user/
 vendors/railway/new_user/
 vendors/heroku/new_user/
 vendors/fly.io/new_user/
+vendors/google/new_user/
 ```
 
 ```{toctree}
