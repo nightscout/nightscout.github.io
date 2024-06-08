@@ -11,7 +11,7 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 
 ```{card}
 ## Google Cloud Nightscout
-![](/vendors/img/GCN.png)
+![](/vendors/img/GCNS.png)
 ^^^
 
 **Pros**:  
@@ -28,4 +28,4 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 </br>
 
 ### [Instructions](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html)  
-  
+

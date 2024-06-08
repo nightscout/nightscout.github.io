@@ -138,6 +138,6 @@ VPS Mongo Database
 
 ## <u>VPS</u>
 
-[Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html)  
+[Google Cloud](/vendors/google/new_user.md)  
 [Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)  
 [Advanced DIY](/nightscout/advanced)
