@@ -366,7 +366,7 @@ Changing a variable and saving a new value will restart your site, if the change
 
 </br>
 
-### Prevent your Nightscout app from falling asleep
+## Prevent your Nightscout app from falling asleep
 
 ```{admonition} Use with caution
 :class: warning
@@ -388,7 +388,7 @@ You have completed a new Nightscout site creation. The following section provide
 
 </br>
 
-### Renaming your Nightscout site
+## Renaming your Nightscout site
 
 ```{warning}
 Starting June 14th 2023, site names will include an [application name identifier](https://devcenter.heroku.com/articles/custom-domains) after your app name.</br>

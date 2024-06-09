@@ -163,11 +163,12 @@ Having a copy of your variables is very important since some of them are vital t
 
 ### Method 1 - Spreadsheet
 
+Log into [Heroku](https://dashboard.heroku.com/apps), select your app.  
 Reveal your Heroku Nightscout app [Config Vars](/vendors/heroku/new_user.md#editing-config-vars-in-heroku) and copy all variables names and values in a spreadsheet.
 
 ### Method 2 - Export
 
-Log into Heroku, select your app.  
+Log into [Heroku](https://dashboard.heroku.com/apps), select your app.  
 Click on the top right `More` button and select `Run console`.
 
 <img src="/vendors/heroku/img/HerokuM01.png" width="300px" >

@@ -14,41 +14,29 @@ a) Select `Add new service` or `New service`.
 
 </br>
 
-b) Select `Build and deploy a Git repo`. Scroll down and put a name in `Service name` or click `Suggest random name`.
+b) Select `Deploy a Docker image`. Scroll down and put a name in `Service name` or click `Suggest random name`.
 
-<img src="/vendors/northflank/img/Northflank09.png" width="600px" /></br>
-
-</br>
-
-c) Select your `cgm-remote-monitor` and the `master` branch.
-
-<img src="/vendors/northflank/img/Northflank10.png" width="600px" /></br>
+<img src="/vendors/northflank/img/Northflank33.png" width="600px" /></br>
 
 </br>
 
-d) In `Buid options` select `Buildpack`.
+c) In `Deployment`, select `External image` and type `nightscout/cgm-remote-monitor:latest` in `Image path`.
 
-<img src="/vendors/northflank/img/Northflank11.png" width="600px" /></br>
-
-</br>
-
-Open `Advanced build settings` and select `heroku/builder-classic:22`.
-
-<img src="/vendors/northflank/img/Northflank11b.png" width="600px" /></br>
+<img src="/vendors/northflank/img/Northflank34.png" width="600px" /></br>
 
 </br>
 
-e) Expand `Variables` and click `Add variable`.
-
-```{tip}
-If you want to copy all variables from Heroku, follow [these instructions](#copy-all-variables-from-heroku) and then continue to **m)** below.
-```
+d) Expand `Variables` and click `Add variable`.
 
 <img src="/vendors/northflank/img/Northflank12.png" width="600px" /></br>
 
 </br>
 
-f) Setup your Nightscout core variables.
+e) Setup your Nightscout core variables.
+
+```{tip}
+If you want to copy all variables from Heroku, follow [these instructions](#copy-all-variables-from-heroku) and then continue to **l)** below.
+```
 
 `API_SECRET` will be your Nightscout site password, it needs to be at least 12 characters long and you should **NOT use spaces** if you use @ or ! symbols remember you will probably need to express them using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters) in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
 
@@ -66,7 +54,7 @@ Click `Add variable` each time to add another one.
 
 #### Dexcom Bridge
 
-g) If you use [Dexcom `bridge`](/troubleshoot/dexcom_bridge/) you need to configure these two variables with your Dexcom credentials:
+f) If you use [Dexcom `bridge`](/troubleshoot/dexcom_bridge/) you need to configure these two variables with your Dexcom credentials:
 
 <img src="/vendors/northflank/img/Northflank14.png" width="600px" /></br>
 
@@ -97,26 +85,26 @@ You need to have at least one follower to use Dexcom Share. See [here](/uploader
 
 </br>
 
-h) Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
+g) Select the units you’re using in `DISPLAY_UNITS` acceptable choices are `mg/dl` or `mmol/L` (or just `mmol`).
 
 <img src="/vendors/northflank/img/Northflank17.png" width="600px" /></br>
 
 </br>
 
-i) You can add alarms values. See [here](/nightscout/setup_variables.md#alarms) for the meaning of each one.
+h) You can add alarms values. See [here](/nightscout/setup_variables.md#alarms) for the meaning of each one.
 
 <img src="/vendors/northflank/img/Northflank18.png" width="600px" /></br>
 
 </br>
 
-j) If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the `API_SECRET`) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](auth_default_roles) variable in as `denied`.  
+i) If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the `API_SECRET`) is able to view the data, you should configure the [`AUTH_DEFAULT_ROLES`](auth_default_roles) variable in as `denied`.  
 If you want your site to be visible to anybody leave it as `readable`.
 
 <img src="/vendors/northflank/img/Northflank19.png" width="600px" /></br>
 
 </br>
 
-k) In [`ENABLE`](enable), copy and paste the following words (separated by a space) so that won't have to think about which you want now:
+j) In [`ENABLE`](enable), copy and paste the following words (separated by a space) so that won't have to think about which you want now:
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
 
@@ -128,17 +116,17 @@ k) In [`ENABLE`](enable), copy and paste the following words (separated by a spa
 
 </br>
 
-l) You can modify the variables values, check the [documentation](/nightscout/setup_variables) for the meaning of each one.
+k) You can modify the variables values, check the [documentation](/nightscout/setup_variables) for the meaning of each one.
 
 </br>
 
-m) You can modify the 3 to 8 letter code to your URL.
+l) You can modify the 3 to 8 letter code to your URL.
 
 <img src="/vendors/northflank/img/Northflank21.png" width="600px" /></br>
 
 </br>
 
-n) Scroll down and check you're using an `nf-compute-10` plan, then click: `Create Service`
+m) Scroll down and check you're using an `nf-compute-10` plan, then click: `Create Service`
 
 <img src="/vendors/northflank/img/Northflank22a.png" width="600px" /></br>
 
@@ -146,13 +134,13 @@ n) Scroll down and check you're using an `nf-compute-10` plan, then click: `Crea
 
 </br>
 
-o) If not done before, you now need to add a payment method.
+n) If not done before, you now need to add a payment method.
 
 <img src="/vendors/northflank/img/Northflank23.png" width="400px" /></br>
 
 </br>
 
-p) Wait until your build completes. You will see a green cloud when done, it will take less than 15 minutes.
+o) Wait until your build completes. You will see a green cloud when done, it will take less than 15 minutes.
 
 <img src="/vendors/northflank/img/Northflank24.png" width="400px" /></br>
 

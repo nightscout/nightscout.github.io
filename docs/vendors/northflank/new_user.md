@@ -19,10 +19,11 @@ You can create your new Northflank Nightscout site with a [MongoDB Atlas](/vendo
 * Nightscout fits in the free tier  
 * Easy to deploy or migrate an existing site from Heroku  
 * Simple to use and troubleshoot  
-* Can use a native Northflank MongoDB database ($)  
+* Can use a native Northflank MongoDB database
+* You can deploy up to $20/mo worth of free resources on Northflank’s managed cloud
 
 **Cons**:  
-* The Nightscout address generated for your site is impossible to remember
+* The Nightscout address generated for your site is virtually impossible to remember
 ```
 
 </br>
@@ -57,9 +58,11 @@ If you don't see `MONGODB_URI` but see `MONGO_CONNECTION` (**NOT** `MONGO_COLLEC
 
 ### Step 1: Create a GitHub account and fork the Nightscout project
 
-**Do you have a GitHub account?**
-
 ```{tab-set}
+
+:::{tab-item} This is not necessary anymore (with a Docker image)
+Continue with Step 2.
+:::
 
 :::{tab-item} I don't have a GitHub Account
 ### Create a GitHub account
@@ -76,6 +79,8 @@ If you don't see `MONGODB_URI` but see `MONGO_CONNECTION` (**NOT** `MONGO_COLLEC
 </br>
 
 ### Step 2: Create a Northflank account
+
+***If you already created your database in Northflank, skip to step 3.***
 
 a) Sign-up to [Northflank](https://app.northflank.com/signup) in a new browser tab. Login with GitHub (click on the logo).
 
@@ -131,7 +136,12 @@ g) Enter a project name (for example nightscout) and select a region (you can ma
 
 ```{tab-set}
 
-:::{tab-item} I want to create a brand new Nightscout
+:::{tab-item} I want to create a brand new Nightscout from a Docker image (recommended)
+:::{include} new_user_d.md
+:::
+
+
+:::{tab-item} I want to create a brand new Nightscout (old method)
 :::{include} new_user_a.md
 :::
 
@@ -224,3 +234,55 @@ Example:</br>
 Don't forget to `Update & restart` when you're done editing.
 
 </br>
+
+## Copy all variables from Heroku 
+
+</br>
+
+a) Export all your Heroku variables as explained [here](/troubleshoot/heroku.md/#method-2-export). In a file you can call `heroku.env`.
+
+If you're currently deploying a new Northflank Nightscout site, select `Env`.
+
+<img src="/vendors/northflank/img/Northflank36.png" width="600px" />
+
+Continue to **c)** below.
+
+</br>
+
+b) If you want to modify an existing Northflank site, 
+
+Open [Northflank](https://app.northflank.com/login) and login with your username or with GitHub.
+
+<img src="/vendors/northflank/img/Northflank30.png" width="400px" />
+
+</br>
+
+Select `Services ` then your Nightscout project.
+
+<img src="/vendors/northflank/img/Northflank31.png" width="600px" />
+
+</br>
+
+Select `Environment` then `Env`.
+
+<img src="/vendors/northflank/img/Northflank39.png" width="600px" />
+
+</br>
+
+c) Select `Import from file` then the file (`heroku.env`) you saved in **a)**.
+
+<img src="/vendors/northflank/img/Northflank37.png" width="600px" />
+
+Your variables should display like this:
+
+<img src="/vendors/northflank/img/Northflank38.png" width="600px" />
+
+</br>
+
+d) If you're creating a new site, return to the step you were following before importing all variables from Heroku.
+
+</br>
+
+e) If you were importing all variables from a running Northflank Nightscout site, select `Update & restart`.
+
+<img src="/vendors/northflank/img/Northflank40.png" width="600px" />

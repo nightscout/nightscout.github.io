@@ -2,6 +2,11 @@
 orphan: true
 ---
 
+```{warning}
+**If you already have a Northflank database, you cannot use this wizard.**
+[Create a new Northflank Nightscout site](/vendors/northflank/new_user.md#step-3-deploy-nightscout-in-northflank) with only `MONGODB_URI` and `API_SECRET` then [manually copy your Heroku variables](/vendors/northflank/new_usermd/#copy-all-variables-from-heroku).
+```
+
 a) Go to your `Account` `Dashboard` - `Settings` and scroll down to `Import`.  
 Select Heroku.
 
@@ -49,7 +54,7 @@ g)  Verify the branch you want to migrate, usually it's `master` unless you know
 
 </br></br>
 
-h)  **Optional** if your Heroku wasn't on stack 22 select  `heroku/builder-classic:22` unless you know why you want to use another one.
+h)  Select  `heroku/builder-classic:22`.
 
 <img src="/vendors/northflank/img/NorthflankM08.png" width="600px" />
 

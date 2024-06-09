@@ -19,9 +19,10 @@ Northflank offers a Mongo database.
 * Simple to create  
 * Economic reliable database
 * High quality Mongo database with a replica set
+* You can deploy up to $20/mo worth of free resources on Northflank’s managed cloud
 
 **Cons**:  
-* Billing starts at 0.3$ plus 0.3$ per additional GiB (it can take years to reach 1GiB for Nightscout)
+* Heroku Nightscout might crash with database timeouts
 ```
 
 </br>
@@ -125,9 +126,14 @@ d) Select `MongoDB` and type a name for your addon (not important) in `Addon nam
 
 </br>
 
-e) The database add-on configuration displays, scroll down.
+e) Select a Mongo version if you want.
 
-*Note: if you know what you're doing, all Mongo versions are supported by Nightscout: you can select the one you prefer.*
+All Mongo versions are supported by Nightscout: you can select the one you prefer.  
+Since recent versions don't add value, you can safely select an older version like 5.0.24.
+
+<img src="/vendors/northflank/img/NorthflankDB10.png" width="600px" />
+
+</br>
 
 **Important:** If you will use this database with a Nightscout that is not in Northflank, you must enable `Publicly accessible`.  
 If you will deploy Nightscout in Northflank, you can leave it disabled.
