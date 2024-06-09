@@ -70,6 +70,10 @@ If you don't see `MONGODB_URI` but see `MONGO_CONNECTION` (**NOT** `MONGO_COLLEC
 
 ```{tab-set}
 
+:::{tab-item} This is not necessary anymore (with a Docker image)
+Continue with Step 2.
+:::
+
 :::{tab-item} I don't have a GitHub Account
 ::{admonition} Railway.app new security requirement
 :class: warning
@@ -90,7 +94,7 @@ Your GitHub account needs to have been created months ago.</br></br>
 
 ### Step 2: Create a Railway account
 
-If you already have a Railway account, make sure you have a developper plan: go to **step g)**.
+If you already have a Railway account, make sure you have a Hobby plan: go to **step g)**.
 
 </br>
 
@@ -126,9 +130,8 @@ e) Scroll down and click `I will not deploy any of that`.
 
 </br>
 
-```{danger}
-The free plan will be removed Jul 3rd for new users and Aug 1st for existing users.</br>
-Documentation will be updated.
+```{warning}
+The free plan has been removed Jul 3rd for new users and Aug 1st for existing users.
 ```
 
 </br>
@@ -140,7 +143,7 @@ If it still shows 200 hours, refresh your browser page.
 
 </br>
 
-g) You need to use Nightscout for more than one month: upgrade your account to a Hobby plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
+g) Upgrade your account to a Hobby plan. Click on the `Starter Plan` information and select `Remove Resource Limits`.
 
 <img src="/vendors/railway/img/Railway06b.png" width="300px" />
 
@@ -152,6 +155,8 @@ Enter your credit card information and select `Subscribe to a Hobby Plan`.
 
 Your card will be billed 1$ that will be refund immediately. Bank fees won't be refund.
 
+You will be billed 5$ per month.
+
 </br>
 
 ### Step 3 - Deploy Nightscout in Railway
@@ -159,6 +164,10 @@ Your card will be billed 1$ that will be refund immediately. Bank fees won't be 
 Select below how you want to do this:
 
 ```{tab-set}
+
+:::{tab-item} Deploy with Docker (recommended)
+:::{include} new_user_d.md
+:::
 
 :::{tab-item} Using the Railway button
 :::{include} new_user_b.md
@@ -184,14 +193,6 @@ Click the site name to open Nightscout.
 
 </br>
 
-```{admonition} Recommended
-:class: hint
-You should [change your Railway site name](#change-your-nightscout-site-name) now in order to make it easier to remember.
-You can also do this later, **before setting your uploaders**.
-```
-
-</br>
-
 ```{include} /nightscout/first_setup.md
 
 ```
@@ -210,7 +211,7 @@ You can change the site name but need to keep the `.up.railway.app` domain.
 
 2. Go in `Settings`
 
-3. In `Domains` go to the end of line and click the edit icon
+3. In `Domains` (or `Networking` with Docker) go to the end of line and click the edit icon
 
 4. Write your new name and check it's available
 

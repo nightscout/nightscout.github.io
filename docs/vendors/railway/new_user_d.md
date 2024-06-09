@@ -12,34 +12,37 @@ If you don't see that, top right, click `+ New Project`.
 
 </br>
 
-b) Select `Deploy from GitHub repo`.
+b) Select `Empty project`.
 
-<img src="/vendors/railway/img/RailwayM19.png" width="400px" /></br>
-
-</br>
-
-c) Select `Configure GitHub App`.
-
-<img src="/vendors/railway/img/RailwayM02.png" width="400px" /></br>
+<img src="/vendors/railway/img/RailwayD01.png" width="400px" /></br>
 
 </br>
 
-d) Choose `Only select repositories`, in the `Select repositories` drop-down select your own fork of `cgm-remote-monitor`.  
-Then, at the bottom, click `Install & Authorize`.
+c) Select `Add a Service`.
 
-<img src="/vendors/railway/img/Railway08.png" width="400px" /></br>
-
-</br>
-
-e) You should be back to `Deploy from GitHub repo`, select it.
-
-<img src="/vendors/railway/img/RailwayM19.png" width="400px" /></br>
+<img src="/vendors/railway/img/RailwayD02.png" width="300px" /></br>
 
 </br>
 
-f) Now you can select your own GitHub repository.
+d) Select `Docker Image`. 
 
-<img src="/vendors/railway/img/RailwayM03.png" width="400px" /></br>
+<img src="/vendors/railway/img/RailwayD03.png" width="400px" /></br>
+
+</br>
+
+e) In the field `Name of the Image` type:
+
+`nightscout/cgm-remote-monitor:latest`
+
+and press \<Enter\>
+
+<img src="/vendors/railway/img/RailwayD04.png" width="400px" /></br>
+
+</br>
+
+f) Select your new service.
+
+<img src="/vendors/railway/img/RailwayD05.png" width="300px" /></br>
 
 </br>
 
@@ -49,7 +52,7 @@ g) Select `Add variables`.
 
 </br>
 
-h) The Nightscout project will deploy in the background, just ignore it: now we need to setup our Nightscout variables.  
+h) Now we need to setup our Nightscout variables.  
 Click on `Raw Editor`.
 
 <img src="/vendors/railway/img/RailwayM21b.png" width="700px" /></br>
@@ -399,14 +402,22 @@ j)  Return to the Railway Raw editor. Paste the result. Click `Update Variables`
 
 <img src="/vendors/railway/img/Railway43.png" width="500px" /></br>
 
-Your site will redeploy, wait until redeploy completes.
+</br>
+
+k) On the top left of the screen `Deploy`.
+
+<img src="/vendors/railway/img/RailwayD06.png" width="800px" /></br>
 
 </br>
 
-```{admonition} Recommended
-:class: hint
-You should [change your Railway site name](#change-your-nightscout-site-name) now in order to make it easier to remember.
-You can also do this later, **before setting your uploaders**.
-```
+l) Select the `Settings` tab and click `Generate domain`.
+
+<img src="/vendors/railway/img/RailwayD07.png" width="600px" /></br>
+
+</br>
+
+m) Edit your Nightscout site name and put yours (one that is not already used).
+
+<img src="/vendors/railway/img/RailwayD08.png" width="500px" /></br>
 
 </br>

@@ -170,3 +170,13 @@ You should be able to select your GitHub `cgm-remote-monitor` repository.
 Your Railway app will now automatically deploy.
 
 </br>
+
+</br>
+
+```{admonition} Recommended
+:class: hint
+You should [change your Railway site name](#change-your-nightscout-site-name) now in order to make it easier to remember.
+You can also do this later, **before setting your uploaders**.
+```
+
+</br>
