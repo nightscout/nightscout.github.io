@@ -14,9 +14,15 @@ If you use Heroku and you want to return to the previous version, see [Roll back
 
 </br>
 
-**Azure with Docker** (not using GitHub) use [this method](/update/dev_branch).
+### **Docker**
+
+You deployed a Docker container: you're not using GitHub) Azure, Northflank use [this method](/update/dev_branch).
 
 </br>
+
+### GitHub
+
+You forked Nightscout in your own GitHub account and used it to deploy.
 
 **Experienced users only - not recommended**
 

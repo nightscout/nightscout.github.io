@@ -4,45 +4,43 @@ If you need to return to the previous Nightscout version, or in rare occasions, 
 
 Do not deploy `dev` or a branch other than `master` unless directed to do so (except if you know why you are doing so).
 
-AAPS users: mind the [compatibility matrix](../nightscout/close_loop.md#aaps)!
-
 ## Step 1: Update your repository in GitHub
 
-- Skip this step if you're using Azure.
-- Click here to log in at GitHub: [https://github.com/login](https://github.com/login).
-- Enter your username or email and your password. Click `Sign in`
+Select your platform below:
 
-<img src="/vendors/github/img/UpdateNS00.png" width="400px" >
+````{tab-set}
 
+:::{tab-item} Select your platform ->
 </br>
+:::
 
-- Select your own `cgm-remote-monitor` project (**not `nightscout/cgm-remote-monitor`**)
+:::{tab-item} Heroku, Railway, Northflank (GitHub)
+</br>- Click here to log in at GitHub: [https://github.com/login](https://github.com/login).</br></br>
+- Enter your username or email and your password. Click `Sign in`</br></br>
+<img src="/vendors/github/img/UpdateNS00.png" width="400px" ></br></br>
+- Select your own `cgm-remote-monitor` project (**not `nightscout/cgm-remote-monitor`**)</br></br>
+<img src="/vendors/github/img/UpdateNS01.png" width="400px" ></br></br>
+- Your repository will open. </br></br>
+<img src="/vendors/github/img/Dev00.png" width="400px" ></br></br>
+- In the branch drop down menu (normally showing `master`) select  `dev`</br></br>
+<img src="/vendors/github/img/Dev01.png" width="300px" ></br></br>
+- Click`Fetch upstream` to update it, then  `Fetch and merge`</br></br>
+<img src="/vendors/github/img/Dev03.png" width="800px" ></br></br>
+- After a moment, your repository should display `This branch is up to date with nightscout:dev`</br></br>
+<img src="/vendors/github/img/Dev04.png" width="500px" ></br></br>
+- If you ran into trouble, try to [Redeploy](/update/redeploy.md) (and this is **mandatory** if you don't see `dev` in GitHub.)</br></br>
+:::
 
-<img src="/vendors/github/img/UpdateNS01.png" width="400px" >
+:::{tab-item} Google Cloud, Azure, Northflank (Docker)
+</br>You don't need to update your GitHub repository.</br></br>
+:::
 
-</br>
+:::{tab-item} Fly.io
+</br>You don't need to update your GitHub repository if you deployed from [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor).</br></br>
+:::
 
-- Your repository will open. 
 
-<img src="/vendors/github/img/Dev00.png" width="400px" >
-
-- In the branch drop down menu (normally showing `master`) select  `dev`
-
-<img src="/vendors/github/img/Dev01.png" width="300px" >
-
-</br>
-
-- Click`Fetch upstream` to update it, then  `Fetch and merge`
-
-<img src="/vendors/github/img/Dev03.png" width="800px" >
-
-</br>
-
-- After a moment, your repository should display `This branch is up to date with nightscout:dev`
-
-<img src="/vendors/github/img/Dev04.png" width="500px" >
-
-- If you ran into trouble, try to [Redeploy](/update/redeploy.md) (and this is **mandatory** if you don't see `dev` in GitHub.)
+````
 
 </br>
 
@@ -97,7 +95,20 @@ Select your platform below:
 - Once `dev` selected Railway will deploy automatically.</br>
 :::
 
-:::{tab-item} Northflank
+:::{tab-item} Northflank (Docker)
+- Log into Northflank: [https://app.northflank.com/login](https://app.northflank.com/login)</br>
+- Select your Nightscout project</br></br>
+<img src="/vendors/northflank/img/Dev14.png" width="600px" /></br></br>
+- Select your Nightscout service</br></br>
+<img src="/vendors/northflank/img/Dev15.png" width="500px" /></br></br>
+- In Overview, Edit deployment</br></br>
+<img src="/vendors/northflank/img/Dev18.png" width="800px" /></br></br>
+- In the image path, replace `nightscout/cgm-remote-monitor:latest` with the [version](https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags) you want to deploy (for example `nightscout/cgm-remote-monitor:latest_dev`), then click `Update & rollout restart`</br></br>
+<img src="/vendors/northflank/img/Dev19.png" width="600px" /></br></br>
+- Your site will redeploy with the selected branch</br>
+:::
+
+:::{tab-item} Northflank (GitHub)
 - Log into Northflank: [https://app.northflank.com/login](https://app.northflank.com/login)</br>
 - Select your Nightscout project</br></br>
 <img src="/vendors/northflank/img/Dev14.png" width="600px" /></br></br>

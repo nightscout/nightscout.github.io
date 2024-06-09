@@ -12,11 +12,41 @@ You don't need to follow these instructions if you use a hosted service.</br>Con
 
 ## Step 1: Update your repository in GitHub
 
-```{tip}
-Skip this step if you're using Azure, Google Cloud xDrip+ scripted deployment or Fly.io from the orignal `cgm-remote-monitor` repository.
-```
+Select your current platform below:
 
-Follow [these instructions](/vendors/github/update/) and come back.
+````{tab-set}
+
+:::{tab-item} Select your platform ->
+</br>
+:::
+
+:::{tab-item} Heroku, Railway, Northflank (GitHub)
+</br>- Click here to log in at GitHub: [https://github.com/login](https://github.com/login).</br></br>
+- Enter your username or email and your password. Click `Sign in`</br></br>
+<img src="/vendors/github/img/UpdateNS00.png" width="400px" ></br></br>
+- Select your own `cgm-remote-monitor` project (**not `nightscout/cgm-remote-monitor`**)</br></br>
+<img src="/vendors/github/img/UpdateNS01.png" width="400px" ></br></br>
+- Your repository will open. </br></br>
+<img src="/vendors/github/img/Dev00.png" width="400px" ></br></br>
+- In the branch drop down menu (normally showing `master`) select  `dev`</br></br>
+<img src="/vendors/github/img/Dev01.png" width="300px" ></br></br>
+- Click`Fetch upstream` to update it, then  `Fetch and merge`</br></br>
+<img src="/vendors/github/img/Dev03.png" width="800px" ></br></br>
+- After a moment, your repository should display `This branch is up to date with nightscout:latest`</br></br>
+<img src="/vendors/github/img/Dev04.png" width="500px" ></br></br>
+- If you ran into trouble, try to [Redeploy](/update/redeploy.md)</br></br>
+:::
+
+:::{tab-item} Google Cloud, Azure, Northflank (Docker)
+</br>You don't need to update your GitHub repository.</br></br>
+:::
+
+:::{tab-item} Fly.io
+</br>You don't need to update your GitHub repository if you deployed from [https://github.com/nightscout/cgm-remote-monitor](https://github.com/nightscout/cgm-remote-monitor).</br></br>
+:::
+
+
+````
 
 </br>
 
@@ -119,8 +149,21 @@ Visit your newly deployed app at https://example-ns.fly.dev/
 </br>
 :::
 
-:::{tab-item} Railway Northflank Render
+:::{tab-item} Railway Northflank Render (GitHub)
 </br>Once GitHub updated, your Nightscout should automatically deploy with the latest version.</br></br>
+:::
+
+:::{tab-item} Northflank (Docker)
+</br>- Log into Northflank: [https://app.northflank.com/login](https://app.northflank.com/login)</br>
+- Select your Nightscout project</br></br>
+<img src="/vendors/northflank/img/Dev14.png" width="600px" /></br></br>
+- Select your Nightscout service</br></br>
+<img src="/vendors/northflank/img/Dev15.png" width="500px" /></br></br>
+- In Overview, Edit deployment</br></br>
+<img src="/vendors/northflank/img/Dev18.png" width="800px" /></br></br>
+- In the image path, check the image is `nightscout/cgm-remote-monitor:latest` (modify if necessary), then click `Update & rollout restart`</br></br>
+<img src="/vendors/northflank/img/Dev19.png" width="600px" /></br></br>
+- Your site will redeploy with the latest version.</br></br></br>
 :::
 
 :::{tab-item} Google Cloud
