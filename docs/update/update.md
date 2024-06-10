@@ -37,7 +37,7 @@ Select your current platform below:
 - If you ran into trouble, try to [Redeploy](/update/redeploy.md)</br></br>
 :::
 
-:::{tab-item} Google Cloud, Azure, Northflank (Docker)
+:::{tab-item} Google Cloud, Docker (Azure, Northflank, Railway)
 </br>You don't need to update your GitHub repository.</br></br>
 :::
 
@@ -164,6 +164,24 @@ Visit your newly deployed app at https://example-ns.fly.dev/
 - In the image path, check the image is `nightscout/cgm-remote-monitor:latest` (modify if necessary), then click `Update & rollout restart`</br></br>
 <img src="/vendors/northflank/img/Dev19.png" width="600px" /></br></br>
 - Your site will redeploy with the latest version.</br></br></br>
+:::
+
+:::{tab-item} Railway (Docker)
+</br>a) Open [Railway](https://railway.app) and click `login`. Login with GitHub.</br></br>
+<img src="/vendors/railway/img/Railway00.png" width="600px" /></br></br>
+<img src="/vendors/railway/img/Railway01.png" width="300px" /></br></br>
+b) Select your Nightscout project.</br></br>
+<img src="/vendors/railway/img/RailwayM15.png" width="500px" /></br></br>
+c) Select your Docker service.</br></br>
+<img src="/vendors/railway/img/RailwayD05.png" width="300px" /></br></br>
+d) Click on `Settings`, disconnect the source image.</br></br>
+<img src="/vendors/railway/img/RailwayD09.png" width="500px" /></br></br>
+e) Select `Connect image` and type `nightscout/cgm-remote-monitor:latest` then press enter.</br></br>
+<img src="/vendors/railway/img/RailwayD10.png" width="500px" /></br></br>
+<img src="/vendors/railway/img/RailwayD04.png" width="500px" /></br></br>
+f) Go to the `Deployment` tab and from the three dots menu of the top deployment select `Redeploy`.</br></br>
+<img src="/vendors/railway/img/RailwayD11.png" width="800px" /></br></br>
+- Your site will redeploy with the latest version.</br></br>
 :::
 
 :::{tab-item} Google Cloud

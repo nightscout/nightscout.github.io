@@ -31,7 +31,7 @@ Select your platform below:
 - If you ran into trouble, try to [Redeploy](/update/redeploy.md) (and this is **mandatory** if you don't see `dev` in GitHub.)</br></br>
 :::
 
-:::{tab-item} Google Cloud, Azure, Northflank (Docker)
+:::{tab-item} Google Cloud, Docker (Azure, Northflank, Railway)
 </br>You don't need to update your GitHub repository.</br></br>
 :::
 
@@ -79,7 +79,7 @@ Select your platform below:
 <img src="/vendors/heroku/img/UpdateNS25.png" width="800px" ></br></br>
 :::
 
-:::{tab-item} Railway
+:::{tab-item} Railway (GitHub)
 - Open [Railway](https://railway.app) and click `login`. Login with GitHub.</br></br>
 <img src="/vendors/railway/img/Railway00.png" width="600px" /></br></br>
 <img src="/vendors/railway/img/Railway01.png" width="300px" /></br></br>
@@ -93,6 +93,24 @@ Select your platform below:
 - If you only see `master` in the list you need to [redeploy](/update/redeploy.md) **taking care to select all branches and not only `master`**.</br> 
   <img src="/vendors/github/img/Dev06.png" width="500px" /></br></br>
 - Once `dev` selected Railway will deploy automatically.</br>
+:::
+
+:::{tab-item} Railway (Docker)
+</br>a) Open [Railway](https://railway.app) and click `login`. Login with GitHub.</br></br>
+<img src="/vendors/railway/img/Railway00.png" width="600px" /></br></br>
+<img src="/vendors/railway/img/Railway01.png" width="300px" /></br></br>
+b) Select your Nightscout project.</br></br>
+<img src="/vendors/railway/img/RailwayM15.png" width="500px" /></br></br>
+c) Select your Docker service.</br></br>
+<img src="/vendors/railway/img/RailwayD05.png" width="300px" /></br></br>
+d) Click on `Settings`, disconnect the source image.</br></br>
+<img src="/vendors/railway/img/RailwayD09.png" width="500px" /></br></br>
+e) Select `Connect image` and replace `nightscout/cgm-remote-monitor:latest` with the [version](https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags) you want to deploy (for example `nightscout/cgm-remote-monitor:latest_dev`).</br></br>
+<img src="/vendors/railway/img/RailwayD10.png" width="500px" /></br></br>
+<img src="/vendors/railway/img/RailwayD04.png" width="500px" /></br></br>
+f) On the top left of the screen `Deploy`.</br></br>
+<img src="/vendors/railway/img/RailwayD06.png" width="800px" /></br></br>
+- Your site will redeploy with the latest version.</br></br>
 :::
 
 :::{tab-item} Northflank (Docker)
