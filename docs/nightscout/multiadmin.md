@@ -2,13 +2,13 @@
 
 </br>
 
-Either by necessity or to support others, you might want to have access to multiple accounts without having to juggle between logins and passwords. Below are described some centralizing methods reducing the administrative burden.
+You might need to have access to multiple accounts without having to juggle between logins and passwords. Below are described some centralizing methods reducing the administrative burden.
 
 </br>
 
 ## Remote support and security
 
-Giving username and passwords to someone in order to obtain help to fix Nightscout issues raises serious security issues. Malicious code can be added to your Nightscout project by ill-intentioned people. Always make sure the version deployed is a fork of the official project. After receiving help, good practice is to change your passwords and your API secret.
+Giving username and passwords to someone in order to obtain help to fix Nightscout raises serious security issues. Malicious code can be added to your Nightscout project by ill-intentioned people. Always make sure the version deployed is a fork of the official project. After receiving help, good practice is to change your passwords (if shared) and your API secret.
 
 When possible prefer inviting collaborators (see below) and remove them once the issue is fixed.
 
@@ -57,13 +57,15 @@ You don't need to do anything as all your web apps will upgrade automatically wh
 
 ## Heroku
 
-You can setup multiple Nightscout sites per Heroku account. You be charged the Eco/Basic plan fee for each app.
+You can setup multiple Nightscout sites per Heroku account. You be charged the Eco/Basic plan fee for **each app**.
 
-You can setup collaborators in Heroku to avoid having to switch accounts. First decide on which will be your main Heroku account. Then add the email address you used to register as collaborator to the other(s) one(s).
+You can setup collaborators in Heroku. This is very useful for remote support.
 
 </br>
 
-- Log into your other Heroku account and select your app.  
+### Invite someone as a collaborator
+
+- Log into your Heroku account and select your app.  
 
 <img src="/vendors/heroku/img/MultiNS00.png" width="800px" >
 
@@ -75,19 +77,23 @@ You can setup collaborators in Heroku to avoid having to switch accounts. First 
 
 </br>
 
-- Click `Add collaborator` and enter the email address you used to create your main Heroku account.
+- Click `Add collaborator` and enter the email address of the person supporting you (that is the email address he used to setup his own Heroku account).
 
 <img src="/vendors/heroku/img/MultiNS02.png" width="800px" >
 
 </br>
 
-- You will now see it as a collaborator. Using the pen icon you can modify it or delete it.
+- You will now see it as a collaborator. Using the pen icon you can modify it or delete it (useful when asking for support, once everything is working).
 
 <img src="/vendors/heroku/img/MultiNS03.png" width="800px" >
 
 </br>
 
-- Log in your main Heroku account. You will see the apps you are collaborating to in the same list than your primary app. You can now perform most tasks directly in that one Heroku account (deploys, change variables, ...).
+### Being a collaborator
+
+*Note: you will receive an email with the invitation.*
+
+- Log in your Heroku account. You will see the apps you are collaborating to in the same list than your primary app. You can now perform most tasks directly in that one Heroku account (deploys, change variables, ...).
 
 <img src="/vendors/heroku/img/MultiNS07.png" width="800px" >
 
@@ -95,9 +101,11 @@ You can setup collaborators in Heroku to avoid having to switch accounts. First 
 
 ## Atlas
 
-You can invite another user in your organization in order to manage several organizations from the same Atlas account.
+You can invite another user in your organization in order to manage several organizations from the same Atlas account. This is very useful for remote support.
 
-[Log into](https://account.mongodb.com/account/login) your **secondary** Atlas account: that is the other account you want to administer from your first (main) Atlas account.
+### Invite another user
+
+[Log into](https://account.mongodb.com/account/login) your Atlas account.
 
 </br>
 
@@ -113,7 +121,7 @@ You can invite another user in your organization in order to manage several orga
 
 </br>
 
-- Enter the email address you used to create your **main** Atlas account.
+- Enter the email address of the person supporting you (that is the email address he used to setup his own Atlas account).
 
 <img src="/vendors/mongodb/img/MultiNS10.png" width="600px" >
 
@@ -122,14 +130,18 @@ You can invite another user in your organization in order to manage several orga
 - Select `Organization Owner` then click `Invite to Organization`.
 
 ```{warning}
-Make sure you enable `Organization Owner` for the invited user!
+**Make sure you enable `Organization Owner` for the invited user!**
 ```
 
 <img src="/vendors/mongodb/img/MultiNS11.png" width="600px" >
 
 </br>
 
-- Log out of your **secondary** Atlas account and log in your **main** Atlas account.
+### Being invited
+
+*Note: you will receive an email with the invitation.*
+
+- Log  in your own Atlas account.
 
 - Top left, from the drop down menu click the caret and select `View all Organizations`
 
@@ -137,13 +149,13 @@ Make sure you enable `Organization Owner` for the invited user!
 
 </br>
 
-- In the left menu, click `Invitations` then click `ACCEPT` the invitation you performed from your **secondary** Atlas account.
+- In the left menu, click `Invitations` then click `ACCEPT` the invitation.
 
 <img src="/vendors/mongodb/img/MultiNS13.png" width="800px" >
 
 </br>
 
-- Going back to all your organizations you can now see and administer both of them from this account. In the example below `Nightscout` is the **main** organization and `My Org 2020-09-20` is a **secondary** organization.
+- Going back to all your organizations you can now see and administer both of them from this account. In the example below `Nightscout` is your own organization and `My Org 2020-09-20` is a guest organization.
 
 <img src="/vendors/mongodb/img/MultiNS14.png" width="800px" >
 
@@ -155,5 +167,65 @@ You can rename your organizations from the top left cog (Settings) then clicking
 
 <img src="/vendors/mongodb/img/MultiNS15.png" width="600px" >
 
+</br>
 
+## Northflank
 
+You can setup two Nightscout sites per Northflank account. The 20$ per month credit applies.
+
+You can setup teammates in Northflank.
+
+</br>
+
+### Invite a teammate
+
+- Log into your Northflank account and select `Overview`, in `Members` click **`+`** to add a teammate.  
+
+<img src="/vendors/northflank/img/NorthflankS1.png" width="600px" >
+
+</br>
+
+- Enter the email address of the person supporting you (that is the email address he used to setup his own Northflank account). Add `Admin` privileges if you want him to interact with your data, leave `Default` for an observer.
+
+<img src="/vendors/northflank/img/NorthflankS2.png" width="400px" >
+
+</br>
+
+- You can manage teammates in `Members`: change privileges and delete them, or revoke invitations.
+
+</br>
+
+### Being invited
+
+You will receive an email with the invitation.
+
+You will see the invitee project with yours.
+
+</br>
+
+## Railway
+
+- Open your Railway [dashboard](https://railway.app/dashboard) and select your project.
+
+<img src="/vendors/railway/img/RailwayM15.png" width="400px" >
+
+</br>
+
+- Top right select `Settings` and `Members`.
+- Enter the email address of the person supporting you (that is the email address he used to setup his own Railway account). Select `Can Edit` privileges if you want him to interact with your data, leave `Can View` for an observer.
+
+<img src="/vendors/railway/img/RailwayS1.png" width="800px" >
+
+- Confirm the invite with `Invite to project`.
+
+<img src="/vendors/railway/img/RailwayS2.png" width="400px" >
+
+</br>
+
+### Being invited
+
+You will receive an email with the invitation.
+
+You will see the invitee project with yours.
+
+</br>
