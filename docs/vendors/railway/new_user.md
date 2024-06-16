@@ -29,7 +29,6 @@ You can easily create a new Railway Nightscout site with a [MongoDB Atlas](/vend
 * Can use a native Railway MongoDB database ($)  
 
 **Cons**:
-* Your GitHub account must have been created more than 3 months ago
 * The railway.app domain is blocked for safety by some companies  
 * Railway network model causes issues with some follower app and devices 
 ```
