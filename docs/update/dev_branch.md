@@ -31,7 +31,7 @@ Select your platform below:
 - If you ran into trouble, try to [Redeploy](/update/redeploy.md) (and this is **mandatory** if you don't see `dev` in GitHub.)</br></br>
 :::
 
-:::{tab-item} Google Cloud, Docker (Azure, Northflank, Railway)
+:::{tab-item} Google Cloud, Docker (Azure, Northflank, Railway, Render)
 </br>You don't need to update your GitHub repository.</br></br>
 :::
 
@@ -52,6 +52,10 @@ Select your platform below:
 
 :::{tab-item} Select your platform ->
 </br>
+:::
+
+:::{tab-item} Google Cloud
+[Here](https://navid200.github.io/xDrip/docs/Nightscout/Customize.html)</br>
 :::
 
 :::{tab-item} Heroku
@@ -113,19 +117,6 @@ f) On the top left of the screen `Deploy`.</br></br>
 - Your site will redeploy with the latest version.</br></br>
 :::
 
-:::{tab-item} Northflank (Docker)
-- Log into Northflank: [https://app.northflank.com/login](https://app.northflank.com/login)</br>
-- Select your Nightscout project</br></br>
-<img src="/vendors/northflank/img/Dev14.png" width="600px" /></br></br>
-- Select your Nightscout service</br></br>
-<img src="/vendors/northflank/img/Dev15.png" width="500px" /></br></br>
-- In Overview, Edit deployment</br></br>
-<img src="/vendors/northflank/img/Dev18.png" width="800px" /></br></br>
-- In the image path, replace `nightscout/cgm-remote-monitor:latest` with the [version](https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags) you want to deploy (for example `nightscout/cgm-remote-monitor:latest_dev`), then click `Update & rollout restart`</br></br>
-<img src="/vendors/northflank/img/Dev19.png" width="600px" /></br></br>
-- Your site will redeploy with the selected branch</br>
-:::
-
 :::{tab-item} Northflank (GitHub)
 - Log into Northflank: [https://app.northflank.com/login](https://app.northflank.com/login)</br>
 - Select your Nightscout project</br></br>
@@ -136,6 +127,19 @@ f) On the top left of the screen `Deploy`.</br></br>
 <img src="/vendors/northflank/img/Dev16.png" width="600px" /></br></br>
 - In the branch list, select the version you want to deploy, then click `Update Build Source`</br></br>
 <img src="/vendors/northflank/img/Dev17.png" width="800px" /></br></br>
+- Your site will redeploy with the selected branch</br>
+:::
+
+:::{tab-item} Northflank (Docker)
+- Log into Northflank: [https://app.northflank.com/login](https://app.northflank.com/login)</br>
+- Select your Nightscout project</br></br>
+<img src="/vendors/northflank/img/Dev14.png" width="600px" /></br></br>
+- Select your Nightscout service</br></br>
+<img src="/vendors/northflank/img/Dev15.png" width="500px" /></br></br>
+- In Overview, Edit deployment</br></br>
+<img src="/vendors/northflank/img/Dev18.png" width="800px" /></br></br>
+- In the image path, replace `nightscout/cgm-remote-monitor:latest` with the [version](https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags) you want to deploy (for example `nightscout/cgm-remote-monitor:latest_dev`), then click `Update & rollout restart`</br></br>
+<img src="/vendors/northflank/img/Dev19.png" width="600px" /></br></br>
 - Your site will redeploy with the selected branch</br>
 :::
 
@@ -153,10 +157,6 @@ Or whichever version (change `filter tag` find the version) in the [list](https:
 - Click Save (or Discard if you don't want to save).</br>
   Your site will redeploy if you changed the configuration. Expect a few minutes before it comes back online.</br></br>
 <img src="/vendors/azure/img/Dev13.png" width="400px" /></br></br>
-:::
-
-:::{tab-item} Google Cloud
-[Here](https://navid200.github.io/xDrip/docs/Nightscout/Customize.html)</br>
 :::
 
 :::{tab-item} Fly.io
@@ -207,6 +207,20 @@ Visit your newly deployed app at https://example-ns.fly.dev/
 </br>
 :::
 
+:::{tab-item} Render (Docker)
+- Log into Render: [https://dashboard.render.com/](https://dashboard.render.com/)</br>
+- Select your Nightscout project</br></br>
+<img src="/vendors/render/img/Render16.png" width="400px" /></br></br>
+- Go to `Settings` and scroll down to `Deploy`. Edit the URL of the image deployed</br></br>
+<img src="/vendors/render/img/RenderD10.png" width="600px" /></br></br>
+- Change it to:</br></br>
+`nightscout/cgm-remote-monitor:latest_dev`	(example for dev)</br>
+Or whichever version (change `filter tag` find the version) in the [list](https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags).</br>
+`nightscout/cgm-remote-monitor:14.2.6`	(example for 14.2.6)</br></br>
+<img src="/vendors/render/img/RenderD11.png" width="600px" /></br></br>
+- Click `Save changes`.</br></br>
+- Your site will redeploy with the selected branch</br>
+:::
 
 ````
 

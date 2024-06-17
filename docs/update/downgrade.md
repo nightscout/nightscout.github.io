@@ -16,7 +16,7 @@ If you use Heroku and you want to return to the previous version, see [Roll back
 
 ### **Docker**
 
-You deployed a Docker container: you're not using GitHub (Azure, Northflank, Railway) use [this method](/update/dev_branch).
+You deployed a Docker container: you're not using GitHub (Azure, Northflank, Railway, Render) use [this method](/update/dev_branch).
 
 </br>
 

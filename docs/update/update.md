@@ -37,7 +37,7 @@ Select your current platform below:
 - If you ran into trouble, try to [Redeploy](/update/redeploy.md)</br></br>
 :::
 
-:::{tab-item} Google Cloud, Docker (Azure, Northflank, Railway)
+:::{tab-item} Google Cloud, Docker (Azure, Northflank, Railway, Render)
 </br>You don't need to update your GitHub repository.</br></br>
 :::
 
@@ -56,6 +56,10 @@ Select your current platform below:
 
 :::{tab-item} Select your platform ->
 </br>
+:::
+
+:::{tab-item} Google Cloud
+</br>Continue [here](https://navid200.github.io/xDrip/docs/Nightscout/update_nightscout.html)</br></br>
 :::
 
 :::{tab-item} Heroku
@@ -184,8 +188,13 @@ f) Go to the `Deployment` tab and from the three dots menu of the top deployment
 - Your site will redeploy with the latest version.</br></br>
 :::
 
-:::{tab-item} Google Cloud
-</br>Continue [here](https://navid200.github.io/xDrip/docs/Nightscout/update_nightscout.html)</br></br>
+:::{tab-item} Render (Docker)
+- Log into Render: [https://dashboard.render.com/](https://dashboard.render.com/)</br>
+- Select your Nightscout project</br></br>
+<img src="/vendors/render/img/Render16.png" width="400px" /></br></br>
+- Go to `Settings` and top right expand `Manual Deploy`, Select `Deploy latest reference`</br></br>
+<img src="/vendors/render/img/RenderD12.png" width="600px" /></br></br>
+- Your site will redeploy with the updated Nightscout version</br>
 :::
 
 ````
