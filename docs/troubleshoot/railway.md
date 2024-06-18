@@ -174,3 +174,71 @@ There is no data inside this database. When you pull down the `Database tab`, th
 <img src="/vendors/railway/img/RailwayT11.png" width="600px" />
 
 </br>
+
+## Backup your site variables
+
+Having a copy of your variables is very important since some of them are vital to your site like MONGODB_URI and your access to it like API_SECRET.
+
+a) Open your [Railway](https://railway.app/dashboard) dashboard and select your Nightscout project.
+
+<img src="/vendors/railway/img/RailwayM15.png" width="400px" />
+
+</br>
+
+c) Select your web app and click on `Variables`.
+
+<img src="/vendors/railway/img/RailwayM17.png" width="400px" />
+
+</br>
+
+e) Click on `RAW Editor` top right
+
+<img src="/vendors/railway/img/Railway39.png" width="600px" />
+
+</br>
+
+f) Click on `Copy env` bottom left and paste all into a text editor.
+
+<img src="/vendors/railway/img/Railway40.png" width="400px" />
+
+</br>
+
+```{warning}
+Save this file in a safe place.</br>Call it `railway.env` as it's your Railway environment variables.
+```
+
+</br>
+
+## Restore your site variables
+
+You can use this method to restore Railway variables (see above how to backup), but also to restore them from [Northflank](/troubleshoot/northflank.md#backup-your-site-variables) or [Heroku](/troubleshoot/heroku.md#method-2-export) if migrating (follow the platform name link to see how to export them).
+
+a) Open your [Railway](https://railway.app/dashboard) dashboard and select your Nightscout project.
+
+<img src="/vendors/railway/img/RailwayM15.png" width="400px" />
+
+</br>
+
+c) Select your web app and click on `Variables`.
+
+<img src="/vendors/railway/img/RailwayM17.png" width="400px" />
+
+</br>
+
+e) Click on `RAW Editor` top right
+
+<img src="/vendors/railway/img/Railway39.png" width="600px" />
+
+</br>
+
+f) Delete all contents, open your backup file (the .env you generated when doing backup) and copy/paste all in the raw editor area. Click `Update variables` bottom right.
+
+<img src="/vendors/railway/img/Railway40.png" width="400px" />
+
+</br>
+
+g) If you see the message `Apply _ changes` top left, click the `Deploy` button and wait for your site to update.
+
+<img src="/vendors/railway/img/RailwayD06.png" width="600px" />
+
+</br>

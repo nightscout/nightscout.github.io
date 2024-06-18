@@ -209,7 +209,7 @@ WEB_CONCURRENCY="1"
 WEB_MEMORY="512"`
 
 ```{warning}
-Save this file in a safe place
+Save this file in a safe place.</br>Call it `heroku.env` as it's your Heroku environment variables.
 ```
 
 </br>
