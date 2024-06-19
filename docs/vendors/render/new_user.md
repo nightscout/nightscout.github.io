@@ -136,26 +136,26 @@ Select below how you want to do this:
 
 </br>
 
-* Sign in [Render](https://dashboard.render.com/) with GitHub
+* Log in [Render](https://dashboard.render.com/)
 
 <img src="/vendors/render/img/Render02.png" width="400px" ></br>
 
 * Select your web service
 
-<img src="/vendors/render/img/Render16.png" width="600px" >
+<img src="/vendors/render/img/Render16.png" width="600px" ></br>
 
 * Go to `Environment`, your variables will display
 
- <img src="/vendors/render/img/Render21.png" width="500px" >
+ <img src="/vendors/render/img/Render21.png" width="500px" ></br>
 
 * You can modify variables by making the changes directly in the text boxes.  
   You can also add variables with `Add environment variable`.  
   When you're done, scroll down and `Save changes`.
 
-<img src="/vendors/render/img/Render23.png" width="600px" >
+<img src="/vendors/render/img/Render23.png" width="600px" ></br>
 
 * Wait a few minutes for your site to redeploy. You can track the status in `Events`.
 
-<img src="/vendors/render/img/Render24.png" width="800px" >
+<img src="/vendors/render/img/Render24.png" width="800px" ></br>
 
 </br>
