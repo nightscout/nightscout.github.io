@@ -62,7 +62,7 @@ These are the current solutions not involving, or limiting to a strict minimum, 
 Most vendors will require a credit card to authenticate users and avoid abuse.
 ```
 
-[Azure](/vendors/azure/new_user), [Northflank](/vendors/northflank/new_user), [Fly.io](/vendors/fly.io/new_user), [Render](/vendors/render/new_user), [Atlas](/vendors/mongodb/atlas), [Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html), [Oracle](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)
+[Azure](/vendors/azure/new_user), [Northflank](/vendors/northflank/new_user), [Fly.io](/vendors/fly.io/new_user), [Render](/vendors/render/new_user), [Atlas](/vendors/mongodb/atlas), [Google Cloud](/vendor/google/new_user), [Oracle](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)
 
 <img src="./img/Comparison2.png"  width="700px" />
 
