@@ -227,7 +227,9 @@ Multiple lines values should be typed with `\n` separating each original line.</
 Example:</br>
 <img src="/nightscout/img/APNKeys.png" width="600px" /></br>
 ```
-----BEGIN PRIVATE KEY-----\nMIGTAgEAMBMGBygGSM49AwEHBHkwdwIBAQQg7c8w00t5ju7N980r\nerN8N+isnJoec+ohIEuD0teRbPmgCgYIKoZIzj0DAQehRANCAAREnRISLSiFgdn4\nLbf44yIKspXKr7GpPBVshv3ShOms2qHTdAFriXXRPmbq7eAJuFrxpYOduU1dl9vo\nouciW0je\n-----END PRIVATE KEY-----
+----BEGIN PRIVATE KEY-----\n
+MIGTAgEAMBMGBygGSM49AwEHBHkwdwIBAQQg7c8w00t5ju7N980rerN8N+isnJoec+ohIEuD0teRbPmgCgYIKoZIzj0DAQehRANCAAREnRISLSiFgdn4Lbf44yIKspXKr7GpPBVshv3ShOms2qHTdAFriXXRPmbq7eAJuFrxpYOduU1dl9voouciW0je
+\n-----END PRIVATE KEY-----
 ```
 ~~~
 
