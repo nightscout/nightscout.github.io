@@ -37,11 +37,27 @@ Facebook group [xDrip](https://www.facebook.com/groups/xDripG5/)
 
 </br>
 
-### [AndroidAPS NSClient](https://github.com/nightscout/AndroidAPS/releases)
+### [AAPSClient](https://github.com/nightscout/AndroidAPS/releases)
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
 Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUsers)
+
+</br>
+
+### [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler)
+
+Available in [Google Play store](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler).
+
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
+
+Receives glucose, IOB and COB values from **Nightscout** (pebble interface).
+
+<img src="https://play-lh.googleusercontent.com/VW9ktdQlfPMuHq5Lwhtx5faZ118JpExHv1qCRypKZoKCSjTdDWfeAcINzl_hvr2B8g=w480-h960-rw" width="200px" />
+
+</br>
+
+<img src="/nightscout/img/IconAAuto.png" width="25px" />[GlucoDataAuto](https://github.com/pachi81/GlucoDataAuto/blob/main/README.md) for Android Auto.
 
 </br>
 
