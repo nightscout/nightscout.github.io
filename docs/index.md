@@ -82,7 +82,7 @@ Before using Nightscout, it is important to understand that this project:
 There's no simple answer to this. You basically have two options:
 
 1. **DIY**: Use instructions on this website to create your own installation. You will need to maintain this installation yourself. There are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be free - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it.
-2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), [Nightscout.Pro](#nightscout-pro), [Serendipity Bio](#serendipity-bio), and [Nightscout4u](#nightscout4u)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), [Nightscout Pro](#nightscout-pro), [Serendipity Bio](#serendipity-bio), and [Nightscout4u](#nightscout4u)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
 
 The Nightscout development community actively supports both of these choices.
 
@@ -131,20 +131,23 @@ To see more about NS10 features and costs, take a look at the [features page](ht
 ```{card}
 <img src="https://nightscout.pro/wp-content/uploads/2022/12/nightscoutsocial.jpg" width="400">
 +++
-[Nightscout.Pro](https://nightscout.pro/) was founded in 2022 by **Andy Low** - A type 1 diabetic web developer from Scotland, UK. Nightscout.Pro offer a completely 'hands-off' approach to Nightscout hosting, meaning all you need to do is subscribe via the website, and your Nightscout site will be created for you, with little to no configuration needed. Your site will be set up in a 'default' configuration, which can be modified by contacting **support** via [Email](mailto:support@nightscout.pro), [Facebook](https://www.facebook.com/nightscoutpro) or [Discord](https://discord.gg/7hYrkqVavU).
+[Nightscout Pro](https://nightscoutpro.com/) was founded in 2022 by **Andy Low** - A type 1 diabetic web developer from Scotland, UK. Nightscout Pro offers a completely 'hands-off' approach to Nightscout hosting, meaning all you need to do is subscribe via the website, and your Nightscout site will be created for you, with little to no configuration needed. Your site will be set up in a 'default' configuration, which can be modified easily from their admin panel. Nightscout Pro offers full access to all Nightscout features at no extra cost, and you can get **support** via [Email](mailto:support@nightscoutpro.com), [Facebook](https://www.facebook.com/nightscoutpro) or [Discord](https://discord.gg/7hYrkqVavU).
 
-The site is  translated into multiple languages, with more in line to be added over time, and can accept payment in various local currencies.
+you can pay in various local currencies and the price is discounted if you pay for 6 months or more.
 
-**Pricing per month**
+**Pricing**
 
-| Currency | Price |
-| -------- | ----- |
-| GBP      | £3    |
-| USD      | $4    |
-| EUR      | €4    |
-| PLN      | 18 zł |
+| Currency | Monthly | Quarterly | Bi-Annually | Annually |
+|----------|---------|-----------|-------------|----------|
+| GBP      | £3.99   | £11.97    | £19.95      | £39.90   |
+| USD      | $4.99   | $14.97    | $24.95      | $49.90   |
+| EUR      | €4.99   | €14.97    | €24.95      | €49.90   |
+| PLN      | 19.99 zł| 59.97 zł  | 99.95 zł    | 199.90 zł|
+| CAD      | $6.99   | $20.97    | $34.95      | $69.90   |
+| AUD      | $7.99   | $23.97    | $39.95      | $79.90   |
 
-More information about the companies background and processes can be found on the website at [Welcome to Nightscout.Pro.](https://nightscout.pro/welcome-to-nightscout-pro/)
+
+More information about the companies background and processes can be found on the website at [Welcome to Nightscout Pro.](https://nightscout.pro/welcome-to-nightscout-pro/), or you can sign up now at [Nightscout Pro](https://my.nightscoutpro.com).
 ```
 
 ### Serendipity Bio
@@ -174,6 +177,7 @@ Concerned about reliability or sustainability?  Serendipity Bio is built using A
 
 Available globally, a monthly subscription is priced at $12.99 USD per month, payable online via credit card.
 ```
+
 ### Nightscout4u
 
 ```{card}
