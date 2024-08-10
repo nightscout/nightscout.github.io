@@ -66,6 +66,13 @@ Not knowing if it's a permanent issue, first try to restart it...
 
 -----------
 
+If it's crashing again, and you use the Atlas database, make sure i's not [full](/troubleshoot/atlas.md#database-full)...
+
+If your database is not full, you might have your profiles table corrupted.
+
+- With Atlas, just [drop](/troubleshoot/atlas/#reports-slow-loading-or-timeout) them.
+- With another accessible database, use a computer app like [Studio 3T](https://studio3t.com/) to delete the profiles table. Connect using your MONGODB_URI string.
+
 ## GitHub
 
 Follow [these](/troubleshoot/github) instructions.
