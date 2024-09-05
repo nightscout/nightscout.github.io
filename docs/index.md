@@ -190,6 +190,32 @@ The service is suitable for beginners to make their first steps and get used to 
 Check out the easy way of a [hosted Nightscout solution](https://www.nightscout4u.com/).
 ```
 
+### Nightscout-easy
+
+```{card}
+<img src="https://www.nightscout-easy.ru/nightscout-easy_logo.png" height="155">
++++
+[Nightscout-Easy](https://www.nightscout-easy.ru) is built by true enthusiasts who deeply understand the challenges faced by those using Nightscout. This understanding ensures that the service meets all user needs, providing a comfortable and convenient experience. 
+
+Advantages:
+
+ - Simple and intuitive control panel
+ - Automatic data backups
+ - Easy import and export of Nightscout data
+ - Option to choose between old and new versions of Nightscout
+ - User-friendly interface for managing variables
+ - Detailed setup videos for xDrip and AndroidAPS
+ - Friendly tech support, always ready to help
+
+Pricing:
+
+The Nightscout-Easy subscription costs just 12 USD(1188 rub) per year, making it one of the most affordable solutions on the market.
+
+Sign Up:
+
+Register and start using the service today on: [the official website](https://www.nightscout-easy.ru/).
+```
+
 ## Who Can Help Me?
 
 You will find many willing and open-hearted people in the Facebook groups.
