@@ -178,9 +178,9 @@ a) [Fork the Nightscout cgm-remote-monitor project](/nightscout/github.md#fork-t
 
 </br>
 
-b) Click the `Deploy to Heroku` button below:
+b) Make sure you are logged into Heroku then click the `Deploy to Heroku` button below:
 
-<a href="https://heroku.com/deploy?template=https://github.com/nightscout/cgm-remote-monitor" target="_blank"><img src="https://www.herokucdn.com/deploy/button.png"></a>
+<a href="https://dashboard.heroku.com/new?template=https://github.com/nightscout/cgm-remote-monitor" target="_blank"><img src="https://www.herokucdn.com/deploy/button.png"></a>
 
 </br>
 
