@@ -17,7 +17,7 @@ You will also find general support in **Loop and Learn**.
 
 ## [Loop](https://loopkit.github.io/loopdocs)
 
-[Loop](https://loopdocs.org) is an iOS app that assists in the many insulin dosing decisions people with diabetes face every day. You enter your own settings for desired correction range, basal schedule, insulin sensitivity factor (ISF), carbohydrate ratio (CR) and the type of insulin you are using.  The glucose predictions, using your settings and meal entries, provide Loop with the information needed to modify insulin delivery to attain a targeted glucose range in the future.
+[Loop](https://loopdocs.org) is an open source iOS app that assists in the many insulin dosing decisions people with diabetes face every day. You enter your own settings for desired correction range, basal schedule, insulin sensitivity factor (ISF), carbohydrate ratio (CR) and the type of insulin you are using.  The glucose predictions, using your settings and meal entries, provide Loop with the information needed to modify insulin delivery to attain a targeted glucose range in the future.
 
 **See [here](https://loopkit.github.io/loopdocs/loop-3/services/#nightscout-login) how to configure Loop to upload to Nightscout.**
 
@@ -32,6 +32,16 @@ AndroidAPS is an open source app for people living with insulin-dependent diabet
 **See [here](https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient) how to configure AAPS NSClient to upload to Nightscout.**
 
 Facebook group: [Android APS Users](https://www.facebook.com/groups/AndroidAPSUsers)
+
+</br>
+
+## [Trio](https://diy-trio.org)
+
+Trio is an open source iOS app that automates insulin delivery using OpenAPS' algorithm.
+
+[Documentation](https://docs.diy-trio.org/en/latest/)
+[Facebook group](https://www.facebook.com/groups/1351938092206709)
+[Discord](http://discord.diy-trio.org)
 
 </br>
 
