@@ -28,7 +28,7 @@ Select your current platform below:
 <img src="/vendors/github/img/UpdateNS01.png" width="400px" ></br></br>
 - Your repository will open. </br></br>
 <img src="/vendors/github/img/Dev00.png" width="400px" ></br></br>
-- In the branch drop down menu (normally showing `master`) select  `dev`</br></br>
+- In the branch drop down menu verify `master` is selected</br></br>
 <img src="/vendors/github/img/Dev01.png" width="300px" ></br></br>
 - Click`Fetch upstream` to update it, then  `Fetch and merge`</br></br>
 <img src="/vendors/github/img/Dev03.png" width="800px" ></br></br>
