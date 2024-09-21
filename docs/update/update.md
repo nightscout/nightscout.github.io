@@ -21,20 +21,20 @@ Select your current platform below:
 :::
 
 :::{tab-item} Heroku, Railway, Northflank (GitHub)
-</br>- Click here to log in at GitHub: [https://github.com/login](https://github.com/login).</br></br>
+</br>- Click here to log in at GitHub: [https://github.com/login](https://github.com/login).</br>
 - Enter your username or email and your password. Click `Sign in`</br></br>
 <img src="/vendors/github/img/UpdateNS00.png" width="400px" ></br></br>
 - Select your own `cgm-remote-monitor` project (**not `nightscout/cgm-remote-monitor`**)</br></br>
 <img src="/vendors/github/img/UpdateNS01.png" width="400px" ></br></br>
-- Your repository will open. </br></br>
-<img src="/vendors/github/img/Dev00.png" width="400px" ></br></br>
-- In the branch drop down menu verify `master` is selected</br></br>
-<img src="/vendors/github/img/Dev01.png" width="300px" ></br></br>
-- Click`Fetch upstream` to update it, then  `Fetch and merge`</br></br>
-<img src="/vendors/github/img/Dev03.png" width="800px" ></br></br>
-- After a moment, your repository should display `This branch is up to date with nightscout:latest`</br></br>
-<img src="/vendors/github/img/Dev04.png" width="500px" ></br></br>
-- If you ran into trouble, try to [Redeploy](/update/redeploy.md)</br></br>
+- Your repository will open. If you see `This branch is xxx commits </br>behind nightscout:master` you need to update.
+- Select `Fetch upstream`</br></br>
+<img src="/vendors/github/img/UpdateNS01a.png" width="700px" ></br></br>
+- Select `Fetch and merge`</br></br>
+<img src="/vendors/github/img/UpdateNS01b.png" width="400px" ></br></br>
+- After a moment, your repository should display `This branch is up to date with nightscout:master`</br></br>
+<img src="/vendors/github/img/UpdateNS01c.png" width="400px" ></br></br>
+You have now updated your GitHub cgm-remote-monitor repository.</br></br>
+If you ran into trouble, you can [redeploy](/update/redeploy) the project.</br></br>
 :::
 
 :::{tab-item} Google Cloud, Docker (Azure, Northflank, Railway, Render)
