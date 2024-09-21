@@ -64,7 +64,7 @@ Connected pumps will show available insulin units, battery status and last regis
 
 <img src="./img/Clinic10.png" width="300px" />
 
-DIY closed loop systems can be identified with the [Loop](https://loopkit.github.io/loopdocs/faqs/algorithm-faqs/) (Loop) or [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) (OpenAPS, AndoidAPS, FreeAPS, iAPS) pill. Only one will be enabled, if the other one appears it will normally show an exclamation mark. If a DIY closed loop system Nightscout doesn't show any active pill, configuration needs to be fixed so that Nightscout receives all necessary data (patient responsibility).
+DIY closed loop systems can be identified with the [Loop](https://loopkit.github.io/loopdocs/faqs/algorithm-faqs/) (Loop) or [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) (OpenAPS, AndoidAPS, Trio, FreeAPS X, iAPS) pill. Only one will be enabled, if the other one appears it will normally show an exclamation mark. If a DIY closed loop system Nightscout doesn't show any active pill, configuration needs to be fixed so that Nightscout receives all necessary data (patient responsibility).
 
 <img src="./img/Clinic11.png" width="400px" />
 
