@@ -107,7 +107,7 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 <img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="/nightscout/img/Follower04.png" width="300px" />	
+<img src="/nightscout/img/Follower04.png" width="300px" />
 
 </br>
 
@@ -149,7 +149,7 @@ Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.  
+Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.
 If you're using a secured Nightscout site, enter your token in the matching field.
 
 <img src="/nightscout/img/Follower01.png" width="300px" />
@@ -204,7 +204,15 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 Show your current BG in the system bar at the top of your screen on Mac (including Loop details). Available directly through the [Apple Store](https://apps.apple.com/au/app/nightscout-menu-bar/id1639776072?mt=12).
 
-<img src="/nightscout/img/Follower11.png" width="600px" /> 
+<img src="/nightscout/img/Follower11.png" width="600px" />
+
+</br>
+
+### [GlucoseBar](https://github.com/t1dtools/glucosebar)
+
+Show your current BG in the menu bar and a nice chart for your historic data. Also available on the [Apple App Store](https://apps.apple.com/se/app/glucosebar/id6468110131?l=en-GB&mt=12).
+
+<img src="/nightscout/img/Follower12.png" width="502px" />
 
 </br>
 
@@ -212,7 +220,7 @@ Show your current BG in the system bar at the top of your screen on Mac (includi
 
 ### [FloatingGlucose](https://github.com/dabear/FloatingGlucose) (archived)
 
-<img src="/nightscout/img/LockOK.png" width="25px" /> 
+<img src="/nightscout/img/LockOK.png" width="25px" />
 
 <img src="https://raw.githubusercontent.com/dabear/FloatingGlucose/master/floatingglucose.png" width="350px"/>
 
@@ -220,7 +228,7 @@ Show your current BG in the system bar at the top of your screen on Mac (includi
 
 ### [Owlet](https://github.com/kashamalasha/nightscout-widget-electron)
 
-<img src="/nightscout/img/LockOK.png" width="25px" /> 
+<img src="/nightscout/img/LockOK.png" width="25px" />
 
 <img src="https://raw.githubusercontent.com/kashamalasha/nightscout-widget-electron/main/docs/screenshot-widget.png" width="350px"/>
 
@@ -228,7 +236,7 @@ Show your current BG in the system bar at the top of your screen on Mac (includi
 
 ### [NS2Win](https://github.com/emp-00/NS2Win)
 
-<img src="/nightscout/img/LockOK.png" width="25px" /> 
+<img src="/nightscout/img/LockOK.png" width="25px" />
 
 <img src="https://user-images.githubusercontent.com/60714349/230734030-d6ae822f-1a48-48d2-8df0-cb168146176b.png" width="500px"/>
 
