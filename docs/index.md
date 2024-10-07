@@ -216,6 +216,26 @@ Sign Up:
 Register and start using the service today on: [the official website](https://www.nightscout-easy.ru/).
 ```
 
+### Opensource.clinic
+
+```{card}
+<img src="https://www.opensource.clinic/assets/icons/opensourcecliniciconbig.png" height="155">
++++
+Opensource.clinic provides a Nightscout for €4.99 (+/-$4.58) per month. Higher-tier subscriptions offer personalized coaching from a dedicated team of healthcare and IT professionals, all of whom are experienced or trained in DIY looping. The support team is located across various time zones, ensuring round-the-clock assistance, and is currently available in English and Dutch.
+
+Advantages:
+
+- Fast setup: Instance running within three steps, with payment options like credit card or Google Pay
+- 24/7 WhatsApp Helpdesk for both technical and medical questions
+- Data import/export support
+- Additional data visualizations
+- Personalized coaching in top-tier subscriptions.
+
+[Visit the website](https://www.opensource.clinic/pricing) to get your first NightScout running or switch to our service. If you have any questions, don't hesitate to contact us via [WhatsApp](https://wa.me/31639202608) or [email](mailto:info@opensource.clinic).
+
+```
+
+
 ## Who Can Help Me?
 
 You will find many willing and open-hearted people in the Facebook groups.
