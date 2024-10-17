@@ -82,7 +82,7 @@ Before using Nightscout, it is important to understand that this project:
 There's no simple answer to this. You basically have two options:
 
 1. **DIY**: Use instructions on this website to create your own installation. You will need to maintain this installation yourself. There are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be free - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it.
-2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), [Nightscout Pro](#nightscout-pro), [Serendipity Bio](#serendipity-bio), and [Nightscout4u](#nightscout4u)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), [Nightscout Pro](#nightscout-pro), [Serendipity Bio](#serendipity-bio), [Nightscout4u](#nightscout4u)), [Nightscout-easy](#nightscout-easy), [Opensource.clinic](#opensource-clinic) all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
 
 The Nightscout development community actively supports both of these choices.
 
@@ -195,7 +195,7 @@ Check out the easy way of a [hosted Nightscout solution](https://www.nightscout4
 ```{card}
 <img src="https://www.nightscout-easy.ru/nightscout-easy_logo.png" height="155">
 +++
-[Nightscout-Easy](https://www.nightscout-easy.ru) is built by true enthusiasts who deeply understand the challenges faced by those using Nightscout. This understanding ensures that the service meets all user needs, providing a comfortable and convenient experience. 
+[Nightscout-Easy](https://www.nightscout-easy.ru) is built by true enthusiasts who deeply understand the challenges faced by those using Nightscout. This understanding ensures that the service meets all user needs, providing a comfortable and convenient experience.
 
 Advantages:
 
@@ -219,22 +219,26 @@ Register and start using the service today on: [the official website](https://ww
 ### Opensource.clinic
 
 ```{card}
-<img src="https://www.opensource.clinic/assets/icons/opensourcecliniciconbig.png" height="155">
+<img src="https://www.opensource.clinic/assets/icons/opensourcecliniciconm.png" height="155">
 +++
-Opensource.clinic provides a Nightscout for €4.99 (+/-$4.58) per month. Higher-tier subscriptions offer personalized coaching from a dedicated team of healthcare and IT professionals, all of whom are experienced or trained in DIY looping. The support team is located across various time zones, ensuring round-the-clock assistance, and is currently available in English and Dutch.
+Opensource.clinic was founded by a medical doctor in the Netherlands. Opensource.clinic provides a Nightscout for just €4.99 per month.
 
-Advantages:
+Key advantages include:
+- Quick setup: Get a Nightscout with just a few clicks, usually within 1 to 2 hours.
+- Round-the-clock support: 24/7 assistance for both technical and medical inquiries.
+- Security: Hosted in NEN7510-certified datacenters.
+- Flexible payment: Options like credit card and Google Pay.
+- Data handling: Easy import/export and automatic backups.
+- Multiple contact methods: Reach the helpdesk via WhatsApp or email.
+- No configuration needed: Default setup ready for use.
+- Personal dashboard: Access and change variables in a user-friendly interface.
+- Supports the Nightscout Foundation.
 
-- Fast setup: Instance running within three steps, with payment options like credit card or Google Pay
-- 24/7 WhatsApp Helpdesk for both technical and medical questions
-- Data import/export support
-- Additional data visualizations
-- Personalized coaching in top-tier subscriptions.
+Higher-tier subscriptions offer personalized coaching. The support team is located across various time zones and is available in English and Dutch.
 
-[Visit the website](https://www.opensource.clinic/pricing) to get your first NightScout running or switch to our service. If you have any questions, don't hesitate to contact us via [WhatsApp](https://wa.me/31639202608) or [email](mailto:info@opensource.clinic).
+[Visit the website](https://www.opensource.clinic/pricing) to get your Nightscout or [email us](mailto:info@opensource.clinic) if you have questions.
 
 ```
-
 
 ## Who Can Help Me?
 

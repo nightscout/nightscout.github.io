@@ -48,7 +48,7 @@ Below is a list of most used platforms. There are probably others, don't hesitat
 Hosted services include everything: platform, database and support.
 ```
 
-[T1Pal](https://t1pal.com/), [NS10BE](https://ns.10be.de/de/index.html), [Nightscout Pro](https://nightscout.pro/), [Serendipity Bio](https://serendipitybio.com/), [Nightscout4u](https://www.nightscout4u.com/)
+[T1Pal](https://t1pal.com/), [NS10BE](https://ns.10be.de/de/index.html), [Nightscout Pro](https://nightscout.pro/), [Serendipity Bio](https://serendipitybio.com/), [Nightscout4u](https://www.nightscout4u.com/), [Nightscout-easy](https://nightscout-easy.ru), [Opensource.clinic](https://www.opensource.clinic/)
 
 <img src="./img/Comparison.png"  width="800px" />
 

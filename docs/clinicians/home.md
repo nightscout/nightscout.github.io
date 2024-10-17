@@ -8,7 +8,7 @@ Unless specified, links within the text are for advanced explanation of the unde
 
 ## What is Nightscout?
 
-Nightscout is an open-source cloud application used to visualize, store and share in real-time: 
+Nightscout is an open-source cloud application used to visualize, store and share in real-time:
 
 - data from continuous glucose monitoring sensors
 - manually or automatically logged treatments
@@ -33,7 +33,7 @@ Ask your IT and cybersecurity teams to perform all necessary verifications to al
 
 Since Nightscout can be hosted in a large variety of [platforms](/nightscout/new_user.md#building-nightscout-diy-in-a-cloud-platform), you can expect the site domain to be (but not only) in the following list:
 
-`heroku.com`, `azurewebsites.net`, `railway.app`, `fly.dev`, `onrender.com`, `t1pal.com`, `ns10be.de`, `nightscout.pro`, `mooo.com`, `chickenkiller.com`, `crabdance.com`, `strangled.net`, `code.run`, `nightscout4u.com` ...
+`heroku.com`, `azurewebsites.net`, `railway.app`, `fly.dev`, `onrender.com`, `t1pal.com`, `ns10be.de`, `nightscout.pro`, `mooo.com`, `chickenkiller.com`, `crabdance.com`, `strangled.net`, `code.run`, `nightscout4u.com`, `nightscout-easy.ru`, `opensource.clinic` ...
 
 ```{admonition} Read only access
 Writing data into Nightscout is protected with a password called API_SECRET that should not be shared with you by the patient.
