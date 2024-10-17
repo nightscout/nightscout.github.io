@@ -183,9 +183,9 @@ Simple and intuitive control panel, automatic data backups, easy import and expo
 
 Founded in 2024 by a medical doctor in the Netherlands, Opensource.clinic is dedicated to simplifying diabetes management through a reliable and user-friendly platform. Combining technical and medical expertise, the organization provides a fully supported hosted solution for Nightscout.
 
-Choosing Opensource.clinic offers several benefits. A quick setup, with Nightscout typically ready within 1 to 2 hours. 24/7 support for both technical and medical queries. Nightscout servers hosted in NEN7510-certified datacenters in the Netherlands. Payment with creditcard or Google Pay. Data import/export support and automatic backups. A user-friendly personal dashboard for configuring Nightscout variables and analyzing your diabetes data.
+Choosing Opensource.clinic offers several benefits. A quick setup, with Nightscout typically ready within 1 to 2 hours, 24/7 WhatsApp Helpdesk for both technical and medical questions, Nightscout servers hosted in NEN7510-certified datacenters, Payment with creditcard or Google Pay, Data import/export support and automatic backups, A user-friendly personal dashboard for configuring Nightscout variables and analyzing your diabetes data.
 
-For those seeking more tailored guidance, higher-tier subscriptions also offer a 24/7 helpdesk, monitoring and personalised coaching from a support team available in both English and Dutch. For more information, please visit our [website](https://www.opensource.clinic/pricing) or email us (mailto:info@opensource.clinic) if you have any questions.
+Higher-tier subscriptions offer personalized coaching from a dedicated team of healthcare and IT professionals, all of whom are experienced or trained in DIY looping. The support team is located across various time zones, ensuring round-the-clock assistance, and is currently available in English and Dutch. For more information, please visit our [website](https://www.opensource.clinic/pricing) or email us (mailto:info@opensource.clinic) if you have any questions.
 
 </br>
 
