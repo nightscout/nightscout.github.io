@@ -2,17 +2,25 @@
 
 <span style="font-size:larger;">*"What is great is there will be multiple options for those interested in setting up the system! #wearenotwaiting" J.A.*</span></span>
 
-```{admonition} Too complicated? Not what you're looking for?
-:class: seealso
-Consider a hosted Nightscout service! Check for easier solutions [here](project:/index.md#nightscout-as-a-service).
+</br>
+
+## Vendors
+
+```{note}
+Hosted services include everything: platform, database and support.
 ```
 
-```{admonition} Confusing?
-:class: hint
-**[Need help to choose?
-Try the wizard](wizard)**.
-<img src="/nightscout/img/wizard.png" />
-```
+You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are many options available for this. If you're a non-technical person, this is a **great choice**.
+
+</br>
+
+## Building Nightscout DIY in a cloud platform
+
+You can run your Nightscout site in several vendors platforms, using free or paid accounts.
+
+Below is a list of most used platforms. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
+
+</br>
 
 ## Basic concepts
 
@@ -33,26 +41,6 @@ Even if knowing how it works is not mandatory, it is very useful to understand a
 Some platforms offer both engine and database like Azure, Railway, Northflank and all VPS servers. But you can use an external database if you want. Some others like Heroku or Fly.io don't propose a database and require you to use an external one. Traditionally the database holding Nightscout data is hosted by another provider (mLab, now MongoDB Atlas) but it might not be the most reliable solution.
 
 </br>  
-
-## Building Nightscout DIY in a cloud platform
-
-You can run your Nightscout site in several vendors platforms, using free or paid accounts.  Try the [wizard](wizard) to see which options can match your needs.
-
-Below is a list of most used platforms. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
-
-</br>
-
-## Vendors comparison table
-
-```{note}
-Hosted services include everything: platform, database and support.
-```
-
-[T1Pal](https://t1pal.com/), [NS10BE](https://ns.10be.de/de/index.html), [Nightscout Pro](https://nightscout.pro/), [Serendipity Bio](https://serendipitybio.com/), [Nightscout4u](https://www.nightscout4u.com/)
-
-<img src="./img/Comparison.png"  width="800px" />
-
-</br>
 
 ## Free DIY
 

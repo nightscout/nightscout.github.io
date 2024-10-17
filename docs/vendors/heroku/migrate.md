@@ -8,31 +8,6 @@ There is no universal solution. So, you'll have to read between the lines and un
 
 This is an important concept everybody needs to understand: what we call free means we don't have to pay for it but it also means someone else is paying for it. It doesn't mean it's bad, we all know the price of T1D is already too high for us and our kids but we can't **pretend** that someone else will pay for it. Whoever offers a free service should have our respect and gratitude, and when they understand the weight of free users is too high and decide to start billing, we should accept it.
 
-```{admonition} Confusing?
-:class: hint
-**[Need help to choose?
-Try the wizard](/nightscout/wizard)**.
-<img src="/nightscout/img/wizard.png" />
-```
-
-## **[T1Pal](/index.md#t1pal)**
-
-***You need a simple reliable Nightscout but don't want to build it and maintain it?***
-
-T1Pal is made by developers who contribute to Nightscout development, it doesn't include all bells and whistles (see the differences [here](https://t1pal.com/legal/faq_8_18_2020_13_38#compare-to-nightscout)) but you won't have to worry about security, upgrades or database size. If you will want to pay a vendor for your DIY Nightscout you should seriously consider T1Pal. Also, if you need to support multiple T1D people in a family that's surely something to think about as you can have up to 5 sites in one subscription. Data migration is not available, contact T1Pal support for settings migration.
-
-## **[NS10BE](/index.md#ns10be)**
-
-***You need a simple reliable Nightscout but don't want to build it and maintain it?***
-
-You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits.  Some features are not available for legal reasons and if you need extra variables setup you can contact NS10BE support. You will need to copy your Nightscout settings but can migrate your Mongo database easily in NS10BE.
-
-## **[Nightscout.Pro](/index.md#nightscout-pro)**
-
-***You need a simple reliable Nightscout but don't want to build it and maintain it?***
-
-A completely 'hands-off' approach to Nightscout. Simply subscribe via the [website](https://nightscout.pro/) and you'll receive an email once your site is ready. Enjoy unlimited database and resources and do not have to worry about updating your nightscout site as it all taken care of for you.
-
 ## [**Google Cloud**](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud)
 
 ***You're not scared to innovate with a new easy and reliable way to build and maintain your Nightscout? Give this a try!***

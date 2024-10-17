@@ -54,7 +54,7 @@ You will need:
 
 - Internet access
 
-- Basic computer skills and the ability to **_carefully_** follow the installation guides shown on this site
+- **<u>For Nightscout DIY:</u>** Basic computer skills and the ability to **_carefully_** follow the installation guides shown on this site
 
   **\*"Carefully"** means that you will thoroughly read, follow and complete each step without skipping any and without giving up thinking that it is too difficult - it isn't, you just need to be patient.\*
 
@@ -81,142 +81,20 @@ Before using Nightscout, it is important to understand that this project:
 
 There's no simple answer to this. You basically have two options:
 
-1. **DIY**: Use instructions on this website to create your own installation. You will need to maintain this installation yourself. There are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be free - $0 with this option. Historically vast majority of Nightscout users have opted for this choice. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it.
-2. **Use a service**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are currently three options available for this ([NS10BE](#ns10be), [T1Pal](#t1pal), [Nightscout Pro](#nightscout-pro), [Serendipity Bio](#serendipity-bio), and [Nightscout4u](#nightscout4u)), all of which are from active Nightscout community members. If you're a non-technical person, this is a **great choice**.
+1. **[DIY](#build-your-own-nightscout-site)**: Use instructions on this website to create your own installation. You will need to maintain this installation yourself. There are cloud providers that offer the needed hosting services for free, so your monthly hosting cost can be free - $0 with this option. Of note, with this option you are the person responsible for ensuring the service is up when you need it. The community aims to support people who choose this option, but this is entirely driven by a voluteer effort and support might not be available when you need it.
+2. **[Use a service](#nightscout-as-a-service)**: You can use a hosting provider that does all of this work for you in exchange for a monthly fee. There are many options available for this. If you're a non-technical person, this is a **great choice**.
 
-The Nightscout development community actively supports both of these choices.
-
-## Build your own Nightscout DIY site
+## Build your own Nightscout site
 
 ```{tip}
 </br><span style="font-size:larger;">Interested in building a Nightscout DIY site? You'll find instructions ⇒ [**HERE**](/nightscout/new_user/) ⇐.</span></br></br>
 ```
 
-**Note:** DIY users of Nightscout have been historically using platforms like [Digital Ocean](https://github.com/jasoncalabrese/project-glu/blob/master/README.md), [Microsoft Azure](https://docs.google.com/document/d/1RP-0KAX0Z46iGmShBdygY7_vQN1d-xEgtK_dSsjCA20/edit) and then Salesforce Heroku to host their sites. With time, more platforms were added.
+**Note:** DIY users of Nightscout have been historically using platforms like [Digital Ocean](https://github.com/jasoncalabrese/project-glu/blob/master/README.md), [Microsoft Azure](https://docs.google.com/document/d/1RP-0KAX0Z46iGmShBdygY7_vQN1d-xEgtK_dSsjCA20/edit) and then Salesforce Heroku to host their sites. With time, more platforms were added, but most now charge for usage.
 
 If you have the time to author instructions for this purpose, new documentation [pull requests](https://github.com/nightscout/nightscout.github.io/pulls?q=is%3Apr) are extremely welcome as well as [comments](https://github.com/nightscout/nightscout.github.io/issues).
 
-## Nightscout as a Service
-
-If you want to save time and avoid the need to maintain a DIY solution, you have three service providers of choice.
-
-### T1Pal
-
-```{card}
-![](https://t1pal.com/media/t1pal/t1_pal_bear_bw.png)
-+++
-[T1Pal](https://t1pal.com) directly supports the sustainability of the Nightscout Project. The monthly subscription for T1Pal is $11.99 USD/month.
-
-The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project. Database and server administration is automated and managed automatically as part of the service. Contact T1Pal support to request specific features or versions.
-
-If you need help with T1Pal, please file a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get Support" from [My Account](https://www.t1pal.com/account/).
-```
-
-### NS10BE
-
-```{card}
-<img src="https://ns.10be.de/templates/images/ns.10be.de-logo_halb_klein.jpg" width="400" height="155">
-+++
-[ns.10BE.de](https://ns.10be.de/) was started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits. A backup of your database and settings is performed every 6-8 hours. You can import data from your old Nightscout instance or MongoDB database, also upload data (Freestyle, Dexcom, Omnipod, ...) via CSV files. The servers are located in different fail-safe data centers in Germany, Finland or France (can be selected) . They are monitored by [uptimerobot](https://ns.10be.de/en/status.html) and own Slackbot. When a server goes down, it restarts itself and sends a twitter message.
-
-A Nightscout Instance at NS10BE costs €4.99/month, with discounts when increasing subscription duration.
-
-To see more about NS10 features and costs, take a look at the [features page](https://10be.de/en/pricing.html). The registration is free.
-
-***Support:*** ***support*** at ***ns.10be.de*** or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
-```
-
-### Nightscout Pro
-
-```{card}
-<img src="https://nightscout.pro/wp-content/uploads/2022/12/nightscoutsocial.jpg" width="400">
-+++
-[Nightscout Pro](https://nightscoutpro.com/) was founded in 2022 by **Andy Low** - A type 1 diabetic web developer from Scotland, UK. Nightscout Pro offers a completely 'hands-off' approach to Nightscout hosting, meaning all you need to do is subscribe via the website, and your Nightscout site will be created for you, with little to no configuration needed. Your site will be set up in a 'default' configuration, which can be modified easily from their admin panel. Nightscout Pro offers full access to all Nightscout features at no extra cost, and you can get **support** via [Email](mailto:support@nightscoutpro.com), [Facebook](https://www.facebook.com/nightscoutpro) or [Discord](https://discord.gg/7hYrkqVavU).
-
-you can pay in various local currencies and the price is discounted if you pay for 6 months or more.
-
-**Pricing**
-
-| Currency | Monthly | Quarterly | Bi-Annually | Annually |
-|----------|---------|-----------|-------------|----------|
-| GBP      | £3.99   | £11.97    | £19.95      | £39.90   |
-| USD      | $4.99   | $14.97    | $24.95      | $49.90   |
-| EUR      | €4.99   | €14.97    | €24.95      | €49.90   |
-| PLN      | 19.99 zł| 59.97 zł  | 99.95 zł    | 199.90 zł|
-| CAD      | $6.99   | $20.97    | $34.95      | $69.90   |
-| AUD      | $7.99   | $23.97    | $39.95      | $79.90   |
-
-
-More information about the companies background and processes can be found on the website at [Welcome to Nightscout Pro.](https://nightscout.pro/welcome-to-nightscout-pro/), or you can sign up now at [Nightscout Pro](https://my.nightscoutpro.com).
-```
-
-### Serendipity Bio
-
-```{card}
-![](https://media.serendipitybio.com/serendipity-logo.jpg)
-+++
-Serendipity provides instant deployment of Nightscout, literally.
-
-[Create](https://serendipitybio.com/pricing) your account and we'll:
-- Launch your Nightscout server
-- Launch your Mongo database
-- Provide you a secure, shareable URL
-
-Never worry about:
-- Database size
-- Reliabiity of your server
-- Upgrading versions
-
-Serendipity Bio fully manages your Nightscout server and database.
-
-Nightscout is configured for you automatically on start.  Once launched you can use our UI to change your settings to your liking!
-
-Find support documents [here](https://support.serendipitybio.com/) or [email](mailto:support@serendipitybio.com) us any time!
-
-Concerned about reliability or sustainability?  Serendipity Bio is built using Amazon Web Services, which also hosts all your favorite websites like Netflix, Apple, AirBnB, and ESPN.
-
-Available globally, a monthly subscription is priced at $12.99 USD per month, payable online via credit card.
-```
-
-### Nightscout4u
-
-```{card}
-<img src="https://www.nightscout4u.com/images/LogoNightscout4u0002.png" height="155">
-+++
-[Nightscout4u.com](https://www.nightscout4u.com/) started its service in 2023 and offers a simple one-click hosted Nightscout service solution. It is possible to create and use multiple Nightscout instances with one account.
-
-The service is suitable for beginners to make their first steps and get used to Nightscout for only one Euro per instance and month.
-
-Check out the easy way of a [hosted Nightscout solution](https://www.nightscout4u.com/).
-```
-
-### Nightscout-easy
-
-```{card}
-<img src="https://www.nightscout-easy.ru/nightscout-easy_logo.png" height="155">
-+++
-[Nightscout-Easy](https://www.nightscout-easy.ru) is built by true enthusiasts who deeply understand the challenges faced by those using Nightscout. This understanding ensures that the service meets all user needs, providing a comfortable and convenient experience. 
-
-Advantages:
-
- - Simple and intuitive control panel
- - Automatic data backups
- - Easy import and export of Nightscout data
- - Option to choose between old and new versions of Nightscout
- - User-friendly interface for managing variables
- - Detailed setup videos for xDrip and AndroidAPS
- - Friendly tech support, always ready to help
-
-Pricing:
-
-The Nightscout-Easy subscription costs just 12 USD(1188 rub) per year, making it one of the most affordable solutions on the market.
-
-Sign Up:
-
-Register and start using the service today on: [the official website](https://www.nightscout-easy.ru/).
-```
-
-## Who Can Help Me?
+## Who can help me with my DIY Nightscout?
 
 You will find many willing and open-hearted people in the Facebook groups.
 
@@ -241,6 +119,75 @@ Nightscout developers are busy people and we'd like them to concentrate on maint
 
 You'll find a lot of useful and friendly diabetes-oriented groups on Facebook and it's probably the best place to find online support. Some people express concerns about using Facebook: if you're worried about your privacy just remember Facebook will only share the information that you **allow** it to share.
 ```
+
+</br>
+
+## Nightscout as a Service
+
+If you want to save time and avoid the need to maintain a DIY solution, you have many providers.
+
+### [T1Pal](https://www.t1pal.com)
+
+[Pricing information.](https://t1pal.com/)
+
+The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project. Database and server administration is automated and managed automatically as part of the service. Contact T1Pal support to request specific features or versions.
+
+If you need help with T1Pal, please file a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get Support" from [My Account](https://www.t1pal.com/account/).
+
+### [NS10BE](https://10be.de)
+
+[Pricing information.](https://ns.10be.de/en/pricing.html)
+
+Started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits. A backup of your database and settings is performed every 6-8 hours. You can import data from your old Nightscout instance or MongoDB database, also upload data (Freestyle, Dexcom, Omnipod, ...) via CSV files. The servers are located in different fail-safe data centers in Germany, Finland or France (can be selected) . They are monitored by [uptimerobot](https://ns.10be.de/en/status.html) and own Slackbot. When a server goes down, it restarts itself and sends a twitter message.
+
+Support: ***support*** at ***ns.10be.de*** or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
+
+### [Nightscout Pro](https://nightscout.pro/welcome-to-nightscout-pro/)
+
+[Pricing information.](https://nightscout.pro/#pricing)
+
+Founded in 2022 by **Andy Low** - A type 1 diabetic web developer from Scotland, UK. Nightscout Pro offers a completely 'hands-off' approach to Nightscout hosting, meaning all you need to do is subscribe via the website, and your Nightscout site will be created for you, with little to no configuration needed. Your site will be set up in a 'default' configuration, which can be modified easily from their admin panel. Nightscout Pro offers full access to all Nightscout features, and you can get **support** via [Email](mailto:support@nightscoutpro.com), [Facebook](https://www.facebook.com/nightscoutpro) or [Discord](https://discord.gg/7hYrkqVavU).
+
+### [Serendipity Bio](https://serendipitybio.com)
+
+[Pricing information.](https://serendipitybio.com/pricing)
+
+Serendipity provides instant deployment of Nightscout, literally.
+[Create](https://serendipitybio.com/pricing) your account and we'll launch your Nightscout server, launch your Mongo database and provide you a secure, shareable URL.
+
+Never worry about Database size, reliability of your server and upgrading versions. Serendipity Bio fully manages your Nightscout server and database. Nightscout is configured for you automatically on start.  Once launched you can use our UI to change your settings to your liking!
+
+Find support documents [here](https://support.serendipitybio.com/) or [email](mailto:support@serendipitybio.com) us any time!
+
+Concerned about reliability or sustainability?  Serendipity Bio is built using Amazon Web Services, which also hosts all your favorite websites like Netflix, Apple, AirBnB, and ESPN.
+
+### [Nightscout4u](https://www.nightscout4u.com)
+
+[Pricing information.](https://www.nightscout4u.com/)
+
+Started its service in 2023 and offers a simple one-click hosted Nightscout service solution. It is possible to create and use multiple Nightscout instances with one account.
+
+The service is suitable for beginners to make their first steps and get used to Nightscout.
+
+### [Nightscout-easy](https://www.nightscout-easy.ru)
+
+[Pricing information.](https://nightscout-easy.ru/)
+
+Built by true enthusiasts who deeply understand the challenges faced by those using Nightscout. This understanding ensures that the service meets all user needs, providing a comfortable and convenient experience. 
+
+Simple and intuitive control panel, automatic data backups, easy import and export of Nightscout data, option to choose between old and new versions of Nightscout, user-friendly interface for managing variables, detailed setup videos for xDrip and AndroidAPS, friendly tech support, always ready to help
+
+### [Opensource.clinic](https://www.opensource.clinic)
+
+[Pricing information.](https://www.opensource.clinic/pricing)
+
+Struggling with your DIY-loop? Do you need help fine-tuning? Our experts are here to guide you.
+
+Higher-tier subscriptions offer personalized coaching from a dedicated team of healthcare and IT professionals, all of whom are experienced or trained in DIY looping. The support team is located across various time zones, ensuring round-the-clock assistance, and is currently available in English and Dutch.
+
+Fast setup: Instance running within three steps, with payment options like credit card or Google Pay, 24/7 WhatsApp Helpdesk for both technical and medical questions, Data import/export support, Additional data visualizations, Personalized coaching in top-tier subscriptions.
+
+</br>
 
 ## How to Use These Docs
 
@@ -269,7 +216,6 @@ uploader/uploaders/
 :hidden:
 :caption: CREATE YOUR NIGHTSCOUT
 nightscout/new_user/
-nightscout/wizard/
 ```
 
 ```{toctree}
