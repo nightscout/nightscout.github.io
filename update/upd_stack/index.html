@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update the Heroku stack &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Troubleshoot Fly.io" href="../../troubleshoot/fly.io/" />
+    <link rel="prev" title="Heroku MFA" href="../../vendors/heroku/mfa/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Update the Heroku stack</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/update/upd_stack.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="update-the-heroku-stack">
+<h1>Update the Heroku stack<a class="headerlink" href="#update-the-heroku-stack" title="Permalink to this heading"></a></h1>
+</br>
+<p>AAPS users: mind the <a class="reference internal" href="../../nightscout/close_loop/#aaps"><span class="std std-ref">compatibility matrix</span></a>!</p>
+</br>
+<p>It is good practice to maintain your Heroku stack up to date. Either when you receive an email from Heroku or when you <a class="reference internal" href="../update/"><span class="doc std std-doc">update your Nightscout site</span></a> (which is also a good habit).</p>
+</br>
+<ul class="simple">
+<li><p>Log in Heroku <a class="reference external" href="https://id.heroku.com/login">https://id.heroku.com/login</a></p></li>
+</ul>
+</br>
+<a class="reference internal image-reference" href="../../_images/UpdateNS15.png"><img alt="../../_images/UpdateNS15.png" src="../../_images/UpdateNS15.png" style="width: 400px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Select your app</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS00.png"><img alt="../../_images/SetupNS00.png" src="../../_images/SetupNS00.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS01.png"><img alt="../../_images/SetupNS01.png" src="../../_images/SetupNS01.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>If present select <code class="docutils literal notranslate"><span class="pre">Upgrade</span> <span class="pre">Stack</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/UpdateHK01.png"><img alt="../../_images/UpdateHK01.png" src="../../_images/UpdateHK01.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Confirm</span></code> the upgrade</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/UpdateHK02.png"><img alt="../../_images/UpdateHK02.png" src="../../_images/UpdateHK02.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Now you need to deploy to upgrade the stack</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/UpdateHK03.png"><img alt="../../_images/UpdateHK03.png" src="../../_images/UpdateHK03.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Deploy</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/UpdateNS17.png"><img alt="../../_images/UpdateNS17.png" src="../../_images/UpdateNS17.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Scroll down to the bottom of the page, select the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch and click <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">Branch</span></code></p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you can’t select the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch or <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">Branch</span></code> doesn’t do anything <a class="reference internal" href="../../troubleshoot/heroku/#heroku-nogit"><span class="std std-ref">reconnect GitHub</span></a>.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/UpdateNS23.png"><img alt="../../_images/UpdateNS23.png" src="../../_images/UpdateNS23.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Build will start and information will scroll in the log window. Do not leave the page, do not interfere and wait for completion. It might take more than 10 minutes. Interrupting the process will lead to a broken site and you’ll need to restart deployment.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/UpdateNS24.png"><img alt="../../_images/UpdateNS24.png" src="../../_images/UpdateNS24.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Wait until the deploy process completes and click <code class="docutils literal notranslate"><span class="pre">View</span></code> (if nothing happens click <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">App</span></code> then upper right <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">App</span></code>)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/UpdateNS25.png"><img alt="../../_images/UpdateNS25.png" src="../../_images/UpdateNS25.png" style="width: 600px;" /></a>
+</br>
+<p>You have upgraded your Heroku stack.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

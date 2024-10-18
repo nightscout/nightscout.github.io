@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup the main view &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Nightscout reports" href="../reports/" />
+    <link rel="prev" title="Nightscout for clinicians" href="../home/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup the main view</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#customize-your-view">Customize your view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#identify-displayed-items">Identify displayed items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-step">Next step:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Setup the main view</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/clinicians/setup.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setup-the-main-view">
+<h1>Setup the main view<a class="headerlink" href="#setup-the-main-view" title="Permalink to this heading"></a></h1>
+<p>Before checking reports, you should verify your patient has setup correctly data upload.<br />
+The steps below might not be necessary but will probably give you more insights on the patient system.</p>
+<p>If you’re only looking for reports, skip this step and continue to <a class="reference internal" href="../reports/"><span class="doc std std-doc">reports</span></a>.</p>
+</br>
+<section id="customize-your-view">
+<h2>Customize your view<a class="headerlink" href="#customize-your-view" title="Permalink to this heading"></a></h2>
+<p>Open the main menu, located at the top right of the window, select the drawer icon:</p>
+<a class="reference internal image-reference" href="../../_images/Clinic01.png"><img alt="../../_images/Clinic01.png" src="../../_images/Clinic01.png" style="width: 220px;" /></a>
+<p>Select the units for blood glucose values.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic02.png"><img alt="../../_images/Clinic02.png" src="../../_images/Clinic02.png" style="width: 300px;" /></a>
+<p>Select the language used for Nightscout display.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic03.png"><img alt="../../_images/Clinic03.png" src="../../_images/Clinic03.png" style="width: 300px;" /></a>
+<p>If the patient uses a pump that can send its basal rates, or has setup programmed basal rates, enable basal default display.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic04.png"><img alt="../../_images/Clinic04.png" src="../../_images/Clinic04.png" style="width: 300px;" /></a>
+<p>Enable all available plugins and save.<br />
+This will only modify the way you visualize Nightscout on the device you’re using. It will not interfere with the patient settings.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic05.png"><img alt="../../_images/Clinic05.png" src="../../_images/Clinic05.png" style="width: 300px;" /></a>
+</br>
+</section>
+<section id="identify-displayed-items">
+<h2>Identify displayed items<a class="headerlink" href="#identify-displayed-items" title="Permalink to this heading"></a></h2>
+<p>A typical DIY closed loop user display will look like this.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic06.png"><img alt="../../_images/Clinic06.png" src="../../_images/Clinic06.png" style="width: 600px;" /></a>
+<p>Last 48 hours are visible, you can select the upper graph time scale clicking on the corresponding length (2 to 24 hours). You can slide the lower graph selection to visualize the corresponding time period on the top graph.</p>
+<p>The rounded rectangle indicators are called “pills” and contain immediately visible indications, or more insights if you hover on them with the mouse.</p>
+<p>They can be automatically or manually updated by the patient or its closed loop/uploader device, else they will be empty or meaningless. As setting warning and urgent limit values for these pills is not always adjusted by the user in Nightscout variables, they might appear in yellow or red for values that are within normal usage.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic07.png"><img alt="../../_images/Clinic07.png" src="../../_images/Clinic07.png" style="width: 220px;" /></a>
+<p>Current blood glucose is displayed top left, the arrow only indicates the difference between the current measurement and the previous one (you’ll see the measurement age on the left of the view).</p>
+<a class="reference internal image-reference" href="../../_images/Clinic08.png"><img alt="../../_images/Clinic08.png" src="../../_images/Clinic08.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>IOB: Insulin on board, is calculated using the insulin duration parameter in the current profile if no external closed loop system is used, or by this external algorithm if any (OpenAPS/Loop).</p></li>
+<li><p>COB: Carbs on board are calculated by the absorption rate set in the profile.</p></li>
+<li><p>CAGE, SAGE, BAGE, IAGE are timers counting the time since last Cannula (infusion site), Sensor, Battery and Insulin cartridge change.</p></li>
+<li><p>BASAL displays the current basal rate.</p></li>
+</ul>
+<p>Uploading device battery level and Nightscout storage used space are not of clinical interest.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic09.png"><img alt="../../_images/Clinic09.png" src="../../_images/Clinic09.png" style="width: 150px;" /></a>
+<p>Connected pumps will show available insulin units, battery status and last registered activity.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic10.png"><img alt="../../_images/Clinic10.png" src="../../_images/Clinic10.png" style="width: 300px;" /></a>
+<p>DIY closed loop systems can be identified with the <a class="reference external" href="https://loopkit.github.io/loopdocs/faqs/algorithm-faqs/">Loop</a> (Loop) or <a class="reference external" href="https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic">OpenAPS</a> (OpenAPS, AndoidAPS, Trio, FreeAPS X, iAPS) pill. Only one will be enabled, if the other one appears it will normally show an exclamation mark. If a DIY closed loop system Nightscout doesn’t show any active pill, configuration needs to be fixed so that Nightscout receives all necessary data (patient responsibility).</p>
+<a class="reference internal image-reference" href="../../_images/Clinic11.png"><img alt="../../_images/Clinic11.png" src="../../_images/Clinic11.png" style="width: 400px;" /></a>
+<p>Basal display shows the programmed basal in dotted lines and the actual basal modulation. This is an example for the default basal display.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic12.png"><img alt="../../_images/Clinic12.png" src="../../_images/Clinic12.png" style="width: 400px;" /></a>
+<p>Loop adds rich details to Nightscout real time display, like food types and visual information.</p>
+<p>Hovering on the DIY closed loop system pill (Loop/OpenAPS) will show insights of the algorithm decisions.</p>
+<a class="reference internal image-reference" href="../../_images/Clinic13.png"><img alt="../../_images/Clinic13.png" src="../../_images/Clinic13.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="next-step">
+<h2>Next step:<a class="headerlink" href="#next-step" title="Permalink to this heading"></a></h2>
+<p>Follow the link below.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../reports/"><span class="doc std std-doc">Generate reports</span></a>.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

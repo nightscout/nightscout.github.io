@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightscout Security and Privacy &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Admin Tools" href="../admin_tools/" />
+    <link rel="prev" title="Create Reports" href="../reports/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nightscout Security and Privacy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#security-and-safekeeping">Security and safekeeping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#https-and-certificate-errors">HTTPS and certificate errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#administration-messages">Administration messages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i-m-seeing-a-message-about-the-api-secret-being-weak">I’m seeing a message about the API_SECRET being weak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-m-seeing-a-message-about-authentication-failures">I’m seeing a message about authentication failures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-m-seeing-a-message-nightscout-is-readable-by-the-world">I’m seeing a message Nightscout is readable by the world</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#renaming-the-nightscout-site">Renaming the Nightscout site</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-turn-off-unauthorized-access">How to Turn Off Unauthorized Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-authentication-tokens-for-users">Create Authentication Tokens for Users</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#roles">Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-token">Create a Token</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#developers-api-authorization">Developers: API authorization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nightscout Security and Privacy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/security.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nightscout-security-and-privacy">
+<h1>Nightscout Security and Privacy<a class="headerlink" href="#nightscout-security-and-privacy" title="Permalink to this heading"></a></h1>
+<p>Nightscout security model is based on the following assumptions:</p>
+<ul class="simple">
+<li><p>The users of Nightscout only use it to process information about themselves or someone they’re legally responsible for and thus own all of the data being stored in Nightscout.</p></li>
+<li><p>Given the user / operator of Nightscout is assumed to have full ownership of the data stored in Nightscout, it is assumed the user has full responsibility around the use and sharing of the data.</p></li>
+<li><p>Nightscout provides a set of APIs for reading and writing data into the Nightscout database. Nightscout itself does not directly interface with any devices. Nightscout users should verify any applications using the APIs to process the data in Nightscout have been implemented in a secure fashion and have data validation processes in place in case an unauthorized user gains access to Nightscout and alters the data.</p></li>
+<li><p>If unauthorized users gain access to the server being used to host Nightscout, the database used with Nightscout or any device used to access the Nightscout APIs, the entire system’s security has to be considered compromised and the user must assume any data stored in the system might be altered and thus should not be trusted.</p></li>
+</ul>
+<div class="warning admonition">
+<p class="admonition-title">Personal use only</p>
+<p>The system has not been designed for scenarios where a third party operates a Nightscout installation on behalf of others and if such installations are made, both the users and operators of such installations need to understand there is a large body of legislation across the world that covers use cases and data storage enabled by Nightscout and the liability issues around such installations are extremely complicated.</p>
+</div>
+</br>
+<section id="security-and-safekeeping">
+<h2>Security and safekeeping<a class="headerlink" href="#security-and-safekeeping" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use the same email address for all accounts so you’ll have access to all your accounts after installation. <strong>Do not use a disposable email address</strong> - use something you know you can access later.</p></li>
+<li><p>Use a safe password for all accounts related to Nightscout, including the password for the email account for the accounts. We highly recommend using a password manager such as 1Password and allowing it to generate the passwords for you.</p></li>
+<li><p>Do not reuse the same password for all your accounts.</p></li>
+<li><p>Do not use your Dexcom or CareLink user name or password for Nightscout components.</p></li>
+<li><p>Do not use the API_SECRET for the Atlas database password.</p></li>
+<li><p>Do not share the API_SECRET or access tokens with administration privileges to anyone, ever. If you need to grant access to Nightscout, see below for instructions how to create access tokens for this purpose.</p></li>
+<li><p>Do not use Nightscout or any related applications on rooted and/or otherwise compromised devices, and ensure you always have the latest operating system and virus protection updates installed.</p></li>
+</ul>
+</br>
+</section>
+<section id="https-and-certificate-errors">
+<h2>HTTPS and certificate errors<a class="headerlink" href="#https-and-certificate-errors" title="Permalink to this heading"></a></h2>
+<p>One of the core security mechanisms on web is the SSL encryption applied to HTTP connections. When installed to Heroku, Nightscout by default forces connections to use HTTPS, thus ensuring the connection is encrypted. For secure Nightscout use, it’s crucial that you assume something is wrong if you ever see your browser complain the SSL certificate of your Nightscout site does not match or work as expected by the browser. This can be a sign of a so called Man In The Middle (MITM) attack and proceeding with the problematic certificate will subsequently compromise your Nightscout site. If you see an error related to SSL, you should immediately rename the site (see below for instructions).</p>
+</br>
+</section>
+<section id="administration-messages">
+<h2>Administration messages<a class="headerlink" href="#administration-messages" title="Permalink to this heading"></a></h2>
+<p>Nightscout 14.2 introduced a new feature called Admin Notifies, which can warn you about issues with Nightscout installation and security issues.</p>
+<p>If you see the red megaphone in your navigation bar, it means you have messages in the queue.</p>
+<a class="reference internal image-reference" href="../../_images/Security02.png"><img alt="../../_images/Security02.png" src="../../_images/Security02.png" style="width: 600px;" /></a>
+<p>You have to be authenticated to Nightscout using the API_SECRET or an authentication token that has administration access to read the messages.</p>
+<a class="reference internal image-reference" href="../../_images/Security03.png"><img alt="../../_images/Security03.png" src="../../_images/Security03.png" style="width: 300px;" /></a>
+<p>There are multiple types of messages that might be shown:</p>
+</br>
+<section id="i-m-seeing-a-message-about-the-api-secret-being-weak">
+<h3>I’m seeing a message about the API_SECRET being weak<a class="headerlink" href="#i-m-seeing-a-message-about-the-api-secret-being-weak" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/Security04.png"><img alt="../../_images/Security04.png" src="../../_images/Security04.png" style="width: 300px;" /></a>
+<p>This message is shown when cryptographic analysis if the API_SECRET shows the secret is easily guessable by a computer and should be changed. Things you can do to have this message go away:</p>
+<ul class="simple">
+<li><p>The API_SECRET must be at least 12 characters long, but making it even longer makes it more secure</p></li>
+<li><p>Use a mix of small and CAPITAL letters, numbers and non-alphanumeric characters such as !#%&amp;/()= in the API_SECRET
+<em>Note: make sure your uploader and downloaders can handle special characters, you might need to express them using <a class="reference external" href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> for example an API_SECRET like <code class="docutils literal notranslate"><span class="pre">D0n't*H4ck&#64;M3%</span></code> would be expressed as: <code class="docutils literal notranslate"><span class="pre">D0n%27t%2AH4ck%40M3%25</span></code></em></p></li>
+<li><p>Consider generating the API_SECRET using a password manager</p></li>
+</ul>
+</br>
+</section>
+<section id="i-m-seeing-a-message-about-authentication-failures">
+<h3>I’m seeing a message about authentication failures<a class="headerlink" href="#i-m-seeing-a-message-about-authentication-failures" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/Security06.png"><img alt="../../_images/Security06.png" src="../../_images/Security06.png" style="width: 300px;" /></a>
+<p>This is highly likely caused by you having installed an app on some device with the wrong API_SECRET or access token, and the app trying to authenticate to your Nightscout, or you or one of the family members have just tried to sign into Nightscout with wrong credentials.</p>
+<p>If you have apps running that use the Nightscout REST API, check you have the correct API_SECRET and/or access token configured to each.</p>
+<p>If the message keeps appearing unexpectedly or is reported against multiple IP numbers, it’s possible someone is trying to brute force attack your installation and guess your API_SECRET to be able to modify data in your Nightscout. In this situation, we highly recommend you rename the Nightscout site to change it’s address and pick a name that’s hard to guess.</p>
+</br>
+</section>
+<section id="i-m-seeing-a-message-nightscout-is-readable-by-the-world">
+<h3>I’m seeing a message Nightscout is readable by the world<a class="headerlink" href="#i-m-seeing-a-message-nightscout-is-readable-by-the-world" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/Security05.png"><img alt="../../_images/Security05.png" src="../../_images/Security05.png" style="width: 300px;" /></a>
+<p>This means the site shows the CGM data to users who can guess the site address without authentication. Note Nightscout never allows data to be saved or edited without authentication, so this is not necessarily a problem depending on how hard your site address is to guess and how you want the information to be shared.</p>
+<p>If you want to have the site require authentication, read the “How to Turn Off Unauthorized Access” section below.</p>
+</br>
+</section>
+</section>
+<section id="renaming-the-nightscout-site">
+<h2>Renaming the Nightscout site<a class="headerlink" href="#renaming-the-nightscout-site" title="Permalink to this heading"></a></h2>
+<p>See the instructions in the specific platform section for a new Nightscout creation.</p>
+<p>Once done, make sure all apps (uploaders and downloaders) are updated accordingly.</p>
+</br>
+</section>
+<section id="how-to-turn-off-unauthorized-access">
+<h2>How to Turn Off Unauthorized Access<a class="headerlink" href="#how-to-turn-off-unauthorized-access" title="Permalink to this heading"></a></h2>
+<div class="admonition-privacy-warning admonition">
+<p class="admonition-title">Privacy warning</p>
+<p>In a default setup, <strong>anyone</strong> with your Nightscout URL can view your site.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Make sure <a class="reference internal" href="../downloaders/"><span class="doc std std-doc">the app you use to see your data</span></a> can handle a secured Nightscout site.</p>
+</div>
+<p>To Take Advantage of Roles, Turn Off Unauthorized Access to Your Site:</p>
+<p>If you want to ensure that ONLY someone with permission to view your site (e.g., a token) is able to view the data, you should configure the <a class="reference internal" href="../setup_variables/#auth-default-roles"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">AUTH_DEFAULT_ROLES</span></code></span></a> variable. Set the value as: <code class="docutils literal notranslate"><span class="pre">denied</span></code>.</p>
+<p>Edit (or add) this variable and set it to <code class="docutils literal notranslate"><span class="pre">denied</span></code> (see <a class="reference internal" href="../setup_variables/#nightscout-configuration"><span class="std std-ref">here</span></a> how to edit variables).</p>
+<a class="reference internal image-reference" href="../../_images/Admin03.png"><img alt="../../_images/Admin03.png" src="../../_images/Admin03.png" style="width: 600px;" /></a>
+<p>This creates a scenario in which a token will be required for all access (even only view).</p>
+<a class="reference internal image-reference" href="../../_images/Admin02.png"><img alt="../../_images/Admin02.png" src="../../_images/Admin02.png" style="width: 600px;" /></a>
+<p>In order to make your site visible to anybody, set  <a class="reference internal" href="../setup_variables/#auth-default-roles"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">AUTH_DEFAULT_ROLES</span></code></span></a> variable to <code class="docutils literal notranslate"><span class="pre">readable</span></code>.</p>
+</br>
+</section>
+<section id="create-authentication-tokens-for-users">
+<h2>Create Authentication Tokens for Users<a class="headerlink" href="#create-authentication-tokens-for-users" title="Permalink to this heading"></a></h2>
+<p><em><strong>Note: authentication tokens are also called access tokens</strong></em></p>
+<div class="admonition-changing-api-secret admonition">
+<p class="admonition-title">Changing API_SECRET</p>
+<p>If you change your <a class="reference internal" href="../setup_variables/#api-secret"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code></span></a> all your tokens will change. Make sure you update your devices and send the new token link to those you allowed to access your Nightscout</p>
+</div>
+<p>To access the Authentication options, click the settings panel (three horizontal bars in the top right) in your website and select Admin Tools. The Authentication options are at the top of the Admin page. (Note: you must be logged in with your <code class="docutils literal notranslate"><span class="pre">API</span> <span class="pre">SECRET</span></code> to access these tools.)</p>
+<a class="reference internal image-reference" href="../../_images/Admin04.png"><img alt="../../_images/Admin04.png" src="../../_images/Admin04.png" style="width: 300px;" /></a>
+</br>
+<p>You will see several predefined roles:</p>
+<a class="reference internal image-reference" href="../../_images/Admin01.png"><img alt="../../_images/Admin01.png" src="../../_images/Admin01.png" style="width: 700px;" /></a>
+</br>
+<section id="roles">
+<h3>Roles<a class="headerlink" href="#roles" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">admin</span></code></strong>: full access</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">careportal</span></code></strong>: can view the site and make CarePortal/treatment entries</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">readable</span></code></strong>: read-only access; no ability to make CarePortal/treatment entries. This user CAN see reports and profile information.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">denied</span></code></strong>: no access (this role only works if the <code class="docutils literal notranslate"><span class="pre">AUTH_DEFAULT_ROLES</span></code> setting is also <code class="docutils literal notranslate"><span class="pre">denied</span></code>. You can’t have a site that is readable to everyone and create a “denied” token for a specific user.)</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">devicestatus-upload</span></code></strong>: used by devices</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>There is currently no way to limit a user so that he cannot view the Reports section if he has access to the site. Time/date-based roles are not currently possible.</p>
+</div>
+</br>
+</section>
+<section id="create-a-token">
+<h3>Create a Token<a class="headerlink" href="#create-a-token" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Click the “Add New Subject” button.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Admin00.png"><img alt="../../_images/Admin00.png" src="../../_images/Admin00.png" style="width: 700px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Fill in the name of the subject and the “role” you are giving this subject (from the list of roles shown above). Note you should only grant the <code class="docutils literal notranslate"><span class="pre">readable</span></code> role for users who do not need to save or edit data in Nightscout. For example, you might want to share the site to a school nurse, but not have him able edit the data.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Admin05.png"><img alt="../../_images/Admin05.png" src="../../_images/Admin05.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>An <code class="docutils literal notranslate"><span class="pre">admin</span></code> token is necessary for AAPS to upload using the API V3.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Admin05b.png"><img alt="../../_images/Admin05b.png" src="../../_images/Admin05b.png" style="width: 300px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Click save.</p></li>
+<li><p>The token will be shown. You can use it in two different ways:</p>
+<ul>
+<li><p>Copy the token URL (right-click on it in the browser and select the option to copy the link address) and provide it to the user (e.g., paste it into an email). If the user enters the entire URL (with token), the token will be in effect.</p></li>
+<li><p>Copy the token string (in the example below <code class="docutils literal notranslate"><span class="pre">school-a595d5f0aeff64c0</span></code>) and use it for authentication at site opening, instead of the API secret (Nightscout minimum version 14.1.0 required).</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Admin06.png"><img alt="../../_images/Admin06.png" src="../../_images/Admin06.png" style="width: 700px;" /></a>
+</br>
+<p>You can also add the token to the site URL to authenticate using a token. Your site link with token will look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://yoursitename.yourplatform.com/?token=school-a595d5f0aeff64c0</span></code></p>
+<p>Anybody with this link can use your Nightscout with the role defined for this token.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If the user copies only your core URL into a browser, and your site is readable by default, the token will be bypassed. (Possible strategies to ensure the user puts the role-based URL into a browser include using a <a class="reference external" href="https://tinyur.com/app">tinyurl</a> or <a class="reference external" href="https://bitly.com">bit.ly</a>.)</p>
+</div>
+<ul class="simple">
+<li><p>You can edit a subject by clicking the edit icon, making changes, and saving.</p></li>
+<li><p>You can delete a subject by clicking the red <strong><code class="docutils literal notranslate"><span class="pre">X</span></code></strong> icon to remove the subject from the list.</p></li>
+</ul>
+<p>See <a class="reference internal" href="../downloaders/"><span class="doc std std-doc">how to setup your downloaders (followers)</span></a> with a secured site.</p>
+</br>
+</section>
+</section>
+<section id="developers-api-authorization">
+<h2>Developers: API authorization<a class="headerlink" href="#developers-api-authorization" title="Permalink to this heading"></a></h2>
+<p>See <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/wiki/API-v1-Security">this page</a> for how to authenticate your app in the API V1 calls.</p>
+<p>The API documentation is visible on your Nightscout site using this extension to your site address:</p>
+<p>https://YOUR-SITE.com/api-docs/ and https://YOUR-SITE.com/api3-docs/.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

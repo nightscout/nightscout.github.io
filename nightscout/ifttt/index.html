@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IFTTT Integration &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Remote notifications" href="../pushover/" />
+    <link rel="prev" title="Closed loop systems" href="../close_loop/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IFTTT Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-get-your-api-secret-hash">Step 1: Get your API Secret Hash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-create-your-applets">Step 2: Create your “Applets”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-enable-ifttt-in-your-nightscout-site">Step 3: Enable IFTTT in your Nightscout site</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-install-ifttt-app-on-your-iphone-android">Step 4: Install IFTTT app on your iPhone/Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extra-credit-alexa-integration">Extra Credit: Alexa integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">IFTTT Integration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/ifttt.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ifttt-integration">
+<h1>IFTTT Integration<a class="headerlink" href="#ifttt-integration" title="Permalink to this heading"></a></h1>
+<p>If This, Then That (IFTTT) is a useful Nightscout integration.  By using IFTTT, you can have single button presses on your iPhone that will set an override, log a cannula change, log a sensor change and much more.</p>
+<section id="step-1-get-your-api-secret-hash">
+<h2>Step 1: Get your API Secret Hash<a class="headerlink" href="#step-1-get-your-api-secret-hash" title="Permalink to this heading"></a></h2>
+<p>First we need to gather one thing called your “hashed API Secret”. In your internet browser, open a “console” window while viewing your Nightscout site.  Make sure you have “authenticated” your site by using your API secret in the Nightscout settings area (hint: if you see a little padlock in the upper left corner of the site, you haven’t authenticated it).  Refresh the site and your hashed secret key will be shown as “apisecrethash: “xxxxxxxxxx…””</p>
+<p><strong>For Safari users on Mac</strong>, you can open the console window by selecting “Develop” from the Safari top menu, and then “Show Page Source” (if you do not see “Develop” in the top menu, activate it by going to Safari &gt; Preferences… &gt; Advanced, and checking the “Show Develop menu in menu bar” option).  If you’re having problems seeing the apisecrethash, click the little grey triangle next to the “status isAuthenticated” line and the objects below it will display (see screenshot).  Your hashed API secret can be copied and pasted from that line, as shown below.  Save that somewhere easy to get to again, because you will be using it later.</p>
+<a class="reference internal image-reference" href="../../_images/hashed_API.png"><img alt="../../_images/hashed_API.png" src="../../_images/hashed_API.png" style="width: 750px;" /></a>
+<p><strong>For Chrome users</strong>, the console window is found through the View &gt;&gt; Developer &gt;&gt; View Source. Click on the Console tab and scroll to find the “status isAuthenticated” row to find your apisecrethash. Copy your API hash to somewhere you can retreive it again, we will be copy/pasting it in Step 2.</p>
+<a class="reference internal image-reference" href="../../_images/hashed_API2.png"><img alt="../../_images/hashed_API2.png" src="../../_images/hashed_API2.png" style="width: 750px;" /></a>
+</section>
+<section id="step-2-create-your-applets">
+<h2>Step 2: Create your “Applets”<a class="headerlink" href="#step-2-create-your-applets" title="Permalink to this heading"></a></h2>
+<p>IFTTT calls their little actions that you’ll create an “applet”. I have no idea why. But, I will go along and use their terminology so we are all consistent. We are basically interested in creating applets that will be buttons on your phone to do cool things in Nightscout. So, you’ll have a button that will log when you changed your sensor last…letting you see in Nightscout easily just how old a sensor is at any given time. Or you can create a button that will turn on an “exercise” override that you already programmed into your kid’s Loop app. So, let’s make our first applet (aka button).</p>
+<ul class="simple">
+<li><p>Get an <a class="reference external" href="https://ifttt.com/join">IFTTT account</a></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_signup.png"><img alt="../../_images/IFTTT_signup.png" src="../../_images/IFTTT_signup.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Login to your IFTTT.com account and select click <a class="reference external" href="https://ifttt.com/create">this link</a> to get to the page for creating your first “New Applet”. (You can also get to this Applet creation page by selecting your Account icon in the upper right of the IFTTT website, then clicking on “Create”.)</p></li>
+<li><p>In the screen that appears, click on the black “+this” part of the screen</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_this.png"><img alt="../../_images/IFTTT_this.png" src="../../_images/IFTTT_this.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>In the next screen, type “button” in the search field and then click on the red box labelled “ButtonWidget”</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_button.png"><img alt="../../_images/IFTTT_button.png" src="../../_images/IFTTT_button.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Connect the button widget by clicking on the large black”connect” button twice, once on the main screen and then second on the pop-up window that will appear immediately after that. (You will only have to “connect” the widgets for the first applet you make.  After that the widgets will already connected to your IFTTT account.)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_connect1.png"><img alt="../../_images/IFTTT_connect1.png" src="../../_images/IFTTT_connect1.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Click on the large red “button press” box</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_buttonpress.png"><img alt="../../_images/IFTTT_buttonpress.png" src="../../_images/IFTTT_buttonpress.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Click on the black “+that” text</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_that.png"><img alt="../../_images/IFTTT_that.png" src="../../_images/IFTTT_that.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Enter “Webhooks” in the search field and click on the Webhooks app</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks1.png"><img alt="../../_images/webhooks1.png" src="../../_images/webhooks1.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Connect the Webhooks app</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks2.png"><img alt="../../_images/webhooks2.png" src="../../_images/webhooks2.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Select the blue “Make a Web Request” box</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks24.png"><img alt="../../_images/webhooks24.png" src="../../_images/webhooks24.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Now you will have a blank web request template to complete.  Screenshot below is an example of a completed recipe for eating soon IFTTT action. There are four parts you will need to fill in, and they are described below the screenshot.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks25.png"><img alt="../../_images/webhooks25.png" src="../../_images/webhooks25.png" style="width: 650px;" /></a>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>URL
+<code class="docutils literal notranslate"><span class="pre">https://yoursite.platform.fqd/api/v1/treatments.json</span></code></br>(for all IFTTT recipes that are NOT remote overrides…so things like cannula changes, sensor changes, pump battery changes, etc.)</br></br>
+Change the your URL to your actual site’s info.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Method
+The method will be <code class="docutils literal notranslate"><span class="pre">POST</span></code></p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Content Type
+The content type will be <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Body
+The content of the body will depend on the action that you would like this particular button press to perform. While many recipes are available, any recipe that log carbs to NS will only display the carbs in Nightscout…Loop will not “use” those carbs in treatment or prediction math. The display of carbs in NS though may still be helpful for remote care givers to leave an indication that a low is being noticed and treated. Some sample content for actions that may be useful in Loop:</br></br>
+<strong>Pump Site Change</strong></br>
+{“enteredBy”: “IFTTT-button”, “eventType”: “Site Change”, “duration”: 0, “secret”: “your_hashed_api_goes_here!!!”}</br></br>
+<strong>CGM Sensor Start</strong></br>
+{“enteredBy”: “IFTTT-button”, “eventType”: “Sensor Start”, “duration”: 0, “secret”: “your_hashed_api_goes_here!!!”}</br></br>
+<strong>Note</strong></br>
+{“enteredBy”: “IFTTT-button”, “eventType”: “Note”, “notes”: “Hi mom, please don’t text me for a bit.  I’m taking a test.”, “secret”: “your_hashed_api_goes_here!!!”}</br></br></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Special note for IFTTT to set a Remote Override with dev branch
+Triggering a remote override with IFTTT takes a couple considerations;</br></br></p>
+<ol class="arabic simple">
+<li><p>You have followed <a class="reference external" href="https://loopkit.github.io/loopdocs/nightscout/remote-overrides/">the directions for setting up remote overrides</a> in Nightscout already.</br></br></p></li>
+<li><p>Remote overrides will use <strong><code class="docutils literal notranslate"><span class="pre">https://yoursite.herokuapp.com/api/v2/notifications/loop</span></code></strong> for the URL line of the applet. Notice that is different from the other type of applets’ URL.</br></br></p></li>
+<li><p>The Body message of the applet needs to match the override already programmed in Loop app; the reason, reasonDisplay, and duration all need to match what is preset in your Loop app. The “duration” is giving in minutes in the body message (vs hours in Loop), and if the override is one that is “enabled indefinitely” then the duration is “infinite”. The “reason” is the name of the override but NO EMOJI, and the “reasonDisplay” is the override name with the emoji. Check out the samples Body messages for overrides below. You will have to edit your body messages to match your reason and reasonDisplay. The target range and duration of the override does not need to be specified. </br></br>
+<strong>Body message for override named “hormones”</strong></br>
+{“eventType”: “Temporary Override”, “reason”: “hormones”, “reasonDisplay”: “🧟‍♀️ hormones”, “secret”: “your_hashed_api_goes_here!!!”}</br></br>
+<strong>Body message for override named “running”</strong></br>
+{“eventType”: “Temporary Override”, “reason”: “running”, “reasonDisplay”: “🏃‍♀️ running”, “secret”: “your_hashed_api_goes_here!!!”}</br></br>
+<strong>Body message for override named “Low Treatment”</strong></br>
+{“eventType”: “Temporary Override”, “reason”: “Low Treatment”, “reasonDisplay”: “🍬 Low Treatment”, “secret”: “your_hashed_api_goes_here!!!”}</br></br>
+<strong>Body message to cancel any override</strong></br>
+{“eventType”: “Temporary Override Cancel”, “secret”: “your_hashed_api_goes_here!!!”}</br></br></p></li>
+</ol>
+</div>
+<ul class="simple">
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Action</span></code> button on the bottom of the screen when you finish.</p></li>
+<li><p>Now is your chance to change the title of your applet now to something meaningful.  You can turn on notifications, too, using the slider shown. If you turn on the notifications, you will get an alert on your phone and pebble watch when the button press has been successfully deployed.  Finish the IFTTT button by clicking on the Finish button that appears.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks26.png"><img alt="../../_images/webhooks26.png" src="../../_images/webhooks26.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Repeat the setup for new applets for as many automated actions/overrides as you would like to setup.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks27.png"><img alt="../../_images/webhooks27.png" src="../../_images/webhooks27.png" style="width: 650px;" /></a>
+</section>
+<section id="step-3-enable-ifttt-in-your-nightscout-site">
+<h2>Step 3: Enable IFTTT in your Nightscout site<a class="headerlink" href="#step-3-enable-ifttt-in-your-nightscout-site" title="Permalink to this heading"></a></h2>
+<p>Now that we have cool applets made, we need to give Nightscout some information so that it will accept commands from our applets. It’s pretty simple to do…just a couple additions to your Heroku settings.</p>
+<ul class="simple">
+<li><p>Find your Maker Key by going to your IFTTT account icon in upper right corner, choose “My services” and then click on the Webhooks service, settings.</p></li>
+</ul>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../../_images/webhooks10.png"><img alt="../../_images/webhooks10.png" src="../../_images/webhooks10.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>You will see your Maker Key as the last part of the URL after the <code class="docutils literal notranslate"><span class="pre">use/</span></code>; copy and paste that last part (the red circled part as shown)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks11.png"><img alt="../../_images/webhooks11.png" src="../../_images/webhooks11.png" style="width: 650px;" /></a>
+<ul class="simple">
+<li><p>Login to your Nightscout site host (azure or heroku) and (1) add your Maker Key to the MAKER_KEY line and (2) add “maker” to your ENABLE line.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_NSkey.png"><img alt="../../_images/IFTTT_NSkey.png" src="../../_images/IFTTT_NSkey.png" style="width: 650px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IFTTT_enable.png"><img alt="../../_images/IFTTT_enable.png" src="../../_images/IFTTT_enable.png" style="width: 650px;" /></a>
+</section>
+<section id="step-4-install-ifttt-app-on-your-iphone-android">
+<h2>Step 4: Install IFTTT app on your iPhone/Android<a class="headerlink" href="#step-4-install-ifttt-app-on-your-iphone-android" title="Permalink to this heading"></a></h2>
+<p>Now that all the hard work is done, we can take easy street and just add that work to the phone via the IFTTT app. By accessing the IFTTT widget on your iPhone, you’ll be able to easily and quickly access the useful buttons you’ve just created.</p>
+<ul class="simple">
+<li><p>Download the IFTTT app on your phone and log in using your IFTTT account.</p></li>
+<li><p>For iPhone users, if you swipe right from your iPhone’s home screen, you will have the Today view showing.  Scroll to the bottom, click “edit”. This should show a list of existing widgets, followed by a list of “more widgets” with green + signs.  Click on the IFTTT’s green circle and the widget will be moved to the top, active widgets area.  You can hold your finger on the three left lines of the IFTTT widget row to drag it to the top of your widget panel, if you prefer to have it as the top-most widget.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_today.PNG"><img alt="../../_images/IFTTT_today.PNG" src="../../_images/IFTTT_today.PNG" style="width: 550px;" /></a>
+<p>If you end up with more than four IFTTT applets, they will appear in reverse-order of when they were created…which may not be the same as you’d prefer them to appear on your widget bar.  If you’d like to reorder them:</p>
+<ul class="simple">
+<li><p>go into your iPhone’s IFTTT app</p></li>
+<li><p>click on My Applets</p></li>
+<li><p>click on the gear icon in upper left of screen</p></li>
+<li><p>click on Widgets</p></li>
+<li><p>click on the pencil icon in upper right of screen</p></li>
+<li><p>click and hold the three lines that appear on the right side of the widget that you want to move.  Drag the widget to the order in the list that you’d like it to appear in your widget quickscreen.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_reorder.png"><img alt="../../_images/IFTTT_reorder.png" src="../../_images/IFTTT_reorder.png" style="width: 550px;" /></a>
+</section>
+<section id="extra-credit-alexa-integration">
+<h2>Extra Credit: Alexa integration<a class="headerlink" href="#extra-credit-alexa-integration" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Since you have IFTTT/Maker requests working, you can get it to work with anything that supports IFTTT, including Alexa. You will need to add “alexa” to your ENABLE line in your Heroku settings.  And then repeat the steps above, but instead of using “ButtonWidget” service we started with earlier (the “+if” part of the setup)…you will use the “AmazonAlexa” service.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/alexa_maker.png"><img alt="../../_images/alexa_maker.png" src="../../_images/alexa_maker.png" style="width: 750px;" /></a>
+<ul class="simple">
+<li><p>Alexa requests do not need underscores, FYI.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

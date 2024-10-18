@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Northflank Database &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Choose your platform" href="../../../nightscout/platform/" />
+    <link rel="prev" title="Railway Database" href="../../railway/database/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Northflank Database</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-an-account-with-northflank">Create an account with Northflank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-database">Create your database</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Northflank Database</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/northflank/database.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="northflank-database">
+<h1>Northflank Database<a class="headerlink" href="#northflank-database" title="Permalink to this heading"></a></h1>
+</br>
+<div class="seealso admonition">
+<p class="admonition-title">Too complicated? Not what you’re looking for?</p>
+<p>Consider a hosted Nightscout service! Check for easier solutions <a class="reference internal" href="../../../#nightscout-as-a-service"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="northflank-mongo-database">Northflank Mongo Database</h2>
+<p class="sd-card-text"><img alt="Northflank" src="../../../_images/Northflank.png" /> <img alt="MongoDB" src="../../../_images/MongoDB.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Northflank offers a Mongo database.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Simple to create</p></li>
+<li><p class="sd-card-text">Economic reliable database</p></li>
+<li><p class="sd-card-text">High quality Mongo database with a replica set</p></li>
+<li><p class="sd-card-text">You can deploy up to $20/mo worth of free resources on Northflank’s managed cloud</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Heroku Nightscout might crash with database timeouts</p></li>
+</ul>
+</div>
+</div>
+</br>
+<p>If you already have a Northflank account, <a class="reference external" href="https://app.northflank.com/login">log in</a> and <a class="reference internal" href="#create-your-database">continue (skip new account creation)</a>.</p>
+<p><strong>Else</strong></p>
+<section id="create-an-account-with-northflank">
+<h2>Create an account with Northflank<a class="headerlink" href="#create-an-account-with-northflank" title="Permalink to this heading"></a></h2>
+<p>a) Sign-up to <a class="reference external" href="https://app.northflank.com/signup">Northflank</a> in a new browser tab.<br />
+Fill all required fields and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">up</span></code>.<br />
+You can also sign up with Google, GitHub, … if you wish.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank00a.png"><img alt="../../../_images/Northflank00a.png" src="../../../_images/Northflank00a.png" style="width: 400px;" /></a>
+</br>
+<p>Northflank will send you an email to complete the registration.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank00b.png"><img alt="../../../_images/Northflank00b.png" src="../../../_images/Northflank00b.png" style="width: 500px;" /></a>
+</br>
+<p>b) Open your email and confirm with <code class="docutils literal notranslate"><span class="pre">Verify</span> <span class="pre">email</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank00c.png"><img alt="../../../_images/Northflank00c.png" src="../../../_images/Northflank00c.png" style="width: 500px;" /></a>
+</br>
+<p>c) Click <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">theme</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank04.png"><img alt="../../../_images/Northflank04.png" src="../../../_images/Northflank04.png" style="width: 500px;" /></a>
+</br>
+<p>d) Select <code class="docutils literal notranslate"><span class="pre">Skip</span> <span class="pre">for</span> <span class="pre">now</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank05.png"><img alt="../../../_images/Northflank05.png" src="../../../_images/Northflank05.png" style="width: 500px;" /></a>
+</br>
+<p>e) Click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">free</span> <span class="pre">project</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/Northflank06.png"><img alt="../../../_images/Northflank06.png" src="../../../_images/Northflank06.png" style="width: 200px;" /></a>
+</br>
+<p>f) Invent a project name (<code class="docutils literal notranslate"><span class="pre">nightscout</span></code> for example) and select a region (Europe or US) then click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">project</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/Northflank07.png"><img alt="../../../_images/Northflank07.png" src="../../../_images/Northflank07.png" style="width: 500px;" /></a>
+</br>
+</br>
+</section>
+<section id="create-your-database">
+<h2>Create your database<a class="headerlink" href="#create-your-database" title="Permalink to this heading"></a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Costs</p>
+<ul class="simple">
+<li><p>The Mongo database is free, you only pay for the storage</p></li>
+<li><p>Minimum price is 0.3$/month, cost is then 0.3$/GiB/month</p></li>
+<li><p>A good database is important for your Nightscout site reliability</p></li>
+</ul>
+</div>
+</br>
+<p>a) Open a new browser page <a class="reference external" href="https://northflank.com/dbaas/mongodb-on-northflank">https://northflank.com/dbaas/mongodb-on-northflank</a> and click <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">MongoDB</span> <span class="pre">on</span> <span class="pre">Northflank</span> <span class="pre">for</span> <span class="pre">free</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB01.png"><img alt="../../../_images/NorthflankDB01.png" src="../../../_images/NorthflankDB01.png" style="width: 300px;" /></a>
+</br>
+<p>b) Select your account and your project name (see below if you don’t have one yet).</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB02.png"><img alt="../../../_images/NorthflankDB02.png" src="../../../_images/NorthflankDB02.png" style="width: 500px;" /></a>
+</br>
+<p>If you don’t have a project in Northflank, create a new one with <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">project</span></code> and then select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">free</span> <span class="pre">project</span></code> else skip to <strong>c)</strong>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB02a.png"><img alt="../../../_images/NorthflankDB02a.png" src="../../../_images/NorthflankDB02a.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/Northflank06.png"><img alt="../../../_images/Northflank06.png" src="../../../_images/Northflank06.png" style="width: 200px;" /></a>
+<p>Invent a project name (<code class="docutils literal notranslate"><span class="pre">nightscout</span></code> for example) and select a region (Europe or US) then click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">project</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/Northflank07.png"><img alt="../../../_images/Northflank07.png" src="../../../_images/Northflank07.png" style="width: 500px;" /></a>
+</br>
+<p>c) Select <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">addons</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB07.png"><img alt="../../../_images/NorthflankDB07.png" src="../../../_images/NorthflankDB07.png" style="width: 500px;" /></a>
+</br>
+<p>d) Select <code class="docutils literal notranslate"><span class="pre">MongoDB</span></code> and type a name for your addon (not important) in <code class="docutils literal notranslate"><span class="pre">Addon</span> <span class="pre">name</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB08.png"><img alt="../../../_images/NorthflankDB08.png" src="../../../_images/NorthflankDB08.png" style="width: 600px;" /></a>
+</br>
+<p>e) Select a Mongo version if you want.</p>
+<p>All Mongo versions are supported by Nightscout: you can select the one you prefer.<br />
+Since recent versions don’t add value, you can safely select an older version like 5.0.24.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB10.png"><img alt="../../../_images/NorthflankDB10.png" src="../../../_images/NorthflankDB10.png" style="width: 600px;" /></a>
+</br>
+<p><strong>Important:</strong> If you will use this database with a Nightscout that is not in Northflank, you must enable <code class="docutils literal notranslate"><span class="pre">Publicly</span> <span class="pre">accessible</span></code>.<br />
+If you will deploy Nightscout in Northflank, you can leave it disabled.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB06.png"><img alt="../../../_images/NorthflankDB06.png" src="../../../_images/NorthflankDB06.png" style="width: 600px;" /></a>
+</br>
+<p>f) Select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">addon</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB03.png"><img alt="../../../_images/NorthflankDB03.png" src="../../../_images/NorthflankDB03.png" style="width: 600px;" /></a>
+</br>
+<p>g) If you haven’t yet, you need to add a payment method into Northflank.<br />
+You will be charged monthly for your database (0.3$ up to 1 GiB, then 0.3$/GiB).</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank23.png"><img alt="../../../_images/Northflank23.png" src="../../../_images/Northflank23.png" style="width: 400px;" /></a>
+</br>
+<p>g) Enter your password and click <code class="docutils literal notranslate"><span class="pre">Confirm</span></code> to see your MongoDB information.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB04.png"><img alt="../../../_images/NorthflankDB04.png" src="../../../_images/NorthflankDB04.png" style="width: 400px;" /></a>
+</br>
+<p>h) Click the copy icon of the line <code class="docutils literal notranslate"><span class="pre">MONGO_SRV</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB05.png"><img alt="../../../_images/NorthflankDB05.png" src="../../../_images/NorthflankDB05.png" style="width: 600px;" /></a>
+</br>
+<div class="warning admonition">
+<p class="admonition-title">This is an important information</p>
+<p>Now that you have <strong>copied</strong> the resulting <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> string, keep it in a <strong>safe place</strong>, you will need it later.</p>
+</div>
+</br>
+<p>i) Wait until your database is fully created. It might take some time.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankDB09.png"><img alt="../../../_images/NorthflankDB09.png" src="../../../_images/NorthflankDB09.png" style="width: 600px;" /></a>
+</br></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

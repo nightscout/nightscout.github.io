@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Use a Dynamic DNS &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Use a Dynamic DNS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/dns.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Nightscout developers advice: not a good idea.</p>
+</div>
+<section id="use-a-dynamic-dns">
+<h1>Use a Dynamic DNS<a class="headerlink" href="#use-a-dynamic-dns" title="Permalink to this heading"></a></h1>
+</br>
+<p>Either because running a VPS, Northflank or simply because you’d like an alternate name to your Nightscout page, you can use either you own DNS name or free services like those below.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Adding a free DNS service to your Nightscout setup increases the possibility of unexpected outage.</br>
+Paid DNS services are available at 1$ per month.</p>
+</div>
+</br>
+<section id="no-ip">
+<h2>No-IP<a class="headerlink" href="#no-ip" title="Permalink to this heading"></a></h2>
+<p>No-IP provides one free dynamic DNS hostname.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using No-IP for free requires you to <strong>confirm your hostname every month</strong>.</p>
+</div>
+<ol class="arabic">
+<li><p>Sign up to <a class="reference external" href="https://www.noip.com/sign-up">No-IP</a>. Do not create a <code class="docutils literal notranslate"><span class="pre">Hostname</span></code> yet.</p>
+</br>
+</li>
+<li><p>From the dashboard, in <code class="docutils literal notranslate"><span class="pre">Dynamic</span> <span class="pre">DNS</span></code>, <code class="docutils literal notranslate"><span class="pre">No-IP</span> <span class="pre">hostnames</span></code> click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Hostname</span></code>.<br />
+<a class="reference internal" href="../../_images/DNS01.png"><img alt="../../_images/DNS01.png" src="../../_images/DNS01.png" style="width: 400px;" /></a></p>
+</br>
+</li>
+<li><p>Invent your <code class="docutils literal notranslate"><span class="pre">Hostname</span></code> and select a <code class="docutils literal notranslate"><span class="pre">Domain</span></code> in the <code class="docutils literal notranslate"><span class="pre">Free</span> <span class="pre">Domain</span></code> list. This will be the URL you will be able to browse from any computer to your Nightscout site.<br />
+<a class="reference internal" href="../../_images/DNS02.png"><img alt="../../_images/DNS02.png" src="../../_images/DNS02.png" style="width: 700px;" /></a></p>
+</br>
+</li>
+<li><p>If you’re using a VPS or you know the IP address of your current Nightscout, select <code class="docutils literal notranslate"><span class="pre">DNS</span> <span class="pre">Host</span> <span class="pre">(A)</span></code> and enter it in <code class="docutils literal notranslate"><span class="pre">IPv4</span> <span class="pre">Address</span></code>.<br />
+<a class="reference internal" href="../../_images/DNS03.png"><img alt="../../_images/DNS03.png" src="../../_images/DNS03.png" style="width: 700px;" /></a></p>
+</br>
+</li>
+<li><p>Else, if you only know your current Nightscout site name, select <code class="docutils literal notranslate"><span class="pre">DNS</span> <span class="pre">Alias</span> <span class="pre">(CNAME)</span></code> and enter it in <code class="docutils literal notranslate"><span class="pre">Target</span></code>.<br />
+<a class="reference internal" href="../../_images/DNS04.png"><img alt="../../_images/DNS04.png" src="../../_images/DNS04.png" style="width: 700px;" /></a></p>
+</br>
+</li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Hostname</span></code> bottom right.</p>
+</br>
+</li>
+</ol>
+<p>You now can use this URL when accessing your Nightscout site, in any browser and also for your uploaders and followers.</p>
+</br>
+</section>
+<section id="dynu">
+<h2>Dynu<a class="headerlink" href="#dynu" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Sign up to <a class="reference external" href="https://www.dynu.com/en-US/ControlPanel/CreateAccount">Dynu</a>.</p>
+</br>
+</li>
+<li><p>From the <code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Panel</span></code>, select <code class="docutils literal notranslate"><span class="pre">DDNS</span> <span class="pre">Services</span></code>.<br />
+<a class="reference internal" href="../../_images/DNS05.png"><img alt="../../_images/DNS05.png" src="../../_images/DNS05.png" style="width: 300px;" /></a></p>
+</br>
+</li>
+<li><p>Invent your <code class="docutils literal notranslate"><span class="pre">Host</span></code> name and select a <code class="docutils literal notranslate"><span class="pre">Top</span> <span class="pre">Level</span></code> domain in the list. This will be the URL you will be able to browse from any computer to your Nightscout site.<br />
+<a class="reference internal" href="../../_images/DNS06.png"><img alt="../../_images/DNS06.png" src="../../_images/DNS06.png" style="width: 400px;" /></a></p>
+</br>
+</li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Add</span></code>.</p>
+</br>
+</li>
+<li><p>Replace the proposed IP address in <code class="docutils literal notranslate"><span class="pre">IPv4</span> <span class="pre">Address</span></code> by your own Nightscout IP, (you can disable IPv6 features) and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.<br />
+<a class="reference internal" href="../../_images/DNS07.png"><img alt="../../_images/DNS07.png" src="../../_images/DNS07.png" style="width: 500px;" /></a></p>
+</br>
+</li>
+</ol>
+<p>You now can use this URL when accessing your Nightscout site, in any browser and also for your uploaders and followers.</p>
+</br>
+</section>
+<section id="freedns">
+<h2>FreeDNS<a class="headerlink" href="#freedns" title="Permalink to this heading"></a></h2>
+<p>FreeDNS proposes thousands of free DNS names, with the issue that many are flagged as dangerous when you’ll want to browse them from your cellular or within public/private networks. You’ll find one that fits your needs but you might need several attempts.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using FreeDNS for free requires you to <strong>login to confirm your account every six months</strong>.</p>
+</div>
+<ol class="arabic">
+<li><p>Sign up to <a class="reference external" href="https://freedns.afraid.org/signup/?plan=starter">FreeDNS</a>. Enter all required information and click <code class="docutils literal notranslate"><span class="pre">Send</span> <span class="pre">activation</span> <span class="pre">email</span></code>.<br />
+<a class="reference internal" href="../../_images/DNS08.png"><img alt="../../_images/DNS08.png" src="../../_images/DNS08.png" style="width: 400px;" /></a></p>
+</br>
+</li>
+<li><p>Check your inbox (search Spam if you don’t receive the email) and click on the activation link.<br />
+<a class="reference internal" href="../../_images/DNS09.png"><img alt="../../_images/DNS09.png" src="../../_images/DNS09.png" style="width: 500px;" /></a></p>
+</br>
+</li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Subdomains</span></code> in the menu, then <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">a</span> <span class="pre">subdomain</span></code>.<br />
+<a class="reference internal" href="../../_images/DNS10.png"><img alt="../../_images/DNS10.png" src="../../_images/DNS10.png" style="width: 500px;" /></a></p>
+</br>
+</li>
+<li><p>Invent your host name in <code class="docutils literal notranslate"><span class="pre">Subdomain</span></code>, select a domain name in the list (there are more than you can see) and put your Nightscout IP in the <code class="docutils literal notranslate"><span class="pre">Destination</span></code> field. Write the text in the image and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.<br />
+<a class="reference internal" href="../../_images/DNS11.png"><img alt="../../_images/DNS11.png" src="../../_images/DNS11.png" style="width: 400px;" /></a></p>
+<p>Note: you might want to select a less popular name than those proposed by selecting Registry in the left menu (example below for us.to).<br />
+<a class="reference internal" href="../../_images/DNS12.png"><img alt="../../_images/DNS12.png" src="../../_images/DNS12.png" style="width: 500px;" /></a></p>
+ </br>
+</li>
+<li><p>You now can use this URL when accessing your Nightscout site, in any browser and also for your uploaders and followers.<br />
+<a class="reference internal" href="../../_images/DNS13.png"><img alt="../../_images/DNS13.png" src="../../_images/DNS13.png" style="width: 300px;" /></a></p></li>
+</ol>
+</br></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

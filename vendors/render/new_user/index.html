@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightscout in Render &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Nightscout in Railway" href="../../railway/new_user/" />
+    <link rel="prev" title="Nightscout in Northflank" href="../../northflank/new_user/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nightscout in Render</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-0-create-a-database">Step 0: Create a database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-create-a-github-account-and-fork-the-nightscout-project">Step 1: Create a GitHub account and fork the Nightscout project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-create-a-render-account">Step 2: Create a Render account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-deploy-nightscout-in-render">Step 3 - Deploy Nightscout in Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#new-nightscout-setup">New Nightscout Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-variables-in-render">Editing Variables in Render</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nightscout in Render</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/render/new_user.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nightscout-in-render">
+<h1>Nightscout in Render<a class="headerlink" href="#nightscout-in-render" title="Permalink to this heading"></a></h1>
+</br>
+<div class="seealso admonition">
+<p class="admonition-title">Too complicated? Not what you’re looking for?</p>
+<p>Consider a hosted Nightscout service! Check for easier solutions <a class="reference internal" href="../../../#nightscout-as-a-service"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="render">Render</h2>
+<p class="sd-card-text"><img alt="Render Free" src="../../../_images/Render.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">You can create your Nightscout site in Render.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">No credit card required</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The free plan doesn’t guarantee any reliability</p></li>
+<li><p class="sd-card-text">App will sleep after 15 minutes</p></li>
+<li><p class="sd-card-text">Render URLs are considered unsafe by some internet providers</p></li>
+<li><p class="sd-card-text">Relying on the MongoDB Atlas database</p></li>
+</ul>
+</div>
+</div>
+</br>
+<hr class="docutils" />
+<section id="step-0-create-a-database">
+<h2>Step 0: Create a database<a class="headerlink" href="#step-0-create-a-database" title="Permalink to this heading"></a></h2>
+<div class="note admonition">
+<p class="admonition-title">Render doesn’t include a database</p>
+<p>Make sure you <a class="reference internal" href="../../../nightscout/database/"><span class="doc std std-doc">created one</span></a> before starting your Nightscout web app creation with Render.
+Come back here when you have a MONGODB_URI connection string.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Migrating?</p>
+<p>Copy the connection string from your previous platform: <a class="reference internal" href="../../../nightscout/setup_variables/#nightscout-configuration"><span class="std std-ref">edit the variables</span></a> and look for <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code>.
+If you don’t see <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> but see <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code> (<strong>NOT</strong> <code class="docutils literal notranslate"><span class="pre">MONGO_COLLECTION</span></code>): use its value.</p>
+</div>
+</br>
+</section>
+<section id="step-1-create-a-github-account-and-fork-the-nightscout-project">
+<h2>Step 1: Create a GitHub account and fork the Nightscout project<a class="headerlink" href="#step-1-create-a-github-account-and-fork-the-nightscout-project" title="Permalink to this heading"></a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+This is not necessary anymore (with a Docker image)</label><div class="sd-tab-content docutils">
+<p>Continue with Step 2.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+I don’t have a GitHub Account</label><div class="sd-tab-content docutils">
+<h3 class="rubric" id="create-a-github-account">Create a GitHub account</h3>
+<p>a) Click this link to create a GitHub account: <a class="reference external" href="https://github.com/">https://github.com/</a></p>
+<p>Enter your email and click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">up</span> <span class="pre">for</span> <span class="pre">GitHub</span></code></br></p>
+<p><a class="reference internal" href="../../../_images/NewNS00a.png"><img alt="../../../_images/NewNS00a.png" src="../../../_images/NewNS00a.png" style="width: 600px;" /></a></br></p>
+<p>b) Enter a password and a username (anything you want and that is accepted, not very important).<br />
+Type <code class="docutils literal notranslate"><span class="pre">n</span></code> to decline advertisement emails.</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS00.png"><img alt="../../../_images/NewNS00.png" src="../../../_images/NewNS00.png" style="width: 500px;" /></a></br></p>
+<p>c) Play and solve the puzzle then click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">account</span></code></br></p>
+<p><a class="reference internal" href="../../../_images/NewNS01.png"><img alt="../../../_images/NewNS01.png" src="../../../_images/NewNS01.png" style="width: 500px;" /></a></br></p>
+<p>d)  GitHub will send you a verification code. Open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS02.png"><img alt="../../../_images/NewNS02.png" src="../../../_images/NewNS02.png" style="width: 500px;" /></a></br></p>
+<p>e) If a personalization sequence starts, click <code class="docutils literal notranslate"><span class="pre">Skip</span> <span class="pre">personalization</span> </code> at the bottom.</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS03.png"><img alt="../../../_images/NewNS03.png" src="../../../_images/NewNS03.png" style="width: 600px;" /></a></br></p>
+<p>f) Leave the page that opened as it is. Don’t close it.</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS04.png"><img alt="../../../_images/NewNS04.png" src="../../../_images/NewNS04.png" style="width: 600px;" /></a></br></p>
+<p>You have created your GitHub account. Now fork the Nightscout project.</br></p>
+</br>
+<h3 class="rubric" id="fork-the-nightscout-project">Fork the Nightscout project</h3>
+<p>a) Click here to log in at GitHub: <a class="reference external" href="https://github.com/login">https://github.com/login</a>.<br />
+Enter your username or email and your password. Click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span></code></br></p>
+<p><a class="reference internal" href="../../../_images/UpdateNS00.png"><img alt="../../../_images/UpdateNS00.png" src="../../../_images/UpdateNS00.png" style="width: 400px;" /></a></br></p>
+<div class="admonition-if-you-already-have-a-fork-of-cgm-remote-monitor-in-github admonition">
+<p class="admonition-title">If you already have a fork of cgm-remote-monitor in GitHub</p>
+<p><a class="reference internal" href="../../../update/redeploy/#delete-your-own-fork-of-cgm-remote-monitor"><span class="std std-ref"><strong>Delete</strong></span></a> or <a class="reference internal" href="../../github/update/#update-your-nightscout-fork"><span class="std std-ref"><strong>update</strong></span></a> your current cgm-remote-monitor fork before continuing.</br></p>
+</div>
+<p>b) Open this link <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor">https://github.com/nightscout/cgm-remote-monitor</a>. Click on <code class="docutils literal notranslate"><span class="pre">Fork</span></code></br></p>
+<p><a class="reference internal" href="../../../_images/NewNS29.png"><img alt="../../../_images/NewNS29.png" src="../../../_images/NewNS29.png" style="width: 600px;" /></a></br></p>
+<p>Confirm with <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">fork</span></code></br></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure you deselect <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">the</span> <span class="pre">master</span> <span class="pre">branch</span> <span class="pre">only</span></code>.</p>
+</div>
+<p><a class="reference internal" href="../../../_images/NewNS51.png"><img alt="../../../_images/NewNS51.png" src="../../../_images/NewNS51.png" style="width: 600px;" /></a></br></p>
+<p>c) Wait for a moment</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS30.png"><img alt="../../../_images/NewNS30.png" src="../../../_images/NewNS30.png" style="width: 400px;" /></a></br></p>
+<p>d) You now have a copy (fork) of the Nightscout project repository in your own GitHub.</br></p>
+<p><a class="reference internal" href="../../../_images/UpdateNS30.png"><img alt="../../../_images/UpdateNS30.png" src="../../../_images/UpdateNS30.png" style="width: 700px;" /></a></br></p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+I already have a GitHub Account</label><div class="sd-tab-content docutils">
+<h3 class="rubric" id="update-your-nightscout-fork">Update your Nightscout fork</h3>
+<ul class="simple">
+<li><p>Click here to log in at GitHub: <a class="reference external" href="https://github.com/login">https://github.com/login</a>.</p></li>
+<li><p>Enter your username or email and your password. Click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span></code></br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS00.png"><img alt="../../../_images/UpdateNS00.png" src="../../../_images/UpdateNS00.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select your own <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> project (<strong>not <code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor</span></code></strong>)</br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01.png"><img alt="../../../_images/UpdateNS01.png" src="../../../_images/UpdateNS01.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Your repository will open. If you see <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">branch</span> <span class="pre">is</span> <span class="pre">xxx</span> <span class="pre">commits</span> <span class="pre">behind</span> <span class="pre">nightscout:master</span></code> you need to update.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">upstream</span></code></br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01a.png"><img alt="../../../_images/UpdateNS01a.png" src="../../../_images/UpdateNS01a.png" style="width: 700px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">and</span> <span class="pre">merge</span></code></br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01b.png"><img alt="../../../_images/UpdateNS01b.png" src="../../../_images/UpdateNS01b.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>After a moment, your repository should display <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">branch</span> <span class="pre">is</span> <span class="pre">up</span> <span class="pre">to</span> <span class="pre">date</span> <span class="pre">with</span> <span class="pre">nightscout:master</span></code></br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01c.png"><img alt="../../../_images/UpdateNS01c.png" src="../../../_images/UpdateNS01c.png" style="width: 400px;" /></a></br></p>
+<p>You have now updated your GitHub cgm-remote-monitor repository.</p>
+</br>
+<p>If you ran into trouble, you can <a class="reference internal" href="../../../update/redeploy/"><span class="doc std std-doc">redeploy</span></a> the project.</p>
+</br>
+</div>
+</div>
+</br>
+</section>
+<section id="step-2-create-a-render-account">
+<h2>Step 2: Create a Render account<a class="headerlink" href="#step-2-create-a-render-account" title="Permalink to this heading"></a></h2>
+<p>a) Open a new browser page in <a class="reference external" href="https://render.com/">Render</a> and select <code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">STARTED</span> <span class="pre">FOR</span> <span class="pre">FREE</span></code></p>
+<p><a class="reference internal" href="../../../_images/Render01.png"><img alt="../../../_images/Render01.png" src="../../../_images/Render01.png" style="width: 200px;" /></a></br></p>
+<p>b) Sign up with GitHub</p>
+<p><a class="reference internal" href="../../../_images/Render02.png"><img alt="../../../_images/Render02.png" src="../../../_images/Render02.png" style="width: 300px;" /></a></br></p>
+<p>c) <code class="docutils literal notranslate"><span class="pre">Authorize</span> <span class="pre">Render</span></code></p>
+<p><a class="reference internal" href="../../../_images/Render03.png"><img alt="../../../_images/Render03.png" src="../../../_images/Render03.png" style="width: 400px;" /></a></br></p>
+<p>d) <code class="docutils literal notranslate"><span class="pre">COMPLETE</span> <span class="pre">SIGN</span> <span class="pre">UP</span></code> with your GitHub account email</p>
+<p><a class="reference internal" href="../../../_images/Render04.png"><img alt="../../../_images/Render04.png" src="../../../_images/Render04.png" style="width: 400px;" /></a></br></p>
+<p>e) Check your inbox and click the confirmation link</p>
+<p><a class="reference internal" href="../../../_images/Render05.png"><img alt="../../../_images/Render05.png" src="../../../_images/Render05.png" style="width: 600px;" /></a></br></p>
+</br>
+</section>
+<section id="step-3-deploy-nightscout-in-render">
+<h2>Step 3 - Deploy Nightscout in Render<a class="headerlink" href="#step-3-deploy-nightscout-in-render" title="Permalink to this heading"></a></h2>
+<p>Select below how you want to do this:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Deploy with Docker (recommended)</label><div class="sd-tab-content docutils">
+<h2 class="rubric" id="step-4-create-your-nightscout-service">Step 4: Create your Nightscout service</h2>
+<ul class="simple">
+<li><p>From the <a class="reference external" href="https://dashboard.render.com/">dashboard</a>, create a new Web Service.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD01.png"><img alt="../../../_images/RenderD01.png" src="../../../_images/RenderD01.png" style="width: 300px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">an</span> <span class="pre">existing</span> <span class="pre">image</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">registry</span></code> then <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD02.png"><img alt="../../../_images/RenderD02.png" src="../../../_images/RenderD02.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>In the field <code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">URL</span></code> type:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nightscout</span><span class="o">/</span><span class="n">cgm</span><span class="o">-</span><span class="n">remote</span><span class="o">-</span><span class="n">monitor</span><span class="p">:</span><span class="n">latest</span>
+</pre></div>
+</div>
+<p>Then <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RenderD03.png"><img alt="../../../_images/RenderD03.png" src="../../../_images/RenderD03.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>In<code class="docutils literal notranslate"><span class="pre">Name</span></code> put the name of your Nightscout site (Render will add an extension if it’s not unique).</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD04.png"><img alt="../../../_images/RenderD04.png" src="../../../_images/RenderD04.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Region</span></code> closer to where you live.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD05.png"><img alt="../../../_images/RenderD05.png" src="../../../_images/RenderD05.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Free</span></code> instance type, knowing it will fall asleep (we’ll fix that later on).</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD06.png"><img alt="../../../_images/RenderD06.png" src="../../../_images/RenderD06.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Clicking the button <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">Add</span> <span class="pre">Environment</span> <span class="pre">Variable</span></code> add the following two variables, and in the box on the right the matching value:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HOSTNAME</span>	<span class="mf">0.0.0.0</span>
+<span class="n">PORT</span>		<span class="mi">1337</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../../_images/RenderD07.png"><img alt="../../../_images/RenderD07.png" src="../../../_images/RenderD07.png" style="width: 600px;" /></a></br></p>
+<p><strong>You now need to setup core variables for your site:</strong></p>
+<ul class="simple">
+<li><p>Clicking the button <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">Add</span> <span class="pre">Environment</span> <span class="pre">Variable</span></code> add the following three variables:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> paste your database connection string from Step 0 above</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use &#64; or ! symbols remember you will probably need to express them using <a class="reference external" href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you’re not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it’s reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
+</div>
+<ul class="simple">
+<li><p>Define your <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code></p></li>
+</ul>
+<p>Acceptable choices for the units used in Nightscout are <code class="docutils literal notranslate"><span class="pre">mg/dl</span></code> or <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> (or just <code class="docutils literal notranslate"><span class="pre">mmol</span></code>).</p>
+<ul class="simple">
+<li><p>Once all three variables have been set, <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">web</span> <span class="pre">Service</span></code></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD08.png"><img alt="../../../_images/RenderD08.png" src="../../../_images/RenderD08.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Your Nightscout site will be deployed. Wait until the operation completes after some minutes.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/Render13.png"><img alt="../../../_images/Render13.png" src="../../../_images/Render13.png" style="width: 300px;" /></a>
+<p><a class="reference internal" href="../../../_images/Render14.png"><img alt="../../../_images/Render14.png" src="../../../_images/Render14.png" style="width: 300px;" /></a></br></p>
+<p>Congratulations. You created your new Nightscout site with Render.</p>
+</br>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Using a blueprint</label><div class="sd-tab-content docutils">
+<h2 class="rubric" id="step-4-add-the-render-yaml-template">Step 4: Add the <code class="docutils literal notranslate"><span class="pre">render.yaml</span></code> template</h2>
+<ul class="simple">
+<li><p>Sign in your GitHub account: <a class="reference external" href="https://github.com/login">https://github.com/login</a>.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS00.png"><img alt="../../../_images/UpdateNS00.png" src="../../../_images/UpdateNS00.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select your own <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> project.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01.png"><img alt="../../../_images/UpdateNS01.png" src="../../../_images/UpdateNS01.png" style="width: 400px;" /></a></br></p>
+<ol class="arabic simple">
+<li><p>Open the branches list</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">render</span></code></p></li>
+<li><p>Select Create a branch: render from ‘master’</p></li>
+</ol>
+<p><a class="reference internal" href="../../../_images/NewBranch.png"><img alt="../../../_images/NewBranch.png" src="../../../_images/NewBranch.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select Add File - Create new file</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/AddFile.png"><img alt="../../../_images/AddFile.png" src="../../../_images/AddFile.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">render.yaml</span></code> for the name. Leave it open like that for now.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Yaml00.png"><img alt="../../../_images/Yaml00.png" src="../../../_images/Yaml00.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">render.txt</span></code> template from <a class="reference download internal" download="" href="../../../_downloads/e8c47bec80e9e7174f9413e7b2ce64c3/render.txt"><span class="xref download myst">here</span></a> and edit it with a notepad app, <strong>select all</strong>, copy and paste into the GitHub page you have open from above.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Yaml01.png"><img alt="../../../_images/Yaml01.png" src="../../../_images/Yaml01.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Scroll up the page in GitHub and select <code class="docutils literal notranslate"><span class="pre">Commit</span> <span class="pre">changes</span></code> top right.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Yaml02.png"><img alt="../../../_images/Yaml02.png" src="../../../_images/Yaml02.png" style="width: 800px;" /></a></br></p>
+<ul class="simple">
+<li><p>Confirm with <code class="docutils literal notranslate"><span class="pre">Commit</span> <span class="pre">changes</span></code>.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Yaml03.png"><img alt="../../../_images/Yaml03.png" src="../../../_images/Yaml03.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Your cgm-remote-monitor project is ready for Render Blueprints deploy.</p></li>
+</ul>
+</br>
+<h2 class="rubric" id="step-5-first-deploy-in-render">Step 5: First deploy in Render</h2>
+<p>a) Select <code class="docutils literal notranslate"><span class="pre">Blueprints</span></code></p>
+<p><a class="reference internal" href="../../../_images/Render06.png"><img alt="../../../_images/Render06.png" src="../../../_images/Render06.png" style="width: 400px;" /></a></br></p>
+<p>b) Then <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">blueprint</span> <span class="pre">instance</span></code></p>
+<p><a class="reference internal" href="../../../_images/Render07.png"><img alt="../../../_images/Render07.png" src="../../../_images/Render07.png" style="width: 600px;" /></a></br></p>
+<p>c) <code class="docutils literal notranslate"><span class="pre">Connect</span></code> your <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> project</p>
+<p><a class="reference internal" href="../../../_images/Render08.png"><img alt="../../../_images/Render08.png" src="../../../_images/Render08.png" style="width: 600px;" /></a></br></p>
+<p>d) Enter a name for your blueprint (anything simple, Nightscout is ok)</p>
+<p><a class="reference internal" href="../../../_images/Render09.png"><img alt="../../../_images/Render09.png" src="../../../_images/Render09.png" style="width: 400px;" /></a></br></p>
+<p>e) Click the drop down menu of <code class="docutils literal notranslate"><span class="pre">Branch</span></code> (1) then select <code class="docutils literal notranslate"><span class="pre">render</span></code> (2)</p>
+<p><a class="reference internal" href="../../../_images/Render10.png"><img alt="../../../_images/Render10.png" src="../../../_images/Render10.png" style="width: 400px;" /></a></br></p>
+<p><strong>You now need to setup core variables for your site:</strong></p>
+<p><a class="reference internal" href="../../../_images/Render11.png"><img alt="../../../_images/Render11.png" src="../../../_images/Render11.png" style="width: 600px;" /></a></br></p>
+<p>f) In <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> paste your database connection string from Step 0 above</p>
+<p>g) <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use &#64; or ! symbols remember you will probably need to express them using <a class="reference external" href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you’re not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it’s reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
+</div>
+<p>h) Define your <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code><br />
+Acceptable choices for the units used in Nightscout are <code class="docutils literal notranslate"><span class="pre">mg/dl</span></code> or <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> (or just <code class="docutils literal notranslate"><span class="pre">mmol</span></code>).</p>
+</br>
+<p>i) Once all three variables have been set, <code class="docutils literal notranslate"><span class="pre">Apply</span></code></p>
+<p><a class="reference internal" href="../../../_images/Render12.png"><img alt="../../../_images/Render12.png" src="../../../_images/Render12.png" style="width: 600px;" /></a></br></p>
+<p>j) Your Nightscout site will be deployed. Wait until the operation completes after some minutes.</p>
+<a class="reference internal image-reference" href="../../../_images/Render13.png"><img alt="../../../_images/Render13.png" src="../../../_images/Render13.png" style="width: 300px;" /></a>
+<p><a class="reference internal" href="../../../_images/Render14.png"><img alt="../../../_images/Render14.png" src="../../../_images/Render14.png" style="width: 300px;" /></a></br></p>
+<p>Congratulations. You created your new Nightscout site with Render.</p>
+<p>The following step is important, don’t skip it.</p>
+</br>
+<h2 class="rubric" id="step-6-delete-the-render-branch">Step 6: Delete the <code class="docutils literal notranslate"><span class="pre">render</span></code> branch</h2>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>In order to deploy your site with a blueprint, you needed to modify your GitHub repository.
+Now you want to remove this modification so that you’ll be able to update it normally.</p>
+</div>
+<ul class="simple">
+<li><p>Sign in your GitHub account: <a class="reference external" href="https://github.com/login">https://github.com/login</a>.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS00.png"><img alt="../../../_images/UpdateNS00.png" src="../../../_images/UpdateNS00.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select your own <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> project.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01.png"><img alt="../../../_images/UpdateNS01.png" src="../../../_images/UpdateNS01.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Click on branches  to display all.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Render18.png"><img alt="../../../_images/Render18.png" src="../../../_images/Render18.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Locate the <code class="docutils literal notranslate"><span class="pre">render</span></code> branch and click on the bin icon to delete it.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Render19.png"><img alt="../../../_images/Render19.png" src="../../../_images/Render19.png" style="width: 400px;" /></a></br></p>
+<p>You have successfully removed the temporary modification required to deploy a new Render site.</p>
+<p><a class="reference internal" href="../../../_images/Render20.png"><img alt="../../../_images/Render20.png" src="../../../_images/Render20.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Your Render site will redeploy using the normal <code class="docutils literal notranslate"><span class="pre">master</span></code> branch of <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code>, wait a few minutes until the operation completes.</p></li>
+</ul>
+</br>
+</div>
+</div>
+</br>
+<ul class="simple">
+<li><p>From the menu, <code class="docutils literal notranslate"><span class="pre">Dashboard</span></code>, then select your web service.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/Render15.png"><img alt="../../../_images/Render15.png" src="../../../_images/Render15.png" style="width: 400px;" /></a>
+<p><a class="reference internal" href="../../../_images/Render16.png"><img alt="../../../_images/Render16.png" src="../../../_images/Render16.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>This is your new Nightscout site, click on the URL to open it</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Render17.png"><img alt="../../../_images/Render17.png" src="../../../_images/Render17.png" style="width: 400px;" /></a></br></p>
+</br>
+</section>
+<section id="new-nightscout-setup">
+<h2>New Nightscout Setup<a class="headerlink" href="#new-nightscout-setup" title="Permalink to this heading"></a></h2>
+</br>
+<p>a) Your Nightscout site should open and direct you to a new profile creation.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS50.png"><img alt="../../../_images/NewNS50.png" src="../../../_images/NewNS50.png" style="width: 400px;" /></a>
+</br>
+<p>b) Setup your <code class="docutils literal notranslate"><span class="pre">Time</span> <span class="pre">zone</span></code> and eventually all other fields. Do not leave any fields empty. If you don’t know which value to use, just use the default value. You can change these values later at any time.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS44.png"><img alt="../../../_images/NewNS44.png" src="../../../_images/NewNS44.png" style="width: 500px;" /></a>
+</br>
+<p>c) Browse down to <code class="docutils literal notranslate"><span class="pre">Authentication</span> <span class="pre">status</span></code> and click <code class="docutils literal notranslate"><span class="pre">Authenticate</span></code>. Enter your API secret. Click <code class="docutils literal notranslate"><span class="pre">Update</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS45.png"><img alt="../../../_images/NewNS45.png" src="../../../_images/NewNS45.png" style="width: 500px;" /></a>
+</br>
+<p>d) Click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS46.png"><img alt="../../../_images/NewNS46.png" src="../../../_images/NewNS46.png" style="width: 200px;" /></a>
+</br>
+<p>e) If the following pop-up shows up click <code class="docutils literal notranslate"><span class="pre">OK</span></code>, and check status (upper right of the window).</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS47.png"><img alt="../../../_images/NewNS47.png" src="../../../_images/NewNS47.png" style="width: 600px;" /></a>
+</br>
+<p>f) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select <code class="docutils literal notranslate"><span class="pre">Profile</span> <span class="pre">Editor</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS43.png"><img alt="../../../_images/NewNS43.png" src="../../../_images/NewNS43.png" style="width: 600px;" /></a>
+</br>
+<div class="warning admonition">
+<p class="admonition-title">Privacy warning</p>
+<p>Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable <a class="reference internal" href="../../../nightscout/security/"><span class="doc std std-doc">security</span></a> to your site once you’re done with the setup</p>
+</div>
+</br>
+<p>g) Dexcom Share users should see data flowing in after some minutes.
+xDrip+ users (including Medtronic <a class="reference internal" href="../../../uploader/setup/#medtronic-carelink"><span class="std std-ref">CareLink followers</span></a>) should setup the uploader as shown <a class="reference internal" href="../../../uploader/setup/#xdrip"><span class="std std-ref"><strong>here</strong></span></a>.
+xDrip4iOS users <a class="reference external" href="https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#nightscout-upload">here</a>.
+<a class="reference external" href="https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient">AAPS</a> and <a class="reference external" href="https://loopkit.github.io/loopdocs/operation/loop-settings/services/">Loop</a>: consult the relative documentation.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS48.png"><img alt="../../../_images/NewNS48.png" src="../../../_images/NewNS48.png" style="width: 600px;" /></a>
+</br>
+<hr class="docutils" />
+<p>You have completed a new Nightscout site creation. You can continue <a class="reference internal" href="../../../nightscout/discover/"><span class="doc std std-doc">here</span></a> now.</p>
+<p>The following section provides more information that you might not need to use now.</p>
+<hr class="docutils" />
+</br>
+</br>
+</section>
+<section id="editing-variables-in-render">
+<h2>Editing Variables in Render<a class="headerlink" href="#editing-variables-in-render" title="Permalink to this heading"></a></h2>
+</br>
+<ul class="simple">
+<li><p>Log in <a class="reference external" href="https://dashboard.render.com/">Render</a></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Render02.png"><img alt="../../../_images/Render02.png" src="../../../_images/Render02.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select your web service</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Render16.png"><img alt="../../../_images/Render16.png" src="../../../_images/Render16.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Environment</span></code>, your variables will display</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Render21.png"><img alt="../../../_images/Render21.png" src="../../../_images/Render21.png" style="width: 500px;" /></a></br></p>
+<ul class="simple">
+<li><p>You can modify variables by making the changes directly in the text boxes.<br />
+You can also add variables with <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">environment</span> <span class="pre">variable</span></code>.<br />
+When you’re done, scroll down and <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">changes</span></code>.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Render23.png"><img alt="../../../_images/Render23.png" src="../../../_images/Render23.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Wait a few minutes for your site to redeploy. You can track the status in <code class="docutils literal notranslate"><span class="pre">Events</span></code>.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/Render24.png"><img alt="../../../_images/Render24.png" src="../../../_images/Render24.png" style="width: 800px;" /></a></br></p>
+</br>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

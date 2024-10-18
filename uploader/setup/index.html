@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup Uploaders &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Setup Downloaders - Followers" href="../../nightscout/downloaders/" />
+    <link rel="prev" title="Setup your Profile" href="../../nightscout/profile_editor/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup Uploaders</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-my-nightscout-url">What is my Nightscout URL?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dexcom">Dexcom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#medtronic-carelink">Medtronic CareLink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#medtronic-600-series-with-uploader">Medtronic 600 Series with uploader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xdrip">xDrip+</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glimp">Glimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#juggluco">Juggluco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diabox">Diabox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linkblucon">LinkBluCon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tomato">Tomato</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spike">Spike</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xdrip4ios">xDrip4iOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diy-closed-loop">DIY Closed Loop</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Setup Uploaders</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/uploader/setup.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setup-uploaders">
+<h1>Setup Uploaders<a class="headerlink" href="#setup-uploaders" title="Permalink to this heading"></a></h1>
+</br>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You usually should express the Nightscout URL in secure <code class="docutils literal notranslate"><span class="pre">**https://**</span></code>, not only <code class="docutils literal notranslate"><span class="pre">http://</span></code>.
+(Unless you set <code class="docutils literal notranslate"><span class="pre">INSECURE_USE_HTTP</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>)</p>
+</div>
+<section id="what-is-my-nightscout-url">
+<h2>What is my Nightscout URL?<a class="headerlink" href="#what-is-my-nightscout-url" title="Permalink to this heading"></a></h2>
+<p>This is the address you type in any browser to display your Nightscout web site.</p>
+<p>If you’re using a hosted service, ask the vendor.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Select your platform -&gt;</label><div class="sd-tab-content docutils">
+</br>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Heroku</label><div class="sd-tab-content docutils">
+<p>Your <code class="docutils literal notranslate"><span class="pre">Nightscout</span> <span class="pre">URL</span></code> defined in Heroku by your App name, is the one that shows when you open your Nightscout site in a browser.
+It usually looks like: <code class="docutils literal notranslate"><span class="pre">https://yoursitename.herokuapp.com</span></code></p>
+<a class="reference internal image-reference" href="../../_images/SetupNS44.png"><img alt="../../_images/SetupNS44.png" src="../../_images/SetupNS44.png" style="width: 800px;" /></a>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Railway</label><div class="sd-tab-content docutils">
+<p>Your <code class="docutils literal notranslate"><span class="pre">Nightscout</span> <span class="pre">URL</span></code> is defined in Railway by your Web app name, as shown in your <a class="reference external" href="https://railway.app/dashboard">Dashboard</a>.
+It usually looks like: <code class="docutils literal notranslate"><span class="pre">https://yoursitename.up.railway.app</span></code></p>
+<a class="reference internal image-reference" href="../../_images/RailwayM14.png"><img alt="../../_images/RailwayM14.png" src="../../_images/RailwayM14.png" style="width: 400px;" /></a>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Northflank</label><div class="sd-tab-content docutils">
+<p>Your <code class="docutils literal notranslate"><span class="pre">Nightscout</span> <span class="pre">URL</span></code> is defined in Northflank by your Web app name, as shown in your project services.
+It usually looks like: <code class="docutils literal notranslate"><span class="pre">https://port-name--service-name--project-name--entity-dns-id.code.run</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Northflank29.png"><img alt="../../_images/Northflank29.png" src="../../_images/Northflank29.png" style="width: 600px;" /></a>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Azure</label><div class="sd-tab-content docutils">
+<p>Your <code class="docutils literal notranslate"><span class="pre">Nightscout</span> <span class="pre">URL</span></code> is defined in Azure by your Web app name, as shown in your App services.
+It usually looks like: <code class="docutils literal notranslate"><span class="pre">https://yoursitename.azurewebsites.net</span></code></p>
+<a class="reference internal image-reference" href="../../_images/AzureName.png"><img alt="../../_images/AzureName.png" src="../../_images/AzureName.png" style="width: 800px;" /></a>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Fly.io</label><div class="sd-tab-content docutils">
+<p>Your <code class="docutils literal notranslate"><span class="pre">Nightscout</span> <span class="pre">URL</span></code> is defined in Fly.io by the <code class="docutils literal notranslate"><span class="pre">app</span></code> variable in your <code class="docutils literal notranslate"><span class="pre">fly.toml</span></code> file.
+You can also find it in your Dashboard.
+It usually looks like: <code class="docutils literal notranslate"><span class="pre">https://yoursitename.fly.dev</span></code></p>
+<a class="reference internal image-reference" href="../../_images/FlyIO05.png"><img alt="../../_images/FlyIO05.png" src="../../_images/FlyIO05.png" style="width: 400px;" /></a>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Google Cloud</label><div class="sd-tab-content docutils">
+<p>Your <code class="docutils literal notranslate"><span class="pre">Nightscout</span> <span class="pre">URL</span></code> is defined in FreeDNS.
+You can find it in <a class="reference external" href="https://navid200.github.io/xDrip/docs/Nightscout/Hostname.html">Status - Hostname</a>.</p>
+</div>
+</div>
+</br>
+</section>
+<section id="dexcom">
+<h2>Dexcom<a class="headerlink" href="#dexcom" title="Permalink to this heading"></a></h2>
+<p>You need at least one follower to use Nightscout <code class="docutils literal notranslate"><span class="pre">share</span></code> or <code class="docutils literal notranslate"><span class="pre">nightscout-connect</span></code> plugins.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and a Nightscout plugin.</p>
+</div>
+<p>On your master phone, touch the Share icon, enable Sharing. If you have no follower, add one. You can also invite yourself.</p>
+<a class="reference internal image-reference" href="../../_images/UploadCFG09.png"><img alt="../../_images/UploadCFG09.png" src="../../_images/UploadCFG09.png" style="width: 500px;" /></a>
+</br>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Select Nightscout version -&gt;</label><div class="sd-tab-content docutils">
+</br>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+14 and previous</label><div class="sd-tab-content docutils">
+<p>Verify, update or add these variables:</br></br>
+<code class="docutils literal notranslate"><span class="pre">BRIDGE_USER_NAME</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">BRIDGE_PASSWORD</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">BRIDGE_SERVER</span></code></br>
+</br>
+You need to add <code class="docutils literal notranslate"><span class="pre">bridge</span></code> in the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> variable. Do not delete other entries, just add <code class="docutils literal notranslate"><span class="pre">bridge</span></code> after a space.</p>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+15</label><div class="sd-tab-content docutils">
+<p>Verify, update or add these variables:</br></br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_SOURCE</span></code> set to <code class="docutils literal notranslate"><span class="pre">dexcomshare</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_SHARE_ACCOUNT_NAME</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_SHARE_PASSWORD</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_SHARE_REGION</span></code> (must be set to <code class="docutils literal notranslate"><span class="pre">ous</span></code> if outside of the US, else don’t add this variable)</br>
+</br>
+You need to add <code class="docutils literal notranslate"><span class="pre">connect</span></code> in the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> variable. Do not delete other entries, just add <code class="docutils literal notranslate"><span class="pre">connect</span></code> after a space.</p>
+</div>
+</div>
+</br>
+<div class="hint admonition">
+<p class="admonition-title">MOST COMMON ERRORS</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom’s Clarity page (check <a class="reference external" href="https://clarity.dexcom.com">here for USA accounts</a> and <a class="reference external" href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn’t valid, or you don’t see any data in your Clarity account… you need to figure out your actual credentials before moving ahead. See <a class="reference internal" href="../../troubleshoot/dexcom_bridge/"><span class="doc std std-doc">here</span></a> for troubleshooting tips and information on your Dexcom account.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Password</p>
+<p><em>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</em></p>
+</div>
+</br>
+</section>
+<section id="medtronic-carelink">
+<h2>Medtronic CareLink<a class="headerlink" href="#medtronic-carelink" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> plugin is <strong>NOT</strong> functional anymore with recent pumps (7xx).</p>
+</div>
+<p>You can use an Android phone with xDrip+. See <a class="reference internal" href="../xdripcarelink/"><span class="doc std std-doc"><strong>here</strong></span></a> how to set it up.</p>
+</br>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
+Select Nightscout version -&gt;</label><div class="sd-tab-content docutils">
+</br>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
+14 and previous</label><div class="sd-tab-content docutils">
+<p>Verify, update or add these variables:</br></br>
+<code class="docutils literal notranslate"><span class="pre">CARELINK_USER_NAME</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">CARELINK_PASSWORD</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">MMCONNECT_SERVER</span></code>(must be set to <code class="docutils literal notranslate"><span class="pre">US</span></code> if inside the US, or else <code class="docutils literal notranslate"><span class="pre">EU</span></code>)</br>
+</br>
+You need to add <code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> in the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> variable. Do not delete other entries, just add <code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> after a space.</p>
+</div>
+<input id="sd-tab-item-12" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
+15</label><div class="sd-tab-content docutils">
+<p>Verify, update or add these variables:</br></br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_SOURCE</span></code> set to <code class="docutils literal notranslate"><span class="pre">minimedcarelink</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_CARELINK_USERNAME</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_CARELINK_PASSWORD</span></code></br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_CARELINK_REGION</span></code> (must be set to <code class="docutils literal notranslate"><span class="pre">us</span></code> if inside the US, or else <code class="docutils literal notranslate"><span class="pre">eu</span></code>)</br>
+<code class="docutils literal notranslate"><span class="pre">CONNECT_CARELINK_PATIENT_USERNAME</span></code> must be set to the patient name if more than one in present in Carelink.</br>
+</br>
+You need to add <code class="docutils literal notranslate"><span class="pre">connect</span></code> in the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> variable. Do not delete other entries, just add <code class="docutils literal notranslate"><span class="pre">connect</span></code> after a space.</p>
+</div>
+</div>
+</br>
+</section>
+<section id="medtronic-600-series-with-uploader">
+<h2><a class="reference external" href="http://pazaan.github.io/600SeriesAndroidUploader/">Medtronic 600 Series with uploader</a><a class="headerlink" href="#medtronic-600-series-with-uploader" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/UploadCFG08.png"><img alt="../../_images/UploadCFG08.png" src="../../_images/UploadCFG08.png" style="width: 600px;" /></a>
+<p>You can also use <a class="reference external" href="https://nightscout.github.io/pages/configure/">this QR code generator</a> and the menu item <code class="docutils literal notranslate"><span class="pre">Scan</span> <span class="pre">NS-Autoconfig</span> <span class="pre">QR</span> <span class="pre">Code</span></code> to copy the information.</p>
+<p>For hosted Nightscout you’ll find the QR code generator in <a class="reference external" href="https://www.t1pal.com/account/sites/my#Uploaders">Uploaders</a>, select the <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> tab.</p>
+<p>You might want to setup <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/#pump-pump-monitoring">additional fields</a> for your pump.</p>
+<p>Facebook Group <a class="reference external" href="https://www.facebook.com/groups/NightscoutForMedtronic">Nightscout for Medtronic</a></p>
+</br>
+</section>
+<section id="xdrip">
+<h2><a class="reference external" href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><a class="headerlink" href="#xdrip" title="Permalink to this heading"></a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Mind the syntax!</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">https://API_SECRET&#64;my_nightscout_url/api/v1/</span></code></strong><br />
+<code class="docutils literal notranslate"><span class="pre">my_nightscout_url</span></code> will depend on where your site is hosted (see top of this page)<br />
+You will find your <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code>in your site variables.</p>
+</div>
+<p>Here is how it will look like for some vendors:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>https://API_SECRET@yoursite.herokuapp.com/api/v1/
+https://API_SECRET@yoursite.up.railway.app/api/v1/
+https://API_SECRET@yoursite.guest.t1pal.com/api/v1/
+https://API_SECRET@yoursite.10be.de/api/v1/
+</pre></div>
+</div>
+</br>
+<a class="reference internal image-reference" href="../../_images/UploadCFG00.png"><img alt="../../_images/UploadCFG00.png" src="../../_images/UploadCFG00.png" style="width: 900px;" /></a>
+<p>Facebook Group <a class="reference external" href="https://www.facebook.com/groups/xDripG5">xDrip</a></p>
+</br>
+</section>
+<section id="glimp">
+<h2><a class="reference external" href="https://play.google.com/store/apps/details?id=it.ct.glicemia">Glimp</a><a class="headerlink" href="#glimp" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/UploadCFG02.png"><img alt="../../_images/UploadCFG02.png" src="../../_images/UploadCFG02.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="juggluco">
+<h2><a class="reference external" href="http://jkaltes.byethost16.com/Juggluco/mgdL/index.html">Juggluco</a><a class="headerlink" href="#juggluco" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/UploadCFG11.png"><img alt="../../_images/UploadCFG11.png" src="../../_images/UploadCFG11.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="diabox">
+<h2><a class="reference external" href="https://www.bubblan.org/diabox/">Diabox</a><a class="headerlink" href="#diabox" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/UploadCFG03.png"><img alt="../../_images/UploadCFG03.png" src="../../_images/UploadCFG03.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="linkblucon">
+<h2><a class="reference external" href="https://www.ambrosiasys.com/our-products/linkblucon/">LinkBluCon</a><a class="headerlink" href="#linkblucon" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/UploadCFG04.png"><img alt="../../_images/UploadCFG04.png" src="../../_images/UploadCFG04.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="tomato">
+<h2><a class="reference external" href="http://tomato.cool/">Tomato</a><a class="headerlink" href="#tomato" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/UploadCFG05.png"><img alt="../../_images/UploadCFG05.png" src="../../_images/UploadCFG05.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="spike">
+<h2><a class="reference external" href="https://spike-app.com/">Spike</a><a class="headerlink" href="#spike" title="Permalink to this heading"></a></h2>
+<p>Look <a class="reference external" href="https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure-spike-master">here</a>.</p>
+<a class="reference internal image-reference" href="../../_images/UploadCFG10.png"><img alt="../../_images/UploadCFG10.png" src="../../_images/UploadCFG10.png" style="width: 300px;" /></a>
+<p>Facebook group <a class="reference external" href="https://www.facebook.com/groups/spikeapp">Spike App</a></p>
+</br>
+</section>
+<section id="xdrip4ios">
+<h2><a class="reference external" href="https://xdrip4ios.readthedocs.io/en/latest/">xDrip4iOS</a><a class="headerlink" href="#xdrip4ios" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/UploadCFG06.png"><img alt="../../_images/UploadCFG06.png" src="../../_images/UploadCFG06.png" style="width: 300px;" /></a>
+<p>Facebook group <a class="reference external" href="https://www.facebook.com/groups/853994615056838/">xDrip4iOS</a></p>
+</br>
+</section>
+<section id="diy-closed-loop">
+<h2>DIY Closed Loop<a class="headerlink" href="#diy-closed-loop" title="Permalink to this heading"></a></h2>
+<p>See the app documentation in the <a class="reference internal" href="../../nightscout/close_loop/"><span class="std std-doc">dedicated page</span></a>.</p>
+</br></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

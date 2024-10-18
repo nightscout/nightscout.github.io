@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Nightscout with Docker &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Nightscout in your Synology NAS" href="../../NAS/synology/" />
+    <link rel="prev" title="Building Nightscout in Ubuntu" href="../ubuntu/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building Nightscout with Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#update-your-system">Update your system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deploy-a-single-instance">Deploy a single instance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-install-docker">Step 1 - Install Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-configure-nightscout">Step 2 - Configure Nightscout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-build-and-run-nightscout">Step 3 - Build and run Nightscout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#update-or-downgrade">Update or downgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deploy-multiple-instances">Deploy multiple instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Building Nightscout with Docker</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/VPS/docker.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="building-nightscout-with-docker">
+<h1>Building Nightscout with Docker<a class="headerlink" href="#building-nightscout-with-docker" title="Permalink to this heading"></a></h1>
+</br>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><span style="font-size:larger;">The most complete guide for building your site step by step is the one used for <a class="reference external" href="https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf">Oracle Cloud</a>.<br />
+If you use another hosting provider, skip Oracle specific instructions and follow the flow.</span></p>
+</div>
+</br>
+<p>Original documentation from <a class="reference external" href="https://github.com/nightscout/nightscout-docker">Jason</a>.<br />
+More from <a class="reference external" href="https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705">Andries</a> and <a class="reference external" href="https://github.com/peterleimbach/TestNightscoutDockerUbuntuServer22.04LTS">Peter</a> (traefik as below), <a class="reference external" href="https://github.com/justmara/ns-setup">justmara</a> and <a class="reference external" href="https://github.com/ireneusz-ptak/ns-docker">Ireneusz</a>.</p>
+<p>If you want to deploy with CoreOS look <a class="reference external" href="https://danielscrivano.com/blog/posts/nightscout/">here</a>.</p>
+<p>A comprehensive description of the yaml file for mongo and Nightscout setup <a class="reference external" href="https://github.com/LostOnTheLine/Nightscout_Docker-Compose">here</a>.</p>
+<p>If you don’t own a domain name, get a DDNS name now: see <a class="reference internal" href="../../../nightscout/dns/"><span class="doc std std-doc">here</span></a>.</p>
+<p>You can also use <a class="reference external" href="https://github.com/Alderskog/nightscout-in-OCN">Caddy as reverse proxy</a>.</p>
+</br>
+<section id="update-your-system">
+<h2>Update your system<a class="headerlink" href="#update-your-system" title="Permalink to this heading"></a></h2>
+<p>Update your Ubuntu system (you should type this is a command every 3 or 6 months to keep it updated).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+sudo<span class="w"> </span>apt<span class="w"> </span>clean
+</pre></div>
+</div>
+<p>You will see it’s completed when the terminal stops scrolling text and you’re returned to the prompt.</p>
+<p><strong>If you see the following message: <code class="docutils literal notranslate"><span class="pre">***</span> <span class="pre">System</span> <span class="pre">restart</span> <span class="pre">required</span> <span class="pre">***</span></code> you will need to reboot</strong>. Do not skip this step: reboot and wait a minute before opening again the console.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
+</pre></div>
+</div>
+<p>You must probably already have nano installed. If necessary:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nano<span class="w"> </span>-y
+</pre></div>
+</div>
+</br>
+</section>
+<section id="deploy-a-single-instance">
+<h2>Deploy a single instance<a class="headerlink" href="#deploy-a-single-instance" title="Permalink to this heading"></a></h2>
+<section id="step-1-install-docker">
+<h3>Step 1 - Install Docker<a class="headerlink" href="#step-1-install-docker" title="Permalink to this heading"></a></h3>
+<p><em>Note: instructions from the <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/">vendor</a></em></p>
+<p>a) Install keys</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg<span class="w"> </span>lsb-release
+sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/apt/keyrings
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/docker.gpg<span class="w"> </span>--yes
+</pre></div>
+</div>
+<p>b) Install Docker</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release<span class="w"> </span>-cs<span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-compose-plugin
+</pre></div>
+</div>
+</br>
+</section>
+<section id="step-2-configure-nightscout">
+<h3>Step 2 - Configure Nightscout<a class="headerlink" href="#step-2-configure-nightscout" title="Permalink to this heading"></a></h3>
+<p>a) If you’re running your VPS as root: Create a new  user. Else go to d)<br />
+Don’t try to run Nightscout as root, it will not work.<br />
+<strong>Replace <code class="docutils literal notranslate"><span class="pre">mainuser</span></code></strong> with a name of your choice, like your name, only lowercase letters.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>adduser<span class="w"> </span>mainuser
+</pre></div>
+</div>
+<p>You need to invent a password for your new user.<br />
+Confirm it then just hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code> for the following lines, when done key <code class="docutils literal notranslate"><span class="pre">Y</span></code> then <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p>b) Make your user an administrator.</p>
+<p><strong>Replace <code class="docutils literal notranslate"><span class="pre">mainuser</span></code></strong> with your new user name.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>mainuser
+</pre></div>
+</div>
+<p>c) Enable current user and make docker startup automatically.<br />
+<strong>Replace <code class="docutils literal notranslate"><span class="pre">mainuser</span></code></strong> with your new user name.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>mainuser
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker
+</pre></div>
+</div>
+<p>d) Login to the VPS using the account we just created.</p>
+<p>!!!warning “Do not run Nightscout as root”<br />
+From now on use your Nightscout user.</p>
+<p><strong>Replace <code class="docutils literal notranslate"><span class="pre">mainuser</span></code></strong> with your new user name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">mainuser</span> <span class="o">-</span><span class="n">s</span>
+</pre></div>
+</div>
+<p>Log out (<code class="docutils literal notranslate"><span class="pre">Ctrl-D</span></code> or <code class="docutils literal notranslate"><span class="pre">⌘-D</span></code>) or type <code class="docutils literal notranslate"><span class="pre">logout</span></code>, and log in with with your new user.</p>
+<p>e) Customize your Docker Compose configuration file</p>
+<p>You can use the default <a class="reference external" href="https://raw.githubusercontent.com/nightscout/cgm-remote-monitor/master/docker-compose.yml">docker-compose.yml</a> file from the Nightscout repository or download <a class="reference download internal" download="" href="../../../_downloads/e4cb5a358b76b05bbc69edc42c0a7577/docker-compose.yml"><span class="xref download myst">this one</span></a>.</p>
+<p>There are few information you need to update:</p>
+<ul class="simple">
+<li><p>Which version of Nightscout you want to deploy.<br />
+You can find the list here: <a class="reference external" href="https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags">https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags</a> and the tag is specified in the line below (example: <code class="docutils literal notranslate"><span class="pre">latest</span></code> is the latest release).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span><span class="p">:</span> <span class="n">nightscout</span><span class="o">/</span><span class="n">cgm</span><span class="o">-</span><span class="n">remote</span><span class="o">-</span><span class="n">monitor</span><span class="p">:</span><span class="n">latest</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You need to specify your <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List">time zone</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TZ</span><span class="p">:</span> <span class="n">YOUR_TIMEZONE</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Your Nightscout site <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> password.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">API_SECRET</span><span class="p">:</span> <span class="n">YOUR_API_SECRET</span>
+</pre></div>
+</div>
+<p><em>Note: now you’ve also seen where your Nightscout variables are defined.</em></p>
+<ul class="simple">
+<li><p>You need to update your Nightscout site URL (your DDNS name looking like <code class="docutils literal notranslate"><span class="pre">name.domain.tld</span></code>)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="s1">&#39;traefik.http.routers.nightscout.rule=Host(`YOUR_PUBLIC_HOST_URL`)&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You need to put a valid email too for important certificate emails (i.e. probably never)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="s1">&#39;--certificatesresolvers.le.acme.email=YOUR_EMAIL&#39;</span>
+</pre></div>
+</div>
+</br>
+</section>
+<section id="step-3-build-and-run-nightscout">
+<h3>Step 3 - Build and run Nightscout<a class="headerlink" href="#step-3-build-and-run-nightscout" title="Permalink to this heading"></a></h3>
+<p>To start your Nightscout:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+<p>Or, if you want to start it in background (once everything is working as you won’t see the log):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">sudo</span> <span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+<p>To stop it (if you didn’t select <code class="docutils literal notranslate"><span class="pre">always</span></code> restart for your containers):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">compose</span> <span class="n">down</span>
+</pre></div>
+</div>
+<p>Note that you need to start it if you modify your <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> configuration (to validate the changes).</p>
+</br>
+</section>
+</section>
+<section id="update-or-downgrade">
+<h2>Update or downgrade<a class="headerlink" href="#update-or-downgrade" title="Permalink to this heading"></a></h2>
+<p>Edit your <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> configuration and change the image to whichever you want in the <a class="reference external" href="https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags">community maintained images</a>.</p>
+<p>If you’re using <code class="docutils literal notranslate"><span class="pre">image:</span> <span class="pre">nightscout/cgm-remote-monitor:latest</span></code> and you want to upgrade it to latest release, don’t change anything. You can update to <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor:latest_dev</span></code> or choose an older version like <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor:14.2.6</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">compose</span> <span class="n">down</span>
+<span class="n">sudo</span> <span class="n">docker</span> <span class="n">compose</span> <span class="n">pull</span>
+<span class="n">nohup</span> <span class="n">sudo</span> <span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</br>
+</section>
+<section id="deploy-multiple-instances">
+<h2>Deploy multiple instances<a class="headerlink" href="#deploy-multiple-instances" title="Permalink to this heading"></a></h2>
+<p>Hints from <a class="reference external" href="https://github.com/justmara">justmara</a></p>
+<p>Portainer configuration used in docker-compose:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">portainer</span><span class="p">:</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">portainer</span><span class="o">/</span><span class="n">portainer</span><span class="o">-</span><span class="n">ee</span><span class="p">:</span><span class="n">latest</span>
+    <span class="n">container_name</span><span class="p">:</span> <span class="n">portainer</span>
+    <span class="n">restart</span><span class="p">:</span> <span class="n">unless</span><span class="o">-</span><span class="n">stopped</span>
+    <span class="n">volumes</span><span class="p">:</span>
+      <span class="o">-</span> <span class="o">./</span><span class="n">portainer</span><span class="o">-</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">data</span>
+      <span class="o">-</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span>
+    <span class="n">labels</span><span class="p">:</span>
+      <span class="o">-</span> <span class="s1">&#39;traefik.enable=true&#39;</span>
+      <span class="o">-</span> <span class="s1">&#39;traefik.http.routers.portainer.rule=Host(`portainer.&lt;MYDOMAIN&gt;`)&#39;</span>
+      <span class="o">-</span> <span class="s1">&#39;traefik.http.routers.portainer.entrypoints=web&#39;</span>
+      <span class="o">-</span> <span class="s1">&#39;traefik.http.routers.portainer.service=portainer-service&#39;</span>
+      <span class="o">-</span> <span class="s1">&#39;traefik.http.services.portainer-service.loadbalancer.server.port=9000&#39;</span>
+    <span class="n">ports</span><span class="p">:</span>
+      <span class="o">-</span> <span class="s2">&quot;8000:8000&quot;</span>
+      <span class="o">-</span> <span class="s2">&quot;9443:9443&quot;</span>
+      <span class="o">-</span> <span class="s2">&quot;9000:9000&quot;</span>
+    <span class="n">networks</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">dia</span>
+</pre></div>
+</div>
+<p>Portainer custom template used to start new Nightscout instances:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="s1">&#39;3.9&#39;</span>
+
+<span class="n">x</span><span class="o">-</span><span class="n">ns</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="n">env</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">ns</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="n">env</span>
+  <span class="n">NODE_ENV</span><span class="p">:</span> <span class="n">production</span>
+  <span class="n">TZ</span><span class="p">:</span> <span class="n">Europe</span><span class="o">/</span><span class="n">Moscow</span>
+  <span class="n">TIME_FORMAT</span><span class="p">:</span> <span class="mi">24</span>
+  <span class="n">INSECURE_USE_HTTP</span><span class="p">:</span> <span class="s1">&#39;true&#39;</span>
+  <span class="n">ENABLE</span><span class="p">:</span> <span class="n">basal</span> <span class="n">iob</span> <span class="n">cob</span> <span class="n">boluscalc</span> <span class="n">cage</span> <span class="n">sage</span> <span class="n">iage</span> <span class="n">bage</span> <span class="n">pump</span> <span class="n">openaps</span> <span class="n">pushover</span> <span class="n">food</span> <span class="n">rawbg</span>
+  <span class="n">SHOW_FORECAST</span><span class="p">:</span> <span class="n">openaps</span>
+  <span class="n">PUMP_FIELDS</span><span class="p">:</span> <span class="n">clock</span> <span class="n">reservoir</span>
+  <span class="n">DISPLAY_UNITS</span><span class="p">:</span> <span class="n">mmol</span>
+  <span class="n">AUTH_DEFAULT_ROLES</span><span class="p">:</span> <span class="n">denied</span>
+
+<span class="n">services</span><span class="p">:</span>
+  <span class="n">nightscout</span><span class="o">-</span><span class="p">{{</span><span class="n">ns</span><span class="o">-</span><span class="n">name</span><span class="p">}}:</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">nightscout</span><span class="o">/</span><span class="n">cgm</span><span class="o">-</span><span class="n">remote</span><span class="o">-</span><span class="n">monitor</span><span class="p">:</span><span class="n">latest</span>
+    <span class="n">container_name</span><span class="p">:</span> <span class="n">dia</span><span class="o">-</span><span class="n">ns</span><span class="o">-</span><span class="p">{{</span><span class="n">ns</span><span class="o">-</span><span class="n">name</span><span class="p">}}</span>
+    <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+    <span class="n">depends_on</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">mongo</span>
+    <span class="n">labels</span><span class="p">:</span>
+      <span class="o">-</span> <span class="s1">&#39;traefik.enable=true&#39;</span>
+      <span class="o">-</span> <span class="s1">&#39;traefik.http.routers.ns-{{ns-name}}.rule=Host(`{{ns-name}}.&lt;MYDOMAIN&gt;`)&#39;</span>
+      <span class="o">-</span> <span class="s1">&#39;traefik.http.routers.ns-{{ns-name}}.entrypoints=web&#39;</span>
+    <span class="n">environment</span><span class="p">:</span>
+      <span class="o">&lt;&lt;</span><span class="p">:</span> <span class="o">*</span><span class="n">ns</span><span class="o">-</span><span class="n">common</span><span class="o">-</span><span class="n">env</span>
+      <span class="n">MONGO_CONNECTION</span><span class="p">:</span> <span class="n">mongodb</span><span class="p">:</span><span class="o">//</span><span class="n">mongo</span><span class="p">:</span><span class="mi">27017</span><span class="o">/</span><span class="n">ns</span><span class="o">-</span><span class="p">{{</span><span class="n">ns</span><span class="o">-</span><span class="n">name</span><span class="p">}}</span>
+      <span class="n">API_SECRET</span><span class="p">:</span> <span class="p">{{</span><span class="n">ns</span><span class="o">-</span><span class="n">secret</span><span class="p">}}</span>
+    <span class="n">networks</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">dia</span>
+
+<span class="n">networks</span><span class="p">:</span>
+  <span class="n">dia</span><span class="p">:</span>
+    <span class="n">external</span><span class="p">:</span> <span class="n">true</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

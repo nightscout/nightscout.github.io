@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting Nightscout &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Update Nightscout" href="../../update/update/" />
+    <link rel="prev" title="Remote notifications" href="../../nightscout/pushover/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting Nightscout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#before-troubleshooting">Before troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overall-third-party-services">Overall third party services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-crashed">Application crashed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#heroku">Heroku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atlas">Atlas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#railway">Railway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fly-io">Fly.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-issues">Other issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reports">Reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no-data-in-nightscout">No data in Nightscout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dexcom-data-not-showing">Dexcom data not showing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dexcom-or-carelink-data-stopping-after-a-while">Dexcom or CareLink data stopping after a while</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-timing-issues">Data timing issues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basal-is-shifted-in-time">Basal is shifted in time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-in-the-future">Data in the future</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basal-iob-cob-missing-after-dst">Basal / IOB / COB missing after DST</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#error-code-instead-of-a-bg-value">Error code instead of a BG value</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting Nightscout</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/troubleshoot/troubleshoot.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting-nightscout">
+<h1>Troubleshooting Nightscout<a class="headerlink" href="#troubleshooting-nightscout" title="Permalink to this heading"></a></h1>
+</br>
+<section id="before-troubleshooting">
+<h2>Before troubleshooting<a class="headerlink" href="#before-troubleshooting" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Check your email (maybe you missed an important announcement)</strong></p></li>
+<li><p><strong>Check your internet provider / SIM credit (can all devices browse internet?)</strong></p></li>
+<li><p><strong>Try another browser/computer (if building your Nightscout site)</strong></p>
+</br>
+</li>
+</ol>
+</section>
+<section id="overall-third-party-services">
+<h2>Overall third party services<a class="headerlink" href="#overall-third-party-services" title="Permalink to this heading"></a></h2>
+<p>Check the services you’re using are available</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Vendor</p></th>
+<th class="head"><p>Check here:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Dexcom</strong><br/>Dexcom US account<br/>Dexcom non-US account</p></td>
+<td><p><a class="reference external" href="https://status.dexcom.com/">https://status.dexcom.com/</a>  <br/><a class="reference external" href="https://clarity.dexcom.com/">https://clarity.dexcom.com/</a>   <br/><a class="reference external" href="https://clarity.dexcom.eu/">https://clarity.dexcom.eu/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Carelink US account<br/>Carelink non-US account</p></td>
+<td><p><a class="reference external" href="https://carelink.minimed.com/">https://carelink.minimed.com/</a>  <br/><a class="reference external" href="https://carelink.minimed.eu/app/login">https://carelink.minimed.eu/app/login</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GitHub</p></td>
+<td><p><a class="reference external" href="https://www.githubstatus.com/">https://www.githubstatus.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Heroku</p></td>
+<td><p><a class="reference external" href="https://status.heroku.com/">https://status.heroku.com/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Railway</p></td>
+<td><p><a class="reference external" href="https://railway.instatus.com/">https://railway.instatus.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>MongoDB Atlas</p></td>
+<td><p><a class="reference external" href="https://status.cloud.mongodb.com/">https://status.cloud.mongodb.com/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Northflank</p></td>
+<td><p><a class="reference external" href="https://status.northflank.com/">https://status.northflank.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Azure</p></td>
+<td><p><a class="reference external" href="https://azure.status.microsoft/">https://azure.status.microsoft/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>NS10BE</p></td>
+<td><p><a class="reference external" href="https://ns.10be.de/en/status.html">https://ns.10be.de/en/status.html</a></p></td>
+</tr>
+</tbody>
+</table>
+</br>
+</section>
+<hr class="docutils" />
+<section id="application-crashed">
+<h2>Application crashed<a class="headerlink" href="#application-crashed" title="Permalink to this heading"></a></h2>
+<p>Not knowing if it’s a permanent issue, first try to restart it…</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../heroku/#restart-all-dynos"><span class="std std-ref">Restart all dynos</span></a></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../railway/#restart-your-app"><span class="std std-ref">Restart your web app</span></a></p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../azure/#restart-app"><span class="std std-ref">Restart app</span></a></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../northflank/#restart"><span class="std std-ref">Restart</span></a></p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../fly.io/#restart-your-app"><span class="std std-ref">Restart your app</span></a></p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Render</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../render/#restart-service"><span class="std std-ref">Restart service</span></a></p>
+</div>
+</div>
+<hr class="docutils" />
+<p>If it’s crashing again, and you use the Atlas database, make sure i’s not <a class="reference internal" href="../atlas/#database-full"><span class="std std-ref">full</span></a>…</p>
+<p>If your database is not full, you might have your profiles table corrupted.</p>
+<ul class="simple">
+<li><p>With Atlas, just <a class="reference internal" href="#/troubleshoot/atlas/#reports-slow-loading-or-timeout"><span class="xref myst">drop</span></a> them.</p></li>
+<li><p>With another accessible database, use a computer app like <a class="reference external" href="https://studio3t.com/">Studio 3T</a> to delete the profiles table. Connect using your MONGODB_URI string.</p></li>
+</ul>
+</section>
+<section id="github">
+<h2>GitHub<a class="headerlink" href="#github" title="Permalink to this heading"></a></h2>
+<p>Follow <a class="reference internal" href="../github/"><span class="doc std std-doc">these</span></a> instructions.</p>
+</section>
+<section id="heroku">
+<h2>Heroku<a class="headerlink" href="#heroku" title="Permalink to this heading"></a></h2>
+<p>Search your issue <a class="reference internal" href="../heroku/"><span class="doc std std-doc">there</span></a>.</p>
+<p><a class="reference internal" href="../heroku/#heroku-nothing-here"><span class="std std-ref">There’s nothing here, yet</span></a> can be due to billing issues.</p>
+<p>An <a class="reference internal" href="../heroku/#application-error"><span class="std std-ref">Application error</span></a> means Heroku crashed. Restart it and check database size.</p>
+</section>
+<section id="atlas">
+<h2>Atlas<a class="headerlink" href="#atlas" title="Permalink to this heading"></a></h2>
+<p>Issues during database creation look <a class="reference internal" href="../atlas/"><span class="doc std std-doc">there</span></a>.</p>
+<p>The usual reason for failure at build time is a <a class="reference internal" href="../atlas/#bad-connection-string"><span class="std std-ref">bad connection string</span></a> (Atlas).</p>
+<p>If you encounter a <a class="reference internal" href="../atlas/#unable-to-connect-to-mongo"><span class="std std-ref">Boot Error - Unable to connect to Mongo</span></a> it might be due to a <a class="reference internal" href="../atlas/#database-full"><span class="std std-ref">Database Full</span></a></p>
+</section>
+<section id="railway">
+<h2>Railway<a class="headerlink" href="#railway" title="Permalink to this heading"></a></h2>
+<p>Mind you <a class="reference internal" href="../../vendors/railway/new_user/#step-1-fork-cgm-remote-monitor"><span class="std std-ref">can’t deploy Railway</span></a> if you just created a new GitHub account.</p>
+<p><a class="reference internal" href="../railway/#nothing-here"><span class="std std-ref">Nothing there</span></a> is usually because you forgot to subscribe to a Developer plan.</p>
+<p>Else go <a class="reference internal" href="../railway/"><span class="doc std std-doc">there</span></a>.</p>
+</section>
+<section id="fly-io">
+<h2>Fly.io<a class="headerlink" href="#fly-io" title="Permalink to this heading"></a></h2>
+<p>Fly.io troubleshooting is complex if you didn’t save your <code class="docutils literal notranslate"><span class="pre">fly.toml</span></code> configuration. Check in your local clone of the <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> project. If you can’t find it, <a class="reference internal" href="../fly.io/#recover-fly-toml"><span class="std std-ref">recover it</span></a> first.</p>
+<p>Try to redeploy your app.</p>
+<p>Once done, issues are most probably due to your <code class="docutils literal notranslate"><span class="pre">fly.toml</span></code> contents or variables.</p>
+</br>
+</section>
+<hr class="docutils" />
+<section id="other-issues">
+<h2>Other issues<a class="headerlink" href="#other-issues" title="Permalink to this heading"></a></h2>
+<section id="reports">
+<h3>Reports<a class="headerlink" href="#reports" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="../atlas/#reports-slow-loading-or-timeout"><span class="std std-ref">Reports slow loading or timeout</span></a></p>
+</section>
+<section id="no-data-in-nightscout">
+<h3>No data in Nightscout<a class="headerlink" href="#no-data-in-nightscout" title="Permalink to this heading"></a></h3>
+<p>Check your <a class="reference internal" href="../../uploader/setup/"><span class="doc std std-doc">uploader</span></a> is configured correctly.</p>
+<p>Make sure your Nightscout <a class="reference internal" href="../../nightscout/profile_editor/"><span class="doc std std-doc">time zone</span></a> is correct.</p>
+<p>If you use a <a class="reference internal" href="../../nightscout/close_loop/"><span class="doc std std-doc">DIY closed loop</span></a> system make sure it’s setup correctly.</p>
+</section>
+<section id="dexcom-data-not-showing">
+<h3>Dexcom data not showing<a class="headerlink" href="#dexcom-data-not-showing" title="Permalink to this heading"></a></h3>
+<p>See <a class="reference internal" href="../dexcom_bridge/"><span class="doc std std-doc">this dedicated page</span></a>.</p>
+</section>
+<section id="dexcom-or-carelink-data-stopping-after-a-while">
+<h3>Dexcom or CareLink data stopping after a while<a class="headerlink" href="#dexcom-or-carelink-data-stopping-after-a-while" title="Permalink to this heading"></a></h3>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>CareLink with mmconnect data source stopped functioning for 7xx pumps.
+**Remove the <code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> plugin from <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code>.</p>
+</div>
+</br>
+<p>First verify you can see your BG in Clarity.</p>
+<p>If you’re using Heroku, check the web app is not <a class="reference internal" href="../heroku/#sleeping-app"><span class="std std-ref">sleeping</span></a>.<br />
+You might need to setup an Uptime robot for Heroku Eco plan and Render.</p>
+<div class="admonition-uptime-robot admonition">
+<p class="admonition-title">UpTime Robot</p>
+<p>Using an uptime robot with a bad password, or other issues originating from Nightscout can lead to a locked account (<a class="reference internal" href="../dexcom_bridge/#account-lock"><span class="std std-ref">Dexcom</span></a>).</p>
+</div>
+</br>
+</section>
+<section id="data-timing-issues">
+<h3>Data timing issues<a class="headerlink" href="#data-timing-issues" title="Permalink to this heading"></a></h3>
+<section id="basal-is-shifted-in-time">
+<h4>Basal is shifted in time<a class="headerlink" href="#basal-is-shifted-in-time" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Check the time zone is correct for your currently active profile in your Nightscout <a class="reference internal" href="../../nightscout/profile_editor/"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">Profile</span> <span class="pre">editor</span></code></span></a>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot30.png"><img alt="../../_images/TShoot30.png" src="../../_images/TShoot30.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="data-in-the-future">
+<h4>Data in the future<a class="headerlink" href="#data-in-the-future" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Check you don’t have data in the future with the <code class="docutils literal notranslate"><span class="pre">Admin</span> <span class="pre">tools</span></code>. Remove them if existing.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot31.png"><img alt="../../_images/TShoot31.png" src="../../_images/TShoot31.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>If this isn’t working, or shows no future data, check in your database (Atlas see <a class="reference internal" href="../atlas/#data-in-the-future"><span class="std std-ref">here</span></a>)</p></li>
+</ul>
+</br>
+</section>
+<section id="basal-iob-cob-missing-after-dst">
+<h4>Basal / IOB / COB missing after DST<a class="headerlink" href="#basal-iob-cob-missing-after-dst" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Setup again your time zone in <a class="reference internal" href="../../nightscout/profile_editor/"><span class="doc std std-doc">profile editor</span></a> (authenticate and save).</p></li>
+</ul>
+</br>
+</section>
+</section>
+<section id="error-code-instead-of-a-bg-value">
+<h3>Error code instead of a BG value<a class="headerlink" href="#error-code-instead-of-a-bg-value" title="Permalink to this heading"></a></h3>
+<p>Nightscout implements Dexcom error codes as listed below:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Code</p></th>
+<th class="head"><p>Corresponding error</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">?SN</span></code></p></td>
+<td><p>Sensor not active</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">?MD</span></code></p></td>
+<td><p>Minimal deviation</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">?NA</span></code></p></td>
+<td><p>No antenna</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">?NC</span></code></p></td>
+<td><p>Sensor not calibrated</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">?CD</span></code></p></td>
+<td><p>Counts deviation</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">?AD</span></code></p></td>
+<td><p>Absolute deviation</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">???</span></code></p></td>
+<td><p>Power deviation</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">?RF</span></code></p></td>
+<td><p>Bad RF</p></td>
+</tr>
+</tbody>
+</table>
+</br></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

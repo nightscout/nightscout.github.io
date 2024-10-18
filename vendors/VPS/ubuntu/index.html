@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Nightscout in Ubuntu &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Building Nightscout with Docker" href="../docker/" />
+    <link rel="prev" title="Advanced Nightscout deployments" href="../../../nightscout/advanced/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building Nightscout in Ubuntu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#update-your-system">Update your system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-install-mongodb">Step 1 - Install MongoDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-create-a-new-database">Step 2 - Create a new database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-install-nightscout">Step 3 - Install Nightscout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-configure-nightscout">Step 4 - Configure Nightscout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manage-nightscout-startup">Manage Nightscout startup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#step-5-open-and-secure-your-access">Step 5 - Open and secure your access</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Building Nightscout in Ubuntu</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/VPS/ubuntu.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="building-nightscout-in-ubuntu">
+<h1>Building Nightscout in Ubuntu<a class="headerlink" href="#building-nightscout-in-ubuntu" title="Permalink to this heading"></a></h1>
+</br>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><span style="font-size:larger;">The most complete guide for building your site step by step is the one used for <a class="reference external" href="https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf">Oracle Cloud</a>.<br />
+If you use another hosting provider, skip Oracle specific instructions and follow the flow.</span></p>
+</div>
+</br>
+<p>Deploying in Ubuntu is very popular for skilled people, see also <a class="reference external" href="https://gist.github.com/DrCR77/eb08b830d4f31092cf65a8a9976dc0a6">here</a> and <a class="reference external" href="https://www.michael-schloemp.de/2021/10/25/nightscout-installation-auf-ubuntu-20-04-1blu-vps/">here</a>.</br></p>
+<p>If you don’t own a domain, get one now, see <a class="reference internal" href="../../../nightscout/dns/"><span class="doc std std-doc">here</span></a>.</p>
+</br>
+<section id="update-your-system">
+<h2>Update your system<a class="headerlink" href="#update-your-system" title="Permalink to this heading"></a></h2>
+<p>Update your Ubuntu system (you should type this is a command every 3 or 6 months to keep it updated).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+sudo<span class="w"> </span>apt<span class="w"> </span>clean
+</pre></div>
+</div>
+<p>You will see it’s completed when the terminal stops scrolling text and you’re returned to the prompt.</p>
+<p><strong>If you see the following message: <code class="docutils literal notranslate"><span class="pre">***</span> <span class="pre">System</span> <span class="pre">restart</span> <span class="pre">required</span> <span class="pre">***</span></code> you will need to reboot</strong>. Do not skip this step: reboot and wait a minute before opening again the console.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
+</pre></div>
+</div>
+<p>You must probably already have nano installed. If necessary:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nano<span class="w"> </span>-y
+</pre></div>
+</div>
+</br>
+</section>
+<section id="step-1-install-mongodb">
+<h2>Step 1 - Install MongoDB<a class="headerlink" href="#step-1-install-mongodb" title="Permalink to this heading"></a></h2>
+<p>a) Follow the vendor instructions</p>
+<p><a class="reference external" href="https://www.mongodb.com/docs/v5.0/tutorial/install-mongodb-on-ubuntu/">MongoDB 5 with Ubuntu 20.04</a> or <a class="reference external" href="https://www.mongodb.com/docs/v6.0/tutorial/install-mongodb-on-ubuntu/">MongoDB 6 with Ubuntu 22.04</a></p>
+<p>b) Enter in Mongo shell</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mongo<span class="w"> </span>--port<span class="w"> </span><span class="m">27017</span>
+</pre></div>
+</div>
+<p>You will know you’ve entered the mongo shell when the prompt <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> is displayed.</p>
+<p>c) Create an admin user. Decide on a name and a password.<br />
+Avoid reusing other usernames and passwords.</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">ADMIN_NAME</span></code> and <code class="docutils literal notranslate"><span class="pre">ADMIN_PASSWORD</span></code> with those your own. Keep all <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">use</span> <span class="n">admin</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db.createUser<span class="o">({</span>user:<span class="w"> </span><span class="s2">&quot;ADMIN_NAME&quot;</span>,<span class="w"> </span>pwd:<span class="w"> </span><span class="s2">&quot;ADMIN_PASSWORD&quot;</span>,<span class="w"> </span>roles:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>role:<span class="w"> </span><span class="s2">&quot;userAdminAnyDatabase&quot;</span>,<span class="w"> </span>db:<span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="w"> </span><span class="o">}]</span><span class="w"> </span><span class="o">})</span>
+</pre></div>
+</div>
+<p>Exit mongo.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">exit</span>
+</pre></div>
+</div>
+<p>Mongo will answer <code class="docutils literal notranslate"><span class="pre">bye</span></code> and you’ll be back to Ubuntu’s command prompt.</p>
+</br>
+<p>d) Turn Mongo security on</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/mongodb.conf
+</pre></div>
+</div>
+<p>Go to the line reading  <code class="docutils literal notranslate"><span class="pre">#auth</span> <span class="pre">=</span> <span class="pre">true</span></code> and remove the comment  <code class="docutils literal notranslate"><span class="pre">#</span></code>.
+Save the modified file:</p>
+<ol class="arabic simple">
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Ctrl-O</span></code>    (the letter O not zero)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Ctrl-X</span></code></p></li>
+</ol>
+<p><em>Note: if you use a Mac the <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> key is <code class="docutils literal notranslate"><span class="pre">⌘</span></code></em></p>
+<p>e) Restart Mongo with this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>service<span class="w"> </span>mongodb<span class="w"> </span>restart
+</pre></div>
+</div>
+<p>You have installed the MongoDB application.</p>
+</br>
+</section>
+<section id="step-2-create-a-new-database">
+<h2>Step 2 - Create a new database<a class="headerlink" href="#step-2-create-a-new-database" title="Permalink to this heading"></a></h2>
+<p>a) Login into Mongo as an admin<br />
+<strong>Replace</strong> <code class="docutils literal notranslate"><span class="pre">ADMIN_NAME</span></code> with your own database administrator name.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mongo<span class="w"> </span>-u<span class="w"> </span>ADMIN_NAME<span class="w"> </span>-p<span class="w"> </span>--authenticationDatabase<span class="w"> </span>admin
+</pre></div>
+</div>
+<p>You will be asked to enter the password matching your admin user.</p>
+<p>b) Create a database name.<br />
+Make it simple (letters), this is just the place your Nightscout data will be stored.
+<strong>Replace</strong> <code class="docutils literal notranslate"><span class="pre">MONGO_NS_DB</span></code> with your own database name.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>use<span class="w"> </span>MONGO_NS_DB
+</pre></div>
+</div>
+<p>c) Create a database user.<br />
+Invent a name (letters and numbers) and a password (letters and numbers, uppercase and lowercase).
+<strong>Replace</strong> <code class="docutils literal notranslate"><span class="pre">MONGO_NS_USER</span></code> with your database user name, <code class="docutils literal notranslate"><span class="pre">MONGO_NS_PASSWORD</span></code> with its matching password and <code class="docutils literal notranslate"><span class="pre">MONGO_NS_DB</span></code> with the database name you created above.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db.createUser<span class="o">({</span>user:<span class="w"> </span><span class="s2">&quot;MONGO_NS_USER&quot;</span>,<span class="w"> </span>pwd:<span class="w"> </span><span class="s2">&quot;MONGO_NS_PASSWORD&quot;</span>,<span class="w"> </span>roles:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>role:<span class="w"> </span><span class="s2">&quot;readWrite&quot;</span>,<span class="w"> </span>db:<span class="w"> </span><span class="s2">&quot;MONGO_NS_DB&quot;</span><span class="w"> </span><span class="o">}]})</span>
+</pre></div>
+</div>
+<p>Exit the shell</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">exit</span>
+</pre></div>
+</div>
+<p>d) Check you can login into Mongo with this user<br />
+<strong>Replace</strong> <code class="docutils literal notranslate"><span class="pre">MONGO_NS_USER</span></code> with your own database administrator name, and replace <code class="docutils literal notranslate"><span class="pre">MONGO_NS_DB</span></code> with your own database name.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mongo<span class="w"> </span>-u<span class="w"> </span>MONGO_NS_USER<span class="w"> </span>-p<span class="w"> </span>--authenticationDatabase<span class="w"> </span>MONGO_NS_DB
+</pre></div>
+</div>
+<p>You will be asked to enter the password matching your user.</p>
+<p>Exit the shell.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">exit</span>
+</pre></div>
+</div>
+<p>You have created your Nightscout MongoDB database and its user.</p>
+</br>
+</section>
+<section id="step-3-install-nightscout">
+<h2>Step 3 - Install Nightscout<a class="headerlink" href="#step-3-install-nightscout" title="Permalink to this heading"></a></h2>
+<p>a) Create a new  user.<br />
+Don’t try to run Nightscout as root, it will not work.<br />
+<strong>Replace <code class="docutils literal notranslate"><span class="pre">mainuser</span></code></strong> with a name of your choice, like your name, only lowercase letters.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>adduser<span class="w"> </span>mainuser
+</pre></div>
+</div>
+<p>You need to invent a password for your new user.<br />
+Confirm it then just hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code> for the following lines, when done key <code class="docutils literal notranslate"><span class="pre">Y</span></code> then <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p>b) Make your user an administrator.</p>
+<p><strong>Replace <code class="docutils literal notranslate"><span class="pre">mainuser</span></code></strong> with your new user name.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>mainuser
+</pre></div>
+</div>
+<p>c) Login to the machine using the account we just created.</p>
+<p>!!!warning “Do not run Nightscout as root”<br />
+From now on use your Nightscout user.</p>
+<p><strong>Replace <code class="docutils literal notranslate"><span class="pre">mainuser</span></code></strong> with your new user name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">mainuser</span> <span class="o">-</span><span class="n">s</span>
+</pre></div>
+</div>
+<p>d) Install <code class="docutils literal notranslate"><span class="pre">nodejs</span></code> and <code class="docutils literal notranslate"><span class="pre">npm</span></code>.</p>
+<p><strong>Mind some small VPS will not be powerful enough to deploy with npm, consider using a <a class="reference internal" href="../docker/"><span class="doc std std-doc">Docker container</span></a> in this case.</strong></p>
+<p>The example below is with the <strong>latest supported npm version</strong>: 16.20.1</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">nodejs</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">checkinstall</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libssl</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">wget</span> <span class="o">-</span><span class="n">qO</span><span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">creationix</span><span class="o">/</span><span class="n">nvm</span><span class="o">/</span><span class="n">v0</span><span class="mf">.33.8</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">bash</span>
+<span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">profile</span>
+<span class="n">nvm</span> <span class="n">install</span> <span class="mf">16.20.1</span>
+<span class="n">nvm</span> <span class="n">use</span> <span class="mf">16.20.1</span>
+</pre></div>
+</div>
+<p>Once complete, install npm</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">npm</span>
+</pre></div>
+</div>
+</br>
+<p>e) Clone the Nightscout repository <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">nightscout</span><span class="o">/</span><span class="n">cgm</span><span class="o">-</span><span class="n">remote</span><span class="o">-</span><span class="n">monitor</span><span class="o">.</span><span class="n">git</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="n">cgm</span><span class="o">-</span><span class="n">remote</span><span class="o">-</span><span class="n">monitor</span> <span class="n">nightscout</span>
+<span class="n">cd</span> <span class="n">nightscout</span>
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Make sure you’re in your nightscout directory</p>
+<p>Should you exit your terminal and resume working later make sure to return to this state.<br />
+1- you’re using your nightscout user<br />
+2- you are in your nightscout directory</p>
+</div>
+<p>f) Install Nightscout.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>It will take a long time to complete. Be patient.<br />
+On some lightweight virtual computers install might fail or hang, especially if you installed the default latest node.js version.<br />
+You can try to interrupt and run another time <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code>.</p>
+</br>
+</section>
+<section id="step-4-configure-nightscout">
+<h2>Step 4 - Configure Nightscout<a class="headerlink" href="#step-4-configure-nightscout" title="Permalink to this heading"></a></h2>
+<p>a) Edit the configuration file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>my.env
+</pre></div>
+</div>
+<p>You can use the <a class="reference download internal" download="" href="../../../_downloads/8ff7fa269d11fd145d3ac558602ade94/NightscoutVariablesUbuntu.html"><span class="xref download myst"><strong>helper page</strong></span></a> in a new browser tab.</p>
+<p>File all necessary fields, click on the Validate button at the bottom of the form, if no error is seen you will have all variables displayed in the text box at the bottom, click on the Copy All button.</p>
+<div class="tip admonition">
+<p class="admonition-title">Variables format</p>
+<p>1- do not add<code class="docutils literal notranslate"><span class="pre">export</span></code> before the variable name<br />
+2- safe format is <code class="docutils literal notranslate"><span class="pre">VARIABLE=&quot;value&quot;</span></code><br />
+3- all spaces in the values must be replaced by <code class="docutils literal notranslate"><span class="pre">%20</span></code></p>
+</div>
+<p>b) Return to the text editor. Paste the result in <code class="docutils literal notranslate"><span class="pre">nano</span></code>.</p>
+<p>c) Save the modified file:</p>
+<ol class="arabic simple">
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Ctrl-O</span></code>    (the letter O not zero)</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code></p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Ctrl-X</span></code></p></li>
+</ol>
+<p><em>Note: if you use a Mac the <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> key is <code class="docutils literal notranslate"><span class="pre">⌘</span></code></em></p>
+</br>
+<section id="manage-nightscout-startup">
+<h3>Manage Nightscout startup<a class="headerlink" href="#manage-nightscout-startup" title="Permalink to this heading"></a></h3>
+<p>d) Install <code class="docutils literal notranslate"><span class="pre">pm2</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">npm</span> <span class="n">install</span> <span class="n">pm2</span> <span class="o">-</span><span class="n">g</span>
+</pre></div>
+</div>
+<p>e) Start cgm-remote-monitor with <code class="docutils literal notranslate"><span class="pre">pm2</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>env $(cat my.env)  PORT=1337 pm2 start server.js
+</pre></div>
+</div>
+<p>f) Make <code class="docutils literal notranslate"><span class="pre">pm2</span></code> start cgm-remote-monitor on startup</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pm2</span> <span class="n">startup</span>
+</pre></div>
+</div>
+<p>This will give you a command you need to run as superuser to allow pm2 to start the app on reboot.
+The command will be something like: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">su</span> <span class="pre">-c</span> <span class="pre">&quot;env</span> <span class="pre">PATH=$PATH:/usr/bin</span> <span class="pre">pm2</span> <span class="pre">startup</span> <span class="pre">...&quot;</span></code></p>
+<p>Copy the tailored command, paste and execute it.</p>
+<p>g) Save it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pm2</span> <span class="n">save</span>
+</pre></div>
+</div>
+<p>Your Nightscout site is now available at <code class="docutils literal notranslate"><span class="pre">http://</span></code> and the IP address of your computer/VPS but it’s not secured so most browsers will refuse it.</p>
+</br>
+</section>
+</section>
+<section id="step-5-open-and-secure-your-access">
+<h2>Step 5 - Open and secure your access<a class="headerlink" href="#step-5-open-and-secure-your-access" title="Permalink to this heading"></a></h2>
+<p>a) Create a reverse <a class="reference external" href="https://nginx.org/en/">nginx</a> proxy</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">nginx</span>
+</pre></div>
+</div>
+<p>b) Delete and replace the original <code class="docutils literal notranslate"><span class="pre">/etc/nginx/sites-available/default</span></code> with this one.<br />
+<strong>Replace <code class="docutils literal notranslate"><span class="pre">MY_FULLYQUALIFIEDNAME</span></code></strong> with your own (it will look like <code class="docutils literal notranslate"><span class="pre">name.domain.tld</span></code>). You don’t have one? Look <a class="reference internal" href="../../../nightscout/dns/"><span class="doc std std-doc">here</span></a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>server {
+	listen 80;
+	server_name MY_FULLYQUALIFIEDNAME;
+	location / {
+		proxy_pass http://127.0.0.1:1337;
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection &#39;upgrade&#39;;
+		proxy_set_header Host $host;
+		proxy_cache_bypass $http_upgrade;
+		proxy_set_header X-Forwarded-Proto &quot;https&quot;;
+	}
+}
+</pre></div>
+</div>
+<p>Your Nightscout site is now available at <code class="docutils literal notranslate"><span class="pre">http://MY_FULLYQUALIFIEDNAME</span></code> but it’s not secured so most browsers will refuse it.</p>
+<p>c) If your VPS doesn’t provide a firewall you should install and configure ufw.<br />
+<strong>Make sure to open ssh if you don’t have KVM access!</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ufw</span>
+<span class="n">sudo</span> <span class="n">ufw</span> <span class="n">allow</span> <span class="s1">&#39;Nginx Full&#39;</span>
+<span class="n">sudo</span> <span class="n">ufw</span> <span class="n">allow</span> <span class="n">OpenSSH</span>
+<span class="n">sudo</span> <span class="n">ufw</span> <span class="n">enable</span>
+</pre></div>
+</div>
+<p>d) Obtain a certificate for your site name.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">certbot</span> <span class="n">python3</span><span class="o">-</span><span class="n">certbot</span><span class="o">-</span><span class="n">nginx</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">sudo</span> <span class="n">certbot</span> <span class="o">--</span><span class="n">nginx</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot;MY_FULLYQUALIFIEDNAME&quot;</span> <span class="o">--</span><span class="n">redirect</span> <span class="o">--</span><span class="n">agree</span><span class="o">-</span><span class="n">tos</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">eff</span><span class="o">-</span><span class="n">email</span>
+</pre></div>
+</div>
+<p>You can increase ssl security with a strong Diffie-Hellman group (<a class="reference external" href="https://gist.github.com/johnmales/1b3c927f2a56aae640b4b2cd0298b1e7">src</a>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">openssl</span> <span class="n">dhparam</span> <span class="o">-</span><span class="n">out</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">dhparam</span><span class="o">.</span><span class="n">pem</span> <span class="mi">2048</span>
+</pre></div>
+</div>
+<p>e) Make sure certbot takes care of renewing your certificate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">certbot</span> <span class="n">renew</span> <span class="o">--</span><span class="n">dry</span><span class="o">-</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>f) Restart the service:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">nginx</span> <span class="n">restart</span>
+</pre></div>
+</div>
+<p>Upon success you will be able to access your Nightscout site from any browser using <code class="docutils literal notranslate"><span class="pre">https://</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

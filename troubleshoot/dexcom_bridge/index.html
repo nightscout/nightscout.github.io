@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshoot Dexcom Share &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Discover your Nightscout site" href="../../nightscout/discover/" />
+    <link rel="prev" title="xDrip+ for CareLink" href="../../uploader/xdripcarelink/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshoot Dexcom Share</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#username-and-password">Username and password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#username-is-an-email">Username is an email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#username-is-a-phone-number">Username is a phone number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtaining-a-username">Obtaining a username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#account-lock">Account lock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dexcom-share">Dexcom Share</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verify-your-configuration">Verify your configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authentication-errors">Authentication errors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshoot Dexcom Share</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/troubleshoot/dexcom_bridge.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshoot-dexcom-share">
+<h1>Troubleshoot Dexcom Share<a class="headerlink" href="#troubleshoot-dexcom-share" title="Permalink to this heading"></a></h1>
+</br>
+<section id="username-and-password">
+<h2>Username and password<a class="headerlink" href="#username-and-password" title="Permalink to this heading"></a></h2>
+<p>Your Dexcom account is the one that identifies you to access all services: Store, Clarity and mobile apps. In order to make sure you’re accessing the right account, log into Clarity to check your credentials are valid.</p>
+<p>For US account: <a class="reference external" href="https://clarity.dexcom.com/">https://clarity.dexcom.com/</a><br />
+For all others: <a class="reference external" href="https://clarity.dexcom.eu/">https://clarity.dexcom.eu/</a></p>
+<a class="reference internal image-reference" href="../../_images/DexShare01.png"><img alt="../../_images/DexShare01.png" src="../../_images/DexShare01.png" style="width: 600px;" /></a>
+<p>In the case you have linked accounts, check you are using the right credentials for the profile you want to <code class="docutils literal notranslate"><span class="pre">bridge</span></code> to Nightscout.</p>
+<p><strong>Verify you actually have current data in this profile/account!</strong> You want to put the username and password of the account that has CGM data in <code class="docutils literal notranslate"><span class="pre">BRIDGE</span></code>, this is usually the credentials you are using with the master phone (the one connected to the sensor).</p>
+<a class="reference internal image-reference" href="../../_images/DexShare05.png"><img alt="../../_images/DexShare05.png" src="../../_images/DexShare05.png" style="width: 400px;" /></a>
+<div class="tip admonition">
+<p class="admonition-title">Password</p>
+<p>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Changing password</p>
+<p>Before you decide to change your password, make sure to update your Nightscout variables accordingly and make sure you have recent data in Clarity before exiting maintenance mode.</p>
+</div>
+</br>
+</section>
+<section id="username-is-an-email">
+<h2>Username is an email<a class="headerlink" href="#username-is-an-email" title="Permalink to this heading"></a></h2>
+<p>Newly created Dexcom users do not have an username but only an email address.</p>
+<a class="reference internal image-reference" href="../../_images/DexShare01b.png"><img alt="../../_images/DexShare01b.png" src="../../_images/DexShare01b.png" style="width: 400px;" /></a>
+<p>This can be an issue if you want to use <code class="docutils literal notranslate"><span class="pre">bridge</span></code> to have your data directly in Nightscout. Make sure you’re using the <a class="reference internal" href="../../update/update/"><span class="doc std std-doc">latest release</span></a> if you experience problems.</p>
+<p>Common symptoms are:</p>
+<ul class="simple">
+<li><p>no data in Nightscout even with correct credentials</p></li>
+<li><p>account locking once or more per day even with correct credentials</p></li>
+</ul>
+</br>
+</section>
+<section id="username-is-a-phone-number">
+<h2>Username is a phone number<a class="headerlink" href="#username-is-a-phone-number" title="Permalink to this heading"></a></h2>
+<p>New users might have the phone app setup with their phone number including country code and the symbol <code class="docutils literal notranslate"><span class="pre">+</span></code>. This is not supported by Nightscout. Continue below and create a dependent account with an alphanumerical username.</p>
+</br>
+</section>
+<section id="obtaining-a-username">
+<h2>Obtaining a username<a class="headerlink" href="#obtaining-a-username" title="Permalink to this heading"></a></h2>
+<p>Dependent accounts can have a username.</p>
+<a class="reference internal image-reference" href="../../_images/DexShare02.png"><img alt="../../_images/DexShare02.png" src="../../_images/DexShare02.png" style="width: 400px;" /></a>
+<p>You can create your Dexcom account and add dependent accounts for children, wife, …</p>
+<p>Some dependent accounts with an email address can generate problems when trying to connect directly to Nightscout.</p>
+</br>
+</section>
+<section id="account-lock">
+<h2>Account lock<a class="headerlink" href="#account-lock" title="Permalink to this heading"></a></h2>
+<p>You can check if your account is locked by trying to log into Clarity.</p>
+<a class="reference internal image-reference" href="../../_images/DexShare00.png"><img alt="../../_images/DexShare00.png" src="../../_images/DexShare00.png" style="width: 800px;" /></a>
+<p>If you see this message, you must disable (enter an empty username for example) all devices and apps trying to get data from or push data into Dexcom share.</p>
+<p>In order to recover from an account lock, it is usually enough to wait for 10-15 minutes after you disabled all devices and apps trying to access the account with a wrong password.</p>
+<p>Do not forget any app or device!</p>
+<ul class="simple">
+<li><p>Nightscout</p></li>
+<li><p>Smartwatches apps</p></li>
+<li><p>Sugarmate, Happy Bob, xDrip+,…</p></li>
+<li><p>…</p></li>
+</ul>
+</br>
+</section>
+<section id="dexcom-share">
+<h2>Dexcom Share<a class="headerlink" href="#dexcom-share" title="Permalink to this heading"></a></h2>
+<p>Make sure you have Dexcom Share turned ON in your Dexcom app. In the Dexcom app’s main screen, find the triangle made of dots. If the dots are grey, you do not have Share turned on. Tap the triangle, and follow the directions to add a follower (yourself if you don’t have someone else you’d like to invite) and turn on Share.</p>
+<a class="reference internal image-reference" href="../../_images/sharing.jpg"><img alt="../../_images/sharing.jpg" src="../../_images/sharing.jpg" style="width: 300px;" /></a>
+</br>
+<p>If you are using a Dexcom system, and your data is not appearing in Nightscout, there are only a limited number of reasons for that. You should check your (1) Heroku settings and (2) Dexcom Share.</p>
+<p>NOTE: The #1 reason why BGs aren’t showing is that you have mismatched password and user names in Heroku settings and Dexcom.</p>
+<section id="verify-your-configuration">
+<h3>Verify your configuration<a class="headerlink" href="#verify-your-configuration" title="Permalink to this heading"></a></h3>
+<p>Variables location will depend on the platform you use:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/heroku/new_user/#editing-config-vars-in-heroku"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/railway/new_user/#editing-variables-in-railway"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/northflank/new_user/#editing-variables-in-northflank"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/azure/new_user/#editing-config-vars-in-azure"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/fly.io/new_user/#editing-config-vars-in-fly-io"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Google Cloud</label><div class="sd-tab-content docutils">
+<p><a class="reference external" href="https://navid200.github.io/xDrip/docs/Nightscout/NS_Variables.html"><strong>→ Here</strong></a></p>
+</div>
+</div>
+</br>
+<ol class="arabic simple">
+<li><p>You must use the same <code class="docutils literal notranslate"><span class="pre">BRIDGE_PASSWORD</span></code> or <code class="docutils literal notranslate"><span class="pre">BRIDGE_USER_NAME</span></code> that your Dexcom mobile app is using.</p></li>
+<li><p>You must have <code class="docutils literal notranslate"><span class="pre">bridge</span></code> and <code class="docutils literal notranslate"><span class="pre">careportal</span></code> on the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> line (you can have other values there…but don’t forget these two).</p></li>
+<li><p>If you are outside the USA, you must add <code class="docutils literal notranslate"><span class="pre">BRIDGE_SERVER</span></code> set to <code class="docutils literal notranslate"><span class="pre">EU</span></code> in Heroku settings.</p></li>
+<li><p>Your <code class="docutils literal notranslate"><span class="pre">careportal</span></code> must be one word in the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> line, sometimes autocorrect makes it two words.</p></li>
+<li><p>If using <code class="docutils literal notranslate"><span class="pre">mmol</span></code>, make sure you have spelled that value correctly in the <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code>.</p></li>
+</ol>
+</br>
+</section>
+<section id="authentication-errors">
+<h3>Authentication errors<a class="headerlink" href="#authentication-errors" title="Permalink to this heading"></a></h3>
+<p>One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout <code class="docutils literal notranslate"><span class="pre">BRIDGE</span></code> settings is that Dexcom will lock your account…and you won’t see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing…<br />
+Check your Heroku logs that are viewable by selecting <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Logs</span></code> from the drop-down menu underneath the <code class="docutils literal notranslate"><span class="pre">More</span></code> option.</p>
+<a class="reference internal image-reference" href="../../_images/heroku-logs.png"><img alt="../../_images/heroku-logs.png" src="../../_images/heroku-logs.png" style="width: 800px;" /></a>
+<p>With Railway they are available selecting your app, then <code class="docutils literal notranslate"><span class="pre">Deployments</span></code> and <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Logs</span></code> at the end of the top (last) deployment line.</p>
+<a class="reference internal image-reference" href="../../_images/railway-logs.png"><img alt="../../_images/railway-logs.png" src="../../_images/railway-logs.png" style="width: 800px;" /></a>
+</br>
+<p>Do your logs have “<code class="docutils literal notranslate"><span class="pre">SSO</span> <span class="pre">authentication</span> <span class="pre">errors</span></code>” like in the red box highlighted above? If you do, then:</p>
+<ol class="arabic simple">
+<li><p>Delete your <code class="docutils literal notranslate"><span class="pre">BRIDGE</span></code> entries within Heroku settings.  Don’t delete the variables, just delete the values of <code class="docutils literal notranslate"><span class="pre">BRIDGE_PASSWORD</span></code> and <code class="docutils literal notranslate"><span class="pre">BRIDGE_USER_NAME</span></code>.</p></li>
+<li><p>Wait 15 minutes and then follow the directions below. It is important to wait 15 minutes: the reason you can’t log in right now is that your Dexcom account has a temporary lock from the passwords in the step above being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you’ll just keep prolonging the issue.</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>About your Bridge password and user name
+The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom’s Clarity page (check <a class="reference external" href="https://clarity.dexcom.com">here for USA accounts</a> and <a class="reference external" href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn’t valid, or you don’t see any data in your Clarity account… you need to figure out your actual credentials before moving ahead.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

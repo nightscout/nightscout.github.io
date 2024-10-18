@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover your Nightscout site &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Create Reports" href="../reports/" />
+    <link rel="prev" title="Troubleshoot Dexcom Share" href="../../troubleshoot/dexcom_bridge/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Discover your Nightscout site</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#authenticate-yourself">Authenticate yourself</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-a-treatment-careportal">Add a treatment (<code class="docutils literal notranslate"><span class="pre">careportal</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bg-check">BG Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#correction-bolus">Correction Bolus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meal-bolus">Meal Bolus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#carb-correction">Carb Correction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#snack-bolus">Snack Bolus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#combo-bolus">Combo Bolus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#announcement">Announcement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#note">Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#question">Question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exercise">Exercise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pump-site-change-cage">Pump Site Change <code class="docutils literal notranslate"><span class="pre">cage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cgm-sensor-start-sage">CGM Sensor Start <code class="docutils literal notranslate"><span class="pre">sage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cgm-sensor-insert">CGM Sensor Insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cgm-sensor-stop">CGM Sensor Stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pump-battery-change-bage">Pump Battery Change <code class="docutils literal notranslate"><span class="pre">bage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insulin-cartridge-change-iage">Insulin Cartridge Change <code class="docutils literal notranslate"><span class="pre">iage</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temp-basal-start">Temp Basal Start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temp-basal-stop">Temp Basal Stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#profile-switch">Profile Switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d-a-d-alert">D.A.D. Alert</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-mode-edit">Edit Mode (<code class="docutils literal notranslate"><span class="pre">edit</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drawer-menu">Drawer Menu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simple-views">Simple views:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#settings">Settings:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#units-display-units"><span class="xref myst"><strong>Units <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#date-format-time-format"><span class="xref myst"><strong>Date Format <code class="docutils literal notranslate"><span class="pre">TIME_FORMAT</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#language-language"><span class="xref myst"><strong>Language <code class="docutils literal notranslate"><span class="pre">LANGUAGE</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scale-scale-y"><span class="xref myst"><strong>Scale <code class="docutils literal notranslate"><span class="pre">SCALE_Y</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#render-basal-basal-render"><span class="xref myst"><strong>Render Basal <code class="docutils literal notranslate"><span class="pre">BASAL_RENDER</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#render-bolus-amount-bolus-render"><span class="xref myst"><strong>Render Bolus Amount <code class="docutils literal notranslate"><span class="pre">BOLUS_RENDER</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarms-alarm"><span class="xref myst"><strong>Alarms <code class="docutils literal notranslate"><span class="pre">ALARM</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><span class="xref myst"><strong>Edit Mode <code class="docutils literal notranslate"><span class="pre">EDIT</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-raw-bg-data-rawbg"><span class="xref myst"><strong>Show Raw BG Data <code class="docutils literal notranslate"><span class="pre">rawbg</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-title-custom-title"><span class="xref myst"><strong>Custom Title <code class="docutils literal notranslate"><span class="pre">CUSTOM_TITLE</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theme-theme"><span class="xref myst"><strong>Theme <code class="docutils literal notranslate"><span class="pre">THEME</span></code></strong></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-plugins-show-plugins"><span class="xref myst"><strong>Show Plugins <code class="docutils literal notranslate"><span class="pre">SHOW_PLUGINS</span></code></strong></span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Discover your Nightscout site</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/discover.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="discover-your-nightscout-site">
+<h1>Discover your Nightscout site<a class="headerlink" href="#discover-your-nightscout-site" title="Permalink to this heading"></a></h1>
+</br>
+<div class="tip admonition">
+<p class="admonition-title">Privacy</p>
+<p>Having the URL of your Nightscout site, anybody can view your BG and run reports of your data. It it strongly recommended that you <a class="reference internal" href="../security/"><span class="doc std std-doc">secure</span></a> your site.</p>
+</div>
+</br>
+<p>It should look very similar to this when your <a class="reference internal" href="../../uploader/setup/"><span class="std std-doc">uploader</span></a> has added some data.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS00.png"><img alt="../../_images/UseNS00.png" src="../../_images/UseNS00.png" style="width: 600px;" /></a>
+</br>
+<p>The central part will show your recent BG, you can select how many hours you want to be displayed with <code class="docutils literal notranslate"><span class="pre">Hours:</span> <span class="pre">2</span> <span class="pre">3</span> <span class="pre">4</span> <span class="pre">6</span> <span class="pre">12</span> <span class="pre">24</span></code>.  The pale blue dots are the AR2 prevision as explained <a class="reference internal" href="../setup_variables/#ar2-ar2-forecasting"><span class="std std-ref">here</span></a>. The lower part will display the last 48 hours and you can use the lower right selection to browse your old data.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS01.png"><img alt="../../_images/UseNS01.png" src="../../_images/UseNS01.png" style="width: 600px;" /></a>
+</br>
+<p>In the upper part you’ll see the current time of your site, your current BG (and how long ago it was measured) plus the delta with the previous measurement and a trend arrow. More explanations <a class="reference internal" href="../setup_variables/#default-plugins"><span class="std std-ref">here</span></a>.</p>
+<p>Optionally you will see other indications (pills) that can be personalized in your variables and plugins like detailed <a class="reference internal" href="../setup_variables/#plugins"><span class="std std-ref">here</span></a>.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS03.png"><img alt="../../_images/UseNS03.png" src="../../_images/UseNS03.png" style="width: 600px;" /></a>
+</br>
+<section id="authenticate-yourself">
+<h2>Authenticate yourself<a class="headerlink" href="#authenticate-yourself" title="Permalink to this heading"></a></h2>
+<p>By default you site opens read only, you need to authenticate using your <a class="reference internal" href="../setup_variables/#api-secret"><span class="std std-ref">API secret</span></a> in order to modify settings and add treatments. Click on the lock icon, enter your API secret and click <code class="docutils literal notranslate"><span class="pre">Update</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS04.png"><img alt="../../_images/UseNS04.png" src="../../_images/UseNS04.png" style="width: 400px;" /></a>
+<p>This will unlock your <code class="docutils literal notranslate"><span class="pre">careportal</span></code> (<a class="reference internal" href="../setup_variables/#careportal-careportal"><span class="std std-ref">if enabled</span></a>) and <code class="docutils literal notranslate"><span class="pre">edit</span></code> (<a class="reference internal" href="../setup_variables/#edit-mode-on"><span class="std std-ref">if enabled</span></a>).</p>
+<a class="reference internal image-reference" href="../../_images/UseNS05.png"><img alt="../../_images/UseNS05.png" src="../../_images/UseNS05.png" style="width: 200px;" /></a>
+</br>
+</section>
+<section id="add-a-treatment-careportal">
+<h2>Add a treatment (<code class="docutils literal notranslate"><span class="pre">careportal</span></code>)<a class="headerlink" href="#add-a-treatment-careportal" title="Permalink to this heading"></a></h2>
+<p>Some uploaders will send treatments to Nightscout but others won’t. If you whish to do this manually, <code class="docutils literal notranslate"><span class="pre">careportal</span></code> is here for that.</p>
+<p><code class="docutils literal notranslate"><span class="pre">+</span></code> will open an interface to manually enter treatments.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS06.png"><img alt="../../_images/UseNS06.png" src="../../_images/UseNS06.png" style="width: 300px;" /></a>
+</br>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">Type</span></code> drop down menu, you can select the treatment type you want to add. Additional available entries will depend on the <a class="reference internal" href="../setup_variables/#advanced-plugins"><span class="std std-ref">plugins you enabled</span></a> like Loop and OpenAPS/AAPS.</p>
+<section id="bg-check">
+<h3>BG Check<a class="headerlink" href="#bg-check" title="Permalink to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">BG</span> <span class="pre">check</span></code> allows you to enter a blood glucose reading value from your <code class="docutils literal notranslate"><span class="pre">Meter</span></code>. With a CGM using <code class="docutils literal notranslate"><span class="pre">Sensor</span></code> reading doesn’t add much value.</p>
+<p>Keep in mind the value will be inserted now (unless you modify the event time) and might not match your CGM value for non stable BG due to capillary time lag.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS07.png"><img alt="../../_images/UseNS07.png" src="../../_images/UseNS07.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="correction-bolus">
+<h3>Correction Bolus<a class="headerlink" href="#correction-bolus" title="Permalink to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Correction</span> <span class="pre">Bolus</span></code> allows you to enter the amount of insulin units injected for a correction.</p>
+<p>It will show as a circle with the lower half blue, with its size depending on the amount of units, UI indicated below (depending on <a class="reference internal" href="../setup_variables/#bolus-render"><span class="std std-ref">bolus rendering</span></a> setting).</p>
+<a class="reference internal image-reference" href="../../_images/UseNS08.png"><img alt="../../_images/UseNS08.png" src="../../_images/UseNS08.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="meal-bolus">
+<h3>Meal Bolus<a class="headerlink" href="#meal-bolus" title="Permalink to this heading"></a></h3>
+</section>
+<section id="carb-correction">
+<h3>Carb Correction<a class="headerlink" href="#carb-correction" title="Permalink to this heading"></a></h3>
+</section>
+<section id="snack-bolus">
+<h3>Snack Bolus<a class="headerlink" href="#snack-bolus" title="Permalink to this heading"></a></h3>
+<p>These treatments allow you to enter the amount of food you eat (and eventually the matching insulin treatment).</p>
+<p>It will show as a circle with the higher half white (if including carbs), with its size depending on the amount of food. Without carbs the upper half will not be filled with the white color. If you add proteins and fat, the amount will display in this order: <code class="docutils literal notranslate"><span class="pre">carbs/proteins/fat</span></code>. With insulin the lower half of the circle will fill in blue and units will be indicated below.</p>
+<p>You can select the timing of carbs absorption in <code class="docutils literal notranslate"><span class="pre">Carb</span> <span class="pre">Time</span></code> (i.e. when did you or will you actually eat these carbs)</p>
+<a class="reference internal image-reference" href="../../_images/UseNS09.png"><img alt="../../_images/UseNS09.png" src="../../_images/UseNS09.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="combo-bolus">
+<h3>Combo Bolus<a class="headerlink" href="#combo-bolus" title="Permalink to this heading"></a></h3>
+<p>Combo bolus allows you to insert the corresponding bolus if you use a pump. Insert the total amount of insulin in <code class="docutils literal notranslate"><span class="pre">Insulin</span> <span class="pre">Given</span></code> then break down in <code class="docutils literal notranslate"><span class="pre">Split</span></code> with the percentage administered <code class="docutils literal notranslate"><span class="pre">now</span></code> and the <code class="docutils literal notranslate"><span class="pre">extended</span></code> amount. Enter the<code class="docutils literal notranslate"><span class="pre">Duration</span></code> of the extended bolus below.</p>
+<p>It will display as a classic bolus at treatment time and <a class="reference internal" href="../setup_variables/#basal-basal-profile"><span class="std std-ref">basal</span></a> will reflect the extended amount for the selected duration.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS10.png"><img alt="../../_images/UseNS10.png" src="../../_images/UseNS10.png" style="width: 500px;" /></a>
+</br>
+</section>
+<section id="announcement">
+<h3>Announcement<a class="headerlink" href="#announcement" title="Permalink to this heading"></a></h3>
+<p>Announcements are used to change your page title in order to alert viewers.</p>
+<p>Entering another treatment will acknowledge the announcement and return your page title to <a class="reference internal" href="../setup_variables/#custom-title-nightscout"><span class="std std-ref">default</span></a>.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS11.png"><img alt="../../_images/UseNS11.png" src="../../_images/UseNS11.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="note">
+<h3>Note<a class="headerlink" href="#note" title="Permalink to this heading"></a></h3>
+</section>
+<section id="question">
+<h3>Question<a class="headerlink" href="#question" title="Permalink to this heading"></a></h3>
+<p>Notes and questions are a way to add comments and interact with others using your Nightscout page.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS12.png"><img alt="../../_images/UseNS12.png" src="../../_images/UseNS12.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading"></a></h3>
+<p>You can log physical activities and specify the duration.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS13.png"><img alt="../../_images/UseNS13.png" src="../../_images/UseNS13.png" style="width: 500px;" /></a>
+</br>
+</section>
+<section id="pump-site-change-cage">
+<h3>Pump Site Change <code class="docutils literal notranslate"><span class="pre">cage</span></code><a class="headerlink" href="#pump-site-change-cage" title="Permalink to this heading"></a></h3>
+</section>
+<section id="cgm-sensor-start-sage">
+<h3>CGM Sensor Start <code class="docutils literal notranslate"><span class="pre">sage</span></code><a class="headerlink" href="#cgm-sensor-start-sage" title="Permalink to this heading"></a></h3>
+</section>
+<section id="cgm-sensor-insert">
+<h3>CGM Sensor Insert<a class="headerlink" href="#cgm-sensor-insert" title="Permalink to this heading"></a></h3>
+</section>
+<section id="cgm-sensor-stop">
+<h3>CGM Sensor Stop<a class="headerlink" href="#cgm-sensor-stop" title="Permalink to this heading"></a></h3>
+</section>
+<section id="pump-battery-change-bage">
+<h3>Pump Battery Change <code class="docutils literal notranslate"><span class="pre">bage</span></code><a class="headerlink" href="#pump-battery-change-bage" title="Permalink to this heading"></a></h3>
+</section>
+<section id="insulin-cartridge-change-iage">
+<h3>Insulin Cartridge Change <code class="docutils literal notranslate"><span class="pre">iage</span></code><a class="headerlink" href="#insulin-cartridge-change-iage" title="Permalink to this heading"></a></h3>
+<p>Logging these events will help you remember various expirations dates and will update the <a class="reference internal" href="../setup_variables/#age-pills"><span class="std std-ref">corresponding pills</span></a> if enabled.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS14.png"><img alt="../../_images/UseNS14.png" src="../../_images/UseNS14.png" style="width: 500px;" /></a>
+</br>
+</section>
+<section id="temp-basal-start">
+<h3>Temp Basal Start<a class="headerlink" href="#temp-basal-start" title="Permalink to this heading"></a></h3>
+</section>
+<section id="temp-basal-stop">
+<h3>Temp Basal Stop<a class="headerlink" href="#temp-basal-stop" title="Permalink to this heading"></a></h3>
+<p>You can indicate temporary basal rate changes using either a percentage change in <code class="docutils literal notranslate"><span class="pre">Percent</span></code> or the absolute rate in <code class="docutils literal notranslate"><span class="pre">Basal</span> <span class="pre">value</span></code>. You need <a class="reference internal" href="../setup_variables/#basal-basal-profile"><span class="std std-ref">basal</span></a> to be enabled to visualize it.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS15.png"><img alt="../../_images/UseNS15.png" src="../../_images/UseNS15.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="profile-switch">
+<h3>Profile Switch<a class="headerlink" href="#profile-switch" title="Permalink to this heading"></a></h3>
+<p>If you have more than one profile stored, you can switch profile to keep your profile parameters synchronized.</p>
+<p>For a temporary switch (like for physical activities) you can select the duration.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS16.png"><img alt="../../_images/UseNS16.png" src="../../_images/UseNS16.png" style="width: 500px;" /></a>
+</br>
+</section>
+<section id="d-a-d-alert">
+<h3>D.A.D. Alert<a class="headerlink" href="#d-a-d-alert" title="Permalink to this heading"></a></h3>
+<p>Log a Diabetic Alert Dog event.</p>
+<a class="reference internal image-reference" href="../../_images/UseNS20.png"><img alt="../../_images/UseNS20.png" src="../../_images/UseNS20.png" style="width: 300px;" /></a>
+</br>
+</section>
+</section>
+<section id="edit-mode-edit">
+<h2>Edit Mode (<code class="docutils literal notranslate"><span class="pre">edit</span></code>)<a class="headerlink" href="#edit-mode-edit" title="Permalink to this heading"></a></h2>
+<p>For values still present on your display (last 48 hours), you can use Edit to move or delete bolus and correction treatments.</p>
+<p><a class="reference internal" href="../../_images/UseNS17.png"><img alt="../../_images/UseNS17.png" src="../../_images/UseNS17.png" style="width: 50px;" /></a> will change color to red in edit mode <a class="reference internal" href="../../_images/UseNS18.png"><img alt="../../_images/UseNS18.png" src="../../_images/UseNS18.png" style="width: 50px;" /></a>.</p>
+<ol class="arabic simple">
+<li><p>Drag the treatment in the past or future in the black area to move both food and insulin.</p></li>
+<li><p>If you want to move only insulin drop in the blue area.</p></li>
+<li><p>For carbs only, in the white area.</p></li>
+<li><p>To delete a complete treatment drop it in the red delete area.</p></li>
+</ol>
+<p>Once done, exit the edit mode by de-selecting it (white on black background). <a class="reference internal" href="../../_images/UseNS17.png"><img alt="../../_images/UseNS17.png" src="../../_images/UseNS17.png" style="width: 50px;" /></a></p>
+<a class="reference internal image-reference" href="../../_images/UseNS19.png"><img alt="../../_images/UseNS19.png" src="../../_images/UseNS19.png" style="width: 1000px;" /></a>
+</br>
+</section>
+<section id="drawer-menu">
+<h2>Drawer Menu<a class="headerlink" href="#drawer-menu" title="Permalink to this heading"></a></h2>
+<p>Once authenticated (click the lock icon up right) you’ll find many features in the drawer menu like access to advanced plugins and customizations of your web page (local view only, in order to modify the default view look into your Heroku variables <a class="reference internal" href="../setup_variables/"><span class="doc std std-doc">here</span></a>).</p>
+<a class="reference internal image-reference" href="../../_images/UseNS21.png"><img alt="../../_images/UseNS21.png" src="../../_images/UseNS21.png" style="width: 300px;" /></a>
+<p><code class="docutils literal notranslate"><span class="pre">Reports</span></code> will drive you to a powerful reporting toolset detailed <a class="reference internal" href="../reports/"><span class="doc std std-doc">here</span></a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Profile</span> <span class="pre">Editor</span></code> will allow you to modify and add profiles, see <a class="reference internal" href="../profile_editor/"><span class="doc std std-doc">here</span></a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Food</span> <span class="pre">Editor</span></code> handles your customized <a class="reference internal" href="../setup_variables/#food-custom-foods"><span class="std std-ref">food database</span></a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Admin</span> <span class="pre">Tools</span></code> gives you access control and database tools, see <a class="reference internal" href="../admin_tools/"><span class="doc std std-doc">here</span></a>.</p>
+</br>
+<section id="simple-views">
+<h3>Simple views:<a class="headerlink" href="#simple-views" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/UseNS22.png"><img alt="../../_images/UseNS22.png" src="../../_images/UseNS22.png" style="width: 300px;" /></a>
+</br>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Clock</span></code> - Shows current BG, trend arrow, and time of day. Grey text on a black background.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS32.png"><img alt="../../_images/SetupNS32.png" src="../../_images/SetupNS32.png" style="width: 300px;" /></a>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Color</span></code> - Shows current BG and trend arrow. White text on a color background.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS33.png"><img alt="../../_images/SetupNS33.png" src="../../_images/SetupNS33.png" style="width: 300px;" /></a>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Simple</span></code> - Shows current BG. Grey text on a black background.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[+]</span></code> -  Create custom, simplified views using a predefined set of elements.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS34.png"><img alt="../../_images/SetupNS34.png" src="../../_images/SetupNS34.png" style="width: 300px;" /></a>
+</br>
+<p>List of available items:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SGV</span></code> - Sensor Glucose Value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SGV</span> <span class="pre">age</span></code> - time since the last SGV read</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SGV</span> <span class="pre">delta</span></code> - change of SGV in the last 5 minutes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Trend</span> <span class="pre">arrow</span></code> - icon of the SG trend</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Time</span></code> - current time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span> <span class="pre">break</span></code> - invisible item that will move following items to the next line (by default all are showing on the same level)</p></li>
+</ul>
+<p>All visible items have <code class="docutils literal notranslate"><span class="pre">Size</span></code> property which allows to customize the view even more. Also, all items may appear multiple times on the view.</p>
+<p>Apart from adding items, it is possible to customize other aspects of the views, like selecting <code class="docutils literal notranslate"><span class="pre">Color</span></code> or <code class="docutils literal notranslate"><span class="pre">Black</span></code> background. The first one will indicate current BG threshold (green = in range; blue = below range; yellow = above range; red = urgent below/above). <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">SGV</span> <span class="pre">age</span></code> option will make <code class="docutils literal notranslate"><span class="pre">SGV</span> <span class="pre">age</span></code> item appear <code class="docutils literal notranslate"><span class="pre">Always</span></code> or only if the predefined threshold is reached: <code class="docutils literal notranslate"><span class="pre">Only</span> <span class="pre">after</span> <span class="pre">threshold</span></code>. Breaching <code class="docutils literal notranslate"><span class="pre">SGV</span> <span class="pre">age</span> <span class="pre">threshold</span></code> will also make <code class="docutils literal notranslate"><span class="pre">Color</span></code> background turn grey and strike through <code class="docutils literal notranslate"><span class="pre">SGV</span></code>. <code class="docutils literal notranslate"><span class="pre">Clock</span> <span class="pre">view</span> <span class="pre">configurator</span></code> will generate an URL (available under <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">my</span> <span class="pre">clock</span> <span class="pre">view!</span></code> link) that could be bookmarked.</p>
+<p>If you launch one of these views in a fullscreen view in iOS, you can use a left-to-right swipe gesture to exit the view.</p>
+</br>
+</section>
+<section id="settings">
+<h3>Settings:<a class="headerlink" href="#settings" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/UseNS23.png"><img alt="../../_images/UseNS23.png" src="../../_images/UseNS23.png" style="width: 300px;" /></a>
+</br>
+<p>You can customize your view using Settings. Changes will only be applied to your current browser view, if you want to make these settings default for any browser you need to change directly the corresponding <a class="reference internal" href="../setup_variables/"><span class="doc std std-doc">system variables</span></a> indicated below and add the corresponding plugins in <a class="reference internal" href="../setup_variables/#plugins"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">SHOW_PLUGINS</span></code></span></a>.</p>
+<p>You need to <a class="reference internal" href="#authenticate-yourself">authenticate</a> to save your settings.</p>
+<section id="units-display-units">
+<h4><a class="reference internal" href="../setup_variables/#display-units"><span class="std std-ref"><strong>Units <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code></strong></span></a><a class="headerlink" href="#units-display-units" title="Permalink to this heading"></a></h4>
+</section>
+<section id="date-format-time-format">
+<h4><a class="reference internal" href="../setup_variables/#time-format-12"><span class="std std-ref"><strong>Date Format <code class="docutils literal notranslate"><span class="pre">TIME_FORMAT</span></code></strong></span></a><a class="headerlink" href="#date-format-time-format" title="Permalink to this heading"></a></h4>
+</section>
+<section id="language-language">
+<h4><a class="reference internal" href="../setup_variables/#language-en"><span class="std std-ref"><strong>Language <code class="docutils literal notranslate"><span class="pre">LANGUAGE</span></code></strong></span></a><a class="headerlink" href="#language-language" title="Permalink to this heading"></a></h4>
+</section>
+<section id="scale-scale-y">
+<h4><a class="reference internal" href="../setup_variables/#scale-y-log"><span class="std std-ref"><strong>Scale <code class="docutils literal notranslate"><span class="pre">SCALE_Y</span></code></strong></span></a><a class="headerlink" href="#scale-scale-y" title="Permalink to this heading"></a></h4>
+</section>
+<section id="render-basal-basal-render">
+<h4><a class="reference internal" href="../setup_variables/#basal-basal-profile"><span class="std std-ref"><strong>Render Basal <code class="docutils literal notranslate"><span class="pre">BASAL_RENDER</span></code></strong></span></a><a class="headerlink" href="#render-basal-basal-render" title="Permalink to this heading"></a></h4>
+</section>
+<section id="render-bolus-amount-bolus-render">
+<h4><a class="reference internal" href="../setup_variables/#bolus-render"><span class="std std-ref"><strong>Render Bolus Amount <code class="docutils literal notranslate"><span class="pre">BOLUS_RENDER</span></code></strong></span></a><a class="headerlink" href="#render-bolus-amount-bolus-render" title="Permalink to this heading"></a></h4>
+</section>
+<section id="alarms-alarm">
+<h4><a class="reference internal" href="../setup_variables/#alarms"><span class="std std-ref"><strong>Alarms <code class="docutils literal notranslate"><span class="pre">ALARM</span></code></strong></span></a><a class="headerlink" href="#alarms-alarm" title="Permalink to this heading"></a></h4>
+</br>
+<a class="reference internal image-reference" href="../../_images/UseNS24.png"><img alt="../../_images/UseNS24.png" src="../../_images/UseNS24.png" style="width: 300px;" /></a>
+</br>
+</section>
+<section id="id1">
+<h4><a class="reference internal" href="#edit-mode-edit"><span class="std std-ref"><strong>Edit Mode <code class="docutils literal notranslate"><span class="pre">EDIT</span></code></strong></span></a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+</section>
+<section id="show-raw-bg-data-rawbg">
+<h4><a class="reference internal" href="../setup_variables/#rawbg-raw-bg"><span class="std std-ref"><strong>Show Raw BG Data <code class="docutils literal notranslate"><span class="pre">rawbg</span></code></strong></span></a><a class="headerlink" href="#show-raw-bg-data-rawbg" title="Permalink to this heading"></a></h4>
+</section>
+<section id="custom-title-custom-title">
+<h4><a class="reference internal" href="../setup_variables/#custom-title-nightscout"><span class="std std-ref"><strong>Custom Title <code class="docutils literal notranslate"><span class="pre">CUSTOM_TITLE</span></code></strong></span></a><a class="headerlink" href="#custom-title-custom-title" title="Permalink to this heading"></a></h4>
+</section>
+<section id="theme-theme">
+<h4><a class="reference internal" href="../setup_variables/#theme-colors"><span class="std std-ref"><strong>Theme <code class="docutils literal notranslate"><span class="pre">THEME</span></code></strong></span></a><a class="headerlink" href="#theme-theme" title="Permalink to this heading"></a></h4>
+</section>
+<section id="show-plugins-show-plugins">
+<h4><a class="reference internal" href="../setup_variables/#plugins"><span class="std std-ref"><strong>Show Plugins <code class="docutils literal notranslate"><span class="pre">SHOW_PLUGINS</span></code></strong></span></a><a class="headerlink" href="#show-plugins-show-plugins" title="Permalink to this heading"></a></h4>
+</br>
+<a class="reference internal image-reference" href="../../_images/UseNS25.png"><img alt="../../_images/UseNS25.png" src="../../_images/UseNS25.png" style="width: 300px;" /></a>
+</br>
+<p>In order to <code class="docutils literal notranslate"><span class="pre">Save</span></code> your changes you need to Authenticate, click <code class="docutils literal notranslate"><span class="pre">Authenticate</span></code> and enter your <a class="reference internal" href="../setup_variables/#api-secret"><span class="std std-ref">API Secret</span></a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Reset,</span> <span class="pre">and</span> <span class="pre">use</span> <span class="pre">defaults</span></code> will reverse your changes to defaults from your <a class="reference internal" href="../setup_variables/#nightscout-config-vars"><span class="std std-ref">config variables</span></a>.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">About</span></code> you’ll see your current Nightscout version.</p>
+</br>
+</section>
+</section>
+<section id="api">
+<h3>API<a class="headerlink" href="#api" title="Permalink to this heading"></a></h3>
+<p>You can find information about your site API at:</p>
+<p>https://{url}/api-docs[?token=TOKEN]</p>
+<p>https://{url}/api/v2/properties.json[?token=TOKEN]</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

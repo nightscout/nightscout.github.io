@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightscout in Northflank &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Nightscout in Render" href="../../render/new_user/" />
+    <link rel="prev" title="Nightscout in Azure (Docker)" href="../../azure/new_user/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nightscout in Northflank</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-a-new-nightscout">Set up a new Nightscout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-your-northflank-and-github-accounts-from-a-computer">Create your Northflank and GitHub accounts from a computer.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-0-create-a-database">Step 0: Create a database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-create-a-github-account-and-fork-the-nightscout-project">Step 1: Create a GitHub account and fork the Nightscout project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-create-a-northflank-account">Step 2: Create a Northflank account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-deploy-nightscout-in-northflank">Step 3: Deploy Nightscout in Northflank</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#new-nightscout-setup">New Nightscout Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-your-northflank-nightscout-site-name">Change your Northflank Nightscout site name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-variables-in-northflank">Editing Variables in Northflank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#copy-all-variables-from-heroku">Copy all variables from Heroku</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nightscout in Northflank</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/northflank/new_user.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nightscout-in-northflank">
+<h1>Nightscout in Northflank<a class="headerlink" href="#nightscout-in-northflank" title="Permalink to this heading"></a></h1>
+</br>
+<div class="seealso admonition">
+<p class="admonition-title">Too complicated? Not what you’re looking for?</p>
+<p>Consider a hosted Nightscout service! Check for easier solutions <a class="reference internal" href="../../../#nightscout-as-a-service"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="northflank">Northflank</h2>
+<p class="sd-card-text"><img alt="" src="../../../_images/Northflank.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">You can create your new Northflank Nightscout site with a <a class="reference internal" href="../../mongodb/atlas/"><span class="doc std std-doc">MongoDB Atlas</span></a> database or with its own <a class="reference internal" href="../database/"><span class="doc std std-doc">Northflank database</span></a>.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Nightscout fits in the free tier</p></li>
+<li><p class="sd-card-text">Easy to deploy or migrate an existing site from Heroku</p></li>
+<li><p class="sd-card-text">Simple to use and troubleshoot</p></li>
+<li><p class="sd-card-text">Can use a native Northflank MongoDB database</p></li>
+<li><p class="sd-card-text">You can deploy up to $20/mo worth of free resources on Northflank’s managed cloud</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The Nightscout address generated for your site is virtually impossible to remember</p></li>
+</ul>
+</div>
+</div>
+</br>
+<section id="set-up-a-new-nightscout">
+<h2>Set up a new Nightscout<a class="headerlink" href="#set-up-a-new-nightscout" title="Permalink to this heading"></a></h2>
+<section id="create-your-northflank-and-github-accounts-from-a-computer">
+<h3>Create your Northflank and GitHub accounts from a computer.<a class="headerlink" href="#create-your-northflank-and-github-accounts-from-a-computer" title="Permalink to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not change device/computer/browser during the setup process!<br />
+If you have unexpected issues when creating your site, restart with another browser.</p>
+</div>
+</br>
+</section>
+<section id="step-0-create-a-database">
+<h3>Step 0: Create a database<a class="headerlink" href="#step-0-create-a-database" title="Permalink to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you <a class="reference internal" href="../../../nightscout/database/"><span class="doc std std-doc">created one</span></a> before starting your Nightscout web app creation with Northflank.
+Come back here when you have a MONGODB_URI connection string.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Migrating?</p>
+<p>Copy the connection string from your previous platform: <a class="reference internal" href="../../../nightscout/setup_variables/#nightscout-configuration"><span class="std std-ref">edit the variables</span></a> and look for <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code>.
+If you don’t see <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> but see <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code> (<strong>NOT</strong> <code class="docutils literal notranslate"><span class="pre">MONGO_COLLECTION</span></code>): use its value.</p>
+</div>
+</br>
+</section>
+<section id="step-1-create-a-github-account-and-fork-the-nightscout-project">
+<h3>Step 1: Create a GitHub account and fork the Nightscout project<a class="headerlink" href="#step-1-create-a-github-account-and-fork-the-nightscout-project" title="Permalink to this heading"></a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+This is not necessary anymore (with a Docker image)</label><div class="sd-tab-content docutils">
+<p>Continue with Step 2.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+I don’t have a GitHub Account</label><div class="sd-tab-content docutils">
+<h3 class="rubric" id="create-a-github-account">Create a GitHub account</h3>
+<p>a) Click this link to create a GitHub account: <a class="reference external" href="https://github.com/">https://github.com/</a></p>
+<p>Enter your email and click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">up</span> <span class="pre">for</span> <span class="pre">GitHub</span></code></br></p>
+<p><a class="reference internal" href="../../../_images/NewNS00a.png"><img alt="../../../_images/NewNS00a.png" src="../../../_images/NewNS00a.png" style="width: 600px;" /></a></br></p>
+<p>b) Enter a password and a username (anything you want and that is accepted, not very important).<br />
+Type <code class="docutils literal notranslate"><span class="pre">n</span></code> to decline advertisement emails.</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS00.png"><img alt="../../../_images/NewNS00.png" src="../../../_images/NewNS00.png" style="width: 500px;" /></a></br></p>
+<p>c) Play and solve the puzzle then click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">account</span></code></br></p>
+<p><a class="reference internal" href="../../../_images/NewNS01.png"><img alt="../../../_images/NewNS01.png" src="../../../_images/NewNS01.png" style="width: 500px;" /></a></br></p>
+<p>d)  GitHub will send you a verification code. Open your mail and check your inbox (check your spam-folder if not received after a couple of minutes).</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS02.png"><img alt="../../../_images/NewNS02.png" src="../../../_images/NewNS02.png" style="width: 500px;" /></a></br></p>
+<p>e) If a personalization sequence starts, click <code class="docutils literal notranslate"><span class="pre">Skip</span> <span class="pre">personalization</span> </code> at the bottom.</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS03.png"><img alt="../../../_images/NewNS03.png" src="../../../_images/NewNS03.png" style="width: 600px;" /></a></br></p>
+<p>f) Leave the page that opened as it is. Don’t close it.</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS04.png"><img alt="../../../_images/NewNS04.png" src="../../../_images/NewNS04.png" style="width: 600px;" /></a></br></p>
+<p>You have created your GitHub account. Now fork the Nightscout project.</br></p>
+</br>
+<h3 class="rubric" id="fork-the-nightscout-project">Fork the Nightscout project</h3>
+<p>a) Click here to log in at GitHub: <a class="reference external" href="https://github.com/login">https://github.com/login</a>.<br />
+Enter your username or email and your password. Click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span></code></br></p>
+<p><a class="reference internal" href="../../../_images/UpdateNS00.png"><img alt="../../../_images/UpdateNS00.png" src="../../../_images/UpdateNS00.png" style="width: 400px;" /></a></br></p>
+<div class="admonition-if-you-already-have-a-fork-of-cgm-remote-monitor-in-github admonition">
+<p class="admonition-title">If you already have a fork of cgm-remote-monitor in GitHub</p>
+<p><a class="reference internal" href="../../../update/redeploy/#delete-your-own-fork-of-cgm-remote-monitor"><span class="std std-ref"><strong>Delete</strong></span></a> or <a class="reference internal" href="../../github/update/#update-your-nightscout-fork"><span class="std std-ref"><strong>update</strong></span></a> your current cgm-remote-monitor fork before continuing.</br></p>
+</div>
+<p>b) Open this link <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor">https://github.com/nightscout/cgm-remote-monitor</a>. Click on <code class="docutils literal notranslate"><span class="pre">Fork</span></code></br></p>
+<p><a class="reference internal" href="../../../_images/NewNS29.png"><img alt="../../../_images/NewNS29.png" src="../../../_images/NewNS29.png" style="width: 600px;" /></a></br></p>
+<p>Confirm with <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">fork</span></code></br></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure you deselect <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">the</span> <span class="pre">master</span> <span class="pre">branch</span> <span class="pre">only</span></code>.</p>
+</div>
+<p><a class="reference internal" href="../../../_images/NewNS51.png"><img alt="../../../_images/NewNS51.png" src="../../../_images/NewNS51.png" style="width: 600px;" /></a></br></p>
+<p>c) Wait for a moment</br></p>
+<p><a class="reference internal" href="../../../_images/NewNS30.png"><img alt="../../../_images/NewNS30.png" src="../../../_images/NewNS30.png" style="width: 400px;" /></a></br></p>
+<p>d) You now have a copy (fork) of the Nightscout project repository in your own GitHub.</br></p>
+<p><a class="reference internal" href="../../../_images/UpdateNS30.png"><img alt="../../../_images/UpdateNS30.png" src="../../../_images/UpdateNS30.png" style="width: 700px;" /></a></br></p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+I already have a GitHub Account</label><div class="sd-tab-content docutils">
+<h3 class="rubric" id="update-your-nightscout-fork">Update your Nightscout fork</h3>
+<ul class="simple">
+<li><p>Click here to log in at GitHub: <a class="reference external" href="https://github.com/login">https://github.com/login</a>.</p></li>
+<li><p>Enter your username or email and your password. Click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span></code></br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS00.png"><img alt="../../../_images/UpdateNS00.png" src="../../../_images/UpdateNS00.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select your own <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> project (<strong>not <code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor</span></code></strong>)</br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01.png"><img alt="../../../_images/UpdateNS01.png" src="../../../_images/UpdateNS01.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>Your repository will open. If you see <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">branch</span> <span class="pre">is</span> <span class="pre">xxx</span> <span class="pre">commits</span> <span class="pre">behind</span> <span class="pre">nightscout:master</span></code> you need to update.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">upstream</span></code></br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01a.png"><img alt="../../../_images/UpdateNS01a.png" src="../../../_images/UpdateNS01a.png" style="width: 700px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">and</span> <span class="pre">merge</span></code></br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01b.png"><img alt="../../../_images/UpdateNS01b.png" src="../../../_images/UpdateNS01b.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>After a moment, your repository should display <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">branch</span> <span class="pre">is</span> <span class="pre">up</span> <span class="pre">to</span> <span class="pre">date</span> <span class="pre">with</span> <span class="pre">nightscout:master</span></code></br></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/UpdateNS01c.png"><img alt="../../../_images/UpdateNS01c.png" src="../../../_images/UpdateNS01c.png" style="width: 400px;" /></a></br></p>
+<p>You have now updated your GitHub cgm-remote-monitor repository.</p>
+</br>
+<p>If you ran into trouble, you can <a class="reference internal" href="../../../update/redeploy/"><span class="doc std std-doc">redeploy</span></a> the project.</p>
+</br>
+</div>
+</div>
+</br>
+</section>
+<section id="step-2-create-a-northflank-account">
+<h3>Step 2: Create a Northflank account<a class="headerlink" href="#step-2-create-a-northflank-account" title="Permalink to this heading"></a></h3>
+<p><em><strong>If you already created your database in Northflank, skip to step 3.</strong></em></p>
+<p>a) Sign-up to <a class="reference external" href="https://app.northflank.com/signup">Northflank</a> in a new browser tab. Login with GitHub (click on the logo).</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank00.png"><img alt="../../../_images/Northflank00.png" src="../../../_images/Northflank00.png" style="width: 400px;" /></a>
+</br>
+<p>b) Confirm your GitHub account if required.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank01.png"><img alt="../../../_images/Northflank01.png" src="../../../_images/Northflank01.png" style="width: 400px;" /></a>
+</br>
+<p>c) Select <code class="docutils literal notranslate"><span class="pre">Only</span> <span class="pre">select</span> <span class="pre">repositories</span></code>, in the drop-down list select <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> then click <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">&amp;</span> <span class="pre">Authorize</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank02.png"><img alt="../../../_images/Northflank02.png" src="../../../_images/Northflank02.png" style="width: 400px;" /></a>
+</br>
+<p>c) Enter a user name, your email address and invent a password (type it twice to confirm). Accept the TOS and Privacy Policy then click  <code class="docutils literal notranslate"><span class="pre">Continue</span> </code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank03.png"><img alt="../../../_images/Northflank03.png" src="../../../_images/Northflank03.png" style="width: 600px;" /></a>
+</br>
+<p>d) Click <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">theme</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank04.png"><img alt="../../../_images/Northflank04.png" src="../../../_images/Northflank04.png" style="width: 600px;" /></a>
+</br>
+<p>e) Select <code class="docutils literal notranslate"><span class="pre">Skip</span> <span class="pre">for</span> <span class="pre">now</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank05.png"><img alt="../../../_images/Northflank05.png" src="../../../_images/Northflank05.png" style="width: 600px;" /></a>
+</br>
+<p>f) Select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">free</span> <span class="pre">project</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank06.png"><img alt="../../../_images/Northflank06.png" src="../../../_images/Northflank06.png" style="width: 200px;" /></a>
+</br>
+<p>g) Enter a project name (for example nightscout) and select a region (you can make it geographically close to where you live) then click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">project</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank07.png"><img alt="../../../_images/Northflank07.png" src="../../../_images/Northflank07.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="step-3-deploy-nightscout-in-northflank">
+<h3>Step 3: Deploy Nightscout in Northflank<a class="headerlink" href="#step-3-deploy-nightscout-in-northflank" title="Permalink to this heading"></a></h3>
+<p><strong>What are you trying to do now?</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+I want to create a brand new Nightscout from a Docker image (recommended)</label><div class="sd-tab-content docutils">
+<p>If you already created a Nightscout project (for example if you created your database in Northflank), select it now.</p>
+<p><a class="reference internal" href="../../../_images/Northflank32.png"><img alt="../../../_images/Northflank32.png" src="../../../_images/Northflank32.png" style="width: 600px;" /></a></br></p>
+ </br>
+<p>a) Select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">new</span> <span class="pre">service</span></code> or <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">service</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank08.png"><img alt="../../../_images/Northflank08.png" src="../../../_images/Northflank08.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>b) Select <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">a</span> <span class="pre">Docker</span> <span class="pre">image</span></code>. Scroll down and put a name in <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">name</span></code> or click <code class="docutils literal notranslate"><span class="pre">Suggest</span> <span class="pre">random</span> <span class="pre">name</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank33.png"><img alt="../../../_images/Northflank33.png" src="../../../_images/Northflank33.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>c) In <code class="docutils literal notranslate"><span class="pre">Deployment</span></code>, select <code class="docutils literal notranslate"><span class="pre">External</span> <span class="pre">image</span></code> and type <code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor:latest</span></code> in <code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">path</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank34.png"><img alt="../../../_images/Northflank34.png" src="../../../_images/Northflank34.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>d) Expand <code class="docutils literal notranslate"><span class="pre">Variables</span></code> and click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">variable</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank12.png"><img alt="../../../_images/Northflank12.png" src="../../../_images/Northflank12.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>e) Setup your Nightscout core variables.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to copy all variables from Heroku, follow <a class="reference internal" href="#copy-all-variables-from-heroku">these instructions</a> and then continue to <strong>l)</strong> below.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use &#64; or ! symbols remember you will probably need to express them using <a class="reference external" href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you’re not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it’s reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
+</div>
+<p><a class="reference internal" href="../../../_images/Northflank13.png"><img alt="../../../_images/Northflank13.png" src="../../../_images/Northflank13.png" style="width: 600px;" /></a></br></p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">variable</span></code> each time to add another one.</p>
+</br>
+<h4 class="rubric" id="dexcom-bridge">Dexcom Bridge</h4>
+<p>f) If you use <a class="reference internal" href="../../../troubleshoot/dexcom_bridge/"><span class="doc std std-doc">Dexcom <code class="docutils literal notranslate"><span class="pre">bridge</span></code></span></a> you need to configure these two variables with your Dexcom credentials:</p>
+<p><a class="reference internal" href="../../../_images/Northflank14.png"><img alt="../../../_images/Northflank14.png" src="../../../_images/Northflank14.png" style="width: 600px;" /></a></br></p>
+<p><a class="reference internal" href="../../../_images/Northflank15.png"><img alt="../../../_images/Northflank15.png" src="../../../_images/Northflank15.png" style="width: 600px;" /></a></br></p>
+<p>If you’re using Dexcom Share in the US you should put <strong>US</strong>, in <strong>any other case it must be EU</strong>.<br />
+If you don’t see it proposed at this point you’ll need to <strong>browse the list below to find it and modify it</strong>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank16.png"><img alt="../../../_images/Northflank16.png" src="../../../_images/Northflank16.png" style="width: 600px;" /></a></br></p>
+<p><strong>Remember to add <code class="docutils literal notranslate"><span class="pre">bridge</span></code> at the end of the <code class="docutils literal notranslate"><span class="pre">enable</span></code> variable in the list below.</strong></p>
+</br>
+<div class="hint admonition">
+<p class="admonition-title">MOST COMMON ERRORS</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom’s Clarity page (check <a class="reference external" href="https://clarity.dexcom.com">here for USA accounts</a> and <a class="reference external" href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn’t valid, or you don’t see any data in your Clarity account… you need to figure out your actual credentials before moving ahead. See <a class="reference internal" href="../../../troubleshoot/dexcom_bridge/"><span class="doc std std-doc">here</span></a> for troubleshooting tips and information on your Dexcom account.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Password</p>
+<p><em>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</em></p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You need to have at least one follower to use Dexcom Share. See <a class="reference internal" href="../../../uploader/setup/#dexcom"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<p>g) Select the units you’re using in <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> acceptable choices are <code class="docutils literal notranslate"><span class="pre">mg/dl</span></code> or <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> (or just <code class="docutils literal notranslate"><span class="pre">mmol</span></code>).</p>
+<p><a class="reference internal" href="../../../_images/Northflank17.png"><img alt="../../../_images/Northflank17.png" src="../../../_images/Northflank17.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>h) You can add alarms values. See <a class="reference internal" href="../../../nightscout/setup_variables/#alarms"><span class="std std-ref">here</span></a> for the meaning of each one.</p>
+<p><a class="reference internal" href="../../../_images/Northflank18.png"><img alt="../../../_images/Northflank18.png" src="../../../_images/Northflank18.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>i) If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code>) is able to view the data, you should configure the <a class="reference internal" href="../../../nightscout/setup_variables/#auth-default-roles"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">AUTH_DEFAULT_ROLES</span></code></span></a> variable in as <code class="docutils literal notranslate"><span class="pre">denied</span></code>.<br />
+If you want your site to be visible to anybody leave it as <code class="docutils literal notranslate"><span class="pre">readable</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank19.png"><img alt="../../../_images/Northflank19.png" src="../../../_images/Northflank19.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>j) In <a class="reference internal" href="../../../nightscout/setup_variables/#enable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ENABLE</span></code></span></a>, copy and paste the following words (separated by a space) so that won’t have to think about which you want now:</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">speech</span> <span class="pre">cors</span></code></p>
+<p><strong>If you are using your Dexcom share account as a data source</strong> also add <code class="docutils literal notranslate"><span class="pre">bridge</span></code> at the end, after a space like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">speech</span> <span class="pre">cors</span> <span class="pre">bridge</span></code></p>
+<p><a class="reference internal" href="../../../_images/Northflank20.png"><img alt="../../../_images/Northflank20.png" src="../../../_images/Northflank20.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>k) You can modify the variables values, check the <a class="reference internal" href="../../../nightscout/setup_variables/"><span class="doc std std-doc">documentation</span></a> for the meaning of each one.</p>
+</br>
+<p>l) You can modify the 3 to 8 letter code to your URL.</p>
+<p><a class="reference internal" href="../../../_images/Northflank21.png"><img alt="../../../_images/Northflank21.png" src="../../../_images/Northflank21.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>m) Scroll down and check you’re using an <code class="docutils literal notranslate"><span class="pre">nf-compute-10</span></code> plan, then click: <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Service</span></code></p>
+<p><a class="reference internal" href="../../../_images/Northflank22a.png"><img alt="../../../_images/Northflank22a.png" src="../../../_images/Northflank22a.png" style="width: 600px;" /></a></br></p>
+<p><a class="reference internal" href="../../../_images/Northflank22.png"><img alt="../../../_images/Northflank22.png" src="../../../_images/Northflank22.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>n) If not done before, you now need to add a payment method.</p>
+<p><a class="reference internal" href="../../../_images/Northflank23.png"><img alt="../../../_images/Northflank23.png" src="../../../_images/Northflank23.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>o) Wait until your build completes. You will see a green cloud when done, it will take less than 15 minutes.</p>
+<p><a class="reference internal" href="../../../_images/Northflank24.png"><img alt="../../../_images/Northflank24.png" src="../../../_images/Northflank24.png" style="width: 400px;" /></a></br></p>
+</br>
+</br>
+<h3 class="rubric" id="step-4-attach-your-database-to-your-nightscout-site">Step 4: Attach your database to your Nightscout site</h3>
+</br>
+<p>a) Browse back into your project <code class="docutils literal notranslate"><span class="pre">Service</span> </code> then <code class="docutils literal notranslate"><span class="pre">Environment</span></code>, click <code class="docutils literal notranslate"><span class="pre">Edit</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank25.png"><img alt="../../../_images/Northflank25.png" src="../../../_images/Northflank25.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>b) Select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">variable</span> </code> at the end of the list.</p>
+<p><a class="reference internal" href="../../../_images/Northflank26.png"><img alt="../../../_images/Northflank26.png" src="../../../_images/Northflank26.png" style="width: 300px;" /></a></br></p>
+</br>
+<p>c) Name it <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> and paste the string you obtained at <strong>Step 0</strong>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank27.png"><img alt="../../../_images/Northflank27.png" src="../../../_images/Northflank27.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>d) Click <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">and</span> <span class="pre">restart</span></code> bottom right.</p>
+<p><a class="reference internal" href="../../../_images/Northflank28.png"><img alt="../../../_images/Northflank28.png" src="../../../_images/Northflank28.png" style="width: 200px;" /></a></br></p>
+</br>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+I want to create a brand new Nightscout (old method)</label><div class="sd-tab-content docutils">
+<p>If you already created a Nightscout project (for example if you created your database in Northflank), select it now.</p>
+<p><a class="reference internal" href="../../../_images/Northflank32.png"><img alt="../../../_images/Northflank32.png" src="../../../_images/Northflank32.png" style="width: 600px;" /></a></br></p>
+ </br>
+<p>a) Select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">new</span> <span class="pre">service</span></code> or <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">service</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank08.png"><img alt="../../../_images/Northflank08.png" src="../../../_images/Northflank08.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>b) Select <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">and</span> <span class="pre">deploy</span> <span class="pre">a</span> <span class="pre">Git</span> <span class="pre">repo</span></code>. Scroll down and put a name in <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">name</span></code> or click <code class="docutils literal notranslate"><span class="pre">Suggest</span> <span class="pre">random</span> <span class="pre">name</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank09.png"><img alt="../../../_images/Northflank09.png" src="../../../_images/Northflank09.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>c) Select your <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> and the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
+<p><a class="reference internal" href="../../../_images/Northflank10.png"><img alt="../../../_images/Northflank10.png" src="../../../_images/Northflank10.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>d) In <code class="docutils literal notranslate"><span class="pre">Buid</span> <span class="pre">options</span></code> select <code class="docutils literal notranslate"><span class="pre">Buildpack</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank11.png"><img alt="../../../_images/Northflank11.png" src="../../../_images/Northflank11.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>Open <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">build</span> <span class="pre">settings</span></code> and select <code class="docutils literal notranslate"><span class="pre">heroku/builder-classic:22</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank11b.png"><img alt="../../../_images/Northflank11b.png" src="../../../_images/Northflank11b.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>e) Expand <code class="docutils literal notranslate"><span class="pre">Variables</span></code> and click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">variable</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to copy all variables from Heroku, follow <a class="reference internal" href="#copy-all-variables-from-heroku">these instructions</a> and then continue to <strong>m)</strong> below.</p>
+</div>
+<p><a class="reference internal" href="../../../_images/Northflank12.png"><img alt="../../../_images/Northflank12.png" src="../../../_images/Northflank12.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>f) Setup your Nightscout core variables.</p>
+<p><code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use &#64; or ! symbols remember you will probably need to express them using <a class="reference external" href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you’re not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it’s reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
+</div>
+<p><a class="reference internal" href="../../../_images/Northflank13.png"><img alt="../../../_images/Northflank13.png" src="../../../_images/Northflank13.png" style="width: 600px;" /></a></br></p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">variable</span></code> each time to add another one.</p>
+</br>
+<h4 class="rubric" id="id1">Dexcom Bridge</h4>
+<p>g) If you use <a class="reference internal" href="../../../troubleshoot/dexcom_bridge/"><span class="doc std std-doc">Dexcom <code class="docutils literal notranslate"><span class="pre">bridge</span></code></span></a> you need to configure these two variables with your Dexcom credentials:</p>
+<p><a class="reference internal" href="../../../_images/Northflank14.png"><img alt="../../../_images/Northflank14.png" src="../../../_images/Northflank14.png" style="width: 600px;" /></a></br></p>
+<p><a class="reference internal" href="../../../_images/Northflank15.png"><img alt="../../../_images/Northflank15.png" src="../../../_images/Northflank15.png" style="width: 600px;" /></a></br></p>
+<p>If you’re using Dexcom Share in the US you should put <strong>US</strong>, in <strong>any other case it must be EU</strong>.<br />
+If you don’t see it proposed at this point you’ll need to <strong>browse the list below to find it and modify it</strong>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank16.png"><img alt="../../../_images/Northflank16.png" src="../../../_images/Northflank16.png" style="width: 600px;" /></a></br></p>
+<p><strong>Remember to add <code class="docutils literal notranslate"><span class="pre">bridge</span></code> at the end of the <code class="docutils literal notranslate"><span class="pre">enable</span></code> variable in the list below.</strong></p>
+</br>
+<div class="hint admonition">
+<p class="admonition-title">MOST COMMON ERRORS</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom’s Clarity page (check <a class="reference external" href="https://clarity.dexcom.com">here for USA accounts</a> and <a class="reference external" href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn’t valid, or you don’t see any data in your Clarity account… you need to figure out your actual credentials before moving ahead. See <a class="reference internal" href="../../../troubleshoot/dexcom_bridge/"><span class="doc std std-doc">here</span></a> for troubleshooting tips and information on your Dexcom account.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Password</p>
+<p><em>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</em></p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You need to have at least one follower to use Dexcom Share. See <a class="reference internal" href="../../../uploader/setup/#dexcom"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<p>h) Select the units you’re using in <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> acceptable choices are <code class="docutils literal notranslate"><span class="pre">mg/dl</span></code> or <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> (or just <code class="docutils literal notranslate"><span class="pre">mmol</span></code>).</p>
+<p><a class="reference internal" href="../../../_images/Northflank17.png"><img alt="../../../_images/Northflank17.png" src="../../../_images/Northflank17.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>i) You can add alarms values. See <a class="reference internal" href="../../../nightscout/setup_variables/#alarms"><span class="std std-ref">here</span></a> for the meaning of each one.</p>
+<p><a class="reference internal" href="../../../_images/Northflank18.png"><img alt="../../../_images/Northflank18.png" src="../../../_images/Northflank18.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>j) If you want to ensure that ONLY someone with permission to view your site (e.g., a token or the <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code>) is able to view the data, you should configure the <a class="reference internal" href="../../../nightscout/setup_variables/#auth-default-roles"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">AUTH_DEFAULT_ROLES</span></code></span></a> variable in as <code class="docutils literal notranslate"><span class="pre">denied</span></code>.<br />
+If you want your site to be visible to anybody leave it as <code class="docutils literal notranslate"><span class="pre">readable</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank19.png"><img alt="../../../_images/Northflank19.png" src="../../../_images/Northflank19.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>k) In <a class="reference internal" href="../../../nightscout/setup_variables/#enable"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ENABLE</span></code></span></a>, copy and paste the following words (separated by a space) so that won’t have to think about which you want now:</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">speech</span> <span class="pre">cors</span></code></p>
+<p><strong>If you are using your Dexcom share account as a data source</strong> also add <code class="docutils literal notranslate"><span class="pre">bridge</span></code> at the end, after a space like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">speech</span> <span class="pre">cors</span> <span class="pre">bridge</span></code></p>
+<p><a class="reference internal" href="../../../_images/Northflank20.png"><img alt="../../../_images/Northflank20.png" src="../../../_images/Northflank20.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>l) You can modify the variables values, check the <a class="reference internal" href="../../../nightscout/setup_variables/"><span class="doc std std-doc">documentation</span></a> for the meaning of each one.</p>
+</br>
+<p>m) You can modify the 3 to 8 letter code to your URL.</p>
+<p><a class="reference internal" href="../../../_images/Northflank21.png"><img alt="../../../_images/Northflank21.png" src="../../../_images/Northflank21.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>n) Scroll down and check you’re using an <code class="docutils literal notranslate"><span class="pre">nf-compute-10</span></code> plan, then click: <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Service</span></code></p>
+<p><a class="reference internal" href="../../../_images/Northflank22a.png"><img alt="../../../_images/Northflank22a.png" src="../../../_images/Northflank22a.png" style="width: 600px;" /></a></br></p>
+<p><a class="reference internal" href="../../../_images/Northflank22.png"><img alt="../../../_images/Northflank22.png" src="../../../_images/Northflank22.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>o) If not done before, you now need to add a payment method.</p>
+<p><a class="reference internal" href="../../../_images/Northflank23.png"><img alt="../../../_images/Northflank23.png" src="../../../_images/Northflank23.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>p) Wait until your build completes. You will see a green cloud when done, it will take less than 15 minutes.</p>
+<p><a class="reference internal" href="../../../_images/Northflank24.png"><img alt="../../../_images/Northflank24.png" src="../../../_images/Northflank24.png" style="width: 400px;" /></a></br></p>
+</br>
+</br>
+<h3 class="rubric" id="id2">Step 4: Attach your database to your Nightscout site</h3>
+</br>
+<p>a) Browse back into your project <code class="docutils literal notranslate"><span class="pre">Service</span> </code> then <code class="docutils literal notranslate"><span class="pre">Environment</span></code>, click <code class="docutils literal notranslate"><span class="pre">Edit</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank25.png"><img alt="../../../_images/Northflank25.png" src="../../../_images/Northflank25.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>b) Select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">variable</span> </code> at the end of the list.</p>
+<p><a class="reference internal" href="../../../_images/Northflank26.png"><img alt="../../../_images/Northflank26.png" src="../../../_images/Northflank26.png" style="width: 300px;" /></a></br></p>
+</br>
+<p>c) Name it <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> and paste the string you obtained at <strong>Step 0</strong>.</p>
+<p><a class="reference internal" href="../../../_images/Northflank27.png"><img alt="../../../_images/Northflank27.png" src="../../../_images/Northflank27.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>d) Click <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">and</span> <span class="pre">restart</span></code> bottom right.</p>
+<p><a class="reference internal" href="../../../_images/Northflank28.png"><img alt="../../../_images/Northflank28.png" src="../../../_images/Northflank28.png" style="width: 200px;" /></a></br></p>
+</br>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+I want to migrate from Heroku</label><div class="sd-tab-content docutils">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>If you already have a Northflank database, you cannot use this wizard.</strong>
+<a class="reference internal" href="#step-3-deploy-nightscout-in-northflank"><span class="std std-ref">Create a new Northflank Nightscout site</span></a> with only <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> and <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> then <a class="reference internal" href="#/vendors/northflank/new_usermd/#copy-all-variables-from-heroku"><span class="xref myst">manually copy your Heroku variables</span></a>.</p>
+</div>
+<p>a) Go to your <code class="docutils literal notranslate"><span class="pre">Account</span></code> <code class="docutils literal notranslate"><span class="pre">Dashboard</span></code> - <code class="docutils literal notranslate"><span class="pre">Settings</span></code> and scroll down to <code class="docutils literal notranslate"><span class="pre">Import</span></code>.<br />
+Select Heroku.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM01.png"><img alt="../../../_images/NorthflankM01.png" src="../../../_images/NorthflankM01.png" style="width: 600px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don’t see this option, send a mail to Northflank support to request access to the feature.</p>
+</div>
+<p></br></br></p>
+<p>b) Click <code class="docutils literal notranslate"><span class="pre">Link</span> <span class="pre">Heroku</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM02.png"><img alt="../../../_images/NorthflankM02.png" src="../../../_images/NorthflankM02.png" style="width: 600px;" /></a>
+<p></br></br></p>
+<p>c) Login in Heroku.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM03.png"><img alt="../../../_images/NorthflankM03.png" src="../../../_images/NorthflankM03.png" style="width: 400px;" /></a>
+<p></br></br></p>
+<p>d)  Click <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM04.png"><img alt="../../../_images/NorthflankM04.png" src="../../../_images/NorthflankM04.png" style="width: 300px;" /></a>
+<p></br></br></p>
+<p>e)  Select your Nightscout Heroku app then click <code class="docutils literal notranslate"><span class="pre">Continue</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM05.png"><img alt="../../../_images/NorthflankM05.png" src="../../../_images/NorthflankM05.png" style="width: 600px;" /></a>
+<p></br></br></p>
+<p>f)  Select your project (the one you created in <strong>Step 1.g</strong>) then click <code class="docutils literal notranslate"><span class="pre">Continue</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM06.png"><img alt="../../../_images/NorthflankM06.png" src="../../../_images/NorthflankM06.png" style="width: 600px;" /></a>
+<p></br></br></p>
+<p>g)  Verify the branch you want to migrate, usually it’s <code class="docutils literal notranslate"><span class="pre">master</span></code> unless you know why you need another one.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM07.png"><img alt="../../../_images/NorthflankM07.png" src="../../../_images/NorthflankM07.png" style="width: 600px;" /></a>
+<p></br></br></p>
+<p>h)  Select  <code class="docutils literal notranslate"><span class="pre">heroku/builder-classic:22</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM08.png"><img alt="../../../_images/NorthflankM08.png" src="../../../_images/NorthflankM08.png" style="width: 600px;" /></a>
+<p></br></br></p>
+<p>i)  Modify your compute plan to the smallest <strong><code class="docutils literal notranslate"><span class="pre">nf-compute-10</span></code></strong> and click <code class="docutils literal notranslate"><span class="pre">Continue</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM09.png"><img alt="../../../_images/NorthflankM09.png" src="../../../_images/NorthflankM09.png" style="width: 600px;" /></a>
+<p></br></br></p>
+<p>j)  Wait until import completes then return to your Dashboard (top left).</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankM10.png"><img alt="../../../_images/NorthflankM10.png" src="../../../_images/NorthflankM10.png" style="width: 600px;" /></a>
+<p></br></br></p>
+</div>
+</div>
+<p>To open your Nightscout site, navigate to your project <code class="docutils literal notranslate"><span class="pre">Services</span></code> and click the address link top right.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank29.png"><img alt="../../../_images/Northflank29.png" src="../../../_images/Northflank29.png" style="width: 600px;" /></a>
+</br>
+<p><strong>Good time to check you selected the right plan.</strong></p>
+<p>Make sure you selected the developer sandbox plan to avoid unexpected fees.</p>
+<a class="reference internal image-reference" href="../../../_images/NorthflankSP.png"><img alt="../../../_images/NorthflankSP.png" src="../../../_images/NorthflankSP.png" style="width: 400px;" /></a>
+</br>
+</section>
+</section>
+<section id="new-nightscout-setup">
+<h2>New Nightscout Setup<a class="headerlink" href="#new-nightscout-setup" title="Permalink to this heading"></a></h2>
+</br>
+<p>a) Your Nightscout site should open and direct you to a new profile creation.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS50.png"><img alt="../../../_images/NewNS50.png" src="../../../_images/NewNS50.png" style="width: 400px;" /></a>
+</br>
+<p>b) Setup your <code class="docutils literal notranslate"><span class="pre">Time</span> <span class="pre">zone</span></code> and eventually all other fields. Do not leave any fields empty. If you don’t know which value to use, just use the default value. You can change these values later at any time.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS44.png"><img alt="../../../_images/NewNS44.png" src="../../../_images/NewNS44.png" style="width: 500px;" /></a>
+</br>
+<p>c) Browse down to <code class="docutils literal notranslate"><span class="pre">Authentication</span> <span class="pre">status</span></code> and click <code class="docutils literal notranslate"><span class="pre">Authenticate</span></code>. Enter your API secret. Click <code class="docutils literal notranslate"><span class="pre">Update</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS45.png"><img alt="../../../_images/NewNS45.png" src="../../../_images/NewNS45.png" style="width: 500px;" /></a>
+</br>
+<p>d) Click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS46.png"><img alt="../../../_images/NewNS46.png" src="../../../_images/NewNS46.png" style="width: 200px;" /></a>
+</br>
+<p>e) If the following pop-up shows up click <code class="docutils literal notranslate"><span class="pre">OK</span></code>, and check status (upper right of the window).</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS47.png"><img alt="../../../_images/NewNS47.png" src="../../../_images/NewNS47.png" style="width: 600px;" /></a>
+</br>
+<p>f) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select <code class="docutils literal notranslate"><span class="pre">Profile</span> <span class="pre">Editor</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS43.png"><img alt="../../../_images/NewNS43.png" src="../../../_images/NewNS43.png" style="width: 600px;" /></a>
+</br>
+<div class="warning admonition">
+<p class="admonition-title">Privacy warning</p>
+<p>Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable <a class="reference internal" href="../../../nightscout/security/"><span class="doc std std-doc">security</span></a> to your site once you’re done with the setup</p>
+</div>
+</br>
+<p>g) Dexcom Share users should see data flowing in after some minutes.
+xDrip+ users (including Medtronic <a class="reference internal" href="../../../uploader/setup/#medtronic-carelink"><span class="std std-ref">CareLink followers</span></a>) should setup the uploader as shown <a class="reference internal" href="../../../uploader/setup/#xdrip"><span class="std std-ref"><strong>here</strong></span></a>.
+xDrip4iOS users <a class="reference external" href="https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#nightscout-upload">here</a>.
+<a class="reference external" href="https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient">AAPS</a> and <a class="reference external" href="https://loopkit.github.io/loopdocs/operation/loop-settings/services/">Loop</a>: consult the relative documentation.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS48.png"><img alt="../../../_images/NewNS48.png" src="../../../_images/NewNS48.png" style="width: 600px;" /></a>
+</br>
+<hr class="docutils" />
+<p>You have completed a new Nightscout site creation. You can continue <a class="reference internal" href="../../../nightscout/discover/"><span class="doc std std-doc">here</span></a> now.</p>
+<p>The following section provides more information that you might not need to use now.</p>
+<hr class="docutils" />
+</br>
+</br>
+</br>
+</section>
+<section id="change-your-northflank-nightscout-site-name">
+<h2>Change your Northflank Nightscout site name<a class="headerlink" href="#change-your-northflank-nightscout-site-name" title="Permalink to this heading"></a></h2>
+<p>You <a class="reference external" href="https://northflank.com/docs/v1/application/network/configure-ports#public-ports">cannot</a> override the default name if you don’t have a DNS.<br />
+You can use <a class="reference external" href="https://tinyurl.com/">TinyURL</a> to get a shorter name.</p>
+<a class="reference internal image-reference" href="../../../_images/TinyURL.png"><img alt="../../../_images/TinyURL.png" src="../../../_images/TinyURL.png" style="width: 300px;" /></a>
+<p>You can also use a free <a class="reference internal" href="../../../nightscout/dns/"><span class="doc std std-doc">dynamic DNS</span></a> service to do this in order to have something easier to remember.</p>
+<p>Keep the original Northflank URL in your <a class="reference internal" href="../../../uploader/setup/"><span class="doc std std-doc">uploaders</span></a> and <a class="reference internal" href="../../../nightscout/downloaders/"><span class="doc std std-doc">followers</span></a>.</p>
+</br>
+<hr class="docutils" />
+<p>You have completed a new Nightscout site creation. The following section provides more information for variables edition that you might not need to use now.</p>
+<hr class="docutils" />
+</br>
+</section>
+<section id="editing-variables-in-northflank">
+<h2>Editing Variables in Northflank<a class="headerlink" href="#editing-variables-in-northflank" title="Permalink to this heading"></a></h2>
+</br>
+<p>a) Open <a class="reference external" href="https://app.northflank.com/login">Northflank</a> and login with your username or with GitHub.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank30.png"><img alt="../../../_images/Northflank30.png" src="../../../_images/Northflank30.png" style="width: 400px;" /></a>
+</br>
+<p>b) Select <code class="docutils literal notranslate"><span class="pre">Services</span> </code> then your Nightscout project.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank31.png"><img alt="../../../_images/Northflank31.png" src="../../../_images/Northflank31.png" style="width: 600px;" /></a>
+</br>
+<p>c) Select <code class="docutils literal notranslate"><span class="pre">Environment</span></code> then <code class="docutils literal notranslate"><span class="pre">Edit</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank25.png"><img alt="../../../_images/Northflank25.png" src="../../../_images/Northflank25.png" style="width: 600px;" /></a>
+</br>
+<p>e) You can perform various operations on your variables:</p>
+<ol class="arabic simple">
+<li><p>Add a new variable with <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">Add</span> <span class="pre">Variable</span></code></p></li>
+<li><p>Edit variables values directly in the table</p></li>
+<li><p>Delete a variable with the bin icon</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiple lines values should be typed with <code class="docutils literal notranslate"><span class="pre">\n</span></code> separating each original line.</br>
+Example:</br>
+<a class="reference internal" href="../../../_images/APNKeys.png"><img alt="../../../_images/APNKeys.png" src="../../../_images/APNKeys.png" style="width: 600px;" /></a></br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">----</span><span class="n">BEGIN</span> <span class="n">PRIVATE</span> <span class="n">KEY</span><span class="o">-----</span>\<span class="n">n</span>
+<span class="n">MIGTAgEAMBMGBygGSM49AwEHBHkwdwIBAQQg7c8w00t5ju7N980rerN8N</span><span class="o">+</span><span class="n">isnJoec</span><span class="o">+</span><span class="n">ohIEuD0teRbPmgCgYIKoZIzj0DAQehRANCAAREnRISLSiFgdn4Lbf44yIKspXKr7GpPBVshv3ShOms2qHTdAFriXXRPmbq7eAJuFrxpYOduU1dl9voouciW0je</span>
+\<span class="n">n</span><span class="o">-----</span><span class="n">END</span> <span class="n">PRIVATE</span> <span class="n">KEY</span><span class="o">-----</span>
+</pre></div>
+</div>
+</div>
+<p>Don’t forget to <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">&amp;</span> <span class="pre">restart</span></code> when you’re done editing.</p>
+</br>
+</section>
+<section id="copy-all-variables-from-heroku">
+<h2>Copy all variables from Heroku<a class="headerlink" href="#copy-all-variables-from-heroku" title="Permalink to this heading"></a></h2>
+</br>
+<p>a) Export all your Heroku variables as explained <a class="reference internal" href="../../../troubleshoot/heroku/#method-2-export"><span class="std std-ref">here</span></a>. In a file you can call <code class="docutils literal notranslate"><span class="pre">heroku.env</span></code>.</p>
+<p>If you’re currently deploying a new Northflank Nightscout site, select <code class="docutils literal notranslate"><span class="pre">Env</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank36.png"><img alt="../../../_images/Northflank36.png" src="../../../_images/Northflank36.png" style="width: 600px;" /></a>
+<p>Continue to <strong>c)</strong> below.</p>
+</br>
+<p>b) If you want to modify an existing Northflank site,</p>
+<p>Open <a class="reference external" href="https://app.northflank.com/login">Northflank</a> and login with your username or with GitHub.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank30.png"><img alt="../../../_images/Northflank30.png" src="../../../_images/Northflank30.png" style="width: 400px;" /></a>
+</br>
+<p>Select <code class="docutils literal notranslate"><span class="pre">Services</span> </code> then your Nightscout project.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank31.png"><img alt="../../../_images/Northflank31.png" src="../../../_images/Northflank31.png" style="width: 600px;" /></a>
+</br>
+<p>Select <code class="docutils literal notranslate"><span class="pre">Environment</span></code> then <code class="docutils literal notranslate"><span class="pre">Env</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank39.png"><img alt="../../../_images/Northflank39.png" src="../../../_images/Northflank39.png" style="width: 600px;" /></a>
+</br>
+<p>c) Select <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">from</span> <span class="pre">file</span></code> then the file (<code class="docutils literal notranslate"><span class="pre">heroku.env</span></code>) you saved in <strong>a)</strong>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank37.png"><img alt="../../../_images/Northflank37.png" src="../../../_images/Northflank37.png" style="width: 600px;" /></a>
+<p>Your variables should display like this:</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank38.png"><img alt="../../../_images/Northflank38.png" src="../../../_images/Northflank38.png" style="width: 600px;" /></a>
+</br>
+<p>d) If you’re creating a new site, return to the step you were following before importing all variables from Heroku.</p>
+</br>
+<p>e) If you were importing all variables from a running Northflank Nightscout site, select <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">&amp;</span> <span class="pre">restart</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Northflank40.png"><img alt="../../../_images/Northflank40.png" src="../../../_images/Northflank40.png" style="width: 600px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
