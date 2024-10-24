@@ -132,7 +132,7 @@ If you want to save time and avoid the need to maintain a DIY solution, you have
 
 The T1Pal hosting service has been developed by **Ben West**, a member of the original CGM in the Cloud team and an original lead core developer for the Nightscout Project. Database and server administration is automated and managed automatically as part of the service. Contact T1Pal support to request specific features or versions.
 
-If you need help with T1Pal, please file a support ticket by emailing ***support*** at ***t1pal.com***, or select "Get Support" from [My Account](https://www.t1pal.com/account/).
+If you need help with T1Pal, please file a support ticket by emailing **_support_** at **_t1pal.com_**, or select "Get Support" from [My Account](https://www.t1pal.com/account/).
 
 ### [NS10BE](https://10be.de)
 
@@ -140,7 +140,7 @@ If you need help with T1Pal, please file a support ticket by emailing ***support
 
 Started in Nov 2017 and offers full managed Nightscout Services. You can create Nightscout with a few clicks and won't have to worry about maintenance, updates, database space and CPU limits. A backup of your database and settings is performed every 6-8 hours. You can import data from your old Nightscout instance or MongoDB database, also upload data (Freestyle, Dexcom, Omnipod, ...) via CSV files. The servers are located in different fail-safe data centers in Germany, Finland or France (can be selected) . They are monitored by [uptimerobot](https://ns.10be.de/en/status.html) and own Slackbot. When a server goes down, it restarts itself and sends a twitter message.
 
-Support: ***support*** at ***ns.10be.de*** or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
+Support: **_support_** at **_ns.10be.de_** or [https://10be.de/en/contact.html](https://10be.de/en/contact.html) or [https://twitter.com/10be_de](https://twitter.com/10be_de) or [https://www.facebook.com/10be.de](https://www.facebook.com/10be.de)
 
 ### [Nightscout Pro](https://nightscout.pro/welcome-to-nightscout-pro/)
 
@@ -155,11 +155,11 @@ Founded in 2022 by **Andy Low** - A type 1 diabetic web developer from Scotland,
 Serendipity provides instant deployment of Nightscout, literally.
 [Create](https://serendipitybio.com/pricing) your account and we'll launch your Nightscout server, launch your Mongo database and provide you a secure, shareable URL.
 
-Never worry about Database size, reliability of your server and upgrading versions. Serendipity Bio fully manages your Nightscout server and database. Nightscout is configured for you automatically on start.  Once launched you can use our UI to change your settings to your liking!
+Never worry about Database size, reliability of your server and upgrading versions. Serendipity Bio fully manages your Nightscout server and database. Nightscout is configured for you automatically on start. Once launched you can use our UI to change your settings to your liking!
 
 Find support documents [here](https://support.serendipitybio.com/) or [email](mailto:support@serendipitybio.com) us any time!
 
-Concerned about reliability or sustainability?  Serendipity Bio is built using Amazon Web Services, which also hosts all your favorite websites like Netflix, Apple, AirBnB, and ESPN.
+Concerned about reliability or sustainability? Serendipity Bio is built using Amazon Web Services, which also hosts all your favorite websites like Netflix, Apple, AirBnB, and ESPN.
 
 ### [Nightscout4u](https://www.nightscout4u.com)
 
@@ -173,7 +173,7 @@ The service is suitable for beginners to make their first steps and get used to 
 
 [Pricing information.](https://nightscout-easy.ru/)
 
-Built by true enthusiasts who deeply understand the challenges faced by those using Nightscout. This understanding ensures that the service meets all user needs, providing a comfortable and convenient experience. 
+Built by true enthusiasts who deeply understand the challenges faced by those using Nightscout. This understanding ensures that the service meets all user needs, providing a comfortable and convenient experience.
 
 Simple and intuitive control panel, automatic data backups, easy import and export of Nightscout data, option to choose between old and new versions of Nightscout, user-friendly interface for managing variables, detailed setup videos for xDrip and AndroidAPS, friendly tech support, always ready to help
 
@@ -181,11 +181,11 @@ Simple and intuitive control panel, automatic data backups, easy import and expo
 
 [Pricing information.](https://www.opensource.clinic/pricing)
 
-Struggling with your DIY-loop? Do you need help fine-tuning? Our experts are here to guide you.
+Founded in 2024 by a medical doctor in the Netherlands, Opensource.clinic is dedicated to simplifying diabetes management through a reliable and user-friendly platform. Combining technical and medical expertise, the organization provides a fully supported hosted solution for Nightscout.
 
-Higher-tier subscriptions offer personalized coaching from a dedicated team of healthcare and IT professionals, all of whom are experienced or trained in DIY looping. The support team is located across various time zones, ensuring round-the-clock assistance, and is currently available in English and Dutch.
+Choosing Opensource.clinic offers several benefits: a quick setup with Nightscout typically ready within 1 to 2 hours, a 24/7 WhatsApp Helpdesk for both technical and medical questions, Nightscout servers hosted in NEN7510-certified data centers, payment via credit card or Google Pay, data import/export support, automatic backups, and a user-friendly personal dashboard for configuring Nightscout variables and analyzing your diabetes data.
 
-Fast setup: Instance running within three steps, with payment options like credit card or Google Pay, 24/7 WhatsApp Helpdesk for both technical and medical questions, Data import/export support, Additional data visualizations, Personalized coaching in top-tier subscriptions.
+Higher-tier subscriptions offer personalized coaching from a dedicated team of healthcare and IT professionals experienced or trained in DIY looping. The support team is located across various time zones, ensuring round-the-clock assistance, and is currently available in English and Dutch. Please visit our [website](https://www.opensource.clinic/pricing) or contact us via [email](mailto:info@opensource.clinic) if you have any questions.
 
 </br>
 
