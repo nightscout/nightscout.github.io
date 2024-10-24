@@ -131,7 +131,7 @@ A scripted Nightscout installation in Google Cloud is a new complete solution pr
 * Virtually free (<5c/month)
 
 **Cons**:
-* Not available for free for Australia and Cina users
+* Not available for free for Australia and China users
 * Relying on a free DNS provider
 
 +++
