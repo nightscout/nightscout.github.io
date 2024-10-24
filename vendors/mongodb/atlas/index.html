@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MongoDB Atlas Database &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Railway Database" href="../../railway/database/" />
+    <link rel="prev" title="Choose your database" href="../../../nightscout/database/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MongoDB Atlas Database</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-an-atlas-database">Create an Atlas database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">MongoDB Atlas Database</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/mongodb/atlas.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mongodb-atlas-database">
+<h1>MongoDB Atlas Database<a class="headerlink" href="#mongodb-atlas-database" title="Permalink to this heading"></a></h1>
+</br>
+<div class="seealso admonition">
+<p class="admonition-title">Too complicated? Not what you’re looking for?</p>
+<p>Consider a hosted Nightscout service! Check for easier solutions <a class="reference internal" href="../../../#nightscout-as-a-service"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="id1">MongoDB Atlas Database</h2>
+<p class="sd-card-text"><img alt="MongoDB Atlas" src="../../../_images/Atlas.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">MongoDB bought <a class="reference external" href="https://twitter.com/chrisckchang/status/506959446753284096">mLab</a> in 2018 and shutdown its service in 2020. Most users migrated to MongoDB Atlas, using a free M0 database with a limited 512MB capacity. Leaving the database grow uncontrolled usually leads to a Nightscout crash.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The M0 cluster is free</p></li>
+<li><p class="sd-card-text">Nightscout was adapted to MongoDB Atlas</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">M0 clusters are designed for learning and testing, not production</p></li>
+<li><p class="sd-card-text">There is no warranty the M0 cluster will remain in the future</p></li>
+<li><p class="sd-card-text">A larger M2 cluster costs 9$ per month (consider hosted Nightscout)</p></li>
+<li><p class="sd-card-text">A full M0 database crashes Nightscout, this is a common issue for DIY closed loop system users</p></li>
+</ul>
+</div>
+</div>
+</br>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MongoDB Atlas regularly changes the site aspect. If you encounter a page not matching this documentation search for keywords like <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">now</span></code>, <code class="docutils literal notranslate"><span class="pre">skip</span></code> or <code class="docutils literal notranslate"><span class="pre">later</span></code> to continue. Report discrepancies <a class="reference external" href="https://github.com/nightscout/nightscout.github.io/issues/new">here</a>.</p>
+</div>
+</br>
+<section id="create-an-atlas-database">
+<h2>Create an Atlas database<a class="headerlink" href="#create-an-atlas-database" title="Permalink to this heading"></a></h2>
+<p>a) Open a browser tab at: <a class="reference external" href="https://www.mongodb.com/cloud/atlas/register">https://www.mongodb.com/cloud/atlas/register</a></p>
+<p>b) Enter your information, click <code class="docutils literal notranslate"><span class="pre">Continue</span></code> then <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">account</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NewNS18.png"><img alt="../../../_images/NewNS18.png" src="../../../_images/NewNS18.png" style="width: 400px;" /></a>
+</br>
+<p>MongoDB Atlas will send you an email, if you don’t receive it check your Spam folder.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS18b.png"><img alt="../../../_images/NewNS18b.png" src="../../../_images/NewNS18b.png" style="width: 400px;" /></a>
+</br>
+<p>In the email you received from <strong>MongoDB Atlas</strong> (mongodb-atlas &#64; mongodb.com), click on <code class="docutils literal notranslate"><span class="pre">Verify</span> <span class="pre">email</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NewNS18c.png"><img alt="../../../_images/NewNS18c.png" src="../../../_images/NewNS18c.png" style="width: 400px;" /></a>
+</br>
+<p>Another browser tab will open with your confirmed MongoDB account, <code class="docutils literal notranslate"><span class="pre">Continue</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS18d.png"><img alt="../../../_images/NewNS18d.png" src="../../../_images/NewNS18d.png" style="width: 400px;" /></a>
+</br>
+<p>Enter some information (like below) and click <code class="docutils literal notranslate"><span class="pre">Finish</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS18e.png"><img alt="../../../_images/NewNS18e.png" src="../../../_images/NewNS18e.png" style="width: 600px;" /></a>
+</br>
+<p>c) Select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">cluster</span> <span class="pre">in</span> <span class="pre">Shared</span> <span class="pre">Clusters</span> <span class="pre">(FREE)</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NewNS19.png"><img alt="../../../_images/NewNS19.png" src="../../../_images/NewNS19.png" style="width: 300px;" /></a>
+<div class="danger admonition">
+<p class="admonition-title">If you ever see this, just STOP</p>
+<p>We’re building a free cluster: you don’t need to provide any billing information.
+<a class="reference internal" href="../../../_images/NewNS19b.png"><img alt="../../../_images/NewNS19b.png" src="../../../_images/NewNS19b.png" style="width: 400px;" /></a></p>
+</div>
+</br>
+<p>d) Check you selected <code class="docutils literal notranslate"><span class="pre">Shared</span></code>, leave all default values and click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Cluster</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NewNS20.png"><img alt="../../../_images/NewNS20.png" src="../../../_images/NewNS20.png" style="width: 600px;" /></a>
+</br>
+<p>e) Select <code class="docutils literal notranslate"><span class="pre">Username</span> <span class="pre">and</span> <span class="pre">Password</span></code> and invent a database username (for example <code class="docutils literal notranslate"><span class="pre">nightscout</span></code>) and a database password (for example <code class="docutils literal notranslate"><span class="pre">soo5ecret</span></code> but please make one that’s yours!).</p>
+<div class="warning admonition">
+<p class="admonition-title">Database credentials</p>
+<p>Do not use your Atlas <strong>account</strong> credentials.
+Do not use special characters: only letters and numbers. No spaces.</p>
+</div>
+<a class="reference internal image-reference" href="../../../_images/NewNS25.png"><img alt="../../../_images/NewNS25.png" src="../../../_images/NewNS25.png" style="width: 600px;" /></a>
+<p>Write down the password in the line below (yes, in this browser window you’re reading now, unless you’re reading a printed version). You’ll need it later.</p>
+<!-- <b>Database username</b> (write here ->) <input type="text" id="myUsr" value="click here, delete and put your own" size="30"> -->
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><b>Database password</b> (write here -&gt;) <input type="text" id="myPwd" value="" size="30"></p></th>
+</tr>
+</thead>
+</table>
+</br>
+<p>Then click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">User</span></code>.</p>
+<p>f) Select <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Local</span> <span class="pre">Environment</span></code> and in the box <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">IP</span> <span class="pre">address</span></code> write <code class="docutils literal notranslate"><span class="pre">0.0.0.0/0</span></code> (mind these are all zeroes, not the letter O)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you don’t allow access from anywhere (IP 0.0.0.0/0) Nightscout will not be able to access your database.”</p>
+</div>
+<a class="reference internal image-reference" href="../../../_images/NewNS23.png"><img alt="../../../_images/NewNS23.png" src="../../../_images/NewNS23.png" style="width: 600px;" /></a>
+<p>Then click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Entry</span></code>.</p>
+</br>
+<p>g) Click on <code class="docutils literal notranslate"><span class="pre">Finish</span> <span class="pre">and</span> <span class="pre">Close</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NewNS24.png"><img alt="../../../_images/NewNS24.png" src="../../../_images/NewNS24.png" style="width: 600px;" /></a>
+</br>
+<p>h) Click on <code class="docutils literal notranslate"><span class="pre">Go</span> <span class="pre">to</span> <span class="pre">Databases</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NewNS24b.png"><img alt="../../../_images/NewNS24b.png" src="../../../_images/NewNS24b.png" style="width: 500px;" /></a>
+</br>
+<p>i) Atlas will create your default cluster, it can take more than 3 minutes</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS21.png"><img alt="../../../_images/NewNS21.png" src="../../../_images/NewNS21.png" style="width: 600px;" /></a>
+</br>
+<p>j) Click on <code class="docutils literal notranslate"><span class="pre">CONNECT</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NewNS22.png"><img alt="../../../_images/NewNS22.png" src="../../../_images/NewNS22.png" style="width: 600px;" /></a>
+</br>
+<p>k) If displayed, click on <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">a</span> <span class="pre">connection</span> <span class="pre">method</span></code> (else skip)</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS26.png"><img alt="../../../_images/NewNS26.png" src="../../../_images/NewNS26.png" style="width: 600px;" /></a>
+</br>
+<p>l) Select <code class="docutils literal notranslate"><span class="pre">Drivers</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/NewNS27.png"><img alt="../../../_images/NewNS27.png" src="../../../_images/NewNS27.png" style="width: 600px;" /></a>
+</br>
+<p>m) Scroll down (do not change any value) and copy the connection string: click <code class="docutils literal notranslate"><span class="pre">Copy</span></code> and paste it somewhere to edit it (like Notepad).</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS28.png"><img alt="../../../_images/NewNS28.png" src="../../../_images/NewNS28.png" style="width: 600px;" /></a>
+</br>
+<p>n) Paste the string in the line below (yes, in this browser window you’re reading now, unless you’re reading a printed version).</p>
+<p>(paste here -&gt;) <input type="text" id="myAtlas" value="" size="100"></p>
+</br>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>It should be similar to this (<code class="docutils literal notranslate"><span class="pre">xxxxx</span></code> will be different):</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+srv://nightscout:&lt;password&gt;&#64;cluster0.xxxxx.mongodb.net/?retryWrites=true&amp;w=majority</span></code></p>
+</div>
+</br>
+<p>o) (Optional) Invent a name for your database, this is not a critical information (for example <code class="docutils literal notranslate"><span class="pre">myCGMitc</span></code>). Only letters and numbers, no spaces.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Database Name (write here -&gt;) <input type="text" id="mydB" value="" size="30"></p></th>
+</tr>
+</thead>
+</table>
+</br>
+<p>p) Click on the button <code class="docutils literal notranslate"><span class="pre">Generate</span></code> (just here below this line: in this browser window you’re reading):</p>
+<p><button onclick="Generate()">⇒ Generate</button></p>
+<p style="font-size:18px" id="result">The connection string will appear here</p>
+</br>
+<script>
+var bAtlas;
+var sdB, sPwd;
+var sFinalString = "Not defined yet";
+function Generate()
+{
+  var sString = sFinalString;
+  bAtlas=0;
+  var sString = "Looks good!";
+  var sAtlas = document.getElementById("myAtlas").value;
+  sPwd = document.getElementById("myPwd").value;
+  sdB = document.getElementById("mydB").value;
+  var iAS = sAtlas.search("://");
+  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
+  else
+  {
+    var iAP = sAtlas.search("<password>");
+    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
+    else
+    {
+      var iAD = sAtlas.search("mongodb.net")+12;
+      bAtlas=1;
+      sString = sAtlas.substring(0,iAP);
+      sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10, iAD));
+      sString = sAtlas.substring(iAP+10, iAD);
+      sFinalString = sFinalString.concat(sdB, sAtlas.substring(iAD));
+    }
+  }
+  if(bAtlas) document.getElementById("result").innerHTML = sFinalString;
+  else document.getElementById("result").innerHTML = sString;
+  if(bAtlas) document.getElementById("resultbis").innerHTML = sFinalString;
+}
+</script>
+</br>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Keep this string safely aside, it is called your <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code></p>
+</div>
+</br>
+<p>p) If you want to do it manually: replace <code class="docutils literal notranslate"><span class="pre">&lt;password&gt;</span></code> with your database password as noted previously (in the example below <code class="docutils literal notranslate"><span class="pre">soo5ecret</span></code>) and <code class="docutils literal notranslate"><span class="pre">&lt;dbname&gt;</span></code> by any text you want, say <code class="docutils literal notranslate"><span class="pre">mycgmic</span></code> for example. The result will be like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+srv://nightscout:soo5ecret&#64;cluster0.xxxxx.mongodb.net/myCGMitc?retryWrites=true&amp;w=majority</span></code></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><strong>There should be NO <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and NO <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> characters in the final string, neither for password nor for database name.</strong></p>
+</div>
+</br>
+<p>You have completed a MongoDB Atlas database creation.
+Now that you have <strong>copied</strong> the resulting <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> string to a <strong>safe place</strong>, go back to the instructions page you were following.</p>
+</br>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

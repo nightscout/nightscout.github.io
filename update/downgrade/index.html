@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downgrade Nightscout &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Advanced Nightscout deployments" href="../../nightscout/advanced/" />
+    <link rel="prev" title="Deploy another version" href="../dev_branch/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Downgrade Nightscout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#deploy-an-old-release">Deploy an old release</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#docker"><strong>Docker</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github">GitHub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Downgrade Nightscout</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/update/downgrade.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="downgrade-nightscout">
+<h1>Downgrade Nightscout<a class="headerlink" href="#downgrade-nightscout" title="Permalink to this heading"></a></h1>
+</br>
+<p>There is usually no good reason to downgrade Nightscout unless being instructed to do so.</p>
+<p>First try to deploy another version if available: see <a class="reference internal" href="../dev_branch/"><span class="doc std std-doc">Deploy another version</span></a>.</p>
+<p>If you use Heroku and you want to return to the previous version, see <a class="reference internal" href="../../troubleshoot/heroku/#roll-back-heroku"><span class="std std-ref">Roll back Heroku</span></a>.</p>
+</br>
+<section id="deploy-an-old-release">
+<h2>Deploy an old release<a class="headerlink" href="#deploy-an-old-release" title="Permalink to this heading"></a></h2>
+</br>
+<section id="docker">
+<h3><strong>Docker</strong><a class="headerlink" href="#docker" title="Permalink to this heading"></a></h3>
+<p>You deployed a Docker container: you’re not using GitHub (Azure, Northflank, Railway, Render) use <a class="reference internal" href="../dev_branch/"><span class="doc std std-doc">this method</span></a>.</p>
+</br>
+</section>
+<section id="github">
+<h3>GitHub<a class="headerlink" href="#github" title="Permalink to this heading"></a></h3>
+<p>You forked Nightscout in your own GitHub account and used it to deploy.</p>
+<p><strong>Experienced users only - not recommended</strong></p>
+<p>Deploying an archived release of Nightscout is complex and involves using Git on your computer (You need to <a class="reference external" href="https://git-scm.com/downloads">install git</a> if you’re using a Windows computer).</p>
+<p>Before starting you need to have the project <code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor</span></code> forked in your GitHub repository, with not only the master fork copied (look out for the check box!). It is recommended to <a class="reference internal" href="../redeploy/"><span class="doc std std-doc">redeploy</span></a> paying attention to this step.</p>
+<p>Clone it locally (navigate to the folder where you’ll want it saved locally before cloning). Replace YOUR-USERNAME by your GitHub user name.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/YOUR-USERNAME/cgm-remote-monitor</span></code></p>
+<p>First identify the commit matching the release you want to use, look into the <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/releases">released versions</a>.</p>
+<a class="reference internal image-reference" href="../../_images/Downgrade04.png"><img alt="../../_images/Downgrade04.png" src="../../_images/Downgrade04.png" style="width: 600px;" /></a>
+</br>
+<p>Then create a branch out of this commit (replace BRANCH by the branch name you want and indicate the COMMIT matching the one you need, in the case above b627d31):</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">BRANCH</span> <span class="pre">COMMIT</span></code></p>
+<p>Push this new branch to your repository</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--set-upstream</span> <span class="pre">origin</span> <span class="pre">BRANCH</span></code></p>
+</br>
+<p>You can now <a class="reference internal" href="../dev_branch/#step-2-deploy"><span class="std std-ref">deploy</span></a> it in your web app, selecting it in the drop down menu.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshoot MongoDB Atlas &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Troubleshoot Azure" href="../azure/" />
+    <link rel="prev" title="Troubleshoot GitHub" href="../github/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshoot MongoDB Atlas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#limit-of-one-free-cluster">Limit of one free cluster.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#meet-your-connection-string">Meet your connection string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unable-to-connect-to-mongo">Unable to connect to Mongo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mongodb-paused">MongoDB paused</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mongodb-in-read-only-mode">MongoDB in read only mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mongodb-uri-missing"><code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> missing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generic-unable-to-connect-to-mongo">Generic Unable to connect to Mongo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bad-connection-string">Bad connection string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recover-your-connection-string">Recover your connection string</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-your-atlas-database-password">Change your Atlas database password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#database-full">Database full</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#restart">Restart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#normal-cleanup">Normal cleanup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emergency-cleanup">Emergency cleanup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#atlas-database-size-verification">Atlas database size verification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reports-slow-loading-or-timeout">Reports slow loading or timeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-in-the-future">Data in the future</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cleanup">Cleanup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backup-your-database">Backup your database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-database-tools">Install the database tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dump-your-database">Dump your database</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshoot MongoDB Atlas</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/troubleshoot/atlas.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshoot-mongodb-atlas">
+<h1>Troubleshoot MongoDB Atlas<a class="headerlink" href="#troubleshoot-mongodb-atlas" title="Permalink to this heading"></a></h1>
+</br>
+<section id="limit-of-one-free-cluster">
+<h2>Limit of one free cluster.<a class="headerlink" href="#limit-of-one-free-cluster" title="Permalink to this heading"></a></h2>
+<p>When creating a new site or migrating (usually not the first attempt), when reaching <code class="docutils literal notranslate"><span class="pre">Target</span> <span class="pre">Cluster</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/TShoot17.png"><img alt="../../_images/TShoot17.png" src="../../_images/TShoot17.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Click the leaf top left in your Atlas account. Look at the <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">Name</span></code> you wanted to use when creating your new cluster, it shouldn’t contain a cluster yet (like the example below, I tried to create a new Nightscout site but there is already a cluster inside the project I wanted to use). You can’t have two clusters in a free project. Click your <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">Name</span></code>.</p></li>
+<li><p>This should not happen in normal conditions. Before deleting a cluster, check it doesn’t contain your data!</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot18.png"><img alt="../../_images/TShoot18.png" src="../../_images/TShoot18.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Collections</span></code> in the cluster you selected.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot19.png"><img alt="../../_images/TShoot19.png" src="../../_images/TShoot19.png" style="width: 300px;" /></a>
+<ul class="simple">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">entries</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot20.png"><img alt="../../_images/TShoot20.png" src="../../_images/TShoot20.png" style="width: 300px;" /></a>
+<ul class="simple">
+<li><p>In the case there is data, like in the example below, <strong>don’t use this cluster</strong>. Leave it like this and create a new one.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot21.png"><img alt="../../_images/TShoot21.png" src="../../_images/TShoot21.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p><strong>If there no data</strong>, you can safely delete it.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot22.png"><img alt="../../_images/TShoot22.png" src="../../_images/TShoot22.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>In this cluster you want to delete click <code class="docutils literal notranslate"><span class="pre">...</span></code> then <code class="docutils literal notranslate"><span class="pre">Terminate</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot23.png"><img alt="../../_images/TShoot23.png" src="../../_images/TShoot23.png" style="width: 500px;" /></a>
+<ul class="simple">
+<li><p>Copy the cluster name to confirm then click <code class="docutils literal notranslate"><span class="pre">Terminate</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot24.png"><img alt="../../_images/TShoot24.png" src="../../_images/TShoot24.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>Wait until the operation completes.</p></li>
+<li><p>You can now use this project name to create a new site.</p></li>
+</ul>
+</br>
+</section>
+<section id="meet-your-connection-string">
+<h2>Meet your connection string<a class="headerlink" href="#meet-your-connection-string" title="Permalink to this heading"></a></h2>
+<p>For technical details look <a class="reference external" href="https://docs.mongodb.com/manual/reference/connection-string/#mongodb-uri">here</a>.</p>
+<p>A typical mLab migrated string will look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+srv://heroku_0v50k8rf:ddfsjcpfu8fcoj9n6dueabfd5u&#64;cluster0.g03wh.mongodb.net/</span>&#160; </code>
+<code class="docutils literal notranslate"><span class="pre">heroku_0v50k8rf?retryWrites=true&amp;w=majority</span></code></p>
+<p>A typical new string created with Atlas will look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+srv://johndoe:V3ry53cr3t&#64;cluster0.a01bc.mongodb.net/myCGMiC?retryWrites=true&amp;w=majority</span></code></p>
+<ul class="simple">
+<li><p>It will start by <code class="docutils literal notranslate"><span class="pre">mongodb+srv://</span></code> with <code class="docutils literal notranslate"><span class="pre">mongodb</span></code> a <strong>standard prefix</strong> for a connection string, and <code class="docutils literal notranslate"><span class="pre">+srv</span></code> adding a security layer.</p></li>
+<li><p>After <code class="docutils literal notranslate"><span class="pre">://</span></code> you’ll find your <strong>database username</strong>, that is not your Atlas account username. In the examples above <code class="docutils literal notranslate"><span class="pre">heroku_0v50k8rf</span></code> or <code class="docutils literal notranslate"><span class="pre">johndoe</span></code>.</p></li>
+<li><p>Following the username, a separator <code class="docutils literal notranslate"><span class="pre">:</span></code> and your <strong>database password</strong> that is not your Atlas account password. In the examples above a typical 26 characters password created automatically with the mLab add-on <code class="docutils literal notranslate"><span class="pre">ddfsjcpfu8fcoj9n6dueabfd5u</span></code> and a user created password <code class="docutils literal notranslate"><span class="pre">V3ry53cr3t</span></code>.</p></li>
+<li><p>Following the password, a separator <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> then the <strong>host name</strong> that was provided by Atlas after you created you cluster. typically it will look like <code class="docutils literal notranslate"><span class="pre">cluster0.</span></code><em><code class="docutils literal notranslate"><span class="pre">a1b2c3</span></code></em><code class="docutils literal notranslate"><span class="pre">.mongodb.net</span></code></p></li>
+<li><p>[Optional] After the host name and the separator <code class="docutils literal notranslate"><span class="pre">/</span></code> you’ll see your Nightscout <strong>database name</strong>. If you migrated from mLab it will be identical to your database username (unless you modified it). If you created your Atlas cluster it will be the one you decided. In the examples above <code class="docutils literal notranslate"><span class="pre">heroku_0v50k8rf</span></code> or <code class="docutils literal notranslate"><span class="pre">myCGMiC</span></code>.</p></li>
+<li><p>Another separator <code class="docutils literal notranslate"><span class="pre">?</span></code> and you’ll see two options: <code class="docutils literal notranslate"><span class="pre">retryWrites=true&amp;w=majority</span></code></p></li>
+</ul>
+</br>
+</section>
+<section id="unable-to-connect-to-mongo">
+<h2>Unable to connect to Mongo<a class="headerlink" href="#unable-to-connect-to-mongo" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/TShoot54.png"><img alt="../../_images/TShoot54.png" src="../../_images/TShoot54.png" style="width: 800px;" /></a>
+<p>Common reasons:</p>
+<ul class="simple">
+<li><p>The database is not available. If you don’t have a database yet, create a new one.<br />
+If you do have a database, check it’s functional then restart your web app:</p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../heroku/#restart-all-dynos"><span class="std std-ref">Restart all dynos</span></a></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../railway/#restart-your-app"><span class="std std-ref">Restart your web app</span></a></p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../azure/#restart-app"><span class="std std-ref">Restart app</span></a></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../northflank/#restart"><span class="std std-ref">Restart</span></a></p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../fly.io/#restart-your-app"><span class="std std-ref">Restart your app</span></a></p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Render</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../render/#restart-service"><span class="std std-ref">Restart service</span></a></p>
+</div>
+</div>
+<ul class="simple">
+<li><p>Your Atlas connection string is incorrect. Check <a class="reference internal" href="#bad-connection-string">here</a>.</p></li>
+</ul>
+<section id="mongodb-paused">
+<h3>MongoDB paused<a class="headerlink" href="#mongodb-paused" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>If you haven’t been using Nightscout for a while but it was working before, check the database didn’t go to sleep mode. If it did, select <code class="docutils literal notranslate"><span class="pre">Resume</span></code> to restart it.</p></li>
+<li><p>Once done:</p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../heroku/#restart-all-dynos"><span class="std std-ref">Restart all dynos</span></a></p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../railway/#restart-your-app"><span class="std std-ref">Restart your web app</span></a></p>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../azure/#restart-app"><span class="std std-ref">Restart app</span></a></p>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../northflank/#restart"><span class="std std-ref">Restart</span></a></p>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../fly.io/#restart-your-app"><span class="std std-ref">Restart your app</span></a></p>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
+Render</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../render/#restart-service"><span class="std std-ref">Restart service</span></a></p>
+</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/TShoot53.png"><img alt="../../_images/TShoot53.png" src="../../_images/TShoot53.png" style="width: 800px;" /></a>
+</br>
+<p>If you see this message</p>
+<a class="reference internal image-reference" href="../../_images/TShoot06.png"><img alt="../../_images/TShoot06.png" src="../../_images/TShoot06.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../vendors/github/update/"><span class="doc std std-doc">Update to latest version</span></a> and come back after you have a more accurate error message.</p></li>
+</ul>
+</br>
+</section>
+</section>
+<section id="mongodb-in-read-only-mode">
+<h2>MongoDB in read only mode<a class="headerlink" href="#mongodb-in-read-only-mode" title="Permalink to this heading"></a></h2>
+<p>If you see this message:</p>
+<a class="reference internal image-reference" href="../../_images/TShoot44.png"><img alt="../../_images/TShoot44.png" src="../../_images/TShoot44.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Verify your database is not read only, else click <code class="docutils literal notranslate"><span class="pre">Edit</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot15.png"><img alt="../../_images/TShoot15.png" src="../../_images/TShoot15.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Change the permissions to <code class="docutils literal notranslate"><span class="pre">Atlas</span> <span class="pre">Admin</span></code> and <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">User</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot16.png"><img alt="../../_images/TShoot16.png" src="../../_images/TShoot16.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Once done:</p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../heroku/#restart-all-dynos"><span class="std std-ref">Restart all dynos</span></a></p>
+</div>
+<input id="sd-tab-item-13" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-13">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../railway/#restart-your-app"><span class="std std-ref">Restart your web app</span></a></p>
+</div>
+<input id="sd-tab-item-14" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-14">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../azure/#restart-app"><span class="std std-ref">Restart app</span></a></p>
+</div>
+<input id="sd-tab-item-15" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-15">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../northflank/#restart"><span class="std std-ref">Restart</span></a></p>
+</div>
+<input id="sd-tab-item-16" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-16">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../fly.io/#restart-your-app"><span class="std std-ref">Restart your app</span></a></p>
+</div>
+<input id="sd-tab-item-17" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-17">
+Render</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../render/#restart-service"><span class="std std-ref">Restart service</span></a></p>
+</div>
+</div>
+</br>
+</section>
+<section id="mongodb-uri-missing">
+<h2><code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> missing<a class="headerlink" href="#mongodb-uri-missing" title="Permalink to this heading"></a></h2>
+<p>If you see this message:</p>
+<a class="reference internal image-reference" href="../../_images/TShoot45.png"><img alt="../../_images/TShoot45.png" src="../../_images/TShoot45.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>If you don’t have a database yet, create a new one.</p></li>
+<li><p>It might be a transient error in MongoDB Atlas, try to restartyour web app:</p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-18" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-18">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../heroku/#restart-all-dynos"><span class="std std-ref">Restart all dynos</span></a></p>
+</div>
+<input id="sd-tab-item-19" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-19">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../railway/#restart-your-app"><span class="std std-ref">Restart your web app</span></a></p>
+</div>
+<input id="sd-tab-item-20" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-20">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../azure/#restart-app"><span class="std std-ref">Restart app</span></a></p>
+</div>
+<input id="sd-tab-item-21" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-21">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../northflank/#restart"><span class="std std-ref">Restart</span></a></p>
+</div>
+<input id="sd-tab-item-22" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-22">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../fly.io/#restart-your-app"><span class="std std-ref">Restart your app</span></a></p>
+</div>
+<input id="sd-tab-item-23" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-23">
+Render</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../render/#restart-service"><span class="std std-ref">Restart service</span></a></p>
+</div>
+</div>
+<ul class="simple">
+<li><p>Check your <a class="reference internal" href="#database-full">database is not full</a>!</p></li>
+<li><p>If your Nightscout was still functional after November 11th 2020, continue <a class="reference internal" href="#bad-connection-string">below</a> to recover:</p></li>
+</ul>
+</br>
+</section>
+<section id="generic-unable-to-connect-to-mongo">
+<h2>Generic Unable to connect to Mongo<a class="headerlink" href="#generic-unable-to-connect-to-mongo" title="Permalink to this heading"></a></h2>
+<p>If you see this message:</p>
+<a class="reference internal image-reference" href="../../_images/TShoot47.png"><img alt="../../_images/TShoot47.png" src="../../_images/TShoot47.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Check you authorized all IPs to access your Atlas database:</p></li>
+<li><p>Open your Atlas cluster and select your Nightscout project, then <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">access</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot48.png"><img alt="../../_images/TShoot48.png" src="../../_images/TShoot48.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>If you see an IP (in red above) instead of 0.0.0.0/0 click <code class="docutils literal notranslate"><span class="pre">Edit</span></code> select <code class="docutils literal notranslate"><span class="pre">ALLOW</span> <span class="pre">ACCESS</span> <span class="pre">FROM</span> <span class="pre">ANYWHERE</span></code> then <code class="docutils literal notranslate"><span class="pre">Confirm</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot49.png"><img alt="../../_images/TShoot49.png" src="../../_images/TShoot49.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>Once done:</p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-24" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-24">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../heroku/#restart-all-dynos"><span class="std std-ref">Restart all dynos</span></a></p>
+</div>
+<input id="sd-tab-item-25" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-25">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../railway/#restart-your-app"><span class="std std-ref">Restart your web app</span></a></p>
+</div>
+<input id="sd-tab-item-26" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-26">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../azure/#restart-app"><span class="std std-ref">Restart app</span></a></p>
+</div>
+<input id="sd-tab-item-27" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-27">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../northflank/#restart"><span class="std std-ref">Restart</span></a></p>
+</div>
+<input id="sd-tab-item-28" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-28">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../fly.io/#restart-your-app"><span class="std std-ref">Restart your app</span></a></p>
+</div>
+<input id="sd-tab-item-29" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-29">
+Render</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../render/#restart-service"><span class="std std-ref">Restart service</span></a></p>
+</div>
+</div>
+</br>
+</section>
+<section id="bad-connection-string">
+<h2>Bad connection string<a class="headerlink" href="#bad-connection-string" title="Permalink to this heading"></a></h2>
+<p>If you see this message:</p>
+<a class="reference internal image-reference" href="../../_images/TShoot46.png"><img alt="../../_images/TShoot46.png" src="../../_images/TShoot46.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../nightscout/setup_variables/"><span class="doc std std-doc">Edit your Nightscout configuration</span></a> and search for a variable called <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> or <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code>.</p></li>
+<li><p>If you find none, go <a class="reference internal" href="#recover-your-connection-string">here</a>.</p></li>
+</ul>
+<div class="warning admonition">
+<p class="admonition-title">MONGODB_URI or MONGO_CONNECTION</p>
+<p>There should be at least one and only one of them, not both.</p>
+</div>
+<p>If you migrated from mLab Heroku add-on it is usually <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code></p>
+<p>if you deployed a brand new Nightscout it should be <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code></p>
+<ul class="simple">
+<li><p>Verify it is looking like this:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+srv://atlasusername:atlaspassword&#64;cluster0.zzzzz.mongodb.net/dbname?retryWrites=true&amp;w=majority</span></code></p>
+<p>Note that your <code class="docutils literal notranslate"><span class="pre">atlasusername</span></code>, <code class="docutils literal notranslate"><span class="pre">atlaspassword</span></code> and <code class="docutils literal notranslate"><span class="pre">dbname</span></code> will be different from the example above.</p>
+<ul class="simple">
+<li><p>Paste the string in the box below:</p></li>
+</ul>
+<input type="text" id="myAtlas" value="Yes here. Delete this and paste it here" size="100">
+</br>
+<ul class="simple">
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Analyze</span></code> text below:</p></li>
+</ul>
+<p><button onclick="Analyze()">-&gt; Analyze</button></p>
+<p style="font-size:20px" id="result">Analysis result will appear here.</p>
+<p>If the analysis result doesn’t show any error, check below the data is what you actually wanted:</p>
+<p><strong>Database Username:</strong> <p id="myUser">…</p>
+<strong>Database Password:</strong> <p id="myPwd">…</p>
+<strong>Database name:</strong> <p id="mydB">…</p> (No database name is not an error)</p>
+<script>
+var sUser, sdB, sPwd;
+function Analyze()
+{
+
+
+  var sString = "Your connection string structure looks good.";
+  var bErr = 0;
+
+  var sAtlas = document.getElementById("myAtlas").value;
+
+  var iAS = sAtlas.search(" ");
+  if(iAS!=-1)
+  { 
+    sString = "There should be no space characters in the string. Remove all spaces";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("mongodb://");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "This is not an Atlas connection string: it should start with mongodb+srv://";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("<password>");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "You should replace &lt;password&gt; with your actual Atlas database password in the Atlas string";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("<dbname>");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "You should replace &lt;dbname&gt; with your actual Atlas database name in the Atlas string";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("<");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "There should be no &lt; characters in the Atlas string";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search(">");
+  if(iAS!=-1 && !bErr)
+  { 
+    sString = "There should be no &gt; characters in the Atlas string";
+    bErr = 1;
+  }
+
+  iAS = sAtlas.search("retryWrites=true");
+  if(iAS==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should end with ?retryWrites=true&w=majority";
+    bErr = 1;
+  }
+
+  var iUsr, iAt, iCol, idB, iQM;
+
+  iUsr = sAtlas.search("://");
+  if(iUsr==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should start by mongodb+srv://";
+    bErr = 1;
+  }
+  else
+  {
+    iUsr = iUsr + 3;
+    sAtlas = sAtlas.substr(iUsr);
+  }
+
+  iAt = sAtlas.search("@");
+  if(iAt==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should contain @ after your password";
+    bErr = 1;
+  };
+
+  iCol = sAtlas.search(":");
+  if(iCol==-1 && !bErr)
+  { 
+    sString = "Your Atlas user and password should be separated by :";
+    bErr = 1;
+  };
+
+  iQm = sAtlas.search("\\?");
+  if(iQm==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should end with ?retryWrites=true&w=majority";
+    bErr = 1;
+  };
+
+  idB = sAtlas.search("net/");
+  if(idB==-1 && !bErr)
+  { 
+    sString = "Your Atlas string should be in the mongodb.net domain";
+    bErr = 1;
+  } else idB = idB + 4;
+
+  if(!bErr)
+  {
+    sUser = sAtlas.substring(0, iCol);
+    sPwd = sAtlas.substring(iCol + 1, iAt);
+    sdB = sAtlas.substring(idB, iQm);
+    
+
+    document.getElementById("myUser").innerHTML = sUser;
+    document.getElementById("myPwd").innerHTML = sPwd;
+    document.getElementById("mydB").innerHTML = sdB;
+
+   }
+
+ document.getElementById("result").innerHTML = sString;
+}
+
+</script>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you migrated from Heroku mLab add-on, your database username and database name should be identical.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/TShoot41.png"><img alt="../../_images/TShoot41.png" src="../../_images/TShoot41.png" style="width: 800px;" /></a>
+</br>
+<p>If you’ve just created a new site, try to use <a class="reference download internal" download="" href="../../_downloads/9dcf00d43de2dd4067ba56ae19a896e2/stringhelp.html"><span class="xref download myst">this help page</span></a> to verify or recreate it.</p>
+</br>
+<p>If you’re still in trouble continue below:</p>
+</br>
+</section>
+<section id="recover-your-connection-string">
+<h2>Recover your connection string<a class="headerlink" href="#recover-your-connection-string" title="Permalink to this heading"></a></h2>
+<p>If you’ve tried several times to deploy or migrate, you might end-up with many useless items in your accounts. At this point, you could benefit doing some cleanup in order to identify the correct Atlas database you want to connect to. Consider <a class="reference internal" href="#cleanup">cleanup</a> before continuing.</p>
+</br>
+<p>a) Go to your MongDB account. Log in if necessary <a class="reference external" href="https://cloud.mongodb.com/">https://cloud.mongodb.com/</a></p>
+<p>b) Click <code class="docutils literal notranslate"><span class="pre">Connect</span></code> below your cluster name (in the example below <code class="docutils literal notranslate"><span class="pre">Cluster0</span></code>, but it might have another name)</p>
+<a class="reference internal image-reference" href="../../_images/TShoot07.png"><img alt="../../_images/TShoot07.png" src="../../_images/TShoot07.png" style="width: 400px;" /></a>
+</br>
+<p>c) Click <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">your</span> <span class="pre">application</span></code></p>
+<a class="reference internal image-reference" href="../../_images/TShoot09.png"><img alt="../../_images/TShoot09.png" src="../../_images/TShoot09.png" style="width: 600px;" /></a>
+</br>
+<p>d) A new view opens, in  <code class="docutils literal notranslate"><span class="pre">(2)</span> <span class="pre">Add</span> <span class="pre">your</span> <span class="pre">connection</span> <span class="pre">string</span> <span class="pre">into</span> <span class="pre">your</span> <span class="pre">application</span> <span class="pre">code</span></code> you will find your <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> or <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code> string.</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Copy</span></code> then <code class="docutils literal notranslate"><span class="pre">Close</span></code></p>
+<a class="reference internal image-reference" href="../../_images/TShoot10.png"><img alt="../../_images/TShoot10.png" src="../../_images/TShoot10.png" style="width: 600px;" /></a>
+</br>
+<p>e) Paste it into a place where you can edit the text (i.e. a Word or a Notepad document).</p>
+<p>Edit your string so that you add the database user password after the database user info. You defined them during your MongoDB Atlas database creation, when you reached <a class="reference internal" href="../../vendors/mongodb/atlas/"><span class="doc std std-doc">step <strong>e)</strong></span></a>.</p>
+<p>Here’s an example of how the string is built up (<code class="docutils literal notranslate"><span class="pre">myFirstDatabase</span></code> might not show, this is normal):</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+srv://</span></code> <code class="docutils literal notranslate"><span class="pre">nightscout</span></code> <code class="docutils literal notranslate"><span class="pre">:</span></code><strong><code class="docutils literal notranslate"><span class="pre">&lt;password&gt;</span></code></strong><code class="docutils literal notranslate"><span class="pre">&#64;cluster0.xxxxx.mongodb.net/</span></code><strong><code class="docutils literal notranslate"><span class="pre">myFirstDatabase</span></code></strong><code class="docutils literal notranslate"><span class="pre">?retryWrites=true&amp;w=majority</span></code></p>
+</br>
+<p>f) Edit your string in order to replace <code class="docutils literal notranslate"><span class="pre">&lt;password&gt;</span></code> with your database password.</p>
+<p>g) If you don’t remember your Atlas database password (which should not be your mongoDB Atlas account password) invent a new one (only letters and numbers).</p>
+<p>Your string will now look like this: (do not use the same password as the example). Note there are no remaining <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.<br />
+If you don’t see a database name like <code class="docutils literal notranslate"><span class="pre">myFirstDatabase</span></code> before the question mark, just ignore it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+srv://nightscout:soo5ecret&#64;cluster0.xxxxx.mongodb.net/myFirstDatabase?retryWrites=true&amp;w=majority</span></code></p>
+</br>
+<p>h) Copy this resulting string above into your <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> or <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code> variable. There must be only one of these variables, not both.</p>
+<p>See <a class="reference internal" href="../../nightscout/setup_variables/"><span class="doc std std-doc">here</span></a> how to edit your configuration variables.</p>
+<p>i) If there is neither one nor the other create a new <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> variable and paste the string in the value field.</p>
+<p>j) If you remembered your password restart your web app, and you should be done.</p>
+<p>k) If you changed your password or your Nightscout page still fails to open continue.</p>
+</br>
+</section>
+<section id="change-your-atlas-database-password">
+<h2>Change your Atlas database password<a class="headerlink" href="#change-your-atlas-database-password" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>If you changed the password in the string you will need to change it in the database too:</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Database</span> <span class="pre">Access</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot11.png"><img alt="../../_images/TShoot11.png" src="../../_images/TShoot11.png" style="width: 400px;" /></a>
+</br>
+<ul class="simple">
+<li><p>At the end of the line, click <code class="docutils literal notranslate"><span class="pre">Edit</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot08.png"><img alt="../../_images/TShoot08.png" src="../../_images/TShoot08.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>In <code class="docutils literal notranslate"><span class="pre">Password</span></code> click <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Password</span></code></p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><em>Take a look at the top of this view, after <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">User</span></code> you can see your database user name before <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>. Check it’s matching the one in your connection string.</em></p>
+</div>
+<a class="reference internal image-reference" href="../../_images/TShoot12.png"><img alt="../../_images/TShoot12.png" src="../../_images/TShoot12.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>If you forgot your password invent a new one (use only letters and numbers: no special characters) or better: use <code class="docutils literal notranslate"><span class="pre">Autogenerate</span> <span class="pre">Secure</span> <span class="pre">Password</span></code> and click <code class="docutils literal notranslate"><span class="pre">Copy</span></code></p></li>
+<li><p>Else make it the same than the one in your <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> connection string variable</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot13.png"><img alt="../../_images/TShoot13.png" src="../../_images/TShoot13.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">User</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot14.png"><img alt="../../_images/TShoot14.png" src="../../_images/TShoot14.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Make sure the password matches in your connection string variable <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> or <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code></p></li>
+</ul>
+</br>
+</section>
+<section id="database-full">
+<h2>Database full<a class="headerlink" href="#database-full" title="Permalink to this heading"></a></h2>
+<p>Free databases like M0 Sandbox provided by Atlas will only hold a limited amount of data (512MB) and you will eventually need to manually cleanup. You can extend the capacity to 2 and 5GB paying for an M2 or M5 Shared cluster.</p>
+<p><strong>Note:</strong> <em>If you consider paying for a database upgrade, also think about a <a class="reference internal" href="../../#nightscout-as-a-service"><span class="std std-ref">paid hosting service</span></a>.</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure your Nightscout site has <code class="docutils literal notranslate"><span class="pre">Database</span> <span class="pre">Size</span></code> enabled to monitor database capacity.</br>
+In order to have the database size pill, add <code class="docutils literal notranslate"><span class="pre">dbsize</span></code> in the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> variable.</br>
+Look <a class="reference internal" href="../../nightscout/setup_variables/#dbsize-database-size"><span class="std std-ref">here</span></a> for more information on this plugin.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/TShoot35.png"><img alt="../../_images/TShoot35.png" src="../../_images/TShoot35.png" style="width: 600px;" /></a>
+</br>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Your database size might not decrease immediately (it might even increase temporarily) after you perform cleanup with Admin Tools (see below: Normal cleanup). Allow a few hours to see the effects. In the meantime your site should recover functionality.</br>If your site keeps crashing, go ahead to emergency cleanup.</p>
+</div>
+</br>
+<section id="restart">
+<h3>Restart<a class="headerlink" href="#restart" title="Permalink to this heading"></a></h3>
+<p><strong>Try to recover temporary access to Nightscout to perform normal cleanup:</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-30" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-30">
+Select your platform -&gt;</label><div class="sd-tab-content docutils">
+</br>
+</div>
+<input id="sd-tab-item-31" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-31">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../heroku/#restart-all-dynos"><span class="std std-ref">Restart all dynos</span></a></p>
+</div>
+<input id="sd-tab-item-32" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-32">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../railway/#restart-your-app"><span class="std std-ref">Restart your web app</span></a></p>
+</div>
+<input id="sd-tab-item-33" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-33">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../azure/#restart-app"><span class="std std-ref">Restart app</span></a></p>
+</div>
+<input id="sd-tab-item-34" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-34">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../northflank/#restart"><span class="std std-ref">Restart</span></a></p>
+</div>
+<input id="sd-tab-item-35" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-35">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../fly.io/#restart-your-app"><span class="std std-ref">Restart your app</span></a></p>
+</div>
+<input id="sd-tab-item-36" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-36">
+Render</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../render/#restart-service"><span class="std std-ref">Restart service</span></a></p>
+</div>
+<input id="sd-tab-item-37" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-37">
+Google Cloud</label><div class="sd-tab-content docutils">
+<p>The probability your database is full is very low, make sure you selected the maximum disk size for your compute engine. See <a class="reference external" href="https://navid200.github.io/xDrip/docs/Nightscout/FullDisk.html">Here</a>.</p>
+</div>
+<input id="sd-tab-item-38" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-38">
+Hosted services</label><div class="sd-tab-content docutils">
+<p>Contact your provider. The probability your database is full is virtually null.</p>
+</div>
+</div>
+</section>
+<section id="normal-cleanup">
+<h3>Normal cleanup<a class="headerlink" href="#normal-cleanup" title="Permalink to this heading"></a></h3>
+<p>You can cleanup (enter the number of days to keep) or delete your devices status (recommended as a first recovery action):</p>
+<a class="reference internal image-reference" href="../../_images/TShoot37.png"><img alt="../../_images/TShoot37.png" src="../../_images/TShoot37.png" style="width: 800px;" /></a>
+<p>Same for <code class="docutils literal notranslate"><span class="pre">Treatments</span></code>:</p>
+<a class="reference internal image-reference" href="../../_images/TShoot38.png"><img alt="../../_images/TShoot38.png" src="../../_images/TShoot38.png" style="width: 800px;" /></a>
+<p>And <code class="docutils literal notranslate"><span class="pre">Glucose</span> <span class="pre">entries</span></code>. If you are reluctant to lose historical data you should consider opting for a paid database solution or <a class="reference internal" href="../../#nightscout-as-a-service"><span class="std std-ref">hosted</span></a> Nightscout.</p>
+<a class="reference internal image-reference" href="../../_images/TShoot39.png"><img alt="../../_images/TShoot39.png" src="../../_images/TShoot39.png" style="width: 800px;" /></a>
+<p>If your Nightscout page doesn’t open after restarting your app and you want to rule out a full database, you can try an emergency cleanup of the less important part of your Nightscout site: <code class="docutils literal notranslate"><span class="pre">devicestatus</span></code>.</p>
+</br>
+</section>
+<section id="emergency-cleanup">
+<h3>Emergency cleanup<a class="headerlink" href="#emergency-cleanup" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Log in <a class="reference external" href="https://account.mongodb.com/account/login">Atlas</a></p></li>
+<li><p>Open your Nightscout database and select <code class="docutils literal notranslate"><span class="pre">Browse</span> <span class="pre">collections</span></code> in <code class="docutils literal notranslate"><span class="pre">Database</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot32.png"><img alt="../../_images/TShoot32.png" src="../../_images/TShoot32.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">devicestatus</span></code> collection and click the bin icon to delete it.</p></li>
+<li><p>You will lose all device status history (battery, ..) but <strong>you won’t lose neither BG, treatments nor profiles</strong>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot55.png"><img alt="../../_images/TShoot55.png" src="../../_images/TShoot55.png" style="width: 300px;" /></a>
+<ul class="simple">
+<li><p>Write <code class="docutils literal notranslate"><span class="pre">devicestatus</span></code> in the box then click <code class="docutils literal notranslate"><span class="pre">Drop</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot56.png"><img alt="../../_images/TShoot56.png" src="../../_images/TShoot56.png" style="width: 300px;" /></a>
+<ul class="simple">
+<li><p><a class="reference internal" href="#restart">Restart</a> your site and when it opens, consider again <a class="reference internal" href="#normal-cleanup">cleanup</a> from Admin Tools if your database size exceeds 80%.</p></li>
+</ul>
+</br>
+</section>
+<section id="atlas-database-size-verification">
+<h3>Atlas database size verification<a class="headerlink" href="#atlas-database-size-verification" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Log in <a class="reference external" href="https://account.mongodb.com/account/login">Atlas</a></p></li>
+<li><p>Open your Nightscout database and select <code class="docutils literal notranslate"><span class="pre">Collections</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot32.png"><img alt="../../_images/TShoot32.png" src="../../_images/TShoot32.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Click your database name (hidden left). Check the<code class="docutils literal notranslate"><span class="pre">DATABASE</span> <span class="pre">SIZE</span></code> is indeed close to or at the limit (512MB) then look at these three collections <code class="docutils literal notranslate"><span class="pre">Documents</span> <span class="pre">size</span></code>: <code class="docutils literal notranslate"><span class="pre">devicestatus</span></code>, <code class="docutils literal notranslate"><span class="pre">entries</span></code> and <code class="docutils literal notranslate"><span class="pre">treatments</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot36.png"><img alt="../../_images/TShoot36.png" src="../../_images/TShoot36.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Open Nightscout  <a class="reference internal" href="../../nightscout/discover/#drawer-menu"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">Admin</span> <span class="pre">tools</span></code></span></a>. If your site doesn’t open jump to <a class="reference internal" href="#emergency-cleanup">Emergency cleanup</a>.</p></li>
+<li><p>Depending on the collection you identified above, choose which of the following you want to cleanup.</p></li>
+</ul>
+</br>
+</section>
+</section>
+<section id="reports-slow-loading-or-timeout">
+<h2>Reports slow loading or timeout<a class="headerlink" href="#reports-slow-loading-or-timeout" title="Permalink to this heading"></a></h2>
+<p>Loopers might experience Nightscout taking an extremely long time or even timing out when creating reports due to the profiles collection database growing too big.</p>
+<p>Two solutions are available:</p>
+<ol class="arabic simple">
+<li><p>Follow this video (set it full screen in 720p) to selectively delete profiles <a class="reference external" href="https://www.youtube.com/watch?v=iipp0MfPKNQ">https://www.youtube.com/watch?v=iipp0MfPKNQ</a></p></li>
+<li><p>Delete all profiles in Atlas</p></li>
+</ol>
+<p>Log in to Atlas <a class="reference external" href="https://account.mongodb.com/account/login">https://account.mongodb.com/account/login</a></p>
+<p>Select your cluster then <code class="docutils literal notranslate"><span class="pre">COLLECTIONS</span></code></p>
+<a class="reference internal image-reference" href="../../_images/TShoot50.png"><img alt="../../_images/TShoot50.png" src="../../_images/TShoot50.png" style="width: 800px;" /></a>
+</br>
+<p>Select the <code class="docutils literal notranslate"><span class="pre">profile</span></code> collection and click the bin icon to delete all profiles.</p>
+<a class="reference internal image-reference" href="../../_images/TShoot51.png"><img alt="../../_images/TShoot51.png" src="../../_images/TShoot51.png" style="width: 300px;" /></a>
+</br>
+<p>Write <code class="docutils literal notranslate"><span class="pre">profile</span></code> in the box then click <code class="docutils literal notranslate"><span class="pre">Drop</span></code></p>
+<a class="reference internal image-reference" href="../../_images/TShoot52.png"><img alt="../../_images/TShoot52.png" src="../../_images/TShoot52.png" style="width: 400px;" /></a>
+</br>
+<p>Open your Nightscout and create a new profile (mind the time zone!), authenticate and save it.</p>
+<p>If you are using Loop, temporarily change a basal rate in Loop, and confirm your profiles now show up in Nightscout.</p>
+</br>
+</section>
+<section id="data-in-the-future">
+<h2>Data in the future<a class="headerlink" href="#data-in-the-future" title="Permalink to this heading"></a></h2>
+<p>First try to <a class="reference internal" href="../../nightscout/admin_tools/#remove-future-items-from-database"><span class="std std-ref">remove future items with the Admin Tools</span></a>.</p>
+<p>If it doesn’t give the expected result:</p>
+<ul class="simple">
+<li><p>Check in <a class="reference external" href="https://account.mongodb.com/account/login">Atlas</a></p></li>
+<li><p>Open your Nightscout cluster and select <code class="docutils literal notranslate"><span class="pre">Collections</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot32.png"><img alt="../../_images/TShoot32.png" src="../../_images/TShoot32.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>In <code class="docutils literal notranslate"><span class="pre">Entries</span></code> type <code class="docutils literal notranslate"><span class="pre">{date:-1}</span></code> and click <code class="docutils literal notranslate"><span class="pre">Find</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot33.png"><img alt="../../_images/TShoot33.png" src="../../_images/TShoot33.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Delete the entries in the future (manually) with the bin icon</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot34.png"><img alt="../../_images/TShoot34.png" src="../../_images/TShoot34.png" style="width: 500px;" /></a>
+</br>
+</section>
+<section id="cleanup">
+<h2>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this heading"></a></h2>
+<p>It is very easy to get lost in Atlas.</p>
+<p>The structure from top to bottom is: Organization, Projects and Databases. You can have several organizations, each of them several projects and each of them several databases.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you are deploying a brand new Nightscout make sure you have one organization, one project and one cluster created. No more no less.</p>
+</div>
+<p>If you want to cleanup Atlas, unless you don’t have data, you must first find out which database contains your data. For this, start from <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">All</span> <span class="pre">Organizations</span></code>:</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup03.png"><img alt="../../_images/Cleanup03.png" src="../../_images/Cleanup03.png" style="width: 400px;" /></a>
+<p>You can delete empty organizations (those without any project inside).</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup04.png"><img alt="../../_images/Cleanup04.png" src="../../_images/Cleanup04.png" style="width: 800px;" /></a>
+<p>Select the organization, then top left the cog wheel to go in <code class="docutils literal notranslate"><span class="pre">Settings</span></code>, then scroll down to <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Organization</span></code>: <code class="docutils literal notranslate"><span class="pre">Delete</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup06.png"><img alt="../../_images/Cleanup06.png" src="../../_images/Cleanup06.png" style="width: 800px;" /></a>
+<p>Deleting an organization without projects will not delete your data.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup05.png"><img alt="../../_images/Cleanup05.png" src="../../_images/Cleanup05.png" style="width: 600px;" /></a>
+<hr class="docutils" />
+<p>Once inside an organization, you will see its projects. You can safely delete projects without clusters.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup07.png"><img alt="../../_images/Cleanup07.png" src="../../_images/Cleanup07.png" style="width: 800px;" /></a>
+<p>Deleting an empty project doesn’t delete your Nightscout data.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup08.png"><img alt="../../_images/Cleanup08.png" src="../../_images/Cleanup08.png" style="width: 600px;" /></a>
+<p>For non-empty projects continue reading before deciding to delete them.</p>
+<hr class="docutils" />
+<p>You can then move to your project (select it) and check its database(s) selecting <code class="docutils literal notranslate"><span class="pre">COLLECTIONS</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Cleanup09.png"><img alt="../../_images/Cleanup09.png" src="../../_images/Cleanup09.png" style="width: 800px;" /></a>
+<p>An empty project will look like below, and this is typically what you have before deploying Nightscout. Once Nightscout is deployed in a project, a new database will be created there.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup10.png"><img alt="../../_images/Cleanup10.png" src="../../_images/Cleanup10.png" style="width: 400px;" /></a>
+<p>The database currently used by your Nightscout is the one specified in the connection string, in the example below <code class="docutils literal notranslate"><span class="pre">dbname</span></code>. Whenever you change the database name in the connection string, a new database will be created in your project.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+srv://atlasusername:atlaspassword&#64;cluster0.zzzzz.mongodb.net/</span></code><strong><code class="docutils literal notranslate"><span class="pre">dbname</span></code></strong><code class="docutils literal notranslate"><span class="pre">?retryWrites=true&amp;w=majority</span></code></p>
+<p>There is usually one database for Nightscout, if there are several, select one and then the other(s) to understand which one contains your data. For this, select <code class="docutils literal notranslate"><span class="pre">entries</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup11.png"><img alt="../../_images/Cleanup11.png" src="../../_images/Cleanup11.png" style="width: 800px;" /></a>
+<p>A large database is most probably one you want to keep.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup12.png"><img alt="../../_images/Cleanup12.png" src="../../_images/Cleanup12.png" style="width: 600px;" /></a>
+<p>You can safely delete empty databases (check the size first).</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup13.png"><img alt="../../_images/Cleanup13.png" src="../../_images/Cleanup13.png" style="width: 600px;" /></a>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you’re not sure you’re deleting the right database, just leave it.</p>
+</div>
+<p>Hover on the database name and click the bin icon. Confirm deletion by copying the database name and click <code class="docutils literal notranslate"><span class="pre">Drop</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup14.png"><img alt="../../_images/Cleanup14.png" src="../../_images/Cleanup14.png" style="width: 700px;" /></a>
+<p>If your database gets recreated after you deleted it this means your <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> or <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code> string is pointing to it.</p>
+</br>
+<p><span style="font-size:larger;">If you want to delete a non-empty Project you need to terminate all clusters belonging to it.</span></span></p>
+<a class="reference internal image-reference" href="../../_images/Cleanup15.png"><img alt="../../_images/Cleanup15.png" src="../../_images/Cleanup15.png" style="width: 700px;" /></a>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Terminating a cluster will delete all information and databases in this cluster!</p>
+</div>
+<p>Confirm with your cluster name and wait until shutdown is complete.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup16.png"><img alt="../../_images/Cleanup16.png" src="../../_images/Cleanup16.png" style="width: 600px;" /></a>
+<p>You can then delete the empty project.</p>
+</br>
+</section>
+<section id="backup-your-database">
+<h2>Backup your database<a class="headerlink" href="#backup-your-database" title="Permalink to this heading"></a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Not a normal operation</p>
+<p>Making a backup of your database is either a good idea or necessary if you want to migrate it to another database.
+This is not an easy operation and requires command line instructions using a computer.</p>
+</div>
+<section id="install-the-database-tools">
+<h3>Install the database tools<a class="headerlink" href="#install-the-database-tools" title="Permalink to this heading"></a></h3>
+<p>Follow <a class="reference external" href="https://www.mongodb.com/docs/database-tools/installation/installation/">this link</a> to install the CLI tool on your computer.</p>
+</section>
+<section id="dump-your-database">
+<h3>Dump your database<a class="headerlink" href="#dump-your-database" title="Permalink to this heading"></a></h3>
+<p>Get your <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> handy to find the missing pieces (password and database name).</p>
+<p>Log in your MongoDB account <a class="reference external" href="https://cloud.mongodb.com/">https://cloud.mongodb.com/</a>.</p>
+<ol class="arabic simple">
+<li><p>Select your organization</p></li>
+<li><p>Select your database</p></li>
+<li><p>In the advanced options menu, select <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">line</span> <span class="pre">tools</span></code></p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/AtlasX01.png"><img alt="../../_images/AtlasX01.png" src="../../_images/AtlasX01.png" style="width: 800px;" /></a>
+</br>
+<p>Scroll down to <code class="docutils literal notranslate"><span class="pre">Binary</span> <span class="pre">import</span> <span class="pre">and</span> <span class="pre">Export</span> <span class="pre">tools</span></code>, copy the <code class="docutils literal notranslate"><span class="pre">mongodump</span></code> command line.</p>
+<a class="reference internal image-reference" href="../../_images/AtlasX02.png"><img alt="../../_images/AtlasX02.png" src="../../_images/AtlasX02.png" style="width: 700px;" /></a>
+<p>Paste the command line in a text editor.</p>
+<p>Look into your <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> and replace <code class="docutils literal notranslate"><span class="pre">&lt;PASSWORD&gt;</span></code> with your database password and entually (if you have one) <code class="docutils literal notranslate"><span class="pre">&lt;DATABASE&gt;</span></code> with your database name.</p>
+<a class="reference internal image-reference" href="../../_images/AtlasX03.png"><img alt="../../_images/AtlasX03.png" src="../../_images/AtlasX03.png" style="width: 1000px;" /></a>
+</br>
+<p>Open a command line utility (CMD, Terminal, …) and make your way to the utility folder (if you don’t want to include it in your system path).<br />
+For example in Windows 64bits it’s in <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\MongoDB\Tools\100\bin</span></code>.</p>
+<p>Copy and paste your <code class="docutils literal notranslate"><span class="pre">mongodump</span></code> command, run it.</p>
+<a class="reference internal image-reference" href="../../_images/AtlasX04.png"><img alt="../../_images/AtlasX04.png" src="../../_images/AtlasX04.png" style="width: 800px;" /></a>
+</br>
+<p>You will find the database dump in a subfolder called <code class="docutils literal notranslate"><span class="pre">dump</span></code> with your database name in a subfolder.</p>
+<a class="reference internal image-reference" href="../../_images/AtlasX07.png"><img alt="../../_images/AtlasX07.png" src="../../_images/AtlasX07.png" style="width: 600px;" /></a>
+</br></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

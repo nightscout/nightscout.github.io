@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightscout in Azure (Docker) &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Nightscout in Northflank" href="../../northflank/new_user/" />
+    <link rel="prev" title="Choose your platform" href="../../../nightscout/platform/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nightscout in Azure (Docker)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-0-create-a-database">Step 0: Create a database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-create-an-azure-account">Step 1: Create an Azure account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-create-your-nightscout-web-app">Step 2: Create your Nightscout web app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-3-configure-your-nightscout-web-app">Step 3: Configure your Nightscout web app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#new-nightscout-setup">New Nightscout Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-config-vars-in-azure">Editing Config Vars in Azure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#view-a-variable-value">View a variable value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modify-a-variable">Modify a variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-a-variable">Delete a variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-variable">Add a variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-your-modifications">Save your modifications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nightscout in Azure (Docker)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/azure/new_user.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nightscout-in-azure-docker">
+<h1>Nightscout in Azure (Docker)<a class="headerlink" href="#nightscout-in-azure-docker" title="Permalink to this heading"></a></h1>
+</br>
+<div class="seealso admonition">
+<p class="admonition-title">Too complicated? Not what you’re looking for?</p>
+<p>Consider a hosted Nightscout service! Check for easier solutions <a class="reference internal" href="../../../#nightscout-as-a-service"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="azure">Azure</h2>
+<p class="sd-card-text"><img alt="Azure" src="../../../_images/Azure.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Nightscout DIY was <a class="reference external" href="https://github.com/rnpenguin/cgm-remote-monitor">originally</a> created with Azure but most users dropped it after costs increased.<br />
+A new deployment method has been created using a Docker container.</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Large platform with a reliable history</p></li>
+<li><p class="sd-card-text">Well known by the community IT specialists</p></li>
+<li><p class="sd-card-text">Using a basic plan and free services keep it free</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Trial account lasts maximum 12 months</p></li>
+<li><p class="sd-card-text">Basic plan and pay as you go is free if you stay within quotas</p></li>
+<li><p class="sd-card-text">The F1 free app service plan is designed for testing, not production</p></li>
+<li><p class="sd-card-text"><strong>The Cosmos database doesn’t integrate correctly with Nightscout</strong></p></li>
+</ul>
+</div>
+</div>
+</br>
+<p>This is a transcript of the original video which cannot be used as-is anymore because the <strong>Cosmos (MongDB) database which was used at the time of the video isn’t fully compatible with Nightscout and can’t be deployed in some geographical areas</strong>. For reference the obsolete video is <a class="reference external" href="https://www.youtube.com/watch?v=EDADrteGBnY">here</a>.</p>
+</br>
+<section id="step-0-create-a-database">
+<h2>Step 0: Create a database<a class="headerlink" href="#step-0-create-a-database" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you <a class="reference internal" href="../../../nightscout/database/"><span class="doc std std-doc">created one</span></a> before starting your Nightscout web app creation with Azure.
+Come back here when you have a MONGODB_URI connection string.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Migrating?</p>
+<p>Copy the connection string from your previous platform: <a class="reference internal" href="../../../nightscout/setup_variables/#nightscout-configuration"><span class="std std-ref">edit the variables</span></a> and look for <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code>.
+If you don’t see <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> but see <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code> (<strong>NOT</strong> <code class="docutils literal notranslate"><span class="pre">MONGO_COLLECTION</span></code>): use its value.</p>
+</div>
+</br>
+</section>
+<section id="step-1-create-an-azure-account">
+<h2>Step 1: Create an Azure account<a class="headerlink" href="#step-1-create-an-azure-account" title="Permalink to this heading"></a></h2>
+<p>a) Open a web page in <a class="reference external" href="https://azure.microsoft.com/en-us/free/">https://azure.microsoft.com/en-us/free/</a> and click Start Free.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure01.png"><img alt="../../../_images/Azure01.png" src="../../../_images/Azure01.png" style="width: 400px;" /></a>
+</br>
+<p>b) Sign in with your Microsoft account if you have one, else use GitHub.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure02.png"><img alt="../../../_images/Azure02.png" src="../../../_images/Azure02.png" style="width: 400px;" /></a>
+</br>
+<p>c) Agree and click Next.<br />
+Perform necessary authentication.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure03.png"><img alt="../../../_images/Azure03.png" src="../../../_images/Azure03.png" style="width: 500px;" /></a>
+</br>
+</section>
+<section id="step-2-create-your-nightscout-web-app">
+<h2>Step 2: Create your Nightscout web app<a class="headerlink" href="#step-2-create-your-nightscout-web-app" title="Permalink to this heading"></a></h2>
+<p>a) From the top left ☰ menu or the Azure Services icons, select + Create a resource.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure05.png"><img alt="../../../_images/Azure05.png" src="../../../_images/Azure05.png" style="width: 400px;" /></a>
+</br>
+<p>b) Search Web app and click Create.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure22.png"><img alt="../../../_images/Azure22.png" src="../../../_images/Azure22.png" style="width: 400px;" /></a>
+</br>
+<p>c) Check you’re still using your Free Trial or 3-Month free Trial.<br />
+Open the list in Resource group and pick your group (the one you created in Step 2.f.).</p>
+<a class="reference internal image-reference" href="../../../_images/Azure23.png"><img alt="../../../_images/Azure23.png" src="../../../_images/Azure23.png" style="width: 600px;" /></a>
+<p>If your free trial expired, select Pay-As-You-Go. It will be free if you use free resources like the Free F1 resource (see below).</p>
+</br>
+<p>d) Decide your site name (only lowercase and you can use <code class="docutils literal notranslate"><span class="pre">-</span></code> as a separator).<br />
+It must be unique: check the tick box at the end of the line is green.<br />
+If it isn’t: you need to choose another name…</p>
+<a class="reference internal image-reference" href="../../../_images/Azure24.png"><img alt="../../../_images/Azure24.png" src="../../../_images/Azure24.png" style="width: 600px;" /></a>
+</br>
+<p>e) Now select a Docker container, in Linux.</p>
+<p>Pick a place close to where you live in the Region selection.<br />
+Make sure it is the same than the database region you selected in Step 2.g.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure25.png"><img alt="../../../_images/Azure25.png" src="../../../_images/Azure25.png" style="width: 600px;" /></a>
+</br>
+<p>f) Select the free F1 plan.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure26.png"><img alt="../../../_images/Azure26.png" src="../../../_images/Azure26.png" style="width: 600px;" /></a>
+<div class="warning admonition">
+<p class="admonition-title">Limited CPU usage</p>
+<p>The Free F1 plan includes 60 CPU minutes per day. It usually is enough for a moderate Nightscout usage but can also be insufficient and provoke interruptions in your Nightscout site. Not recommended for FreeAPS X and OpenAPS users.
+If you want a more reliable CPU, consider another plan like Shared D1 ($).</p>
+</div>
+</br>
+<p>g) Click Next: Database &gt; down in the page.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure27.png"><img alt="../../../_images/Azure27.png" src="../../../_images/Azure27.png" style="width: 400px;" /></a>
+</br>
+<p>g) Do not change anything and click Next: Docker &gt; down in the page.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure28.png"><img alt="../../../_images/Azure28.png" src="../../../_images/Azure28.png" style="width: 400px;" /></a>
+</br>
+<p>h) In Image source select <strong>Docker Hub</strong> instead of Quickstart.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure29.png"><img alt="../../../_images/Azure29.png" src="../../../_images/Azure29.png" style="width: 600px;" /></a>
+</br>
+<p>i) In Image and tag paste the following name:</p>
+<p><code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor:latest</span></code></p>
+<a class="reference internal image-reference" href="../../../_images/Azure30.png"><img alt="../../../_images/Azure30.png" src="../../../_images/Azure30.png" style="width: 600px;" /></a>
+</br>
+<p>j) Click Review + create in the lower left of the page.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure12.png"><img alt="../../../_images/Azure12.png" src="../../../_images/Azure12.png" style="width: 300px;" /></a>
+</br>
+<p>k) Verify the summary information:<br />
+Free sku<br />
+Check the site Name is what you wanted<br />
+then click Create.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure31.png"><img alt="../../../_images/Azure31.png" src="../../../_images/Azure31.png" style="width: 400px;" /></a>
+</br>
+<p>Wait for the deployment to complete. Do not interfere.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure33.png"><img alt="../../../_images/Azure33.png" src="../../../_images/Azure33.png" style="width: 400px;" /></a>
+</br>
+<p>Congratulations, you have created your Nightscout web app.</p>
+</br>
+</section>
+<section id="step-3-configure-your-nightscout-web-app">
+<h2>Step 3: Configure your Nightscout web app<a class="headerlink" href="#step-3-configure-your-nightscout-web-app" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Now you need to tell it where the database is and other important information</p>
+</div></blockquote>
+<p>a) Click Go to resource</p>
+<a class="reference internal image-reference" href="../../../_images/Azure32.png"><img alt="../../../_images/Azure32.png" src="../../../_images/Azure32.png" style="width: 150px;" /></a>
+</br>
+<p>b) In the left menu select Configuration</p>
+<a class="reference internal image-reference" href="../../../_images/Azure34.png"><img alt="../../../_images/Azure34.png" src="../../../_images/Azure34.png" style="width: 400px;" /></a>
+</br>  
+<p><strong>Check which deployment you’re doing now!:</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+I’m building a new Azure site</label><div class="sd-tab-content docutils">
+<p>c) Click + New application setting</p>
+<p><a class="reference internal" href="../../../_images/Azure35.png"><img alt="../../../_images/Azure35.png" src="../../../_images/Azure35.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>d) In Name write <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code></p>
+<p><strong>Mind your database type!</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+I have an Atlas/Railway/Northflank database</br></label><div class="sd-tab-content docutils">
+<p>In the line below, Value, paste the connection string you obtained after creating your database.</br></br></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+I have a Cosmos database</br></label><div class="sd-tab-content docutils">
+<p>In the line below, Value, paste the connection string <strong>with socketTimeoutMS</strong>.</br></br></p>
+</div>
+</div>
+<p><a class="reference internal" href="../../../_images/Azure36.png"><img alt="../../../_images/Azure36.png" src="../../../_images/Azure36.png" style="width: 800px;" /></a></br></br>
+Then click OK.</p>
+</br>
+<p>e) Click again + New application setting (like in c. above) and write <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> in Name.<br />
+<code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use &#64; or ! symbols remember you will probably need to express them using <a class="reference external" href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you’re not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it’s reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
+</div>
+<p><a class="reference internal" href="../../../_images/Azure37.png"><img alt="../../../_images/Azure37.png" src="../../../_images/Azure37.png" style="width: 300px;" /></a></br></p>
+<p>Click OK.</p>
+</br>
+<p>f) Click again + New application setting and write <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> in Name.<br />
+Acceptable choices for the units used in Nightscout are <code class="docutils literal notranslate"><span class="pre">mg/dl</span></code> or <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> (or just <code class="docutils literal notranslate"><span class="pre">mmol</span></code>).</p>
+<p><a class="reference internal" href="../../../_images/Azure38.png"><img alt="../../../_images/Azure38.png" src="../../../_images/Azure38.png" style="width: 300px;" /></a></br></p>
+<p>Click OK.</p>
+</br>
+<p>g) Click again + New application setting and write <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> in Name.<br />
+If you don’t use Dexcom Share to get your BG data in Nightscout, copy the line below to Value:</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">speech</span> <span class="pre">cors</span></code></p>
+<p>If you want to use Dexcom Share as a data source copy this one (it includes the keyword <code class="docutils literal notranslate"><span class="pre">bridge</span></code>):</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">speech</span> <span class="pre">cors</span> <span class="pre">bridge</span></code></p>
+<p>Click OK.</p>
+</br>
+<p>h) If you want to use Dexcom Share to have your data in Nightscout directly, you will need to add these three variable Names:</p>
+<p><code class="docutils literal notranslate"><span class="pre">BRIDGE_USER_NAME</span></code>   Your Dexcom account username to receive CGM data from the Dexcom Share service.<br />
+<code class="docutils literal notranslate"><span class="pre">BRIDGE_PASSWORD</span></code>     Your Dexcom account password to receive CGM data from the Dexcom Share service.<br />
+<code class="docutils literal notranslate"><span class="pre">BRIDGE_SERVER</span></code>          US if your Dexcom account is in the US, or, if you are bridging from the Dexcom Share service and are anywhere <em>outside</em> the US change this to EU.</p>
+<p>!!!note<br />
+If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing using Dexcom Share and the <code class="docutils literal notranslate"><span class="pre">bridge</span></code> plugin.</p>
+<p><a class="reference internal" href="../../../_images/Azure15.png"><img alt="../../../_images/Azure15.png" src="../../../_images/Azure15.png" style="width: 600px;" /></a></br></p>
+</br>
+<p><strong>Remember to add <code class="docutils literal notranslate"><span class="pre">bridge</span></code> at the end of the <code class="docutils literal notranslate"><span class="pre">enable</span></code> variable in the list below.</strong></p>
+</br>
+<div class="hint admonition">
+<p class="admonition-title">MOST COMMON ERRORS</p>
+<p>The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom’s Clarity page (check <a class="reference external" href="https://clarity.dexcom.com">here for USA accounts</a> and <a class="reference external" href="https://clarity.dexcom.eu">here for the others</a>) and try logging in to your Dexcom account. If your account info isn’t valid, or you don’t see any data in your Clarity account… you need to figure out your actual credentials before moving ahead. See <a class="reference internal" href="../../../troubleshoot/dexcom_bridge/"><span class="doc std std-doc">here</span></a> for troubleshooting tips and information on your Dexcom account.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Password</p>
+<p><em>Some people have had problems with their bridge connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.</em></p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You need to have at least one follower to use Dexcom Share. See <a class="reference internal" href="../../../uploader/setup/#dexcom"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<p>i) Click Save, then Continue.</p>
+<p><a class="reference internal" href="../../../_images/Azure39.png"><img alt="../../../_images/Azure39.png" src="../../../_images/Azure39.png" style="width: 400px;" /></a></br></p>
+</br>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+I’m migrating from another platform</label><div class="sd-tab-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Migrating from Heroku</label><div class="sd-tab-content docutils">
+<p>c) Open a new browser tab or window and Log in <a class="reference external" href="https://id.heroku.com/login">Heroku</a>, select your app</br></br>
+<a class="reference internal" href="../../../_images/SetupNS00.png"><img alt="../../../_images/SetupNS00.png" src="../../../_images/SetupNS00.png" style="width: 800px;" /></a></br></br>
+d) Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code></br></br>
+<a class="reference internal" href="../../../_images/SetupNS01.png"><img alt="../../../_images/SetupNS01.png" src="../../../_images/SetupNS01.png" style="width: 800px;" /></a></br></br>
+e) Scroll down and click <code class="docutils literal notranslate"><span class="pre">Reveal</span> <span class="pre">Config</span> <span class="pre">Vars</span></code></br></br>
+<a class="reference internal" href="../../../_images/SetupNS02.png"><img alt="../../../_images/SetupNS02.png" src="../../../_images/SetupNS02.png" style="width: 800px;" /></a></br></br>
+f) Put the two windows Heroku and Azure side by side</br></br>
+<a class="reference internal" href="../../../_images/Azure16.png"><img alt="../../../_images/Azure16.png" src="../../../_images/Azure16.png" style="width: 800px;" /></a></br></br>
+Now for every (no, not necessarily, read until <strong>i</strong> and come back) variable you need to do the following:</br></br></p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Migrating from Railway</label><div class="sd-tab-content docutils">
+<p>c) Open <a class="reference external" href="https://railway.app">Railway</a> and click <code class="docutils literal notranslate"><span class="pre">login</span></code>. Login with GitHub.</br></br>
+<a class="reference internal" href="../../../_images/Railway00.png"><img alt="../../../_images/Railway00.png" src="../../../_images/Railway00.png" style="width: 600px;" /></a></br></br>
+<a class="reference internal" href="../../../_images/Railway01.png"><img alt="../../../_images/Railway01.png" src="../../../_images/Railway01.png" style="width: 300px;" /></a></br></br>
+d) Select your Nightscout project.</br></br>
+<a class="reference internal" href="../../../_images/RailwayM15.png"><img alt="../../../_images/RailwayM15.png" src="../../../_images/RailwayM15.png" style="width: 400px;" /></a></br></br>
+Select your web app.</br></br>
+<a class="reference internal" href="../../../_images/RailwayM16.png"><img alt="../../../_images/RailwayM16.png" src="../../../_images/RailwayM16.png" style="width: 300px;" /></a></br></br>
+e) Click on <code class="docutils literal notranslate"><span class="pre">Variables</span></code>.</br></br>
+<a class="reference internal" href="../../../_images/RailwayM17.png"><img alt="../../../_images/RailwayM17.png" src="../../../_images/RailwayM17.png" style="width: 400px;" /></a></br></br>
+Click on <code class="docutils literal notranslate"><span class="pre">RAW</span> <span class="pre">Editor</span></code> top right</br></br>
+<a class="reference internal" href="../../../_images/Railway39.png"><img alt="../../../_images/Railway39.png" src="../../../_images/Railway39.png" style="width: 600px;" /></a></br></br>
+f) Put the two windows Railway and Azure side by side</br></br>
+<a class="reference internal" href="../../../_images/Azure16r.png"><img alt="../../../_images/Azure16r.png" src="../../../_images/Azure16r.png" style="width: 800px;" /></a></br></br>
+Now for every variable you need to do the following:</br></br></p>
+</div>
+</div>
+</br>
+<p>g) Click + New application setting</p>
+<p><a class="reference internal" href="../../../_images/Azure35.png"><img alt="../../../_images/Azure35.png" src="../../../_images/Azure35.png" style="width: 300px;" /></a></br></p>
+</br>
+<p>h) In Name write the variable name from the first column in Heroku or the one in red with Railway<br />
+Then, in the line below, Value, paste the value from the second column in Heroku or the one in green with Railway.</p>
+<p><a class="reference internal" href="../../../_images/Azure38.png"><img alt="../../../_images/Azure38.png" src="../../../_images/Azure38.png" style="width: 300px;" /></a></br></p>
+<p>Then click OK and go for the next one.</p>
+</br>
+<p>You might not need to copy ALL the values, if you know which ones you need you can go ahead.<br />
+If you don’t really know which ones you want to copy there’s only few that are strictly necessary:</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code></strong><br />
+<strong><code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code></strong>  <em>Note: if you don’t see <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> but see <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code> (NOT <code class="docutils literal notranslate"><span class="pre">MONGO_COLLECTION</span></code>) use its value.</em><br />
+<strong><code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code></strong></p>
+<p>in <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> paste this:</p>
+<p>If you don’t use Dexcom Share to get your BG data in Nightscout, copy the line below to Value:</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">speech</span> <span class="pre">cors</span></code></p>
+<p>If you want to use Dexcom Share as a data source copy this one (it includes the keyword <code class="docutils literal notranslate"><span class="pre">bridge</span></code>):</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">speech</span> <span class="pre">cors</span> <span class="pre">bridge</span></code></p>
+<p>If you have your data coming directly from Dexcom share those three:</p>
+<p><code class="docutils literal notranslate"><span class="pre">BRIDGE_USER_NAME</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">BRIDGE_PASSWORD</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">BRIDGE_SERVER</span></code></p>
+<p><a class="reference internal" href="../../../_images/Azure15.png"><img alt="../../../_images/Azure15.png" src="../../../_images/Azure15.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>i) When you’re done copying, click Save, then Continue.</p>
+<p><a class="reference internal" href="../../../_images/Azure39.png"><img alt="../../../_images/Azure39.png" src="../../../_images/Azure39.png" style="width: 400px;" /></a></br></p>
+</br>
+</div>
+</div>
+<p>j) From the menu select Overview, then Browse.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure40.png"><img alt="../../../_images/Azure40.png" src="../../../_images/Azure40.png" style="width: 400px;" /></a>
+<p>It will take some time before the window opens.</p>
+</br>
+</section>
+<section id="new-nightscout-setup">
+<h2>New Nightscout Setup<a class="headerlink" href="#new-nightscout-setup" title="Permalink to this heading"></a></h2>
+</br>
+<p>a) Your Nightscout site should open and direct you to a new profile creation.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS50.png"><img alt="../../../_images/NewNS50.png" src="../../../_images/NewNS50.png" style="width: 400px;" /></a>
+</br>
+<p>b) Setup your <code class="docutils literal notranslate"><span class="pre">Time</span> <span class="pre">zone</span></code> and eventually all other fields. Do not leave any fields empty. If you don’t know which value to use, just use the default value. You can change these values later at any time.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS44.png"><img alt="../../../_images/NewNS44.png" src="../../../_images/NewNS44.png" style="width: 500px;" /></a>
+</br>
+<p>c) Browse down to <code class="docutils literal notranslate"><span class="pre">Authentication</span> <span class="pre">status</span></code> and click <code class="docutils literal notranslate"><span class="pre">Authenticate</span></code>. Enter your API secret. Click <code class="docutils literal notranslate"><span class="pre">Update</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS45.png"><img alt="../../../_images/NewNS45.png" src="../../../_images/NewNS45.png" style="width: 500px;" /></a>
+</br>
+<p>d) Click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS46.png"><img alt="../../../_images/NewNS46.png" src="../../../_images/NewNS46.png" style="width: 200px;" /></a>
+</br>
+<p>e) If the following pop-up shows up click <code class="docutils literal notranslate"><span class="pre">OK</span></code>, and check status (upper right of the window).</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS47.png"><img alt="../../../_images/NewNS47.png" src="../../../_images/NewNS47.png" style="width: 600px;" /></a>
+</br>
+<p>f) If you need to modify your profile after this, authenticate with the lock icon (top right of the page): enter your API secret. Then click on the hamburger menu and select <code class="docutils literal notranslate"><span class="pre">Profile</span> <span class="pre">Editor</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS43.png"><img alt="../../../_images/NewNS43.png" src="../../../_images/NewNS43.png" style="width: 600px;" /></a>
+</br>
+<div class="warning admonition">
+<p class="admonition-title">Privacy warning</p>
+<p>Anyone with access to the URL of your Nightscout site, can view your BG and run reports of your data. It it strongly recommended that you enable <a class="reference internal" href="../../../nightscout/security/"><span class="doc std std-doc">security</span></a> to your site once you’re done with the setup</p>
+</div>
+</br>
+<p>g) Dexcom Share users should see data flowing in after some minutes.
+xDrip+ users (including Medtronic <a class="reference internal" href="../../../uploader/setup/#medtronic-carelink"><span class="std std-ref">CareLink followers</span></a>) should setup the uploader as shown <a class="reference internal" href="../../../uploader/setup/#xdrip"><span class="std std-ref"><strong>here</strong></span></a>.
+xDrip4iOS users <a class="reference external" href="https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#nightscout-upload">here</a>.
+<a class="reference external" href="https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient">AAPS</a> and <a class="reference external" href="https://loopkit.github.io/loopdocs/operation/loop-settings/services/">Loop</a>: consult the relative documentation.</p>
+<a class="reference internal image-reference" href="../../../_images/NewNS48.png"><img alt="../../../_images/NewNS48.png" src="../../../_images/NewNS48.png" style="width: 600px;" /></a>
+</br>
+<hr class="docutils" />
+<p>You have completed a new Nightscout site creation. You can continue <a class="reference internal" href="../../../nightscout/discover/"><span class="doc std std-doc">here</span></a> now.</p>
+<p>The following section provides more information that you might not need to use now.</p>
+<hr class="docutils" />
+</br>
+</br>
+</section>
+<section id="editing-config-vars-in-azure">
+<h2>Editing Config Vars in Azure<a class="headerlink" href="#editing-config-vars-in-azure" title="Permalink to this heading"></a></h2>
+</br>
+<p>a) Log into Azure : <a class="reference external" href="https://portal.azure.com/">https://portal.azure.com/</a></p>
+<p>b) Select your App service, your Nightscout site name (you should see it in recent resources)</p>
+<a class="reference internal image-reference" href="../../../_images/Azure42.png"><img alt="../../../_images/Azure42.png" src="../../../_images/Azure42.png" style="width: 500px;" /></a>
+<p>If you didn’t find it, it will show in App Services</p>
+<a class="reference internal image-reference" href="../../../_images/Azure43.png"><img alt="../../../_images/Azure43.png" src="../../../_images/Azure43.png" style="width: 500px;" /></a>
+<p>c) In the left menu select Environment variables</p>
+<a class="reference internal image-reference" href="../../../_images/Azure34.png"><img alt="../../../_images/Azure34.png" src="../../../_images/Azure34.png" style="width: 500px;" /></a>
+<section id="view-a-variable-value">
+<h3>View a variable value<a class="headerlink" href="#view-a-variable-value" title="Permalink to this heading"></a></h3>
+<p>Click the eye icon to display the hidden value</p>
+<a class="reference internal image-reference" href="../../../_images/Azure45.png"><img alt="../../../_images/Azure45.png" src="../../../_images/Azure45.png" style="width: 800px;" /></a>
+</section>
+<section id="modify-a-variable">
+<h3>Modify a variable<a class="headerlink" href="#modify-a-variable" title="Permalink to this heading"></a></h3>
+<p>Identify the line with the variable you want to change and click the pen icon at the end of the line<br />
+Click OK to save it when finished<br />
+Remember to save modifications when done with your variables!</p>
+<a class="reference internal image-reference" href="../../../_images/Azure44.png"><img alt="../../../_images/Azure44.png" src="../../../_images/Azure44.png" style="width: 800px;" /></a>
+</section>
+<section id="delete-a-variable">
+<h3>Delete a variable<a class="headerlink" href="#delete-a-variable" title="Permalink to this heading"></a></h3>
+<p>Identify the line with the variable you want to delete and click the bin icon at the end of the line<br />
+Remember to save modifications when done with your variables!</p>
+<a class="reference internal image-reference" href="../../../_images/Azure46.png"><img alt="../../../_images/Azure46.png" src="../../../_images/Azure46.png" style="width: 800px;" /></a>
+</section>
+<section id="add-a-variable">
+<h3>Add a variable<a class="headerlink" href="#add-a-variable" title="Permalink to this heading"></a></h3>
+<p>Select New Application Setting and type variable name and value<br />
+Remember to save modifications when done with your variables!</p>
+<a class="reference internal image-reference" href="../../../_images/Azure35.png"><img alt="../../../_images/Azure35.png" src="../../../_images/Azure35.png" style="width: 400px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Multiple lines values with <code class="docutils literal notranslate"><span class="pre">\n</span></code> should be edited manually as the character <code class="docutils literal notranslate"><span class="pre">\</span></code> will be duplicated.</br>
+Example: <code class="docutils literal notranslate"><span class="pre">LOOP_APNS_KEY</span></code></br></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">----</span><span class="n">BEGIN</span> <span class="n">PRIVATE</span> <span class="n">KEY</span><span class="o">-----</span>\<span class="n">nMIGTAgEAMBMGBygGSM49AwEHBHkwdwIBAQQg7c8w00t5ju7N980r</span>\<span class="n">nerN8N</span><span class="o">+</span><span class="n">isnJoec</span><span class="o">+</span><span class="n">ohIEuD0teRbPmgCgYIKoZIzj0DAQehRANCAAREnRISLSiFgdn4</span>\<span class="n">nLbf44yIKspXKr7GpPBVshv3ShOms2qHTdAFriXXRPmbq7eAJuFrxpYOduU1dl9vo</span>\<span class="n">nouciW0je</span>\<span class="n">n</span><span class="o">-----</span><span class="n">END</span> <span class="n">PRIVATE</span> <span class="n">KEY</span><span class="o">-----</span>
+</pre></div>
+</div>
+</div>
+<p>Insert the value like you’ve done for all the others.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure48.png"><img alt="../../../_images/Azure48.png" src="../../../_images/Azure48.png" style="width: 600px;" /></a>
+<p>At the top of the Environment variables view, select Advanced edit.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure49.png"><img alt="../../../_images/Azure49.png" src="../../../_images/Azure49.png" style="width: 600px;" /></a>
+<p>Scroll down the list to your variable name and delete all duplicated <code class="docutils literal notranslate"><span class="pre">\</span></code> so that there will be no more <code class="docutils literal notranslate"><span class="pre">\\n</span></code> separators but only <code class="docutils literal notranslate"><span class="pre">\n</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure50.png"><img alt="../../../_images/Azure50.png" src="../../../_images/Azure50.png" style="width: 600px;" /></a>
+<p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to save the modified variable.</p>
+</br>
+</section>
+<section id="save-your-modifications">
+<h3>Save your modifications<a class="headerlink" href="#save-your-modifications" title="Permalink to this heading"></a></h3>
+<p>When you’re done modifying your variables, click Save (or Discard if you don’t want to save).<br />
+Your site will redeploy if you changed the configuration. Expect a few minutes before it comes back online.</p>
+<a class="reference internal image-reference" href="../../../_images/Azure47.png"><img alt="../../../_images/Azure47.png" src="../../../_images/Azure47.png" style="width: 400px;" /></a>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

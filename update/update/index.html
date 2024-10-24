@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Nightscout &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Deploy another version" href="../dev_branch/" />
+    <link rel="prev" title="Troubleshooting Nightscout" href="../../troubleshoot/troubleshoot/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Update Nightscout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-update-your-repository-in-github">Step 1: Update your repository in GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-2-deploy">Step 2: Deploy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Update Nightscout</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/update/update.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="update-nightscout">
+<h1>Update Nightscout<a class="headerlink" href="#update-nightscout" title="Permalink to this heading"></a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You don’t need to follow these instructions if you use a hosted service.</br>Contact the vendor to learn more about possible updates.</p>
+</div>
+</br>
+<p><a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/releases">See here which is the current released version</a> before updating.</p>
+</br>
+<section id="step-1-update-your-repository-in-github">
+<h2>Step 1: Update your repository in GitHub<a class="headerlink" href="#step-1-update-your-repository-in-github" title="Permalink to this heading"></a></h2>
+<p>Select your current platform below:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Select your platform -&gt;</label><div class="sd-tab-content docutils">
+</br>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Heroku, Railway, Northflank (GitHub)</label><div class="sd-tab-content docutils">
+<p></br>- Click here to log in at GitHub: <a class="reference external" href="https://github.com/login">https://github.com/login</a>.</br></p>
+<ul class="simple">
+<li><p>Enter your username or email and your password. Click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span></code></br></br>
+<a class="reference internal" href="../../_images/UpdateNS00.png"><img alt="../../_images/UpdateNS00.png" src="../../_images/UpdateNS00.png" style="width: 400px;" /></a></br></br></p></li>
+<li><p>Select your own <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> project (<strong>not <code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor</span></code></strong>)</br></br>
+<a class="reference internal" href="../../_images/UpdateNS01.png"><img alt="../../_images/UpdateNS01.png" src="../../_images/UpdateNS01.png" style="width: 400px;" /></a></br></br></p></li>
+<li><p>Your repository will open. If you see <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">branch</span> <span class="pre">is</span> <span class="pre">xxx</span> <span class="pre">commits</span> <span class="pre">&lt;/br&gt;behind</span> <span class="pre">nightscout:master</span></code> you need to update.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">upstream</span></code></br></br>
+<a class="reference internal" href="../../_images/UpdateNS01a.png"><img alt="../../_images/UpdateNS01a.png" src="../../_images/UpdateNS01a.png" style="width: 700px;" /></a></br></br></p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">and</span> <span class="pre">merge</span></code></br></br>
+<a class="reference internal" href="../../_images/UpdateNS01b.png"><img alt="../../_images/UpdateNS01b.png" src="../../_images/UpdateNS01b.png" style="width: 400px;" /></a></br></br></p></li>
+<li><p>After a moment, your repository should display <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">branch</span> <span class="pre">is</span> <span class="pre">up</span> <span class="pre">to</span> <span class="pre">date</span> <span class="pre">with</span> <span class="pre">nightscout:master</span></code></br></br>
+<a class="reference internal" href="../../_images/UpdateNS01c.png"><img alt="../../_images/UpdateNS01c.png" src="../../_images/UpdateNS01c.png" style="width: 400px;" /></a></br></br>
+You have now updated your GitHub cgm-remote-monitor repository.</br></br>
+If you ran into trouble, you can <a class="reference internal" href="../redeploy/"><span class="doc std std-doc">redeploy</span></a> the project.</br></br></p></li>
+</ul>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Google Cloud, Docker (Azure, Northflank, Railway, Render)</label><div class="sd-tab-content docutils">
+<p></br>You don’t need to update your GitHub repository.</br></br></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Fly.io</label><div class="sd-tab-content docutils">
+<p></br>You don’t need to update your GitHub repository if you deployed from <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor">https://github.com/nightscout/cgm-remote-monitor</a>.</br></br></p>
+</div>
+</div>
+</br>
+</section>
+<section id="step-2-deploy">
+<h2>Step 2: Deploy<a class="headerlink" href="#step-2-deploy" title="Permalink to this heading"></a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Select your platform -&gt;</label><div class="sd-tab-content docutils">
+</br>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Google Cloud</label><div class="sd-tab-content docutils">
+<p></br>Continue <a class="reference external" href="https://navid200.github.io/xDrip/docs/Nightscout/update_nightscout.html">here</a></br></br></p>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Heroku</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Log in Heroku <a class="reference external" href="https://id.heroku.com/login">https://id.heroku.com/login</a> </br>
+</br><a class="reference internal" href="../../_images/UpdateNS15.png"><img alt="../../_images/UpdateNS15.png" src="../../_images/UpdateNS15.png" style="width: 400px;" /></a></br></br></p></li>
+<li><p>Select your app (hidden in yellow)</br>
+</br><a class="reference internal" href="../../_images/UpdateNS16.png"><img alt="../../_images/UpdateNS16.png" src="../../_images/UpdateNS16.png" style="width: 600px;" /></a></br></br></p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Deploy</span></code></br>
+</br><a class="reference internal" href="../../_images/UpdateNS17.png"><img alt="../../_images/UpdateNS17.png" src="../../_images/UpdateNS17.png" style="width: 600px;" /></a></br></br></p></li>
+<li><p>Verify Heroku is connected to GitHub, if not, click<code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">GitHub</span></code></br>
+</br><a class="reference internal" href="../../_images/UpdateNS18.png"><img alt="../../_images/UpdateNS18.png" src="../../_images/UpdateNS18.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>If Heroku is not connected to GitHub, scroll down and click <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">GitHub</span></code>, if a popup window opens and requires authorization, click <code class="docutils literal notranslate"><span class="pre">Authorize</span> <span class="pre">Heroku</span></code></br>
+</br><a class="reference internal" href="../../_images/UpdateNS19.png"><img alt="../../_images/UpdateNS19.png" src="../../_images/UpdateNS19.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>Verify your app <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> is connected to GitHub</br>
+</br><a class="reference internal" href="../../_images/UpdateNS20.png"><img alt="../../_images/UpdateNS20.png" src="../../_images/UpdateNS20.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>If it isn’t, In <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">GitHub</span></code>, type <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> and click <code class="docutils literal notranslate"><span class="pre">Search</span></code> then click <code class="docutils literal notranslate"><span class="pre">Connect</span></code></br>
+</br><a class="reference internal" href="../../_images/UpdateNS21.png"><img alt="../../_images/UpdateNS21.png" src="../../_images/UpdateNS21.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>If you have trouble connecting your app, click <code class="docutils literal notranslate"><span class="pre">Disconnect</span></code> and reconnect it as shown above</br>
+</br><a class="reference internal" href="../../_images/UpdateNS22.png"><img alt="../../_images/UpdateNS22.png" src="../../_images/UpdateNS22.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>Scroll down to the bottom of the page, select the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch and click <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">Branch</span></code></br>
+</br><a class="reference internal" href="../../_images/UpdateNS23.png"><img alt="../../_images/UpdateNS23.png" src="../../_images/UpdateNS23.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>Build will start and information will scroll in the log window. Do not leave the page, do not interfere and wait for completion. It might take more than 10 minutes.</br>Interrupting the process will lead to a broken site and you’ll need to restart deployment.</br>
+</br><a class="reference internal" href="../../_images/UpdateNS24.png"><img alt="../../_images/UpdateNS24.png" src="../../_images/UpdateNS24.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>Wait until the deploy process completes and click <code class="docutils literal notranslate"><span class="pre">View</span></code> (if nothing happens click <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">App</span></code> then upper right <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">App</span></code>)</br>
+</br><a class="reference internal" href="../../_images/UpdateNS25.png"><img alt="../../_images/UpdateNS25.png" src="../../_images/UpdateNS25.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>Your site will open and should be at the latest version.</br></p></li>
+<li><p>Check your <a class="reference internal" href="../../nightscout/profile_editor/#profile-view"><span class="std std-ref">profile time zone</span></a> is correct. You’re done!</br>
+If you ran into trouble, try the <a class="reference internal" href="../redeploy/"><span class="std std-doc">Redeploy</span></a> method</br></p></li>
+</ul>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Azure</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Log into Azure : <a class="reference external" href="https://portal.azure.com/">https://portal.azure.com/</a></br></p></li>
+<li><p>Select your App service, your Nightscout site name (you should see it in recent resources)</br>
+</br><a class="reference internal" href="../../_images/Azure42.png"><img alt="../../_images/Azure42.png" src="../../_images/Azure42.png" style="width: 600px;" /></a></br></br></p></li>
+<li><p>If you didn’t find it, it will show in App Services</br>
+</br><a class="reference internal" href="../../_images/Azure43.png"><img alt="../../_images/Azure43.png" src="../../_images/Azure43.png" style="width: 400px;" /></a></br></br></p></li>
+<li><p>In the left menu select Deployment Center and change Continuous Deployment to <strong>On</strong>.</br>
+</br><a class="reference internal" href="../../_images/AzureU02.png"><img alt="../../_images/AzureU02.png" src="../../_images/AzureU02.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>Click Save (or Discard if you don’t want to update).
+Your site will redeploy with the latest cgm-remote-monitor version.<br />
+Expect a few minutes before it comes back online.</br>
+</br><a class="reference internal" href="../../_images/Dev13.png"><img alt="../../_images/Dev13.png" src="../../_images/Dev13.png" style="width: 400px;" /></a></br></br></br></p></li>
+<li><p>You can leave Continuous Deployment On if you want upgrades to happen automatically, or turn it back to Off (and save) to control upgrades manually yourself.
+</br></p></li>
+</ul>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+Fly.io</label><div class="sd-tab-content docutils">
+<p>Follow <a class="reference external" href="https://fly.io/docs/hands-on/install-flyctl/">these instructions</a> to install <code class="docutils literal notranslate"><span class="pre">flyctl</span></code> on your computer. You also need to <a class="reference external" href="https://git-scm.com/downloads">install git</a> if you’re using a Windows computer.</br></br>
+<em>Note for Windows: you might experience issues with Git Bash or PowerShell, try an elevated command prompt.</em></br></br></p>
+<ul class="simple">
+<li><p>Log in Fly.io:</br></br>
+<code class="docutils literal notranslate"><span class="pre">flyctl</span> <span class="pre">auth</span> <span class="pre">login</span></code> </br></br></p></li>
+<li><p>Verify your Nightscout app name, use it to replace <code class="docutils literal notranslate"><span class="pre">example-ns</span></code> in the following lines.</br></br>
+<code class="docutils literal notranslate"><span class="pre">flyctl</span> <span class="pre">app</span> <span class="pre">list</span></code></br></br></p></li>
+<li><p>Verify your app current region (three letters code) and make sure it’s in the <a class="reference external" href="https://fly.io/docs/reference/regions/#fly-io-regions">free tier</a>.</br></br>
+<code class="docutils literal notranslate"><span class="pre">flyctl</span> <span class="pre">app</span> <span class="pre">list</span></code></br></br></p></li>
+<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> folder from which you deployed Nightscout on your computer. Verify it contains the <code class="docutils literal notranslate"><span class="pre">fly.toml</span></code> configuration file you used to deploy your site.</br></br></p>
+<ul>
+<li><p>If you don’t see this file, recover it:</br></br>
+<code class="docutils literal notranslate"><span class="pre">flyctl</span> <span class="pre">config</span> <span class="pre">save</span> <span class="pre">--app</span> <span class="pre">example-ns</span></code></br></br></p></li>
+</ul>
+</li>
+<li><p>If you migrated from Heroku using the wizard, or if you can’t find this folder on your computer, follow the next steps to recover your Fly.io configuration:</br></br></p>
+<ul>
+<li><p>Fork a copy of the Nightscout repository and change directory</br></br>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/nightscout/cgm-remote-monitor</span></code></br></br>
+<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">cgm-remote-monitor</span></code></br></br></p></li>
+<li><p>Download a default <code class="docutils literal notranslate"><span class="pre">fly.toml</span></code> configuration file</br></br>
+<code class="docutils literal notranslate"><span class="pre">flyctl</span> <span class="pre">config</span> <span class="pre">save</span> <span class="pre">--app</span> <span class="pre">example-ns</span></code></br></br></p></li>
+</ul>
+</li>
+<li><p>Update your Nightscout repository</br></br>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></br></br></p></li>
+<li><p>Edit your <code class="docutils literal notranslate"><span class="pre">fly.toml</span></code> configuration and search this section:</br></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">services</span><span class="p">]]</span>
+  <span class="n">protocol</span> <span class="o">=</span> <span class="s2">&quot;tcp&quot;</span>
+  <span class="n">internal_port</span> <span class="o">=</span> <span class="mi">8080</span>
+  <span class="n">processes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;app&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Change the internal port value to 1337, do not change anything else, do not remove the spaces before <code class="docutils literal notranslate"><span class="pre">internal_port</span></code>.</br></br>
+<code class="docutils literal notranslate"><span class="pre">internal_port</span> <span class="pre">=</span> <span class="pre">1337</span></code></br></br></p></li>
+<li><p>Save the <code class="docutils literal notranslate"><span class="pre">fly.toml</span></code> file.</br></br></p></li>
+<li><p>Deploy Nightscout:</br></br>
+<code class="docutils literal notranslate"><span class="pre">flyctl</span> <span class="pre">launch</span></code></br></br></p></li>
+<li><p>Wait until completion, you site should now be running the latest Nightscout version.</br></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Updating existing machines in &#39;example-ns&#39; with rolling strategy
+
+-------
+ ✔ Machine 1781944ae46438 [app] update succeeded
+-------
+
+Visit your newly deployed app at https://example-ns.fly.dev/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Downscale the app if you haven’t yet
+<code class="docutils literal notranslate"><span class="pre">flyctl</span> <span class="pre">scale</span> <span class="pre">--app</span> <span class="pre">example-ns</span> <span class="pre">count</span> <span class="pre">1</span></code>
+</br></p></li>
+</ul>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+Railway Northflank Render (GitHub)</label><div class="sd-tab-content docutils">
+<p></br>Once GitHub updated, your Nightscout should automatically deploy with the latest version.</br></br></p>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
+Northflank (Docker)</label><div class="sd-tab-content docutils">
+<p></br>- Log into Northflank: <a class="reference external" href="https://app.northflank.com/login">https://app.northflank.com/login</a></br></p>
+<ul class="simple">
+<li><p>Select your Nightscout project</br></br>
+<a class="reference internal" href="../../_images/Dev14.png"><img alt="../../_images/Dev14.png" src="../../_images/Dev14.png" style="width: 600px;" /></a></br></br></p></li>
+<li><p>Select your Nightscout service</br></br>
+<a class="reference internal" href="../../_images/Dev15.png"><img alt="../../_images/Dev15.png" src="../../_images/Dev15.png" style="width: 500px;" /></a></br></br></p></li>
+<li><p>In Overview, Edit deployment</br></br>
+<a class="reference internal" href="../../_images/Dev18.png"><img alt="../../_images/Dev18.png" src="../../_images/Dev18.png" style="width: 800px;" /></a></br></br></p></li>
+<li><p>In the image path, check the image is <code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor:latest</span></code> (modify if necessary), then click <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">&amp;</span> <span class="pre">rollout</span> <span class="pre">restart</span></code></br></br>
+<a class="reference internal" href="../../_images/Dev19.png"><img alt="../../_images/Dev19.png" src="../../_images/Dev19.png" style="width: 600px;" /></a></br></br></p></li>
+<li><p>Your site will redeploy with the latest version.</br></br></br></p></li>
+</ul>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
+Railway (Docker)</label><div class="sd-tab-content docutils">
+<p></br>a) Open <a class="reference external" href="https://railway.app">Railway</a> and click <code class="docutils literal notranslate"><span class="pre">login</span></code>. Login with GitHub.</br></br>
+<a class="reference internal" href="../../_images/Railway00.png"><img alt="../../_images/Railway00.png" src="../../_images/Railway00.png" style="width: 600px;" /></a></br></br>
+<a class="reference internal" href="../../_images/Railway01.png"><img alt="../../_images/Railway01.png" src="../../_images/Railway01.png" style="width: 300px;" /></a></br></br>
+b) Select your Nightscout project.</br></br>
+<a class="reference internal" href="../../_images/RailwayM15.png"><img alt="../../_images/RailwayM15.png" src="../../_images/RailwayM15.png" style="width: 500px;" /></a></br></br>
+c) Select your Docker service.</br></br>
+<a class="reference internal" href="../../_images/RailwayD05.png"><img alt="../../_images/RailwayD05.png" src="../../_images/RailwayD05.png" style="width: 300px;" /></a></br></br>
+d) Click on <code class="docutils literal notranslate"><span class="pre">Settings</span></code>, disconnect the source image.</br></br>
+<a class="reference internal" href="../../_images/RailwayD09.png"><img alt="../../_images/RailwayD09.png" src="../../_images/RailwayD09.png" style="width: 500px;" /></a></br></br>
+e) Select <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">image</span></code> and type <code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor:latest</span></code> then press enter.</br></br>
+<a class="reference internal" href="../../_images/RailwayD10.png"><img alt="../../_images/RailwayD10.png" src="../../_images/RailwayD10.png" style="width: 500px;" /></a></br></br>
+<a class="reference internal" href="../../_images/RailwayD04.png"><img alt="../../_images/RailwayD04.png" src="../../_images/RailwayD04.png" style="width: 500px;" /></a></br></br>
+f) Go to the <code class="docutils literal notranslate"><span class="pre">Deployment</span></code> tab and from the three dots menu of the top deployment select <code class="docutils literal notranslate"><span class="pre">Redeploy</span></code>.</br></br>
+<a class="reference internal" href="../../_images/RailwayD11.png"><img alt="../../_images/RailwayD11.png" src="../../_images/RailwayD11.png" style="width: 800px;" /></a></br></br></p>
+<ul class="simple">
+<li><p>Your site will redeploy with the latest version.</br></br></p></li>
+</ul>
+</div>
+<input id="sd-tab-item-12" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
+Render (Docker)</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Log into Render: <a class="reference external" href="https://dashboard.render.com/">https://dashboard.render.com/</a></br></p></li>
+<li><p>Select your Nightscout project</br></br>
+<a class="reference internal" href="../../_images/Render16.png"><img alt="../../_images/Render16.png" src="../../_images/Render16.png" style="width: 400px;" /></a></br></br></p></li>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Settings</span></code> and top right expand <code class="docutils literal notranslate"><span class="pre">Manual</span> <span class="pre">Deploy</span></code>, Select <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">latest</span> <span class="pre">reference</span></code></br></br>
+<a class="reference internal" href="../../_images/RenderD12.png"><img alt="../../_images/RenderD12.png" src="../../_images/RenderD12.png" style="width: 600px;" /></a></br></br></p></li>
+<li><p>Your site will redeploy with the updated Nightscout version</br></p></li>
+</ul>
+</div>
+</div>
+</br>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

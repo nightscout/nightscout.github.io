@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightscout Configuration &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="xDrip+ for CareLink" href="../../uploader/xdripcarelink/" />
+    <link rel="prev" title="Nightscout on your Watch" href="../wearable/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nightscout Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nightscout-config-vars">Nightscout Config Vars</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#required-variables">Required variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mongodb-uri-database-connection-string"><code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> (Database connection string)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api-secret-nightscout-password"><code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> (Nightscout password)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#display-units-units-to-use"><code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> (Units to use)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#features">Features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#enable-enable-plugins"><code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> (Enable Plugins)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disable-disable-plugins"><code class="docutils literal notranslate"><span class="pre">DISABLE</span></code> (Disable Plugins)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#auth-default-roles-authentication"><code class="docutils literal notranslate"><span class="pre">AUTH_DEFAULT_ROLES</span></code> (Authentication)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#alarms">Alarms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-types"><code class="docutils literal notranslate"><span class="pre">ALARM_TYPES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bg-high"><code class="docutils literal notranslate"><span class="pre">BG_HIGH</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bg-low"><code class="docutils literal notranslate"><span class="pre">BG_LOW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bg-target-bottom"><code class="docutils literal notranslate"><span class="pre">BG_TARGET_BOTTOM</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bg-target-top"><code class="docutils literal notranslate"><span class="pre">BG_TARGET_TOP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-urgent-high"><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_HIGH</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-high"><code class="docutils literal notranslate"><span class="pre">ALARM_HIGH</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-low"><code class="docutils literal notranslate"><span class="pre">ALARM_LOW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-urgent-low"><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_LOW</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-alarms-on-by-default">Other Alarms on by Default</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-urgent-high-mins"><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_HIGH_MINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-high-mins"><code class="docutils literal notranslate"><span class="pre">ALARM_HIGH_MINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-low-mins"><code class="docutils literal notranslate"><span class="pre">ALARM_LOW_MINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-urgent-low-mins"><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_LOW_MINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-urgent-mins"><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_MINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-warn-mins"><code class="docutils literal notranslate"><span class="pre">ALARM_WARN_MINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-timeago-urgent"><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-timeago-urgent-mins"><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT_MINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-timeago-warn"><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alarm-timeago-warn-mins"><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN_MINS</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#predefined-values-for-your-browser-settings-default">Predefined values for your browser settings (default)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#time-format-12"><code class="docutils literal notranslate"><span class="pre">TIME_FORMAT</span></code> (<code class="docutils literal notranslate"><span class="pre">12</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#night-mode-off"><code class="docutils literal notranslate"><span class="pre">NIGHT_MODE</span></code> (<code class="docutils literal notranslate"><span class="pre">off</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-rawbg-never"><code class="docutils literal notranslate"><span class="pre">SHOW_RAWBG</span></code> (<code class="docutils literal notranslate"><span class="pre">never</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-title-nightscout"><code class="docutils literal notranslate"><span class="pre">CUSTOM_TITLE</span></code> (<code class="docutils literal notranslate"><span class="pre">Nightscout</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theme-colors"><code class="docutils literal notranslate"><span class="pre">THEME</span></code> (<code class="docutils literal notranslate"><span class="pre">colors</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-plugins"><code class="docutils literal notranslate"><span class="pre">SHOW_PLUGINS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-forecast-ar2"><code class="docutils literal notranslate"><span class="pre">SHOW_FORECAST</span></code> (<code class="docutils literal notranslate"><span class="pre">ar2</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#language-en"><code class="docutils literal notranslate"><span class="pre">LANGUAGE</span></code> (<code class="docutils literal notranslate"><span class="pre">en</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scale-y-log"><code class="docutils literal notranslate"><span class="pre">SCALE_Y</span></code> (<code class="docutils literal notranslate"><span class="pre">log</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-mode-on"><code class="docutils literal notranslate"><span class="pre">EDIT_MODE</span></code> (<code class="docutils literal notranslate"><span class="pre">on</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bolus-render"><code class="docutils literal notranslate"><span class="pre">BOLUS_RENDER</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#split-view">Split View</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plugins">Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#default-plugins">Default Plugins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#delta-bg-delta"><code class="docutils literal notranslate"><span class="pre">delta</span></code> (BG Delta)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#direction-bg-direction"><code class="docutils literal notranslate"><span class="pre">direction</span></code> (BG Direction)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upbat-uploader-battery"><code class="docutils literal notranslate"><span class="pre">upbat</span></code> (Uploader Battery)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#timeago-time-ago"><code class="docutils literal notranslate"><span class="pre">timeago</span></code> (Time Ago)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#devicestatus-device-status"><code class="docutils literal notranslate"><span class="pre">devicestatus</span></code> (Device Status)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#errorcodes-cgm-error-codes"><code class="docutils literal notranslate"><span class="pre">errorcodes</span></code> (CGM Error Codes)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ar2-ar2-forecasting"><code class="docutils literal notranslate"><span class="pre">ar2</span></code> (AR2 Forecasting)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simplealarms-simple-bg-alarms"><code class="docutils literal notranslate"><span class="pre">simplealarms</span></code> (Simple BG Alarms)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#profile-treatment-profile"><code class="docutils literal notranslate"><span class="pre">profile</span></code> (Treatment Profile)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dbsize-database-size"><code class="docutils literal notranslate"><span class="pre">dbsize</span></code> (Database Size)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-plugins">Advanced Plugins:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#careportal-careportal"><code class="docutils literal notranslate"><span class="pre">careportal</span></code> (Careportal)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#boluscalc-bolus-wizard"><code class="docutils literal notranslate"><span class="pre">boluscalc</span></code> (Bolus Wizard)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#food-custom-foods"><code class="docutils literal notranslate"><span class="pre">food</span></code> (Custom Foods)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rawbg-raw-bg"><code class="docutils literal notranslate"><span class="pre">rawbg</span></code> (Raw BG)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iob-insulin-on-board-cob-carbs-on-board"><code class="docutils literal notranslate"><span class="pre">iob</span></code> (Insulin-on-Board) - <code class="docutils literal notranslate"><span class="pre">cob</span></code> (Carbs-on-Board)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iob-insulin-on-board"><code class="docutils literal notranslate"><span class="pre">iob</span></code> (Insulin-on-Board)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cob-carbs-on-board"><code class="docutils literal notranslate"><span class="pre">cob</span></code> (Carbs-on-Board)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bwp-bolus-wizard-preview"><code class="docutils literal notranslate"><span class="pre">bwp</span></code> (Bolus Wizard Preview)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#age-pills">Age pills</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cage-cannula-age"><code class="docutils literal notranslate"><span class="pre">cage</span></code> (Cannula Age)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sage-sensor-age"><code class="docutils literal notranslate"><span class="pre">sage</span></code> (Sensor Age)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iage-insulin-age"><code class="docutils literal notranslate"><span class="pre">iage</span></code> (Insulin Age)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bage-battery-age"><code class="docutils literal notranslate"><span class="pre">bage</span></code> (Battery Age)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#treatmentnotify-treatment-notifications"><code class="docutils literal notranslate"><span class="pre">treatmentnotify</span></code> (Treatment Notifications)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basal-basal-profile"><code class="docutils literal notranslate"><span class="pre">basal</span></code> (Basal Profile)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bridge-share2nightscout-bridge"><code class="docutils literal notranslate"><span class="pre">bridge</span></code> (Share2Nightscout bridge)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mmconnect-minimed-connect-bridge"><code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> (MiniMed Connect bridge)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pump-pump-monitoring"><code class="docutils literal notranslate"><span class="pre">pump</span></code> (Pump Monitoring)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openaps-openaps"><code class="docutils literal notranslate"><span class="pre">openaps</span></code> (OpenAPS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loop-loop"><code class="docutils literal notranslate"><span class="pre">loop</span></code> (Loop)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#override-override-mode"><code class="docutils literal notranslate"><span class="pre">override</span></code> (Override Mode)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#xdripjs-xdrip-js"><code class="docutils literal notranslate"><span class="pre">xdripjs</span></code> (xDrip-js)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alexa-amazon-alexa"><code class="docutils literal notranslate"><span class="pre">alexa</span></code> (Amazon Alexa)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#googlehome-google-home-dialogflow"><code class="docutils literal notranslate"><span class="pre">googlehome</span></code> (Google Home/DialogFlow)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#speech-speech"><code class="docutils literal notranslate"><span class="pre">speech</span></code> (Speech)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cors-cors"><code class="docutils literal notranslate"><span class="pre">cors</span></code> (CORS)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extended-settings">Extended Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pushover"><span class="xref myst">Pushover</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ifttt-maker"><span class="xref myst">IFTTT Maker</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#treatment-profile">Treatment Profile</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nightscout Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/setup_variables.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nightscout-configuration">
+<h1>Nightscout Configuration<a class="headerlink" href="#nightscout-configuration" title="Permalink to this heading"></a></h1>
+<p>Nightscout configuration is held in variables , their content can be modified to change and customize the behavior (data source, security, alarms, …) and appearance (language, colors, visible items, …). When deploying your Nightscout, most are left with default values and with time you might want to tune your site.</p>
+<p><strong>Variables location will depend on the platform you use:</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Select your platform -&gt;</label><div class="sd-tab-content docutils">
+</br>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Heroku</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/heroku/new_user/#editing-config-vars-in-heroku"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Railway</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/railway/new_user/#editing-variables-in-railway"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Northflank</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/northflank/new_user/#editing-variables-in-northflank"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Azure</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/azure/new_user/#editing-config-vars-in-azure"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Render</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/render/new_user/#editing-variables-in-render"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Fly.io</label><div class="sd-tab-content docutils">
+<p><a class="reference internal" href="../../vendors/fly.io/new_user/#editing-config-vars-in-fly-io"><span class="std std-ref"><strong>→ Here</strong></span></a></p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Google Cloud</label><div class="sd-tab-content docutils">
+<p><a class="reference external" href="https://navid200.github.io/xDrip/docs/Nightscout/NS_Variables.html"><strong>→ Here</strong></a></p>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+Hosted Nightscout</label><div class="sd-tab-content docutils">
+<p>If you use a hosted service, open the vendor web interface to access your Nightcsout site variables configuration or contact support.</p>
+</div>
+</div>
+<hr class="docutils" />
+</br>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Only most used variables are explained below.</br>
+For the full list consult the <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor#environment">main repository ReadMe</a>.</p>
+</div>
+</br>
+<section id="nightscout-config-vars">
+<h2>Nightscout Config Vars<a class="headerlink" href="#nightscout-config-vars" title="Permalink to this heading"></a></h2>
+</br>
+<section id="required-variables">
+<h3>Required variables<a class="headerlink" href="#required-variables" title="Permalink to this heading"></a></h3>
+<section id="mongodb-uri-database-connection-string">
+<h4><code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> (Database connection string)<a class="headerlink" href="#mongodb-uri-database-connection-string" title="Permalink to this heading"></a></h4>
+<p>The connection string required to access your <a class="reference internal" href="../new_user/#basic-concepts"><span class="std std-ref">Mongo database</span></a> (where all your data is stored in the cloud).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> is handled automatically if you use a hosted service or Google Cloud xDrip+ method.</strong> In these cases you don’t need to worry about it and can’t or shouldn’t change it.</br>
+This string is vital to your Nightscout functioning. A wrong connection string will prevent your site from opening and your data uploading in Nightscout.</p>
+</div>
+<p>An <a class="reference internal" href="../../troubleshoot/atlas/#meet-your-connection-string"><span class="std std-ref">Atlas database string</span></a> will look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb+svr://sally:sallypass&#64;cluster0.abcdef.mongodb.net/nightscout?retryWrites=true&amp;w=majority</span></code></p>
+<p>A traditional MongoDB string will look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">mongodb://sally:sallypass&#64;myhosteddb.fqd/nightscout</span></code></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you migrated from mLab, this variable might be <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code>.
+Only one of these two variables must be present: <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> or <code class="docutils literal notranslate"><span class="pre">MONGO_CONNECTION</span></code>.</p>
+</div>
+</br>
+</section>
+<section id="api-secret-nightscout-password">
+<span id="api-secret"></span><h4><code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> (Nightscout password)<a class="headerlink" href="#api-secret-nightscout-password" title="Permalink to this heading"></a></h4>
+<div class="warning admonition">
+<p class="admonition-title">This is an important password</p>
+<p>Knowing your site’s API Secret gives anybody full access to your Nightscout data, allows uploading to your site and uncontrolled access. Make sure you keep this password secret and avoid exposing it publicly.</p>
+</div>
+<p>A passphrase that must be at least 12 characters long, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyV3ry53cr37</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Don’t make it too long and <strong>do not put special characters in it</strong> (better stick to letters and numbers).</br>It is case-sensitive.</br>
+If you need to share Nightscout access but control the access, use an <code class="docutils literal notranslate"><span class="pre">admin</span></code> <a class="reference internal" href="../security/#create-authentication-tokens-for-users"><span class="std std-ref">token</span></a>.</p>
+</div>
+</br>
+</section>
+<section id="display-units-units-to-use">
+<span id="display-units"></span><h4><code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> (Units to use)<a class="headerlink" href="#display-units-units-to-use" title="Permalink to this heading"></a></h4>
+<p>Preferred BG units for the site: <code class="docutils literal notranslate"><span class="pre">mg/dl</span></code> or <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> (or just <code class="docutils literal notranslate"><span class="pre">mmol</span></code>). Setting to <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> puts the entire server into <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> mode by default, no further settings needed. Make sure it matches you uploader and followers.</p>
+</br>
+</section>
+</section>
+<hr class="docutils" />
+<section id="features">
+<h3>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h3>
+<section id="enable-enable-plugins">
+<span id="enable"></span><h4><code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> (Enable Plugins)<a class="headerlink" href="#enable-enable-plugins" title="Permalink to this heading"></a></h4>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Select the right plugins! Better too many than not enough.</p>
+</div>
+<p>Select which <a class="reference internal" href="#plugins">Plugins</a> to enable for your site, this is the current list:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">careportal</span></code> (Careportal)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boluscalc</span></code> (Bolus Wizard)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">food</span></code> (Custom Foods)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rawbg</span></code> (Raw BG)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iob</span></code> (Insulin-on-Board)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cob</span></code> (Carbs-on-Board)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bwp</span></code> (Bolus Wizard Preview)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cage</span></code> (Cannula Age)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sage</span></code> (Sensor Age)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iage</span></code> (Insulin Age)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bage</span></code> (Battery Age)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">treatmentnotify</span></code> (Treatment Notifications)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">basal</span></code> (Basal Profile)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bolus</span></code> (Bolus Rendering)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connect</span></code> (Nightscout Connect) - Beta</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bridge</span></code> (Share2Nightscout bridge) - Deprecated</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> (MiniMed Connect bridge) - Deprecated: not functional</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pump</span></code> (Pump Monitoring)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">openaps</span></code> (OpenAPS)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loop</span></code> (Loop)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">override</span></code> (Override Mode)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xdripjs</span></code> (xDrip-js)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alexa</span></code> (Amazon Alexa)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">googlehome</span></code> (Google Home/DialogFLow)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">speech</span></code> (Speech)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cors</span></code> (CORS)</p></li>
+</ul>
+<p>Must be a space-delimited, lower-case list.</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span></code></p>
+<p>Include the word <code class="docutils literal notranslate"><span class="pre">bridge</span></code> here if you are receiving data from the Dexcom Share service.</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">bridge</span></code></p>
+<p>If you don’t want to decide now, add all the followings, you can disable them if you don’t need them:</p>
+<p><code class="docutils literal notranslate"><span class="pre">careportal</span> <span class="pre">basal</span> <span class="pre">dbsize</span> <span class="pre">rawbg</span> <span class="pre">iob</span> <span class="pre">maker</span> <span class="pre">bridge</span> <span class="pre">cob</span> <span class="pre">bwp</span> <span class="pre">cage</span> <span class="pre">iage</span> <span class="pre">sage</span> <span class="pre">boluscalc</span> <span class="pre">pushover</span> <span class="pre">treatmentnotify</span> <span class="pre">mmconnect</span> <span class="pre">loop</span> <span class="pre">pump</span> <span class="pre">profile</span> <span class="pre">food</span> <span class="pre">openaps</span> <span class="pre">bage</span> <span class="pre">alexa</span> <span class="pre">override</span> <span class="pre">cors</span></code></p>
+<p>Note: <code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> is not functional with Heroku (if you wanted to bridge from the MiniMed CareLink service you will need another device to send data to Nightscout). If you are sending data to CareLink do <strong>NOT</strong> enable <code class="docutils literal notranslate"><span class="pre">mmconnect</span></code>.</p>
+</br>
+</section>
+<section id="disable-disable-plugins">
+<h4><code class="docutils literal notranslate"><span class="pre">DISABLE</span></code> (Disable Plugins)<a class="headerlink" href="#disable-disable-plugins" title="Permalink to this heading"></a></h4>
+<p>Used to disable <em><strong>default</strong></em> features, expects a space delimited list.</p>
+<p>For example this will disable the direction arrow and uploader battery information:</p>
+<p><code class="docutils literal notranslate"><span class="pre">direction</span> <span class="pre">upbat</span></code></p>
+</br>
+</section>
+<section id="auth-default-roles-authentication">
+<span id="auth-default-roles"></span><h4><code class="docutils literal notranslate"><span class="pre">AUTH_DEFAULT_ROLES</span></code> (Authentication)<a class="headerlink" href="#auth-default-roles-authentication" title="Permalink to this heading"></a></h4>
+<p>Possible values <code class="docutils literal notranslate"><span class="pre">readable</span></code>, <code class="docutils literal notranslate"><span class="pre">denied</span></code>, or any valid role name. When <code class="docutils literal notranslate"><span class="pre">readable</span></code>, anyone can view Nightscout without a token. Setting it to <code class="docutils literal notranslate"><span class="pre">denied</span></code> will require a token from every visit, using <code class="docutils literal notranslate"><span class="pre">status-only</span></code> will enable api-secret based login.</p>
+<p>More information on how to setup tokens <a class="reference internal" href="../security/#create-authentication-tokens-for-users"><span class="std std-ref">here</span></a>.</p>
+</br>
+</section>
+</section>
+<section id="alarms">
+<h3>Alarms<a class="headerlink" href="#alarms" title="Permalink to this heading"></a></h3>
+<p>These alarm setting affect all delivery methods (browser, Pushover, IFTTT, etc.). Values and settings entered here will be the defaults for new browser views, but will be overridden if different choices are made in the settings UI.</p>
+<section id="alarm-types">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_TYPES</span></code><a class="headerlink" href="#alarm-types" title="Permalink to this heading"></a></h4>
+<div class="hint admonition">
+<p class="admonition-title">TYPES</p>
+<p>Keep the <code class="docutils literal notranslate"><span class="pre">simple</span></code> type if you want <code class="docutils literal notranslate"><span class="pre">BG_</span></code> parameters (setup below) to be used.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">simple</span></code> and/or <code class="docutils literal notranslate"><span class="pre">predict</span></code>.</p>
+<p>Simple alarms trigger when BG crosses the various thresholds set below.</p>
+<p>Predict alarms uses highly tuned formula that forecasts where the BG is going based on its trend. You will <em><strong>not</strong></em> get warnings when crossing any of the <code class="docutils literal notranslate"><span class="pre">BG_</span></code> thresholds set below when using <em><strong>only</strong></em> the predict type.</p>
+<div class="hint admonition">
+<p class="admonition-title">BG Thresholds</p>
+<p>These values are the ones that will trigger <code class="docutils literal notranslate"><span class="pre">simple</span></code> alarms. They are expressed in the unit you selected with <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code>.</p>
+</div>
+</section>
+<section id="bg-high">
+<h4><code class="docutils literal notranslate"><span class="pre">BG_HIGH</span></code><a class="headerlink" href="#bg-high" title="Permalink to this heading"></a></h4>
+<p>Urgent High BG threshold, triggers the <code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_HIGH</span></code> alarm.</p>
+</section>
+<section id="bg-low">
+<h4><code class="docutils literal notranslate"><span class="pre">BG_LOW</span></code><a class="headerlink" href="#bg-low" title="Permalink to this heading"></a></h4>
+<p>Urgent Low BG threshold, triggers the <code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_LOW</span></code> alarm.</p>
+</section>
+<section id="bg-target-bottom">
+<h4><code class="docutils literal notranslate"><span class="pre">BG_TARGET_BOTTOM</span></code><a class="headerlink" href="#bg-target-bottom" title="Permalink to this heading"></a></h4>
+<p>Low BG threshold, triggers the <code class="docutils literal notranslate"><span class="pre">ALARM_LOW</span></code> alarm.</p>
+</section>
+<section id="bg-target-top">
+<h4><code class="docutils literal notranslate"><span class="pre">BG_TARGET_TOP</span></code><a class="headerlink" href="#bg-target-top" title="Permalink to this heading"></a></h4>
+<p>High BG threshold, triggers the <code class="docutils literal notranslate"><span class="pre">ALARM_HIGH</span></code> alarm.</p>
+</br>
+<div class="hint admonition">
+<p class="admonition-title">ALARM_* and ALARM_URGENT_*</p>
+<p>You can setup alarms, so that when your Nightscout page is open and the alarm enabled, above (<code class="docutils literal notranslate"><span class="pre">HIGH</span></code>) or below (<code class="docutils literal notranslate"><span class="pre">LOW</span></code>) a certain threshold, a sound might play.</p>
+</div>
+</section>
+<section id="alarm-urgent-high">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_HIGH</span></code><a class="headerlink" href="#alarm-urgent-high" title="Permalink to this heading"></a></h4>
+<p>Default setting for new browser views, for the Urgent High alarm (triggered when BG crosses <code class="docutils literal notranslate"><span class="pre">BG_HIGH</span></code>). (<code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>)</p>
+</section>
+<section id="alarm-high">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_HIGH</span></code><a class="headerlink" href="#alarm-high" title="Permalink to this heading"></a></h4>
+<p>Default setting for new browser views, for the High alarm (triggered when BG crosses <code class="docutils literal notranslate"><span class="pre">BG_TARGET_TOP</span></code>). (<code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>)</p>
+</section>
+<section id="alarm-low">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_LOW</span></code><a class="headerlink" href="#alarm-low" title="Permalink to this heading"></a></h4>
+<p>Default setting for new browser views, for the Low alarm (triggered when BG crosses <code class="docutils literal notranslate"><span class="pre">BG_TARGET_BOTTOM</span></code>). (<code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>)</p>
+</section>
+<section id="alarm-urgent-low">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_LOW</span></code><a class="headerlink" href="#alarm-urgent-low" title="Permalink to this heading"></a></h4>
+<p>Default setting for new browser views, for the Urgent Low alarm (triggered when BG crosses <code class="docutils literal notranslate"><span class="pre">BG_LOW</span></code>). (<code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>)</p>
+</section>
+<section id="other-alarms-on-by-default">
+<h4>Other Alarms on by Default<a class="headerlink" href="#other-alarms-on-by-default" title="Permalink to this heading"></a></h4>
+<p>These other two alarms are on by default, so set them to ‘off’ if you prefer no alarms.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT</span></code></p></li>
+</ul>
+</br>
+<div class="hint admonition">
+<p class="admonition-title">Pushover</p>
+<p><code class="docutils literal notranslate"><span class="pre">ALARM_*_MINS</span></code>: Only the first value of the space separated list, for options in browser, will be used for pushover.</p>
+</div>
+</section>
+<section id="alarm-urgent-high-mins">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_HIGH_MINS</span></code><a class="headerlink" href="#alarm-urgent-high-mins" title="Permalink to this heading"></a></h4>
+<p>Number of minutes to snooze urgent high alarms.</p>
+</section>
+<section id="alarm-high-mins">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_HIGH_MINS</span></code><a class="headerlink" href="#alarm-high-mins" title="Permalink to this heading"></a></h4>
+<p>Number of minutes to snooze high alarms.</p>
+</section>
+<section id="alarm-low-mins">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_LOW_MINS</span></code><a class="headerlink" href="#alarm-low-mins" title="Permalink to this heading"></a></h4>
+<p>Number of minutes to snooze low alarms.</p>
+</section>
+<section id="alarm-urgent-low-mins">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_LOW_MINS</span></code><a class="headerlink" href="#alarm-urgent-low-mins" title="Permalink to this heading"></a></h4>
+<p>Number of minutes to snooze urgent low alarms.</p>
+</section>
+<section id="alarm-urgent-mins">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_MINS</span></code><a class="headerlink" href="#alarm-urgent-mins" title="Permalink to this heading"></a></h4>
+<p>Number of minutes to snooze urgent alarms (that aren’t tagged as high or low).</p>
+</section>
+<section id="alarm-warn-mins">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_WARN_MINS</span></code><a class="headerlink" href="#alarm-warn-mins" title="Permalink to this heading"></a></h4>
+<p>Number of minutes to snooze warning alarms (that aren’t tagged as high or low).</p>
+</br>
+<div class="hint admonition">
+<p class="admonition-title">TIMEAGO</p>
+<p>Missing data alarms can also be setup, so that when your Nightscout page is open and the alarm enabled, after a certain time without receiving BG, a sound might play.</p>
+</div>
+</section>
+<section id="alarm-timeago-urgent">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT</span></code><a class="headerlink" href="#alarm-timeago-urgent" title="Permalink to this heading"></a></h4>
+<p>Default setting for new browser views, for an urgent alarm when CGM data hasn’t been received in the number of minutes set in <code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT_MINS</span></code>. (<code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>)</p>
+</section>
+<section id="alarm-timeago-urgent-mins">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT_MINS</span></code><a class="headerlink" href="#alarm-timeago-urgent-mins" title="Permalink to this heading"></a></h4>
+<p>Default setting for new browser views, for the number of minutes since the last CGM reading to trigger an <code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT</span></code> alarm.</p>
+</section>
+<section id="alarm-timeago-warn">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN</span></code><a class="headerlink" href="#alarm-timeago-warn" title="Permalink to this heading"></a></h4>
+<p>Default setting for new browser views, for a warning alarm when CGM data hasn’t been received in the number of minutes set in <code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN_MINS</span></code>. (<code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>)</p>
+</section>
+<section id="alarm-timeago-warn-mins">
+<h4><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN_MINS</span></code><a class="headerlink" href="#alarm-timeago-warn-mins" title="Permalink to this heading"></a></h4>
+<p>Default setting for new browser views, for the number of minutes since the last CGM reading to trigger an <code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN</span></code> alarm.</p>
+</br>
+</section>
+</section>
+<hr class="docutils" />
+<section id="predefined-values-for-your-browser-settings-default">
+<h3>Predefined values for your browser settings (default)<a class="headerlink" href="#predefined-values-for-your-browser-settings-default" title="Permalink to this heading"></a></h3>
+<section id="time-format-12">
+<h4><code class="docutils literal notranslate"><span class="pre">TIME_FORMAT</span></code> (<code class="docutils literal notranslate"><span class="pre">12</span></code>)<a class="headerlink" href="#time-format-12" title="Permalink to this heading"></a></h4>
+<p>Possible values <code class="docutils literal notranslate"><span class="pre">12</span></code> or <code class="docutils literal notranslate"><span class="pre">24</span></code>. This defines the horizontal timeline expressed as AM/PM or 0-24.</p>
+</br>
+</section>
+<section id="night-mode-off">
+<h4><code class="docutils literal notranslate"><span class="pre">NIGHT_MODE</span></code> (<code class="docutils literal notranslate"><span class="pre">off</span></code>)<a class="headerlink" href="#night-mode-off" title="Permalink to this heading"></a></h4>
+<p>Possible values <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Night mode has a lower brightness and contrast.</p>
+</br>
+</section>
+<section id="show-rawbg-never">
+<h4><code class="docutils literal notranslate"><span class="pre">SHOW_RAWBG</span></code> (<code class="docutils literal notranslate"><span class="pre">never</span></code>)<a class="headerlink" href="#show-rawbg-never" title="Permalink to this heading"></a></h4>
+<p>Display of raw CGM data (this is a legacy feature). (<code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">never</span></code>, or <code class="docutils literal notranslate"><span class="pre">noise</span></code>)</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS35.png"><img alt="../../_images/SetupNS35.png" src="../../_images/SetupNS35.png" style="width: 250px;" /></a>
+</br>
+</section>
+<section id="custom-title-nightscout">
+<h4><code class="docutils literal notranslate"><span class="pre">CUSTOM_TITLE</span></code> (<code class="docutils literal notranslate"><span class="pre">Nightscout</span></code>)<a class="headerlink" href="#custom-title-nightscout" title="Permalink to this heading"></a></h4>
+<p>The display name for the Nightscout site. Appears in the upper left of the main view. Often set to the name of the CGM wearer.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS05.png"><img alt="../../_images/SetupNS05.png" src="../../_images/SetupNS05.png" style="width: 300px;" /></a>
+</section>
+<section id="theme-colors">
+<h4><code class="docutils literal notranslate"><span class="pre">THEME</span></code> (<code class="docutils literal notranslate"><span class="pre">colors</span></code>)<a class="headerlink" href="#theme-colors" title="Permalink to this heading"></a></h4>
+<p>Color theme of the CGM graph.</p>
+<p><code class="docutils literal notranslate"><span class="pre">default</span></code></p>
+<a class="reference internal image-reference" href="../../_images/SetupNS06.png"><img alt="../../_images/SetupNS06.png" src="../../_images/SetupNS06.png" style="width: 600px;" /></a>
+<p><code class="docutils literal notranslate"><span class="pre">colors</span></code></p>
+<a class="reference internal image-reference" href="../../_images/SetupNS07.png"><img alt="../../_images/SetupNS07.png" src="../../_images/SetupNS07.png" style="width: 600px;" /></a>
+<p><code class="docutils literal notranslate"><span class="pre">colorblindfriendly</span></code></p>
+<a class="reference internal image-reference" href="../../_images/SetupNS08.png"><img alt="../../_images/SetupNS08.png" src="../../_images/SetupNS08.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="show-plugins">
+<h4><code class="docutils literal notranslate"><span class="pre">SHOW_PLUGINS</span></code><a class="headerlink" href="#show-plugins" title="Permalink to this heading"></a></h4>
+<p>Default setting for whether or not these plugins are checked (active) by default, not merely enabled. Include plugins here as in the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> line; space-separated and lower-case.</p>
+<p>When you <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> a plugin, it will be used by Nightscout but might not be visible unless you select it in the <a class="reference internal" href="../discover/#settings"><span class="std std-ref">drawer menu</span></a>. If you want a plugin to display by default you need to add it to the <code class="docutils literal notranslate"><span class="pre">SHOW_PLUGINS</span></code> list.</p>
+<p>More details <a class="reference internal" href="#plugins">below</a>.</p>
+</br>
+</section>
+<section id="show-forecast-ar2">
+<h4><code class="docutils literal notranslate"><span class="pre">SHOW_FORECAST</span></code> (<code class="docutils literal notranslate"><span class="pre">ar2</span></code>)<a class="headerlink" href="#show-forecast-ar2" title="Permalink to this heading"></a></h4>
+<p>Plugin forecasts that should be shown by default, supports space delimited values such as:
+<code class="docutils literal notranslate"><span class="pre">ar2</span> <span class="pre">openaps</span> <span class="pre">loop</span> <span class="pre">false</span></code></p>
+<p>Note the ar2 forecast is selected by default so if no value is set, it will be AR2. AR2 is an early attempt at forecasting BG and you should not base any medical decisions on it’s predictions.</p>
+<p>If you are looping, you can chose instead to use either <code class="docutils literal notranslate"><span class="pre">loop</span></code> or <code class="docutils literal notranslate"><span class="pre">openaps</span></code> which will use the appropriate algorithm.</p>
+<p>You should also add the parameter to the <code class="docutils literal notranslate"><span class="pre">SHOW_PLUGINS</span></code> and <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> variables.</p>
+<p>For example, if you are using the Loop app for iPhone, you should have the following settings (In addition to any others outlined in the docs):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ENABLE</span><span class="o">=</span><span class="n">loop</span>
+<span class="n">SHOW_PLUGINS</span><span class="o">=</span><span class="n">loop</span>
+<span class="n">SHOW_FORECAST</span><span class="o">=</span><span class="n">loop</span>
+</pre></div>
+</div>
+</br>
+</section>
+<section id="language-en">
+<h4><code class="docutils literal notranslate"><span class="pre">LANGUAGE</span></code> (<code class="docutils literal notranslate"><span class="pre">en</span></code>)<a class="headerlink" href="#language-en" title="Permalink to this heading"></a></h4>
+<p>Language of Nightscout. If not available English is used.</p>
+<p>Currently supported language codes are: <code class="docutils literal notranslate"><span class="pre">bg</span></code> (Български), <code class="docutils literal notranslate"><span class="pre">cs</span></code> (Čeština), <code class="docutils literal notranslate"><span class="pre">de</span></code> (Deutsch), <code class="docutils literal notranslate"><span class="pre">dk</span></code> (Dansk), <code class="docutils literal notranslate"><span class="pre">el</span></code> (Ελληνικά), <code class="docutils literal notranslate"><span class="pre">en</span></code> (English), <code class="docutils literal notranslate"><span class="pre">es</span></code> (Español), <code class="docutils literal notranslate"><span class="pre">fi</span></code> (Suomi), <code class="docutils literal notranslate"><span class="pre">fr</span></code> (Français), <code class="docutils literal notranslate"><span class="pre">he</span></code> (עברית), <code class="docutils literal notranslate"><span class="pre">hr</span></code> (Hrvatski), <code class="docutils literal notranslate"><span class="pre">it</span></code> (Italiano), <code class="docutils literal notranslate"><span class="pre">ko</span></code> (한국어), <code class="docutils literal notranslate"><span class="pre">nb</span></code> (Norsk (Bokmål)), <code class="docutils literal notranslate"><span class="pre">nl</span></code> (Nederlands), <code class="docutils literal notranslate"><span class="pre">pl</span></code> (Polski), <code class="docutils literal notranslate"><span class="pre">pt</span></code> (Português (Brasil)), <code class="docutils literal notranslate"><span class="pre">ro</span></code> (Română), <code class="docutils literal notranslate"><span class="pre">ru</span></code> (Русский), <code class="docutils literal notranslate"><span class="pre">sk</span></code> (Slovenčina), <code class="docutils literal notranslate"><span class="pre">sv</span></code> (Svenska), <code class="docutils literal notranslate"><span class="pre">tr</span></code> (Turkish), <code class="docutils literal notranslate"><span class="pre">zh_cn</span></code> (中文（简体)), <code class="docutils literal notranslate"><span class="pre">zh_tw</span></code> (中文（繁體))</p>
+</br>
+</section>
+<section id="scale-y-log">
+<h4><code class="docutils literal notranslate"><span class="pre">SCALE_Y</span></code> (<code class="docutils literal notranslate"><span class="pre">log</span></code>)<a class="headerlink" href="#scale-y-log" title="Permalink to this heading"></a></h4>
+<p>The type of scaling used for the Y axis of the charts system wide.</p>
+<p>The default <code class="docutils literal notranslate"><span class="pre">log</span></code> (logarithmic) option will let you see more detail towards the lower range, while still showing the full CGM range.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS40.png"><img alt="../../_images/SetupNS40.png" src="../../_images/SetupNS40.png" style="width: 400px;" /></a>
+<p>The <code class="docutils literal notranslate"><span class="pre">linear</span></code> option has equidistant tick marks; the range used is dynamic so that space at the top of chart isn’t wasted.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS39.png"><img alt="../../_images/SetupNS39.png" src="../../_images/SetupNS39.png" style="width: 400px;" /></a>
+<p>The <code class="docutils literal notranslate"><span class="pre">log-dynamic</span></code> is similar to the default <code class="docutils literal notranslate"><span class="pre">log</span></code> options, but uses the same dynamic range and the <code class="docutils literal notranslate"><span class="pre">linear</span></code> scale.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS41.png"><img alt="../../_images/SetupNS41.png" src="../../_images/SetupNS41.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="edit-mode-on">
+<h4><code class="docutils literal notranslate"><span class="pre">EDIT_MODE</span></code> (<code class="docutils literal notranslate"><span class="pre">on</span></code>)<a class="headerlink" href="#edit-mode-on" title="Permalink to this heading"></a></h4>
+<p>Possible values <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Enables the icon allowing for editing of treatments in the main view. More about edit <a class="reference internal" href="../discover/#edit-mode-edit"><span class="std std-ref">here</span></a>.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS42.png"><img alt="../../_images/SetupNS42.png" src="../../_images/SetupNS42.png" style="width: 200px;" /></a>
+</br>
+</section>
+<section id="bolus-render">
+<h4><code class="docutils literal notranslate"><span class="pre">BOLUS_RENDER</span></code><a class="headerlink" href="#bolus-render" title="Permalink to this heading"></a></h4>
+<p>Settings to configure Bolus rendering</p>
+<p><code class="docutils literal notranslate"><span class="pre">BOLUS_RENDER_OVER</span></code> (<code class="docutils literal notranslate"><span class="pre">0</span></code>) - U value over which the bolus labels use the format defined in <code class="docutils literal notranslate"><span class="pre">BOLUS_RENDER_FORMAT</span></code>. This value can be an integer or a float, e.g. <code class="docutils literal notranslate"><span class="pre">0.3</span></code>, <code class="docutils literal notranslate"><span class="pre">1.5</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, etc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">BOLUS_RENDER_FORMAT</span></code> (<code class="docutils literal notranslate"><span class="pre">default</span></code>) - Possible values are <code class="docutils literal notranslate"><span class="pre">hidden</span></code>, <code class="docutils literal notranslate"><span class="pre">default</span></code> (with leading zero and U), <code class="docutils literal notranslate"><span class="pre">concise</span></code> (with U, without leading zero), and <code class="docutils literal notranslate"><span class="pre">minimal</span></code> (without leading zero and U).</p>
+<p><code class="docutils literal notranslate"><span class="pre">BOLUS_RENDER_FORMAT_SMALL</span></code> (<code class="docutils literal notranslate"><span class="pre">default</span></code>) - Possible values are <code class="docutils literal notranslate"><span class="pre">hidden</span></code>, <code class="docutils literal notranslate"><span class="pre">default</span></code> (with leading zero and U), <code class="docutils literal notranslate"><span class="pre">concise</span></code> (with U, without leading zero), and <code class="docutils literal notranslate"><span class="pre">minimal</span></code> (without leading zero and U).</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS43.png"><img alt="../../_images/SetupNS43.png" src="../../_images/SetupNS43.png" style="width: 600px;" /></a>
+</br>
+</section>
+</section>
+<hr class="docutils" />
+<section id="split-view">
+<h3>Split View<a class="headerlink" href="#split-view" title="Permalink to this heading"></a></h3>
+<p>Some users will need easy access to multiple Nightscout views at the same time. We have a special view for this case, accessed on /split path on your Nightscout URL. The view supports any number of sites between 1 to 8 way split, where the content for the screen can be loaded from multiple Nightscout instances. Note you still need to host separate instances for each Nightscout being monitored including the one that hosts the split view page - these variables only add the ability to load multiple views into one browser page. To set the URLs from which the content is loaded, set:</p>
+<p><code class="docutils literal notranslate"><span class="pre">FRAME_URL_1</span></code> - URL where content is loaded, for the first view (increment the number up to 8 to get more views)</p>
+<p><code class="docutils literal notranslate"><span class="pre">FRAME_NAME_1</span></code> - Name for the first split view portion of the screen (increment the number to name more views)</p>
+</br>
+<p>For example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">FRAME_URL_1</span></code>	<code class="docutils literal notranslate"><span class="pre">https://janecgm.myurl.fqd</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">FRAME_NAME_1</span></code>	<code class="docutils literal notranslate"><span class="pre">Jane</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">FRAME_URL_2</span></code>	<code class="docutils literal notranslate"><span class="pre">https://joecgm.myurl.fqd</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">FRAME_NAME_2</span></code>	<code class="docutils literal notranslate"><span class="pre">Joe</span></code></p>
+</br>
+<p>To display the split view browse to:</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://myAppName.myurl.fqd/split</span></code></p>
+</br>
+<p>8 split view example:</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS30.png"><img alt="../../_images/SetupNS30.png" src="../../_images/SetupNS30.png" style="width: 800px;" /></a>
+</br>
+</section>
+</section>
+<hr class="docutils" />
+<section id="plugins">
+<h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this heading"></a></h2>
+<p>Plugins are used to extend the way information is displayed, how notifications are sent, alarms are triggered, and more.</p>
+<p>If you want the <code class="docutils literal notranslate"><span class="pre">ENABLE</span></code>’d plugins to <strong>show by default on any browser</strong>, you should put them in the <code class="docutils literal notranslate"><span class="pre">SHOW_PLUGINS</span></code> variable.</p>
+<p>If you want to specifically disable a plugin (mainly a default plugin) you should place it in the <code class="docutils literal notranslate"><span class="pre">DISABLE</span></code> variable.</p>
+<p>You also can decide to visualize them or not on your Nightscout view with the drawer menu. <code class="docutils literal notranslate"><span class="pre">Authenticate</span></code> and <code class="docutils literal notranslate"><span class="pre">Save</span></code> the settings on your browser. Your site variables will not be modified and only default view will be seen on a new browser window.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS09.png"><img alt="../../_images/SetupNS09.png" src="../../_images/SetupNS09.png" style="width: 400px;" /></a>
+</br>
+<section id="default-plugins">
+<h3>Default Plugins<a class="headerlink" href="#default-plugins" title="Permalink to this heading"></a></h3>
+<p>Below some default plugins: <code class="docutils literal notranslate"><span class="pre">timeago</span></code>, <code class="docutils literal notranslate"><span class="pre">upbat</span></code>, <code class="docutils literal notranslate"><span class="pre">direction</span></code> and <code class="docutils literal notranslate"><span class="pre">delta</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS11.png"><img alt="../../_images/SetupNS11.png" src="../../_images/SetupNS11.png" style="width: 500px;" /></a>
+</br>
+<p>Hovering the mouse on (computer) or touching (touch screen) some plugins will give you additional information.</p>
+<section id="delta-bg-delta">
+<h4><code class="docutils literal notranslate"><span class="pre">delta</span></code> (BG Delta)<a class="headerlink" href="#delta-bg-delta" title="Permalink to this heading"></a></h4>
+<p>Calculates and displays the change between the last 2 BG values. Delta shows a <code class="docutils literal notranslate"><span class="pre">*</span></code> if time difference is more than 5 minutes.</p>
+</section>
+<section id="direction-bg-direction">
+<h4><code class="docutils literal notranslate"><span class="pre">direction</span></code> (BG Direction)<a class="headerlink" href="#direction-bg-direction" title="Permalink to this heading"></a></h4>
+<p>Displays the trend direction, the arrow change is only based on the difference from the current to the latest measurement.</p>
+</section>
+<section id="upbat-uploader-battery">
+<h4><code class="docutils literal notranslate"><span class="pre">upbat</span></code> (Uploader Battery)<a class="headerlink" href="#upbat-uploader-battery" title="Permalink to this heading"></a></h4>
+<p>Displays the most recent battery status from the uploader phone(s) and bridge. Use these extended setting to adjust behavior:</p>
+<p><code class="docutils literal notranslate"><span class="pre">UPBAT_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable uploader battery alarms via Pushover and IFTTT.</p>
+<p><code class="docutils literal notranslate"><span class="pre">UPBAT_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">30</span></code>) - Minimum battery percent to trigger warning.</p>
+<p><code class="docutils literal notranslate"><span class="pre">UPBAT_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">20</span></code>) - Minimum battery percent to trigger urgent alarm.</p>
+</br>
+</section>
+<section id="timeago-time-ago">
+<h4><code class="docutils literal notranslate"><span class="pre">timeago</span></code> (Time Ago)<a class="headerlink" href="#timeago-time-ago" title="Permalink to this heading"></a></h4>
+<p>Displays the time since last CGM entry. Use these extended setting to adjust behavior:</p>
+<p><code class="docutils literal notranslate"><span class="pre">TIMEAGO_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable stale data alarms via Pushover and IFTTT.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">on</span></code>) - possible values <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN_MINS</span></code> (<code class="docutils literal notranslate"><span class="pre">15</span></code>) - minutes since the last reading to trigger a warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">on</span></code>) - possible values <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT_MINS</span></code> (<code class="docutils literal notranslate"><span class="pre">30</span></code>) - minutes since the last reading to trigger a urgent alarm</p>
+</br>
+</section>
+<section id="devicestatus-device-status">
+<h4><code class="docutils literal notranslate"><span class="pre">devicestatus</span></code> (Device Status)<a class="headerlink" href="#devicestatus-device-status" title="Permalink to this heading"></a></h4>
+<p>Used by <code class="docutils literal notranslate"><span class="pre">upbat</span></code> and other plugins to display device status info. Supports the <code class="docutils literal notranslate"><span class="pre">DEVICESTATUS_ADVANCED=&quot;true&quot;</span></code> extended setting to send all device statuses to the client for retrospective use and to support other plugins.</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">upbat</span></code> information using <code class="docutils literal notranslate"><span class="pre">devicestatus</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS20.png"><img alt="../../_images/SetupNS20.png" src="../../_images/SetupNS20.png" style="width: 300px;" /></a>
+</br>
+</section>
+<section id="errorcodes-cgm-error-codes">
+<h4><code class="docutils literal notranslate"><span class="pre">errorcodes</span></code> (CGM Error Codes)<a class="headerlink" href="#errorcodes-cgm-error-codes" title="Permalink to this heading"></a></h4>
+<p>Generates alarms for CGM codes <code class="docutils literal notranslate"><span class="pre">9</span></code> (hourglass) and <code class="docutils literal notranslate"><span class="pre">10</span></code> (???).</p>
+<p>Use extended settings to adjust what errorcodes trigger notifications and alarms:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ERRORCODES_INFO</span></code> (<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span> <span class="pre">4</span> <span class="pre">5</span> <span class="pre">6</span> <span class="pre">7</span> <span class="pre">8</span></code>) - By default the needs calibration (blood drop) and other codes below 9 generate an info level notification, set to a space separate list of number or <code class="docutils literal notranslate"><span class="pre">off</span></code> to disable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ERRORCODES_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">off</span></code>) - By default there are no warning configured, set to a space separate list of numbers or <code class="docutils literal notranslate"><span class="pre">off</span></code> to disable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ERRORCODES_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">9</span> <span class="pre">10</span></code>) - By default the hourglass and ??? generate an urgent alarm, set to a space separate list of numbers or <code class="docutils literal notranslate"><span class="pre">off</span></code> to disable</p>
+</br>
+</li>
+</ul>
+</section>
+<section id="ar2-ar2-forecasting">
+<h4><code class="docutils literal notranslate"><span class="pre">ar2</span></code> (AR2 Forecasting)<a class="headerlink" href="#ar2-ar2-forecasting" title="Permalink to this heading"></a></h4>
+<p>Generates alarms based on forecasted values.</p>
+<ul class="simple">
+<li><p>Enabled by default if no thresholds are set <strong>OR</strong> <code class="docutils literal notranslate"><span class="pre">ALARM_TYPES</span></code> includes <code class="docutils literal notranslate"><span class="pre">predict</span></code>.</p>
+<ul>
+<li><p>You can permanently disable AR2 setting the <code class="docutils literal notranslate"><span class="pre">SHOW_FORECAST</span></code> variable to <code class="docutils literal notranslate"><span class="pre">false</span></code> (or removing <code class="docutils literal notranslate"><span class="pre">ar2</span></code> if you use it for <code class="docutils literal notranslate"><span class="pre">openaps</span></code> or <code class="docutils literal notranslate"><span class="pre">loop</span></code>).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AR2</span></code> forecasting display can be enabled/disabled from <code class="docutils literal notranslate"><span class="pre">...</span> </code></p></li>
+<li><p>Use extended settings to adjust AR2 behavior:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">AR2_CONE_FACTOR</span></code> (<code class="docutils literal notranslate"><span class="pre">2</span></code>) - to adjust size of cone, use <code class="docutils literal notranslate"><span class="pre">0</span></code> for a single line.</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS10.png"><img alt="../../_images/SetupNS10.png" src="../../_images/SetupNS10.png" style="width: 700px;" /></a>
+</br>
+</section>
+<section id="simplealarms-simple-bg-alarms">
+<h4><code class="docutils literal notranslate"><span class="pre">simplealarms</span></code> (Simple BG Alarms)<a class="headerlink" href="#simplealarms-simple-bg-alarms" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p>Uses <code class="docutils literal notranslate"><span class="pre">BG_HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">BG_TARGET_TOP</span></code>, <code class="docutils literal notranslate"><span class="pre">BG_TARGET_BOTTOM</span></code>, <code class="docutils literal notranslate"><span class="pre">BG_LOW</span></code> thresholds to generate alarms.</p>
+<p>Simple alarms are enabled by default if one of the <code class="docutils literal notranslate"><span class="pre">BG_HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">BG_TARGET_TOP</span></code>, <code class="docutils literal notranslate"><span class="pre">BG_TARGET_BOTTOM</span></code>, <code class="docutils literal notranslate"><span class="pre">BG_LOW</span></code> thresholds is set or <code class="docutils literal notranslate"><span class="pre">ALARM_TYPES</span></code> includes <code class="docutils literal notranslate"><span class="pre">simple</span></code>.</p>
+<p>You’ll find the plugin in the drawer menu. You can change thresholds in <code class="docutils literal notranslate"><span class="pre">Profile</span> <span class="pre">editor</span></code>.</p>
+<p>You can click the loudspeaker icon to test the alarms volume or to snooze an active alarm. If you want to use sound alarms, you should click the icon to enable playback at least once after opening your Nightscout page in order to allow the browser to play it.</p>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS12.png"><img alt="../../_images/SetupNS12.png" src="../../_images/SetupNS12.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="profile-treatment-profile">
+<h4><code class="docutils literal notranslate"><span class="pre">profile</span></code> (Treatment Profile)<a class="headerlink" href="#profile-treatment-profile" title="Permalink to this heading"></a></h4>
+<p>Add a link in the drawer menu to <a class="reference internal" href="../profile_editor/"><span class="doc std std-doc">Profile Editor</span></a> and allows to enter treatment profile settings. Also uses the extended setting:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PROFILE_HISTORY</span></code> (<code class="docutils literal notranslate"><span class="pre">off</span></code>) - possible values <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Enable/disable NS ability to keep history of your profiles (still experimental)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PROFILE_MULTIPLE</span></code> (<code class="docutils literal notranslate"><span class="pre">off</span></code>) - possible values <code class="docutils literal notranslate"><span class="pre">on</span></code> or <code class="docutils literal notranslate"><span class="pre">off</span></code>. Enable/disable NS ability to handle and switch between multiple treatment profiles</p></li>
+</ul>
+<p>More variables of your profile will be used by Nightscout plugins like treatments, see below or <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor#treatment-profile">here</a>.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS13.png"><img alt="../../_images/SetupNS13.png" src="../../_images/SetupNS13.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="dbsize-database-size">
+<h4><code class="docutils literal notranslate"><span class="pre">dbsize</span></code> (Database Size)<a class="headerlink" href="#dbsize-database-size" title="Permalink to this heading"></a></h4>
+<p>Show size of Nightscout Database, as a percentage of declared available space or in MiB.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS15.png"><img alt="../../_images/SetupNS15.png" src="../../_images/SetupNS15.png" style="width: 400px;" /></a>
+</br>
+<p>Many deployments of Nightscout use free tier of MongoDB Atlas on Heroku, which is limited in size to 512MiB. After some time, as volume of stored data grows, it may happen that this limit is reached and system is unable to store new data. This plugin provides pill that indicates size of Database and shows (when configured) alarms regarding reaching space limit.</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">IMPORTANT</p>
+<p>This plugin can only check how much space database already takes, <em>but cannot infer</em> max size available on server for it. To have correct alarms and realistic percentage, <code class="docutils literal notranslate"><span class="pre">DBSIZE_MAX</span></code> need to be properly set - according to your own mongoDB hosting configuration.</p>
+</div>
+<p><strong>NOTE:</strong> This plugin rely on db.stats() for reporting <em>logical</em> size of database, which may be different than <em>physical</em> size of database on server. It may work for free tier of MongoDB on Atlas, since it calculate quota according to logical size too, but may fail for other hostings or self-hosted database with quota based on physical size.</p>
+<p><strong>NOTE:</strong> MongoDB Atlas quota is for <strong>all</strong> databases in cluster, while each instance will get only size of <strong>its own database only</strong>. It is ok when you only have <strong>one</strong> database in cluster (most common scenario) but will not work for multiple parallel databases. In such case, spliting known quota equally beetween databases and setting <code class="docutils literal notranslate"><span class="pre">DBSIZE_MAX</span></code> to that fraction may help, but wont be precise.</p>
+<p>All sizes are expressed as integers, in <em>Mebibytes</em> <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">MiB</span> <span class="pre">==</span> <span class="pre">1024</span> <span class="pre">KiB</span> <span class="pre">==</span> <span class="pre">1024*1024</span> <span class="pre">B</span></code></p>
+<p>Extended settings available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DBSIZE_MAX</span></code> (<code class="docutils literal notranslate"><span class="pre">496</span></code>) - Maximal allowed size of database on your mongoDB server, in MiB. You need to adjust that value to match your database hosting limits - default value is for standard Heroku mongoDB free tier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DBSIZE_WARN_PERCENTAGE</span></code> (<code class="docutils literal notranslate"><span class="pre">60</span></code>) - Threshold to show first warning about database size. When database reach this percentage of <code class="docutils literal notranslate"><span class="pre">DBSIZE_MAX</span></code> size - pill will show size in yellow.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DBSIZE_URGENT_PERCENTAGE</span></code> (<code class="docutils literal notranslate"><span class="pre">75</span></code>) - Threshold to show urgent warning about database size. When database reach this percentage of <code class="docutils literal notranslate"><span class="pre">DBSIZE_MAX</span></code> size, it is urgent to do backup and clean up old data. At this percentage info pill turns red.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DBSIZE_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications about database size.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DBSIZE_IN_MIB</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to display size of database in MiB-s instead of default percentage.</p></li>
+</ul>
+</br>
+</section>
+</section>
+<hr class="docutils" />
+<section id="advanced-plugins">
+<h3>Advanced Plugins:<a class="headerlink" href="#advanced-plugins" title="Permalink to this heading"></a></h3>
+<section id="careportal-careportal">
+<h4><code class="docutils literal notranslate"><span class="pre">careportal</span></code> (Careportal)<a class="headerlink" href="#careportal-careportal" title="Permalink to this heading"></a></h4>
+<p>An optional form to enter treatments.</p>
+<p>Care Portal is an important plugin that gives access to the <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">a</span> <span class="pre">treatment</span></code> interface. Unlock it entering your API secret with the lock icon top right, then use the <code class="docutils literal notranslate"><span class="pre">+</span></code> icon to log a treatment.  More information <a class="reference internal" href="../discover/#add-a-treatment-careportal"><span class="std std-ref">here</span></a>.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS14.png"><img alt="../../_images/SetupNS14.png" src="../../_images/SetupNS14.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="boluscalc-bolus-wizard">
+<h4><code class="docutils literal notranslate"><span class="pre">boluscalc</span></code> (Bolus Wizard)<a class="headerlink" href="#boluscalc-bolus-wizard" title="Permalink to this heading"></a></h4>
+<p>Bolus Wizard plugin gives access to the <code class="docutils literal notranslate"><span class="pre">Bolus</span> <span class="pre">Wizard</span></code> interface. You can access it with the calculator icon top right.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS16.png"><img alt="../../_images/SetupNS16.png" src="../../_images/SetupNS16.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="food-custom-foods">
+<h4><code class="docutils literal notranslate"><span class="pre">food</span></code> (Custom Foods)<a class="headerlink" href="#food-custom-foods" title="Permalink to this heading"></a></h4>
+<p>Custom Foods enabled by the variable <code class="docutils literal notranslate"><span class="pre">food</span></code> allows to to customize your food database and adds a <code class="docutils literal notranslate"><span class="pre">Food</span> <span class="pre">Editor</span></code> entry in the menu.</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS17.png"><img alt="../../_images/SetupNS17.png" src="../../_images/SetupNS17.png" style="width: 1000px;" /></a>
+</br>
+</section>
+<section id="rawbg-raw-bg">
+<h4><code class="docutils literal notranslate"><span class="pre">rawbg</span></code> (Raw BG)<a class="headerlink" href="#rawbg-raw-bg" title="Permalink to this heading"></a></h4>
+<p>Calculates BG using sensor and calibration records from and displays an alternate BG values and noise levels. Defaults that can be adjusted with extended setting. Raw BG will only display if your sensor provides this data, your bridge device transfers it and your uploader sends it to Nightscout.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DISPLAY</span></code>(<code class="docutils literal notranslate"><span class="pre">unsmoothed</span></code>) - Allows the user to control which algorithm is used to calculate the displayed raw BG values using the most recent calibration record.</p>
+<ul>
+<li><p>​	<code class="docutils literal notranslate"><span class="pre">unfiltered</span></code> - Raw BG is calculated by applying the calibration to the glucose record’s unfiltered value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filtered</span></code> - Raw BG is calculated by applying the calibration to the glucose record’s filtered value. The glucose record’s filtered values are generally produced by the CGM by a running average of the unfiltered values to produce a smoothed value when the sensor noise is high.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unsmoothed</span></code> - Raw BG is calculated by first finding the ratio of the calculated filtered value (the same value calculated by the <code class="docutils literal notranslate"><span class="pre">filtered</span></code> setting) to the reported glucose value. The displayed raw BG value is calculated by dividing the calculated unfiltered value (the same value calculated by the <code class="docutils literal notranslate"><span class="pre">unfiltered</span></code> setting) by the ratio. The effect is to exaggerate changes in trend direction so the trend changes are more noticeable to the user. This is the legacy raw BG calculation algorithm.</p></li>
+</ul>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS21.png"><img alt="../../_images/SetupNS21.png" src="../../_images/SetupNS21.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="iob-insulin-on-board-cob-carbs-on-board">
+<h4><code class="docutils literal notranslate"><span class="pre">iob</span></code> (Insulin-on-Board) - <code class="docutils literal notranslate"><span class="pre">cob</span></code> (Carbs-on-Board)<a class="headerlink" href="#iob-insulin-on-board-cob-carbs-on-board" title="Permalink to this heading"></a></h4>
+<a class="reference internal image-reference" href="../../_images/SetupNS18.png"><img alt="../../_images/SetupNS18.png" src="../../_images/SetupNS18.png" style="width: 200px;" /></a>
+</br>
+</section>
+<section id="iob-insulin-on-board">
+<h4><code class="docutils literal notranslate"><span class="pre">iob</span></code> (Insulin-on-Board)<a class="headerlink" href="#iob-insulin-on-board" title="Permalink to this heading"></a></h4>
+<p>Adds the IOB pill visualization in the client and calculates values that used by other plugins. Uses treatments with insulin doses and the <code class="docutils literal notranslate"><span class="pre">dia</span></code> and <code class="docutils literal notranslate"><span class="pre">sens</span></code> fields from the treatment profile.</p>
+</section>
+<section id="cob-carbs-on-board">
+<h4><code class="docutils literal notranslate"><span class="pre">cob</span></code> (Carbs-on-Board)<a class="headerlink" href="#cob-carbs-on-board" title="Permalink to this heading"></a></h4>
+<p>Adds the COB pill visualization in the client and calculates values that used by other plugins. Uses treatments with carb doses and the <code class="docutils literal notranslate"><span class="pre">carbs_hr</span></code>, <code class="docutils literal notranslate"><span class="pre">carbratio</span></code>, and <code class="docutils literal notranslate"><span class="pre">sens</span></code> fields from the treatment profile.</p>
+<p>When you enter the information with the Care Portal or Nightscout receives if from the uploader, you can see remaining insulin on board and carbs.</p>
+</br>
+</section>
+<section id="bwp-bolus-wizard-preview">
+<h4><code class="docutils literal notranslate"><span class="pre">bwp</span></code> (Bolus Wizard Preview)<a class="headerlink" href="#bwp-bolus-wizard-preview" title="Permalink to this heading"></a></h4>
+<p>This plugin in intended for the purpose of automatically snoozing alarms when the CGM indicates high blood sugar but there is also insulin on board (IOB) and secondly, alerting to user that it might be beneficial to measure the blood sugar using a glucometer and dosing insulin as calculated by the pump or instructed by trained medicare professionals. <em><strong>The values provided by the plugin are provided as a reference based on CGM data and insulin sensitivity you have configured, and are not intended to be used as a reference for bolus calculation.</strong></em> The plugin calculates the bolus amount when above your target, generates alarms when you should consider checking and bolusing, and snoozes alarms when there is enough IOB to cover a high BG. Uses the results of the <code class="docutils literal notranslate"><span class="pre">iob</span></code> plugin and <code class="docutils literal notranslate"><span class="pre">sens</span></code>, <code class="docutils literal notranslate"><span class="pre">target_high</span></code>, and <code class="docutils literal notranslate"><span class="pre">target_low</span></code> fields from the <a class="reference internal" href="../profile_editor/"><span class="doc std std-doc">treatment profile</span></a>. Defaults that can be adjusted with extended settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BWP_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">0.50</span></code>) - If <code class="docutils literal notranslate"><span class="pre">BWP</span></code> is &gt; <code class="docutils literal notranslate"><span class="pre">BWP_WARN</span></code> a warning alarm will be triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BWP_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">1.00</span></code>) - If <code class="docutils literal notranslate"><span class="pre">BWP</span></code> is &gt; <code class="docutils literal notranslate"><span class="pre">BWP_URGENT</span></code> an urgent alarm will be triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BWP_SNOOZE_MINS</span></code> (<code class="docutils literal notranslate"><span class="pre">10</span></code>) - minutes to snooze when there is enough IOB to cover a high BG.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BWP_SNOOZE</span></code> - (<code class="docutils literal notranslate"><span class="pre">0.10</span></code>) If BG is higher then the <code class="docutils literal notranslate"><span class="pre">target_high</span></code> and <code class="docutils literal notranslate"><span class="pre">BWP</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">BWP_SNOOZE</span></code> alarms will be snoozed for <code class="docutils literal notranslate"><span class="pre">BWP_SNOOZE_MINS</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/SetupNS19.png"><img alt="../../_images/SetupNS19.png" src="../../_images/SetupNS19.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="age-pills">
+<h4>Age pills<a class="headerlink" href="#age-pills" title="Permalink to this heading"></a></h4>
+<a class="reference internal image-reference" href="../../_images/SetupNS23.png"><img alt="../../_images/SetupNS23.png" src="../../_images/SetupNS23.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="cage-cannula-age">
+<h4><code class="docutils literal notranslate"><span class="pre">cage</span></code> (Cannula Age)<a class="headerlink" href="#cage-cannula-age" title="Permalink to this heading"></a></h4>
+<p>Calculates the number of hours since the last <code class="docutils literal notranslate"><span class="pre">Site</span> <span class="pre">Change</span></code> treatment that was recorded.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CAGE_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications to remind you of upcoming cannula change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CAGE_INFO</span></code> (<code class="docutils literal notranslate"><span class="pre">44</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Site</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">CAGE_INFO</span></code>, user will be warned of upcoming cannula change</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CAGE_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">48</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Site</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">CAGE_WARN</span></code>, user will be alarmed to to change the cannula</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CAGE_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">72</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Site</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">CAGE_URGENT</span></code>, user will be issued a persistent warning of overdue change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CAGE_DISPLAY</span></code> (<code class="docutils literal notranslate"><span class="pre">hours</span></code>) - Possible values are <code class="docutils literal notranslate"><span class="pre">hours</span></code> or <code class="docutils literal notranslate"><span class="pre">days</span></code>. If <code class="docutils literal notranslate"><span class="pre">days</span></code> is selected and age of canula is greater than 24h number is displayed in days and hours</p></li>
+</ul>
+</section>
+<section id="sage-sensor-age">
+<h4><code class="docutils literal notranslate"><span class="pre">sage</span></code> (Sensor Age)<a class="headerlink" href="#sage-sensor-age" title="Permalink to this heading"></a></h4>
+<p>Calculates the number of days and hours since the last <code class="docutils literal notranslate"><span class="pre">Sensor</span> <span class="pre">Start</span></code> and <code class="docutils literal notranslate"><span class="pre">Sensor</span> <span class="pre">Change</span></code> treatment that was recorded.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SAGE_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications to remind you of upcoming sensor change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SAGE_INFO</span></code> (<code class="docutils literal notranslate"><span class="pre">144</span></code>) - If time since last sensor event matches <code class="docutils literal notranslate"><span class="pre">SAGE_INFO</span></code>, user will be warned of upcoming sensor change</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SAGE_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">164</span></code>) - If time since last sensor event matches <code class="docutils literal notranslate"><span class="pre">SAGE_WARN</span></code>, user will be alarmed to to change/restart the sensor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SAGE_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">166</span></code>) - If time since last sensor event matches <code class="docutils literal notranslate"><span class="pre">SAGE_URGENT</span></code>, user will be issued a persistent warning of overdue change.</p></li>
+</ul>
+</section>
+<section id="iage-insulin-age">
+<h4><code class="docutils literal notranslate"><span class="pre">iage</span></code> (Insulin Age)<a class="headerlink" href="#iage-insulin-age" title="Permalink to this heading"></a></h4>
+<p>Calculates the number of days and hours since the last <code class="docutils literal notranslate"><span class="pre">Insulin</span> <span class="pre">Change</span></code> treatment that was recorded.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IAGE_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications to remind you of upcoming insulin reservoir change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IAGE_INFO</span></code> (<code class="docutils literal notranslate"><span class="pre">44</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Insulin</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">IAGE_INFO</span></code>, user will be warned of upcoming insulin reservoir change</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IAGE_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">48</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Insulin</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">IAGE_WARN</span></code>, user will be alarmed to to change the insulin reservoir</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IAGE_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">72</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Insulin</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">IAGE_URGENT</span></code>, user will be issued a persistent warning of overdue change.</p></li>
+</ul>
+</section>
+<section id="bage-battery-age">
+<h4><code class="docutils literal notranslate"><span class="pre">bage</span></code> (Battery Age)<a class="headerlink" href="#bage-battery-age" title="Permalink to this heading"></a></h4>
+<p>Calculates the number of days and hours since the last <code class="docutils literal notranslate"><span class="pre">Pump</span> <span class="pre">Battery</span> <span class="pre">Change</span></code> treatment that was recorded.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">BAGE_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications to remind you of upcoming pump battery change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BAGE_DISPLAY</span></code> (<code class="docutils literal notranslate"><span class="pre">days</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">hours</span></code> to display time since last <code class="docutils literal notranslate"><span class="pre">Pump</span> <span class="pre">Battery</span> <span class="pre">Change</span></code> in hours only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BAGE_INFO</span></code> (<code class="docutils literal notranslate"><span class="pre">312</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Pump</span> <span class="pre">Battery</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">BAGE_INFO</span></code> hours, user will be warned of upcoming pump battery change (default of 312 hours is 13 days).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BAGE_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">336</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Pump</span> <span class="pre">Battery</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">BAGE_WARN</span></code> hours, user will be alarmed to to change the pump battery (default of 336 hours is 14 days).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BAGE_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">360</span></code>) - If time since last <code class="docutils literal notranslate"><span class="pre">Pump</span> <span class="pre">Battery</span> <span class="pre">Change</span></code> matches <code class="docutils literal notranslate"><span class="pre">BAGE_URGENT</span></code> hours, user will be issued a persistent warning of overdue change (default of 360 hours is 15 days).</p>
+</br>
+</li>
+</ul>
+</section>
+<section id="treatmentnotify-treatment-notifications">
+<h4><code class="docutils literal notranslate"><span class="pre">treatmentnotify</span></code> (Treatment Notifications)<a class="headerlink" href="#treatmentnotify-treatment-notifications" title="Permalink to this heading"></a></h4>
+<p>Generates notifications when a treatment has been entered and snoozes alarms minutes after a treatment. Default snooze is 10 minutes, and can be set using the <code class="docutils literal notranslate"><span class="pre">TREATMENTNOTIFY_SNOOZE_MINS</span></code> extended setting.</p>
+</br>
+</section>
+<section id="basal-basal-profile">
+<h4><code class="docutils literal notranslate"><span class="pre">basal</span></code> (Basal Profile)<a class="headerlink" href="#basal-basal-profile" title="Permalink to this heading"></a></h4>
+<a class="reference internal image-reference" href="../../_images/SetupNS26.png"><img alt="../../_images/SetupNS26.png" src="../../_images/SetupNS26.png" style="width: 200px;" /></a>
+</br>
+<p>Adds the Basal pill visualization to display the basal rate for the current time. Also enables the <code class="docutils literal notranslate"><span class="pre">bwp</span></code> plugin to calculate correction temp basal suggestions. Uses the <code class="docutils literal notranslate"><span class="pre">basal</span></code> field from the <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor#treatment-profile">treatment profile</a>. Also uses the extended settings:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BASAL_RENDER</span></code> (<code class="docutils literal notranslate"><span class="pre">none</span></code>)</p></li>
+</ul>
+<p>Possible values are <code class="docutils literal notranslate"><span class="pre">none</span></code>,</p>
+<p><code class="docutils literal notranslate"><span class="pre">default</span></code>,</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS29.png"><img alt="../../_images/SetupNS29.png" src="../../_images/SetupNS29.png" style="width: 600px;" /></a>
+<p>or <code class="docutils literal notranslate"><span class="pre">icicle</span></code> (inverted)</p>
+<a class="reference internal image-reference" href="../../_images/SetupNS28.png"><img alt="../../_images/SetupNS28.png" src="../../_images/SetupNS28.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="bridge-share2nightscout-bridge">
+<h4><code class="docutils literal notranslate"><span class="pre">bridge</span></code> (Share2Nightscout bridge)<a class="headerlink" href="#bridge-share2nightscout-bridge" title="Permalink to this heading"></a></h4>
+<p>Glucose reading directly from the Dexcom Share service, uses these extended settings (***** mandatory):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BRIDGE_USER_NAME</span></code> - Your username for the Share service. *****</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BRIDGE_PASSWORD</span></code> - Your password for the Share service. *****</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BRIDGE_INTERVAL</span></code> (<code class="docutils literal notranslate"><span class="pre">150000</span></code> <em>2.5 minutes</em>) - The time (in milliseconds) to wait between each update.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BRIDGE_MAX_COUNT</span></code> (<code class="docutils literal notranslate"><span class="pre">1</span></code>) - The number of records to attempt to fetch per update.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BRIDGE_FIRST_FETCH_COUNT</span></code> (<code class="docutils literal notranslate"><span class="pre">3</span></code>) - Changes max count during the very first update only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BRIDGE_MAX_FAILURES</span></code> (<code class="docutils literal notranslate"><span class="pre">3</span></code>) - How many failures before giving up.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BRIDGE_MINUTES</span></code> (<code class="docutils literal notranslate"><span class="pre">1400</span></code>) - The time window to search for new data per update (the default value is one day in minutes).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BRIDGE_SERVER</span></code> (<code class="docutils literal notranslate"><span class="pre">US</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">US</span></code> to fetch data from Dexcom servers in the US. Set to (<code class="docutils literal notranslate"><span class="pre">EU</span></code>) to fetch from non US servers instead. *****</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OBSCURED</span></code> (<code class="docutils literal notranslate"><span class="pre">bridge</span></code>) - Obscure data source when using <code class="docutils literal notranslate"><span class="pre">bridge</span></code> uploader.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OBSCURE_DEVICE_PROVENANCE</span></code> (<code class="docutils literal notranslate"><span class="pre">dexcom-dont-own-my-body-data</span></code>) - Self explanatory.</p></li>
+</ul>
+</br>
+</section>
+<section id="mmconnect-minimed-connect-bridge">
+<h4><code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> (MiniMed Connect bridge)<a class="headerlink" href="#mmconnect-minimed-connect-bridge" title="Permalink to this heading"></a></h4>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This plugin is <strong>NOT</strong> functional with 7xx pumps do not enable it.</p>
+</div>
+<p>Transfer real-time MiniMed Connect data from the Medtronic CareLink server into Nightscout (<a class="reference external" href="https://github.com/nightscout/minimed-connect-to-nightscout">read more</a>) (***** mandatory) with the following extended settings:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MMCONNECT_USER_NAME</span></code> - Your user name for CareLink Connect. *****</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MMCONNECT_PASSWORD</span></code> - Your password for CareLink Connect. *****</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MMCONNECT_INTERVAL</span></code> (<code class="docutils literal notranslate"><span class="pre">60000</span></code> <em>1 minute</em>) - Number of milliseconds to wait between requests to the CareLink server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MMCONNECT_MAX_RETRY_DURATION</span></code> (<code class="docutils literal notranslate"><span class="pre">32</span></code>) - Maximum number of total seconds to spend retrying failed requests before giving up.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MMCONNECT_SGV_LIMIT</span></code> (<code class="docutils literal notranslate"><span class="pre">24</span></code>) - Maximum number of recent sensor glucose values to send to Nightscout on each request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MMCONNECT_VERBOSE</span></code> - Set this to “true” to log CareLink request information to the console.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MMCONNECT_STORE_RAW_DATA</span></code> - Set this to “true” to store raw data returned from CareLink as <code class="docutils literal notranslate"><span class="pre">type:</span> <span class="pre">&quot;carelink_raw&quot;</span></code> database entries (useful for development).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MMCONNECT_SERVER</span></code> - Set this to <code class="docutils literal notranslate"><span class="pre">EU</span></code> if you’re using the European Medtronic services *****</p></li>
+</ul>
+</br>
+</section>
+<section id="pump-pump-monitoring">
+<h4><code class="docutils literal notranslate"><span class="pre">pump</span></code> (Pump Monitoring)<a class="headerlink" href="#pump-pump-monitoring" title="Permalink to this heading"></a></h4>
+<a class="reference internal image-reference" href="../../_images/SetupNS24.png"><img alt="../../_images/SetupNS24.png" src="../../_images/SetupNS24.png" style="width: 270px;" /></a>
+</br>
+<p>Generic Pump Monitoring for OpenAPS, MiniMed Connect, RileyLink, t:slim, …</p>
+<ul class="simple">
+<li><p>Requires <code class="docutils literal notranslate"><span class="pre">DEVICESTATUS_ADVANCED=&quot;true&quot;</span></code> to be set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications for Pump battery and reservoir.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_WARN_ON_SUSPEND</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to get an alarm when the pump is suspended.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_FIELDS</span></code> (<code class="docutils literal notranslate"><span class="pre">reservoir</span> <span class="pre">battery</span></code>) - The fields to display by default. Any of the following fields: <code class="docutils literal notranslate"><span class="pre">reservoir</span></code>, <code class="docutils literal notranslate"><span class="pre">battery</span></code>, <code class="docutils literal notranslate"><span class="pre">clock</span></code>, <code class="docutils literal notranslate"><span class="pre">status</span></code>, and <code class="docutils literal notranslate"><span class="pre">device</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_RETRO_FIELDS</span></code> (<code class="docutils literal notranslate"><span class="pre">reservoir</span> <span class="pre">battery</span> <span class="pre">clock</span></code>) - The fields to display in retro mode. Any of the above fields.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_WARN_CLOCK</span></code> (<code class="docutils literal notranslate"><span class="pre">30</span></code>) - The number of minutes ago that needs to be exceed before an alert is triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_URGENT_CLOCK</span></code> (<code class="docutils literal notranslate"><span class="pre">60</span></code>) - The number of minutes ago that needs to be exceed before an urgent alarm is triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_WARN_RES</span></code> (<code class="docutils literal notranslate"><span class="pre">10</span></code>) - The number of units remaining, a warning will be triggered when dropping below this threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_URGENT_RES</span></code> (<code class="docutils literal notranslate"><span class="pre">5</span></code>) - The number of units remaining, an urgent alarm will be triggered when dropping below this threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_WARN_BATT_P</span></code> (<code class="docutils literal notranslate"><span class="pre">30</span></code>) - The % of the pump battery remaining, a warning will be triggered when dropping below this threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_URGENT_BATT_P</span></code> (<code class="docutils literal notranslate"><span class="pre">20</span></code>) - The % of the pump battery remaining, an urgent alarm will be triggered when dropping below this threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_WARN_BATT_V</span></code> (<code class="docutils literal notranslate"><span class="pre">1.35</span></code>) - The voltage (if percent isn’t available) of the pump battery, a warning will be triggered when dropping below this threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PUMP_URGENT_BATT_V</span></code> (<code class="docutils literal notranslate"><span class="pre">1.30</span></code>) - The voltage (if percent isn’t available) of the pump battery, an urgent alarm will be triggered when dropping below this threshold.</p></li>
+</ul>
+</br>
+</section>
+<hr class="docutils" />
+<section id="openaps-openaps">
+<h4><code class="docutils literal notranslate"><span class="pre">openaps</span></code> (OpenAPS)<a class="headerlink" href="#openaps-openaps" title="Permalink to this heading"></a></h4>
+<a class="reference internal image-reference" href="../../_images/SetupNS36.png"><img alt="../../_images/SetupNS36.png" src="../../_images/SetupNS36.png" style="width: 270px;" /></a>
+</br>
+<p>Integrated OpenAPS loop monitoring, uses these extended setting:</p>
+<ul class="simple">
+<li><p>Requires <code class="docutils literal notranslate"><span class="pre">DEVICESTATUS_ADVANCED=&quot;true&quot;</span></code> to be set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications when OpenAPS isn’t looping. If OpenAPS is going to offline for a period of time, you can add an <code class="docutils literal notranslate"><span class="pre">OpenAPS</span> <span class="pre">Offline</span></code> event for the expected duration from Careportal to avoid getting alerts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">30</span></code>) - The number of minutes since the last loop that needs to be exceed before an alert is triggered</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">60</span></code>) - The number of minutes since the last loop that needs to be exceed before an urgent alarm is triggered</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_FIELDS</span></code> (<code class="docutils literal notranslate"><span class="pre">status-symbol</span> <span class="pre">status-label</span> <span class="pre">iob</span> <span class="pre">meal-assist</span> <span class="pre">rssi</span></code>) - The fields to display by default. Any of the following fields: <code class="docutils literal notranslate"><span class="pre">status-symbol</span></code>, <code class="docutils literal notranslate"><span class="pre">status-label</span></code>, <code class="docutils literal notranslate"><span class="pre">iob</span></code>, <code class="docutils literal notranslate"><span class="pre">meal-assist</span></code>, <code class="docutils literal notranslate"><span class="pre">freq</span></code>, and <code class="docutils literal notranslate"><span class="pre">rssi</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_RETRO_FIELDS</span></code> (<code class="docutils literal notranslate"><span class="pre">status-symbol</span> <span class="pre">status-label</span> <span class="pre">iob</span> <span class="pre">meal-assist</span> <span class="pre">rssi</span></code>) - The fields to display in retro mode. Any of the above fields.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_PRED_IOB_COLOR</span></code> (<code class="docutils literal notranslate"><span class="pre">#1e88e5</span></code>) - The color to use for IOB prediction lines. Colors can be in <code class="docutils literal notranslate"><span class="pre">#RRGGBB</span></code> format, but <a class="reference external" href="https://www.w3.org/TR/css-color-3/#colorunits">other CSS color units</a> may be used as well.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_PRED_COB_COLOR</span></code> (<code class="docutils literal notranslate"><span class="pre">#FB8C00</span></code>) - The color to use for COB prediction lines. Same format as above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_PRED_ACOB_COLOR</span></code> (<code class="docutils literal notranslate"><span class="pre">#FB8C00</span></code>) - The color to use for ACOB prediction lines. Same format as above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_PRED_ZT_COLOR</span></code> (<code class="docutils literal notranslate"><span class="pre">#00d2d2</span></code>) - The color to use for ZT prediction lines. Same format as above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_PRED_UAM_COLOR</span></code> (<code class="docutils literal notranslate"><span class="pre">#c9bd60</span></code>) - The color to use for UAM prediction lines. Same format as above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OPENAPS_COLOR_PREDICTION_LINES</span></code> (<code class="docutils literal notranslate"><span class="pre">true</span></code>) - Enables / disables the colored lines vs the classic purple color.</p></li>
+</ul>
+<p>Also see <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor#pushover">Pushover</a> and <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor#ifttt-maker">IFTTT Maker</a>.</p>
+</br>
+</section>
+<hr class="docutils" />
+<section id="loop-loop">
+<h4><code class="docutils literal notranslate"><span class="pre">loop</span></code> (Loop)<a class="headerlink" href="#loop-loop" title="Permalink to this heading"></a></h4>
+<a class="reference internal image-reference" href="../../_images/SetupNS25.png"><img alt="../../_images/SetupNS25.png" src="../../_images/SetupNS25.png" style="width: 300px;" /></a>
+</br>
+<p>iOS Loop app monitoring, uses these extended settings:</p>
+<ul class="simple">
+<li><p>Requires <code class="docutils literal notranslate"><span class="pre">DEVICESTATUS_ADVANCED=&quot;true&quot;</span></code> to be set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOOP_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications when Loop isn’t looping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOOP_WARN</span></code> (<code class="docutils literal notranslate"><span class="pre">30</span></code>) - The number of minutes since the last loop that needs to be exceeded before an alert is triggered</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOOP_URGENT</span></code> (<code class="docutils literal notranslate"><span class="pre">60</span></code>) - The number of minutes since the last loop that needs to be exceeded before an urgent alarm is triggered</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">loop</span></code> to <code class="docutils literal notranslate"><span class="pre">SHOW_FORECAST</span></code> to show forecasted BG.</p></li>
+</ul>
+<p>For remote overrides, the following extended settings must be configured:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LOOP_APNS_KEY</span></code> - Apple Push Notifications service (APNs) Key, created in the Apple Developer website.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOOP_APNS_KEY_ID</span></code> - The Key ID for the above key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOOP_DEVELOPER_TEAM_ID</span></code> - Your Apple developer team ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LOOP_PUSH_SERVER_ENVIRONMENT</span></code> - (optional) Set this to <code class="docutils literal notranslate"><span class="pre">production</span></code> if you are using a provisioning profile that specifies production aps-environment, such as when distributing builds via TestFlight.</p></li>
+</ul>
+</br>
+</section>
+<section id="override-override-mode">
+<h4><code class="docutils literal notranslate"><span class="pre">override</span></code> (Override Mode)<a class="headerlink" href="#override-override-mode" title="Permalink to this heading"></a></h4>
+<p>Additional monitoring for DIY automated insulin delivery systems to display real-time overrides such as Eating Soon or Exercise Mode:</p>
+<ul class="simple">
+<li><p>Requires <code class="docutils literal notranslate"><span class="pre">DEVICESTATUS_ADVANCED=&quot;true&quot;</span></code> to be set</p></li>
+</ul>
+</br>
+</section>
+<section id="xdripjs-xdrip-js">
+<h4><code class="docutils literal notranslate"><span class="pre">xdripjs</span></code> (xDrip-js)<a class="headerlink" href="#xdripjs-xdrip-js" title="Permalink to this heading"></a></h4>
+<p>Integrated xDrip-js monitoring, uses these extended settings:</p>
+<ul>
+<li><p>Requires <code class="docutils literal notranslate"><span class="pre">DEVICESTATUS_ADVANCED=&quot;true&quot;</span></code> to be set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">XDRIPJS_ENABLE_ALERTS</span></code> (<code class="docutils literal notranslate"><span class="pre">false</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to enable notifications when CGM state is not OK or battery voltages fall below threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">XDRIPJS_STATE_NOTIFY_INTRVL</span></code> (<code class="docutils literal notranslate"><span class="pre">0.5</span></code>) - Set to number of hours between CGM state notifications</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">XDRIPJS_WARN_BAT_V</span></code> (<code class="docutils literal notranslate"><span class="pre">300</span></code>) - The voltage of either transmitter battery, a warning will be triggered when dropping below this threshold.</p>
+</br>
+</li>
+</ul>
+</section>
+<section id="alexa-amazon-alexa">
+<h4><code class="docutils literal notranslate"><span class="pre">alexa</span></code> (Amazon Alexa)<a class="headerlink" href="#alexa-amazon-alexa" title="Permalink to this heading"></a></h4>
+<p>Integration with Amazon Alexa, <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/blob/master/docs/plugins/alexa-plugin.md">detailed setup instructions</a></p>
+</br>
+</section>
+<section id="googlehome-google-home-dialogflow">
+<h4><code class="docutils literal notranslate"><span class="pre">googlehome</span></code> (Google Home/DialogFlow)<a class="headerlink" href="#googlehome-google-home-dialogflow" title="Permalink to this heading"></a></h4>
+<p>Integration with Google Home (via DialogFlow), <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/blob/master/docs/plugins/googlehome-plugin.md">detailed setup instructions</a></p>
+</br>
+</section>
+<section id="speech-speech">
+<h4><code class="docutils literal notranslate"><span class="pre">speech</span></code> (Speech)<a class="headerlink" href="#speech-speech" title="Permalink to this heading"></a></h4>
+<p>Speech synthesis plugin. When enabled, speaks out the blood glucose values, IOB and alarms. Note you have to set the LANGUAGE setting on the server to get all translated alarms.</p>
+</br>
+</section>
+<section id="cors-cors">
+<h4><code class="docutils literal notranslate"><span class="pre">cors</span></code> (CORS)<a class="headerlink" href="#cors-cors" title="Permalink to this heading"></a></h4>
+<p>Enabled <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a> so other websites can make request to your Nightscout site, uses these extended settings:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CORS_ALLOW_ORIGIN</span></code> (<code class="docutils literal notranslate"><span class="pre">*</span></code>) - The list of sites that are allow to make requests</p></li>
+</ul>
+</br>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="extended-settings">
+<h2>Extended Settings<a class="headerlink" href="#extended-settings" title="Permalink to this heading"></a></h2>
+<p>Some plugins support additional configuration using extra environment variables. These are prefixed with the name of the plugin and a <code class="docutils literal notranslate"><span class="pre">_</span></code>. For example setting <code class="docutils literal notranslate"><span class="pre">MYPLUGIN_EXAMPLE_VALUE=1234</span></code> would make <code class="docutils literal notranslate"><span class="pre">extendedSettings.exampleValue</span></code> available to the <code class="docutils literal notranslate"><span class="pre">MYPLUGIN</span></code> plugin.</p>
+<p>Plugins only have access to their own extended settings, all the extended settings of client plugins will be sent to the browser.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DEVICESTATUS_ADVANCED</span></code> (<code class="docutils literal notranslate"><span class="pre">true</span></code>) - Defaults to true. Users who only have a single device uploading data to Nightscout can set this to false to reduce the data use of the site.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DEVICESTATUS_DAYS</span></code> (<code class="docutils literal notranslate"><span class="pre">1</span></code>) - Defaults to 1, can optionally be set to 2. Users can use this to show 48 hours of device status data for in retro mode, rather than the default 24 hours. Setting this value to 2 will roughly double the bandwidth usage of nightscout, so users with a data cap may not want to update this setting.</p></li>
+</ul>
+</br>
+<section id="pushover">
+<h3><a class="reference internal" href="../pushover/"><span class="doc std std-doc">Pushover</span></a><a class="headerlink" href="#pushover" title="Permalink to this heading"></a></h3>
+<p>In addition to the normal web based alarms, there is also support for <a class="reference external" href="https://pushover.net/">Pushover</a> based alarms and notifications.</p>
+<p>To get started install the Pushover application on your iOS or Android device and create an account.</p>
+<p>Using that account login to <a class="reference external" href="https://pushover.net/">Pushover</a>, in the top left you’ll see your User Key, you’ll need this plus an application API Token/Key to complete this setup.</p>
+<p>You’ll need to <a class="reference external" href="https://pushover.net/apps/build">Create a Pushover Application</a>. You only need to set the Application name, you can ignore all the other settings, but setting an Icon is a nice touch. Maybe you’d like to use <a class="reference external" href="https://raw.githubusercontent.com/nightscout/cgm-remote-monitor/master/static/images/large.png">this one</a>?</p>
+<p>Pushover is configured using the following Environment Variables:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `ENABLE` - `pushover` should be added to the list of plugin, for example: `ENABLE=&quot;pushover&quot;`.
+* `PUSHOVER_API_TOKEN` - Used to enable pushover notifications, this token is specific to the application you create from in [Pushover](https://pushover.net/), ***[additional pushover information](#pushover)*** below.
+* `PUSHOVER_USER_KEY` - Your Pushover user key, can be found in the top left of the [Pushover](https://pushover.net/) site, this can also be a pushover delivery group key to send to a group rather than just a single user.  This also supports a space delimited list of keys.  To disable `INFO` level pushes set this to `off`.
+* `PUSHOVER_ALARM_KEY` - An optional Pushover user/group key, will be used for system wide alarms (level &gt; `WARN`).  If not defined this will fallback to `PUSHOVER_USER_KEY`.  A possible use for this is sending important messages and alarms to a CWD that you don&#39;t want to send all notification too.  This also support a space delimited list of keys.  To disable Alarm pushes set this to `off`.
+* `PUSHOVER_ANNOUNCEMENT_KEY` - An optional Pushover user/group key, will be used for system wide user generated announcements.  If not defined this will fallback to `PUSHOVER_USER_KEY` or `PUSHOVER_ALARM_KEY`.  This also support a space delimited list of keys. To disable Announcement pushes set this to `off`.
+* `BASE_URL` - Used for pushover callbacks, usually the URL of your Nightscout site, use https when possible.
+* `API_SECRET` - Used for signing the pushover callback request for acknowledgments.
+
+If you never want to get info level notifications (treatments) use `PUSHOVER_USER_KEY=&quot;off&quot;`
+If you never want to get an alarm via pushover use `PUSHOVER_ALARM_KEY=&quot;off&quot;`
+If you never want to get an announcement via pushover use `PUSHOVER_ANNOUNCEMENT_KEY=&quot;off&quot;`
+
+If only `PUSHOVER_USER_KEY` is set it will be used for all info notifications, alarms, and announcements
+
+For testing/development try [localtunnel](http://localtunnel.me/).
+</pre></div>
+</div>
+</br>
+</section>
+<section id="ifttt-maker">
+<h3><a class="reference internal" href="../ifttt/"><span class="doc std std-doc">IFTTT Maker</span></a><a class="headerlink" href="#ifttt-maker" title="Permalink to this heading"></a></h3>
+<p>In addition to the normal web based alarms, and pushover, there is also integration for <a class="reference external" href="https://ifttt.com/maker_webhooks">IFTTT Webhooks</a>.</p>
+<p>With Maker you are able to integrate with all the other <a class="reference external" href="https://ifttt.com/services">IFTTT Services</a>. For example you can send a tweet when there is an alarm, change the color of hue light, send an email, send and sms, and so much more.</p>
+<ol class="arabic simple">
+<li><p>Setup IFTTT account: <a class="reference external" href="https://ifttt.com/login">login</a> or <a class="reference external" href="https://ifttt.com/join">create an account</a></p></li>
+<li><p>Follow the <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/blob/master/docs/plugins/maker-setup.md">Detailed IFTTT setup Instructions</a></p></li>
+<li><p>Configure Nightscout by setting these webpage environment variables:</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ENABLE</span></code> - <code class="docutils literal notranslate"><span class="pre">maker</span></code> should be added to the list of plugins, for example: <code class="docutils literal notranslate"><span class="pre">ENABLE=&quot;maker&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAKER_KEY</span></code> - Set this to your secret key (see [<a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/blob/master/docs/plugins/maker-setup.md">Detailed Instructions</a> ) <code class="docutils literal notranslate"><span class="pre">MAKER_KEY=&quot;abcMyExampleabc123defjt1DeNSiftttmak-XQb69p&quot;</span></code> This also supports a space delimited list of keys.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAKER_ANNOUNCEMENT_KEY</span></code> - An optional Maker key, will be used for system wide user generated announcements. If not defined this will fallback to <code class="docutils literal notranslate"><span class="pre">MAKER_KEY</span></code>. A possible use for this is sending important messages and alarms to another device that you don’t want to send all notification too. This also support a space delimited list of keys.</p></li>
+</ul>
+<p>Plugins can create custom events, but all events sent to IFTTT webhooks will be prefixed with <code class="docutils literal notranslate"><span class="pre">ns-</span></code>. The core events are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ns-event</span></code> - This event is sent to the maker service for all alarms and notifications. This is good catch all event for general logging.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns-allclear</span></code> - This event is sent to the maker service when an alarm has been acknowledged or when the server starts up without triggering any alarms. For example, you could use this event to turn a light to green.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns-info</span></code> - Plugins that generate notifications at the info level will cause this event to also be triggered. It will be sent in addition to <code class="docutils literal notranslate"><span class="pre">ns-event</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns-warning</span></code> - Alarms at the warning level with cause this event to also be triggered. It will be sent in addition to <code class="docutils literal notranslate"><span class="pre">ns-event</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ns-urgent</span></code> - Alarms at the urgent level with cause this event to also be triggered. It will be sent in addition to <code class="docutils literal notranslate"><span class="pre">ns-event</span></code>.</p></li>
+<li><p>see the <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/blob/master/docs/plugins/maker-setup.md#events">full list of events</a></p></li>
+</ul>
+</br>
+</section>
+<section id="treatment-profile">
+<h3>Treatment Profile<a class="headerlink" href="#treatment-profile" title="Permalink to this heading"></a></h3>
+<p>Some of the <a class="reference internal" href="#plugins">plugins</a> make use of a treatment profile that can be edited using the <a class="reference internal" href="../profile_editor/"><span class="doc std std-doc">Profile Editor</span></a>.</p>
+<p>Treatment Profile Fields:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (Time Zone) - time zone local to the patient. <em>Should be set.</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code> (Profile Units) - blood glucose units used in the profile, either “mg/dl” or “mmol”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dia</span></code> (Insulin duration) - value should be the duration of insulin action to use in calculating how much insulin is left active. Defaults to 3 hours.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">carbs_hr</span></code> (Carbs per Hour) - The number of carbs that are processed per hour, for more information see <a class="reference external" href="http://diyps.org/2014/05/29/determining-your-carbohydrate-absorption-rate-diyps-lessons-learned/">#DIYPS</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">carbratio</span></code> (Carb Ratio) - grams per unit of insulin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sens</span></code> (Insulin sensitivity) How much one unit of insulin will normally lower blood glucose.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">basal</span></code> The basal rate set on the pump.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_high</span></code> - Upper target for correction boluses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_low</span></code> - Lower target for correction boluses.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

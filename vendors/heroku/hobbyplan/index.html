@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heroku Basic plan &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Heroku MFA" href="../mfa/" />
+    <link rel="prev" title="Heroku Eco plan" href="../ecoplan/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Heroku Basic plan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#upgrade-to-7-month-basic-plan">Upgrade to 7$/month Basic Plan</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Heroku Basic plan</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/heroku/hobbyplan.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="heroku-basic-plan">
+<h1>Heroku Basic plan<a class="headerlink" href="#heroku-basic-plan" title="Permalink to this heading"></a></h1>
+</br>
+<div class="seealso admonition">
+<p class="admonition-title">Too complicated? Not what you’re looking for?</p>
+<p>Consider a hosted Nightscout service! Check for easier solutions <a class="reference internal" href="../../../#nightscout-as-a-service"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<h2 class="rubric" id="heroku">Heroku</h2>
+<p class="sd-card-text"><img alt="Heroku Eco" src="../../../_images/Heroku.png" /></p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Since the <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/pull/98">beginning</a> Heroku has been a very popular platform for Nightscout. Most of the documentation was based on a Heroku Nightscout.<br />
+On August 25th 2022, Salesforce decided to <a class="reference external" href="https://blog.heroku.com/next-chapter">drop the free plan</a>.
+You can create your new Nightscout site with Heroku using an Eco plan (5$/month).</p>
+<p class="sd-card-text"><strong>Pros</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Large platform with a reliable history</p></li>
+<li><p class="sd-card-text">Well documented, well known by the community</p></li>
+</ul>
+<p class="sd-card-text"><strong>Cons</strong>:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The Eco plan has the same limitations than the previous Free plan, for 5$ per month</p></li>
+<li><p class="sd-card-text">For a Nightscout site a 7$ per month Basic plan is not really worth it (compared to hosted solutions)</p></li>
+<li><p class="sd-card-text">Relying on the MongoDB Atlas database</p></li>
+</ul>
+</div>
+</div>
+</br>
+<section id="upgrade-to-7-month-basic-plan">
+<h2>Upgrade to 7$/month Basic Plan<a class="headerlink" href="#upgrade-to-7-month-basic-plan" title="Permalink to this heading"></a></h2>
+</br>
+<div class="admonition-month-eco-plan admonition">
+<p class="admonition-title">5$/month Eco Plan</p>
+<p>You can also select a more economic <a class="reference internal" href="../ecoplan/"><span class="doc std std-doc">eco plan upgrade</span></a>.</p>
+</div>
+</br>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Heroku billing is monthly.</br>
+One minute of Eco plan will be billed 5$ in the current month.</br>
+Switching billable plan during the same month with add another plan billing for the whole month.</p>
+</div>
+</br>
+<ul class="simple">
+<li><p>Log in Heroku <a class="reference external" href="https://id.heroku.com/login">https://id.heroku.com/login</a></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/UpdateNS15.png"><img alt="../../../_images/UpdateNS15.png" src="../../../_images/UpdateNS15.png" style="width: 400px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Select your app (hidden in yellow)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/UpdateNS16.png"><img alt="../../../_images/UpdateNS16.png" src="../../../_images/UpdateNS16.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Resources</span></code> then select <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">Dyno</span> <span class="pre">Type</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/HerokuH01.png"><img alt="../../../_images/HerokuH01.png" src="../../../_images/HerokuH01.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Basic</span> <span class="pre">($7/dyno/month)</span></code> then click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/HerokuH02.png"><img alt="../../../_images/HerokuH02.png" src="../../../_images/HerokuH02.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Your Nightscout Heroku app is now using a <code class="docutils literal notranslate"><span class="pre">Basic</span></code> plan.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/HerokuH03.png"><img alt="../../../_images/HerokuH03.png" src="../../../_images/HerokuH03.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p><strong>Make sure your credit card information is up to date!</strong><br />
+Go to your <code class="docutils literal notranslate"><span class="pre">Account</span> <span class="pre">settings</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/NewNS13.png"><img alt="../../../_images/NewNS13.png" src="../../../_images/NewNS13.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Billing</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/NewNS14.png"><img alt="../../../_images/NewNS14.png" src="../../../_images/NewNS14.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>Verify the credit card you used is still valid, in case of doubt <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">credit</span> <span class="pre">card</span></code> and enter a valid credit card.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/HerokuH04.png"><img alt="../../../_images/HerokuH04.png" src="../../../_images/HerokuH04.png" style="width: 600px;" /></a>
+</br>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

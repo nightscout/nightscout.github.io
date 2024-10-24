@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Nightscout deployments &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Building Nightscout in Ubuntu" href="../../vendors/VPS/ubuntu/" />
+    <link rel="prev" title="Downgrade Nightscout" href="../../update/downgrade/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced Nightscout deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#building-nightscout-diy-in-a-cloud-platform">Building Nightscout DIY in a cloud platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-nightscout-diy-in-a-virtual-server">Building Nightscout DIY in a virtual server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-nightscout-inside-your-nas">Building Nightscout inside your NAS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-nightscout-with-a-raspberry-pi-4">Building Nightscout with a Raspberry PI 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#home-assistant-add-on-for-nightscout">Home Assistant Add-On for Nightscout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Advanced Nightscout deployments</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/advanced.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="advanced-nightscout-deployments">
+<h1>Advanced Nightscout deployments<a class="headerlink" href="#advanced-nightscout-deployments" title="Permalink to this heading"></a></h1>
+</br>
+<div class="seealso admonition">
+<p class="admonition-title">Too complicated? Not what you’re looking for?</p>
+<p>Consider a hosted Nightscout service! Check for easier solutions <a class="reference internal" href="../../#nightscout-as-a-service"><span class="std std-ref">here</span></a>.</p>
+</div>
+</br>
+<section id="building-nightscout-diy-in-a-cloud-platform">
+<h2>Building Nightscout DIY in a cloud platform<a class="headerlink" href="#building-nightscout-diy-in-a-cloud-platform" title="Permalink to this heading"></a></h2>
+<p>You can run your Nightscout site in several vendors platforms, using free or paid accounts.</p>
+<p>We documented Heroku, Azure, Railway, Northflank and Fly.io. There are probably others, don’t hesitate to <a class="reference external" href="https://github.com/nightscout/nightscout.github.io/issues">open an issue in the documentation</a> with the easiest deployment method if you want to see them named here.</p>
+</br>
+</section>
+<section id="building-nightscout-diy-in-a-virtual-server">
+<h2>Building Nightscout DIY in a virtual server<a class="headerlink" href="#building-nightscout-diy-in-a-virtual-server" title="Permalink to this heading"></a></h2>
+<p>You can run your Nightscout site in physical or virtual private servers, using free or paid accounts.<br />
+The <a class="reference external" href="https://github.com/jasoncalabrese/project-glu/blob/master/README.md">original</a> Nightscout project was also developed to run in Digital Ocean.</p>
+<p>You can use step by step Linux commands or deploy with a <strong>simple</strong> scripted install.</p>
+<p>Below is a list of some VPS. There are probably others, don’t hesitate to <a class="reference external" href="https://github.com/nightscout/nightscout.github.io/issues">open an issue in the documentation</a> with the easiest deployment method if you want to see them named here.</p>
+<p><a class="reference external" href="https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html">Google Cloud</a> with a Scripted deployment (one command).<br />
+<a class="reference external" href="https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf">Oracle</a>  and extensive documentation (npm and Docker).<br />
+<a class="reference external" href="https://github.com/rajdeut/terraform-aws-nightscout#readme">Amazon Web Service</a></p>
+<p>Some common deployment methods:</p>
+<p><a class="reference internal" href="../../vendors/VPS/ubuntu/"><span class="doc std std-doc">Ubuntu</span></a> commands.<br />
+<a class="reference internal" href="../../vendors/VPS/docker/"><span class="doc std std-doc">Docker</span></a> container.</p>
+</br>
+</section>
+<section id="building-nightscout-inside-your-nas">
+<span id="nas"></span><h2>Building Nightscout inside your NAS<a class="headerlink" href="#building-nightscout-inside-your-nas" title="Permalink to this heading"></a></h2>
+<p>Don’t buy a NAS device just for this, but if you already have one that’s worth a try!</p>
+<p>You can host your Nightscout site in your <a class="reference internal" href="../../vendors/NAS/synology/"><span class="doc std std-doc">Synology</span></a> NAS.<br />
+You can also try with your <a class="reference external" href="https://docs.google.com/document/d/1zpF6Y3kPQqc9KOsClIQt686HDLhGfFxwz4vGfq8E254/edit">QNAP</a> NAS.</p>
+</br>
+</section>
+<section id="building-nightscout-with-a-raspberry-pi-4">
+<h2>Building Nightscout with a Raspberry PI 4<a class="headerlink" href="#building-nightscout-with-a-raspberry-pi-4" title="Permalink to this heading"></a></h2>
+<p>If you own one, you can use it to host your Nightscout, see <a class="reference external" href="https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705">here</a>.</p>
+</br>
+</section>
+<section id="home-assistant-add-on-for-nightscout">
+<h2>Home Assistant Add-On for Nightscout<a class="headerlink" href="#home-assistant-add-on-for-nightscout" title="Permalink to this heading"></a></h2>
+<p>This add-on is a wrapper around nightscout/cgm-remote-monitor. It includes a Mongo Database which is used to store the uploaded values.</p>
+<p>See <a class="reference external" href="https://github.com/marciogranzotto/addon-nightscout">here</a>.</p>
+</br>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

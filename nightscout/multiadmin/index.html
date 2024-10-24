@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiple sites and support &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Update GitHub" href="../../vendors/github/update/" />
+    <link rel="prev" title="Migration?" href="../../vendors/heroku/migrate/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multiple sites and support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#remote-support-and-security">Remote support and security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enable-automatic-deploys-in-heroku">Enable automatic deploys in Heroku</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-deploys-in-railway-and-northflank">Automatic deploys in Railway and Northflank</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#heroku">Heroku</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#invite-someone-as-a-collaborator">Invite someone as a collaborator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#being-a-collaborator">Being a collaborator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#atlas">Atlas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#invite-another-user">Invite another user</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#being-invited">Being invited</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#northflank">Northflank</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#invite-a-teammate">Invite a teammate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Being invited</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#railway">Railway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Being invited</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Multiple sites and support</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/multiadmin.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multiple-sites-and-support">
+<h1>Multiple sites and support<a class="headerlink" href="#multiple-sites-and-support" title="Permalink to this heading"></a></h1>
+</br>
+<p>You might need to have access to multiple accounts without having to juggle between logins and passwords. Below are described some centralizing methods reducing the administrative burden.</p>
+</br>
+<section id="remote-support-and-security">
+<h2>Remote support and security<a class="headerlink" href="#remote-support-and-security" title="Permalink to this heading"></a></h2>
+<p>Giving username and passwords to someone in order to obtain help to fix Nightscout raises serious security issues. Malicious code can be added to your Nightscout project by ill-intentioned people. Always make sure the version deployed is a fork of the official project. After receiving help, good practice is to change your passwords (if shared) and your API secret.</p>
+<p>When possible prefer inviting collaborators (see below) and remove them once the issue is fixed.</p>
+</br>
+</section>
+<section id="github">
+<h2>Github<a class="headerlink" href="#github" title="Permalink to this heading"></a></h2>
+<p>You need only one Github account since you can connect multiple web apps to the same GitHub account.</p>
+<p>Using this strategy you only need to update one GitHub account when a new Nightscout version is released and you will be able to deploy it in all your web apps.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you have several web apps connected to the same GitHub repository you must use the <a class="reference internal" href="../../update/update/"><span class="doc std std-doc">standard update method</span></a>.
+<strong>Not redeploy</strong> (else you’ll break all the links to the repository).</p>
+</div>
+</br>
+<section id="enable-automatic-deploys-in-heroku">
+<h3>Enable automatic deploys in Heroku<a class="headerlink" href="#enable-automatic-deploys-in-heroku" title="Permalink to this heading"></a></h3>
+<p>Automatic deploys will allow you to update automatically your Heroku apps when you update the GitHub repository: you will not need to login into Heroku and perform Manual Deploy, as soon as a new version will be merged into GitHub an automated deploy will trigger in all enabled Heroku apps.</p>
+<ul class="simple">
+<li><p>To enable automatic deploy, <a class="reference external" href="https://dashboard.heroku.com/apps/">log in Heroku</a> and select your app, then <code class="docutils literal notranslate"><span class="pre">Deploy</span></code>. Verify GitHub and your <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> app are connected.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS06.png"><img alt="../../_images/MultiNS06.png" src="../../_images/MultiNS06.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Verify the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch is selected and click <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">Automatic</span> <span class="pre">Deploys</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS04.png"><img alt="../../_images/MultiNS04.png" src="../../_images/MultiNS04.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Your Heroku site will update automatically every time you update the GitHub repository.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS05.png"><img alt="../../_images/MultiNS05.png" src="../../_images/MultiNS05.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="automatic-deploys-in-railway-and-northflank">
+<h3>Automatic deploys in Railway and Northflank<a class="headerlink" href="#automatic-deploys-in-railway-and-northflank" title="Permalink to this heading"></a></h3>
+<p>You don’t need to do anything as all your web apps will upgrade automatically when you upgrade GitHub.</p>
+</br>
+</section>
+</section>
+<section id="heroku">
+<h2>Heroku<a class="headerlink" href="#heroku" title="Permalink to this heading"></a></h2>
+<p>You can setup multiple Nightscout sites per Heroku account. You be charged the Eco/Basic plan fee for <strong>each app</strong>.</p>
+<p>You can setup collaborators in Heroku. This is very useful for remote support.</p>
+</br>
+<section id="invite-someone-as-a-collaborator">
+<h3>Invite someone as a collaborator<a class="headerlink" href="#invite-someone-as-a-collaborator" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Log into your Heroku account and select your app.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS00.png"><img alt="../../_images/MultiNS00.png" src="../../_images/MultiNS00.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Access</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS01.png"><img alt="../../_images/MultiNS01.png" src="../../_images/MultiNS01.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">collaborator</span></code> and enter the email address of the person supporting you (that is the email address he used to setup his own Heroku account).</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS02.png"><img alt="../../_images/MultiNS02.png" src="../../_images/MultiNS02.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>You will now see it as a collaborator. Using the pen icon you can modify it or delete it (useful when asking for support, once everything is working).</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS03.png"><img alt="../../_images/MultiNS03.png" src="../../_images/MultiNS03.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="being-a-collaborator">
+<h3>Being a collaborator<a class="headerlink" href="#being-a-collaborator" title="Permalink to this heading"></a></h3>
+<p><em>Note: you will receive an email with the invitation.</em></p>
+<ul class="simple">
+<li><p>Log in your Heroku account. You will see the apps you are collaborating to in the same list than your primary app. You can now perform most tasks directly in that one Heroku account (deploys, change variables, …).</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS07.png"><img alt="../../_images/MultiNS07.png" src="../../_images/MultiNS07.png" style="width: 800px;" /></a>
+</br>
+</section>
+</section>
+<section id="atlas">
+<h2>Atlas<a class="headerlink" href="#atlas" title="Permalink to this heading"></a></h2>
+<p>You can invite another user in your organization in order to manage several organizations from the same Atlas account. This is very useful for remote support.</p>
+<section id="invite-another-user">
+<h3>Invite another user<a class="headerlink" href="#invite-another-user" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="https://account.mongodb.com/account/login">Log into</a> your Atlas account.</p>
+</br>
+<ul class="simple">
+<li><p>Top menu, click <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">Manager</span></code> and select <code class="docutils literal notranslate"><span class="pre">Organization</span> <span class="pre">Access</span></code> from the drop down menu</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS08.png"><img alt="../../_images/MultiNS08.png" src="../../_images/MultiNS08.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">Users</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS09.png"><img alt="../../_images/MultiNS09.png" src="../../_images/MultiNS09.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Enter the email address of the person supporting you (that is the email address he used to setup his own Atlas account).</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS10.png"><img alt="../../_images/MultiNS10.png" src="../../_images/MultiNS10.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Organization</span> <span class="pre">Owner</span></code> then click <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">to</span> <span class="pre">Organization</span></code>.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Make sure you enable <code class="docutils literal notranslate"><span class="pre">Organization</span> <span class="pre">Owner</span></code> for the invited user!</strong></p>
+</div>
+<a class="reference internal image-reference" href="../../_images/MultiNS11.png"><img alt="../../_images/MultiNS11.png" src="../../_images/MultiNS11.png" style="width: 600px;" /></a>
+</br>
+</section>
+<section id="being-invited">
+<h3>Being invited<a class="headerlink" href="#being-invited" title="Permalink to this heading"></a></h3>
+<p><em>Note: you will receive an email with the invitation.</em></p>
+<ul class="simple">
+<li><p>Log  in your own Atlas account.</p></li>
+<li><p>Top left, from the drop down menu click the caret and select <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">all</span> <span class="pre">Organizations</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS12.png"><img alt="../../_images/MultiNS12.png" src="../../_images/MultiNS12.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>In the left menu, click <code class="docutils literal notranslate"><span class="pre">Invitations</span></code> then click <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code> the invitation.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS13.png"><img alt="../../_images/MultiNS13.png" src="../../_images/MultiNS13.png" style="width: 800px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Going back to all your organizations you can now see and administer both of them from this account. In the example below <code class="docutils literal notranslate"><span class="pre">Nightscout</span></code> is your own organization and <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Org</span> <span class="pre">2020-09-20</span></code> is a guest organization.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS14.png"><img alt="../../_images/MultiNS14.png" src="../../_images/MultiNS14.png" style="width: 800px;" /></a>
+</br>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can rename your organizations from the top left cog (Settings) then clicking the pen icon.</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/MultiNS15.png"><img alt="../../_images/MultiNS15.png" src="../../_images/MultiNS15.png" style="width: 600px;" /></a>
+</br>
+</section>
+</section>
+<section id="northflank">
+<h2>Northflank<a class="headerlink" href="#northflank" title="Permalink to this heading"></a></h2>
+<p>You can setup two Nightscout sites per Northflank account. The 20$ per month credit applies.</p>
+<p>You can setup teammates in Northflank.</p>
+</br>
+<section id="invite-a-teammate">
+<h3>Invite a teammate<a class="headerlink" href="#invite-a-teammate" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Log into your Northflank account and select <code class="docutils literal notranslate"><span class="pre">Overview</span></code>, in <code class="docutils literal notranslate"><span class="pre">Members</span></code> click <strong><code class="docutils literal notranslate"><span class="pre">+</span></code></strong> to add a teammate.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/NorthflankS1.png"><img alt="../../_images/NorthflankS1.png" src="../../_images/NorthflankS1.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Enter the email address of the person supporting you (that is the email address he used to setup his own Northflank account). Add <code class="docutils literal notranslate"><span class="pre">Admin</span></code> privileges if you want him to interact with your data, leave <code class="docutils literal notranslate"><span class="pre">Default</span></code> for an observer.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/NorthflankS2.png"><img alt="../../_images/NorthflankS2.png" src="../../_images/NorthflankS2.png" style="width: 400px;" /></a>
+</br>
+<ul class="simple">
+<li><p>You can manage teammates in <code class="docutils literal notranslate"><span class="pre">Members</span></code>: change privileges and delete them, or revoke invitations.</p></li>
+</ul>
+</br>
+</section>
+<section id="id1">
+<h3>Being invited<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>You will receive an email with the invitation.</p>
+<p>You will see the invitee project with yours.</p>
+</br>
+</section>
+</section>
+<section id="railway">
+<h2>Railway<a class="headerlink" href="#railway" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open your Railway <a class="reference external" href="https://railway.app/dashboard">dashboard</a> and select your project.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/RailwayM15.png"><img alt="../../_images/RailwayM15.png" src="../../_images/RailwayM15.png" style="width: 400px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Top right select <code class="docutils literal notranslate"><span class="pre">Settings</span></code> and <code class="docutils literal notranslate"><span class="pre">Members</span></code>.</p></li>
+<li><p>Enter the email address of the person supporting you (that is the email address he used to setup his own Railway account). Select <code class="docutils literal notranslate"><span class="pre">Can</span> <span class="pre">Edit</span></code> privileges if you want him to interact with your data, leave <code class="docutils literal notranslate"><span class="pre">Can</span> <span class="pre">View</span></code> for an observer.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/RailwayS1.png"><img alt="../../_images/RailwayS1.png" src="../../_images/RailwayS1.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Confirm the invite with <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">to</span> <span class="pre">project</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/RailwayS2.png"><img alt="../../_images/RailwayS2.png" src="../../_images/RailwayS2.png" style="width: 400px;" /></a>
+</br>
+<section id="id2">
+<h3>Being invited<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>You will receive an email with the invitation.</p>
+<p>You will see the invitee project with yours.</p>
+</br>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

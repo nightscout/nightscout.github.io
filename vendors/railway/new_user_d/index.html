@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mandatory variables &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Mandatory variables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/railway/new_user_d.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>a) Click on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">New</span> <span class="pre">project</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Railway06.png"><img alt="../../../_images/Railway06.png" src="../../../_images/Railway06.png" style="width: 400px;" /></a></br></p>
+<p>If you don’t see that, top right, click <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RailwayDB01.png"><img alt="../../../_images/RailwayDB01.png" src="../../../_images/RailwayDB01.png" style="width: 200px;" /></a></br></p>
+</br>
+<p>b) Select <code class="docutils literal notranslate"><span class="pre">Empty</span> <span class="pre">project</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RailwayD01.png"><img alt="../../../_images/RailwayD01.png" src="../../../_images/RailwayD01.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>c) Select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">a</span> <span class="pre">Service</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RailwayD02.png"><img alt="../../../_images/RailwayD02.png" src="../../../_images/RailwayD02.png" style="width: 300px;" /></a></br></p>
+</br>
+<p>d) Select <code class="docutils literal notranslate"><span class="pre">Docker</span> <span class="pre">Image</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RailwayD03.png"><img alt="../../../_images/RailwayD03.png" src="../../../_images/RailwayD03.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>e) In the field <code class="docutils literal notranslate"><span class="pre">Name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Image</span></code> type:</p>
+<p><code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor:latest</span></code></p>
+<p>and press &lt;Enter&gt;</p>
+<p><a class="reference internal" href="../../../_images/RailwayD04.png"><img alt="../../../_images/RailwayD04.png" src="../../../_images/RailwayD04.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>f) Select your new service.</p>
+<p><a class="reference internal" href="../../../_images/RailwayD05.png"><img alt="../../../_images/RailwayD05.png" src="../../../_images/RailwayD05.png" style="width: 300px;" /></a></br></p>
+</br>
+<p>g) Select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">variables</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RailwayM20.png"><img alt="../../../_images/RailwayM20.png" src="../../../_images/RailwayM20.png" style="width: 400px;" /></a></br></p>
+</br>
+<p>h) Now we need to setup our Nightscout variables.<br />
+Click on <code class="docutils literal notranslate"><span class="pre">Raw</span> <span class="pre">Editor</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RailwayM21b.png"><img alt="../../../_images/RailwayM21b.png" src="../../../_images/RailwayM21b.png" style="width: 700px;" /></a></br></p>
+<p>The raw editor will open, leave it like this for now.</p>
+<p><a class="reference internal" href="../../../_images/RailwayM21c.png"><img alt="../../../_images/RailwayM21c.png" src="../../../_images/RailwayM21c.png" style="width: 500px;" /></a></br></p>
+</br>
+<p>i) Compile the information below.</p>
+<p>File all necessary fields, click on the Validate button at the bottom of the form, if no error is seen you will have all variables displayed in the text box at the bottom, click on the Copy All button.</p>
+<p><a class="reference internal" href="../../../_images/Railway42.png"><img alt="../../../_images/Railway42.png" src="../../../_images/Railway42.png" style="width: 600px;" /></a></br></p>
+<section id="mandatory-variables">
+<h1>Mandatory variables<a class="headerlink" href="#mandatory-variables" title="Permalink to this heading"></a></h1>
+<p>These three variables below must have a value.</p>
+<p><strong>MONGODB_URI</strong></p>
+<p>The MongoDB Connection String to connect to your MongoDB cluster. If you don’t have this from your Mongo database, please re-read installation instructions at <a class="reference external" href="https://nightscout.github.io/nightscout/database">Nightscout database</a> before continuing</p>
+<p><input type="text" id="MONGODB_URI" value="" size="100"></br></p>
+<p><strong>API_SECRET</strong></p>
+<p><input type="text" id="API_SECRET" value="" size="40"></br></p>
+<p>A passphrase that must be at least 12 characters long. Avoid special characters, which can cause problems in some cases</p>
+<p><strong>DISPLAY_UNITS</strong></p>
+<select id="DISPLAY_UNITS">
+    <option value="MGDL" selected="selected">mg/dl</option>
+	<option value="MMOL">mmol/l</option></select></br>
+</br>Preferred BG units for the site: `mg/dl` or `mmol/l` (or just `mmol`)
+</br>
+</section>
+<section id="customizations">
+<h1>Customizations<a class="headerlink" href="#customizations" title="Permalink to this heading"></a></h1>
+<p>Leave default values if you don’t want to change them</p>
+<p><strong>CUSTOM_TITLE</strong></p>
+<p><input type=text id=CUSTOM_TITLE value="Nightscout" size=40></br></p>
+<p>The display name for the Nightscout site. Appears in the upper left of the main view. Often set to the name of the CGM wearer</p>
+<p><strong>THEME</strong></p>
+<select id="THEME">
+      <option value="COLORS" selected="selected">colors</option>
+      <option value="DEFAULT">default</option>
+      <option value="COLORBLINDFRIENDLY">colorblindfriendly</option></select></br>
+</br>Default setting for new browser views for the color theme of the CGM graph. (`default` `colors` or `colorblindfriendly`)
+<p><strong>ENABLE</strong></p>
+<p><input type=text id=ENABLE value="careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors" size=100></br></p>
+<p>Plugins to enable for your site. Must be a space-delimited lower-case list. Include the word <code class="docutils literal notranslate"><span class="pre">bridge</span></code> here if you are receiving data from the Dexcom Share service</p>
+<p><strong>SHOW_PLUGINS</strong></p>
+<p><input type=text id=SHOW_PLUGINS value="careportal dbsize" size=100></br></p>
+<p>Default setting for whether or not these plugins are checked (active) by default not merely enabled. Include plugins here as in the ENABLE line; space-separated and lower-case</p>
+<p><strong>TIME_FORMAT</strong></p>
+<select id="TIME_FORMAT">
+        <option value="TWELVE" selected="selected">12</option>
+        <option value="TWENTYFOUR">24</option></select></br>
+</br>Default setting for new browser views for the time mode. (`12` or `24`)
+<p><strong>NIGHT_MODE</strong></p>
+<select id="NIGHT_MODE">
+        <option value="OFF" selected="selected">off</option>
+    <option value="ON">on</option></select></br>
+</br>Default setting for new browser views for whether Night Mode should be enabled. (`on` or `off`)
+<p><strong>BOLUS_RENDER_OVER</strong></p>
+<p><input type=text id=BOLUS_RENDER_OVER value="1" size=10></br></p>
+<p>U value over which the bolus values are rendered on the chart if the <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">U</span> <span class="pre">and</span> <span class="pre">Over</span></code> option is selected</p>
+</br>
+</section>
+<section id="dexcom-share">
+<h1>Dexcom Share<a class="headerlink" href="#dexcom-share" title="Permalink to this heading"></a></h1>
+<p>If you want Nightscout to import directly from Dexcom Share</p>
+<p><strong>BRIDGE_USER_NAME</strong></p>
+<p><input type=text id=BRIDGE_USER_NAME value="" size=40></br></p>
+<p>Your Dexcom account username to receive CGM data from the Dexcom Share service. Also make sure to include <code class="docutils literal notranslate"><span class="pre">bridge</span></code> in your ENABLE line.</p>
+<p><strong>BRIDGE_PASSWORD</strong></p>
+<p><input type=text id=BRIDGE_PASSWORD value="" size=40></br></p>
+<p>Your Dexcom account password to receive CGM data from the Dexcom Share service. Also make sure to include <code class="docutils literal notranslate"><span class="pre">bridge</span></code> in your ENABLE line</p>
+<p><strong>BRIDGE_SERVER</strong></p>
+<select id="BRIDGE_SERVER">
+    <option value="US" selected="selected">US</option>
+    <option value="EU">EU</option></select></br>
+</br>If you are bridging from the Dexcom Share service and are anywhere *outside* the US change this to EU. (`US` or `EU`)
+</br>
+</section>
+<section id="alarms">
+<h1>Alarms<a class="headerlink" href="#alarms" title="Permalink to this heading"></a></h1>
+<p>You can customize alarms or leave them to default values</p>
+<p><strong>ALARM_TYPES</strong></p>
+<select id="ALARM_TYPES">
+    <option value="SIMPLE" selected="selected">simple</option>
+    <option value="PREDICT">predict</option>
+    <option value="SIMPLEPREDICT">simple predict</option></select></br>
+</br>`simple` and/or `predict`v. Simple alarms trigger when BG crosses the various thresholds set below. Predict alarms use a formula that forecasts where the BG is going based on its trend. You will *not* get warnings when crossing the BG thresholds set below when using the predict type
+<p><strong>ALARM_URGENT_HIGH</strong></p>
+<select id="ALARM_URGENT_HIGH">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></br>
+</br>Default setting for new browser views for the Urgent High alarm (triggered when BG crosses BG_HIGH). (`on` or `off`)
+<p><strong>BG_HIGH</strong></p>
+<p><input type=text id=BG_HIGH value="260" size=20></br></p>
+<p>Urgent High BG threshold triggers the <code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_HIGH</span></code> alarm. Set in mg/dL or mmol/L as set in <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> variable</p>
+<p><strong>ALARM_URGENT_LOW</strong></p>
+<select id="ALARM_URGENT_LOW">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></br>
+</br>Default setting for new browser views for the Urgent Low alarm (triggered when BG crosses `BG_LOW`). (`on` or `off`)
+<p><strong>BG_LOW</strong></p>
+<p><input type=text id=BG_LOW value="55" size=20></br></p>
+<p>Urgent Low BG threshold triggers the <code class="docutils literal notranslate"><span class="pre">ALARM_URGENT_LOW</span></code> alarm. Set in mg/dL or mmol/L as set in <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> variable</p>
+<p><strong>ALARM_HIGH</strong></p>
+<select id="ALARM_HIGH">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></br>
+</br>Default setting for new browser views for the High alarm (triggered when BG crosses `BG_TARGET_TOP`). (`on` or `off`)
+<p><strong>BG_TARGET_TOP</strong></p>
+<p><input type=text id=BG_TARGET_TOP value="180" size=20></br></p>
+<p>High BG threshold triggers the <code class="docutils literal notranslate"><span class="pre">ALARM_HIGH</span></code> alarm. Set in mg/dL or mmol/L as set in <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> variable</p>
+<p><strong>ALARM_LOW</strong></p>
+<select id="ALARM_LOW">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></br>
+</br>Default setting for new browser views for the Low alarm (triggered when BG crosses `BG_TARGET_BOTTOM`). (`on` or `off`)
+<p><strong>BG_TARGET_BOTTOM</strong></p>
+<p><input type=text id=BG_TARGET_BOTTOM value="70" size=20></br></p>
+<p>Low BG threshold triggers the <code class="docutils literal notranslate"><span class="pre">ALARM_LOW</span></code> alarm. Set in mg/dL or mmol/L as set in <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> variable</p>
+<p><strong>ALARM_TIMEAGO_URGENT</strong></p>
+<select id="ALARM_TIMEAGO_URGENT">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></br>
+</br>Default setting for new browser views for an urgent alarm when CGM data hasn't been received in the number of minutes set in `ALARM_TIMEAGO_URGENT_MINS`. (`on` or `off`)
+<p><strong>ALARM_TIMEAGO_URGENT_MINS</strong></p>
+<p><input type=text id=ALARM_TIMEAGO_URGENT_MINS value="30" size=20></br></p>
+<p>Default setting for new browser views for the number of minutes since the last CGM reading to trigger an <code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_URGENT</span></code> alarm</p>
+<p><strong>ALARM_TIMEAGO_WARN</strong></p>
+<select id="ALARM_TIMEAGO_WARN">
+    <option value="ON" selected="selected">on</option>
+    <option value="OFF">off</option></br>
+</br>Default setting for new browser views for a warning alarm when CGM data hasn't been received in the number of minutes set in `ALARM_TIMEAGO_WARN_MINS`. (`on` or `off`)
+<p><strong>ALARM_TIMEAGO_WARN_MINS</strong></p>
+<p><input type=text id=ALARM_TIMEAGO_WARN_MINS value="15" size=20></br></p>
+<p>Default setting for new browser views for the number of minutes since the last CGM reading to trigger an <code class="docutils literal notranslate"><span class="pre">ALARM_TIMEAGO_WARN</span></code> alarm</p>
+<script>
+function Validate()
+{
+  var s, e1, e2, e3;
+  e1 = "";
+  e2 = "";
+  e3 = "";
+  s = document.getElementById("MONGODB_URI").value;
+  if(s.search("mongodb")==-1) { e1 = "Bad MONGODB_URI: it should be a mongodb connection string."}
+  else if(s.search("://")==-1) { e1 = "Bad MONGODB_URI: it should be a mongodb connection string."}
+  else if(s.search(" ")!=-1) {e1 = "MONGODB_URI should not contain spaces."}
+  else if(s.search("<")!=-1) {e1 = "MONGODB_URI should not contain < or > characters."}
+  else if(s.search(">")!=-1) {e1 = "MONGODB_URI should not contain < or > characters."}
+  else if(s.indexOf("@")!=s.lastIndexOf("@")) {e1 = "Do not use the character @ in your MONGODB_URI password or user name."};
+  document.getElementById("result1").innerHTML = e1;
+  s = document.getElementById("API_SECRET").value;
+  if(s.search("@")!=-1) { e2 = "Problematic API_SECRET: do not use special characters."}
+  else if(s.search(":")!=-1) { e2 = "Problematic API_SECRET: do not use special characters."}
+  else if(s.search("/")!=-1) { e2 = "Problematic API_SECRET: do not use special characters."}
+  else if(s.search(" ")!=-1) { e2 = "Bad API_SECRET: do not use spaces."}
+  else if(s.length<12) { e2 = "Bad API_SECRET: too short - minimum 12 characters."}
+  document.getElementById("result2").innerHTML = e2;
+  s = document.getElementById("BRIDGE_USER_NAME").value;
+  if(s.length) { s = document.getElementById("BRIDGE_PASSWORD").value;
+  if(s.length) { s = document.getElementById("ENABLE").value;
+  if(s.search("bridge")==-1) { e3 = "Add bridge in ENABLE to get values from Dexcom Share." } } }
+  s = document.getElementById("BRIDGE_USER_NAME").value;
+  if(!s.length) { s = document.getElementById("BRIDGE_PASSWORD").value;
+  if(!s.length) { s = document.getElementById("ENABLE").value;
+  if(s.search("bridge")!=-1) { e3 = "Remove bridge from ENABLE if you don't use Dexcom Share directly to Nightscout." } } }
+  document.getElementById("result3").innerHTML = e3;
+  if((e1.length + e2.length + e3.length)<1)
+  {
+    document.getElementById("result1").innerHTML = "Validation is PASS.";
+    document.getElementById("result3").innerHTML = "Click on the Copy All button below. Go back into Railway raw editor, ENV and paste.";
+    CopyAll();
+  }
+};
+function CopyAll()
+{
+  var sBuffer, sLine, sel;
+  sBuffer = "";
+  sel = document.getElementById("ALARM_HIGH");
+  sLine = "ALARM_HIGH=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sLine + "\n";
+sel = document.getElementById("ALARM_LOW");
+  sLine = "ALARM_LOW=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_TIMEAGO_URGENT");
+  sLine = "ALARM_TIMEAGO_URGENT=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_TYPES");
+  sLine = "ALARM_TYPES=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_TIMEAGO_WARN");
+  sLine = "ALARM_TIMEAGO_WARN=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_URGENT_HIGH");
+  sLine = "ALARM_URGENT_HIGH=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("ALARM_URGENT_LOW");
+  sLine = "ALARM_URGENT_LOW=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("BRIDGE_SERVER");
+  sLine = "BRIDGE_SERVER=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("DISPLAY_UNITS");
+  sLine = "DISPLAY_UNITS=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("NIGHT_MODE");
+  sLine = "NIGHT_MODE=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("THEME");
+  sLine = "THEME=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sel = document.getElementById("TIME_FORMAT");
+  sLine = "TIME_FORMAT=" + sel.options[sel.selectedIndex].text; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "ALARM_TIMEAGO_URGENT_MINS=" + document.getElementById("ALARM_TIMEAGO_URGENT_MINS").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "ALARM_TIMEAGO_WARN_MINS=" + document.getElementById("ALARM_TIMEAGO_WARN_MINS").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "API_SECRET=" + document.getElementById("API_SECRET").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BG_HIGH=" + document.getElementById("BG_HIGH").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BG_LOW=" + document.getElementById("BG_LOW").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BG_TARGET_BOTTOM=" + document.getElementById("BG_TARGET_BOTTOM").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BG_TARGET_TOP=" + document.getElementById("BG_TARGET_TOP").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BOLUS_RENDER_OVER=" + document.getElementById("BOLUS_RENDER_OVER").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BRIDGE_PASSWORD=" + document.getElementById("BRIDGE_PASSWORD").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "BRIDGE_USER_NAME=" + document.getElementById("BRIDGE_USER_NAME").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "CUSTOM_TITLE=" + document.getElementById("CUSTOM_TITLE").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "ENABLE=" + document.getElementById("ENABLE").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "MONGODB_URI=" + document.getElementById("MONGODB_URI").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+sLine = "SHOW_PLUGINS=" + document.getElementById("SHOW_PLUGINS").value; sBuffer = sBuffer + sLine;
+  sBuffer = sBuffer + "\n";
+  document.getElementById("NSVARS").innerHTML = sBuffer;
+};
+function CopyToClipboard() {
+  var copyText = document.getElementById("NSVARS");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+  navigator.clipboard.writeText(copyText.value);
+   alert("Variables copied, now paste them in Railway Raw Editor.");
+}
+</script>
+<p>Now click on the Validate button below</p>
+<p><button onclick="Validate()">-&gt; Validate</button></p>
+<p>If errors show up below, please correct them and click Validate again.</p>
+<p id="result1">Click the button above.</p>
+<p id="result2"></p>
+<p id="result3"></p>
+<p></br></br>
+<button onclick="CopyToClipboard()">Copy All</button>
+</br></br></p>
+<textarea id="NSVARS" name="NSVARS" rows="27" cols="100">
+Once validated you will see all Railway Nightscout variables in this box.
+</textarea></br>
+</br>
+<p>j)  Return to the Railway Raw editor. Paste the result. Click <code class="docutils literal notranslate"><span class="pre">Update</span> <span class="pre">Variables</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/Railway43.png"><img alt="../../../_images/Railway43.png" src="../../../_images/Railway43.png" style="width: 500px;" /></a></br></p>
+</br>
+<p>k) On the top left of the screen <code class="docutils literal notranslate"><span class="pre">Deploy</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RailwayD06.png"><img alt="../../../_images/RailwayD06.png" src="../../../_images/RailwayD06.png" style="width: 800px;" /></a></br></p>
+</br>
+<p>l) Select the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> tab and click <code class="docutils literal notranslate"><span class="pre">Generate</span> <span class="pre">domain</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RailwayD07.png"><img alt="../../../_images/RailwayD07.png" src="../../../_images/RailwayD07.png" style="width: 600px;" /></a></br></p>
+</br>
+<p>m) Edit your Nightscout site name and put yours (one that is not already used).</p>
+<p><a class="reference internal" href="../../../_images/RailwayD08.png"><img alt="../../../_images/RailwayD08.png" src="../../../_images/RailwayD08.png" style="width: 500px;" /></a></br></p>
+</br></section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

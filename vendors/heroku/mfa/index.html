@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heroku MFA &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Update the Heroku stack" href="../../../update/upd_stack/" />
+    <link rel="prev" title="Heroku Basic plan" href="../hobbyplan/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Heroku MFA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#salesforce-authenticator">Salesforce Authenticator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#built-in-authenticator">Built-In Authenticator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#one-time-password-generator">One-Time Password Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#security-key">Security Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recovery-codes">Recovery Codes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Heroku MFA</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/heroku/mfa.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="heroku-mfa">
+<h1>Heroku MFA<a class="headerlink" href="#heroku-mfa" title="Permalink to this heading"></a></h1>
+<p>Multiple factor authentication (MFA) also called 2 factors authentication (2FA) is a safety feature preventing malicious access to an account. Once authenticated with your login and password you will be required to confirm your identity with another method, a second factor authentication.</p>
+<div class="warning admonition">
+<p class="admonition-title">Losing access</p>
+<p>It is recommended to setup at least two MFAs, <strong>one being a copy of the recovery codes</strong>. Salesforce take security very seriously and recovering your account after losing access might range from very complex to impossible. For increased safety, setup more than one authentication method on more than one device.</p>
+</div>
+</br>
+<p>To setup MFA and secure your account select <code class="docutils literal notranslate"><span class="pre">Continue</span></code>.<br />
+If you don’t want to secure your account, select <code class="docutils literal notranslate"><span class="pre">Later</span></code>.</p>
+<p>If you want to enter your account without setting MFA just select <code class="docutils literal notranslate"><span class="pre">Later</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA01.png"><img alt="../../../_images/MFA01.png" src="../../../_images/MFA01.png" style="width: 400px;" /></a>
+</br>
+<p>You will also find the possibility to perform this operation from your Heroku account settings.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA00.png"><img alt="../../../_images/MFA00.png" src="../../../_images/MFA00.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/MFA00a.png"><img alt="../../../_images/MFA00a.png" src="../../../_images/MFA00a.png" style="width: 500px;" /></a>
+</br>
+<p>You will be proposed various authentication options, see the explanation below.</p>
+<p>You should select at least one (Salesforce Authenticator is recommended) but might use more than one (registering a build in authenticator like a fingerprint reader is also a good idea) and you should print your Recovery Codes and keep them together with your Nightscout information.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA02.png"><img alt="../../../_images/MFA02.png" src="../../../_images/MFA02.png" style="width: 500px;" /></a>
+</br>
+<section id="salesforce-authenticator">
+<h2>Salesforce Authenticator<a class="headerlink" href="#salesforce-authenticator" title="Permalink to this heading"></a></h2>
+<p>Salesforce Authenticator relies on an additional app you will need to install on your phone. It is available in the <a class="reference external" href="https://play.google.com/store/apps/details?id=com.salesforce.authenticator">Google Play Store</a> and the <a class="reference external" href="https://apps.apple.com/us/app/salesforce-authenticator/id782057975">Apple Store</a>.</p>
+<div class="admonition-losing-or-removing-the-authenticator-app admonition">
+<p class="admonition-title">Losing or removing the Authenticator app</p>
+<p>It is recommended to setup at least two MFAs, <strong>one being a copy of the recovery codes</strong>. If your only authentication method is this app you will lose access if you remove it or lose/change phone!</p>
+</div>
+<p>If you select this option (use the <code class="docutils literal notranslate"><span class="pre">Add</span></code> button) you will need to install the app to get the passcode called Two-Word Phrase</p>
+<p>Install the app and <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">an</span> <span class="pre">Account</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA03b.png"><img alt="../../../_images/MFA03b.png" src="../../../_images/MFA03b.png" style="width: 300px;" /></a>
+</br>
+<p>The app will give you a Two-Word Phrase (<code class="docutils literal notranslate"><span class="pre">perfect</span> <span class="pre">guide</span></code> in the example below)</p>
+<a class="reference internal image-reference" href="../../../_images/MFA03c.png"><img alt="../../../_images/MFA03c.png" src="../../../_images/MFA03c.png" style="width: 300px;" /></a>
+</br>
+<p>Copy it or type it into the authentication connection window in Salesforce Heroku and select <code class="docutils literal notranslate"><span class="pre">Connect</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA03.png"><img alt="../../../_images/MFA03.png" src="../../../_images/MFA03.png" style="width: 400px;" /></a>
+</br>
+<p>In the app, confirm with <code class="docutils literal notranslate"><span class="pre">Connect</span></code> then <code class="docutils literal notranslate"><span class="pre">Got</span> <span class="pre">It</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA03d.png"><img alt="../../../_images/MFA03d.png" src="../../../_images/MFA03d.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/MFA03e.png"><img alt="../../../_images/MFA03e.png" src="../../../_images/MFA03e.png" style="width: 300px;" /></a>
+</br>
+<p>You will now see Heroku in the app, with a single use code (that you usually won’t need).</p>
+<a class="reference internal image-reference" href="../../../_images/MFA03f.png"><img alt="../../../_images/MFA03f.png" src="../../../_images/MFA03f.png" style="width: 400px;" /></a>
+</br>
+<p>Now, every time you will log into Heroku, you will have to confirm using your phone. Just accept the access.</p>
+</br>
+<p>Once the account added into Salesforce Authenticator you will be able to add another option that is Built-In Authenticator (like a fingerprint reader).</p>
+<a class="reference internal image-reference" href="../../../_images/MFA03g.png"><img alt="../../../_images/MFA03g.png" src="../../../_images/MFA03g.png" style="width: 500px;" /></a>
+</br>
+</section>
+<section id="built-in-authenticator">
+<h2>Built-In Authenticator<a class="headerlink" href="#built-in-authenticator" title="Permalink to this heading"></a></h2>
+<p>You need Salesforce Authenticator setup in order to use this method (see above).</p>
+<p>Adding a built in authenticator will allow you to use your device biometric devices like a fingerprint reader.</p>
+<p>Select <code class="docutils literal notranslate"><span class="pre">Register</span></code> to add this identification method as a second factor. You will not be required to use the Salesforce Authenticator after registration. You can now remove it if you wish (not recommended).</p>
+<a class="reference internal image-reference" href="../../../_images/MFA08.png"><img alt="../../../_images/MFA08.png" src="../../../_images/MFA08.png" style="width: 400px;" /></a>
+<p>Note that you won’t be able to use your fingerprint if created on a computer to unlock your account when using your phone and vice versa. You should add one fingerprint per device type.</p>
+</br>
+</section>
+<section id="one-time-password-generator">
+<h2>One-Time Password Generator<a class="headerlink" href="#one-time-password-generator" title="Permalink to this heading"></a></h2>
+<p>You can use other apps to create your second factor, like Google Authenticator or Microsoft Authenticator apps. You will find both these apps in the Google Play Store and the Apple Store.</p>
+<p>First install one of these apps on your mobile device, then select <code class="docutils literal notranslate"><span class="pre">Add</span></code>.</p>
+<p>Scan the QR code with the app and <code class="docutils literal notranslate"><span class="pre">Connect</span></code>.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA04.png"><img alt="../../../_images/MFA04.png" src="../../../_images/MFA04.png" style="width: 400px;" /></a>
+</br>
+<p>Your Heroku will now be connected to this second factor authentication method and you will have to approve access, when logging into Heroku, with the app you selected.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA04a.png"><img alt="../../../_images/MFA04a.png" src="../../../_images/MFA04a.png" style="width: 300px;" /></a>
+</br>
+</section>
+<section id="security-key">
+<h2>Security Key<a class="headerlink" href="#security-key" title="Permalink to this heading"></a></h2>
+<p>Security key authentication requires you to use a hardware key. You probably won’t be reading this if you own one.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA05.png"><img alt="../../../_images/MFA05.png" src="../../../_images/MFA05.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="recovery-codes">
+<h2>Recovery Codes<a class="headerlink" href="#recovery-codes" title="Permalink to this heading"></a></h2>
+<p>You should enable and keep a copy of your recovery codes. This might eventually be the only way to recover your account access if something goes wrong with the other authentication method. Print a copy and keep it with your Nightscout information together with your diabetes documentation.</p>
+<a class="reference internal image-reference" href="../../../_images/MFA06.png"><img alt="../../../_images/MFA06.png" src="../../../_images/MFA06.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/MFA07.png"><img alt="../../../_images/MFA07.png" src="../../../_images/MFA07.png" style="width: 400px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

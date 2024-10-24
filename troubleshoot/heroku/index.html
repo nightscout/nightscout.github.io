@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshoot Heroku &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Heroku Eco plan" href="../../vendors/heroku/ecoplan/" />
+    <link rel="prev" title="Troubleshoot Railway" href="../railway/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshoot Heroku</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#there-s-nothing-here">There’s nothing here</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-error">Application Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-valid-github-directory-could-not-be-found">A valid GitHub Directory could not be found.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible">Cannot find cgm-remote-monitor in Heroku / No GitHub source visible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cannot-find-cgm-remote-monitor-in-heroku-item-cannot-be-retrieved">Cannot find cgm-remote-monitor in Heroku: Item cannot be retrieved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-can-t-log-into-heroku">I can’t log into Heroku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restart-all-dynos">Restart all dynos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sleeping-app">Sleeping app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cleanup">Cleanup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#maintenance-mode">Maintenance mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-an-app">Delete an app</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#backup-your-site-variables">Backup your site variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#method-1-spreadsheet">Method 1 - Spreadsheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-2-export">Method 2 - Export</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#roll-back-heroku">Roll back Heroku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stop-using-heroku">Stop using Heroku</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshoot Heroku</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/troubleshoot/heroku.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshoot-heroku">
+<h1>Troubleshoot Heroku<a class="headerlink" href="#troubleshoot-heroku" title="Permalink to this heading"></a></h1>
+</br>
+<section id="there-s-nothing-here">
+<span id="heroku-nothing-here"></span><h2>There’s nothing here<a class="headerlink" href="#there-s-nothing-here" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/TShoot57.png"><img alt="../../_images/TShoot57.png" src="../../_images/TShoot57.png" style="width: 400px;" /></a>
+<p>If you didn’t upgrade Heroku to an Eco or Basic plan, you need to <a class="reference internal" href="../../nightscout/new_user/"><span class="doc std std-doc">create a new Nightscout site</span></a> and <a class="reference internal" href="../atlas/#recover-your-connection-string"><span class="std std-ref">recover your MongoDB Atlas connection string</span></a>.</p>
+<p>If you just upgraded to an Eco or Basic plan, make sure you enabled the web app (that turned off when the Free plan was removed).</p>
+<a class="reference internal image-reference" href="../../_images/TShoot58.png"><img alt="../../_images/TShoot58.png" src="../../_images/TShoot58.png" style="width: 600px;" /></a>
+<p>If you just tried to deploy a new Nightscout site, something went wrong. <a class="reference internal" href="#cleanup">Cleanup</a> your Heroku apps and retry…</p>
+</br>
+</section>
+<section id="application-error">
+<h2>Application Error<a class="headerlink" href="#application-error" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/TShoot05.png"><img alt="../../_images/TShoot05.png" src="../../_images/TShoot05.png" style="width: 500px;" /></a>
+<p><a class="reference internal" href="../../update/update/"><span class="std std-doc">Update Nightscout to latest release</span></a>. It might not fix your issue but it will help find a solution.</p>
+<ul class="simple">
+<li><p>Check your MongoDB Atlas <a class="reference internal" href="../atlas/#database-full"><span class="std std-ref">database is not full</span></a>.</p></li>
+<li><p>If you’re creating a new Nightscout site, it might have failed because of a <a class="reference internal" href="../atlas/#unable-to-connect-to-mongo"><span class="std std-ref">wrong connection string</span></a>.</p></li>
+<li><p>If you don’t see any good reason <a class="reference internal" href="#restart-all-dynos">restart all dynos</a>.</p></li>
+</ul>
+</br>
+</section>
+<section id="a-valid-github-directory-could-not-be-found">
+<h2>A valid GitHub Directory could not be found.<a class="headerlink" href="#a-valid-github-directory-could-not-be-found" title="Permalink to this heading"></a></h2>
+<p>When trying to deploy a new Nightscout site, this message appears when clicking <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">to</span> <span class="pre">Heroku</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/TShoot00.png"><img alt="../../_images/TShoot00.png" src="../../_images/TShoot00.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>Change browser and retry.</p></li>
+</ul>
+</br>
+</section>
+<section id="cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible">
+<span id="heroku-nogit"></span><h2>Cannot find cgm-remote-monitor in Heroku / No GitHub source visible<a class="headerlink" href="#cannot-find-cgm-remote-monitor-in-heroku-no-github-source-visible" title="Permalink to this heading"></a></h2>
+<p>When updating Nightscout, <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> doesn’t appear automatically in Heroku under your repository name.</p>
+<a class="reference internal image-reference" href="../../_images/TShoot01.png"><img alt="../../_images/TShoot01.png" src="../../_images/TShoot01.png" style="width: 800px;" /></a>
+<p>When updating Nightscout, your repository name doesn’t appear in <code class="docutils literal notranslate"><span class="pre">Manual</span> <span class="pre">Deploy</span></code> so that you can’t select the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
+<a class="reference internal image-reference" href="../../_images/TShoot04.png"><img alt="../../_images/TShoot04.png" src="../../_images/TShoot04.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Disconnect</span></code> and re-<code class="docutils literal notranslate"><span class="pre">Connect</span></code> like this:</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/UpdateNS22.png"><img alt="../../_images/UpdateNS22.png" src="../../_images/UpdateNS22.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../_images/UpdateNS21.png"><img alt="../../_images/UpdateNS21.png" src="../../_images/UpdateNS21.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>If it doesn’t help try to re-authorize as explained below:</p></li>
+</ul>
+</br>
+</section>
+<section id="cannot-find-cgm-remote-monitor-in-heroku-item-cannot-be-retrieved">
+<h2>Cannot find cgm-remote-monitor in Heroku: Item cannot be retrieved<a class="headerlink" href="#cannot-find-cgm-remote-monitor-in-heroku-item-cannot-be-retrieved" title="Permalink to this heading"></a></h2>
+<p>When updating Nightscout, <code class="docutils literal notranslate"><span class="pre">cgm-remote-monitor</span></code> doesn’t appear automatically in Heroku under your repository name and an error message appears when you try to connect to GitHub.</p>
+<a class="reference internal image-reference" href="../../_images/TShoot02.png"><img alt="../../_images/TShoot02.png" src="../../_images/TShoot02.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>In Heroku, go to <code class="docutils literal notranslate"><span class="pre">Account</span> <span class="pre">Settings</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/NewNS13.png"><img alt="../../_images/NewNS13.png" src="../../_images/NewNS13.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Applications</span></code> and click <code class="docutils literal notranslate"><span class="pre">Re-authorize</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/TShoot03.png"><img alt="../../_images/TShoot03.png" src="../../_images/TShoot03.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Authorize</span> <span class="pre">GitHub</span></code> in the pop-up.</p></li>
+<li><p>If it doesn’t help, you can also try to <code class="docutils literal notranslate"><span class="pre">Revoke</span> <span class="pre">access</span></code>… before going back to Re-<code class="docutils literal notranslate"><span class="pre">Connect</span></code> your GitHub account. This is necessary if someone else did setup Nightscout for you and left his own GitHub connected to your Heroku account.</p></li>
+</ul>
+</br>
+</section>
+<section id="i-can-t-log-into-heroku">
+<h2>I can’t log into Heroku<a class="headerlink" href="#i-can-t-log-into-heroku" title="Permalink to this heading"></a></h2>
+<p>If you lost your password use the <a class="reference external" href="https://id.heroku.com/account/password/reset">password reset option</a>.</p>
+<p>If you lost your authenticator use the recovery codes (that you hopefully saved when <a class="reference internal" href="../../vendors/heroku/mfa/"><span class="doc std std-doc">securing your account)</span></a>.</p>
+<p>If you lost or don’t have anymore access to the email you used to create your Heroku account you will need to deploy a new Nightscout site. You can use the same GitHub account and the same MongodB Atlas database you currently have but will have to use another Nightscout site name in Heroku as the current one is already in use. First <a class="reference internal" href="../atlas/#recover-your-connection-string"><span class="std std-ref">recover your connection string</span></a>, and proceed to <a class="reference internal" href="../../vendors/heroku/new_user/"><span class="doc std std-doc">creating a new Nightscout</span></a> <strong>skipping Step 3</strong>.</p>
+</br>
+</section>
+<section id="restart-all-dynos">
+<h2>Restart all dynos<a class="headerlink" href="#restart-all-dynos" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Log in Heroku, go to <code class="docutils literal notranslate"><span class="pre">Settings</span></code>, <code class="docutils literal notranslate"><span class="pre">More</span></code>, <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">all</span> <span class="pre">dynos</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MigrateNS57.png"><img alt="../../_images/MigrateNS57.png" src="../../_images/MigrateNS57.png" style="width: 800px;" /></a>
+</br>
+</section>
+<section id="sleeping-app">
+<h2>Sleeping app<a class="headerlink" href="#sleeping-app" title="Permalink to this heading"></a></h2>
+<p>Check you app didn’t fall asleep:</p>
+<a class="reference internal image-reference" href="../../_images/TShoot25.png"><img alt="../../_images/TShoot25.png" src="../../_images/TShoot25.png" style="width: 300px;" /></a>
+</br>
+<p>A sleeping app can be due to your Heroku Eco plan: a Basic plan makes the app never sleep. <a class="reference external" href="https://www.heroku.com/pricing">https://www.heroku.com/pricing</a></p>
+<p>Another reason for a sleeping app can be due to a failure to obtain data from Dexcom Share, check the logs to understand the reasons.</p>
+</br>
+</section>
+<section id="cleanup">
+<h2>Cleanup<a class="headerlink" href="#cleanup" title="Permalink to this heading"></a></h2>
+<p>If you experience issues during deployment you might end up with many apps. Make sure you keep the last one that was functional or <a class="reference internal" href="#delete-an-app">delete</a> all before attempting a new deployment. This will just make it easier to find which app you’re trying to build. Keeping sleeping apps doesn’t have any negative impact but no real advantage unless you do it on purpose.</p>
+<p>Make sure the app you’re using for Nightscout is running on an Eco/Basic tier.</p>
+<p>If you’re not convinced you want to delete an app, make sure to put it in maintenance mode to understand if you use it as the related Nightscout site will report offline for maintenance.</p>
+</br>
+<section id="maintenance-mode">
+<h3>Maintenance mode<a class="headerlink" href="#maintenance-mode" title="Permalink to this heading"></a></h3>
+<p>Maintenance mode is useful to troubleshoot Dexcom and CareLink accounts locked and also if you need to modify several variables without having Nightscout restarting every change.</p>
+<p>You can also put your Nightscout in maintenance mode if you won’t use it for an extended period of time.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Putting your site in maintenance mode won’t stop billing!</strong></br></br>
+You also need to disable the web service for this.</br></br>
+<a class="reference internal" href="../../_images/TShoot59.png"><img alt="../../_images/TShoot59.png" src="../../_images/TShoot59.png" style="width: 600px;" /></a></p>
+</div>
+<p>Be aware that your MongoDB Atlas database might also go in sleep mode and you will need to <a class="reference internal" href="../atlas/#mongodb-paused"><span class="std std-ref">restart it manually</span></a>.</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup00a.png"><img alt="../../_images/Cleanup00a.png" src="../../_images/Cleanup00a.png" style="width: 500px;" /></a>
+</br>
+</section>
+<section id="delete-an-app">
+<h3>Delete an app<a class="headerlink" href="#delete-an-app" title="Permalink to this heading"></a></h3>
+<p>Deleting an Heroku app does <strong>not</strong> delete your Nightscout data, but you might want to write down your variables (definitely backup your connection string) if your site was functional before. Note that you can also rename an app (unless the name is already in use in heroku.com).</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup00.png"><img alt="../../_images/Cleanup00.png" src="../../_images/Cleanup00.png" style="width: 300px;" /></a>
+<p>To delete an app, select it and go to <code class="docutils literal notranslate"><span class="pre">Settings</span></code>, scroll down to <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">App</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Cleanup01.png"><img alt="../../_images/Cleanup01.png" src="../../_images/Cleanup01.png" style="width: 600px;" /></a>
+<p>Copy and paste your app name to confirm deletion,</p>
+<a class="reference internal image-reference" href="../../_images/Cleanup02.png"><img alt="../../_images/Cleanup02.png" src="../../_images/Cleanup02.png" style="width: 600px;" /></a>
+</br>
+</section>
+</section>
+<section id="backup-your-site-variables">
+<h2>Backup your site variables<a class="headerlink" href="#backup-your-site-variables" title="Permalink to this heading"></a></h2>
+<p>Having a copy of your variables is very important since some of them are vital to your site like MONGODB_URI and your access to it like API_SECRET.</p>
+<section id="method-1-spreadsheet">
+<h3>Method 1 - Spreadsheet<a class="headerlink" href="#method-1-spreadsheet" title="Permalink to this heading"></a></h3>
+<p>Log into <a class="reference external" href="https://dashboard.heroku.com/apps">Heroku</a>, select your app.<br />
+Reveal your Heroku Nightscout app <a class="reference internal" href="../../vendors/heroku/new_user/#editing-config-vars-in-heroku"><span class="std std-ref">Config Vars</span></a> and copy all variables names and values in a spreadsheet.</p>
+</section>
+<section id="method-2-export">
+<h3>Method 2 - Export<a class="headerlink" href="#method-2-export" title="Permalink to this heading"></a></h3>
+<p>Log into <a class="reference external" href="https://dashboard.heroku.com/apps">Heroku</a>, select your app.<br />
+Click on the top right <code class="docutils literal notranslate"><span class="pre">More</span></code> button and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">console</span></code>.</p>
+<a class="reference internal image-reference" href="../../_images/HerokuM01.png"><img alt="../../_images/HerokuM01.png" src="../../_images/HerokuM01.png" style="width: 300px;" /></a>
+<p>In the console command line type the command below, then click <code class="docutils literal notranslate"><span class="pre">Run</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export `heroku config -s`
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/HerokuM02.png"><img alt="../../_images/HerokuM02.png" src="../../_images/HerokuM02.png" style="width: 600px;" /></a>
+<p>Wait until the command completes.</p>
+<a class="reference internal image-reference" href="../../_images/HerokuM03.png"><img alt="../../_images/HerokuM03.png" src="../../_images/HerokuM03.png" style="width: 500px;" /></a>
+<p>Save the session: it contains all your variables and values (and a few useless things).</p>
+<a class="reference internal image-reference" href="../../_images/HerokuM04.png"><img alt="../../_images/HerokuM04.png" src="../../_images/HerokuM04.png" style="width: 300px;" /></a>
+<p>Edit the file with a text editor and remove the first line <code class="docutils literal notranslate"><span class="pre">(bash:</span> <span class="pre">line</span> <span class="pre">1:</span> <span class="pre">heroku:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found)</span></code>.<br />
+Using find and replace, get rid of all <code class="docutils literal notranslate"><span class="pre">declare</span> <span class="pre">-x</span></code>.<br />
+Delete the following Heroku specific variables:</p>
+<p><code class="docutils literal notranslate"><span class="pre">DYNO=&quot;run.6309&quot;</span> <span class="pre">HOME=&quot;/app&quot;</span> <span class="pre">MEMORY_AVAILABLE=&quot;512&quot;</span> <span class="pre">NODE_ENV=&quot;production&quot;</span> <span class="pre">NODE_HOME=&quot;/app/.heroku/node&quot;</span> <span class="pre">OLDPWD</span> <span class="pre">PATH=&quot;/app/.heroku/node/bin:/app/.heroku/yarn/bin:/usr/local/bin:/usr/bin:/bin:/app/bin:/app/node_modules/.bin&quot;</span> <span class="pre">PORT=&quot;6489&quot;</span> <span class="pre">PS1=&quot;\\[\\033[01;34m\\]\\w\\[\\033[00m\\]</span> <span class="pre">\\[\\033[01;32m\\]\$</span> <span class="pre">\\[\\033[00m\\]&quot;</span> <span class="pre">PWD=&quot;/app&quot;</span> <span class="pre">SHLVL=&quot;1&quot;</span> <span class="pre">TERM=&quot;xterm-256color&quot;</span> <span class="pre">WEB_CONCURRENCY=&quot;1&quot;</span> <span class="pre">WEB_MEMORY=&quot;512&quot;</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Save this file in a safe place.</br>Call it <code class="docutils literal notranslate"><span class="pre">heroku.env</span></code> as it’s your Heroku environment variables.</p>
+</div>
+</br>
+</section>
+</section>
+<section id="roll-back-heroku">
+<h2>Roll back Heroku<a class="headerlink" href="#roll-back-heroku" title="Permalink to this heading"></a></h2>
+</br>
+<p>Roll back can be really useful in case of mistakes and when awaiting bug fixes in minor releases.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You can only roll back to a version that was previously deployed to your Heroku app.</p>
+</div>
+<p>Heroku keeps history of variables modifications and previous deploys so that you can return to a previous state easily in the cases of a configuration mistake or a bad deploy (like a bugged version). When rolling back to a previous deploy keep in mind all variables modified in the mean time will return to the value they had at that time.</p>
+<p>Since the database is external to Heroku, it will not be impacted by a roll back.</p>
+</br>
+<ul class="simple">
+<li><p>Log into <a class="reference external" href="https://id.heroku.com/login">Heroku</a>.</p></li>
+<li><p>Select your Nightscout app and go to  <code class="docutils literal notranslate"><span class="pre">Activity</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Downgrade00.png"><img alt="../../_images/Downgrade00.png" src="../../_images/Downgrade00.png" style="width: 600px;" /></a>
+</br>
+<ul class="simple">
+<li><p>You will see a list of events called <code class="docutils literal notranslate"><span class="pre">Activity</span> <span class="pre">Feed</span></code> and some indicated as possible roll-back points. Identify the last good situation and select <code class="docutils literal notranslate"><span class="pre">Roll</span> <span class="pre">back</span> <span class="pre">to</span> <span class="pre">here</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Downgrade01.png"><img alt="../../_images/Downgrade01.png" src="../../_images/Downgrade01.png" style="width: 400px;" /></a>
+</br>
+<ul class="simple">
+<li><p>Identify and eventually write down the values of the variables that were changed in the meantime (arrows in the picture below) before selecting <code class="docutils literal notranslate"><span class="pre">Rollback</span></code>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Downgrade02.png"><img alt="../../_images/Downgrade02.png" src="../../_images/Downgrade02.png" style="width: 500px;" /></a>
+</br>
+<p>Upon completion your Heroku will be returned to the state it was at the selected rollback point.</p>
+<p>You can use it like this or upgrade to the latest released version later on.</p>
+</br>
+<ul class="simple">
+<li><p>If you change your mind later you can rollback prior to your rollback and return to the starting point.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Downgrade03.png"><img alt="../../_images/Downgrade03.png" src="../../_images/Downgrade03.png" style="width: 400px;" /></a>
+</br>
+</section>
+<section id="stop-using-heroku">
+<h2>Stop using Heroku<a class="headerlink" href="#stop-using-heroku" title="Permalink to this heading"></a></h2>
+<p>If you want to migrate your data, it is recommended that you do it <strong>before</strong> switching off your Heroku Nightscout.</p>
+<p>To stop using Heroku and suspend billing, you only need to switch off all apps like this:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://id.heroku.com/login">Log</a> into Heroku.</p></li>
+<li><p>Select your app(s) in the dashboard.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/MultiNS00.png"><img alt="../../_images/MultiNS00.png" src="../../_images/MultiNS00.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>In <code class="docutils literal notranslate"><span class="pre">Resources</span></code>, edit (pen icon) and turn off the <code class="docutils literal notranslate"><span class="pre">web</span></code> server switch.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Cleanup031.png"><img alt="../../_images/Cleanup031.png" src="../../_images/Cleanup031.png" style="width: 800px;" /></a>
+<ul class="simple">
+<li><p>Your Heroku Nightscout site will stop and <strong>only the current month</strong> will be billed.</p></li>
+<li><p>You can keep your Heroku account and leave the credit card, once no app is active billing will stop.</p></li>
+<li><p>Your data will not be deleted, make a copy of the <code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> variable if you want to reuse it with another platform, or migrate your database.</p></li>
+<li><p>If you decide you will not use it anymore, once last billing has occurred, you can delete your app(s), credit card and Heroku account.</p></li>
+</ul>
+</br>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

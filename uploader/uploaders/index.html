@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supported Uploaders &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="New Nightscout Users" href="../../nightscout/new_user/" />
+    <link rel="prev" title="Welcome to Nightscout" href="../../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Supported Uploaders</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#diy-closed-loop-systems">DIY Closed loop Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dexcom">Dexcom</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dexcom-g5-g6-one-g7">Dexcom G5/G6/ONE/G7</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#medtronic">Medtronic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glucomen-day">Glucomen Day</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tandem-t-slim-x2">Tandem t:slim X2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#abbott-freestyle-libre">Abbott Freestyle Libre</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#libre-1">Libre 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#libre-2">Libre 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#libre-2-3">Libre 2/3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eversense">Eversense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diasend">Diasend</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Supported Uploaders</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/uploader/uploaders.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="supported-uploaders">
+<h1>Supported Uploaders<a class="headerlink" href="#supported-uploaders" title="Permalink to this heading"></a></h1>
+<p>An <strong>Uploader</strong> is a mechanism or system for uploading the CGM data from your sensor to your Nightscout site. This can be either an electronic solution (usually for older devices), a simple app installed on your phone (for most newer systems) that connects to the sensor/pump and then uploads this data but also another app in the cloud acting as a “bridge” and mirroring data to Nightscout.</p>
+<p>The type of Uploader needed will depend on the type of CGM system being used. In this page, we will break the different systems down by manufacturer, then further by sensor type.</p>
+<p>Once you are clear about the type of sensor and upload system you will be using, you can find detailed configuration information for each one <a class="reference internal" href="../setup/"><span class="std std-doc">here</span></a>.
+</br></p>
+<p>If you’re developing an uploader, you’ll find the API information in your own Nightscout site  at <code class="docutils literal notranslate"><span class="pre">/api-docs</span></code> and <code class="docutils literal notranslate"><span class="pre">/api3-docs</span></code>.</p>
+</br>
+<section id="diy-closed-loop-systems">
+<h2>DIY Closed loop Systems<a class="headerlink" href="#diy-closed-loop-systems" title="Permalink to this heading"></a></h2>
+<p>Only your loop app should upload BG to Nightscout.</p>
+<p>See this <a class="reference internal" href="../../nightscout/close_loop/"><span class="doc std std-doc">dedicated page</span></a> for setup links.</p>
+</br>
+</section>
+<section id="dexcom">
+<h2>Dexcom<a class="headerlink" href="#dexcom" title="Permalink to this heading"></a></h2>
+<section id="dexcom-g5-g6-one-g7">
+<h3>Dexcom G5/G6/ONE/G7<a class="headerlink" href="#dexcom-g5-g6-one-g7" title="Permalink to this heading"></a></h3>
+<a class="reference internal image-reference" href="../../_images/Upload02.png"><img alt="../../_images/Upload02.png" src="../../_images/Upload02.png" style="width: 600px;" /></a>
+<p>If you are using the Dexcom sensor (except ONE) connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as “Dexcom Share”) and you won’t need to use any extra uploader or master device.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dexcom Share is not available with Dexcom ONE. Use xDrip+ or xDrip4iOS.</p>
+</div>
+<p>For this to work, Nightscout must be configured to use the <code class="docutils literal notranslate"><span class="pre">bridge</span></code> plug-in and will then automatically pull the CGM information directly from the Dexcom servers in real-time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you use a <a class="reference internal" href="../../nightscout/close_loop/"><span class="doc std std-doc">DIY closed loop system</span></a> it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and the <code class="docutils literal notranslate"><span class="pre">bridge</span></code> plugin.</p>
+</div>
+<p><em>Please note that at this time (end 2023), the Dexcom G5 system is effectively obsolete but some people are still using stocks of old sensors and transmitters.</em></p>
+<p>If you don’t want to use the official Dexcom apps, you can use <strong>open-source software</strong> apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:</p>
+<p><strong>Android</strong>: xDrip+ for G5, G6, ONE and G7. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. --></p>
+<p><strong>iOS</strong>:<br />
+Spike for G5 and older G6 transmitters (<strong>not Firefly</strong>) <!-- Spike or xDrip4iOS for G4 (1)(3) --><br />
+xDrip4iOS for G5, G6 and ONE transmitters</p>
+<a class="reference internal image-reference" href="../../_images/Upload03.png"><img alt="../../_images/Upload03.png" src="../../_images/Upload03.png" style="width: 600px;" /></a>
+<div class="hint admonition">
+<p class="admonition-title">Dexcom “Firefly” Transmitters</p>
+<p>Most of the useable transmitters that fall into this category at the present time are generally rebatteried or rechargeable/modified transmitters.</p>
+</div>
+</section>
+</section>
+<section id="medtronic">
+<h2>Medtronic<a class="headerlink" href="#medtronic" title="Permalink to this heading"></a></h2>
+<p>If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the <code class="docutils literal notranslate"><span class="pre">mmconnect</span></code> (deprecated) plugin. Unfortunately, this is <strong>not possible anymore with recent pumps (7xx series and above)</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/Upload04.png"><img alt="../../_images/Upload04.png" src="../../_images/Upload04.png" style="width: 600px;" /></a>
+<p>If this isn’t an option and your sensor/transmitter is connected to your pump (Medtronic 600 series pumps), then you’ll need an Android phone connected with an OTG cable to your pump’s connected glucose meter. The phone will need to run the <a class="reference external" href="http://pazaan.github.io/600SeriesAndroidUploader/">600 Series Uploader</a> app.</p>
+<a class="reference internal image-reference" href="../../_images/Upload05.png"><img alt="../../_images/Upload05.png" src="../../_images/Upload05.png" style="width: 600px;" /></a>
+</section>
+<section id="glucomen-day">
+<h2>Glucomen Day<a class="headerlink" href="#glucomen-day" title="Permalink to this heading"></a></h2>
+<p>You can forward your data from GlucoLog Web using an AWS bridge documented <a class="reference external" href="https://github.com/yaronkhazai/gmns-bridge/tree/main/guides">here</a>.</p>
+</section>
+<section id="tandem-t-slim-x2">
+<h2>Tandem t:slim X2<a class="headerlink" href="#tandem-t-slim-x2" title="Permalink to this heading"></a></h2>
+<p>You can synchronize your treatments one way from your Tandem Diabetes t:connect web/mobile application to Nightscout using  a bridge app running via <strong>Pipenv</strong> or <strong>Docker</strong> as documented <a class="reference external" href="https://github.com/jwoglom/tconnectsync">here</a>.</p>
+</section>
+<section id="abbott-freestyle-libre">
+<h2>Abbott Freestyle Libre<a class="headerlink" href="#abbott-freestyle-libre" title="Permalink to this heading"></a></h2>
+<section id="libre-1">
+<h3>Libre 1<a class="headerlink" href="#libre-1" title="Permalink to this heading"></a></h3>
+<p>Non Bluetooth-enabled Freestyle Libre sensors will need an additional transmitter device fixed on top of the sensor to send readings to the uploader device. In release order here are some transmitter options: <a class="reference external" href="https://github.com/JoernL/LimiTTer">LimiTTer</a>, BlueReader, Blucon, MiaoMiao, Bubble, Droplet and Atom.</p>
+<div class="warning admonition">
+<p class="admonition-title">Transmitter Compatibility</p>
+<p>The Libre environment is complex and evolves quickly. Before buying a transmitter, please join the respective Facebook groups and make sure that the transmitter you are planning to buy is compatible with your sensor type.</p>
+</div>
+<p>Most of the transmitters have their own proprietary apps. Nearly all of these support the uploading of data to Nightscout (LinkBluCon, Tomato, Diabox, eDroplet, …). Again, check the transmitter manufacturer’s website and the relevant Facebook support groups for information.</p>
+<p><strong>Open-source apps</strong> such as <strong>xDrip+</strong>, <strong>Juggluco</strong>, <strong>Spike</strong> and <strong>xDrip4iOS</strong> also support some of the above transmitter devices.</p>
+</section>
+<section id="libre-2">
+<h3>Libre 2<a class="headerlink" href="#libre-2" title="Permalink to this heading"></a></h3>
+<p>You can connect to the Libre 2 sensor (<strong>EU only</strong>) without an additional transmitter using <a class="reference external" href="https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip">xDrip+</a>, and <a class="reference external" href="https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre">xDrip4iOS</a>.<br />
+Other Libre 2 sensors can be used directly with <a class="reference external" href="http://jkaltes.byethost16.com/Juggluco/mgdL/index.html">Juggluco</a> and Diabox.</p>
+</section>
+<section id="libre-2-3">
+<h3>Libre 2/3<a class="headerlink" href="#libre-2-3" title="Permalink to this heading"></a></h3>
+<p>You can use the sensor connected with <a class="reference external" href="http://jkaltes.byethost16.com/Juggluco/mgdL/index.html">Juggluco</a> or upload to Nightscout automatically from LibreView servers deploying <a class="reference external" href="https://github.com/timoschlueter/nightscout-librelink-up">this</a> project, or use xDrip+ to perform this operation.</p>
+<p>A new plugin in Nightscout 15 (under development) will integrate the project above.</p>
+</section>
+</section>
+<section id="eversense">
+<h2>Eversense<a class="headerlink" href="#eversense" title="Permalink to this heading"></a></h2>
+<p>In order to get data from the Eversense CGM system, you will need to use the <a class="reference external" href="https://github.com/BernhardRo/Esel/blob/master/apk/debug/app-debug.apk">ESEL</a> app running on an Android phone with the <a class="reference external" href="https://cr4ck3d3v3r53n53.club/">modified</a> vendor app.</p>
+<a class="reference internal image-reference" href="../../_images/Upload06.png"><img alt="../../_images/Upload06.png" src="../../_images/Upload06.png" style="width: 500px;" /></a>
+</section>
+<section id="diasend">
+<h2>Diasend<a class="headerlink" href="#diasend" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https://github.com/burnedikt/diasend-nightscout-bridge">disaend-nightscout-bridge</a> synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout. A 30 minutes delay might occur.</p>
+<p>A new plugin in Nightscout 15 (under development) will integrate the project above.</p>
+</br></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

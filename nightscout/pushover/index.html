@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote notifications &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Troubleshooting Nightscout" href="../../troubleshoot/troubleshoot/" />
+    <link rel="prev" title="IFTTT Integration" href="../ifttt/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Remote notifications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get-prepped">Get Prepped</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-a-google-drive-folder">Add a Google Drive folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-1st-ifttt-applet-to-log-ns-alarms">Make 1st IFTTT Applet to Log NS Alarms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enable-ifttt-webhooks-in-your-nightscout-site">Enable IFTTT Webhooks in your Nightscout site</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-2nd-ifttt-applet-to-send-pushover-notifications">Make 2nd IFTTT Applet to send Pushover notifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#revisit-nightscout-alert-levels">Revisit Nightscout Alert Levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-notes">Final notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vendors/heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Remote notifications</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/nightscout/pushover.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="remote-notifications">
+<h1>Remote notifications<a class="headerlink" href="#remote-notifications" title="Permalink to this heading"></a></h1>
+<p>While Loop app currently sends notifications locally on Loop user’s iPhone, parents and caregivers likely want those messages on their phones, too.  We can achieve this functionality through a combination of Nightscout, IFTTT, Google, and Pushover.</p>
+<p>Traditionally, most people may already know of Pushover alerts through their NS site.  The old Loop docs had set up for how to add your <code class="docutils literal notranslate"><span class="pre">PUSHOVER_ANNOUNCEMENT_KEY</span></code> , <code class="docutils literal notranslate"><span class="pre">PUSHOVER_API_TOKEN</span></code>, and <code class="docutils literal notranslate"><span class="pre">PUSHOVER_USER_KEY</span></code> in your Heroku settings to get notifications on the non-looping phones of parents and caregivers.  The drawback for that method is that you could not necessarily fine-tune the alerts (maybe you wanted battery alarms on your NS website, but not get pushovers for them…a bit hard to separate out the environments that way) and Pushover had a demanding acknowledgment requirement.  If you failed to acknowledge an alert, you may end up getting alarm fatigue fairly quickly as the alarm repeated itself.</p>
+<p>Using Pushover <i><strong>THROUGH</strong></i> IFTTT however, we can improve the possible notifications and who receives which ones.  For example, a teenage Looper may want notifications when his/her pump site needs changing and when his/her Dexcom is about to expire in the next day.  S/he already gets local notifications on his/her phone via Loop for low reservoir volumes, low pump battery, and Loop failures.  Dexcom app provides high/low BG notifications locally, too.  If s/he were to get those same alarms via Pushover, s/he would inevitably get alarm fatigue.  A remotely-monitoring parent may want additional information, like a pushover alert when the school nurse boluses for lunch, as well as Loop failures, low iPhone battery level for the child, low pump battery, and other such information that might be useful.  Perhaps there’s also an emergency contact person that you only want to get high/low BG alerts…you can set that up as well quite easily.</p>
+<p>The basic concept is that NS puts out an event that triggers the IFTTT service called Webhooks (old name was “Maker Webhooks” hence you may see references to “maker” in NS docs).  Actually, there are several types of events that NS has programmed in all ready to use in IFTTT.</p>
+<a class="reference internal image-reference" href="../../_images/ns-core-events.png"><img alt="../../_images/ns-core-events.png" src="../../_images/ns-core-events.png" style="width: 700px;" /></a>
+<p>For this setup, we are going to use the most general logging event called <code class="docutils literal notranslate"><span class="pre">ns-event</span></code>.  You’ll get all the alarms and notifications logged, and then you can decide in subsequent steps which ones you’d actually like to send to your phone for pushover notification.</p>
+<p>As a brief roadmap for what we are going to do:</p>
+<ol class="arabic simple">
+<li><p>Get necessary accounts setup</p></li>
+<li><p>Add a folder to your Google Drive</p></li>
+<li><p>Make an IFTTT applet to log NS events to your Google Spreadsheets</p></li>
+<li><p>Enable NS to work with that new IFTTT applet</p></li>
+<li><p>Make an IFTTT applet to send Pushover alert when the Google Spreadsheet is updated</p></li>
+</ol>
+<section id="get-prepped">
+<h2>Get Prepped<a class="headerlink" href="#get-prepped" title="Permalink to this heading"></a></h2>
+<p>If you don’t already have these steps done, you will need them.  Skip any that you already have done.</p>
+<ul class="simple">
+<li><p>Setup a Nightscout site</p></li>
+<li><p>Get an <a class="reference external" href="https://ifttt.com">IFTTT account</a></p></li>
+<li><p>Get a <a class="reference external" href="https://pushover.net">Pushover Account</a></p></li>
+<li><p>Get a <a class="reference external" href="https://accounts.google.com/SignUp">Google Account</a></p></li>
+<li><p>Download the Pushover app onto your phone, and any other phone you’d like to receive Pushover alerts</p></li>
+<li><p>Download the IFTTT app onto your phone, and any other phone you’d like to use IFTTT applets on</p></li>
+<li><p>Login to the Pushover and IFTTT apps with your login information</p></li>
+</ul>
+</section>
+<section id="add-a-google-drive-folder">
+<h2>Add a Google Drive folder<a class="headerlink" href="#add-a-google-drive-folder" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Login to your Google account and select Google Drive</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/google1.png"><img alt="../../_images/google1.png" src="../../_images/google1.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Click on the blue “New” button and create a new folder named IFTTT.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/google2.png"><img alt="../../_images/google2.png" src="../../_images/google2.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Double click on the newly created IFTTT folder, select the blue “New” button again, and create a new subfolder called “Nightscout-Alarms”</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/google3.png"><img alt="../../_images/google3.png" src="../../_images/google3.png" style="width: 550px;" /></a>
+<p>This IFTTT/Nightscout-Alarms folder will eventually contain numerous Google Spreadsheets, one for each NS alarm or information that is logged.  As new alarms are triggered, the IFTTT applet we are about to write will add a row to the appropriate spreadsheet logging the time of the alarm and any other reported details that go with the entry.  For now though, your drive will be blank…screenshot below just to give you an idea of where we are going.</p>
+<a class="reference internal image-reference" href="../../_images/google4.png"><img alt="../../_images/google4.png" src="../../_images/google4.png" style="width: 550px;" /></a>
+</section>
+<section id="make-1st-ifttt-applet-to-log-ns-alarms">
+<h2>Make 1st IFTTT Applet to Log NS Alarms<a class="headerlink" href="#make-1st-ifttt-applet-to-log-ns-alarms" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Login to your IFTTT.com account and select the “New Applet” button.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_newapplet.png"><img alt="../../_images/IFTTT_newapplet.png" src="../../_images/IFTTT_newapplet.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>In the screen that appears, click on the blue “+this” part of the screen</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_this.png"><img alt="../../_images/IFTTT_this.png" src="../../_images/IFTTT_this.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>In the next screen, type “webhooks” in the search field and then click on the blue connect button</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks1.png"><img alt="../../_images/webhooks1.png" src="../../_images/webhooks1.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>If this is the first time you are using IFTTT Webhooks service, you will have a “Connect” button to select.  If you already have IFTTT applets using Webhooks, you won’t see this screen…just move to the next bullet.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks2.png"><img alt="../../_images/webhooks2.png" src="../../_images/webhooks2.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Click on the “receive a web request” blue box, and then fill in the Event Name as <code class="docutils literal notranslate"><span class="pre">ns-event</span></code> and then press the “Create trigger” button.  (Side note:  the event name used here corresponds to the triggers discussed above for core events that NS already has integrated for IFTTT users.  If you want to, instead, use the other triggers such as ns-warn or ns-urgent, you can.  This example is using the most general trigger so that the options are wider for most users.)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks3.png"><img alt="../../_images/webhooks3.png" src="../../_images/webhooks3.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Click on the blue “+that” text</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_that2.png"><img alt="../../_images/IFTTT_that2.png" src="../../_images/IFTTT_that2.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">google</span></code> in the search field and click on the Google Sheets icon</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks4.png"><img alt="../../_images/webhooks4.png" src="../../_images/webhooks4.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Select the green “Add row to spreadsheet” box</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks5.png"><img alt="../../_images/webhooks5.png" src="../../_images/webhooks5.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Delete the contents of the “Spreadsheet Name” and “Drive folder path”.  For the “Spreadsheet Name”, click the “Add Ingredient” button and select the “Value1”.  For the “Drive folder path”, enter <code class="docutils literal notranslate"><span class="pre">IFTTT/Nightscout-Alarms</span></code>.  You do not have to modify the “Formatted row” box’s contents.  Click the “Create action” button at the bottom.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks6.png"><img alt="../../_images/webhooks6.png" src="../../_images/webhooks6.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Turn off the toggle for receiving notifications when the applet runs, and then click the Finish button</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks7.png"><img alt="../../_images/webhooks7.png" src="../../_images/webhooks7.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>You’ll now have the finished IFTTT applet that will cause a row to be added to a Google spreadsheet…tracking all your NS notifications and alarms.  If it is the first time that alarm has been logged, the applet will also create the spreadsheet itself.  After a while, your IFTTT/Nightscout-Alarms folder will start to look like the screenshot posted above with numerous spreadsheets for each alarm type.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks8.png"><img alt="../../_images/webhooks8.png" src="../../_images/webhooks8.png" style="width: 550px;" /></a>
+</section>
+<section id="enable-ifttt-webhooks-in-your-nightscout-site">
+<h2>Enable IFTTT Webhooks in your Nightscout site<a class="headerlink" href="#enable-ifttt-webhooks-in-your-nightscout-site" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you already have created IFTTT buttons previously to work with your NS site, you can skip this section.  If those buttons are working, then you’ve already added your MAKER_KEY and “maker” to your ENABLE line in Heroku.</p>
+</div>
+<ul class="simple">
+<li><p>To actually make that first applet work, we need to enter a “Maker Key” to get NS and IFTTT talking to each other.  Find your Maker Key by going to your IFTTT account, Services and then clicking on Webhooks.  (Your screen may not have as many services showing; the example account below just happens to already use several services.)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks9.png"><img alt="../../_images/webhooks9.png" src="../../_images/webhooks9.png" style="width: 550px;" /></a>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../../_images/webhooks10.png"><img alt="../../_images/webhooks10.png" src="../../_images/webhooks10.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>You will see your Maker Key as the last part of the URL; copy that last part (the red circled part)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks11.png"><img alt="../../_images/webhooks11.png" src="../../_images/webhooks11.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Navigate to your Heroku account’s settings tab, “reveal config vars” and (1) add your Maker Key to the MAKER_KEY line and (2) add “maker” to your ENABLE line.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_NSkey.png"><img alt="../../_images/IFTTT_NSkey.png" src="../../_images/IFTTT_NSkey.png" style="width: 550px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IFTTT_enable.png"><img alt="../../_images/IFTTT_enable.png" src="../../_images/IFTTT_enable.png" style="width: 550px;" /></a>
+</section>
+<section id="make-2nd-ifttt-applet-to-send-pushover-notifications">
+<h2>Make 2nd IFTTT Applet to send Pushover notifications<a class="headerlink" href="#make-2nd-ifttt-applet-to-send-pushover-notifications" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>In your IFTTT account, select the “New Applet” button.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks12.png"><img alt="../../_images/webhooks12.png" src="../../_images/webhooks12.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>In the screen that appears, click on the blue “+this” part of the screen</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_this.png"><img alt="../../_images/IFTTT_this.png" src="../../_images/IFTTT_this.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>In the next screen, type “google” in the search field and then click on the “Google Sheets” logo.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks4.png"><img alt="../../_images/webhooks4.png" src="../../_images/webhooks4.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Click on the “New row added to spreadsheet” as the trigger.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks13.png"><img alt="../../_images/webhooks13.png" src="../../_images/webhooks13.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Enter the following information:  Folder path is <code class="docutils literal notranslate"><span class="pre">IFTTT/Nightscout-Alarms</span></code> and for the filename you are going to enter the name of the particular NS alarm or information that you would like to get pushover alerts for.  Click on the “Create trigger” button to save the trigger.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks14.png"><img alt="../../_images/webhooks14.png" src="../../_images/webhooks14.png" style="width: 550px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This applet can’t be created unless your filename (alarm spreadsheet) already exists.  If your 1st applet we created above hasn’t run for a long time, the spreadsheets may not exist yet because the alarms haven’t triggered.  You have two options…(1) manually create the file in your Google Drive so that you can finish the applet now or (2) wait several days/weeks for the alarms to happen and that will automatically create the files in your Google drive.</br></br>
+If you choose option 1, here’s a partial list of some of the filenames you could create in advance:</p>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Loop isn&#39;t looping
+* Cannula age 48 hours
+* Cannula age 72 hours
+* Meal Bolus
+* Warning, Pump Reservoir Low
+* Warning Uploader Battery is Low
+* Temporary Override
+
+Depending on your alert levels you specified in NS, some of the hours in the titles may vary to match your settings
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Click on the blue “+that” text</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/IFTTT_that2.png"><img alt="../../_images/IFTTT_that2.png" src="../../_images/IFTTT_that2.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">pushover</span></code> in the search field and click on the Pushover icon.  If this is your first time linking your IFTTT to Pushover, you will be prompted to enter your Pushover account login and allow IFTTT access.  This only needs to be done once.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks15.png"><img alt="../../_images/webhooks15.png" src="../../_images/webhooks15.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Select the “Send a Pushover notification” box</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks16.png"><img alt="../../_images/webhooks16.png" src="../../_images/webhooks16.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Delete the contents of the “Title” and “Message” and “URL” boxes.  For the Title, click the “Add Ingredient” button and add <code class="docutils literal notranslate"><span class="pre">ColumnC</span></code>.  For the “Message”, click the “Add Ingredient” button and add the values of various columns from your spreadsheet for the information you would like to include.  For the alerts: <code class="docutils literal notranslate"><span class="pre">ColumnC</span></code> contains the alarm name, <code class="docutils literal notranslate"><span class="pre">ColumnA</span></code> is the date/time of the alarm, and <code class="docutils literal notranslate"><span class="pre">ColumnD</span></code> has more detailed information about the info/alarm.  This is a pretty decent recipe to follow to get the useful information in your notification.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks17.png"><img alt="../../_images/webhooks17.png" src="../../_images/webhooks17.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Select the “Message Priority” that you would like for this particular alarm type.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks18.png"><img alt="../../_images/webhooks18.png" src="../../_images/webhooks18.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Select the “Device” that you would like to receive this particular alarm type.  The devices listed will be all your devices that have Pushover app installed and logged into.  Click “Create Action” when you are finished.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks19.png"><img alt="../../_images/webhooks19.png" src="../../_images/webhooks19.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>You’ll now have made the IFTTT applet that will cause a Pushover notification to a particular device for a particular NS alarm, once the first applet records the alarm in the google spreadsheet.  Keep the “receive notification when this Applet runs” toggled off and click the Finish button.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks20.png"><img alt="../../_images/webhooks20.png" src="../../_images/webhooks20.png" style="width: 550px;" /></a>
+</section>
+<section id="revisit-nightscout-alert-levels">
+<h2>Revisit Nightscout Alert Levels<a class="headerlink" href="#revisit-nightscout-alert-levels" title="Permalink to this heading"></a></h2>
+<p>Putting all these notifications together may cause you to want to revisit the alert levels you have set in your Heroku settings.  Here’s a short summary of NS for the looping-related alerts (Note: the last row, Upbat, is the Looping iPhone battery level for Loop users; or the rig’s battery level for OpenAPS users.)  If you’d like some of these alarms for your site and don’t currently have them activated (they are all off by default unless specifically turned on), the lines you’d need to add are in the last column.  If you like the default values of the WARN and/or URGENT, you don’t have to add those extra lines…just the line to enable the alerts will be sufficient.</p>
+<table>
+<thead>
+<tr>
+<th>SETTING</th>
+<th>DEFAULT</br>WARN</th>
+<th>DEFAULT</br>URGENT</th>
+<th>HEROKU</br>SETTINGS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>CAGE</th>
+<td>48</td>
+<td>72</td>
+<td>CAGE_ENABLE_ALERTS = true</br>CAGE_WARN=XX</br>CAGE_URGENT=XX</td>
+</tr>
+<tr>
+<th>SAGE</th>
+<td>164</td>
+<td>168</td>
+<td>SAGE_ENABLE_ALERTS = true</br>SAGE_WARN=XX</br>SAGE_URGENT=XX</td>
+</tr>
+<tr>
+<th>IAGE</th>
+<td>48</td>
+<td>72</td>
+<td>IAGE_ENABLE_ALERTS = true</br>IAGE_WARN=XX</br>IAGE_URGENT=XX</td>
+</tr>
+<tr>
+<th>LOOP</th>
+<td>30</td>
+<td>60</td>
+<td>LOOP_ENABLE_ALERTS = true</br>LOOP_WARN=XX</br>LOOP_URGENT=XX</td>
+</tr>
+<tr>
+<th>OPENAPS</th>
+<td>30</td>
+<td>60</td>
+<td>OPENAPS_ENABLE_ALERTS = true</br>OPENAPS_WARN=XX</br>OPENAPS_URGENT=XX</td>
+</tr>
+<tr>
+<th>PUMP_CLOCK</th>
+<td>30</td>
+<td>60</td>
+<td>PUMP_ENABLE_ALERTS = true</br>PUMP_WARN_CLOCK=XX</br>PUMP_URGENT_CLOCK=XX</td>
+</tr>
+<tr>
+<th>PUMP_RES</th>
+<td>10</td>
+<td>5</td>
+<td>PUMP_ENABLE_ALERTS = true</br>PUMP_WARN_RES=XX</br>PUMP_URGENT_RES=XX</td>
+</tr>
+<tr>
+<th>PUMP_BATT_P</th>
+<td>30</td>
+<td>20</td>
+<td>PUMP_ENABLE_ALERTS = true</br>PUMP_WARN_BATT_P=XX</br>PUMP_URGENT_BATT_P=XX</td>
+</tr>
+<tr>
+<th>PUMP_BATT_V</th>
+<td>1.35</td>
+<td>1.30</td>
+<td>PUMP_ENABLE_ALERTS = true</br>PUMP_WARN_BATT_V=XX</br>PUMP_URGENT_BATT_V=XX</td>
+</tr>
+<tr>
+<th>UPBAT</th>
+<td>30</td>
+<td>20</td>
+<td>UPBAT_ENABLE_ALERTS = true</br>UPBAT_WARN=XX</br>UPBAT_URGENT=XX</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="final-notes">
+<h2>Final notes<a class="headerlink" href="#final-notes" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>You can use other notification services than Pushover in the last part of the second applet.  For example, you could use the SMS service to send text notifications to your iPhone instead of Pushover.  The downside for that is that the SMS service is limited to 100 message each month…some users may exceed that pretty easily.  Another alternative notification would be IFTTT’s own Notification service.  This would work well, but does not have the ability to distinguish between devices the way Pushover allows.  If you use IFTTT’s Notifications service, every phone using your IFTTT account will get the notices.</p></li>
+<li><p>To be clear, you do <i><strong>NOT</strong></i> need to have pushover on your ENABLE line nor have <code class="docutils literal notranslate"><span class="pre">PUSHOVER_USER_KEY</span></code>, <code class="docutils literal notranslate"><span class="pre">PUSHOVER_API_TOKEN</span></code>, or <code class="docutils literal notranslate"><span class="pre">PUSHOVER_ANNOUNCEMENT_KEY</span></code> entered into your Heroku settings in order for any of the above to work.  This is not the same Pushover as NS has integrated into its code.  This is actually through IFTTT services, you just need a Pushover account to link to during the 2nd applet setup.</p></li>
+<li><p>To create more notifications, simply repeat the steps for the 2nd applet you created, only this time use a new filename that corresponds to the spreadsheet tracking the alert you’d like notifications for.  You’ll end up with multiple applets of the dark blue type (the pushover notifiers) and only a single light blue (NS alarm general collector).</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks23.png"><img alt="../../_images/webhooks23.png" src="../../_images/webhooks23.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>Here are examples of the Meal Bolus and Temp Basal ns-event logging spreadsheets</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/webhooks21.png"><img alt="../../_images/webhooks21.png" src="../../_images/webhooks21.png" style="width: 550px;" /></a>
+<a class="reference internal image-reference" href="../../_images/webhooks22.png"><img alt="../../_images/webhooks22.png" src="../../_images/webhooks22.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><p>The 1st applet can only create up to 2000 active rows in a given spreadsheet.  After that, the applet will automatically create a new spreadsheet.  For most alarms, it may take quite some time to reach 2000 rows of info.  For other alerts, such as temp basals being set, that may fill up rather fast for the average looper.  You can either clean out the data rows periodically to make room, or update your filename in the 2nd applet periodically when a new spreadsheet is made.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

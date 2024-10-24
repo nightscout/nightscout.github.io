@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step 4: Create your Nightscout service &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip+ for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Step 4: Create your Nightscout service</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/render/new_user_d.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="step-4-create-your-nightscout-service">
+<h1>Step 4: Create your Nightscout service<a class="headerlink" href="#step-4-create-your-nightscout-service" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p>From the <a class="reference external" href="https://dashboard.render.com/">dashboard</a>, create a new Web Service.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD01.png"><img alt="../../../_images/RenderD01.png" src="../../../_images/RenderD01.png" style="width: 300px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Deploy</span> <span class="pre">an</span> <span class="pre">existing</span> <span class="pre">image</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">registry</span></code> then <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD02.png"><img alt="../../../_images/RenderD02.png" src="../../../_images/RenderD02.png" style="width: 400px;" /></a></br></p>
+<ul class="simple">
+<li><p>In the field <code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">URL</span></code> type:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nightscout</span><span class="o">/</span><span class="n">cgm</span><span class="o">-</span><span class="n">remote</span><span class="o">-</span><span class="n">monitor</span><span class="p">:</span><span class="n">latest</span>
+</pre></div>
+</div>
+<p>Then <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p>
+<p><a class="reference internal" href="../../../_images/RenderD03.png"><img alt="../../../_images/RenderD03.png" src="../../../_images/RenderD03.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>In<code class="docutils literal notranslate"><span class="pre">Name</span></code> put the name of your Nightscout site (Render will add an extension if it’s not unique).</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD04.png"><img alt="../../../_images/RenderD04.png" src="../../../_images/RenderD04.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Region</span></code> closer to where you live.</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD05.png"><img alt="../../../_images/RenderD05.png" src="../../../_images/RenderD05.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Free</span></code> instance type, knowing it will fall asleep (we’ll fix that later on).</p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD06.png"><img alt="../../../_images/RenderD06.png" src="../../../_images/RenderD06.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Clicking the button <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">Add</span> <span class="pre">Environment</span> <span class="pre">Variable</span></code> add the following two variables, and in the box on the right the matching value:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HOSTNAME</span>	<span class="mf">0.0.0.0</span>
+<span class="n">PORT</span>		<span class="mi">1337</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../../_images/RenderD07.png"><img alt="../../../_images/RenderD07.png" src="../../../_images/RenderD07.png" style="width: 600px;" /></a></br></p>
+<p><strong>You now need to setup core variables for your site:</strong></p>
+<ul class="simple">
+<li><p>Clicking the button <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">Add</span> <span class="pre">Environment</span> <span class="pre">Variable</span></code> add the following three variables:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MONGODB_URI</span></code> paste your database connection string from Step 0 above</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> will be your Nightscout site password, it needs to be at least 12 characters long and you should <strong>NOT use spaces</strong> if you use &#64; or ! symbols remember you will probably need to express them using <a class="reference external" href="https://en.wikipedia.org/wiki/Percent-encoding#Percent-encoding_reserved_characters">Percent encoding</a> in your uploader and downloader apps. If you’re not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The API_SECRET is the <strong>main password allowing full access to your Nightscout site</strong>. Make sure it’s reasonably secure (mix uppercase and lowercase letters, plus digits) and <strong>do no not share it publicly</strong>. If you think you exposed it by mistake, it is recommended that you <strong>change it</strong>.</p>
+</div>
+<ul class="simple">
+<li><p>Define your <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code></p></li>
+</ul>
+<p>Acceptable choices for the units used in Nightscout are <code class="docutils literal notranslate"><span class="pre">mg/dl</span></code> or <code class="docutils literal notranslate"><span class="pre">mmol/L</span></code> (or just <code class="docutils literal notranslate"><span class="pre">mmol</span></code>).</p>
+<ul class="simple">
+<li><p>Once all three variables have been set, <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">web</span> <span class="pre">Service</span></code></p></li>
+</ul>
+<p><a class="reference internal" href="../../../_images/RenderD08.png"><img alt="../../../_images/RenderD08.png" src="../../../_images/RenderD08.png" style="width: 600px;" /></a></br></p>
+<ul class="simple">
+<li><p>Your Nightscout site will be deployed. Wait until the operation completes after some minutes.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/Render13.png"><img alt="../../../_images/Render13.png" src="../../../_images/Render13.png" style="width: 300px;" /></a>
+<p><a class="reference internal" href="../../../_images/Render14.png"><img alt="../../../_images/Render14.png" src="../../../_images/Render14.png" style="width: 300px;" /></a></br></p>
+<p>Congratulations. You created your new Nightscout site with Render.</p>
+</br>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
