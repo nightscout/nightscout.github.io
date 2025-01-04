@@ -225,11 +225,11 @@ e) You can perform various operations on your variables:
 3. Delete a variable with the bin icon
 
 ~~~{note}
-Multiple lines values should have a `\n` separating each original line.</br>
-Example:</br>
-<img src="/nightscout/img/APNKeys.png" width="600px" /></br>
+Multiple lines values should have a `\n` separating each original line.</br></br>
+Example:</br></br>
+<img src="/nightscout/img/APNKeys.png" width="600px" /></br></br>
 Once the full string copied in the variable, switch to JSON mode and replace **all spaces** with `\n`.</br>
-This will only show correctly in JSON view.</br>
+*Note: This will only show correctly in JSON view.*</br></br>
 <img src="/vendors/northflank/img/APNKeys2.png" width="600px" /></br>
 ~~~
 
