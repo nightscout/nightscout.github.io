@@ -21,7 +21,7 @@ See this [dedicated page](/nightscout/close_loop) for setup links.
 
 ## Dexcom
 
-### Dexcom G5/G6/ONE/G7
+### Dexcom G5/G6/ONE/ONE+/G7/Stelo
 
 <img src="./img/Upload02.png" width="600px" />
 
@@ -41,17 +41,17 @@ If you use a [DIY closed loop system](/nightscout/close_loop) it is recommended 
 
 If you don't want to use the official Dexcom apps, you can use **open-source software** apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:
 
-**Android**: xDrip+ for G5, G6, ONE and G7. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
+**Android**: xDrip+ for G5, G6, ONE, ONE+, Stelo and G7. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
 
 **iOS**:   
 	Spike for G5 and older G6 transmitters (**not Firefly**) <!-- Spike or xDrip4iOS for G4 (1)(3) -->  
-	xDrip4iOS for G5, G6 and ONE transmitters
+	xDrip4iOS for G5, G6, Stelo and ONE/ONE+ transmitters
 
 <img src="./img/Upload03.png"  width="600px"/>
 
 ```{admonition} Dexcom "Firefly" Transmitters
 :class: hint
-Most of the useable transmitters that fall into this category at the present time are generally rebatteried or rechargeable/modified transmitters.
+Most of the useable transmitters that do not fall into this category at the present time are generally rebatteried or rechargeable/modified transmitters.
 ```
 
 ## Medtronic
@@ -108,7 +108,7 @@ In order to get data from the Eversense CGM system, you will need to use the [ES
 
 ## Diasend
 
-[disaend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout. A 30 minutes delay might occur.
+[diasend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout. A 30 minutes delay might occur.
 
 A new plugin in Nightscout 15 (under development) will integrate the project above.
 
