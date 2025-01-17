@@ -45,6 +45,18 @@ Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUser
 
 </br>
 
+### [Enhance-d : The Diabetes and Exercise App](https://www.enhance-d.com/app/download/)
+
+<img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
+
+Combine Diabetes and Exercise Data. Nightscout currently pulls Glucose and Carbohydrate data - with insulin planned soon. Visit the website at [enhance-d.com](https://www.enhance-d.com/)
+</br>
+Available in [Google Play store](https://play.google.com/store/apps/details?id=com.sestanteanalyticsag.enhancedv1) and [Apple iOS App Store](https://apps.apple.com/us/app/enhance-d-diabetes-exercise/id6497331467)
+
+<img src="/nightscout/img/Enhance-d Slide 1.png" width="200px" /><img src="/nightscout/img/Enhance-d Slide 2.png" width="200px" />
+
+</br>
+
 ### [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler)
 
 Available in [Google Play store](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler).
