@@ -53,7 +53,7 @@ Combine Diabetes and Exercise Data. Nightscout currently pulls Glucose and Carbo
 </br>
 Available in [Google Play store](https://play.google.com/store/apps/details?id=com.sestanteanalyticsag.enhancedv1) and [Apple iOS App Store](https://apps.apple.com/us/app/enhance-d-diabetes-exercise/id6497331467)
 
-<img src="/nightscout/img/Enhance-d.png" width="100%" />
+<img src="/nightscout/img/Enhance-d.png" width="400px" />
 
 </br>
 
