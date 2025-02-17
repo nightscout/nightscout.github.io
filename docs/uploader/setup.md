@@ -3,7 +3,7 @@
 </br>
 
 ```{hint}
-You usually should express the Nightscout URL in secure `**https://**`, not only `http://`.
+You usually should express the Nightscout URL in secure **`https://`**, not only `http://`.
 (Unless you set `INSECURE_USE_HTTP` to `true`)
 ```
 
