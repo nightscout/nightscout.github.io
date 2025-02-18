@@ -35,7 +35,7 @@ $ sphinx-build -b dirhtml docs _build
 * Start a local http server to view the documentation
 
 ```bash
-$ cd <nightscout docs location>/_build
+$ cd <nightscout docs location>/_build/dirhtml
 $ python -m http.server
 ```
 
