@@ -29,7 +29,7 @@ $ pip install -r requirements.txt
 
 ```bash
 $ cd <nightscout docs location>
-$ sphinx-build -b dirhtml docs _build
+$ sphinx-build -M dirhtml docs _build
 ```
 
 * Start a local http server to view the documentation
