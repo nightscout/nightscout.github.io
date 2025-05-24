@@ -15,7 +15,7 @@ jobs:
           pip install -r requirements.txt
       - name: Sphinx build
         run: |
-          sphinx-build -M dirhtml docs _build
+          sphinx-build -b dirhtml docs _build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/source' }}
