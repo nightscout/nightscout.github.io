@@ -94,7 +94,8 @@ You can create your new [free](https://northflank.com/pricing) Northflank Nights
 * Can use a professional native Northflank MongoDB database ($)  
 
 **Cons**:  
-* The Nightscout address generated for your site is impossible to remember
+* The Nightscout address generated for your site is impossible to remember  
+* The Northflank Mongo database connection is not 100% reliable
 
 +++
 Follow [these instructions](/vendors/northflank/new_user.md) to build your Nightscout site in Northflank.
@@ -107,10 +108,10 @@ Follow [these instructions](/vendors/northflank/new_user.md) to build your Night
 Fly.io proposed a simple migration wizard from Heroku and you can create your new Nightscout site in Fly.io. Using a computer is mandatory with Fly.io as managing your site will require the use of a command line utility. Not recommended for beginners.
 
 **Pros**:  
-* Nightscout fits in the free tier  
-* Easy to migrate an existing site from Heroku 
+* Reliable platform  
 
 **Cons**:  
+* **Free plan has been removed**  
 * **Maintaining your site requires the use of command line instructions, not very intuitive** 
 * **Doesn't include a database**  
 

@@ -122,10 +122,12 @@ The most common error on initial Nightscout setups is that people incorrectly us
 ## Medtronic CareLink
 
 ```{warning}
-The `mmconnect` plugin is **NOT** functional anymore with recent pumps (7xx).
+The `mmconnect` plugin is **NOT** functional anymore.
 ```
 
-You can use an Android phone with xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up.
+You can use an Android phone with xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up. You can use [Guardian Monitor](https://apps.apple.com/us/app/guardian-monitor/id1546989938) with iOS.
+
+[Home Assistant](https://github.com/yo-han/Home-Assistant-Carelink) also can upload data to Nightscout.
 
 </br>
 

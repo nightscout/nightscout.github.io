@@ -56,15 +56,29 @@ Most vendors will require a credit card to authenticate users and avoid abuse.
 
 </br>
 
+## Hardware DIY
+
+These solutions require specific hardware (they are not cloud based).
+
+Whilst it's not recommended to purchase the hardware for this purpose, if you own it you might consider this option.
+
+You can setup Nightscout on your [NAS](nas), and on some [Amlogic based TV boxes](https://github.com/devmfc/debian-on-amlogic) following [these instructions](https://github.com/Stan-Di/nightscout-amlogic).
+
+<img src="./img/Comparison4.png"  width="700px" />
+
+</br>
+
 ## Paid DIY
 
-These solutions require a monthly fee.
+These solutions will or might require a monthly fee.
+
+Consider the costs against a hosted solution including maintenance and support.
 
 ```{note}
 Paying for a platform doesn't imply your database is included and covered by the plan.
 ```
 
-[Heroku](/vendors/heroku/new_user), [Railway](/vendors/railway/new_user) with or without a [database](/vendors/railway/database), [Fly.io](/vendors/fly.io/new_user), [Northflank database](/vendors/northflank/database) or [NAS](nas)
+[Heroku](/vendors/heroku/new_user), [Railway](/vendors/railway/new_user) with or without a [database](/vendors/railway/database), [Fly.io](/vendors/fly.io/new_user), [Northflank database](/vendors/northflank/database).
 
 <img src="./img/Comparison3.png"  width="700px" />
 

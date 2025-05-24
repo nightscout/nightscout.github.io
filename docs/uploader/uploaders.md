@@ -58,6 +58,10 @@ Most of the useable transmitters that do not fall into this category at the pres
 
 If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` (deprecated) plugin. Unfortunately, this is **not possible anymore with recent pumps (7xx series and above)**.
 
+You can use an Android phone with xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up. You can use [Guardian Monitor](https://apps.apple.com/us/app/guardian-monitor/id1546989938) with iOS.
+
+[Home Assistant](https://github.com/yo-han/Home-Assistant-Carelink) also can upload data to Nightscout.
+
 
 
 <img src="./img/Upload04.png"  width="600px"/>

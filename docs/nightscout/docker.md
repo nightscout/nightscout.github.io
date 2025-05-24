@@ -16,7 +16,7 @@ Build your own Docker hub image
 
 4. Create the image
 
-   docker build . -t cgm-remote-monitor
+   docker build . -t cgm-remote-monitor:tag
 
 5. Get the image ID
 
@@ -29,13 +29,13 @@ Build your own Docker hub image
 
 7. Match your own Docker hub username with your Docker username
 
-   docker image tag 81a5bfa0c365 username/cgm-remote-monitor
+   docker image tag 81a5bfa0c365 username/cgm-remote-monitor:tag
 
 8. Push the image to Docker hub
 
-   docker push username/cgm-remote-monitor
+   docker push username/cgm-remote-monitor:tag
 
-9. Your image is available as username/cgm-remote-monitor
+9. Your image is available as username/cgm-remote-monitor:tag
 
 
 
