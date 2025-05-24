@@ -62,7 +62,7 @@ These solutions require specific hardware (they are not cloud based).
 
 Whilst it's not recommended to purchase the hardware for this purpose, if you own it you might consider this option.
 
-You can setup Nightscout on your [NAS](../advanced/#building-nightscout-inside-your-nas), [Home Assistant](https://github.com/marciogranzotto/addon-nightscout), [Raspberry Pi 4](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705) computer, and on some [Amlogic based TV boxes](https://github.com/devmfc/debian-on-amlogic) following [these instructions](https://github.com/Stan-Di/nightscout-amlogic).
+You can setup Nightscout on your [NAS](/nightscout/advanced.md/#building-nightscout-inside-your-nas), [Home Assistant](https://github.com/marciogranzotto/addon-nightscout), [Raspberry Pi 4](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705) computer, and on some [Amlogic based TV boxes](https://github.com/devmfc/debian-on-amlogic) following [these instructions](https://github.com/Stan-Di/nightscout-amlogic).
 
 <img src="./img/Comparison4.png"  width="700px" />
 
