@@ -42,9 +42,9 @@ We really liked the Railway solution when we found it: it's very simple to migra
 
 ## **[Northflank](/vendors/northflank/new_user)**
 
-***Everybody else is going for Railway and you prefer a safer alternative because you're not afraid of an ugly Nightscout site name? Northflank is a good idea.***
+***You're not afraid of an ugly Nightscout site name? Northflank is an idea.***
 
-Not very sponsored, Northflank is also a good option, simple of use and offering a migration utility. The only issue is trying to remember your Nightscout site name (try `night--spicy-steam--nightscout--ci95-l9xw.code.run` for example). Still, Northflank is a reliable provider. But they will most probably review their free plan in the future.
+Northflank is also an option, simple of use and offering a migration utility. An issue is trying to remember your Nightscout site name (try `night--spicy-steam--nightscout--ci95-l9xw.code.run` for example). Still, Northflank is usually a reliable provider but might throttle free sites for giving more power to paying users, and the database might not respond when interrogated...
 
 ## **Fly.io**
 

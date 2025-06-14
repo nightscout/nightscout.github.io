@@ -23,6 +23,7 @@ You can create your new Northflank Nightscout site with a [MongoDB Atlas](/vendo
 * You can deploy up to $20/mo worth of free resources on Northflank’s managed cloud
 
 **Cons**:  
+* Northflank might throttle free sites when paid users need resources  
 * The Nightscout address generated for your site is virtually impossible to remember
 ```
 

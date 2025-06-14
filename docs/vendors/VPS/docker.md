@@ -12,13 +12,15 @@ If you use another hosting provider, skip Oracle specific instructions and follo
 Original documentation from [Jason](https://github.com/nightscout/nightscout-docker).  
 More from [Andries](https://gist.github.com/Andries-Smit/daac75cd4c06af78cde68c5dec941705) and [Peter](https://github.com/peterleimbach/TestNightscoutDockerUbuntuServer22.04LTS) (traefik as below), [justmara](https://github.com/justmara/ns-setup) and [Ireneusz](https://github.com/ireneusz-ptak/ns-docker).
 
+You can also use [Caddy as reverse proxy](https://github.com/Alderskog/nightscout-in-OCN).
+
 If you want to deploy with CoreOS look [here](https://danielscrivano.com/blog/posts/nightscout/).
+
+If you want to use Nightscout inside a Tailscale tailnet, with Docker Compose, look [here](https://gist.github.com/estradilua/c9a2302d58420177905915fdcd5aedca).
 
 A comprehensive description of the yaml file for mongo and Nightscout setup [here](https://github.com/LostOnTheLine/Nightscout_Docker-Compose).
 
 If you don't own a domain name, get a DDNS name now: see [here](/nightscout/dns).
-
-You can also use [Caddy as reverse proxy](https://github.com/Alderskog/nightscout-in-OCN).
 
 </br>
 
@@ -191,6 +193,8 @@ sudo docker compose down
 sudo docker compose pull
 nohup sudo docker compose up -d &
 ```
+
+</br>
 
 </br>
 
