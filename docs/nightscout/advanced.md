@@ -35,6 +35,10 @@ Some common deployment methods:
 [Ubuntu](/vendors/VPS/ubuntu) commands.  
 [Docker](/vendors/VPS/docker) container.
 
+Other deployments:
+
+Deploy on [NixOS](/vendors/VPS/nixos).
+
 </br>
 
 (nas)=
