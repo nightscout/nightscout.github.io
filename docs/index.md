@@ -274,7 +274,7 @@ update/downgrade/
 nightscout/advanced/
 vendors/VPS/ubuntu/
 vendors/VPS/docker/
-vendor/VPS/nixos/
+vendors/VPS/nixos/
 vendors/NAS/synology/
 ```
 
