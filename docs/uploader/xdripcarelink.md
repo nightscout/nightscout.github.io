@@ -3,7 +3,7 @@
 Since the `mmconnect` plugin is not functional anymore, the best solution to upload automatically your data from CareLink to Nightscout is to use xDrip+.
 
 Download xDrip+ from **[here](https://github.com/NightscoutFoundation/xDrip/releases)** (use the latest pre-release).  
-Once downloaded, install xDrip+ (you can find information [here](https://xdrip.readthedocs.io/en/latest/install/install)).
+Once downloaded, install xDrip+.
 
 </br>
 
@@ -16,9 +16,9 @@ There will be a delay between your pump readings and xDrip+/Nightscout. This is 
 
 Make sure you setup a Share Partner on your CareLink Connect app.
 
-Select [CareLink follower](https://xdrip.readthedocs.io/en/latest/install/carelinkfollow/) as the data source.
+Select CareLink follower as the data source.
 
-Once you have data in xDrip+ you can upload them to Nightscout using Cloud Upload, [Nightscout Sync](https://xdrip.readthedocs.io/en/latest/use/cloud/#nightscout-sync-rest-api).
+Once you have data in xDrip+ you can upload them to Nightscout using Cloud Upload, Nightscout Sync.
 
 Leave Download treatments disabled.
 
@@ -28,8 +28,8 @@ Leave Download treatments disabled.
 
 If the phone you use with the CareLink, Guardian or Minimed app is Android, you can setup xDrip+ to read its notifications and send blood glucose values to Nightscout.
 
- Select [Companion app](https://xdrip.readthedocs.io/en/latest/install/companion/) as the data source.
+ Select Companion app as the data source.
 
-Once you have data in xDrip+ you can upload them to Nightscout using Cloud Upload, [Nightscout Sync](https://xdrip.readthedocs.io/en/latest/use/cloud/#nightscout-sync-rest-api).
+Once you have data in xDrip+ you can upload them to Nightscout using Cloud Upload, Nightscout Sync.
 
 Leave Download treatments disabled.
