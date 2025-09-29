@@ -37,15 +37,13 @@ For this to work, Nightscout must be configured to use the `bridge` plug-in and 
 If you use a [DIY closed loop system](/nightscout/close_loop) it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and the `bridge` plugin.
 ```
 
-*Please note that at this time (end 2023), the Dexcom G5 system is effectively obsolete but some people are still using stocks of old sensors and transmitters.*
-
 If you don't want to use the official Dexcom apps, you can use **open-source software** apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:
 
-**Android**: xDrip+ for G5, G6, ONE, ONE+, Stelo and G7. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
+**Android**: xDrip+ for G6, ONE, ONE+, Stelo and G7. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
 
 **iOS**:   
 	Spike for G5 and older G6 transmitters (**not Firefly**) <!-- Spike or xDrip4iOS for G4 (1)(3) -->  
-	xDrip4iOS for G5, G6, Stelo and ONE/ONE+ transmitters
+	xDrip4iOS for G5, G6, G7, Stelo and ONE/ONE+ transmitters
 
 <img src="./img/Upload03.png"  width="600px"/>
 
@@ -53,6 +51,14 @@ If you don't want to use the official Dexcom apps, you can use **open-source sof
 :class: hint
 Most of the useable transmitters that do not fall into this category at the present time are generally rebatteried or rechargeable/modified transmitters.
 ```
+
+## AccuChek SmartGuide
+
+You can use the sensor connected with [Juggluco](https://www.juggluco.nl/Juggluco/index.html) to upload to Nightscout.
+
+## Sibionics GS1 / Hematonix
+
+You can use the sensor connected with [Juggluco](https://www.juggluco.nl/Juggluco/index.html) to upload to Nightscout.
 
 ## Medtronic
 
@@ -74,6 +80,10 @@ If this isn't an option and your sensor/transmitter is connected to your pump (M
 
 You can forward your data from GlucoLog Web using an AWS bridge documented [here](https://github.com/yaronkhazai/gmns-bridge/tree/main/guides).
 
+## Medtrum
+
+You can use [this Python-based uploader](https://github.com/nl-ruud/nightscout-easyview) that retrieves CGM data from the Medtrum EasyView API and pushes it to a Nightscout instance.
+
 ## Tandem t:slim X2
 
 You can synchronize your treatments one way from your Tandem Diabetes t:connect web/mobile application to Nightscout using  a bridge app running via **Pipenv** or **Docker** as documented [here](https://github.com/jwoglom/tconnectsync).
@@ -93,14 +103,14 @@ Most of the transmitters have their own proprietary apps. Nearly all of these su
 
 **Open-source apps** such as **xDrip+**, **Juggluco**, **Spike** and **xDrip4iOS** also support some of the above transmitter devices.
 
-### Libre 2
+### Libre 2/2+
 
-You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre).  
-Other Libre 2 sensors can be used directly with [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html) and Diabox.
+You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Libre2MinimalL00per.html), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre).  
+Other Libre 2 sensors can be used directly with [Juggluco](https://www.juggluco.nl/Juggluco/index.html) and Diabox.
 
-### Libre 2/3
+### Libre 2/2+/3/3+
 
-You can use the sensor connected with [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html) or upload to Nightscout automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip+ to perform this operation.
+You can use the sensor connected with [Juggluco](https://www.juggluco.nl/Juggluco/index.html) or upload to Nightscout automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip+ to perform this operation.
 
 A new plugin in Nightscout 15 (under development) will integrate the project above.
 
@@ -109,6 +119,8 @@ A new plugin in Nightscout 15 (under development) will integrate the project abo
 In order to get data from the Eversense CGM system, you will need to use the [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/debug/app-debug.apk) app running on an Android phone with the [modified](https://cr4ck3d3v3r53n53.club/) vendor app.
 
 <img src="./img/Upload06.png"  width="500px"/>
+
+You can also use [Juggluco](https://www.juggluco.nl/Juggluco/index.html) or xDrip+ in Companion App mode.
 
 ## Diasend
 
