@@ -265,3 +265,74 @@ networks:
     external: true
 ```
 
+</br>
+
+## Build you own Docker hub image
+
+If you don't have one, create an account in [Docker Hub](https://hub.docker.com/). You will need [Docker](https://docs.docker.com/get-started/get-docker/) on the computer you will use to build your container.
+
+1. Clone the `cgm-remote-monitor` project locally
+
+2. Open a shell in the project root directory
+
+   ```bash
+   cd cgm-remote-monitor
+   ```
+
+3. Login  
+
+   ```bash
+   docker login 
+   ```
+
+    or (put your own credentials)
+
+   ```bash
+   docker login --username username --password xxxxx
+   ```
+
+4. Create the image (`tag` is your branch name)
+
+   ```bash
+   docker build . -t cgm-remote-monitor:tag
+   ```
+
+5. Get the image ID
+
+   ```bash
+   docker image ls
+   ```
+
+   You will see something like this:
+
+   ```bash
+   REPOSITORY           TAG       IMAGE ID       CREATED          SIZE
+   cgm-remote-monitor   latest    81a5bfa0c365   50 seconds ago   263MB
+   ```
+
+6. Create an empty `cgm-remote-monitor` repository in Docker hub
+
+7. Match your own Docker hub username with your Docker username (this is an example from above: you will not use `81a5bfa0c365`, `username` is your own, and so is the `tag`)
+
+   ```bash
+   docker image tag 81a5bfa0c365 username/cgm-remote-monitor:tag
+   ```
+
+8. Push the image to Docker hub
+
+   ```bash
+   docker push username/cgm-remote-monitor:tag
+   ```
+
+9. Your image is available as `username/cgm-remote-monitor:tag`
+
+### Cleanup
+
+After you've pulled many images in your VPS, you might want to save some disk space and cleanup.
+
+```
+docker image prune -a 
+```
+
+
+

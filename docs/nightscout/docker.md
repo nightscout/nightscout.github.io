@@ -12,8 +12,9 @@ Build your own Docker hub image
 2. Open a shell in the project root directory (cd cgm-remote-monitor)
 
 3. Login  
+   docker login  
    docker login --username username --password xxxxx
-
+   
 4. Create the image
 
    docker build . -t cgm-remote-monitor:tag
