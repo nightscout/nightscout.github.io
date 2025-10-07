@@ -14,28 +14,27 @@ Quick list of what you'll need for this set up:
 * Monitor w/ power and HDMI cables (NOTE: The Raspberry 4 and 5 use micro HDMI, so you will need to ensure you have an adapter for that)
 * Cloudflare account 
 * A GitHub account 
-* A Domain Name (Using DigtialPlat)
+* A Domain Name (Using DigitalPlat)
 
 
 
 ![rp](./img/RP1.png)
 
 Unfortunately Raspberry Pis have become more expensive in recent years. However, they are still relatively cheap devices for their form factor and specs. 
-You can pick up a Pi 5 kit for $160 and a Pi 4 kit for $120. Not cheap in anyway, but these are kits that come with all you need. Power cable, micro SD card with an adapter, proper micro HDMI adapter, and also a nice case too.
+You can pick up a Pi 5 kit for $160 and a Pi 4 kit for $120. Not cheap in any way, but these are kits that come with all you need. Power cable, micro SD card with an adapter, proper micro HDMI adapter, and also a nice case too.
 
 ![rp](./img/RP2.png)
 
-You can also go the cheaper route and pick up a Pi 3b for around $20 on ebay. However, you'll still need buy everything else separately including the power supply. 
+You can also go the cheaper route and pick up a Pi 3B for around $20 on ebay. However, you'll still need buy everything else separately including the power supply. 
 
 
 ![rp](./img/RP3.png)
 
-You'll also need to buy a domain as well, but I will get into that later. The domain will be your only reoccurring cost for this entire setup (Besides power of course). 
-
+You'll also need to buy a domain as well, but I will get into that later.
 ## Raspberry Pi Imager
 
 Once you have everything, take both your micro sd card and sd card reader and plug it into your computer. (NOT plugged into your raspberry pi) Next you'll need to install the Raspberry Pi Imager. Link [here](https://www.raspberrypi.com/software/)
-One thing to note is that this set up can be done on Windows, Linux or Mac. Raspberry Pi has imaging software for each OS. Once downloaded, open the imager up and click on `CHOOSE DEVICE`. Depending on which Pi you purchased, you'll need to choose the corresponding device. So for 3 pick 3 and so on. For this tutorial I will be using a Raspberry Pi 3b. The instructions should be the same regardless of which version of the Raspberry Pi you have. If there are unique instructions for a certain version I will mention it.   
+One thing to note is that this setup can be done on Windows, Linux or Mac. Raspberry Pi has imaging software for each OS. Once downloaded, open the imager up and click on `CHOOSE DEVICE`. Depending on which Pi you purchased, you'll need to choose the corresponding device. So for 3 pick 3 and so on. For this tutorial I will be using a Raspberry Pi 3b. The instructions should be the same regardless of which version of the Raspberry Pi you have. If there are unique instructions for a certain version I will mention it.   
 
 ![rp](./img/RP4.png)
 
@@ -44,7 +43,7 @@ Once that is selected, click on the `CHOOSE OS` option. Scroll down a bit and se
 ![rp](./img/RP5.png)
 ![rp](./img/RP6.png)
 
-Finally, click on `CHOOSE STORAGE` and select your micro sd card, if it's not showing up make sure you've plugged it into your computer. If multiple drives are showing, double check which card is associated which drive letter. You do not want to pick the wrong one as it will delete and overwrite all your data. In Windows you can verify this by opening up the File Explorer and click on `This PC`. This will show you all available drives and you can view contents of each one to determine which one is blank and for the Pi:
+Finally, click on `CHOOSE STORAGE` and select your micro sd card, if it's not showing up make sure you've plugged it into your computer. If multiple drives are showing, double check which card is associated with which drive letter. You do not want to pick the wrong one as it will delete and overwrite all your data. In Windows you can verify this by opening up the File Explorer and click on `This PC`. This will show you all available drives and you can view contents of each one to determine which one is blank and for the Pi:
 
 
 ![rp](./img/RP7.png)
@@ -54,7 +53,7 @@ Once you've selected the proper drive, click on `NEXT`. From this pop up, select
 
 ![rp](./img/RP9.png)
 
-On the next screen you can ignore the first option, `Set hostname`. The second option, check `Set username and password`. For user name use `nightscout` and a password with at least 8 characters. Very important to remember this login info. 
+On the next screen you can ignore the first option, `Set hostname`. The second option, check `Set username and password`. For username use `nightscout` and a password with at least 8 characters. Very important to remember this login info. 
 
 ![rp](./img/RP10.png)
 
@@ -70,7 +69,7 @@ Also select `Set locale settings` and choose your timezone. And finally, there i
 
 ![rp](./img/RP13.png)
 
-From there you can click on `SAVE` at the bottom. And then click on `YES`. Click on yes again for the pop up stating that "All existing data will be erased". 
+From there you can click on `SAVE` at the bottom. And then click on `YES`. Click on `YES` again for the pop up stating that "All existing data will be erased". 
 
 ![rp](./img/RP14.png)
 
@@ -121,7 +120,7 @@ Give it a couple minutes before trying to connect again with the same command be
 
 I've created a script for you that'll automatically update the OS and download Docker for you. It'll also download another script that you'll use to configure your Nightscout instance later on. 
 
-You'll be using Docker to automatically download and install Nightscout and all it's dependencies. Don't want to make this too technical, but you can think of Docker as a computer inside a computer. Basically, a virtual machine. (For the mega nerds out there, yes I know docker containers are not comparable to virtual machines, something something they share a kernel, whatever.) Docker calls these virtual machines "Containers". You'll see that I refer to them as "Docker Containers / Containers" most of the time later on in this post. 
+You'll be using Docker to automatically download and install Nightscout and all its dependencies. Don't want to make this too technical, but you can think of Docker as a computer inside a computer. Basically, a virtual machine. (For the mega nerds out there, yes I know docker containers are not comparable to virtual machines, something something they share a kernel, whatever.) Docker calls these virtual machines "Containers". You'll see that I refer to them as "Docker Containers / Containers" most of the time later on in this post. 
 
 Long story short, Docker allows for an easy install of Nightscout. When you deploy the Docker container, Docker does all the work of automatically installing / setting up Nightscout for you! The hardest part of this whole Nightscout set up is really installing docker and getting it running. To make things easy I've provided a script that will download Docker for you. 
 
@@ -152,7 +151,7 @@ This command opens the file up in Nano, which is a commandline based text editor
 
 ![rp](./img/RP24.png)
 
-One thing to note when editing yaml files, NEVER use tabs. Do NOT use the tab key when editing the docker-compose.yaml file. Yaml does not allow for tabs in its config, only use spaces. If you accidentally press tab, just make sure to backspace it or just exit without saving. (`ctrl + x` and hit `n` to not save the edit)
+One thing to note when editing YAML files, NEVER use tabs. Do NOT use the tab key when editing the docker-compose.yaml file. Yaml does not allow for tabs in its config, only use spaces. If you accidentally press tab, just make sure to backspace it or just exit without saving. (`ctrl + x` and hit `n` to not save the edit)
 
 Using the arrow keys, you can navigate up, down, left, and right. Use the down arrow key to go down to the TZ setting, where it says `America/Detroit`. If you live in the US Eastern timezone, then you do not have to change this. But if not, then you'll first need to use this [list](https://nodatime.org/TimeZones) to type in your corresponding timezone. You do not need to find the exact city you live in as not all cities are listed. What matters is the time offset to UTC time. For example, Eastern Daylight Time is -4/-5 UTC. Make sure to type in whatever is under the Zone ID column from the list. 
 
@@ -214,7 +213,7 @@ Now scroll back up find the `Record valid from` field. You should see date and t
 
 Don't use the date and time pickers. (The buttons on the right of each option box.) Just manually type in the date and time. You can do that by clicking each individual number and typing in what number you want in its place. Same goes for the AM / PM. Once that is changed, scroll back to the bottom and click `Save`. Then scroll back to the top and click the `X` at the top right. 
 
-Toda!!! You should see your Nightscout site now!
+Tada!!! You should see your Nightscout site now!
 
 ![rp](./img/RP31.png)
 (Not the best blood sugar level! 😬)
@@ -223,19 +222,19 @@ If you're able to see your site, but don't see any glucose entries from your CGM
 
 Now, you'll need to restart your Docker container so it runs in the background. Go back to your terminal session press `ctrl + c` wait for your docker container to stop. Then type `sudo docker compose up -d`. That `-d` option will have the docker container run in the background (detached mode), so your terminal is free for other commands. Now if you type `sudo docker ps` this should list your docker containers running! You should be able to see the site back online in your web browser. 
 
-Now, for the next issue to solve. Currently the only way to access your Nightscout site is to be on the same local network as the Raspberry Pi. This is an issue because if you're not home, or you want someone to connect to the site outside your home, they can't. To solve this issue you'll be using something call a `Cloudflare Tunnel`. Basically you'll link your Nightscout site to Cloudflare and then when someone goes to visit your site they'll first be taken to Cloudflare and that'll redirect them to your Nightscout site. Best part is, it's free! Also super easy to set up. (Relatively speaking of course. Other option is doing a port forward / setting up a reverse proxy / VPN and also setting up DDNS / Static Public IP. Plus, Cloudflare tunnels work with CGNAT too.)
+Now, for the next issue to solve. Currently the only way to access your Nightscout site is to be on the same local network as the Raspberry Pi. This is an issue because if you're not home, or you want someone to connect to the site outside your home, they can't. To solve this issue you'll be using something called a `Cloudflare Tunnel`. Basically you'll link your Nightscout site to Cloudflare and then when someone goes to visit your site they'll first be taken to Cloudflare and that'll redirect them to your Nightscout site. Best part is, it's free! Also super easy to set up. (Relatively speaking of course. Other option is doing a port forward / setting up a reverse proxy / VPN and also setting up DDNS / Static Public IP. Plus, Cloudflare tunnels work with CGNAT too.)
 
-If you're unsure what Cloudflare is, don't worry! They are one of the largest Content Delivery Network companies. You can think of them as one of the Gatekeepers of the Internet. Long story short companies have issues with large / malicious / bot traffic. Cloudflare handles all of that for you so you're site stays online. [Here's](https://www.cloudflare.com/case-studies/) a list of companies that use them. Cloudflare is a giant company that has a great reputation. I decided to use Cloudflare for this simply because of their tunnel feature and how easy it is to set up. But this tunnel will also protect your site from bots and other malicious network activity. (NOTE: That doesn't mean it'll protect against everything. If you've set up an easy to guess password on your Nightscout site, Cloudflare will not prevent a bad actor from logging into your site without your permission. Also if Nightscout happens to have any vulnerabilities, Cloudflare will not protect against that either.)
+If you're unsure what Cloudflare is, don't worry! They are one of the largest Content Delivery Network companies. You can think of them as one of the Gatekeepers of the Internet. Long story short companies have issues with large / malicious / bot traffic. Cloudflare handles all of that for you so your site stays online. [Here's](https://www.cloudflare.com/case-studies/) a list of companies that use them. Cloudflare is a giant company that has a great reputation. I decided to use Cloudflare for this simply because of their tunnel feature and how easy it is to set up. But this tunnel will also protect your site from bots and other malicious network activity. (NOTE: That doesn't mean it'll protect against everything. If you've set up an easy to guess password on your Nightscout site, Cloudflare will not prevent a bad actor from logging into your site without your permission. Also if Nightscout happens to have any vulnerabilities, Cloudflare will not protect against that either.)
 
 To set up this Cloudflare tunnel though, you'll first need a domain. This will be the URL you type in to visit your Nightscout site. Think like google.com
 
 ## Setting up a Domain
  
-For the domain registar I have decided to go with [DigitalPlat FreeDomain](https://domain.digitalplat.org/about/). It allows you to create one free domain with custom DNS servers. Most free services do not allow you to point your DNS servers to somewhere else. This is important as you will be using CloudFlare which requires you to point your domain to its DNS servers. 
+For the domain registrar I have decided to go with [DigitalPlat FreeDomain](https://domain.digitalplat.org/about/). It allows you to create one free domain with custom DNS servers. Most free services do not allow you to point your DNS servers to somewhere else. This is important as you will be using CloudFlare which requires you to point your domain to its DNS servers. 
 
 To get a DigitalPlat Domain you'll need a GitHub account as well as an account for DigialPlat. First sign up for GitHub [here](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
 
-Once you have your GitHub account, sign up for DigitalPlat [here](https://dash.domain.digitalplat.org/auth/register). Note that it's pretty picky on your the field requirements, so make sure to closely read each one if you're see read messages underneath. Especially the phone one, which needs a dash between the country code and local phone number.
+Once you have your GitHub account, sign up for DigitalPlat [here](https://dash.domain.digitalplat.org/auth/register). Note that it's pretty picky with the field requirements, so make sure to closely read each one if you're see red messages underneath. Especially the phone one, which needs a dash between the country code and local phone number.
 
 Once you're logged into your DigitalPlat account, you should see this page:
 
@@ -259,7 +258,7 @@ That should bring you to this screen:
 
 First, leave the domain at `.dpdns.org`. The other options use TLDs like `kg` and `io` that have a worse reputation. Your Nightscout site will probably be blocked at school / work, but using a .org domain gives you the best chances of not getting blocked. If you experience access issues at school / work, you'll have to request that the domain be unblocked.
 
-Make sure to put in your custom subdomain. I chose `nightscout2` for mine. So my full domain will look like: `nighscout2.dpdns.org`. Also make sure to check off the acceptable use policy that you totally read. Then just click on `Check Availability`. If it's taken the site will let you know, otherwise you'll be taken to this page next:
+Make sure to put in your custom subdomain. I chose `nightscout2` for mine. So my full domain will look like: `nightscout2.dpdns.org`. Also make sure to check off the acceptable use policy that you totally read. Then just click on `Check Availability`. If it's taken the site will let you know, otherwise you'll be taken to this page next:
 
 ![rp](./img/RP36.png)
 
@@ -298,7 +297,7 @@ For the Configure section, select `Debian` and then select `64-bit`
 
 ![rp](./img/RP43.png)
 
-A script should a appear, and you'll just need to copy it by clicking on the copy icon at the top right of the script:
+A script should appear, and you'll just need to copy it by clicking on the copy icon at the top right of the script:
 
 ![rp](./img/RP44.png)
 
@@ -325,19 +324,19 @@ Eventually you should see your Nightscout site:
 
 ![rp](./img/RP48.png)
 
-If all is working, congrats! If not try try going back to previous steps and confirming everything is working. Also remember to run Docker out of detached mode to see if there are any errors: `sudo docker compose up`. Remember to run this after shutting down the containers with `sudo docker compose down`. If you're still having issues, you can contact me at `nightscout@brz86.com`. 
+If all is working, congrats! If not, try going back to previous steps and confirming everything is working. Also remember to run Docker out of detached mode to see if there are any errors: `sudo docker compose up`. Remember to run this after shutting down the containers with `sudo docker compose down`. If you're still having issues, you can contact me at `nightscout@brz86.com`. 
 
-One last thing to note with this setup, if you Pi shuts down at any point, when you start it back up everything should automatically start up again. This includes all your Docker containers as well as the Cloudflare tunnel.
+One last thing to note with this setup, if your Pi shuts down at any point, when you start it back up everything should automatically start up again. This includes all your Docker containers as well as the Cloudflare tunnel.
 
 ## Backups and Recovery 
 
-This next section is optional, but highly recommend if you care about preserving your data long term. If you only care about real time glucose levels and don't really care about saving your records, then you can skip this section. 
+This next section is optional, but highly recommended if you care about preserving your data long term. If you only care about real time glucose levels and don't really care about saving your records, then you can skip this section. 
 
 I will go over two methods, an easy, but manual method, as well as a more difficult, but automated method. 
 
 #### Manual Backups
 
-For this I am going to be using software that is exclusive to Windows, Win32 Disk Imager. For Mac you can use The Disk Utility or the command line tool, `dd`. Linux can also use `dd`. Right now I will be only going over how to do with on Windows. 
+For this I am going to be using software that is exclusive to Windows, Win32 Disk Imager. For Mac you can use The Disk Utility or the command line tool, `dd`. Linux can also use `dd`. Right now I will be only going over how to do this on Windows. 
 
 Win32 Disk Imager allows an easy way to create an exact copy of your sd card. The main issue with Win32 Disk Imager is that it doesn't really have an official download site. I downloaded mine off of Sourceforge, but there are plenty of fake downloads that try to look legitimate. Sites like win32diskimager[.]org are fake sites that host malicious versions of Win32 Disk Imager. To make things simpler here, I've decided to upload the copy I've confirmed (confirmed with Virus Total hash: `a51c9fc75c9caa44df03502838f229a70d484963f54675c241799093a59d8874`) as safe. [Here](https://drive.google.com/file/d/1yw5w_cxbpFwU0yvMcX0FdB7bV4DQzksU/view?usp=sharing) is the download link.
 
@@ -401,7 +400,7 @@ Now run `sudo systemctl daemon-reload` and then `sudo mount -a`.
 
 Now it's time to create a copy of your nightscout data from the mongodb docker container and add it to your backup share. Make sure your Nightscout is running. First run: `sudo docker exec mongo mongodump --out /data/backup` then `sudo docker exec mongo tar -czvf $(date +%F).tar.gz /data/backup`. This compresses the file down before moving it over to the network share. Run `sudo docker cp mongo:/$(date +%F).tar.gz /mnt/nsbackups`  Now just run `docker exec mongo rm -rf /data/backup /$(date +%F).tar.gz` to remove the backups from the container. This set of commands creates a backup that is compressed to save space on your network share and then removes it from the container so you aren't carrying two identical backup copies. 
 
-Next step is to automate this process. You'll first need to create a bash script, and then create a cron job to automate the execution of that script. First, ensure you're in you're home directory with `cd ~` command. Then download the script with `wget https://raw.githubusercontent.com/have-no-clue-what-im-doing/nightscout_scripts/refs/heads/main/nsbackups.sh`. Then do a `chmod +x nsbackups.sh` so you can execute the script. Now test out the script by executing it: `sudo ./nsbackups.sh`
+Next step is to automate this process. You'll first need to create a bash script, and then create a cron job to automate the execution of that script. First, ensure you're in your home directory with `cd ~` command. Then download the script with `wget https://raw.githubusercontent.com/have-no-clue-what-im-doing/nightscout_scripts/refs/heads/main/nsbackups.sh`. Then do a `chmod +x nsbackups.sh` so you can execute the script. Now test out the script by executing it: `sudo ./nsbackups.sh`
 
 You should see output like this:
 
@@ -420,7 +419,7 @@ One thing to note is that this script does not do any type of backup / log rotat
 
 #### Restoring an Automated Backup
 
-IMPORTANT: When doing these backup restores, ensure you're using a MongoDB version greater than or equal to `4.4.18`. This is the specific version I chose for the docker compose file. Do NOT trying restore a backup onto an earlier version of MongoDB than what the backup was created from. It'll either not work or work but unforeseen issues later on.
+IMPORTANT: When doing these backup restores, ensure you're using a MongoDB version greater than or equal to `4.4.18`. This is the specific version I chose for the docker compose file. Do NOT try restore a backup onto an earlier version of MongoDB than what the backup was created from. It'll either not work or work but unforeseen issues later on.
 
 Now if you need to restore, ensure your Docker containers (Nightscout & Mongo) are running. You'll start by unzipping the archive that you want to restore. So over in `/mnt/nsbackups` create a new directory: `sudo mkdir /mnt/nsbackups/2025-08-27-restore`. You can name it whatever you want, you'll just need to reference it when doing the restore. Now run (make sure you're in the /mnt/nsbackups directory. Also insert whatever backup date you want to restore from.) `sudo tar -xzvf 2025-08-27.tar.gz -C /mnt/nsbackups/2025-08-28-restore`. This uncompresses the archive, then creates and places it in a folder named `2025-08-28-restore`.
 
