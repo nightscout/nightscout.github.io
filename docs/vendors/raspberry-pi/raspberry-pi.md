@@ -5,7 +5,7 @@
 Quick list of what you'll need for this set up:
 
 * A compatible CGM
-* Raspberry Pi 3b, 4, or 5 (Anything 3 or below does not work. For Raspberry Pi 3 it must be the "B" version)
+* Raspberry Pi 3B, 3B+, 4, or 5 (Anything below 3 does not work. Also, make sure to get the "B" version and not "A")
 * Power cable for Raspberry Pi
 * Keyboard (You don't actually need a mouse for the Raspberry Pi)
 * A separate computer w/ mouse and keyboard (can swap keyboard back and forth if you do not have a second one)
