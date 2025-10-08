@@ -276,6 +276,8 @@ vendors/VPS/ubuntu/
 vendors/VPS/docker/
 vendor/VPS/nixos/
 vendors/NAS/synology/
+vendors/raspberry-pi/raspberry-pi
+
 ```
 
 ```{toctree}
