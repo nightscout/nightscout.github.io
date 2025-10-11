@@ -110,6 +110,9 @@
     <loc>https://nightscout.github.io/vendors/VPS/docker/</loc>
   </url>
   <url>
+    <loc>https://nightscout.github.io/vendors/VPS/nixos/</loc>
+  </url>
+  <url>
     <loc>https://nightscout.github.io/vendors/NAS/synology/</loc>
   </url>
   <url>
