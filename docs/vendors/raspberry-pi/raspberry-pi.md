@@ -122,11 +122,11 @@ I've created a script for you that'll automatically update the OS and download D
 
 You'll be using Docker to automatically download and install Nightscout and all its dependencies. Don't want to make this too technical, but you can think of Docker as a computer inside a computer. Basically, a virtual machine. (For the mega nerds out there, yes I know docker containers are not comparable to virtual machines, something something they share a kernel, whatever.) Docker calls these virtual machines "Containers". You'll see that I refer to them as "Docker Containers / Containers" most of the time later on in this post. 
 
-Long story short, Docker allows for an easy install of Nightscout. When you deploy the Docker container, Docker does all the work of automatically installing / setting up Nightscout for you! The hardest part of this whole Nightscout set up is really installing docker and getting it running. To make things easy I've provided a script that will download Docker for you. 
+Long story short, Docker allows for an easy install of Nightscout. When you deploy the Docker container, Docker does all the work of automatically installing / setting up Nightscout for you! The hardest part of this whole Nightscout set up is really installing docker and getting it running. To make things easy I've provided a script that will download and install Docker for you. The script will also download the Docker configuration file named `docker-compose.yaml` for you as well. 
 
-[Here](https://github.com/have-no-clue-what-im-doing/nightscout_scripts) is the link that lists out all the scripts I've provided. They are hosted on Github, and no need to create or login with a Github account for this! (You'll create your Github account later) The script you'll need to run for the Docker install is named `dockerinstall.sh`. Run this command to download and run the script automatically: 
+The script you'll need to run for the Docker install is named `dockerinstall.sh`. Run this command to download and run the script automatically: 
 
-`sudo curl -fsSL https://raw.githubusercontent.com/have-no-clue-what-im-doing/nightscout_scripts/refs/heads/main/dockerinstall.sh | sudo -E bash` 
+`sudo curl -fsSL https://raw.githubusercontent.com/nightscout/nightscout.github.io/refs/heads/source/docs/_static/raspberry/dockerinstall.sh | sudo -E bash` 
 
 (Also this is why I highly recommend NOT typing directly from the Pi itself. As you'll have to manually type web addresses like this yourself. Later on you'll need to copy a very very long string of random characters which will not be fun to manually type in. So please make a best effort to remote connect to the Pi from another machine.)
 
@@ -176,8 +176,8 @@ Now it's finally time to run your Docker containers and start up Nightscout! You
 
 To start the Docker containers with logging run `docker compose up` Once you've ran the command you should see something like this:
 
-You'll see that three different images are being installed, with three separate containers eventually running. 
-The first container is Nightscout, which is the container running the actual web services so you can actually visit and see the site from your web browser. The second container is the MongoDB container. MongoDB is the database that Nightscout uses, and this is where all your glucose readings will be stored. The last container is for something called Traefik. Traefik is reverse proxy / load balancer. Basically, it'll make external access to the Nightscout site much easier to set up. 
+You'll see that two different images are being installed, with two separate containers eventually running. 
+The first container is Nightscout, which is the container running the actual web services so you can actually visit and see the site from your web browser. The second container is the MongoDB container. MongoDB is the database that Nightscout uses, and this is where all your glucose readings will be stored. 
 ![rp](./img/RP26.png)
 
 This is downloading the latest Nightscout and MongoDB images and then having it all installed and set up for you! Everything is done automatically, which is why Docker is so awesome! 
@@ -186,13 +186,12 @@ Once all images are done downloading, you'll stop seeing a bunch of text:
 
 ![rp](./img/RP27.png)
 
-Also, if you see an error regarding "Unable to obtain ACME certificate for domains", that can be ignored. You'll be using Cloudflare for your certificate. 
 
 Eventually, you should start seeing text entries like this that start with *svg*
 
 ![rp](./img/RP28.png)
 
-Now, it's time to visit your Nightscout site! In your web browser, from the URL bar, type in your Raspberry Pi's IP (The same IP you used to connect to the Pi remotely) and then add `:1337`.  Example: `10.10.10.203:1337`
+Now, it's time to visit your Nightscout site! In your web browser, from the URL bar, type in your Raspberry Pi's IP (The same IP you used to connect to the Pi remotely).  Example: `10.10.10.139`
 
 
 You should then be taken to your Nightscout site with this popup:
@@ -216,7 +215,6 @@ Don't use the date and time pickers. (The buttons on the right of each option bo
 Tada!!! You should see your Nightscout site now!
 
 ![rp](./img/RP31.png)
-(Not the best blood sugar level! 😬)
 
 If you're able to see your site, but don't see any glucose entries from your CGM, double check that your username and password you added to your `docker-compose.yaml` file are correct. Also double check that you typed them in correctly, make sure there's no extra spacing between the field and the entry. If you're still having issues, feel free to email me at: nightscout@brz86.com
 
@@ -311,14 +309,8 @@ Go back to Cloudflare and scroll down and click `Next`. For the Route Traffic se
 
 ![rp](./img/RP46.png)
 
-Almost done now. You just need to go back to the remote session with the Pi, then run the command `sudo nano docker-compose.yaml`. You need to edit your config again and update the Traefik IP. Scroll down to `traefik.http.routers.nightscout.rule=Host` and replace `x.x.x.x`, with your new domain:
 
-![rp](./img/RP47.png)
-
-Then do a `ctrl + o` and then `ctrl + x` to save and exit the file. Then put in the command: `sudo docker compose down && sudo docker compose up -d`. 
-Give it a few minutes before trying to visit the site.
-
-After a couple minutes go to your browser and type in the domain. If you get a gateway / 404 error, just give it more time. 
+Wait a couple minutes and then go to your browser and type in the domain. If you get a gateway / 404 error, just give it more time. 
 
 Eventually you should see your Nightscout site:
 
@@ -326,7 +318,26 @@ Eventually you should see your Nightscout site:
 
 If all is working, congrats! If not, try going back to previous steps and confirming everything is working. Also remember to run Docker out of detached mode to see if there are any errors: `sudo docker compose up`. Remember to run this after shutting down the containers with `sudo docker compose down`. If you're still having issues, you can contact me at `nightscout@brz86.com`. 
 
-One last thing to note with this setup, if your Pi shuts down at any point, when you start it back up everything should automatically start up again. This includes all your Docker containers as well as the Cloudflare tunnel.
+One last thing to note with this setup, if your Pi shuts down at any point, when you start it back up everything should automatically start up again. This includes all your Docker containers as well as the Cloudflare tunnel. 
+
+## Troubleshooting
+
+Here is a basic troubleshooting checklist you can go through if you're having issues:
+
+1. Is the Raspberry Pi is powered on?
+2. Did the Pi boot properly? (Can verify by SSHing into the device or viewing from the monitor if you have the HDMI display plugged in)
+3. Are the containers actually running? (`docker ps`). You should see them listed, if an empty table is listed, then they are not running. Run `docker-compose up -d` to start them back up.
+4. Is your CloudFlare tunnel running? (`sudo systemctl status cloudflared`). You should the `Active:` field have `active (running)`. Also log into your cloudflare account in your browser and go to `Zero Trust Home` > `Networks` > `Tunnels`. The `Status` field should be `Healthy` for the domain.
+5. Check Docker logs (`docker logs nightscout`) (`docker logs mongo`). Nightscout logs can give hints if your `docker-compose` was not filled out correctly. And the mongo logs can help troubleshoot issues with reading and writing glucose values to the database.
+6. Does your Pi have a proper Internet connection? If your cloudflare tunnel says it's down, this could be a hint your Pi cannot connect to the Internet. Do a ping to a popular website (`ping google.com` or `ping 1.1.1.1`).
+7. Does the device you're trying to connect to Nightscout to have a proper Internet connection? Try visiting another site to confirm.
+
+
+## Updating
+
+I do not suggest setting up any kind of automated updates as it is not necessary and is overkill. I recommend keeping tabs on the [CGM in the Cloud Facebook group](https://www.facebook.com/groups/cgminthecloud) for the latest news regarding Nightscout. If something urgent comes out like a security issue, then you can update. There are risks with an automated update system where the latest update could possibly break part of your setup. It's important to read through the change notes for each new version as your specific setup could be at risk of breaking from a newer version. You can view change logs [here](https://github.com/nightscout/cgm-remote-monitor/releases).
+
+To update to the latest version just run `docker compose pull` and then `docker compose up -d`.
 
 ## Backups and Recovery 
 
