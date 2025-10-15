@@ -23,16 +23,16 @@ services:
       SHOW_PLUGINS: careportal sage iob cob dbsize cors ar2 pump loop cage basal override
       DISPLAY_UNITS: mg/dl
 
-      # Dexcom:
+      # Dexcom: DONT UNCOMMENT THIS LINE
       #BRIDGE_USER_NAME: username
       #BRIDGE_PASSWORD: password
       #BRIDGE_SERVER: US
 
-      # Medtronic
+      # Medtronic: DONT UNCOMMENT THIS LINE
       #MMCONNECT_USER_NAME: username
       #MMCONNECT_PASSWORD: password
 
-      # xDrip
+      # xDrip: DONT UNCOMMENT THIS LINE
       #API_SECRET: xdrip secret
       #BASE_URL: xdrip URL
 
@@ -88,16 +88,9 @@ services:
       INSECURE_USE_HTTP: 'true'
       MONGO_CONNECTION: mongodb://mongo:27017/Nightscout
     ports:
-      - "1337:1337"
+      - "80:1337"
     depends_on:
       - mongo
-    labels:
-      - 'traefik.enable=true'
-      # Change the below Host from `localhost` to be the web address where Nightscout is running.
-      # Also change the email address in the `traefik` service below.
-      - 'traefik.http.routers.nightscout.rule=Host(`x.x.x.x`)'
-      - 'traefik.http.routers.nightscout.entrypoints=web'
-      - 'traefik.http.services.nightscout.loadbalancer.server.port=1337'
     volumes:
       - /nightscout/docker:/var/opt/ssl/:ro
     restart: unless-stopped
@@ -112,19 +105,4 @@ services:
    # ports:
     #  - "27017:27017"
     #logging: *default-logging
-    restart: unless-stopped
-
-  traefik:
-    image: traefik:latest
-    container_name: 'traefik'
-    command:
-      - '--providers.docker=true'
-      - '--providers.docker.exposedbydefault=false'
-      - '--entrypoints.web.address=:80'
-    ports:
-      - '443:443'
-      - '80:80'
-    volumes:
-      - './letsencrypt:/letsencrypt'
-      - '/var/run/docker.sock:/var/run/docker.sock:ro'
     restart: unless-stopped
