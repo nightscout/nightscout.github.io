@@ -306,3 +306,6 @@ You can find information about your site API at:
 https://{url}/api-docs[?token=TOKEN]
 
 https://{url}/api/v2/properties.json[?token=TOKEN]
+
+https://{url}/api3-docs[?token=TOKEN]
+

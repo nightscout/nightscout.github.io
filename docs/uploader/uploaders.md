@@ -21,14 +21,14 @@ See this [dedicated page](/nightscout/close_loop) for setup links.
 
 ## Dexcom
 
-### Dexcom G5/G6/ONE/ONE+/G7/Stelo
+### Dexcom G6/ONE/ONE+/G7/Stelo
 
 <img src="./img/Upload02.png" width="600px" />
 
-If you are using the Dexcom sensor (except ONE) connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device.  
+If you are using a Dexcom sensor connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device.  
 
 ```{note}
-Dexcom Share is not available with Dexcom ONE. Use xDrip+ or xDrip4iOS.
+If you cannot use Dexcom Share, try xDrip+ or xDrip4iOS as a bridge to Nightscout.
 ```
 
 For this to work, Nightscout must be configured to use the `bridge` plug-in and will then automatically pull the CGM information directly from the Dexcom servers in real-time.
@@ -42,15 +42,10 @@ If you don't want to use the official Dexcom apps, you can use **open-source sof
 **Android**: xDrip+ for G6, ONE, ONE+, Stelo and G7. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
 
 **iOS**:   
-	Spike for G5 and older G6 transmitters (**not Firefly**) <!-- Spike or xDrip4iOS for G4 (1)(3) -->  
+	Spike for G5 and refurbished G6 transmitters <!-- Spike or xDrip4iOS for G4 (1)(3) -->  
 	xDrip4iOS for G5, G6, G7, Stelo and ONE/ONE+ transmitters
 
 <img src="./img/Upload03.png"  width="600px"/>
-
-```{admonition} Dexcom "Firefly" Transmitters
-:class: hint
-Most of the useable transmitters that do not fall into this category at the present time are generally rebatteried or rechargeable/modified transmitters.
-```
 
 ## AccuChek SmartGuide
 
@@ -62,17 +57,11 @@ You can use the sensor connected with [Juggluco](https://www.juggluco.nl/Juggluc
 
 ## Medtronic
 
-If your sensor system is able to directly upload to CareLink then Nightscout might be able to get the information directly from the cloud using the `mmconnect` (deprecated) plugin. Unfortunately, this is **not possible anymore with recent pumps (7xx series and above)**.
-
 You can use an Android phone with xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up. You can use [Guardian Monitor](https://apps.apple.com/us/app/guardian-monitor/id1546989938) with iOS.
 
 [Home Assistant](https://github.com/yo-han/Home-Assistant-Carelink) also can upload data to Nightscout.
 
-
-
-<img src="./img/Upload04.png"  width="600px"/>
-
-If this isn't an option and your sensor/transmitter is connected to your pump (Medtronic 600 series pumps), then you'll need an Android phone connected with an OTG cable to your pump's connected glucose meter. The phone will need to run the [600 Series Uploader](http://pazaan.github.io/600SeriesAndroidUploader/) app.
+If your sensor/transmitter is connected an older pump (Medtronic 600 series), then you'll need an Android phone connected with an OTG cable to your pump's connected glucose meter. The phone will need to run the [600 Series Uploader](http://pazaan.github.io/600SeriesAndroidUploader/) app.
 
 <img src="./img/Upload05.png"  width="600px"/>
 
@@ -99,9 +88,7 @@ Non Bluetooth-enabled Freestyle Libre sensors will need an additional transmitte
 The Libre environment is complex and evolves quickly. Before buying a transmitter, please join the respective Facebook groups and make sure that the transmitter you are planning to buy is compatible with your sensor type.
 ```
 
-Most of the transmitters have their own proprietary apps. Nearly all of these support the uploading of data to Nightscout (LinkBluCon, Tomato, Diabox, eDroplet, ...). Again, check the transmitter manufacturer's website and the relevant Facebook support groups for information.
-
-**Open-source apps** such as **xDrip+**, **Juggluco**, **Spike** and **xDrip4iOS** also support some of the above transmitter devices.
+**Open-source apps** such as **xDrip+**, **Juggluco** and **xDrip4iOS** support some of the above transmitter devices.
 
 ### Libre 2/2+
 
@@ -112,11 +99,11 @@ Other Libre 2 sensors can be used directly with [Juggluco](https://www.juggluco.
 
 You can use the sensor connected with [Juggluco](https://www.juggluco.nl/Juggluco/index.html) or upload to Nightscout automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip+ to perform this operation.
 
-A new plugin in Nightscout 15 (under development) will integrate the project above.
+A new plugin called Nightscout Connect (under development) will integrate the project above.
 
 ## Eversense
 
-In order to get data from the Eversense CGM system, you will need to use the [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/debug/app-debug.apk) app running on an Android phone with the [modified](https://cr4ck3d3v3r53n53.club/) vendor app.
+In order to get data from the Eversense CGM system, you can use the [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/debug/app-debug.apk) app running on an Android phone with the [modified](https://cr4ck3d3v3r53n53.club/) vendor app, or listening to the official app glucose notifications.
 
 <img src="./img/Upload06.png"  width="500px"/>
 
@@ -126,6 +113,6 @@ You can also use [Juggluco](https://www.juggluco.nl/Juggluco/index.html) or xDri
 
 [diasend-nightscout-bridge](https://github.com/burnedikt/diasend-nightscout-bridge) synchronizes treatments (insulin boli, temp basal changes) as well as continuous glucose values (CGV) from Diasend to Nightscout. This can help CamAPS FX users to view their treatments and glucose values via Nightscout. A 30 minutes delay might occur.
 
-A new plugin in Nightscout 15 (under development) will integrate the project above.
+A new plugin called Nightscout Connect (under development) will integrate the project above.
 
 </br>

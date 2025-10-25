@@ -175,7 +175,7 @@ Facebook group [xDrip4iOS](https://www.facebook.com/groups/853994615056838)
 ```{admonition} Important limitation
 :class: warning
 **Sugarmate doesn't allow Nightscout as a data source if you included `bridge` in `ENABLE`.**
-If you need this data source: enable [obscuration](/nightscout/setup_variables.md#bridge-share2nightscout-bridge) variables.
+If you need this (deprecated) data source: enable [obscuration](/nightscout/setup_variables.md#bridge-share2nightscout-bridge) variables. Use [nightscout-connect](/uploader/setup.md/#dexcom) Nightscout 15 plugin.
 ```
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />

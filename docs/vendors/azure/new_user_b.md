@@ -65,15 +65,21 @@ If you don't use Dexcom Share to get your BG data in Nightscout, copy the line b
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
 
-If you want to use Dexcom Share as a data source copy this one (it includes the keyword `bridge`):
+If you want to use Dexcom Share as a data source copy this one (it includes the keyword `connect`):
 
-`careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge`
+`careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors connect`
 
 If you have your data coming directly from Dexcom share those three:
 
 `BRIDGE_USER_NAME`  
 `BRIDGE_PASSWORD`  
 `BRIDGE_SERVER`
+
+Will become these:
+
+`CONNECT_SHARE_ACCOUNT_NAME`   Your Dexcom account username to receive CGM data from the Dexcom Share service.  
+`CONNECT_SHARE_ACCOUNT_PASSWORD`     Your Dexcom account password to receive CGM data from the Dexcom Share service.  
+`CONNECT_SHARE_REGION`       us if your Dexcom account is in the US, or, if you are bridging from the Dexcom Share service and are anywhere *outside* the US change this to ous.
 
 <img src="/vendors/azure/img/Azure15.png" width="600px" /></br>
 

@@ -17,12 +17,12 @@ Northflank offers a Mongo database.
 
 **Pros**:  
 * Simple to create  
-* Economic reliable database
+* Economic
 * High quality Mongo database with a replica set
 * You can deploy up to $20/mo worth of free resources on Northflank’s managed cloud
 
 **Cons**:  
-* Heroku Nightscout might crash with database timeouts
+* Heroku Nightscout might crash with database timeouts as the free tier availability is not guaranteed
 ```
 
 </br>
@@ -85,7 +85,7 @@ f) Invent a project name (`nightscout` for example) and select a region (Europe 
 :class: warning
 * The Mongo database is free, you only pay for the storage
 * Minimum price is 0.3$/month, cost is then 0.3$/GiB/month
-* A good database is important for your Nightscout site reliability
+* Nightscout database usually fits inside the free resources allowance
 ```
 
 </br>

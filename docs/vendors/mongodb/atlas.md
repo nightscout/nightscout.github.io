@@ -22,7 +22,7 @@ MongoDB bought [mLab](https://twitter.com/chrisckchang/status/506959446753284096
 **Cons**:
 * M0 clusters are designed for learning and testing, not production
 * There is no warranty the M0 cluster will remain in the future
-* A larger M2 cluster costs 9$ per month (consider hosted Nightscout)
+* A larger Flex cluster costs 8$ per month (consider hosted Nightscout)
 * A full M0 database crashes Nightscout, this is a common issue for DIY closed loop system users
 ```
 

@@ -85,10 +85,11 @@ Northflank offers a Mongo database.
 
 **Pros**:  
 * Simple to create  
-* Economic reliable database
+* Economic
 * High quality Mongo database with a replica set
 
 **Cons**:  
+* Users report realibility issues with the free tier
 * Billing will occur but the cost is really limited: 0.3$ per GiB (it usually takes years to reach 1GB for Nightscout)
 * There is no warranty this offer will be maintained in the future
 +++
@@ -108,6 +109,6 @@ You can create a Mongo Database in a Virtual Private Server, either using a free
 **Cons**:
 * Requires commands to be typed and some IT knowledge
 +++
-Waiting for something easier (work in progress) [these are the instruction](https://www.mongodb.com/docs/manual/administration/install-on-linux).
+Waiting for something easier [here are the instruction](https://www.mongodb.com/docs/manual/administration/install-on-linux).
 ```
 

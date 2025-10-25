@@ -160,15 +160,15 @@ Must be a space-delimited, lower-case list.
 
 `careportal basal dbsize`
 
-Include the word `bridge` here if you are receiving data from the Dexcom Share service.
+Include the word `connect` here if you are receiving data from the Dexcom Share service.
 
-`careportal basal dbsize bridge`
+`careportal basal dbsize connect`
 
 If you don't want to decide now, add all the followings, you can disable them if you don't need them:
 
-`careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override cors`
+`careportal basal dbsize rawbg iob maker connect cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override cors`
 
-Note: `mmconnect` is not functional with Heroku (if you wanted to bridge from the MiniMed CareLink service you will need another device to send data to Nightscout). If you are sending data to CareLink do **NOT** enable `mmconnect`.
+Note: `mmconnect` is not functional (if you want to bridge from the MiniMed CareLink service you will need another device to send data to Nightscout). If you are sending data to CareLink do **NOT** enable `mmconnect`.
 
 </br>
 
@@ -792,18 +792,47 @@ or `icicle` (inverted)
 
 </br>
 
+#### `connect` ([Nightscout Connect](https://github.com/nightscout/nightscout-connect))
+
+```{note}
+This plugin is **under development**. `dexcomshare` is functional.
+```
+
+Nightscout's methods for synchronizing with common diabetes cloud providers. This module provides a single entry point to Nightscout for similar modules and allows managing http library and injecting dependencies from a single point.
+
+##### Dexcom Share
+
+To synchronize from Dexcom Share use the following variables (**\*** mandatory):
+
+- `CONNECT_SOURCE` should be `dexcomshare`
+- `CONNECT_SHARE_ACCOUNT_NAME` - Your username for the Share service. **\***
+- `CONNECT_SHARE_PASSWORD` - Your password for the Share service. **\***
+
+- `CONNECT_SHARE_REGION` (us) - `ous` or `us`. ***Note:*** `us` is the default if nothing is provided.
+
+Selecting `us` sets `CONNECT_SHARE_SERVER` to `share2.dexcom.com`.  
+Selecting `ous` here sets `CONNECT_SHARE_SERVER` to `shareous1.dexcom.com`.
+
+- `CONNECT_SHARE_SERVER=` set the server domain to use (do not use, see above: it is set automatically).
+
+</br>
+
 #### `bridge` (Share2Nightscout bridge)
 
-Glucose reading directly from the Dexcom Share service, uses these extended settings (***** mandatory):
+```{warning}
+This plugin is **deprecated**. Use `connect` (Nightscout Connect) instead.
+```
 
-- `BRIDGE_USER_NAME` - Your username for the Share service. *****
-- `BRIDGE_PASSWORD` - Your password for the Share service. *****
+Glucose reading directly from the Dexcom Share service, uses these extended settings (**\*** mandatory):
+
+- `BRIDGE_USER_NAME` - Your username for the Share service. **\***
+- `BRIDGE_PASSWORD` - Your password for the Share service. **\***
 - `BRIDGE_INTERVAL` (`150000` *2.5 minutes*) - The time (in milliseconds) to wait between each update.
 - `BRIDGE_MAX_COUNT` (`1`) - The number of records to attempt to fetch per update.
 - `BRIDGE_FIRST_FETCH_COUNT` (`3`) - Changes max count during the very first update only.
 - `BRIDGE_MAX_FAILURES` (`3`) - How many failures before giving up.
 - `BRIDGE_MINUTES` (`1400`) - The time window to search for new data per update (the default value is one day in minutes).
-- `BRIDGE_SERVER` (`US`) - Set to `US` to fetch data from Dexcom servers in the US. Set to (`EU`) to fetch from non US servers instead. *****
+- `BRIDGE_SERVER` (`US`) - Set to `US` to fetch data from Dexcom servers in the US. Set to (`EU`) to fetch from non US servers instead. **\***
 
 - `OBSCURED` (`bridge`) - Obscure data source when using `bridge` uploader.
 - `OBSCURE_DEVICE_PROVENANCE` (`dexcom-dont-own-my-body-data`) - Self explanatory.
@@ -813,19 +842,8 @@ Glucose reading directly from the Dexcom Share service, uses these extended sett
 #### `mmconnect` (MiniMed Connect bridge)
 
 ```{warning}
-This plugin is **NOT** functional with 7xx pumps do not enable it.
+This plugin is **deprecated and not functional**. Do not enable it.
 ```
-
-Transfer real-time MiniMed Connect data from the Medtronic CareLink server into Nightscout ([read more](https://github.com/nightscout/minimed-connect-to-nightscout)) (***** mandatory) with the following extended settings:
-
-- `MMCONNECT_USER_NAME` - Your user name for CareLink Connect. *****
-- `MMCONNECT_PASSWORD` - Your password for CareLink Connect. *****
-- `MMCONNECT_INTERVAL` (`60000` *1 minute*) - Number of milliseconds to wait between requests to the CareLink server.
-- `MMCONNECT_MAX_RETRY_DURATION` (`32`) - Maximum number of total seconds to spend retrying failed requests before giving up.
-- `MMCONNECT_SGV_LIMIT` (`24`) - Maximum number of recent sensor glucose values to send to Nightscout on each request.
-- `MMCONNECT_VERBOSE` - Set this to "true" to log CareLink request information to the console.
-- `MMCONNECT_STORE_RAW_DATA` - Set this to "true" to store raw data returned from CareLink as `type: "carelink_raw"` database entries (useful for development).
-- `MMCONNECT_SERVER` - Set this to `EU` if you're using the European Medtronic services *****
 
 </br>
 

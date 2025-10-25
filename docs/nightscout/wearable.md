@@ -73,11 +73,19 @@ With an Android smartphone.
 - Change the watchface to match your app (in Wear OS or on your watch).
 :::
 
+:::{tab-item} Android Wear 5
+- Wear OS 5 does not allow code execution in watchfaces.
+- Use [GlucoDataHandler](#glucodatahandler).
+:::
 
 
 ````
 
 </br>
+
+### [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler)
+
+This innovative [app](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) receives data from various sources and visualizes it clearly on your Android smartphone, smartwatch (Wear OS, Miband, and Amazfit), and in your car (via [GlucoDataAuto](https://github.com/pachi81/GlucoDataAuto/blob/main/README.md)).
 
 ### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
 
@@ -132,6 +140,8 @@ It uses Wear's standalone app support, so requires no companion app installed on
 ### xDrip+
 
 Follow Artem's instructions [here](https://bigdigital.home.blog/).
+
+Can be used with [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) and [GlucoDataHandler](#glucodatahandler).
 
 </br>
 

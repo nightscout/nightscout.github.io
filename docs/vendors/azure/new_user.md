@@ -85,7 +85,7 @@ b) Search Web app and click Create.
 </br>
 
 c) Check you're still using your Free Trial or 3-Month free Trial.  
-Open the list in Resource group and pick your group (the one you created in Step 2.f.).
+Open the list in Resource group and pick your group (or create a new one).
 
 <img src="/vendors/azure/img/Azure23.png" width="600px" />
 
@@ -104,8 +104,6 @@ If it isn't: you need to choose another name...
 e) Now select a Docker container, in Linux.
 
 Pick a place close to where you live in the Region selection.  
-Make sure it is the same than the database region you selected in Step 2.g.
-
 <img src="/vendors/azure/img/Azure25.png" width="600px" />
 
 </br>

@@ -56,9 +56,9 @@ If you don't use Dexcom Share to get your BG data in Nightscout, copy the line b
 
 `careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors`
 
-If you want to use Dexcom Share as a data source copy this one (it includes the keyword `bridge`):
+If you want to use Dexcom Share as a data source copy this one (it includes the keyword `connect`):
 
-`careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors bridge`
+`careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors connect`
 
 Click OK.
 
@@ -66,9 +66,9 @@ Click OK.
 
 h) If you want to use Dexcom Share to have your data in Nightscout directly, you will need to add these three variable Names:
 
-`BRIDGE_USER_NAME`   Your Dexcom account username to receive CGM data from the Dexcom Share service.  
-`BRIDGE_PASSWORD`     Your Dexcom account password to receive CGM data from the Dexcom Share service.  
-`BRIDGE_SERVER`          US if your Dexcom account is in the US, or, if you are bridging from the Dexcom Share service and are anywhere *outside* the US change this to EU.
+`CONNECT_SHARE_ACCOUNT_NAME`   Your Dexcom account username to receive CGM data from the Dexcom Share service.  
+`CONNECT_SHARE_ACCOUNT_PASSWORD`     Your Dexcom account password to receive CGM data from the Dexcom Share service.  
+`CONNECT_SHARE_REGION`          us if your Dexcom account is in the US, or, if you are bridging from the Dexcom Share service and are anywhere *outside* the US change this to ous.
 
 !!!note  
     If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing using Dexcom Share and the `bridge` plugin.
@@ -77,7 +77,7 @@ h) If you want to use Dexcom Share to have your data in Nightscout directly, you
 
 </br>
 
-**Remember to add `bridge` at the end of the `enable` variable in the list below.**
+**Remember to add `connect` at the end of the `enable` variable in the list below.**
 
 </br>
 

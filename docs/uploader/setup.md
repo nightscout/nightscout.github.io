@@ -66,7 +66,7 @@ You can find it in [Status - Hostname](https://navid200.github.io/xDrip/docs/Nig
 
 ## Dexcom
 
-You need at least one follower to use Nightscout `share` or `nightscout-connect` plugins.
+You need at least one follower to use Nightscout `share` (deprecated) or `nightscout-connect` (recommended) plugins.
 
 ```{hint}
 If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and a Nightscout plugin.
@@ -85,6 +85,7 @@ On your master phone, touch the Share icon, enable Sharing. If you have no follo
 :::
 
 :::{tab-item} 14 and previous
+**The `bridge` plugin requires obsolete libraries and will be removed from future Nightscout versions with Node above 16.**</br></br>
 Verify, update or add these variables:</br></br>
 `BRIDGE_USER_NAME`</br>
 `BRIDGE_PASSWORD`</br>
@@ -138,6 +139,8 @@ You can use an Android phone with xDrip+. See [**here**](../../uploader/xdripcar
 :::
 
 :::{tab-item} 14 and previous
+**THE `mmconnect` PLUGIN IS NOT FUNCTIONAL ANYMORE.**</br></br>
+**The `mmconnect` plugin requires obsolete libraries and will be removed from future Nightscout versions with Node above 16.**</br></br>
 Verify, update or add these variables:</br></br>
 `CARELINK_USER_NAME`</br>
 `CARELINK_PASSWORD`</br>
@@ -147,6 +150,7 @@ You need to add `mmconnect` in the `ENABLE` variable. Do not delete other entrie
 :::
 
 :::{tab-item} 15
+**UNDER DEVELOPMENT - NOT AVAILABLE YET.**</br></br>
 Verify, update or add these variables:</br></br>
 `CONNECT_SOURCE` set to `minimedcarelink`</br>
 `CONNECT_CARELINK_USERNAME`</br> 
