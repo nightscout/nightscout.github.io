@@ -101,7 +101,7 @@ If it isn't: you need to choose another name...
 
 </br>
 
-e) Now select a Docker container, in Linux.
+e) Now select Container, in Linux.
 
 Pick a place close to where you live in the Region selection.  
 <img src="/vendors/azure/img/Azure25.png" width="600px" />
@@ -126,19 +126,19 @@ g) Click Next: Database > down in the page.
 
 </br>
 
-g) Do not change anything and click Next: Docker > down in the page.
+g) Do not change anything and click Next: Container > down in the page.
 
 <img src="/vendors/azure/img/Azure28.png" width="400px" />
 
 </br>
 
-h) In Image source select **Docker Hub** instead of Quickstart.
+h) Turn off **Sidecar support**. In Image source select **Other container registries** instead of Quickstart.
 
 <img src="/vendors/azure/img/Azure29.png" width="600px" />
 
 </br>
 
-i) In Image and tag paste the following name:
+i) In **Image and tag** paste the following name:
 
 `nightscout/cgm-remote-monitor:latest`
 
