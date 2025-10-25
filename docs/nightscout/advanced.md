@@ -9,14 +9,6 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 
 </br>
 
-## Building Nightscout DIY in a cloud platform
-
-You can run your Nightscout site in several vendors platforms, using free or paid accounts.  
-
-We documented Heroku, Azure, Railway, Northflank and Fly.io. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
-
-</br>
-
 ## Building Nightscout DIY in a virtual server
 
 You can run your Nightscout site in physical or virtual private servers, using free or paid accounts.  
@@ -24,18 +16,24 @@ The [original](https://github.com/jasoncalabrese/project-glu/blob/master/README.
 
 You can use step by step Linux commands or deploy with a **simple** scripted install.
 
-Below is a list of some VPS. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them named here.
+Below is a list of some VPS. There are probably others, don't hesitate to [open an issue in the documentation](https://github.com/nightscout/nightscout.github.io/issues) with the easiest deployment method if you want to see them listed here.
 
-[Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html) with a Scripted deployment (one command).  
-[Oracle](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)  and extensive documentation (npm and Docker).  
-[Amazon Web Service](https://github.com/rajdeut/terraform-aws-nightscout#readme)
+### Google Cloud
+
+[xDrip+ team Nightscout on Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html) with a Scripted deployment (one command).
+
+### Oracle Cloud
+
+[Hosting a Nightscout Site on Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)  and extensive documentation (npm and Docker) by @amber.  
+[Terraform for Nightscout](https://github.com/rajdeut/terraform-oci-nightscout) on Oracle Cloud Infrastructure (Always Free) by @raj.
+[Amazon Web Service](https://github.com/rajdeut/terraform-aws-nightscout#readme) by @raj (not maintained anymore).
+
+### Generic VPS
 
 Some common deployment methods:
 
 [Ubuntu](/vendors/VPS/ubuntu) commands.  
 [Docker](/vendors/VPS/docker) container.
-
-Other deployments:
 
 Deploy on [NixOS](/vendors/VPS/nixos).
 
