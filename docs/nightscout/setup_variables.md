@@ -160,13 +160,13 @@ Must be a space-delimited, lower-case list.
 
 `careportal basal dbsize`
 
-Include the word `connect` here if you are receiving data from the Dexcom Share service.
+Include the word `bridge` here if you are receiving data from the Dexcom Share service.
 
-`careportal basal dbsize connect`
+`careportal basal dbsize bridge`
 
 If you don't want to decide now, add all the followings, you can disable them if you don't need them:
 
-`careportal basal dbsize rawbg iob maker connect cob bwp cage iage sage boluscalc pushover treatmentnotify mmconnect loop pump profile food openaps bage alexa override cors`
+`careportal basal dbsize rawbg iob maker bridge cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override cors`
 
 Note: `mmconnect` is not functional (if you want to bridge from the MiniMed CareLink service you will need another device to send data to Nightscout). If you are sending data to CareLink do **NOT** enable `mmconnect`.
 
@@ -795,7 +795,7 @@ or `icicle` (inverted)
 #### `connect` ([Nightscout Connect](https://github.com/nightscout/nightscout-connect))
 
 ```{note}
-This plugin is **under development**. `dexcomshare` is functional.
+This plugin is **under development**.
 ```
 
 Nightscout's methods for synchronizing with common diabetes cloud providers. This module provides a single entry point to Nightscout for similar modules and allows managing http library and injecting dependencies from a single point.
@@ -818,10 +818,6 @@ Selecting `ous` here sets `CONNECT_SHARE_SERVER` to `shareous1.dexcom.com`.
 </br>
 
 #### `bridge` (Share2Nightscout bridge)
-
-```{warning}
-This plugin is **deprecated**. Use `connect` (Nightscout Connect) instead.
-```
 
 Glucose reading directly from the Dexcom Share service, uses these extended settings (**\*** mandatory):
 

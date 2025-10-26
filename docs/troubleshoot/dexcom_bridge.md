@@ -11,9 +11,9 @@ For all others: [https://clarity.dexcom.eu/](https://clarity.dexcom.eu/)
 
 <img src="/troubleshoot/img/DexShare01.png" width="600px" >
 
-In the case you have linked accounts, check you are using the right credentials for the profile you want to `connect` to Nightscout.
+In the case you have linked accounts, check you are using the right credentials for the profile you want to `bridge` to Nightscout.
 
-**Verify you actually have current data in this profile/account!** You want to put the username and password of the account that has CGM data in `CONNECT_SHARE`, this is usually the credentials you are using with the master phone (the one connected to the sensor).
+**Verify you actually have current data in this profile/account!** You want to put the username and password of the account that has CGM data in `BRIDGE`, this is usually the credentials you are using with the master phone (the one connected to the sensor).
 
 <img src="/troubleshoot/img/DexShare05.png" width="400px" >
 
@@ -35,7 +35,7 @@ Newly created Dexcom users do not have an username but only an email address.
 
 <img src="/troubleshoot/img/DexShare01b.png" width="400px" >
 
-This can be an issue if you want to use `connect` to have your data directly in Nightscout. Make sure you're using the [latest release](/update/update/) if you experience problems.
+This can be an issue if you want to use `bridge` to have your data directly in Nightscout. Make sure you're using the [latest release](/update/update/) if you experience problems.
 
 Common symptoms are:
 
@@ -127,9 +127,9 @@ Variables location will depend on the platform you use:
 
 </br>
 
-1. You must use the same `CONNECT_SHARE_PASSWORD` or `CONNECT_SHARE_ACCOUNT_NAME` that your Dexcom mobile app is using.
+1. You must use the same `BRIDGE_PASSWORD` or `BRIDGE_USER_NAME` that your Dexcom mobile app is using.
 2. You must have `connect` and `careportal` on the `ENABLE` line (you can have other values there...but don't forget these two).
-3. If you are outside the USA, you must add `CONNECT_SHARE_REGION` set to `ous` in Nightscout variables settings.
+3. If you are outside the USA, you must add `BRIDGE_SERVER` set to `EU` in Nightscout variables settings.
 4. Your `careportal` must be one word in the `ENABLE` line, sometimes autocorrect makes it two words.
 5. If using `mmol`, make sure you have spelled that value correctly in the `DISPLAY_UNITS`.
 
@@ -137,7 +137,7 @@ Variables location will depend on the platform you use:
 
 ### Authentication errors
 
-One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout `CONNECT` settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...  
+One thing that can happen if you have an incorrect Dexcom login/password in your Share account settings and/or in your Nightscout `BRIDGE` settings is that Dexcom will lock your account...and you won't see CGM data in Nightscout. If you notice your CGM readings disappeared, but everything else is flowing...  
 Check your Heroku logs that are viewable by selecting `View Logs` from the drop-down menu underneath the `More` option.  
 
 <img src="/vendors/heroku/img/heroku-logs.png" width="800">
@@ -150,7 +150,7 @@ With Railway they are available selecting your app, then `Deployments` and `View
 
 Do your logs have "`SSO authentication errors`" like in the red box highlighted above? If you do, then:
 
-1. Delete your `CONNECT_SHARE` entries within Heroku settings.  Don't delete the variables, just delete the values of `CONNECT_SHARE_PASSWORD` and `CONNECT_SHARE_ACCOUNT_NAME`.
+1. Delete your `BRIDGE` entries within Heroku settings.  Don't delete the variables, just delete the values of `BRIDGE_PASSWORD` and `BRIDGE_USER_NAME`.
 2. Wait 15 minutes and then follow the directions below. It is important to wait 15 minutes: the reason you can't log in right now is that your Dexcom account has a temporary lock from the passwords in the step above being incorrect. The temporary lock will expire after 10-15 minutes of giving the account login a break from the incorrect logins. So, definitely wait or else you'll just keep prolonging the issue.
 
 ```{hint} About your Bridge password and user name

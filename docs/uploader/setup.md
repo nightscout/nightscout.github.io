@@ -66,7 +66,7 @@ You can find it in [Status - Hostname](https://navid200.github.io/xDrip/docs/Nig
 
 ## Dexcom
 
-You need at least one follower to use Nightscout `share` (deprecated) or `nightscout-connect` (recommended) plugins.
+You need at least one follower to use Nightscout `share` plugin.
 
 ```{hint}
 If you use a DIY closed loop system it is recommended that you let it upload to Nightscout instead of importing data using Dexcom Share and a Nightscout plugin.
@@ -95,6 +95,7 @@ You need to add `bridge` in the `ENABLE` variable. Do not delete other entries, 
 :::
 
 :::{tab-item} 15
+**The `connect` plugin is under development.**</br></br>
 Verify, update or add these variables:</br></br>
 `CONNECT_SOURCE` set to `dexcomshare`</br>
 `CONNECT_SHARE_ACCOUNT_NAME`</br> 
