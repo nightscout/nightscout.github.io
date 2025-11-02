@@ -1,4 +1,4 @@
 # Troubleshoot Google Cloud Nightscout
 
-Follow [these instructions](https://fly.io/docs/hands-on/install-flyctl/).  
+Follow [these instructions](https://google-cloud-nightscout.github.io/docs/Troubleshooting.html).  
 
