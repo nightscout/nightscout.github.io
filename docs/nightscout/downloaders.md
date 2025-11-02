@@ -222,6 +222,16 @@ This is a cross-platform application that uses the Nightscout API. It aims to pr
 
 </br>
 
+### [trndi](https://github.com/slicke/trndi)
+
+Trndi is a *desktop app* that shows the your blood sugar and graph. It works with *Nightscout* and *Dexcom Share* at the moment. It also supports the *xDrip* app, connecting over the local network/Wi-Fi.
+
+<img src="/nightscout/img/LockOK.png" width="25px" />
+
+<img src="https://raw.githubusercontent.com/slicke/trndi/refs/heads/main/doc/img/trndi-logo.png" width="150px"/>
+
+</br>
+
 ### [Nightscout MacOS Menu Bar](https://github.com/adamd9/Nightscout-MacOS-Menu-Bar)
 
 Show your current BG in the system bar at the top of your screen on Mac (including Loop details). Available directly through the [Apple Store](https://apps.apple.com/au/app/nightscout-menu-bar/id1639776072?mt=12).
@@ -255,6 +265,16 @@ This is a cross-platform application that uses the Nightscout API. It aims to pr
 <img src="/nightscout/img/LockOK.png" width="25px" />
 
 <img src="https://raw.githubusercontent.com/kashamalasha/nightscout-widget-electron/main/docs/screenshot-widget.png" width="350px"/>
+
+</br>
+
+### [trndi](https://github.com/slicke/trndi)
+
+Trndi is a *desktop app* that shows the your blood sugar and graph. It works with *Nightscout* and *Dexcom Share* at the moment. It also supports the *xDrip* app, connecting over the local network/Wi-Fi.
+
+<img src="/nightscout/img/LockOK.png" width="25px" />
+
+<img src="https://raw.githubusercontent.com/slicke/trndi/refs/heads/main/doc/img/trndi-logo.png" width="150px"/>
 
 </br>
 

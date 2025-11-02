@@ -39,6 +39,39 @@ Deploy on [NixOS](/vendors/VPS/nixos).
 
 </br>
 
+#### Mirroring to a secondary site
+
+From @XiTaTION using nginx, you can forward API requests to a secondary `backend2` Nightscout (useful when debugging development) with only the first site `backend1` being able to respond. Like this:
+
+```nginx
+upstream primary {
+    server backend1.example.com:8080;
+}
+
+upstream mirror_backend {
+    server backend2.example.com:8080;
+}
+
+server {
+    listen 80;
+    
+    location /api/ {
+        mirror /mirror;
+        mirror_request_body on;  # Optional: also mirror request body
+        
+        proxy_pass http://primary;
+    }
+    
+    location = /mirror {
+        internal;
+        proxy_pass http://mirror_backend$request_uri;
+        proxy_set_header X-Original-URI $request_uri;
+    }
+}
+```
+
+</br>
+
 (nas)=
 
 ## Building Nightscout inside your NAS
@@ -58,7 +91,7 @@ If you own one, you can use it to host your Nightscout, see [here](https://gist.
 
 ## Home Assistant Add-On for Nightscout
 
-This add-on is a wrapper around nightscout/cgm-remote-monitor. It includes a Mongo Database which is used to store the uploaded values.
+This add-on is a wrapper around `nightscout/cgm-remote-monitor`. It includes a Mongo Database which is used to store the uploaded values.
 
 See [here](https://github.com/marciogranzotto/addon-nightscout).
 
