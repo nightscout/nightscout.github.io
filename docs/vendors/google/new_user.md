@@ -22,10 +22,8 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 
 **Cons**:
 * Not free!  To keep the cost below $0.05 a month, outgoing traffic must be kept below 1GB per month.
-* In Australia or China, cost can be more than $0.50 a month. 
 ```
 
 </br>
 
-### [Instructions](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html)  
-
+### [Instructions](https://google-cloud-nightscout.github.io/)
