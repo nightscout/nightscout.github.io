@@ -298,6 +298,7 @@ vendors/heroku/hobbyplan/
 vendors/heroku/mfa/
 update/upd_stack/
 troubleshoot/fly.io/
+troubleshoot/google/
 troubleshoot/render/
 ```
 
