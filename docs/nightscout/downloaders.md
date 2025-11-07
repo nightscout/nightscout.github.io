@@ -298,6 +298,16 @@ This is a cross-platform application that uses the Nightscout API. It aims to pr
 
 </br>
 
+### [trndi](https://github.com/slicke/trndi)
+
+Trndi is a *desktop app* that shows the your blood sugar and graph. It works with *Nightscout* and *Dexcom Share* at the moment. It also supports the *xDrip* app, connecting over the local network/Wi-Fi.
+
+<img src="/nightscout/img/LockOK.png" width="25px" />
+
+<img src="https://raw.githubusercontent.com/slicke/trndi/refs/heads/main/doc/img/trndi-logo.png" width="150px"/>
+
+</br>
+
 ## Displays
 
 ### [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki)
