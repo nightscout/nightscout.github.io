@@ -336,6 +336,14 @@ Trndi is a *desktop app* that shows the your blood sugar and graph. It works wit
 
 </br>
 
+### Raspberry Pi with [trndi](https://github.com/slicke/trndi)
+
+See [here](https://github.com/slicke/trndi/blob/main/guides/Display.md).
+
+<img src="https://raw.githubusercontent.com/slicke/trndi/refs/heads/main/doc/img/img_rpi.png" width="400px" />
+
+</br>
+
 ## Other
 
 [Home assistant](https://www.home-assistant.io/integrations/nightscout/)
