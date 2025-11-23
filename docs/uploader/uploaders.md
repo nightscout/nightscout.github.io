@@ -73,9 +73,9 @@ You can forward your data from GlucoLog Web using an AWS bridge documented [here
 
 You can use [this Python-based uploader](https://github.com/nl-ruud/nightscout-easyview) that retrieves CGM data from the Medtrum EasyView API and pushes it to a Nightscout instance.
 
-## Tandem t:slim X2
+## Tandem t:slim X2 / Tandem Mobi
 
-You can synchronize your treatments one way from your Tandem Diabetes t:connect web/mobile application to Nightscout using  a bridge app running via **Pipenv** or **Docker** as documented [here](https://github.com/jwoglom/tconnectsync).
+You can synchronize data from a Tandem t:slim X2 or Tandem Mobi pump from Tandem Source (formerly t:connect) to Nightscout using a bridge tool called [tconnectsync](https://github.com/jwoglom/tconnectsync) running via **Pipenv** or **Docker**. This relies on the t:slim or Mobi app being installed on your device which uploads to Tandem Source, which tconnectsync then replicates to Nightscout. This can run on your own computer with Python installed, or in the cloud (e.g. via Heroku). [See instructions on the tconnectsync repo.](https://github.com/jwoglom/tconnectsync)
 
 ## Abbott Freestyle Libre
 
