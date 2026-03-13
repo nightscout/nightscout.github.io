@@ -187,6 +187,17 @@ Choosing Opensource.clinic offers several benefits: a quick setup with Nightscou
 
 Higher-tier subscriptions offer personalized coaching from a dedicated team of healthcare and IT professionals experienced or trained in DIY looping. The support team is located across various time zones, ensuring round-the-clock assistance, and is currently available in English and Dutch. Please visit our [website](https://www.opensource.clinic/pricing) or contact us via [email](mailto:info@opensource.clinic) if you have any questions.
 
+### [diab.ninja](https://diab.ninja)
+
+[Pricing information](https://diab.ninja/en/#pricing)
+
+Launched in 2023 by **Michal Terbert**, a member of the Polish diabetes community and father of a child with Type 1 diabetes, diab.ninja is a platform designed to simplify the process of running and maintaining a Nightscout instance. The service removes most of the technical barriers typically associated with Nightscout setup and management.
+
+With diab.ninja, users can quickly deploy their own Nightscout environment and manage it through a dedicated web panel. The platform handles the infrastructure and deployment, allowing users to focus on their glucose data instead of server configuration.
+
+The platform is available in three language versions: Polish, English, and German (PL/EN/DE). In addition to hosting and management features, diab.ninja includes advanced modules for glucose data analysis, allowing users to generate glycemia reports and configure alerts based on Nightscout data.
+
+Support is available via email [email](mailto:kontakt@diab.ninja) or through the built-in ticketing system available in the user panel. The project continues to evolve with the goal of making Nightscout easier to use while providing more tools for understanding glucose trends.
 </br>
 
 ## How to Use These Docs
