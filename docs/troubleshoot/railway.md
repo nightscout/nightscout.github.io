@@ -2,21 +2,18 @@
 
 </br>
 
-## Nothing here
+## Not found
 
 </br>
 
-```{warning}
-The free plan has been removed Jul 3rd for new users and Aug 1st for existing users.
-```
-
-</br>
-
-It has been running fine for the first 200/500 hours and now it's gone. Even the project disappeared in Railway.
+Your site stopped working unexpectedly.
 
 <img src="/vendors/railway/img/RailwayT12.png" width="300px" />
 
-This is usually because you need a Developer plan to run your Nightscout app in Railway.
+Try in the following order:
+
+- [Restart your app](#restart-your-app)
+- [Redeploy](#redeploy)
 
 </br>
 
@@ -41,7 +38,30 @@ If your site crashes again shortly after, verify your [database is not full](/tr
 
 </br>
 
+## Redeploy
+
+a) Open the [Railway Dashboard](https://railway.app/dashboard) and select your project then your app.
+
+<img src="/vendors/railway/img/RailwayT13.png" width="400px" />
+
+</br>
+
+b) In your `web` deployments select the current one (top of the list) and in the three dots menu on the right, `Restart`.
+
+<img src="/vendors/railway/img/RailwayT14b.png" width="600px" />
+
+</br>
+
+b) Confirm Restart. Wait a moment and check your Nightscout site state clicking the URL. 
+
+<img src="/vendors/railway/img/RailwayT15b.png" width="400px" />
+
+</br>
+
 ## Reconnect GitHub to your project
+
+This is useful only if you created Nightscout from your own GitHub repository.
+It is not necessary or useful when you use a Docker image deployment (recommended).
 
 a) Open [Railway](https://railway.app) and click `login`. Login with GitHub.
 

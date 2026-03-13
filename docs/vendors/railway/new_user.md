@@ -9,12 +9,6 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 
 </br>
 
-```{warning}
-The free plan has been removed Jul 3rd for new users and Aug 1st for existing users.
-```
-
-</br>
-
 ```{card}
 ## Railway.app
 ![Railway](/vendors/img/Railway.png)
