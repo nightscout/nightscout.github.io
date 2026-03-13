@@ -52,7 +52,7 @@ b) In your `web` deployments select the current one (top of the list) and in the
 
 </br>
 
-b) Confirm Restart. Wait a moment and check your Nightscout site state clicking the URL. 
+b) Confirm Redeploy. Wait for completion and check your Nightscout site state clicking the URL. 
 
 <img src="/vendors/railway/img/RailwayT15b.png" width="400px" />
 
