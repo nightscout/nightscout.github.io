@@ -6,7 +6,7 @@ orphan: true
 
 </br>
 
-## The latest release is [15.0.2](https://github.com/nightscout/cgm-remote-monitor/releases/tag/15.0.0).
+## The latest release is [15.0.6](https://github.com/nightscout/cgm-remote-monitor/releases/tag/15.0.6).
 
 </br>
 
