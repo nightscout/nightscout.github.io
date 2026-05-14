@@ -13,6 +13,7 @@ Your site stopped working unexpectedly.
 Try in the following order:
 
 - [Restart your app](#restart-your-app)
+- [Change a variable](#editing-variables-in-railway), like your [custom title](#custom-title-nightscout)
 - [Redeploy](#redeploy)
 
 </br>
