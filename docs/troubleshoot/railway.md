@@ -13,7 +13,7 @@ Your site stopped working unexpectedly.
 Try in the following order:
 
 - [Restart your app](#restart-your-app)
-- [Change a variable](#editing-variables-in-railway), like your [custom title](#custom-title-nightscout)
+- [Change a variable](/vendors/railway/new_user.md/#editing-variables-in-railway), like your [custom title](/nightscout/setup_variables.md/#custom-title-nightscout)
 - [Redeploy](#redeploy)
 
 </br>
