@@ -200,6 +200,20 @@ The platform is available in three language versions: Polish, English, and Germa
 Support is available via email [email](mailto:kontakt@diab.ninja) or through the built-in ticketing system available in the user panel. The project continues to evolve with the goal of making Nightscout easier to use while providing more tools for understanding glucose trends.
 </br>
 
+### [Nightscout Host](https://www.nightscout.host)
+
+[Pricing information](https://www.nightscout.host/#pricing)
+
+Nightscout Host believes the internet already has enough 1-click, instant, unlimited services. What it doesn’t have enough of is something more personal.
+
+Fredrik — a Swedish senior software engineer and dad of a T1D daughter — reviews every signup personally and tests everything before handing it over. You don’t get a Nightscout in 60 seconds. You get one that actually works for you.
+
+Solution built for low-CO₂ impact. The good engineering came free. Instances across 6 regions in Europe and North America, CDN tweaked and located even closer to you for good, reliable performance.
+
+Direct support. No ticket queue.
+
+Contact: [say-hej@nightscout.host](mailto:say-hej@nightscout.host)
+
 ## How to Use These Docs
 
 - Use the navigation menu at the top on the left of the screen to find the section that you are looking for.
