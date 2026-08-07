@@ -210,6 +210,16 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 </br>
 
+### [Sugar Sense](https://apps.apple.com/app/id6737151615)
+
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" />    <img src="/nightscout/img/LockOK.png" width="25px" />
+
+Real-time glucose from your Nightscout site on iPhone and Apple Watch, with widgets, a Lock Screen Live Activity, customizable alerts and family following. Type your Nightscout URL and a read-only access token to connect. [Setup guide](https://sugarsense.io/nightscout-troubleshooting).
+
+<img src="https://sugarsense.io/wp-content/themes/sugarsense/assets/img/hero-phone.png" width="300px" />
+
+</br>
+
 ## Mac
 
 ### [Owlet](https://github.com/kashamalasha/nightscout-widget-electron)
