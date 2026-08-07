@@ -19,7 +19,7 @@ orphan: true
 | <img src="/vendors/img/Heroku.png" width="100px" />      | [Update](/update/update/)                                    |
 | <img src="/vendors/img/Railway.png" width="100px" />     | [Update](/update/update/)                                    |
 | <img src="/vendors/img/Northflank.png" width="100px" />  | [Update](/update/update/)                                    |
-| <img src="/vendors/img/GoogleCloud.png" width="100px" /> | Google Cloud xDrip+</br>Continue [here](https://navid200.github.io/xDrip/docs/Nightscout/update_nightscout.html) |
+| <img src="/vendors/img/GoogleCloud.png" width="100px" /> | Google Cloud xDrip</br>Continue [here](https://navid200.github.io/xDrip/docs/Nightscout/update_nightscout.html) |
 | <img src="/vendors/img/Azure.png" width="100px" />       | [Update](/update/update/)                                    |
 | <img src="/vendors/img/Fly.io.png" width="100px" />      | [Update](/update/update/)                                    |
 | <img src="/vendors/img/Render.png" width="100px" />      | [Update](/update/update/)                                    |

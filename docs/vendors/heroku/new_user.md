@@ -244,7 +244,7 @@ You need to have at least one follower to use Dexcom Share. See [here](/uploader
  </br>
 
 g) Linking your CareLink account as a data source is **not possible anymore using cloud hosted Nightscout sites**.  
-Use an Android bridge device with a private version of xDrip+.  
+Use an Android bridge device with a private version of xDrip.  
 More information **[here](/uploader/xdripcarelink)**.
 
 <img src="/vendors/heroku/img/NewNS36.png" width="500px" />

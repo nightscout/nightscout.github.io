@@ -23,7 +23,7 @@ There are several parts to this system. You need somewhere online to store, proc
 
 ### Uploader
 
-The CGM data is usually sent to Nightscout by an uploader device such as a mobile cellphone running an app like xDrip+, Spike, xDrip4iOS, Medtronic Uploader and others. Alternatively, the CGM data can be pulled directly from your online Dexcom account. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have.
+The CGM data is usually sent to Nightscout by an uploader device such as a mobile cellphone running an app like xDrip, xDrip4iOS, Medtronic Uploader and others. Alternatively, the CGM data can be pulled directly from your online Dexcom account. The application you'll need for uploading the data depends on which CGM device you're using and what type of mobile device you have.
 
 ### Followers
 

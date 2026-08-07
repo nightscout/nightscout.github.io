@@ -20,7 +20,7 @@ Below is a list of some VPS. There are probably others, don't hesitate to [open 
 
 ### Google Cloud
 
-[xDrip+ team Nightscout on Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html) with a Scripted deployment (one command).
+[xDrip team Nightscout on Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html) with a Scripted deployment (one command).
 
 ### Oracle Cloud
 

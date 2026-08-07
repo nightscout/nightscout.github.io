@@ -30,6 +30,22 @@ If you just tried to deploy a new Nightscout site, something went wrong. [Cleanu
 
 </br>
 
+## Build failure: Unknown cli flag --unsafe-perm
+
+When deploying or updating Nightscout, the build fails on the Heroku-24 or Heroku-26 stack with this error in the build log:
+
+```
+npm error code EUNKNOWNCONFIG
+npm error Unknown cli flag:
+npm error   - --unsafe-perm
+```
+
+This was caused by an issue in the Heroku Node.js buildpack: it passed the `--unsafe-perm` option to npm, which is no longer supported since npm 12. Heroku [fixed this](https://github.com/heroku/heroku-buildpack-nodejs/releases/tag/v358) on July 9, 2026.
+
+- Simply retry the deployment: it will succeed now that Heroku has fixed the buildpack. No changes to your app or variables are needed. See [this report](https://github.com/nightscout/cgm-remote-monitor/issues/8561) for details.
+
+</br>
+
 ## A valid GitHub Directory could not be found.
 
 When trying to deploy a new Nightscout site, this message appears when clicking `Deploy to Heroku`.

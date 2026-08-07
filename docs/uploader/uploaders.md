@@ -28,7 +28,7 @@ See this [dedicated page](/nightscout/close_loop) for setup links.
 If you are using a Dexcom sensor connected to the Dexcom app on your phone, it will upload directly to the Dexcom servers (also still known as "Dexcom Share") and you won't need to use any extra uploader or master device.  
 
 ```{note}
-If you cannot use Dexcom Share, try xDrip+ or xDrip4iOS as a bridge to Nightscout.
+If you cannot use Dexcom Share, try xDrip or xDrip4iOS as a bridge to Nightscout.
 ```
 
 For this to work, Nightscout must be configured to use the `bridge` plug-in and will then automatically pull the CGM information directly from the Dexcom servers in real-time.
@@ -39,10 +39,9 @@ If you use a [DIY closed loop system](/nightscout/close_loop) it is recommended 
 
 If you don't want to use the official Dexcom apps, you can use **open-source software** apps for your Dexcom sensor to connect, display, alarm and also upload to Nightscout:
 
-**Android**: xDrip+ for G6, ONE, ONE+, Stelo and G7. <!-- xDrip+ for G4 (1)(2)(3), G5 and G6. -->
+**Android**: xDrip for G6, ONE, ONE+, Stelo and G7. <!-- xDrip for G4 (1)(2)(3), G5 and G6. -->
 
 **iOS**:   
-	Spike for G5 and refurbished G6 transmitters <!-- Spike or xDrip4iOS for G4 (1)(3) -->  
 	xDrip4iOS for G5, G6, G7, Stelo and ONE/ONE+ transmitters
 
 <img src="./img/Upload03.png"  width="600px"/>
@@ -57,7 +56,7 @@ You can use the sensor connected with [Juggluco](https://www.juggluco.nl/Juggluc
 
 ## Medtronic
 
-You can use an Android phone with xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up. You can use [Guardian Monitor](https://apps.apple.com/us/app/guardian-monitor/id1546989938) with iOS.
+You can use an Android phone with xDrip. See [**here**](../../uploader/xdripcarelink) how to set it up. You can use [Guardian Monitor](https://apps.apple.com/us/app/guardian-monitor/id1546989938) with iOS.
 
 [Home Assistant](https://github.com/yo-han/Home-Assistant-Carelink) also can upload data to Nightscout.
 
@@ -88,16 +87,16 @@ Non Bluetooth-enabled Freestyle Libre sensors will need an additional transmitte
 The Libre environment is complex and evolves quickly. Before buying a transmitter, please join the respective Facebook groups and make sure that the transmitter you are planning to buy is compatible with your sensor type.
 ```
 
-**Open-source apps** such as **xDrip+**, **Juggluco** and **xDrip4iOS** support some of the above transmitter devices.
+**Open-source apps** such as **xDrip**, **Juggluco** and **xDrip4iOS** support some of the above transmitter devices.
 
 ### Libre 2/2+
 
-You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Libre2MinimalL00per.html), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre).  
-Other Libre 2 sensors can be used directly with [Juggluco](https://www.juggluco.nl/Juggluco/index.html) and Diabox.
+You can connect to the Libre 2 sensor (**EU only**) without an additional transmitter using [xDrip](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Libre2MinimalL00per.html), and [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#libre).  
+Other Libre 2 sensors can be used directly with [Juggluco](https://www.juggluco.nl/Juggluco/index.html).
 
 ### Libre 2/2+/3/3+
 
-You can use the sensor connected with [Juggluco](https://www.juggluco.nl/Juggluco/index.html) or upload to Nightscout automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip+ to perform this operation.
+You can use the sensor connected with [Juggluco](https://www.juggluco.nl/Juggluco/index.html) or upload to Nightscout automatically from LibreView servers deploying [this](https://github.com/timoschlueter/nightscout-librelink-up) project, or use xDrip to perform this operation.
 
 A new plugin called Nightscout Connect (under development) will integrate the project above.
 
@@ -107,7 +106,7 @@ In order to get data from the Eversense CGM system, you can use the [ESEL](https
 
 <img src="./img/Upload06.png"  width="500px"/>
 
-You can also use [Juggluco](https://www.juggluco.nl/Juggluco/index.html) or xDrip+ in Companion App mode.
+You can also use [Juggluco](https://www.juggluco.nl/Juggluco/index.html) or xDrip in Companion App mode.
 
 ## Diasend
 

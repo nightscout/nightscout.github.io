@@ -6,7 +6,7 @@
 
 <img src="/nightscout/img/PebbleNSFoundation.jpeg" width="400px" />
 
-Pebble smartwatch use is a historic milestone of CGM in the Cloud. Pebble has been bought by Fitbit in 2016 and necessary resources have moved to archives and [rebble.io](https://rebble.io/). Pebble support is still maintained in Loop, AndroidAPS, FreeAPS and xDrip+.
+Pebble smartwatch use is a historic milestone of CGM in the Cloud. Pebble has been bought by Fitbit in 2016 and necessary resources have moved to archives and [rebble.io](https://rebble.io/). Pebble support is still maintained in Loop, AndroidAPS, FreeAPS and xDrip.
 
 You can't find the Pebble app for iOS in the [Apple Store](https://www.reddit.com/r/pebble/comments/q1e6qx/the_pebble_ios_app_is_now_gone_from_the_app_store/) anymore. For Android you need to download it from [APKMirror](https://www.apkmirror.com/apk/pebble-technology-corp/pebble/pebble-4-4-2-1405-62d45d7d7-endframe-release/pebble-4-4-2-1405-62d45d7d7-endframe-android-apk-download/) or [APKPure](https://apkpure.com/it/pebble/com.getpebble.android.basalt).
 
@@ -28,7 +28,7 @@ If you want to use your Pebble with Loop look [here](https://loopkit.github.io/l
 
 </br>
 
-### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
+### [xDrip](https://github.com/NightscoutFoundation/xDrip/releases)
 
 Enable Pebble Integration in Smartwatch features.
 
@@ -87,25 +87,19 @@ With an Android smartphone.
 
 This innovative [app](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) receives data from various sources and visualizes it clearly on your Android smartphone, smartwatch (Wear OS, Miband, and Amazfit), and in your car (via [GlucoDataAuto](https://github.com/pachi81/GlucoDataAuto/blob/main/README.md)).
 
-### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
+### [xDrip](https://github.com/NightscoutFoundation/xDrip/releases)
 
-Enable Android Wear Integration to send xDrip+ BG to the smartwatch. Do not enable neither Collection nor Force Collection.
+Enable Android Wear Integration to send xDrip BG to the smartwatch. Do not enable neither Collection nor Force Collection.
 
 <img src="/nightscout/img/Watch00.png" width="800px" />
 
-Full xDrip+ wear documentation [here](https://github.com/jamorham/xDrip-plus/blob/master/Documentation/WatchGuide.md).
+Full xDrip wear documentation [here](https://github.com/jamorham/xDrip-plus/blob/master/Documentation/WatchGuide.md).
 
 *NB: you can also use [Tasker](#xdrip-with-tasker).*
 
 ### [AndroidAPS](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html)
 
 For AndroidAPS [here](https://androidaps.readthedocs.io/en/latest/EN/Configuration/Watchfaces.html#aaps-on-wear-os-smartwatch).
-
-### [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
-
-Select your Wearable device and enable the Glimp watchface.
-
-<img src="/nightscout/img/Watch01.png" width="700px" />
 
 ### [NightWear](https://github.com/rahim/nightwear)
 
@@ -115,33 +109,25 @@ It uses Wear's standalone app support, so requires no companion app installed on
 
 </br>
 
-## Amazfit Pace & Stratos
+## Amazfit Pace & Stratos (obsolete)
 
-### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
-
-- Install the [Amazfit watch app](https://play.google.com/store/apps/details?id=com.huami.watch.hmwatchmanager) on your phone.
-- Install the [Amazfit tool](https://forum.xda-developers.com/t/tool-pace-stratos-verge-tool-all-in-one-drivers-unlock-twrp-factory-image.3874802/) on a Windows PC.
-- Download the [widget](https://github.com/Klaus3d3/XdripWidgetForAmazfit-Klaus/releases) from the project author (Klaus3d3) GitHub [repository](https://github.com/Klaus3d3/XdripWidgetForAmazfit-Klaus).
-- OEM unlock and enable USB debug on the watch, run TOOL ALL IN ONE and click the APK Installer button, select the widget apk file and INSTALL it. Close the install window and click Reboot System.
-- In xDrip+, enable the Amazfit service and select the options you want to enable.
-
-<img src="/nightscout/img/Watch04.png" width="800px" />
-
-*Original instructions [here](https://crazyinfo.de/2018/07/25/xdrip-smartwatch-widget-fuer-amazfit-pace-stratos).*
+These watches are obsolete. If you still own one, an xDrip widget by Klaus3d3 is available on [GitHub](https://github.com/Klaus3d3/XdripWidgetForAmazfit-Klaus) with its installation instructions.
 
 </br>
 
-## Xiaomi MiBand 2, 3, 4, 5 and 6
+## Xiaomi Mi Band & Amazfit (WatchDrip+)
 
-## Amazfit Band 5, Bip, Bip Lite, Bip S and Bip S lite, T-Rex Pro
+[WatchDrip+](https://watchdrip.org/) by Artem (bigdigital) is a companion app to [xDrip](https://github.com/NightscoutFoundation/xDrip/releases): it pushes glucose, delta, trend and treatment data to Xiaomi and Amazfit watches as soon as a new reading arrives. It can also get its data from AndroidAPS. See [Artem's blog](https://bigdigital.home.blog/) for setup instructions and the [GitHub repository](https://github.com/bigdigital/watchdrip) for downloads.
 
-## Amazfit GTR2, GTR2e, GTS2, GTS 2 mini, GTS2e, GTR42 and 47
+Currently supported devices:
 
-### xDrip+
+- **Direct connection**: Xiaomi MiBand 2, 3, 4, 5 and 6; Amazfit GTR 47mm and 42mm, GTR2, GTR2e, GTS2, GTS2e, GTS2 Mini, Band 5, Bip, Bip Lite, Bip S, Bip S Lite, T-Rex Pro.
+- **Zepp OS watches**: Amazfit Active, Active 2, Active Max, Balance family, Band 7, Bip 5, Bip 6, Cheetah family, Falcon, GTR 3, GTR 3 Pro, GTR 4, GTR Mini, GTS 3, GTS 4, GTS 4 mini, T-Rex 2, T-Rex 3, T-Rex Ultra and more.
+- **Xiaomi**: Smart Band 7, Watch 8 Pro, Watch 9, Watch 10, Redmi Watch 4.
 
-Follow Artem's instructions [here](https://bigdigital.home.blog/).
+Check [watchdrip.org](https://watchdrip.org/) for the up-to-date device list.
 
-Can be used with [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases) and [GlucoDataHandler](#glucodatahandler).
+[GlucoDataHandler](#glucodatahandler) is an open source alternative also supporting Mi Band and Amazfit watches.
 
 </br>
 
@@ -179,53 +165,37 @@ You can setup Loop Follow as a calendar complication to display Nightscout on yo
 
 ## Fitbit
 
+```{admonition} Fitbit smartwatches are being made obsolete
+:class: warning
+Google has discontinued the Fitbit smartwatch line: there will be no successors to the Versa 4 and Sense 2 (the Pixel Watch replaces them) and software updates are only guaranteed through 2026.</br></br>
+In June 2024 Google removed third-party apps and watchfaces (including those below) from the Fitbit gallery **in the European Economic Area**: installing them from Europe requires a VPN connected to a non-EEA country.
+```
+
 ### [Nightscout Monitor](https://gallery.fitbit.com/details/eaed806d-9ff5-4aa9-a2c8-518f1f852f5a)
 
-Ionic/Sense/Versa/Versa 2/Versa 3/Versa Lite
-
-[Repository](https://github.com/sulkaharo/nsfitbit)
-
-</br>
+Open source ([repository](https://github.com/sulkaharo/nsfitbit)) — Ionic/Sense/Versa/Versa 2/Versa 3/Versa Lite
 
 ### [Glance](https://gallery.fitbit.com/details/7b5d9822-7e8e-41f9-a2a7-e823548c001c)
 
-Ionic/Sense/Versa/Versa 2/Versa 3/Versa 4/Versa Lite
-
-[Web site](https://glancewatchface.com/)
-
-</br>
+[Web site](https://glancewatchface.com/) — Ionic/Sense/Versa/Versa 2/Versa 3/Versa 4/Versa Lite
 
 ### [Sentinel](https://gallery.fitbit.com/developer/b50ac7f5-b932-441a-be18-e258b17c736b)
 
-Ionic/Sense/Versa/Versa 2/Versa Lite
-
-Facebook group: [Sentinel](https://www.facebook.com/groups/3185325128159614)
-
-</br>
+Facebook group: [Sentinel](https://www.facebook.com/groups/3185325128159614) — Ionic/Sense/Versa/Versa 2/Versa Lite
 
 ### [Marclock](https://gallery.fitbit.com/details/9eacf714-5b23-40c8-9621-ded74bd9edf9)
 
-Ionic/Sense/Versa/Versa 2/Versa Lite
-
-[Instructions](https://github.com/cramis1/Marclock-with-CGM-weather/blob/master/README.md)
-
-</br>
+[Instructions](https://github.com/cramis1/Marclock-with-CGM-weather/blob/master/README.md) — Ionic/Sense/Versa/Versa 2/Versa Lite
 
 ### Analog watchfaces
 
-#### [Analog CGM](https://gallery.fitbit.com/details/4d7b46b1-aaba-49b4-aa10-183321014dd3)
-
-#### [Orbits NS](https://gallery.fitbit.com/details/44de5c81-b77c-4f90-baa8-38f3e3d28695)
-
-#### [Radial CGM](https://gallery.fitbit.com/details/0173730e-5381-4495-bc6e-6ec93c8df029)
-
-Ionic/Versa/Versa 2/Versa Lite/Versa 3/Sense
+[Analog CGM](https://gallery.fitbit.com/details/4d7b46b1-aaba-49b4-aa10-183321014dd3), [Orbits NS](https://gallery.fitbit.com/details/44de5c81-b77c-4f90-baa8-38f3e3d28695), [Radial CGM](https://gallery.fitbit.com/details/0173730e-5381-4495-bc6e-6ec93c8df029) — Ionic/Versa/Versa 2/Versa Lite/Versa 3/Sense
 
 </br>
 
 ## Samsung Gear Smartwatches
 
-### xDrip+ with Tasker
+### xDrip with Tasker
 
 *Note: also available for Android Wear devices*
 
@@ -241,17 +211,37 @@ Facebook group: [G-Watch App](https://www.facebook.com/gwatchapp)
 
 ## Garmin Smartwatches and Computers
 
-By [Phimby](https://apps.garmin.com/en-US/developer/74d80f40-f80a-45c2-b934-321cc86f9dac/apps)
+Several watchfaces, widgets and data fields in the [Garmin Connect IQ store](https://apps.garmin.com/) can display your Nightscout data on Garmin watches and Edge cycling computers. Install them with the Garmin Connect IQ app on your phone and configure your Nightscout URL and token in the app settings.
 
-By [Horsetooth](https://apps.garmin.com/en-US/developer/e985e9ec-bcf6-4aef-bfe9-77c1c93fc854/apps)
+### [CGM Connect](https://apps.garmin.com/en-US/developer/2609a36a-c06d-4386-9fe6-5c2dc7d702f1/apps) (bruder_jakob)
 
-By [andreas-may](https://apps.garmin.com/en-US/developer/f9420c47-810f-47ac-a7dd-9fa7b8ecd22d/apps)
+Watchface, widget and data field supporting Nightscout, Dexcom Share, LibreLinkUp, xDrip and more. Configured entirely from the Garmin Connect app settings, works with both Android and iPhone.
 
-By [Fredrik_S](https://apps.garmin.com/en-US/developer/c3842ca7-a645-4758-b9ed-4ee6f8e3abec/apps)
+### [xDrip/Nightscout watchfaces](https://apps.garmin.com/en-US/developer/f9420c47-810f-47ac-a7dd-9fa7b8ecd22d/apps) (andreas-may)
 
-By [John_](https://apps.garmin.com/en-US/developer/b2d30711-2708-4f3a-8e83-009c16d07081/apps)
+Watchfaces, widgets and data fields reading from Nightscout or directly from xDrip on your phone over the local network (enable the xDrip Web Service), so no internet connection is needed. Also works with GlucoDataHandler.
 
-By [floheigl](https://apps.garmin.com/en-US/apps/488ffa72-5994-4d0f-90ff-3eeb99f3ea41)
+### [NightscoutWatch2 and NightscoutData2](https://apps.garmin.com/en-US/developer/e985e9ec-bcf6-4aef-bfe9-77c1c93fc854/apps) (Horsetooth)
+
+Watchface and data field displaying glucose from your Nightscout site or from xDrip.
+
+### [CGM Gauge](https://apps.garmin.com/en-US/developer/b61690c3-5e5c-4c4e-afe9-434db16542a9/apps) (RoboleoApps)
+
+Gauge-style watchface, widget and data field for xDrip and Nightscout: customizable ranges and previous readings visible for the trend at a glance.
+
+### [CGM+](https://watchface.io/docs/cgm-glucose-monitors) (watchface.io)
+
+Data field for watchface.io watchfaces supporting Nightscout, Dexcom, Libre, xDrip and AAPS.
+
+### [WatchDrip+](https://bigdigital.home.blog/)
+
+Also supports some Garmin watches, fed directly by xDrip or AndroidAPS on an Android phone (readings arrive instantly, without the Connect IQ update cycle).
+
+### More watchfaces
+
+By [Fredrik_S](https://apps.garmin.com/en-US/developer/c3842ca7-a645-4758-b9ed-4ee6f8e3abec/apps), [John_](https://apps.garmin.com/en-US/developer/b2d30711-2708-4f3a-8e83-009c16d07081/apps) and [floheigl](https://apps.garmin.com/en-US/apps/488ffa72-5994-4d0f-90ff-3eeb99f3ea41).
+
+The apps by [Phimby](https://apps.garmin.com/en-US/developer/74d80f40-f80a-45c2-b934-321cc86f9dac/apps) are legacy: unmaintained for years, they only work with outdated hosting platforms.
 
 </br>
 

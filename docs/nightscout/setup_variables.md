@@ -66,7 +66,7 @@ For the full list consult the [main repository ReadMe](https://github.com/nights
 The connection string required to access your [Mongo database](/nightscout/new_user.md#basic-concepts) (where all your data is stored in the cloud).
 
 ```{warning}
-**`MONGODB_URI` is handled automatically if you use a hosted service or Google Cloud xDrip+ method.** In these cases you don't need to worry about it and can't or shouldn't change it.</br>
+**`MONGODB_URI` is handled automatically if you use a hosted service or Google Cloud xDrip method.** In these cases you don't need to worry about it and can't or shouldn't change it.</br>
 This string is vital to your Nightscout functioning. A wrong connection string will prevent your site from opening and your data uploading in Nightscout.
 ```
 

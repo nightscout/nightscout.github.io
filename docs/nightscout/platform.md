@@ -121,9 +121,9 @@ Follow [these instructions](/vendors/fly.io/new_user.md) to build your Nightscou
 
 ```{card}
 ## Google Cloud
-![xDrip+](/vendors/img/GoogleCloud.png)
+![xDrip](/vendors/img/GoogleCloud.png)
 ^^^
-A scripted Nightscout installation in Google Cloud is a new complete solution proposed by the xDrip+ developers team. Whilst deploying Nightscout manually in Ubuntu can be complex, their approach makes is rather simple for non-technical people.
+A scripted Nightscout installation in Google Cloud is a new complete solution proposed by the xDrip developers team. Whilst deploying Nightscout manually in Ubuntu can be complex, their approach makes is rather simple for non-technical people.
 
 **Pros**:  
 * Complete solution offering a large free database  
@@ -141,7 +141,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Nightscout/Goo
 
 ```{card}
 ## Render
-![xDrip+](/vendors/img/Render.png)
+![xDrip](/vendors/img/Render.png)
 ^^^
 A free solution with little experience.
 

@@ -127,7 +127,7 @@ The most common error on initial Nightscout setups is that people incorrectly us
 The `mmconnect` plugin is **NOT** functional anymore.
 ```
 
-You can use an Android phone with xDrip+. See [**here**](../../uploader/xdripcarelink) how to set it up. You can use [Guardian Monitor](https://apps.apple.com/us/app/guardian-monitor/id1546989938) with iOS.
+You can use an Android phone with xDrip. See [**here**](../../uploader/xdripcarelink) how to set it up. You can use [Guardian Monitor](https://apps.apple.com/us/app/guardian-monitor/id1546989938) with iOS.
 
 [Home Assistant](https://github.com/yo-han/Home-Assistant-Carelink) also can upload data to Nightscout.
 
@@ -180,7 +180,7 @@ Facebook Group [Nightscout for Medtronic](https://www.facebook.com/groups/Nights
 
 </br>
 
-## [xDrip+](https://jamorham.github.io/#xdrip-plus)
+## [xDrip](https://jamorham.github.io/#xdrip-plus)
 
 ```{admonition} Mind the syntax!
 :class: warning
@@ -206,47 +206,51 @@ Facebook Group [xDrip](https://www.facebook.com/groups/xDripG5)
 
 </br>
 
-## [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
+## Glimp (legacy)
 
-<img src="/uploader/img/UploadCFG02.png" width="800px" />
+Glimp was a closed source Libre reader app able to upload to Nightscout. It is legacy: **the application is not available anymore**.
 
 </br>
 
-## [Juggluco](http://jkaltes.byethost16.com/Juggluco/mgdL/index.html)
+## [Juggluco](https://github.com/j-kaltes/Juggluco)
+
+Open source Android and Wear OS app reading Libre sensors, able to upload glucose values to Nightscout.
 
 <img src="/uploader/img/UploadCFG11.png" width="800px" />
 
 </br>
 
-## [Diabox](https://www.bubblan.org/diabox/)
+## Diabox (legacy)
 
-<img src="/uploader/img/UploadCFG03.png" width="800px" />
-
-</br>
-
-## [LinkBluCon](https://www.ambrosiasys.com/our-products/linkblucon/)
-
-<img src="/uploader/img/UploadCFG04.png" width="800px" />
+Diabox was a closed source app for Libre sensors able to upload to Nightscout. The project is legacy and not maintained anymore.
 
 </br>
 
-## [Tomato](http://tomato.cool/)
+## [LinkBluCon](https://cgm.ambrosiasys.com/our-products/linkblucon/)
 
-<img src="/uploader/img/UploadCFG05.png" width="600px" />
+Closed source app for the Ambrosia BluCon transmitter.
+
+<img src="/uploader/img/UploadCFG04.png" width="300px" />
 
 </br>
 
-## [Spike](https://spike-app.com/)
+## Tomato (legacy)
 
-Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure-spike-master).
+Closed source app for the MiaoMiao transmitter. The vendor's website is gone and the app is barely maintained: it only remains available as `Tomato Lite` on the [App Store](https://apps.apple.com/us/app/tomato-lite/id1616316220). MiaoMiao users are better served by [xDrip](https://github.com/NightscoutFoundation/xDrip/releases), [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/) or [Juggluco](https://github.com/j-kaltes/Juggluco).
 
-<img src="/uploader/img/UploadCFG10.png" width="300px" />
+<img src="/uploader/img/UploadCFG05.png" width="300px" />
 
-Facebook group [Spike App](https://www.facebook.com/groups/spikeapp)
+</br>
+
+## Spike (legacy)
+
+Spike was an open source iOS CGM app able to upload to Nightscout. The project is legacy and not maintained anymore; installation is no longer practical. Use [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/) instead.
 
 </br>
 
 ## [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/)
+
+Open source iOS CGM app ([GitHub](https://github.com/JohanDegraeve/xdripswift)) supporting many sensors, with Nightscout upload.
 
 <img src="/uploader/img/UploadCFG06.png" width="300px" />
 

@@ -20,7 +20,7 @@ You need your own GitHub account and `cgm-remote-monitor` fork (copy).
 A GitHub account and `cgm-remote-monitor` fork (copy) is not mandatory but it is recommended.
 :::
 
-:::{tab-item} Google Cloud (xDrip+ script)
+:::{tab-item} Google Cloud (xDrip script)
 You don't need a GitHub account.
 :::
 

@@ -12,7 +12,7 @@ This is an important concept everybody needs to understand: what we call free me
 
 ***You're not scared to innovate with a new easy and reliable way to build and maintain your Nightscout? Give this a try!***
 
-With the xDrip+ team trying to make it so easy that the solutions above will look difficult, you need to try it to believe it.
+With the xDrip team trying to make it so easy that the solutions above will look difficult, you need to try it to believe it.
 
 *Note: You can use this method to deploy in Digital Ocean and other VPS*
 

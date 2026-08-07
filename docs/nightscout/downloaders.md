@@ -17,9 +17,11 @@ Note: <img src="/nightscout/img/LockOK.png" width="25px" /> indicates applicatio
 
 ## Android
 
-### [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases)
+### [xDrip](https://github.com/NightscoutFoundation/xDrip/releases)
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
+
+xDrip is the reference open source diabetes app for Android: it collects data from a wide range of CGM sensors and sources, uploads to Nightscout and can also follow your Nightscout site. Actively developed by the community, it offers alarms, smartwatch integration, calibrations, statistics and much more.
 
 <img src="https://xdrip-plus.firebaseapp.com/cdn/xdrip-plus-slides/img/xdrip-plus-high-low-alarms.png" width="400px" />
 
@@ -41,6 +43,8 @@ Facebook group [xDrip](https://www.facebook.com/groups/xDripG5/)
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
+AAPSClient is the open source follower app for [AndroidAPS](https://androidaps.readthedocs.io/) users: it displays the loop status (glucose, IOB, COB, basal) from Nightscout. Ready-to-install APKs are available from the [releases page](https://github.com/nightscout/AndroidAPS/releases); only for remote controlling AAPS (sending treatments and commands to the looping phone) do you need to build AAPSClient yourself, like AndroidAPS.
+
 Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUsers)
 
 </br>
@@ -49,11 +53,9 @@ Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUser
 
 <img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
 
-Combine Diabetes and Exercise Data. Nightscout currently pulls Glucose and Carbohydrate data - with insulin planned soon. Visit the website at [enhance-d.com](https://www.enhance-d.com/)
-</br>
-Available in [Google Play store](https://play.google.com/store/apps/details?id=com.sestanteanalyticsag.enhancedv1) and [Apple iOS App Store](https://apps.apple.com/us/app/enhance-d-diabetes-exercise/id6497331467)
+Commercial app combining diabetes and exercise data, pulling glucose and carbohydrates from Nightscout. Available on [Google Play](https://play.google.com/store/apps/details?id=com.sestanteanalyticsag.enhancedv1) and the [App Store](https://apps.apple.com/us/app/enhance-d-diabetes-exercise/id6497331467).
 
-<img src="/nightscout/img/Enhance-d.png" width="400px" />
+<img src="/nightscout/img/Enhance-d.png" width="150px" />
 
 </br>
 
@@ -77,9 +79,9 @@ Receives glucose, IOB and COB values from **Nightscout** (pebble interface).
 
 <img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-Monitor your Nightscout glucose levels on your Android phone or tablet. Dark UI, large readings and buttons, designed for usage at night.
+Monitor your Nightscout glucose levels at night: dark UI, large readings and buttons.
 
-<img src="/nightscout/img/Follower10.png" width="400px" />
+<img src="/nightscout/img/Follower10.png" width="150px" />
 
 </br>
 
@@ -89,27 +91,19 @@ Monitor your Nightscout glucose levels on your Android phone or tablet. Dark UI,
 
 CGM data on your Android Phone and Android Wear Watch!
 
-Nightwatch is not maintained anymore and might not work with recent Android versions. Switching to xDrip+ is recommended.
+Nightwatch is not maintained anymore and might not work with recent Android versions. Switching to xDrip is recommended.
 
 </br>
 
-### [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
+### Glimp (legacy)
 
-<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
-
-In Settings, Cloud, Nightscout, select Download only and type your Nightscout URL. Use a token or API_SECRET for a secure site.
-
-<img src="/nightscout/img/Follower06.png" width="700px" />
+Glimp was a closed source Libre reader app with Nightscout support. It is legacy: **the application is not available anymore**.
 
 </br>
 
-### [Diabox](https://www.bubblan.org/diabox/)
+### Diabox (legacy)
 
-<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
-
-In Settings, set Data Collection to Follower, select Nightscout and type your Nightscout URL.
-
-<img src="/nightscout/img/Follower07.png" width="700px" />
+Diabox was a closed source app for Libre sensors with a Nightscout follower mode. The project is legacy and not maintained anymore.
 
 </br>
 
@@ -119,7 +113,7 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 <img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="/nightscout/img/Follower04.png" width="300px" />
+<img src="/nightscout/img/Follower04.png" width="150px" />
 
 </br>
 
@@ -127,7 +121,7 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
 
-[GitHub](https://github.com/nightscout/nightguard)
+Open source iOS and watchOS client for Nightscout: current glucose and chart on iPhone and Apple Watch, with alarms, complications and a today widget. Actively maintained by the Nightscout community on [GitHub](https://github.com/nightscout/nightguard).
 
 <img src="https://raw.githubusercontent.com/nightscout/nightguard/master/images/nightguard24.jpg" width="400px" />
 
@@ -137,7 +131,7 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
 
-[GitHub](https://github.com/someoneAnyone/Nightscouter)
+Open source native iOS app for displaying Nightscout data, able to follow several sites at once. Distributed through TestFlight and only minimally maintained. [GitHub](https://github.com/someoneAnyone/Nightscouter)
 
 </br>
 
@@ -145,21 +139,21 @@ In Settings, set Data Collection to Follower, select Nightscout and type your Ni
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
+Open source follower app designed for caregivers of Loop and Trio users: glucose with IOB, COB and loop status from Nightscout, powerful alarms, calendar complications for the Apple Watch and remote commands. Built with the [Loop and Learn](https://www.loopandlearn.org/loop-follow/) team, source on [GitHub](https://github.com/loopandlearn/LoopFollow).
+
 </br>
 
-### [Spike](https://spike-app.com/)
+### Spike (legacy)
 
-<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
-
-<img src="https://spike-app.com/wp-content/uploads/2019/03/iPhoneXSpikeHome2019.png" width="350px" />
-
-Look [here](https://github.com/SpikeApp/Spike/wiki/Spike-Follower-Mode#configure-spike-follower-manually).
+Spike was an open source iOS CGM app with Nightscout follower mode. The project is legacy and not maintained anymore; installation is no longer practical. Use [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/) instead.
 
 </br>
 
 ### [xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/)
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
+
+Open source iOS CGM app ([GitHub](https://github.com/JohanDegraeve/xdripswift)) supporting many sensors, with Nightscout upload and follower modes, alarms and Apple Watch support.
 
 Set xDrip4iOS to follower mode and enable Nightscout, type your Nightscout URL.
 If you're using a secured Nightscout site, enter your token in the matching field.
@@ -180,11 +174,9 @@ If you need this data source: enable [obscuration](/nightscout/setup_variables.m
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="/nightscout/img/Follower05.png" width="300px" />
+Commercial app: add Nightscout as a data source and type your Nightscout URL.
 
-Add Nightscout as a data source, type your Nightscout URL.
-
-<img src="/nightscout/img/Follower02.png" width="800px" />
+<img src="/nightscout/img/Follower05.png" width="150px" />
 
 </br>
 
@@ -192,7 +184,7 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="/nightscout/img/Follower08.png" width="600px" />
+<img src="/nightscout/img/Follower08.png" width="150px" />
 
 </br>
 
@@ -200,13 +192,7 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="/nightscout/img/Follower09.png" width="400px" />
-
-</br>
-
-### [NightscoutMenuBar](https://github.com/mpangburn/NightscoutMenuBar)
-
-### [BitBar Nightscout](https://github.com/pdaddyo/bitbar-nightscout)
+<img src="/nightscout/img/Follower09.png" width="150px" />
 
 </br>
 
@@ -214,9 +200,9 @@ Add Nightscout as a data source, type your Nightscout URL.
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" />    <img src="/nightscout/img/LockOK.png" width="25px" />
 
-Real-time glucose from your Nightscout site on iPhone and Apple Watch, with widgets, a Lock Screen Live Activity, customizable alerts and family following. Type your Nightscout URL and a read-only access token to connect. [Setup guide](https://sugarsense.io/nightscout-troubleshooting).
+Real-time glucose from Nightscout on iPhone and Apple Watch, with widgets, alerts and family following. [Setup guide](https://sugarsense.io/nightscout-troubleshooting).
 
-<img src="https://sugarsense.io/wp-content/themes/sugarsense/assets/img/hero-phone.png" width="300px" />
+<img src="https://sugarsense.io/wp-content/themes/sugarsense/assets/img/hero-phone.png" width="150px" />
 
 </br>
 
@@ -259,6 +245,18 @@ Show your current BG in the menu bar and a nice chart for your historic data. Al
 
 </br>
 
+### [NightscoutMenuBar](https://github.com/mpangburn/NightscoutMenuBar)
+
+Open source lightweight macOS menu bar application displaying Nightscout blood glucose data. Not maintained anymore.
+
+</br>
+
+### [BitBar Nightscout](https://github.com/pdaddyo/bitbar-nightscout)
+
+Open source BitBar/SwiftBar plugin showing blood sugar history and live data in the macOS menu bar.
+
+</br>
+
 ## Windows
 
 ### [FloatingGlucose](https://github.com/dabear/FloatingGlucose) (archived)
@@ -291,6 +289,8 @@ Trndi is a *desktop app* that shows your blood sugar and graph. It works with *N
 
 ### [NS2Win](https://github.com/emp-00/NS2Win)
 
+NS2Win is an open source [Rainmeter](https://www.rainmeter.net/) skin displaying your Nightscout glucose on the Windows desktop.
+
 <img src="/nightscout/img/LockOK.png" width="25px" />
 
 <img src="https://user-images.githubusercontent.com/60714349/230734030-d6ae822f-1a48-48d2-8df0-cb168146176b.png" width="500px"/>
@@ -305,7 +305,7 @@ GlucoseTray is a *desktop app* that shows your blood sugar in the icon tray. It 
 
 </br>
 
-### [Trayscout]([https://github.com/slicke/trndi](https://github.com/ThielHater/Trayscout))
+### [Trayscout](https://github.com/ThielHater/Trayscout)
 
 Trayscout is a *desktop app* that shows your blood sugar and graph in xdrip style. It works with *Nightscout*.
 

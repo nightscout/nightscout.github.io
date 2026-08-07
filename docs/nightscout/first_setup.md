@@ -50,7 +50,7 @@ Anyone with access to the URL of your Nightscout site, can view your BG and run 
 </br>
 
 g) Dexcom Share users should see data flowing in after some minutes.
-xDrip+ users (including Medtronic [CareLink followers](/uploader/setup.md#medtronic-carelink)) should setup the uploader as shown [**here**](/uploader/setup.md#xdrip).
+xDrip users (including Medtronic [CareLink followers](/uploader/setup.md#medtronic-carelink)) should setup the uploader as shown [**here**](/uploader/setup.md#xdrip).
 xDrip4iOS users [here](https://xdrip4ios.readthedocs.io/en/latest/connect/cgm/#nightscout-upload).
 [AAPS](https://androidaps.readthedocs.io/en/latest/Configuration/Preferences.html#nsclient) and [Loop](https://loopkit.github.io/loopdocs/operation/loop-settings/services/): consult the relative documentation.
 
