@@ -85,6 +85,16 @@ Monitor your Nightscout glucose levels at night: dark UI, large readings and but
 
 </br>
 
+### [Sugar Sense](https://sugarsense.io)
+
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />       <img src="/nightscout/img/LockOK.png" width="25px" />
+
+Real-time glucose from Nightscout on Android and Wear OS, with home screen widgets, alerts and family following. [Get it on Google Play](https://play.google.com/store/apps/details?id=io.sugarsense.app), [setup guide](https://sugarsense.io/nightscout-troubleshooting).
+
+<img src="https://sugarsense.io/wp-content/uploads/2026/08/sugarsense-nightscout-android.png" width="350px" />
+
+</br>
+
 ### [Nightwatch](https://github.com/StephenBlackWasAlreadyTaken/NightWatch/releases) (legacy)
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />
@@ -196,13 +206,13 @@ Commercial app: add Nightscout as a data source and type your Nightscout URL.
 
 </br>
 
-### [Sugar Sense](https://apps.apple.com/app/id6737151615)
+### [Sugar Sense](https://sugarsense.io)
 
-<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" />    <img src="/nightscout/img/LockOK.png" width="25px" />
+<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />       <img src="/nightscout/img/LockOK.png" width="25px" />
 
-Real-time glucose from Nightscout on iPhone and Apple Watch, with widgets, alerts and family following. [Setup guide](https://sugarsense.io/nightscout-troubleshooting).
+Real-time glucose from Nightscout on iPhone and Apple Watch, with widgets, alerts and family following. [Download on the App Store](https://apps.apple.com/app/id6737151615), [setup guide](https://sugarsense.io/nightscout-troubleshooting).
 
-<img src="https://sugarsense.io/wp-content/themes/sugarsense/assets/img/hero-phone.png" width="150px" />
+<img src="https://sugarsense.io/wp-content/uploads/2026/08/sugarsense-nightscout-ios.png" width="350px" />
 
 </br>
 
