@@ -287,6 +287,16 @@ Trndi is a *desktop app* that shows your blood sugar and graph. It works with *N
 
 </br>
 
+### [trndi-cli](https://github.com/slicke/trndi-cli)
+
+Trndi-cli is a *terminal* companion to Trndi that shows your blood sugar in the console: a one-line reading, an interactive graph mode, sparklines for status bars and statistics. It works with *Nightscout*, *Dexcom*, *FreeStyle Libre*, *Tandem Source*, *CareLink* and *xDrip*.
+
+<img src="/nightscout/img/LockOK.png" width="25px" />
+
+<img src="https://raw.githubusercontent.com/slicke/trndi-cli/main/doc/img/graph.png" width="500px"/>
+
+</br>
+
 ### [NS2Win](https://github.com/emp-00/NS2Win)
 
 NS2Win is an open source [Rainmeter](https://www.rainmeter.net/) skin displaying your Nightscout glucose on the Windows desktop.
@@ -336,6 +346,16 @@ Trndi is a *desktop app* that shows the your blood sugar and graph. It works wit
 <img src="/nightscout/img/LockOK.png" width="25px" />
 
 <img src="https://raw.githubusercontent.com/slicke/trndi/refs/heads/main/doc/img/trndi-logo.png" width="150px"/>
+
+</br>
+
+### [trndi-cli](https://github.com/slicke/trndi-cli)
+
+Trndi-cli is a *terminal* companion to Trndi that shows your blood sugar in the console: a one-line reading, an interactive graph mode, sparklines for status bars and statistics. It works with *Nightscout*, *Dexcom*, *FreeStyle Libre*, *Tandem Source*, *CareLink* and *xDrip*.
+
+<img src="/nightscout/img/LockOK.png" width="25px" />
+
+<img src="https://raw.githubusercontent.com/slicke/trndi-cli/main/doc/img/graph.png" width="500px"/>
 
 </br>
 
