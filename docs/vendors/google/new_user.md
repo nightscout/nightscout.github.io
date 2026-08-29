@@ -21,7 +21,7 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 * Option of multiple Nightscout accounts, one per Google account 
 
 **Cons**:
-* Not free!  To keep the cost below $0.05 a month, outgoing traffic must be kept below 1GB per month.
+* Cost is not zero but should remain below $0.05 a month, [verify correct setup](https://google-cloud-nightscout.github.io/docs/NS_FreeTier.html).
 ```
 
 </br>
