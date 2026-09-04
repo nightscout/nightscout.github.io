@@ -144,6 +144,23 @@ API_SECRET: YOUR_API_SECRET
 
 *Note: now you've also seen where your Nightscout variables are defined.*
 
+For a self-hosted Docker Compose deployment, you can keep the secret out of the container environment by using `API_SECRET_FILE` instead. Create a local file containing only the secret, protect it with filesystem permissions, and configure it as a Compose secret:
+
+```yaml
+services:
+  nightscout:
+    environment:
+      API_SECRET_FILE: /run/secrets/nightscout_api_secret
+    secrets:
+      - nightscout_api_secret
+
+secrets:
+  nightscout_api_secret:
+    file: ./nightscout_api_secret.txt
+```
+
+Remove `API_SECRET` from the service when using this method. If both variables are present, `API_SECRET` takes precedence. Do not commit `nightscout_api_secret.txt` to Git or copy it into an image. See [`API_SECRET_FILE`](api-secret-file) for details.
+
 - You need to update your Nightscout site URL (your DDNS name looking like `name.domain.tld`)
 
 ```
@@ -185,6 +202,10 @@ Note that you need to start it if you modify your `docker-compose.yml` configura
 ## Update or downgrade
 
 Edit your `docker-compose.yml` configuration and change the image to whichever you want in the [community maintained images](https://hub.docker.com/r/nightscout/cgm-remote-monitor/tags).
+
+```{warning}
+Back up your MongoDB data before changing the MongoDB image. A Nightscout image update and a MongoDB major-version upgrade are separate operations. Do not point a newer MongoDB major version at an existing data directory until you have followed MongoDB's supported upgrade path through each required major version.
+```
 
 If you're using `image: nightscout/cgm-remote-monitor:latest` and you want to upgrade it to latest release, don't change anything. You can update to `cgm-remote-monitor:latest_dev` or choose an older version like `cgm-remote-monitor:14.2.6`
 
@@ -236,6 +257,7 @@ x-ns-common-env: &ns-common-env
   TZ: Europe/Moscow
   TIME_FORMAT: 24
   INSECURE_USE_HTTP: 'true'
+  NIGHTSCOUT_HOSTNAME: '0.0.0.0'
   ENABLE: basal iob cob boluscalc cage sage iage bage pump openaps pushover food rawbg
   SHOW_FORECAST: openaps
   PUMP_FIELDS: clock reservoir
@@ -333,6 +355,3 @@ After you've pulled many images in your VPS, you might want to save some disk sp
 ```
 docker image prune -a 
 ```
-
-
-

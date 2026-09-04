@@ -187,27 +187,30 @@ c) Login to the machine using the account we just created.
 sudo -u mainuser -s
 ```
 
-d) Install `nodejs` and `npm`.
+d) Install Node.js and npm.
 
 **Mind some small VPS will not be powerful enough to deploy with npm, consider using a [Docker container](/vendors/VPS/docker) in this case.**
 
-The example below is with the **latest supported npm version**: 16.20.1
+Nightscout 15.0.8 requires Node.js 20 or newer and npm 10 or newer. Node.js 22 is the recommended baseline and includes a compatible npm version.
 
-```
-sudo apt install nodejs
-sudo apt install build-essential checkinstall
-sudo apt install libssl-dev
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-source /etc/profile
-nvm install 16.20.1
-nvm use 16.20.1
+```bash
+sudo apt install -y build-essential curl
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+nvm install 22
+nvm alias default 22
+nvm use 22
 ```
 
-Once complete, install npm
+Confirm both versions before continuing:
 
+```bash
+node --version
+npm --version
 ```
-sudo apt-get install -y npm
-```
+
+Do not install Ubuntu's separate `nodejs` or `npm` packages on top of this nvm installation; mixing the two installation methods can select the wrong runtime.
 
 </br>
 
@@ -234,7 +237,7 @@ npm install
 ```
 
 It will take a long time to complete. Be patient.  
-On some lightweight virtual computers install might fail or hang, especially if you installed the default latest node.js version.  
+On some lightweight virtual computers installation might fail or hang because building the browser bundle requires additional memory.
 You can try to interrupt and run another time `npm install`.
 
 </br>

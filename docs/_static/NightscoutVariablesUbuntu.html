@@ -78,7 +78,7 @@ With this form you can easily decide which features to enable and customize your
 	 </tr>
      <tr>
 	   <td></td>
-	   <td>Plugins to enable for your site. Must be a space-delimited lower-case list. Include the word 'bridge' here if you are receiving data from the Dexcom Share service.</br></br></td>
+	   <td>Plugins to enable for your site. Must be a space-delimited lower-case list. Include the word 'bridge' here if you are receiving data from Dexcom Share. Nightscout 15.0.8 and later serve compatible BRIDGE settings through the newer Connect implementation by default.</br></br></td>
 	 </tr>
 
     <tr>
@@ -125,7 +125,7 @@ With this form you can easily decide which features to enable and customize your
   </table>
 
   <h2>Dexcom Share</h2>
-  <h3>If you want Nightscout to import direcly from Dexcom Share</h3>
+  <h3>If you want Nightscout to import directly from Dexcom Share</h3>
   </br>
   </br>
   <table>
@@ -156,7 +156,7 @@ With this form you can easily decide which features to enable and customize your
 	</tr>
     <tr>
       <td></td>
-	  <td>If you are bridging from the Dexcom Share service and are anywhere *outside* the US change this to EU. ('US' or 'EU')</br></br></td>
+	  <td>If you are bridging from the Dexcom Share service and are outside the US, change this to EU. Nightscout 15.0.8 and later use the newer Connect implementation by default; DEXCOM_BRIDGE_USE_LEGACY=true can be added manually as a temporary fallback. ('US' or 'EU')</br></br></td>
 	  </tr>
     </table>
 

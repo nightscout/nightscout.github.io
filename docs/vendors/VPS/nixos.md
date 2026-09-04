@@ -7,10 +7,11 @@ etc.) that can run NixOS.
 ## Table of contents
 
 1. [Install and configure MongoDB](#install-and-configure-mongodb)
-2. [Build Nightscout](#build-nightscout)
-3. [Run Nightscout with Systemd](#run-nightscout-with-systemd)
-4. [Configure Nginx as an entry point](#configure-nginx-as-an-entry-point)
-5. [Complete NixOS configuration](#complete-nixos-configuration)
+2. [Run Nightscout 15.0.8](#run-nightscout-1508)
+3. [Legacy native build example](#legacy-native-build-example)
+4. [Run Nightscout with Systemd](#run-nightscout-with-systemd)
+5. [Configure Nginx as an entry point](#configure-nginx-as-an-entry-point)
+6. [Complete legacy NixOS configuration](#complete-legacy-nixos-configuration)
 
 ## Install and configure MongoDB
 
@@ -57,10 +58,25 @@ nightscout> db.createUser(
 )
 ```
 
-## Build Nightscout
+## Run Nightscout 15.0.8
 
-Nightscout can be built using the [`buildNpmPackage`][2].  Here, we pass
-as an argument the Node.js package to use.
+The recommended documented way to run Nightscout 15.0.8 on NixOS is the official multi-architecture container image. Enable Docker in your NixOS configuration:
+
+```nix
+virtualisation.docker.enable = true;
+```
+
+Apply the NixOS configuration, then follow the [Docker deployment guidance](/vendors/VPS/docker/), beginning with the Nightscout configuration steps after Docker is installed. Pin `nightscout/cgm-remote-monitor:15.0.8` if you want to remain on this release. The image is published for both `amd64` and `arm64` Linux.
+
+Use the documented Docker secret configuration to mount the API-secret file read-only and set `API_SECRET_FILE` inside the container. Keep the source file outside the repository and Nix store. Do not define secret text directly in a Nix expression because evaluated values can be copied into the world-readable Nix store.
+
+## Legacy native build example
+
+The historical native setup used [`buildNpmPackage`][2] and passed the Node.js package as an argument.
+
+```{warning}
+The native Nix expression below is a historical example pinned to Nightscout 15.0.3; it is not the current Nightscout release and is not validated against current Nixpkgs. Nightscout 15.0.8's published npm lockfile omits registry metadata required by Nix's offline `fetchNpmDeps` build, so changing only the version and hashes does not produce a working native build. Use the 15.0.8 container method above for a current installation.
+```
 
 *nightscout.nix:*
 
@@ -88,8 +104,8 @@ pkgs.buildNpmPackage (finalAttrs: {
   meta = {
     description = "nightscout web monitor";
     homepage = "https://github.com/nightscout/cgm-remote-monitor";
-    license = lib.licenses.agpl3Only;
-    maintainers = with lib.maintainers; [ earldouglas ];
+    license = pkgs.lib.licenses.agpl3Only;
+    maintainers = with pkgs.lib.maintainers; [ earldouglas ];
   };
 })
 ```
@@ -97,18 +113,18 @@ pkgs.buildNpmPackage (finalAttrs: {
 ## Run Nightscout with Systemd
 
 See `systemd.services.nightscout` block in the [complete NixOS
-configuration](#complete-nixos-configuration) below.
+configuration](#complete-legacy-nixos-configuration) below.
 
 [Read more about Systemd services][3] on the NixOS wiki.
 
 ## Configure Nginx as an entry point
 
 See `services.nginx` block in the [complete NixOS
-configuration](#complete-nixos-configuration) below.
+configuration](#complete-legacy-nixos-configuration) below.
 
 [Read more about Nginx][4] on the NixOS wiki.
 
-## Complete NixOS configuration
+## Complete legacy NixOS configuration
 
 The configuration below expects the following environment variables to
 be set:

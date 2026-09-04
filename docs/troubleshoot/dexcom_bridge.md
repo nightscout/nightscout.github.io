@@ -2,6 +2,10 @@
 
 </br>
 
+```{note}
+Nightscout 15.0.8 and later keep the familiar `BRIDGE_*` configuration but serve compatible Dexcom Share connections through `nightscout-connect` by default. Logs can therefore refer to Connect even when your variables use Bridge names. If a deployment-specific problem begins after upgrading, `DEXCOM_BRIDGE_USE_LEGACY=true` temporarily restores the deprecated `share2nightscout-bridge` implementation while you troubleshoot.
+```
+
 ## Username and password
 
 Your Dexcom account is the one that identifies you to access all services: Store, Clarity and mobile apps. In order to make sure you're accessing the right account, log into Clarity to check your credentials are valid.
@@ -128,7 +132,7 @@ Variables location will depend on the platform you use:
 </br>
 
 1. You must use the same `BRIDGE_PASSWORD` or `BRIDGE_USER_NAME` that your Dexcom mobile app is using.
-2. You must have `connect` and `careportal` on the `ENABLE` line (you can have other values there...but don't forget these two).
+2. When using `BRIDGE_*` variables, you must have `bridge` and `careportal` on the `ENABLE` line (you can have other values there, but don't forget these two). When configuring `CONNECT_*` variables directly, enable `connect` instead.
 3. If you are outside the USA, you must add `BRIDGE_SERVER` set to `EU` in Nightscout variables settings.
 4. Your `careportal` must be one word in the `ENABLE` line, sometimes autocorrect makes it two words.
 5. If using `mmol`, make sure you have spelled that value correctly in the `DISPLAY_UNITS`.
@@ -156,4 +160,3 @@ Do your logs have "`SSO authentication errors`" like in the red box highlighted 
 ```{hint} About your Bridge password and user name
 The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check [here for USA accounts](https://clarity.dexcom.com) and [here for the others](https://clarity.dexcom.eu)) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.
 ```
-

@@ -76,6 +76,7 @@ services:
 # Do not change anything below unless you know what you are doing
 # -----------------------------------------------------------------------------------------------
       INSECURE_USE_HTTP: 'true'
+      NIGHTSCOUT_HOSTNAME: '0.0.0.0'
       MONGO_CONNECTION: mongodb://mongo:27017/Nightscout
     ports:
       - "1337:1337"
@@ -93,8 +94,7 @@ services:
     restart: unless-stopped
 
   mongo:
-# Note you can also use mongo:5
-    image: mongo:4.4
+    image: mongo:5.0.32
     container_name: mongo
     volumes:
       - ./data:/data/db

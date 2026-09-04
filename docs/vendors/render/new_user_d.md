@@ -37,7 +37,7 @@ Then `Next`.
 * Clicking the button `+ Add Environment Variable` add the following two variables, and in the box on the right the matching value:
 
 ```
-HOSTNAME	0.0.0.0
+NIGHTSCOUT_HOSTNAME	0.0.0.0
 PORT		1337
 ```
 

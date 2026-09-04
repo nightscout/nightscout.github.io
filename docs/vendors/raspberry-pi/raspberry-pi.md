@@ -430,7 +430,7 @@ One thing to note is that this script does not do any type of backup / log rotat
 
 #### Restoring an Automated Backup
 
-IMPORTANT: When doing these backup restores, ensure you're using a MongoDB version greater than or equal to `4.4.18`. This is the specific version I chose for the docker compose file. Do NOT try restore a backup onto an earlier version of MongoDB than what the backup was created from. It'll either not work or work but unforeseen issues later on.
+IMPORTANT: The supplied Docker Compose file uses MongoDB `5.0.32`. Restore a backup only to the same MongoDB major version that created it, or to a version reached through MongoDB's documented upgrade path. Do not restore or reuse a data directory with an older MongoDB version; it can fail immediately or cause data problems later.
 
 Now if you need to restore, ensure your Docker containers (Nightscout & Mongo) are running. You'll start by unzipping the archive that you want to restore. So over in `/mnt/nsbackups` create a new directory: `sudo mkdir /mnt/nsbackups/2025-08-27-restore`. You can name it whatever you want, you'll just need to reference it when doing the restore. Now run (make sure you're in the /mnt/nsbackups directory. Also insert whatever backup date you want to restore from.) `sudo tar -xzvf 2025-08-27.tar.gz -C /mnt/nsbackups/2025-08-28-restore`. This uncompresses the archive, then creates and places it in a folder named `2025-08-28-restore`.
 
