@@ -110,7 +110,15 @@ You also can filter by hours (scroll to the bottom of the page).
 
 <img src="/nightscout/img/Reports12.png" width="800px" />
 
-A1c is only a rough estimation that can be very inaccurate and does not replace actual blood testing. The formula used is taken from:Nathan, David M., et al. "Translating the A1C assay into estimated average glucose values." *Diabetes care* 31.8 (2008): 1473-1478.
+A1c is only a rough estimation that can be very inaccurate and does not replace actual blood testing. The formula used is taken from: Nathan, David M., et al. "Translating the A1C assay into estimated average glucose values." *Diabetes Care* 31.8 (2008): 1473-1478.
+
+GMI (Glucose Management Indicator) estimates HbA1c from the mean glucose of the readings selected for the report. [Read about the GMI formula](https://web.archive.org/web/20250206062319/https://pmc.ncbi.nlm.nih.gov/articles/PMC6196826/pdf/dc181581.pdf).
+
+Revised GMI uses a newer formula intended to improve the estimate for people with tightly controlled diabetes. [Read about Revised GMI](https://web.archive.org/web/20250210181811/https://pmc.ncbi.nlm.nih.gov/articles/PMC11571357/).
+
+```{warning}
+A1c, GMI, and Revised GMI are estimates derived from available CGM readings. They are not laboratory measurements and must not replace clinical testing or medical advice.
+```
 
 Time in fluctuation and Time in rapid fluctuation measure the % of time during the examined period, during which the blood glucose has been changing relatively fast or rapidly. Lower values are better.
 

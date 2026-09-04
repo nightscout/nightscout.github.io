@@ -23,6 +23,7 @@ The system has not been designed for scenarios where a third party operates a Ni
 - Do not use your Dexcom or CareLink user name or password for Nightscout components.
 - Do not use the API_SECRET for the Atlas database password.
 - Do not share the API_SECRET or access tokens with administration privileges to anyone, ever. If you need to grant access to Nightscout, see below for instructions how to create access tokens for this purpose.
+- If you load the API secret with `API_SECRET_FILE`, keep that file outside the source repository and web root, restrict filesystem access, and mount it read-only where possible.
 - Do not use Nightscout or any related applications on rooted and/or otherwise compromised devices, and ensure you always have the latest operating system and virus protection updates installed.
 
 </br>
@@ -30,6 +31,23 @@ The system has not been designed for scenarios where a third party operates a Ni
 ## HTTPS and certificate errors
 
 One of the core security mechanisms on web is the SSL encryption applied to HTTP connections. When installed to Heroku, Nightscout by default forces connections to use HTTPS, thus ensuring the connection is encrypted. For secure Nightscout use, it's crucial that you assume something is wrong if you ever see your browser complain the SSL certificate of your Nightscout site does not match or work as expected by the browser. This can be a sign of a so called Man In The Middle (MITM) attack and proceeding with the problematic certificate will subsequently compromise your Nightscout site. If you see an error related to SSL, you should immediately rename the site (see below for instructions).
+
+</br>
+
+## Protecting Nightscout from cross-origin framing
+
+A website can place another site inside an iframe. If an untrusted page frames a Nightscout instance where the visitor is already authorized, it can attempt to disguise the interface and trick the visitor into clicking it. This is commonly called clickjacking.
+
+Nightscout 15.0.8 introduces `ALLOW_UNRESTRICTED_FRAME_EMBEDDING`. Its temporary default is `true` to preserve existing dashboards and split-view installations. Set it to `false` to send `X-Frame-Options: SAMEORIGIN` and an enforced Content Security Policy `frame-ancestors 'self'` rule.
+
+```{admonition} Recommended when cross-origin embedding is not required
+:class: tip
+Set `ALLOW_UNRESTRICTED_FRAME_EMBEDDING=false`. This still allows pages from the same Nightscout origin to frame one another.
+```
+
+If another website, dashboard, or Nightscout split view intentionally embeds this instance from a different origin, it will stop loading after the hardened setting is enabled. Keep the variable at `true` only for instances where that cross-origin behavior is required. The permissive default is expected to change in a future release.
+
+This setting is independent from `FRAME_URL_1` through `FRAME_URL_8`: those variables define what a Nightscout split-view page may load, while `ALLOW_UNRESTRICTED_FRAME_EMBEDDING` determines who may load this Nightscout instance. See [Split View](/nightscout/setup_variables.md#split-view) for configuration examples.
 
 </br>
 
@@ -131,4 +149,3 @@ See [this page](https://github.com/nightscout/cgm-remote-monitor/wiki/API-v1-Sec
 The API documentation is visible on your Nightscout site using this extension to your site address:
 
 https://YOUR-SITE.com/api-docs/ and https://YOUR-SITE.com/api3-docs/.
-

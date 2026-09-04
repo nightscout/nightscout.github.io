@@ -105,6 +105,24 @@ Don't make it too long and **do not put special characters in it** (better stick
 If you need to share Nightscout access but control the access, use an `admin` [token](/nightscout/security.md#create-authentication-tokens-for-users).
 ```
 
+(api-secret-file)=
+
+#### `API_SECRET_FILE` (Nightscout password file)
+
+Self-hosted installations can provide the API secret in a file instead of putting it directly in an environment variable. Set `API_SECRET_FILE` to the path of a readable file whose contents are the API secret. Nightscout trims whitespace and a trailing newline when it reads the file.
+
+For example, a Docker secret is commonly mounted at:
+
+```
+API_SECRET_FILE=/run/secrets/nightscout_api_secret
+```
+
+The secret stored in the file must meet the same length and strength requirements as `API_SECRET`. If both variables are set, **`API_SECRET` takes precedence** and `API_SECRET_FILE` is ignored. Applications and uploaders must still be configured with the secret itself; `API_SECRET_FILE` is only a server-side way to load it.
+
+```{warning}
+Do not commit the secret file to Git, copy it into a container image, or place it in a web-accessible directory. Hosted platforms without file-mounted secrets should continue to use `API_SECRET`.
+```
+
 </br>
 
 (display-units)=
@@ -112,6 +130,26 @@ If you need to share Nightscout access but control the access, use an `admin` [t
 #### `DISPLAY_UNITS` (Units to use)
 
 Preferred BG units for the site: `mg/dl` or `mmol/L` (or just `mmol`). Setting to `mmol/L` puts the entire server into `mmol/L` mode by default, no further settings needed. Make sure it matches you uploader and followers.
+
+</br>
+
+### Server and API settings
+
+#### `NIGHTSCOUT_HOSTNAME` (Listen address)
+
+The hostname or network address on which Nightscout listens. Leave it unset to listen on all available interfaces. Container and reverse-proxy deployments can set it explicitly to `0.0.0.0`.
+
+The older `HOSTNAME` variable is still accepted for compatibility, but should not be used for new installations because container platforms often create it automatically.
+
+#### `UUID_HANDLING` (`true`)
+
+Controls compatibility with uploaders such as Loop and Trio that can send a UUID in the MongoDB `_id` field. With the default `true`, Nightscout stores the UUID in `identifier`, creates its own MongoDB ObjectId, and continues to resolve reads and deletes by the original UUID. Setting it to `false` restores the older behavior that removes UUID values supplied as `_id`.
+
+Most installations should leave this at its default.
+
+#### API write batch size
+
+Nightscout accepts either one document or an array of documents on supported API write endpoints. A single request is limited to **10,000 documents** so that validation and database work remain bounded. Clients uploading larger backfills must divide them into smaller batches.
 
 </br>
 
@@ -155,6 +193,7 @@ Select which [Plugins](#plugins) to enable for your site, this is the current li
 - `googlehome` (Google Home/DialogFLow)
 - `speech` (Speech)
 - `cors` (CORS)
+- `webhook` (Server-side webhook notifications)
 
 Must be a space-delimited, lower-case list. 
 
@@ -465,6 +504,19 @@ For example:
 
 `FRAME_NAME_2`	`Joe`
 
+#### `ALLOW_UNRESTRICTED_FRAME_EMBEDDING` (`true`)
+
+Controls whether websites on other origins may embed this Nightscout instance in an iframe. The default is temporarily `true` so existing dashboards and cross-origin split-view installations continue to work.
+
+Set it to `false` to enable same-origin framing protection with `X-Frame-Options: SAMEORIGIN` and Content Security Policy `frame-ancestors 'self'`. This reduces clickjacking risk for users who are already authorized in their browser. The permissive default is expected to change in a future release, so installations that intentionally require cross-origin embedding should set `true` explicitly.
+
+`FRAME_URL_1` through `FRAME_URL_8` and `ALLOW_UNRESTRICTED_FRAME_EMBEDDING` control opposite sides of a frame relationship:
+
+- `FRAME_URL_n` tells the split-view host which pages it should load. When `SECURE_CSP=true`, valid HTTP(S) origins from these variables are added to its CSP `frame-src` directive.
+- `ALLOW_UNRESTRICTED_FRAME_EMBEDDING` determines whether this Nightscout instance may be loaded by a page on another origin.
+
+Setting `ALLOW_UNRESTRICTED_FRAME_EMBEDDING=false` on the split-view host does not prevent the host from loading its configured frames. However, every cross-origin Nightscout instance displayed inside that split view must allow cross-origin embedding.
+
 </br>
 
 To display the split view browse to:
@@ -770,6 +822,23 @@ Generates notifications when a treatment has been entered and snoozes alarms min
 
 </br>
 
+#### `webhook` (Server-side Webhook Notifier)
+
+Sends an HTTP POST containing the latest glucose value to a configured endpoint whenever Nightscout receives a new SGV. This plugin runs only on the server and is disabled unless `webhook` is included in `ENABLE`.
+
+- `WEBHOOK_PROTOCOL` (`http`) - `http` or `https`.
+- `WEBHOOK_HOST` (`localhost`) - Destination hostname or IP address.
+- `WEBHOOK_PORT` (`3000`) - Destination port.
+- `WEBHOOK_PATH` (`/nightscout`) - Destination URL path.
+
+The JSON payload contains `source`, `mgdl`, `mills`, and `iso`. The reading already present when Nightscout starts is skipped. A failed or non-2xx delivery is retried during a later notification cycle, so receivers should use `mills` as an idempotency key and tolerate duplicate delivery.
+
+```{warning}
+The plugin does not configure an authentication header. Send health data only to an endpoint you control, prefer HTTPS outside a trusted local network, and do not expose an unauthenticated receiver publicly.
+```
+
+</br>
+
 #### `basal` (Basal Profile)
 
 <img src="/nightscout/img/SetupNS26.png" width="200px"/>
@@ -777,6 +846,8 @@ Generates notifications when a treatment has been entered and snoozes alarms min
 </br>
 
 Adds the Basal pill visualization to display the basal rate for the current time. Also enables the `bwp` plugin to calculate correction temp basal suggestions. Uses the `basal` field from the [treatment profile](https://github.com/nightscout/cgm-remote-monitor#treatment-profile). Also uses the extended settings:
+
+Nightscout 15.0.8 and later render temporary basal changes with finer time granularity, including short AAPS temporary basal rates.
 
 - `BASAL_RENDER` (`none`) 
 
@@ -798,7 +869,17 @@ or `icicle` (inverted)
 This plugin is **under development**.
 ```
 
-Nightscout's methods for synchronizing with common diabetes cloud providers. This module provides a single entry point to Nightscout for similar modules and allows managing http library and injecting dependencies from a single point.
+Nightscout's methods for synchronizing with common diabetes cloud providers. Include `connect` in `ENABLE`, then select one source with `CONNECT_SOURCE`.
+
+##### Another Nightscout site
+
+To copy data from another Nightscout site:
+
+- `CONNECT_SOURCE=nightscout`
+- `CONNECT_SOURCE_ENDPOINT` - Fully qualified source URL. It may include a `?token=<subject>` query string.
+- `CONNECT_SOURCE_API_SECRET` - Optional source API secret. Not required when the source is readable or the endpoint contains a token.
+- `CONNECT_SOURCE_COLLECTIONS` (`entries,treatments,devicestatus,profiles`) - Comma-separated collections to copy.
+- `CONNECT_SOURCE_MAX_COUNT` (`1000`) - Maximum records requested per collection at a time.
 
 ##### Dexcom Share
 
@@ -815,11 +896,53 @@ Selecting `ous` here sets `CONNECT_SHARE_SERVER` to `shareous1.dexcom.com`.
 
 - `CONNECT_SHARE_SERVER=` set the server domain to use (do not use, see above: it is set automatically).
 
+The connector supports newer G7-era account responses as well as older Dexcom Share account IDs.
+
+##### Glooko
+
+```{note}
+Glooko support is experimental.
+```
+
+- `CONNECT_SOURCE=glooko`
+- `CONNECT_GLOOKO_EMAIL` - Glooko account email.
+- `CONNECT_GLOOKO_PASSWORD` - Glooko account password.
+- `CONNECT_GLOOKO_ENV` (`default`) - Supported values include `default`, `eu`, `ca`, `development`, and `production`.
+- `CONNECT_GLOOKO_SERVER` - Optional explicit regional/custom API hostname; takes precedence over `CONNECT_GLOOKO_ENV`.
+- `CONNECT_GLOOKO_TIMEZONE_OFFSET` (`0`) - Local offset from UTC in hours.
+- `CONNECT_GLOOKO_DEVICE_ID` - Optional stable device identity.
+- `CONNECT_GLOOKO_SERIAL_NUMBER` - Optional stable serial number.
+- `CONNECT_GLOOKO_WEB_ORIGIN` - Optional web origin for regional/custom hosts.
+- `CONNECT_GLOOKO_AUTH_MODE` (`api`) - `api`, `web`, or `auto`. `auto` tries API authentication first and falls back to web authentication when required.
+- `CONNECT_GLOOKO_USE_V3_GRAPH` (`false`) - Set to `true` to use the v3 graph CGM fallback when v2 returns no readings.
+
+##### LibreLinkUp
+
+- `CONNECT_SOURCE=linkup`
+- `CONNECT_LINK_UP_USERNAME` - LibreLinkUp username.
+- `CONNECT_LINK_UP_PASSWORD` - LibreLinkUp password.
+- `CONNECT_LINK_UP_REGION` (`EU`) - One of `US`, `EU`, `EU2`, `DE`, `FR`, `JP`, `AP`, `AU`, `AE`, or `CA`.
+- `CONNECT_LINK_UP_SERVER` - Optional explicit LibreView API host override.
+- `CONNECT_LINK_UP_VERSION` - Optional client-version override.
+- `CONNECT_LINK_UP_PRODUCT` - Optional product-identifier override.
+- `CONNECT_LINK_UP_PATIENT_ID` - Optional patient ID for accounts connected to multiple patients.
+- `CONNECT_LINK_UP_INTERVAL` (`5`) - Optional refresh interval in minutes.
+
+LibreLinkUp writes graph readings and the current glucose item so that the newest value is not delayed by the historical graph feed. Nightscout's duplicate handling manages overlap between them.
+
+##### MiniMed CareLink
+
+- `CONNECT_SOURCE=minimedcarelink`
+- `CONNECT_CARELINK_USERNAME` - CareLink username.
+- `CONNECT_CARELINK_PASSWORD` - CareLink password.
+- `CONNECT_CARELINK_REGION` - `eu` for `carelink.minimed.eu` or `us` for `carelink.minimed.com`.
+- `CONNECT_CARELINK_PATIENT_USERNAME` - Optional patient username for CareLink's many-to-many feature.
+
 </br>
 
 #### `bridge` (Share2Nightscout bridge)
 
-Glucose reading directly from the Dexcom Share service, uses these extended settings (**\*** mandatory):
+Dexcom Share glucose retrieval configured with the established `BRIDGE_*` variables. In Nightscout 15.0.8 and later, compatible Bridge settings use the newer `nightscout-connect` Dexcom Share implementation by default for improved compatibility. The configuration names remain the same.
 
 - `BRIDGE_USER_NAME` - Your username for the Share service. **\***
 - `BRIDGE_PASSWORD` - Your password for the Share service. **\***
@@ -829,6 +952,7 @@ Glucose reading directly from the Dexcom Share service, uses these extended sett
 - `BRIDGE_MAX_FAILURES` (`3`) - How many failures before giving up.
 - `BRIDGE_MINUTES` (`1400`) - The time window to search for new data per update (the default value is one day in minutes).
 - `BRIDGE_SERVER` (`US`) - Set to `US` to fetch data from Dexcom servers in the US. Set to (`EU`) to fetch from non US servers instead. **\***
+- `DEXCOM_BRIDGE_USE_LEGACY` (`false`) - Set to `true` to force the deprecated `share2nightscout-bridge` implementation while troubleshooting a deployment-specific compatibility problem.
 
 - `OBSCURED` (`bridge`) - Obscure data source when using `bridge` uploader.
 - `OBSCURE_DEVICE_PROVENANCE` (`dexcom-dont-own-my-body-data`) - Self explanatory.

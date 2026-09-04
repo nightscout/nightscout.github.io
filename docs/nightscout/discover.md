@@ -235,6 +235,7 @@ List of available items:
 - `SGV delta` - change of SGV in the last 5 minutes
 - `Trend arrow` - icon of the SG trend
 - `Time` - current time
+- `Emoji` - an emoji selected from the current glucose value
 - `Line break` - invisible item that will move following items to the next line (by default all are showing on the same level)
 
 All visible items have `Size` property which allows to customize the view even more. Also, all items may appear multiple times on the view.
@@ -308,4 +309,3 @@ https://{url}/api-docs[?token=TOKEN]
 https://{url}/api/v2/properties.json[?token=TOKEN]
 
 https://{url}/api3-docs[?token=TOKEN]
-
