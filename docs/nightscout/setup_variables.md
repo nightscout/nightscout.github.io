@@ -109,7 +109,7 @@ If you need to share Nightscout access but control the access, use an `admin` [t
 
 #### `API_SECRET_FILE` (Nightscout password file)
 
-Self-hosted installations can provide the API secret in a file instead of putting it directly in an environment variable. Set `API_SECRET_FILE` to the path of a readable file whose contents are the API secret. Nightscout trims whitespace and a trailing newline when it reads the file.
+Self-hosted installations can provide the API secret in a file instead of putting it directly in an environment variable. Set `API_SECRET_FILE` to the path of a file that is readable by the Nightscout process and whose contents are the API secret. Nightscout trims leading and trailing whitespace, including a final newline, when it reads the file. An unreadable or missing file produces a configuration error during startup.
 
 For example, a Docker secret is commonly mounted at:
 
@@ -149,7 +149,7 @@ Most installations should leave this at its default.
 
 #### API write batch size
 
-Nightscout accepts either one document or an array of documents on supported API write endpoints. A single request is limited to **10,000 documents** so that validation and database work remain bounded. Clients uploading larger backfills must divide them into smaller batches.
+Nightscout accepts either one document or an array of documents on several legacy API write endpoints. In 15.0.8, array writes to the `entries`, `devicestatus`, `activity`, and `food` endpoints are limited to **10,000 documents per request** so that validation and database work remain bounded. Clients uploading larger backfills to these endpoints must divide them into smaller batches. Other endpoints have their own accepted payload shapes and limits; consult the API documentation exposed by your Nightscout instance.
 
 </br>
 
@@ -1039,7 +1039,7 @@ For remote overrides, the following extended settings must be configured:
 - `LOOP_APNS_KEY` - Apple Push Notifications service (APNs) Key, created in the Apple Developer website.
 - `LOOP_APNS_KEY_ID` - The Key ID for the above key.
 - `LOOP_DEVELOPER_TEAM_ID` - Your Apple developer team ID.
-- `LOOP_PUSH_SERVER_ENVIRONMENT` - (optional) Set this to `production` if you are using a provisioning profile that specifies production aps-environment, such as when distributing builds via TestFlight.
+- `LOOP_PUSH_SERVER_ENVIRONMENT` - (optional fallback) Set this to `production` if you are using a provisioning profile that specifies the production `aps-environment`, such as when distributing builds via TestFlight. In 15.0.8 and later, the uploaded profile's `isAPNSProduction` value takes precedence when present; this environment variable is used only when the profile does not provide that value.
 
 </br>
 

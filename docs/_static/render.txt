@@ -21,7 +21,7 @@ services:
     envVars:
       - key: INSECURE_USE_HTTP # TLS is terminated before reaching the app, so only needs to respond to HTTP.
         value: true
-      - key: HOSTNAME # bind app to any internal IP
+      - key: NIGHTSCOUT_HOSTNAME # bind Nightscout to any internal IP
         value: "0.0.0.0"
       - key: MONGODB_URI # The MongoDB Connection String to connect to your MongoDB cluster. If you don't have this from MongoDB Atlas, please re-read installation instructions at http://nightscout.github.io/nightscout/new_user/ before continuing
         sync: false # will be requested when Blueprint is created

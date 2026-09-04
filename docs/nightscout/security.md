@@ -51,6 +51,14 @@ This setting is independent from `FRAME_URL_1` through `FRAME_URL_8`: those vari
 
 </br>
 
+## Stored text and HTML sanitization
+
+Nightscout 15.0.8 sanitizes HTML-containing strings before new or updated records are stored. This protection applies across HTTP API, WebSocket, connector, and other in-process storage paths for glucose entries, treatments, profiles, device status, food, and activity data. Dangerous elements, event handlers, and URL schemes are removed while a limited set of safe formatting markup is retained.
+
+API and uploader developers should send ordinary text unless formatting is required and must not depend on executable HTML being preserved. Sanitization applies when data is written; it does not retroactively rewrite records already stored in the database. Nightscout also encodes stored values on audited display paths as an additional layer of protection.
+
+</br>
+
 ## Administration messages
 
 Nightscout 14.2 introduced a new feature called Admin Notifies, which can warn you about issues with Nightscout installation and security issues.
