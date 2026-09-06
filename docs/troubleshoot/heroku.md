@@ -46,6 +46,23 @@ This was caused by an issue in the Heroku Node.js buildpack: it passed the `--un
 
 </br>
 
+## Build failure: EALLOWREMOTE / Fetching packages of type "remote" have been disabled
+
+When deploying or updating Nightscout 15.0.8, the build fails on the Heroku-26 stack with this error in the build log:
+
+```
+npm error code EALLOWREMOTE
+npm error Fetching packages of type "remote" have been disabled
+npm error Refusing to fetch "nightscout-connect@https://github.com/nightscout/nightscout-connect/archive/refs/tags/v0.0.13.tar.gz"
+```
+
+Heroku now installs npm 12, which refuses by default to download dependencies from a URL instead of the npm registry. One of Nightscout's dependencies (`nightscout-connect`) is fetched from GitHub, so the build is rejected. A permanent fix is [merged](https://github.com/nightscout/cgm-remote-monitor/pull/8601) and will be included in the next Nightscout release.
+
+- In the meantime, open your app in Heroku, select `Settings`, `Reveal Config Vars` and add a new variable with key `NPM_CONFIG_ALLOW_REMOTE` and value `root`.
+- Then redeploy your app from the `Deploy` tab. Restarting the dynos is not enough: the failed build must be run again. See [this report](https://github.com/nightscout/cgm-remote-monitor/issues/8600) for details.
+
+</br>
+
 ## A valid GitHub Directory could not be found.
 
 When trying to deploy a new Nightscout site, this message appears when clicking `Deploy to Heroku`.
