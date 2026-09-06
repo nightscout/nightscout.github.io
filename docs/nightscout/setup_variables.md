@@ -490,6 +490,16 @@ Settings to configure Bolus rendering
 
 </br>
 
+#### `SHOW_CLOCK_DELTA` (`false`)
+
+Possible values `true` or `false`. Shows the BG delta in the `Clock` and `Color` [simple views](/nightscout/discover.md#simple-views).
+
+#### `SHOW_CLOCK_LAST_TIME` (`false`)
+
+Possible values `true` or `false`. Always shows the time since the last reading in the `Clock` and `Color` [simple views](/nightscout/discover.md#simple-views). When `false`, it only appears when the last reading is older than 13 minutes.
+
+</br>
+
 ------
 
 ### Split View

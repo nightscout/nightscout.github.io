@@ -212,17 +212,25 @@ Once authenticated (click the lock icon up right) you'll find many features in t
 
 </br>
 
-- `Clock` - Shows current BG, trend arrow, and time of day. Grey text on a black background.
+Simple views are lightweight pages you can use as a stand-alone clock display on a tablet, phone or an old device. They are opened from the drawer menu, or directly through the URL `https://yoursite/clock/<view>`. If your site is not readable without authentication, you can add `?token=` and a [token](/nightscout/security.md#create-authentication-tokens-for-users) at the end of the URL.
+
+- `Clock` - Shows current BG, trend arrow, and the SGV age. Grey text on a black background.
 
 <img src="/nightscout/img/SetupNS32.png" width="300px" />
 
-- `Color` - Shows current BG and trend arrow. White text on a color background.
+- `Color` - Same layout as `Clock` but white text on a color background reflecting the current BG threshold.
 
 <img src="/nightscout/img/SetupNS33.png" width="300px" />
 
-- `Simple` - Shows current BG. Grey text on a black background.
+- `Simple` - Shows current BG only. Grey text on a black background. The BG is never struck through when it becomes old.
 
 - `[+]` -  Create custom, simplified views using a predefined set of elements.
+
+For `Clock` and `Color`, the SGV age appears only when the last reading is older than 13 minutes, unless you set [`SHOW_CLOCK_LAST_TIME`](/nightscout/setup_variables.md#show_clock_last_time-false) to make it show always. Adding [`SHOW_CLOCK_DELTA`](/nightscout/setup_variables.md#show_clock_delta-false) will also show the BG delta in these two views.
+
+A close button `×` is shown at the top right corner when the view opens and every time you tap or click on the view. It brings you back to the main page. When the browser loses internet connectivity, the view shows `Internet offline.` and reloads by itself when the connection is restored.
+
+#### Clock view configurator
 
 <img src="/nightscout/img/SetupNS34.png" width="300px" />
 
@@ -232,17 +240,16 @@ List of available items:
 
 - `SGV` - Sensor Glucose Value
 - `SGV age` - time since the last SGV read
-- `SGV delta` - change of SGV in the last 5 minutes
+- `SGV delta` - change of SGV since the previous read
 - `Trend arrow` - icon of the SG trend
-- `Time` - current time
-- `Emoji` - an emoji selected from the current glucose value
+- `Time` - current time, using the [`TIME_FORMAT`](/nightscout/setup_variables.md#time_format-12) of your site
 - `Line break` - invisible item that will move following items to the next line (by default all are showing on the same level)
 
-All visible items have `Size` property which allows to customize the view even more. Also, all items may appear multiple times on the view.
+All visible items have a `Size` property (from 1 to 99, a percentage of the smallest screen dimension) which allows to customize the view even more. Also, all items may appear multiple times on the view. `Remove last element` removes the last item you added.
 
-Apart from adding items, it is possible to customize other aspects of the views, like selecting `Color` or `Black` background. The first one will indicate current BG threshold (green = in range; blue = below range; yellow = above range; red = urgent below/above). `Show SGV age` option will make `SGV age` item appear `Always` or only if the predefined threshold is reached: `Only after threshold`. Breaching `SGV age threshold` will also make `Color` background turn grey and strike through `SGV`. `Clock view configurator` will generate an URL (available under `Open my clock view!` link) that could be bookmarked.
+Apart from adding items, it is possible to customize other aspects of the views, like selecting `Color` or `Black` background. The first one will indicate current BG threshold (green = in range; blue = below range; yellow = above range; red = urgent below/above). `Show SGV age` option will make `SGV age` item appear `Always` or only if the predefined threshold is reached: `Only after threshold`. The `SGV age threshold` can be set from 1 to 99 minutes (10 by default). Breaching the threshold will make the background turn grey and strike through `SGV`, with both `Color` and `Black` backgrounds.
 
-If you launch one of these views in a fullscreen view in iOS, you can use a left-to-right swipe gesture to exit the view.
+The configurator shows a preview of the view and generates an URL (available under `Open my clock view!` link) that can be bookmarked. The last part of the URL is the description of the view, for example `/clock/cy10-sg40-nl-ar30`: `c` color background (`b` for black), `y` show SGV age always (`n` for only after threshold), `10` the threshold in minutes, then the items with their size: `sg` SGV, `ag` SGV age, `dt` SGV delta, `ar` trend arrow, `tm` time, `nl` line break. You can edit this URL by hand.
 
 </br>
 
