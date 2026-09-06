@@ -52,6 +52,10 @@ This guide documents a proven working configuration for running Nightscout with 
 | Limited RAM            | Use memory limits only, optimize cache sizes           |
 | Docker Compose version | Use version 3.3 with `mem_limit` instead of `deploy`   |
 
+```{warning}
+MongoDB 3.6 is below the version officially supported by Nightscout: 15.0.8 and later require MongoDB 5.0 or later, and MongoDB 5.0 requires a CPU with AVX. This guide is a community workaround for NAS models without AVX and may stop working with a future Nightscout release. If your NAS supports AVX, use MongoDB 5.0 or 6.0 instead.
+```
+
 **Critical Discovery:**
 
 **DOES NOT WORK** on DS220+

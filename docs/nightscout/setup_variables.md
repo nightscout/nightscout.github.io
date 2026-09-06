@@ -147,6 +147,14 @@ Controls compatibility with uploaders such as Loop and Trio that can send a UUID
 
 Most installations should leave this at its default.
 
+#### MongoDB connection pool
+
+Since 15.0.7, the size of the MongoDB connection pool can be tuned. Most installations should leave these at their defaults.
+
+- `MONGO_POOL_SIZE` (`5`) - Maximum number of connections Nightscout keeps open to the database.
+- `MONGO_MIN_POOL_SIZE` (`0`) - Minimum number of connections kept open.
+- `MONGO_MAX_IDLE_TIME_MS` (`30000`) - Time in milliseconds before an idle connection is closed.
+
 #### API write batch size
 
 Nightscout accepts either one document or an array of documents on several legacy API write endpoints. In 15.0.8, array writes to the `entries`, `devicestatus`, `activity`, and `food` endpoints are limited to **10,000 documents per request** so that validation and database work remain bounded. Clients uploading larger backfills to these endpoints must divide them into smaller batches. Other endpoints have their own accepted payload shapes and limits; consult the API documentation exposed by your Nightscout instance.

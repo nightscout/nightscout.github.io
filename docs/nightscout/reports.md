@@ -98,6 +98,12 @@ This report will give you a daily distribution view.
 
 <img src="/nightscout/img/Reports11.png" width="800px" />
 
+Since 15.0.8, the table also shows an estimated A1c for each day, computed from the day's average glucose, in both DCCT (%) and IFCC (mmol/mol) units. Like the A1c shown in the [Distribution](#distribution) report, it is only a rough estimate and does not replace laboratory testing.
+
+```{note}
+In Nightscout 15.0.8, the Daily stats estimated A1c is wrong when glucose is displayed in mg/dL (for example `95.8%` instead of `6.9%`). This is [fixed](https://github.com/nightscout/cgm-remote-monitor/pull/8602) in the next release. The value shown in mmol/L is correct.
+```
+
 </br>
 
 ## Distribution

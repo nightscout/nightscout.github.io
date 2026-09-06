@@ -128,7 +128,7 @@ d) Select `MongoDB` and type a name for your addon (not important) in `Addon nam
 
 e) Select a Mongo version if you want.
 
-All Mongo versions are supported by Nightscout: you can select the one you prefer.  
+Nightscout 15.0.8 and later require MongoDB 5.0 or later: do not select version 4.4 or older.  
 Since recent versions don't add value, you can safely select an older version like 5.0.24.
 
 <img src="/vendors/northflank/img/NorthflankDB10.png" width="600px" />

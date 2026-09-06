@@ -35,6 +35,13 @@ Find a list of commonly used database hosting services below, decide which one y
 
 </br>
 
+```{admonition} MongoDB version
+:class: important
+Nightscout 15.0.8 and later require **MongoDB 5.0 or later** (5.0.32+ or 6.0.27+ recommended). MongoDB 4.4 and older are no longer supported: Nightscout 15.0.7 is the last version that works with MongoDB 4.4. The hosted databases listed below provide a supported version. If you run your own MongoDB server, check its version before updating Nightscout.
+```
+
+</br>
+
 ```{warning}
 Using a free, limited size database (like M0 Atlas) means you will have to maintain it. </br>
 Since it will regularly grow with the data you send to Nightscout, take a note to perform **regular cleanup** to avoid your site crashing.
@@ -72,7 +79,7 @@ Railway offers a Mongo database.
 **Cons**:  
 * Requires a 5$/month hobby plan as billing starting amount
 * Running a database together with a Railway Nightscout site will increase billing above ~200MiB used
-* Simple Mongo 4.4 database
+* Simple Mongo database with no management interface
 +++
 Follow [these instructions](/vendors/railway/database.md) to create a database in Railway.
 ```

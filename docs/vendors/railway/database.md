@@ -29,7 +29,7 @@ Railway offers a Mongo database.
 
 **Cons**:  
 * You need to carefully monitor your database size and clean it up regularly to remain within the Hobby plan 5$/month limits
-* Simple Mongo 4.4 database
+* Simple Mongo database with no management interface
 ```
 
 </br>

@@ -30,6 +30,21 @@ If you just tried to deploy a new Nightscout site, something went wrong. [Cleanu
 
 </br>
 
+## Build failure: EBADPLATFORM / Unsupported platform for fsevents
+
+When deploying or updating Nightscout 15.0.4 or 15.0.5, the build fails with an error like this in the build log:
+
+```
+npm error code EBADPLATFORM
+npm error notsup Unsupported platform for fsevents@2.3.3: wanted {"os":"darwin"} (current: {"os":"linux"})
+```
+
+A dependency of Nightscout 15.0.4 incorrectly required `fsevents`, a package that only exists on macOS. This was [fixed](https://github.com/nightscout/cgm-remote-monitor/releases/tag/v15.0.6) in Nightscout 15.0.6.
+
+- [Update your fork](/update/update.md) to the latest release and deploy it again. See [this report](https://github.com/nightscout/cgm-remote-monitor/issues/8435) for details.
+
+</br>
+
 ## Build failure: Unknown cli flag --unsafe-perm
 
 When deploying or updating Nightscout, the build fails on the Heroku-24 or Heroku-26 stack with this error in the build log:
