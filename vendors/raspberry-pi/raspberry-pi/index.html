@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Nightscout on Raspberry Pi &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=4adb3efd" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=187304be"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Migration?" href="../../heroku/migrate/" />
+    <link rel="prev" title="Nightscout in your Synology NAS" href="../../NAS/synology/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/nixos/">Nightscout on NixOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building Nightscout on Raspberry Pi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-ll-need">What You’ll Need</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raspberry-pi-imager">Raspberry Pi Imager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-the-raspberry-pi">Setting Up The Raspberry Pi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updates-and-installing-docker">Updates and Installing Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-nightscout">Setting up Nightscout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-domain">Setting up a Domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-cloudflare">Setting Up Cloudflare</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating">Updating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backups-and-recovery">Backups and Recovery</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manual-backups">Manual Backups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automated-backups">Automated Backups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#restoring-an-automated-backup">Restoring an Automated Backup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/google/">Troubleshoot Google Cloud Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Building Nightscout on Raspberry Pi</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/raspberry-pi/raspberry-pi.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="building-nightscout-on-raspberry-pi">
+<h1>Building Nightscout on Raspberry Pi<a class="headerlink" href="#building-nightscout-on-raspberry-pi" title="Link to this heading"></a></h1>
+<section id="what-you-ll-need">
+<h2>What You’ll Need<a class="headerlink" href="#what-you-ll-need" title="Link to this heading"></a></h2>
+<p>Quick list of what you’ll need for this set up:</p>
+<ul class="simple">
+<li><p>A compatible CGM</p></li>
+<li><p>Raspberry Pi 3B, 3B+, 4, or 5 (Anything below 3 does not work. Also, make sure to get the “B” version and not “A”)</p></li>
+<li><p>Power cable for Raspberry Pi</p></li>
+<li><p>Keyboard (You don’t actually need a mouse for the Raspberry Pi)</p></li>
+<li><p>A separate computer w/ mouse and keyboard (can swap keyboard back and forth if you do not have a second one)</p></li>
+<li><p>Micro SD card (Recommend at least 16GB)</p></li>
+<li><p>Micro SD card reader / adapter</p></li>
+<li><p>Monitor w/ power and HDMI cables (NOTE: The Raspberry 4 and 5 use micro HDMI, so you will need to ensure you have an adapter for that)</p></li>
+<li><p>Cloudflare account</p></li>
+<li><p>A GitHub account</p></li>
+<li><p>A Domain Name (Using DigitalPlat)</p></li>
+</ul>
+<p><img alt="rp" src="../../../_images/RP1.png" /></p>
+<p>Unfortunately Raspberry Pis have become more expensive in recent years. However, they are still relatively cheap devices for their form factor and specs.
+You can pick up a Pi 5 kit for $160 and a Pi 4 kit for $120. Not cheap in any way, but these are kits that come with all you need. Power cable, micro SD card with an adapter, proper micro HDMI adapter, and also a nice case too.</p>
+<p><img alt="rp" src="../../../_images/RP2.png" /></p>
+<p>You can also go the cheaper route and pick up a Pi 3B for around $20 on ebay. However, you’ll still need buy everything else separately including the power supply.</p>
+<p><img alt="rp" src="../../../_images/RP3.png" /></p>
+<p>You’ll also need to buy a domain as well, but I will get into that later.</p>
+</section>
+<section id="raspberry-pi-imager">
+<h2>Raspberry Pi Imager<a class="headerlink" href="#raspberry-pi-imager" title="Link to this heading"></a></h2>
+<p>Once you have everything, take both your micro sd card and sd card reader and plug it into your computer. (NOT plugged into your raspberry pi) Next you’ll need to install the Raspberry Pi Imager. Link <a class="reference external" href="https://www.raspberrypi.com/software/">here</a>
+One thing to note is that this setup can be done on Windows, Linux or Mac. Raspberry Pi has imaging software for each OS. Once downloaded, open the imager up and click on <code class="docutils literal notranslate"><span class="pre">CHOOSE</span> <span class="pre">DEVICE</span></code>. Depending on which Pi you purchased, you’ll need to choose the corresponding device. So for 3 pick 3 and so on. For this tutorial I will be using a Raspberry Pi 3b. The instructions should be the same regardless of which version of the Raspberry Pi you have. If there are unique instructions for a certain version I will mention it.</p>
+<p><img alt="rp" src="../../../_images/RP4.png" /></p>
+<p>Once that is selected, click on the <code class="docutils literal notranslate"><span class="pre">CHOOSE</span> <span class="pre">OS</span></code> option. Scroll down a bit and select <code class="docutils literal notranslate"><span class="pre">Raspberry</span> <span class="pre">Pi</span> <span class="pre">OS</span> <span class="pre">(other)</span></code>. Then select <code class="docutils literal notranslate"><span class="pre">Raspberry</span> <span class="pre">Pi</span> <span class="pre">OS</span> <span class="pre">Lite</span> <span class="pre">(64-bit)</span></code>. Do NOT select the 32 bit version. That will not work.</p>
+<p><img alt="rp" src="../../../_images/RP5.png" />
+<img alt="rp" src="../../../_images/RP6.png" /></p>
+<p>Finally, click on <code class="docutils literal notranslate"><span class="pre">CHOOSE</span> <span class="pre">STORAGE</span></code> and select your micro sd card, if it’s not showing up make sure you’ve plugged it into your computer. If multiple drives are showing, double check which card is associated with which drive letter. You do not want to pick the wrong one as it will delete and overwrite all your data. In Windows you can verify this by opening up the File Explorer and click on <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">PC</span></code>. This will show you all available drives and you can view contents of each one to determine which one is blank and for the Pi:</p>
+<p><img alt="rp" src="../../../_images/RP7.png" />
+<img alt="rp" src="../../../_images/RP8.png" /></p>
+<p>Once you’ve selected the proper drive, click on <code class="docutils literal notranslate"><span class="pre">NEXT</span></code>. From this pop up, select <code class="docutils literal notranslate"><span class="pre">EDIT</span> <span class="pre">SETTINGS</span></code></p>
+<p><img alt="rp" src="../../../_images/RP9.png" /></p>
+<p>On the next screen you can ignore the first option, <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">hostname</span></code>. The second option, check <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">username</span> <span class="pre">and</span> <span class="pre">password</span></code>. For username use <code class="docutils literal notranslate"><span class="pre">nightscout</span></code> and a password with at least 8 characters. Very important to remember this login info.</p>
+<p><img alt="rp" src="../../../_images/RP10.png" /></p>
+<p>Also check off <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">wireless</span> <span class="pre">LAN</span></code>. For SSID, put in your WiFi name. You can find your WiFi name in Windows by going to the bottom right corner and clicking on the Network and Sound icon, and then the arrow next to the WiFi icon.</p>
+<p><img alt="rp" src="../../../_images/RP11.png" /></p>
+<p>From there it should show your available Wifi networks and if you’re connected over Wifi:</p>
+<p><img alt="rp" src="../../../_images/RP12.png" /></p>
+<p>Also select <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">locale</span> <span class="pre">settings</span></code> and choose your timezone. And finally, there is one last setting to set. Click the <code class="docutils literal notranslate"><span class="pre">Services</span></code> tab and check off <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">SSH</span></code> and select the <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">password</span> <span class="pre">authentication</span></code> radio button:</p>
+<p><img alt="rp" src="../../../_images/RP13.png" /></p>
+<p>From there you can click on <code class="docutils literal notranslate"><span class="pre">SAVE</span></code> at the bottom. And then click on <code class="docutils literal notranslate"><span class="pre">YES</span></code>. Click on <code class="docutils literal notranslate"><span class="pre">YES</span></code> again for the pop up stating that “All existing data will be erased”.</p>
+<p><img alt="rp" src="../../../_images/RP14.png" /></p>
+<p>You should now see the Imager writing to the SD card:</p>
+<p><img alt="rp" src="../../../_images/RP15.png" /></p>
+<p>Should take anywhere around 5 - 20 minutes. Just depends on the speed of your computer and sd card adapter / usb port. You should see this popup after the Imager is done writing to the SD card:</p>
+<p><img alt="rp" src="../../../_images/RP16.png" /></p>
+<p>Can click on continue.</p>
+</section>
+<section id="setting-up-the-raspberry-pi">
+<h2>Setting Up The Raspberry Pi<a class="headerlink" href="#setting-up-the-raspberry-pi" title="Link to this heading"></a></h2>
+<p>After you’re done imaging the SD card, take the adapter out of the computer and SD card out of the adapter. Then place the SD card into the Pi. (Going forward I will be referring the Raspberry Pi as simply the “Pi”). Plug your HDMI and Keyboard into the Pi. And then finally the power cord. Make sure your monitor is on, and on the right output. You should then instantly see a rainbow pattern for just a sec, then text stating “Generating SSH keys”, and then a reboot message. From there you’ll see lots of text scrolling across the screen:</p>
+<p><img alt="rp" src="../../../_images/RP17.png" /></p>
+<p>You’ll also see the login screen for the first time, but this is false. You’ll see that the IP starts with 127. This means it is still not done setting up just yet. Do not try to login until the login screen shows an IP that does not start with 127 or 169.</p>
+<p><img alt="rp" src="../../../_images/RP18.png" /></p>
+<p>Once you see a non 127/169 IP, make note of the IP address assigned and go back to your other computer. If you’ve already logged in on the Pi itself, that is fine. And technically you can follow along directly using the Pi, but I do not recommend that. There will be some copying and pasting that will be much easier to do from a terminal.</p>
+<p>Back at your main computer, you are going to remote connect to the Pi over your own local network (LAN). Open up your preferred terminal. For windows hit <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">r</span></code> and then type in <code class="docutils literal notranslate"><span class="pre">cmd</span></code>. For Mac, you can launch the terminal by hitting <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">+</span> <span class="pre">Space</span></code> and then typing in <code class="docutils literal notranslate"><span class="pre">terminal</span></code>. For Linux, you can figure that out yourself. Once you’ve opened your terminal, refer to the IP you made note of and type in: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">nightscout&#64;insert_IP_address</span></code>. It should look something like this:
+Don’t worry if your IP does not start with 10. Most will start with 192.168. After you’ve typed that in, hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p><img alt="rp" src="../../../_images/RP19.png" /></p>
+<p>Text like this should now appear asking if you want to continue connecting, and if you want to fingerprint. Type in <code class="docutils literal notranslate"><span class="pre">yes</span></code> and hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p><img alt="rp" src="../../../_images/RP20.png" /></p>
+<p>Next, type in the password you set earlier, and then you should be in! You can now remotely control your Pi from another computer!</p>
+<p><img alt="rp" src="../../../_images/RP21.png" /></p>
+<p>Give it a couple minutes before trying to connect again with the same command before (<code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">nightscout&#64;insert_IP_address</span></code>). Pro tip, you can use the up and down arrows on your keyboard to run commands you’ve previously ran. No need to retype old commands each time.</p>
+</section>
+<section id="updates-and-installing-docker">
+<h2>Updates and Installing Docker<a class="headerlink" href="#updates-and-installing-docker" title="Link to this heading"></a></h2>
+<p>I’ve created a script for you that’ll automatically update the OS and download Docker for you. It’ll also download another script that you’ll use to configure your Nightscout instance later on.</p>
+<p>You’ll be using Docker to automatically download and install Nightscout and all its dependencies. Don’t want to make this too technical, but you can think of Docker as a computer inside a computer. Basically, a virtual machine. (For the mega nerds out there, yes I know docker containers are not comparable to virtual machines, something something they share a kernel, whatever.) Docker calls these virtual machines “Containers”. You’ll see that I refer to them as “Docker Containers / Containers” most of the time later on in this post.</p>
+<p>Long story short, Docker allows for an easy install of Nightscout. When you deploy the Docker container, Docker does all the work of automatically installing / setting up Nightscout for you! The hardest part of this whole Nightscout set up is really installing docker and getting it running. To make things easy I’ve provided a script that will download and install Docker for you. The script will also download the Docker configuration file named <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> for you as well.</p>
+<p>The script you’ll need to run for the Docker install is named <code class="docutils literal notranslate"><span class="pre">dockerinstall.sh</span></code>. Run this command to download and run the script automatically:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">curl</span> <span class="pre">-fsSL</span> <span class="pre">https://raw.githubusercontent.com/nightscout/nightscout.github.io/refs/heads/source/docs/_static/raspberry/dockerinstall.sh</span> <span class="pre">|</span> <span class="pre">sudo</span> <span class="pre">-E</span> <span class="pre">bash</span></code></p>
+<p>(Also this is why I highly recommend NOT typing directly from the Pi itself. As you’ll have to manually type web addresses like this yourself. Later on you’ll need to copy a very very long string of random characters which will not be fun to manually type in. So please make a best effort to remote connect to the Pi from another machine.)</p>
+<p>Once it’s done updating and installing everything, it’ll automatically reboot. You will have your remote session disconnected.
+Give it a couple minutes before trying to connect again with the same command before (<code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">nightscout&#64;insert_IP_address</span></code>).</p>
+<p>To confirm everything downloaded successfully, first run the command <code class="docutils literal notranslate"><span class="pre">ls</span></code>. This will confirm that your <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> script has been downloaded.</p>
+<p><img alt="rp" src="../../../_images/RP22.png" /></p>
+<p>Next run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">ps</span></code>. You should see this output:</p>
+<p><img alt="rp" src="../../../_images/RP23.png" /></p>
+<p>This confirms that Docker has been installed successfully.</p>
+<p>Now, you’ll need to edit this <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> file and put in the proper configuration settings. Type in the command <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">docker-compose.yaml</span></code>
+This command opens the file up in Nano, which is a commandline based text editor. You should see something like this after running the command:</p>
+<p><img alt="rp" src="../../../_images/RP24.png" /></p>
+<p>One thing to note when editing YAML files, NEVER use tabs. Do NOT use the tab key when editing the docker-compose.yaml file. Yaml does not allow for tabs in its config, only use spaces. If you accidentally press tab, just make sure to backspace it or just exit without saving. (<code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">x</span></code> and hit <code class="docutils literal notranslate"><span class="pre">n</span></code> to not save the edit)</p>
+<p>Using the arrow keys, you can navigate up, down, left, and right. Use the down arrow key to go down to the TZ setting, where it says <code class="docutils literal notranslate"><span class="pre">America/Detroit</span></code>. If you live in the US Eastern timezone, then you do not have to change this. But if not, then you’ll first need to use this <a class="reference external" href="https://nodatime.org/TimeZones">list</a> to type in your corresponding timezone. You do not need to find the exact city you live in as not all cities are listed. What matters is the time offset to UTC time. For example, Eastern Daylight Time is -4/-5 UTC. Make sure to type in whatever is under the Zone ID column from the list.</p>
+<p>Next, go down one to <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> and put in a password that is at least 12 characters in length. Make sure to note this down as this will be used to access the Nightscout site. Navigate down again to <code class="docutils literal notranslate"><span class="pre">DISPLAY_UNITS</span></code> and change this to <code class="docutils literal notranslate"><span class="pre">mmol</span></code> if that is what you use, otherwise leave that unchanged.</p>
+<p>Next, you’ll need to put in your CGM credentials. Depending on what service you’re using, you’ll need to uncomment and put in the proper credentials. To uncomment, just remove the <code class="docutils literal notranslate"><span class="pre">#</span></code>’s from the line of text. For any CGM where you’re using Dexcom Share, you’ll use Dexcom. Medtronic, use Medtronic, and if using xDrip, use xDrip. <a class="reference external" href="https://nightscout.pro/en_us/knowledge-base/supported-devices-and-compatibility/">Here</a> is the CGM list.</p>
+<p>NOTE: Anything with Jugguco or Diabox I am not going over. Those work by having the services upload to Nightscout, and thus no config options are needed inside the Nightscout setup. You’ll need to look at their specific documentation on how to set it up.</p>
+<p>Scrolling down some more, feel free to remove the #’s and uncomment these if you plan on connecting this with Loop. If you’re not using Loop or another external pump, you can skip this.</p>
+<p>For the official, full, in-depth docs regarding plugins and settings visit <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor?tab=readme-ov-file#plugins">here</a>.</p>
+<p><img alt="rp" src="../../../_images/RP25.png" /></p>
+<p>After everything is filled in, press <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">o</span></code>, then hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code> and then press <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">x</span></code>. This will save the file and then exit.</p>
+</section>
+<section id="setting-up-nightscout">
+<h2>Setting up Nightscout<a class="headerlink" href="#setting-up-nightscout" title="Link to this heading"></a></h2>
+<p>Now it’s finally time to run your Docker containers and start up Nightscout! You’ll first run it with log output to ensure there are no errors. And then once you’ve confirmed everything is working, restart the containers with it running in the background.</p>
+<p>To start the Docker containers with logging run <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span></code> Once you’ve ran the command you should see something like this:</p>
+<p>You’ll see that two different images are being installed, with two separate containers eventually running.
+The first container is Nightscout, which is the container running the actual web services so you can actually visit and see the site from your web browser. The second container is the MongoDB container. MongoDB is the database that Nightscout uses, and this is where all your glucose readings will be stored.
+<img alt="rp" src="../../../_images/RP26.png" /></p>
+<p>This is downloading the latest Nightscout and MongoDB images and then having it all installed and set up for you! Everything is done automatically, which is why Docker is so awesome!</p>
+<p>Once all images are done downloading, you’ll stop seeing a bunch of text:</p>
+<p><img alt="rp" src="../../../_images/RP27.png" /></p>
+<p>Eventually, you should start seeing text entries like this that start with <em>svg</em></p>
+<p><img alt="rp" src="../../../_images/RP28.png" /></p>
+<p>Now, it’s time to visit your Nightscout site! In your web browser, from the URL bar, type in your Raspberry Pi’s IP (The same IP you used to connect to the Pi remotely).  Example: <code class="docutils literal notranslate"><span class="pre">10.10.10.139</span></code></p>
+<p>You should then be taken to your Nightscout site with this popup:</p>
+<p><img alt="rp" src="../../../_images/RP29.png" /></p>
+<p>If you’re unable to access your site and / or you’re seeing errors, try first going back and re-reading previous steps to ensure you’ve followed everything correctly. To start troubleshooting you’ll need to first stop the Docker container and Nightscout. So go back to your terminal where you have the remote session with your Pi, and press <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">c</span></code>. Press that a couple times and your docker container should stop. Then you can either use the command <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">docker-compose.yaml</span></code> to view and edit, or if you just want to view the file, you can run the command <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">docker-compose.yaml</span></code>. Once you’re done troubleshooting, you can restart the Nightscout docker container using the same command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span></code>.</p>
+<p>Back to Nightscout.</p>
+<p>Click <code class="docutils literal notranslate"><span class="pre">Ok</span></code> and then scroll to the bottom where there’s a link at the bottom left labeled <code class="docutils literal notranslate"><span class="pre">(Authenticate)</span></code>, click it and put in the password you put in for you <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> that is stored in your <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> file. Feel free to also check <code class="docutils literal notranslate"><span class="pre">Remember</span> <span class="pre">this</span> <span class="pre">device.</span> <span class="pre">(Do</span> <span class="pre">not</span> <span class="pre">enable</span> <span class="pre">this</span> <span class="pre">on</span> <span class="pre">public</span> <span class="pre">computers.)</span></code> Then click <code class="docutils literal notranslate"><span class="pre">Authenticate</span></code>. If you need to edit / take a look at the <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> file you’ll need to stop your Docker container and view the file. Take a look at the instructions in the above paragraph to see how.</p>
+<p>Now scroll back up find the <code class="docutils literal notranslate"><span class="pre">Record</span> <span class="pre">valid</span> <span class="pre">from</span></code> field. You should see date and time options:</p>
+<p><img alt="rp" src="../../../_images/RP30.png" /></p>
+<p>Don’t use the date and time pickers. (The buttons on the right of each option box.) Just manually type in the date and time. You can do that by clicking each individual number and typing in what number you want in its place. Same goes for the AM / PM. Once that is changed, scroll back to the bottom and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Then scroll back to the top and click the <code class="docutils literal notranslate"><span class="pre">X</span></code> at the top right.</p>
+<p>Tada!!! You should see your Nightscout site now!</p>
+<p><img alt="rp" src="../../../_images/RP31.png" /></p>
+<p>If you’re able to see your site, but don’t see any glucose entries from your CGM, double check that your username and password you added to your <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> file are correct. Also double check that you typed them in correctly, make sure there’s no extra spacing between the field and the entry. If you’re still having issues, feel free to email me at: nightscout&#64;brz86.com</p>
+<p>Now, you’ll need to restart your Docker container so it runs in the background. Go back to your terminal session press <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">c</span></code> wait for your docker container to stop. Then type <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span> <span class="pre">-d</span></code>. That <code class="docutils literal notranslate"><span class="pre">-d</span></code> option will have the docker container run in the background (detached mode), so your terminal is free for other commands. Now if you type <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">ps</span></code> this should list your docker containers running! You should be able to see the site back online in your web browser.</p>
+<p>Now, for the next issue to solve. Currently the only way to access your Nightscout site is to be on the same local network as the Raspberry Pi. This is an issue because if you’re not home, or you want someone to connect to the site outside your home, they can’t. To solve this issue you’ll be using something called a <code class="docutils literal notranslate"><span class="pre">Cloudflare</span> <span class="pre">Tunnel</span></code>. Basically you’ll link your Nightscout site to Cloudflare and then when someone goes to visit your site they’ll first be taken to Cloudflare and that’ll redirect them to your Nightscout site. Best part is, it’s free! Also super easy to set up. (Relatively speaking of course. Other option is doing a port forward / setting up a reverse proxy / VPN and also setting up DDNS / Static Public IP. Plus, Cloudflare tunnels work with CGNAT too.)</p>
+<p>If you’re unsure what Cloudflare is, don’t worry! They are one of the largest Content Delivery Network companies. You can think of them as one of the Gatekeepers of the Internet. Long story short companies have issues with large / malicious / bot traffic. Cloudflare handles all of that for you so your site stays online. <a class="reference external" href="https://www.cloudflare.com/case-studies/">Here’s</a> a list of companies that use them. Cloudflare is a giant company that has a great reputation. I decided to use Cloudflare for this simply because of their tunnel feature and how easy it is to set up. But this tunnel will also protect your site from bots and other malicious network activity. (NOTE: That doesn’t mean it’ll protect against everything. If you’ve set up an easy to guess password on your Nightscout site, Cloudflare will not prevent a bad actor from logging into your site without your permission. Also if Nightscout happens to have any vulnerabilities, Cloudflare will not protect against that either.)</p>
+<p>To set up this Cloudflare tunnel though, you’ll first need a domain. This will be the URL you type in to visit your Nightscout site. Think like google.com</p>
+</section>
+<section id="setting-up-a-domain">
+<h2>Setting up a Domain<a class="headerlink" href="#setting-up-a-domain" title="Link to this heading"></a></h2>
+<p>For the domain registrar I have decided to go with <a class="reference external" href="https://domain.digitalplat.org/about/">DigitalPlat FreeDomain</a>. It allows you to create one free domain with custom DNS servers. Most free services do not allow you to point your DNS servers to somewhere else. This is important as you will be using CloudFlare which requires you to point your domain to its DNS servers.</p>
+<p>To get a DigitalPlat Domain you’ll need a GitHub account as well as an account for DigialPlat. First sign up for GitHub <a class="reference external" href="https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home">here</a>.</p>
+<p>Once you have your GitHub account, sign up for DigitalPlat <a class="reference external" href="https://dash.domain.digitalplat.org/auth/register">here</a>. Note that it’s pretty picky with the field requirements, so make sure to closely read each one if you’re see red messages underneath. Especially the phone one, which needs a dash between the country code and local phone number.</p>
+<p>Once you’re logged into your DigitalPlat account, you should see this page:</p>
+<p><img alt="rp" src="../../../_images/RP32.png" /></p>
+<p>Select <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">OAuth</span></code> as your method and then click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">with</span> <span class="pre">GitHub</span></code>. After putting in your GitHub creds, click on <code class="docutils literal notranslate"><span class="pre">Authorize</span> <span class="pre">EdwardLab</span></code>:</p>
+<p><img alt="rp" src="../../../_images/RP33.png" /></p>
+<p>The site is a little glitchy with this process, so if you get some kind of error, just manually visit this <a class="reference external" href="https://dash.domain.digitalplat.org/panel/main">page</a>. If you don’t see this page:</p>
+<p><img alt="rp" src="../../../_images/RP34.png" /></p>
+<p>Then try linking your GitHub account again.</p>
+<p>Once, at the main dashboard, click on <code class="docutils literal notranslate"><span class="pre">Domain</span> <span class="pre">Registration</span></code>, located at the left-side menu.</p>
+<p>That should bring you to this screen:</p>
+<p><img alt="rp" src="../../../_images/RP35.png" /></p>
+<p>First, leave the domain at <code class="docutils literal notranslate"><span class="pre">.dpdns.org</span></code>. The other options use TLDs like <code class="docutils literal notranslate"><span class="pre">kg</span></code> and <code class="docutils literal notranslate"><span class="pre">io</span></code> that have a worse reputation. Your Nightscout site will probably be blocked at school / work, but using a .org domain gives you the best chances of not getting blocked. If you experience access issues at school / work, you’ll have to request that the domain be unblocked.</p>
+<p>Make sure to put in your custom subdomain. I chose <code class="docutils literal notranslate"><span class="pre">nightscout2</span></code> for mine. So my full domain will look like: <code class="docutils literal notranslate"><span class="pre">nightscout2.dpdns.org</span></code>. Also make sure to check off the acceptable use policy that you totally read. Then just click on <code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">Availability</span></code>. If it’s taken the site will let you know, otherwise you’ll be taken to this page next:</p>
+<p><img alt="rp" src="../../../_images/RP36.png" /></p>
+<p>Now you’ll need to set up CloudFlare before continuing. So just leave this webpage open while you set up CloudFlare in the next section.</p>
+</section>
+<section id="setting-up-cloudflare">
+<h2>Setting Up Cloudflare<a class="headerlink" href="#setting-up-cloudflare" title="Link to this heading"></a></h2>
+<p>Head over to Cloudflare and <a class="reference external" href="https://dash.cloudflare.com/sign-up">create an account</a>. Once you’ve created your account, login and at account home, click on <code class="docutils literal notranslate"><span class="pre">Onboard</span> <span class="pre">a</span> <span class="pre">domain</span></code>, and then the <code class="docutils literal notranslate"><span class="pre">Domains</span></code> tab. Then enter in your domain and scroll down and hit <code class="docutils literal notranslate"><span class="pre">Continue</span></code>:</p>
+<p><img alt="rp" src="../../../_images/RP37.png" /></p>
+<p>At the next section, select the <code class="docutils literal notranslate"><span class="pre">Free</span></code> panel by clicking <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">plan</span></code> underneath. Next, you’ll be taken to the Review your DNS records section. Just scroll and click on <code class="docutils literal notranslate"><span class="pre">Continue</span> <span class="pre">to</span> <span class="pre">activation</span></code> at the bottom. (Ignore the DNS records warning, just click on “Confirm”)</p>
+<p>This is where you’ll enter in your name servers for your DigitalPlat Domain. Copy both of these name servers and enter them into the DigitalPlat Domain setup.</p>
+<p><img alt="rp" src="../../../_images/RP38.png" />
+Paste them as your Name Servers on DigitalPlat:
+<img alt="rp" src="../../../_images/RP39.png" />
+And click on <code class="docutils literal notranslate"><span class="pre">Register</span></code>. You see a message stating that your registration was successful.</p>
+<p>Go back to your Cloudflare tab, and click on <code class="docutils literal notranslate"><span class="pre">Continue</span></code>. Now you just have to play the waiting game while your domain registrar updates your domain’s nameservers. In my experience it usually takes ~10-30 minutes. But may take up to 24 hours. Once the domain has been updated, you should receive an email from Cloudflare.</p>
+<p>You should see something like this once your domain is ready:</p>
+<p><img alt="rp" src="../../../_images/RP40.png" /></p>
+<p>At <code class="docutils literal notranslate"><span class="pre">Account</span> <span class="pre">home</span></code>, you should see the domain status as <code class="docutils literal notranslate"><span class="pre">Active</span></code>:</p>
+<p><img alt="rp" src="../../../_images/RP41.png" /></p>
+<p>From the panel to the left, click on <code class="docutils literal notranslate"><span class="pre">Zero</span> <span class="pre">Trust</span></code>. And then click on the arrow by <code class="docutils literal notranslate"><span class="pre">Networks</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Tunnels</span></code>. Then click on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">tunnel</span></code>. Select <code class="docutils literal notranslate"><span class="pre">Cloudflared</span></code>. Name your tunnel whatever you want and click <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">tunnel</span></code>.</p>
+<p><img alt="rp" src="../../../_images/RP42.png" /></p>
+<p>For the Configure section, select <code class="docutils literal notranslate"><span class="pre">Debian</span></code> and then select <code class="docutils literal notranslate"><span class="pre">64-bit</span></code></p>
+<p><img alt="rp" src="../../../_images/RP43.png" /></p>
+<p>A script should appear, and you’ll just need to copy it by clicking on the copy icon at the top right of the script:</p>
+<p><img alt="rp" src="../../../_images/RP44.png" /></p>
+<p>Once it’s copied, go back to your remote session, and paste it in there, then hit enter. This should download and install the <code class="docutils literal notranslate"><span class="pre">cloudflared</span></code> service on your Pi. Now copy the second command and paste that into your remote session:</p>
+<p><img alt="rp" src="../../../_images/RP45.png" /></p>
+<p>If it installs successfully you should see output stating “Linux service for cloudflared installed successfully”.</p>
+<p>Go back to Cloudflare and scroll down and click <code class="docutils literal notranslate"><span class="pre">Next</span></code>. For the Route Traffic section, choose your domain under the <code class="docutils literal notranslate"><span class="pre">Domain</span></code> option. Then under <code class="docutils literal notranslate"><span class="pre">Service</span></code>, for <code class="docutils literal notranslate"><span class="pre">Type</span></code> select <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> and then for <code class="docutils literal notranslate"><span class="pre">URL</span></code> put in <code class="docutils literal notranslate"><span class="pre">localhost:80</span></code>. Once you’ve filled those out, click on <code class="docutils literal notranslate"><span class="pre">Complete</span> <span class="pre">setup</span></code>.</p>
+<p><img alt="rp" src="../../../_images/RP46.png" /></p>
+<p>Wait a couple minutes and then go to your browser and type in the domain. If you get a gateway / 404 error, just give it more time.</p>
+<p>Eventually you should see your Nightscout site:</p>
+<p><img alt="rp" src="../../../_images/RP48.png" /></p>
+<p>If all is working, congrats! If not, try going back to previous steps and confirming everything is working. Also remember to run Docker out of detached mode to see if there are any errors: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span></code>. Remember to run this after shutting down the containers with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">down</span></code>. If you’re still having issues, you can contact me at <code class="docutils literal notranslate"><span class="pre">nightscout&#64;brz86.com</span></code>.</p>
+<p>One last thing to note with this setup, if your Pi shuts down at any point, when you start it back up everything should automatically start up again. This includes all your Docker containers as well as the Cloudflare tunnel.</p>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<p>Here is a basic troubleshooting checklist you can go through if you’re having issues:</p>
+<ol class="arabic simple">
+<li><p>Is the Raspberry Pi is powered on?</p></li>
+<li><p>Did the Pi boot properly? (Can verify by SSHing into the device or viewing from the monitor if you have the HDMI display plugged in)</p></li>
+<li><p>Are the containers actually running? (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span></code>). You should see them listed, if an empty table is listed, then they are not running. Run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span></code> to start them back up.</p></li>
+<li><p>Is your CloudFlare tunnel running? (<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">status</span> <span class="pre">cloudflared</span></code>). You should the <code class="docutils literal notranslate"><span class="pre">Active:</span></code> field have <code class="docutils literal notranslate"><span class="pre">active</span> <span class="pre">(running)</span></code>. Also log into your cloudflare account in your browser and go to <code class="docutils literal notranslate"><span class="pre">Zero</span> <span class="pre">Trust</span> <span class="pre">Home</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Networks</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Tunnels</span></code>. The <code class="docutils literal notranslate"><span class="pre">Status</span></code> field should be <code class="docutils literal notranslate"><span class="pre">Healthy</span></code> for the domain.</p></li>
+<li><p>Check Docker logs (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">nightscout</span></code>) (<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">mongo</span></code>). Nightscout logs can give hints if your <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> was not filled out correctly. And the mongo logs can help troubleshoot issues with reading and writing glucose values to the database.</p></li>
+<li><p>Does your Pi have a proper Internet connection? If your cloudflare tunnel says it’s down, this could be a hint your Pi cannot connect to the Internet. Do a ping to a popular website (<code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">google.com</span></code> or <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">1.1.1.1</span></code>).</p></li>
+<li><p>Does the device you’re trying to connect to Nightscout to have a proper Internet connection? Try visiting another site to confirm.</p></li>
+</ol>
+</section>
+<section id="updating">
+<h2>Updating<a class="headerlink" href="#updating" title="Link to this heading"></a></h2>
+<p>I do not suggest setting up any kind of automated updates as it is not necessary and is overkill. I recommend keeping tabs on the <a class="reference external" href="https://www.facebook.com/groups/cgminthecloud">CGM in the Cloud Facebook group</a> for the latest news regarding Nightscout. If something urgent comes out like a security issue, then you can update. There are risks with an automated update system where the latest update could possibly break part of your setup. It’s important to read through the change notes for each new version as your specific setup could be at risk of breaking from a newer version. You can view change logs <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor/releases">here</a>.</p>
+<p>To update to the latest version just run <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">pull</span></code> and then <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span> <span class="pre">-d</span></code>.</p>
+</section>
+<section id="backups-and-recovery">
+<h2>Backups and Recovery<a class="headerlink" href="#backups-and-recovery" title="Link to this heading"></a></h2>
+<p>This next section is optional, but highly recommended if you care about preserving your data long term. If you only care about real time glucose levels and don’t really care about saving your records, then you can skip this section.</p>
+<p>I will go over two methods, an easy, but manual method, as well as a more difficult, but automated method.</p>
+<section id="manual-backups">
+<h3>Manual Backups<a class="headerlink" href="#manual-backups" title="Link to this heading"></a></h3>
+<p>For this I am going to be using software that is exclusive to Windows, Win32 Disk Imager. For Mac you can use The Disk Utility or the command line tool, <code class="docutils literal notranslate"><span class="pre">dd</span></code>. Linux can also use <code class="docutils literal notranslate"><span class="pre">dd</span></code>. Right now I will be only going over how to do this on Windows.</p>
+<p>Win32 Disk Imager allows an easy way to create an exact copy of your sd card. The main issue with Win32 Disk Imager is that it doesn’t really have an official download site. I downloaded mine off of Sourceforge, but there are plenty of fake downloads that try to look legitimate. Sites like win32diskimager[.]org are fake sites that host malicious versions of Win32 Disk Imager. To make things simpler here, I’ve decided to upload the copy I’ve confirmed (confirmed with Virus Total hash: <code class="docutils literal notranslate"><span class="pre">a51c9fc75c9caa44df03502838f229a70d484963f54675c241799093a59d8874</span></code>) as safe. <a class="reference external" href="https://drive.google.com/file/d/1yw5w_cxbpFwU0yvMcX0FdB7bV4DQzksU/view?usp=sharing">Here</a> is the download link.</p>
+<p>Click the download icon at the top right. You’ll be given a zip file. So once it’s been downloaded, right click it and unzip the file, from there you should see a file named <code class="docutils literal notranslate"><span class="pre">win32diskimager-1.0.0-install.exe</span></code>. Double click on that. Once the program is running, insert the sd card from the Pi into your computer. If you have multiple removable drives inserted into your computer, you’ll need to confirm the drive letter. You don’t want to make a backup of the wrong drive. And more importantly, when you write to a drive, you do not want to write to the wrong drive either, as all data will be overwritten.</p>
+<p>On Windows, you can go to “This PC” and view all your available drives. Note the drive letter of the sd card. Back at the Win32 Disk Imager, under <code class="docutils literal notranslate"><span class="pre">Device</span></code> select the proper drive letter. Then click on the folder icon to the left the <code class="docutils literal notranslate"><span class="pre">Device</span></code> section. Choose a folder to save your backup, and then for the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">name:</span></code> create a name for your backup, and just make sure it ends in <code class="docutils literal notranslate"><span class="pre">.img</span></code>. Example: <code class="docutils literal notranslate"><span class="pre">nsbackup1.img</span></code>. Once that is done, go to the bottom and click on <code class="docutils literal notranslate"><span class="pre">Read</span></code>. This will create the file you specified, and once done, will be a backup that you can write to an sd card at anytime. Once written to the sd card, you just plug it back into the Pi, and all should be good.</p>
+<p>To write to the sd card, you’d just select one of your backups (ending in .img) and then select <code class="docutils literal notranslate"><span class="pre">Write</span></code>. Note this will overwrite whatever is on that card. Also, you need to be sure that the sd card you are writing to has at least the same amount or more storage than the original sd card.</p>
+<p><img alt="rp" src="../../../_images/RP49.png" /></p>
+<p>I recommend the following as your backup plan:</p>
+<ul class="simple">
+<li><p>Get at least one extra sd card that is the same size or greater than the card you currently use for your Pi.</p></li>
+<li><p>Do backups every month.</p></li>
+<li><p>Every 3rd or 4th month, write your backup to the other sd card, and use that card as the one in your Pi. And from there just swap them back and forth.</p></li>
+<li><p>If it’s your first time doing a backup, I’d immediately write it to the other sd card and put that in the Pi. It’s important to test your backups, because what good is having a backup if it doesn’t work? I recommend swapping every 3 to 4 months also to test your backups. The reason for them to be so spread out is because writes to an sd card over time wear it down. You could just decide to never write to the backup until your primary goes out, but I think it is important to continue to test and use the backup. This will catch any mistakes made early on, instead of realizing that a bunch of your backups you have saved are useless.</p></li>
+</ul>
+</section>
+<section id="automated-backups">
+<h3>Automated Backups<a class="headerlink" href="#automated-backups" title="Link to this heading"></a></h3>
+<p>One thing to note with this setup is that you’re going to need to set up static IPs for whatever computer you use to host the file share. This is something I am not going to go over. But you can look this up yourself. I can’t go over this really because there are simply too many different types of routers. And each router has settings that others don’t. Unfortunately, depending on your home network setup, this may not be possible. Look for options that allow you to get into your router’s admin settings page, and look for options like “static IP” or “IP reservations” or “DHCP Range”. Setting your static IP on just the host machine is not enough, as your IP is still at risk of changing”. You’ll need to let your router know the specific device you want to have a static IP. Another way is to adjust the DHCP range, so your device is set to an IP not in the DHCP range, thus remaining static.</p>
+<p>Again, I will be only showing this for Windows. But this is entirely possible on both Mac and Linux. You will just have to look up how to host a file share for those respective platforms. Also, DO NOT set this up on the Pi that is running Nightscout. A backup on the device itself is useless and not recommended.</p>
+<p>This backup technique can be used in combination with the above technique. In fact I recommend you do both. These backups technically backup different things. The above manual backup method, backups up your entire config, including all configs on your Pi. For this backup, if you were to lose your Nightscout / Pi setup. You would first have to install everything before doing the backup. Basically, you would need to make sure you have all your containers running first.</p>
+<p>To create this automated backup, you’ll first want to create a new local Windows account that’ll be tied to this new share you’re about to create. If you already have a local account, or know how to work with using an online Microsoft account for file shares, feel free to skip, but this will simplify the process here.</p>
+<p>To create this local user, hit <code class="docutils literal notranslate"><span class="pre">ctlr</span> <span class="pre">+</span> <span class="pre">r</span></code> type in <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and then hit <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">shift</span> <span class="pre">+</span> <span class="pre">enter</span></code>. This should open up the command prompt with admin permissions, which are needed to create a new local account. Once command prompt is open, type in: <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">user</span> <span class="pre">sharens</span> <span class="pre">yourpassword</span> <span class="pre">/add</span></code> then hit <code class="docutils literal notranslate"><span class="pre">enter</span></code>. You should see a message: “The command completed successfully.”</p>
+<p><img alt="rp" src="../../../_images/RP50.png" /></p>
+<p>Then run the command <code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">user</span></code> to confirm the user is there.</p>
+<p>If you want to hide this user from the login screen, run this command: <code class="docutils literal notranslate"><span class="pre">reg</span> <span class="pre">add</span> <span class="pre">&quot;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows</span> <span class="pre">NT\CurrentVersion\Winlogon\SpecialAccounts\Userlist&quot;</span> <span class="pre">/v</span> <span class="pre">sharens</span> <span class="pre">/t</span> <span class="pre">REG_DWORD</span> <span class="pre">/d</span> <span class="pre">0</span> <span class="pre">/f</span></code></p>
+<p>Next, create a new folder and name it with no spaces. For mine I chose <code class="docutils literal notranslate"><span class="pre">NSBackup</span></code>. Right click on your folder and select <code class="docutils literal notranslate"><span class="pre">Properties</span></code> near the bottom and then select the <code class="docutils literal notranslate"><span class="pre">Sharing</span></code> tab. Then click on <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Sharing</span></code>. Checkmark, <code class="docutils literal notranslate"><span class="pre">Share</span> <span class="pre">this</span> <span class="pre">folder</span></code>.  Then click on <code class="docutils literal notranslate"><span class="pre">Permissions</span></code>, then <code class="docutils literal notranslate"><span class="pre">Add...</span></code>, and type in the local user you just created. You should now see your local user under the list. Make sure to select your user from the list and then checkmark under the Allow column <code class="docutils literal notranslate"><span class="pre">Full</span> <span class="pre">Control</span></code>. Then click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code>. And then <code class="docutils literal notranslate"><span class="pre">OK</span></code> again. Now go to the <code class="docutils literal notranslate"><span class="pre">Security</span></code> tab. Click <code class="docutils literal notranslate"><span class="pre">Advanced</span></code>. Click <code class="docutils literal notranslate"><span class="pre">Add</span></code>. Click <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">a</span> <span class="pre">principal</span></code>. Enter in the name of the same local Windows account. Check off <code class="docutils literal notranslate"><span class="pre">Full</span> <span class="pre">control</span></code>. Click <code class="docutils literal notranslate"><span class="pre">OK</span></code>. Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and then <code class="docutils literal notranslate"><span class="pre">OK</span></code>. Finally, click <code class="docutils literal notranslate"><span class="pre">Close</span></code>.</p>
+<p>You also need to make sure file discovery is enabled on your device. Open up file explorer, and visit the Network tab. If you see a bar at the top stating file sharing is turned off, click on it and select <code class="docutils literal notranslate"><span class="pre">Turn</span> <span class="pre">on</span> <span class="pre">network</span> <span class="pre">discovery</span> <span class="pre">and</span> <span class="pre">file</span> <span class="pre">sharing</span></code></p>
+<p><img alt="rp" src="../../../_images/RP51.png" /></p>
+<p>Go back to your command prompt and type in <code class="docutils literal notranslate"><span class="pre">ipconfig</span></code>. Find your corresponding network interface, and make note of the IP next to <code class="docutils literal notranslate"><span class="pre">IPV4</span> <span class="pre">Address</span></code>.</p>
+<p>Now ssh into your Pi that is running Nightscout. Run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code> then <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">cifs-utils</span> <span class="pre">-y</span></code>. Should be already installed, but just in case it’s not.</p>
+<p>Next you’ll need to create a new directory for this share. I like to put mine in <code class="docutils literal notranslate"><span class="pre">/mnt</span></code>. So next command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mkdir</span> <span class="pre">/mnt/nsbackups</span></code>. Now it’s time to connect to the remote share and test it out.</p>
+<p>Run the command: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-t</span> <span class="pre">cifs</span> <span class="pre">//X.X.X.X/NSBackup</span> <span class="pre">/mnt/nsbackups</span> <span class="pre">-o</span> <span class="pre">username=fileshareusername,password=yourpassword</span></code></p>
+<p>With the X.X.X.X being your IP of the machine that hosts the file share.</p>
+<p>If the command runs with no errors, then you should be good. To 100% confirm head over to the share directory using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/mnt/nsbackups</span></code>. Then run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">touch</span> <span class="pre">test.txt</span></code>. This should create a text file in the share. Now go back to your Windows device and open up the share, if you see the text file you’re all good. Run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">test.txt</span></code> to remove the file. Now unmount the share: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">umount</span> <span class="pre">/mnt/nsbackups</span></code></p>
+<p>Here you are going to permanently mount the share, so if you reboot the device, it’ll automatically mount for you. Run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/etc/fstab</span></code>. Here you can add your mount config. In the file scroll down to the first blank line and add: <code class="docutils literal notranslate"><span class="pre">//X.X.X.X/NSBackup</span> <span class="pre">/mnt/nsbackups</span> <span class="pre">cifs</span> <span class="pre">username=sharens,password=yourpassword,nofail</span> <span class="pre">0</span> <span class="pre">0</span></code></p>
+<p>Now run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">daemon-reload</span></code> and then <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-a</span></code>.</p>
+<p>Now it’s time to create a copy of your nightscout data from the mongodb docker container and add it to your backup share. Make sure your Nightscout is running. First run: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">mongo</span> <span class="pre">mongodump</span> <span class="pre">--out</span> <span class="pre">/data/backup</span></code> then <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">mongo</span> <span class="pre">tar</span> <span class="pre">-czvf</span> <span class="pre">$(date</span> <span class="pre">+%F).tar.gz</span> <span class="pre">/data/backup</span></code>. This compresses the file down before moving it over to the network share. Run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">cp</span> <span class="pre">mongo:/$(date</span> <span class="pre">+%F).tar.gz</span> <span class="pre">/mnt/nsbackups</span></code>  Now just run <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">mongo</span> <span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">/data/backup</span> <span class="pre">/$(date</span> <span class="pre">+%F).tar.gz</span></code> to remove the backups from the container. This set of commands creates a backup that is compressed to save space on your network share and then removes it from the container so you aren’t carrying two identical backup copies.</p>
+<p>Next step is to automate this process. You’ll first need to create a bash script, and then create a cron job to automate the execution of that script. First, ensure you’re in your home directory with <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code> command. Then download the script with <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/have-no-clue-what-im-doing/nightscout_scripts/refs/heads/main/nsbackups.sh</span></code>. Then do a <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">nsbackups.sh</span></code> so you can execute the script. Now test out the script by executing it: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">./nsbackups.sh</span></code></p>
+<p>You should see output like this:</p>
+<p><img alt="rp" src="../../../_images/RP52.png" /></p>
+<p>If you don’t, check the log file with <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">nsbackups.log</span></code>. This should log if there was an error with the mount or one of the containers. Use that log file for any future issues as well.</p>
+<p>If the script runs successfully, you can move on to automating it with a cronjob:</p>
+<p>Run the command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">crontab</span> <span class="pre">-e</span></code>. Type in <code class="docutils literal notranslate"><span class="pre">1</span></code> to select <code class="docutils literal notranslate"><span class="pre">nano</span></code> as your preferred text editor. Once in the editor, navigate down to the first blank line and put in: <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">0</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">sudo</span> <span class="pre">/home/nightscout/nsbackups.sh</span></code>. This’ll run the script daily at exactly 12am. If you want to run it weekly: <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">0</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">SUN</span> <span class="pre">sudo</span> <span class="pre">/home/nightscout/nsbackups.sh</span></code>. If you’d prefer a different schedule, you can visit <a class="reference external" href="https://crontab.guru/">this</a> site to help with creating the schedule you want.</p>
+<p>Make sure to save and exit with a <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">o</span></code> then <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">x</span></code> once you’re done editing the cronjob.</p>
+<p>One thing to note is that this script does not do any type of backup / log rotation. That means old logs and backups will have to be manually deleted. This is pretty important as your backups become larger and larger, thus taking up more and more space. This post is already long enough, so I will leave that up for you to add to the script and implement in your own way. (Maybe later I can add a slightly adjustable backup rotation to the script)</p>
+</section>
+<section id="restoring-an-automated-backup">
+<h3>Restoring an Automated Backup<a class="headerlink" href="#restoring-an-automated-backup" title="Link to this heading"></a></h3>
+<p>IMPORTANT: The supplied Docker Compose file uses MongoDB <code class="docutils literal notranslate"><span class="pre">5.0.32</span></code>. Restore a backup only to the same MongoDB major version that created it, or to a version reached through MongoDB’s documented upgrade path. Do not restore or reuse a data directory with an older MongoDB version; it can fail immediately or cause data problems later.</p>
+<p>Now if you need to restore, ensure your Docker containers (Nightscout &amp; Mongo) are running. You’ll start by unzipping the archive that you want to restore. So over in <code class="docutils literal notranslate"><span class="pre">/mnt/nsbackups</span></code> create a new directory: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mkdir</span> <span class="pre">/mnt/nsbackups/2025-08-27-restore</span></code>. You can name it whatever you want, you’ll just need to reference it when doing the restore. Now run (make sure you’re in the /mnt/nsbackups directory. Also insert whatever backup date you want to restore from.) <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">tar</span> <span class="pre">-xzvf</span> <span class="pre">2025-08-27.tar.gz</span> <span class="pre">-C</span> <span class="pre">/mnt/nsbackups/2025-08-28-restore</span></code>. This uncompresses the archive, then creates and places it in a folder named <code class="docutils literal notranslate"><span class="pre">2025-08-28-restore</span></code>.</p>
+<p>Start with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">mongo</span> <span class="pre">mkdir</span> <span class="pre">/data/restore</span></code>. Then <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">cp</span> <span class="pre">/mnt/nsbackups/2025-08-27-restore</span> <span class="pre">mongo:/data/restore/</span></code>. Replace the file date with whatever file date you want to restore with. Now to restore: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">exec</span> <span class="pre">mongo</span> <span class="pre">mongorestore</span> <span class="pre">/data/restore/2025-08-27</span></code>. Should then tell you if the documents restored successfully or failed to restore.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

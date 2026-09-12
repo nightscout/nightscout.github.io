@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1 style="font-size:2vw">Atlas new site creation connection string utility</h1>
+</br>
+Step 1: Copy your new Atlas connection string below: </br>
+It should look like mongodb+srv://yourdbuser:&lt;password&gt;@cluster.zzzzz.mongodb.net/?retryWrites=true&w=majority
+</br>
+<input type="text" id="myAtlas" value="" size="100">
+</br></br>
+Step 2: Enter your database password below: </br>
+Note:</br>
+    - The password is the one used when creating the Atlas database.</br>
+<input type="text" id="myPwd" value="soo5ecret" size="20">
+</br>
+<p>Step 3: Click Generate</p>
+<button onclick="Generate()">Generate</button>
+<p style="font-size:30px" id="result"></p>
+Step 4: Copy the resulting connection string in your MONGODB_URI variable
+<script>
+
+var bAtlas;
+var sPwd;
+var sFinalString = "Not defined yet";
+  
+function Generate()
+{
+  var sString = sFinalString;
+
+  bAtlas=0;
+  var sString = "Looks good!";
+  var sAtlas = document.getElementById("myAtlas").value;
+  sPwd = document.getElementById("myPwd").value;
+  var iAS = sAtlas.search("://");
+  if(iAS!=11) { sString = "Atlas URI should start with mongodb+srv://"; }
+  else
+  {
+    var iAP = sAtlas.search("<password>");
+    if(iAP==-1) { sString = "Atlas URI should contain &lt;password&gt;"; }
+    else
+    {
+		bAtlas=1;
+        sString = sAtlas.substring(0,iAP);
+        sFinalString = sString.concat(sPwd, sAtlas.substring(iAP+10));
+    }
+  }
+  
+  if(bAtlas) document.getElementById("result").innerHTML = sFinalString;
+  else document.getElementById("result").innerHTML = sString;
+}
+</script>
+
+</body>
+</html>
