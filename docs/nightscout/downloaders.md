@@ -234,7 +234,7 @@ Trndi is a *desktop app* that shows your blood sugar and graph. It works with *N
 
 <img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="https://raw.githubusercontent.com/slicke/trndi/refs/heads/main/doc/img/trndi-logo.png" width="150px"/>
+<img src="/nightscout/img/trndi.png" width="150px"/>
 
 </br>
 
@@ -293,7 +293,7 @@ Trndi is a *desktop app* that shows your blood sugar and graph. It works with *N
 
 <img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="https://raw.githubusercontent.com/slicke/trndi/refs/heads/main/doc/img/trndi-logo.png" width="150px"/>
+<img src="/nightscout/img/trndi.png" width="150px"/>
 
 </br>
 
@@ -355,7 +355,7 @@ Trndi is a *desktop app* that shows the your blood sugar and graph. It works wit
 
 <img src="/nightscout/img/LockOK.png" width="25px" />
 
-<img src="https://raw.githubusercontent.com/slicke/trndi/refs/heads/main/doc/img/trndi-logo.png" width="150px"/>
+<img src="/nightscout/img/trndi.png" width="150px"/>
 
 </br>
 
@@ -371,7 +371,9 @@ Trndi-cli is a *terminal* companion to Trndi that shows your blood sugar in the 
 
 ## Displays
 
-### [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki)
+### [M5Stack NightscoutMon](https://github.com/psonnera/M5_NightscoutMon/wiki)
+
+Original project [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki)
 
 <img src="/nightscout/img/LockOK.png" width="25px" /> Facebook group [M5STACK NIGHTSCOUT](https://www.facebook.com/groups/606295776549008)
 
