@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightscout on NixOS &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=4adb3efd" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=187304be"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Nightscout in your Synology NAS" href="../../NAS/synology/" />
+    <link rel="prev" title="Building Nightscout with Docker" href="../docker/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nightscout on NixOS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-and-configure-mongodb">Install and configure MongoDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-nightscout-15-0-8">Run Nightscout 15.0.8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#legacy-native-build-example">Legacy native build example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-nightscout-with-systemd">Run Nightscout with Systemd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-nginx-as-an-entry-point">Configure Nginx as an entry point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#complete-legacy-nixos-configuration">Complete legacy NixOS configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../NAS/synology/">Nightscout in your Synology NAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../raspberry-pi/raspberry-pi/">Building Nightscout on Raspberry Pi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/google/">Troubleshoot Google Cloud Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nightscout on NixOS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/VPS/nixos.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nightscout-on-nixos">
+<h1>Nightscout on NixOS<a class="headerlink" href="#nightscout-on-nixos" title="Link to this heading"></a></h1>
+<p>These instructions will help you build, configure, and run Nightscout
+(plus MongoDB and Nginx) on any infrastructure (bare metal, VM, VPS,
+etc.) that can run NixOS.</p>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#install-and-configure-mongodb">Install and configure MongoDB</a></p></li>
+<li><p><a class="reference internal" href="#run-nightscout-15-0-8">Run Nightscout 15.0.8</a></p></li>
+<li><p><a class="reference internal" href="#legacy-native-build-example">Legacy native build example</a></p></li>
+<li><p><a class="reference internal" href="#run-nightscout-with-systemd">Run Nightscout with Systemd</a></p></li>
+<li><p><a class="reference internal" href="#configure-nginx-as-an-entry-point">Configure Nginx as an entry point</a></p></li>
+<li><p><a class="reference internal" href="#complete-legacy-nixos-configuration">Complete legacy NixOS configuration</a></p></li>
+</ol>
+</section>
+<section id="install-and-configure-mongodb">
+<h2>Install and configure MongoDB<a class="headerlink" href="#install-and-configure-mongodb" title="Link to this heading"></a></h2>
+<p>MongoDB is installed and configured via the options under
+<a class="reference external" href="https://search.nixos.org/options?channel=unstable&amp;amp;from=0&amp;amp;size=50&amp;amp;sort=alpha_asc&amp;amp;type=packages&amp;amp;query=services.mongodb"><code class="docutils literal notranslate"><span class="pre">services.mongodb</span></code></a>.</p>
+<p>Authentication and the root user can be set up automatically via the
+<code class="docutils literal notranslate"><span class="pre">enableAuth</span></code> and <code class="docutils literal notranslate"><span class="pre">initialRootPasswordFile</span></code> options, or manually via the
+<code class="docutils literal notranslate"><span class="pre">mongosh</span></code> shell command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nix-shell -p mongosh
+$ mongosh
+test&gt; use admin
+admin&gt; db.createUser(
+  {
+    user: "root",
+    pwd: "SUPER_SECRET_PASSWORD",
+    roles: [
+      { role: "userAdminAnyDatabase", db: "admin" },
+      { role: "dbAdminAnyDatabase", db: "admin" },
+      { role: "readWriteAnyDatabase", db: "admin" }
+    ]
+  }
+)
+</pre></div>
+</div>
+<p>A database and user for Nightscout to use can be created automatically
+via the <code class="docutils literal notranslate"><span class="pre">initialScript</span></code> option, or manually via the <code class="docutils literal notranslate"><span class="pre">mongosh</span></code> shell
+command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nix-shell -p mongosh
+$ mongosh --username root --authenticationDatabase admin
+test&gt; use nightscout
+nightscout&gt; db.createUser(
+  {
+    user: 'nightscout',
+    pwd: 'CHANGEME',
+    roles:  [
+      { role: 'readWrite', db: 'nightscout' }
+    ]
+  }
+)
+</pre></div>
+</div>
+</section>
+<section id="run-nightscout-15-0-8">
+<h2>Run Nightscout 15.0.8<a class="headerlink" href="#run-nightscout-15-0-8" title="Link to this heading"></a></h2>
+<p>The recommended documented way to run Nightscout 15.0.8 on NixOS is the official multi-architecture container image. Enable Docker in your NixOS configuration:</p>
+<div class="highlight-nix notranslate"><div class="highlight"><pre><span></span>virtualisation<span class="o">.</span>docker<span class="o">.</span><span class="ss">enable</span> <span class="o">=</span> <span class="no">true</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Apply the NixOS configuration, then follow the <a class="reference internal" href="../docker/"><span class="doc std std-doc">Docker deployment guidance</span></a>, beginning with the Nightscout configuration steps after Docker is installed. Pin <code class="docutils literal notranslate"><span class="pre">nightscout/cgm-remote-monitor:15.0.8</span></code> if you want to remain on this release. The image is published for both <code class="docutils literal notranslate"><span class="pre">amd64</span></code> and <code class="docutils literal notranslate"><span class="pre">arm64</span></code> Linux.</p>
+<p>Use the documented Docker secret configuration to mount the API-secret file read-only and set <code class="docutils literal notranslate"><span class="pre">API_SECRET_FILE</span></code> inside the container. Keep the source file outside the repository and Nix store. Do not define secret text directly in a Nix expression because evaluated values can be copied into the world-readable Nix store.</p>
+</section>
+<section id="legacy-native-build-example">
+<h2>Legacy native build example<a class="headerlink" href="#legacy-native-build-example" title="Link to this heading"></a></h2>
+<p>The historical native setup used <a class="reference external" href="https://nixos.org/manual/nixpkgs/unstable/#javascript-buildNpmPackage"><code class="docutils literal notranslate"><span class="pre">buildNpmPackage</span></code></a> and passed the Node.js package as an argument.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The native Nix expression below is a historical example pinned to Nightscout 15.0.3; it is not the current Nightscout release and is not validated against current Nixpkgs. Nightscout 15.0.8’s published npm lockfile omits registry metadata required by Nix’s offline <code class="docutils literal notranslate"><span class="pre">fetchNpmDeps</span></code> build, so changing only the version and hashes does not produce a working native build. Use the 15.0.8 container method above for a current installation.</p>
+</div>
+<p><em>nightscout.nix:</em></p>
+<div class="highlight-nix notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> pkgs<span class="p">,</span> nodejs <span class="p">}:</span>
+pkgs<span class="o">.</span>buildNpmPackage <span class="p">(</span>finalAttrs<span class="p">:</span> <span class="p">{</span>
+  <span class="ss">pname</span> <span class="o">=</span> <span class="s2">"cgm-remote-monitor"</span><span class="p">;</span>
+  <span class="ss">version</span> <span class="o">=</span> <span class="s2">"15.0.3"</span><span class="p">;</span>
+
+  <span class="ss">src</span> <span class="o">=</span> pkgs<span class="o">.</span>fetchFromGitHub <span class="p">{</span>
+    <span class="ss">owner</span> <span class="o">=</span> <span class="s2">"nightscout"</span><span class="p">;</span>
+    <span class="ss">repo</span> <span class="o">=</span> finalAttrs<span class="o">.</span>pname<span class="p">;</span>
+    <span class="ss">rev</span> <span class="o">=</span> <span class="s2">"</span><span class="si">${</span>finalAttrs<span class="o">.</span>version<span class="si">}</span><span class="s2">"</span><span class="p">;</span>
+    <span class="ss">hash</span> <span class="o">=</span> <span class="s2">"sha256-bI7RvEz9+7k0ZsZWuW9SrLs2qlUHhmDjOwPlLp83Jzs="</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="ss">npmDepsHash</span> <span class="o">=</span> <span class="s2">"sha256-p3Dqj78vzRmTPMgaodGXQgvHFE0jGsmBL0p9n403Y2M="</span><span class="p">;</span>
+
+  <span class="ss">nodejs</span> <span class="o">=</span> nodejs<span class="p">;</span>
+
+  <span class="ss">npmFlags</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">"--ignore-scripts"</span> <span class="p">];</span>
+
+  <span class="ss">npmBuildScript</span> <span class="o">=</span> <span class="s2">"bundle"</span><span class="p">;</span>
+
+  <span class="ss">meta</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="ss">description</span> <span class="o">=</span> <span class="s2">"nightscout web monitor"</span><span class="p">;</span>
+    <span class="ss">homepage</span> <span class="o">=</span> <span class="s2">"https://github.com/nightscout/cgm-remote-monitor"</span><span class="p">;</span>
+    <span class="ss">license</span> <span class="o">=</span> pkgs<span class="o">.</span>lib<span class="o">.</span>licenses<span class="o">.</span>agpl3Only<span class="p">;</span>
+    <span class="ss">maintainers</span> <span class="o">=</span> <span class="k">with</span> pkgs<span class="o">.</span>lib<span class="o">.</span>maintainers<span class="p">;</span> <span class="p">[</span> earldouglas <span class="p">];</span>
+  <span class="p">};</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="run-nightscout-with-systemd">
+<h2>Run Nightscout with Systemd<a class="headerlink" href="#run-nightscout-with-systemd" title="Link to this heading"></a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">systemd.services.nightscout</span></code> block in the <a class="reference internal" href="#complete-legacy-nixos-configuration">complete NixOS
+configuration</a> below.</p>
+<p><a class="reference external" href="https://wiki.nixos.org/wiki/Systemd/User_Services">Read more about Systemd services</a> on the NixOS wiki.</p>
+</section>
+<section id="configure-nginx-as-an-entry-point">
+<h2>Configure Nginx as an entry point<a class="headerlink" href="#configure-nginx-as-an-entry-point" title="Link to this heading"></a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">services.nginx</span></code> block in the <a class="reference internal" href="#complete-legacy-nixos-configuration">complete NixOS
+configuration</a> below.</p>
+<p><a class="reference external" href="https://wiki.nixos.org/wiki/Nginx">Read more about Nginx</a> on the NixOS wiki.</p>
+</section>
+<section id="complete-legacy-nixos-configuration">
+<h2>Complete legacy NixOS configuration<a class="headerlink" href="#complete-legacy-nixos-configuration" title="Link to this heading"></a></h2>
+<p>The configuration below expects the following environment variables to
+be set:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NIGHTSCOUT_API_SECRET</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NIGHTSCOUT_MONGO_PASSWORD</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NIGHTSCOUT_PORT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NIGHTSCOUT_DNS_NAME</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DEXCOM_PASSWORD</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DEXCOM_USERNAME</span></code></p></li>
+</ul>
+<p>This configuration assumes that we want to source our data from Dexcom
+Share.  For alternatives, see the <a class="reference external" href="https://github.com/nightscout/cgm-remote-monitor?tab=readme-ov-file#connect-nightscout-connect"><code class="docutils literal notranslate"><span class="pre">connect</span></code></a> section of the docs.</p>
+<p>This configuration also assumes that we want to run an Nginx reverse
+proxy in front of our Nightscout instance.  This can be useful for
+observability, rate limiting, HTTPS support, etc.</p>
+<p><em>configuration.nix:</em></p>
+<div class="highlight-nix notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> pkgs<span class="p">,</span> lib<span class="p">,</span> <span class="o">...</span> <span class="p">}:</span>
+
+<span class="k">let</span>
+
+  <span class="ss">dexcomPassword</span>          <span class="o">=</span> <span class="nb">builtins</span><span class="o">.</span>getEnv <span class="s2">"DEXCOM_PASSWORD"</span><span class="p">;</span>
+  <span class="ss">dexcomUsername</span>          <span class="o">=</span> <span class="nb">builtins</span><span class="o">.</span>getEnv <span class="s2">"DEXCOM_USERNAME"</span><span class="p">;</span>
+
+  <span class="ss">nightscoutApiSecret</span>     <span class="o">=</span> <span class="nb">builtins</span><span class="o">.</span>getEnv <span class="s2">"NIGHTSCOUT_API_SECRET"</span><span class="p">;</span>
+  <span class="ss">nightscoutMongoPassword</span> <span class="o">=</span> <span class="nb">builtins</span><span class="o">.</span>getEnv <span class="s2">"NIGHTSCOUT_MONGO_PASSWORD"</span><span class="p">;</span>
+  <span class="ss">nightscoutPort</span>          <span class="o">=</span> <span class="nb">builtins</span><span class="o">.</span>parseInt<span class="p">(</span><span class="nb">builtins</span><span class="o">.</span>getEnv <span class="s2">"NIGHTSCOUT_PORT"</span><span class="p">);</span>
+
+  <span class="ss">dnsName</span>                 <span class="o">=</span> <span class="nb">builtins</span><span class="o">.</span>getEnv <span class="s2">"NIGHTSCOUT_DNS_NAME"</span><span class="p">;</span>
+
+  <span class="c1"># Use a supported version of Node.js</span>
+  <span class="ss">nodejs</span> <span class="o">=</span> pkgs<span class="o">.</span>nodejs_20<span class="p">;</span>
+
+  <span class="ss">mongodb</span> <span class="o">=</span>
+    <span class="p">(</span><span class="nb">import</span> <span class="l">&lt;nixpkgs&gt;</span> <span class="p">{</span>
+      config<span class="o">.</span><span class="ss">permittedInsecurePackages</span> <span class="o">=</span> <span class="p">[];</span>
+      config<span class="o">.</span><span class="ss">allowUnfreePredicate</span> <span class="o">=</span>
+        pkg<span class="p">:</span> <span class="nb">builtins</span><span class="o">.</span>elem <span class="p">(</span>pkgs<span class="o">.</span>lib<span class="o">.</span>getName pkg<span class="p">)</span> <span class="p">[</span> <span class="s2">"mongodb-ce"</span> <span class="p">];</span>
+    <span class="p">})</span><span class="o">.</span>mongodb-ce<span class="p">;</span>
+
+  <span class="ss">nightscout</span> <span class="o">=</span>
+    <span class="nb">import</span> <span class="l">./nightscout.nix</span> <span class="p">{</span>
+      <span class="k">inherit</span> pkgs<span class="p">;</span>
+      <span class="k">inherit</span> nodejs<span class="p">;</span>
+    <span class="p">};</span>
+
+<span class="k">in</span> <span class="p">{</span>
+
+  <span class="c1">## MongoDB ###########################################################</span>
+
+  services<span class="o">.</span><span class="ss">mongodb</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="ss">enable</span> <span class="o">=</span> <span class="no">true</span><span class="p">;</span>
+    <span class="ss">package</span> <span class="o">=</span> mongodb<span class="p">;</span>
+    <span class="ss">extraConfig</span> <span class="o">=</span> <span class="s s-Multiline">''</span>
+<span class="s s-Multiline">      security.authorization: enabled</span>
+<span class="s s-Multiline">    ''</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="c1">## Nightscout service account ########################################</span>
+
+  users<span class="o">.</span>groups<span class="o">.</span><span class="ss">nightscout</span> <span class="o">=</span> <span class="p">{};</span>
+  users<span class="o">.</span>users<span class="o">.</span><span class="ss">nightscout</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="ss">group</span> <span class="o">=</span> <span class="s2">"nightscout"</span><span class="p">;</span>
+    <span class="ss">isSystemUser</span> <span class="o">=</span> <span class="no">true</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="c1">## Nightscout service ################################################</span>
+
+  systemd<span class="o">.</span>services<span class="o">.</span><span class="ss">nightscout</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="ss">description</span> <span class="o">=</span> <span class="s2">"nightscout"</span><span class="p">;</span>
+    <span class="ss">after</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">"network.target"</span> <span class="p">];</span>
+    <span class="ss">wantedBy</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">"multi-user.target"</span> <span class="p">];</span>
+    <span class="ss">serviceConfig</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="ss">WorkingDirectory</span> <span class="o">=</span> <span class="s2">"</span><span class="si">${</span>nightscout<span class="si">}</span><span class="s2">/lib/node_modules/nightscout"</span><span class="p">;</span>
+      <span class="ss">ExecStart</span> <span class="o">=</span> <span class="s2">"</span><span class="si">${</span>nodejs<span class="si">}</span><span class="s2">/bin/node lib/server/server.js"</span><span class="p">;</span>
+      <span class="ss">User</span> <span class="o">=</span> <span class="s2">"nightscout"</span><span class="p">;</span>
+      <span class="ss">Restart</span> <span class="o">=</span> <span class="s2">"always"</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="ss">environment</span> <span class="o">=</span> <span class="p">{</span>
+
+      <span class="c1">## Required ######################################################</span>
+      <span class="c1"># See https://github.com/nightscout/cgm-remote-monitor?tab=readme-ov-file#required</span>
+
+      <span class="ss">MONGODB_URI</span> <span class="o">=</span> <span class="s2">"mongodb://nightscout:</span><span class="si">${</span>nightscoutMongoPassword<span class="si">}</span><span class="s2">@localhost:27017/nightscout"</span><span class="p">;</span>
+      <span class="ss">API_SECRET</span> <span class="o">=</span> nightscoutApiSecret<span class="p">;</span>
+      <span class="ss">MONGODB_COLLECTION</span> <span class="o">=</span> <span class="s2">"entries"</span><span class="p">;</span>
+      <span class="ss">DISPLAY_UNITS</span> <span class="o">=</span> <span class="s2">"mg/dl"</span><span class="p">;</span>
+
+      <span class="c1">## Features ######################################################</span>
+      <span class="c1"># See https://github.com/nightscout/cgm-remote-monitor?tab=readme-ov-file#features</span>
+
+      <span class="ss">ENABLE</span> <span class="o">=</span>
+        lib<span class="o">.</span>strings<span class="o">.</span>concatStrings <span class="p">(</span>
+          lib<span class="o">.</span>intersperse <span class="s2">" "</span> <span class="p">[</span>
+            <span class="s2">"connect"</span>
+            <span class="s2">"ar2"</span>
+            <span class="s2">"basal"</span>
+            <span class="s2">"boluscalc"</span>
+            <span class="s2">"careportal"</span>
+            <span class="s2">"delta"</span>
+            <span class="s2">"devicestatus"</span>
+            <span class="s2">"direction"</span>
+            <span class="s2">"errorcodes"</span>
+            <span class="s2">"food"</span>
+            <span class="s2">"profile"</span>
+            <span class="s2">"simplealarms"</span>
+            <span class="s2">"speech"</span>
+            <span class="s2">"timeago"</span>
+          <span class="p">]</span>
+        <span class="p">);</span>
+      <span class="ss">AUTH_DEFAULT_ROLES</span> <span class="o">=</span> <span class="s2">"denied"</span><span class="p">;</span>
+
+      <span class="ss">BASE_URL</span> <span class="o">=</span> <span class="s2">"https://nightscout.earldouglas.com"</span><span class="p">;</span>
+
+      <span class="c1">## Core ##########################################################</span>
+      <span class="c1"># See https://github.com/nightscout/cgm-remote-monitor?tab=readme-ov-file#core</span>
+
+      <span class="ss">PORT</span> <span class="o">=</span> <span class="nb">toString</span> nightscoutPort<span class="p">;</span>
+
+      <span class="c1"># See https://github.com/nightscout/cgm-remote-monitor?tab=readme-ov-file#predefined-values-for-your-server-settings-optional</span>
+
+      <span class="ss">TIME_FORMAT</span> <span class="o">=</span> <span class="s2">"24"</span><span class="p">;</span>
+      <span class="ss">INSECURE_USE_HTTP</span> <span class="o">=</span> <span class="s2">"true"</span><span class="p">;</span>
+      <span class="ss">THEME</span> <span class="o">=</span> <span class="s2">"colors"</span><span class="p">;</span>
+
+      <span class="c1">## Dexcom Share ##################################################</span>
+      <span class="c1"># See https://github.com/nightscout/cgm-remote-monitor?tab=readme-ov-file#connect-nightscout-connect</span>
+
+      <span class="ss">CONNECT_SOURCE</span> <span class="o">=</span> <span class="s2">"dexcomshare"</span><span class="p">;</span>
+      <span class="ss">CONNECT_SHARE_ACCOUNT_NAME</span> <span class="o">=</span> dexcomUsername<span class="p">;</span>
+      <span class="ss">CONNECT_SHARE_PASSWORD</span> <span class="o">=</span> dexcomPassword<span class="p">;</span>
+
+      <span class="c1">## Plugins #######################################################</span>
+      <span class="c1"># See https://github.com/nightscout/cgm-remote-monitor?tab=readme-ov-file#plugins</span>
+
+      <span class="ss">AR2_CONE_FACTOR</span> <span class="o">=</span> <span class="s2">"0"</span><span class="p">;</span>
+    <span class="p">};</span>
+  <span class="p">};</span>
+
+  <span class="c1">## Nginx entry point and reverse proxy ###############################</span>
+
+  services<span class="o">.</span><span class="ss">nginx</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="ss">enable</span> <span class="o">=</span> <span class="no">true</span><span class="p">;</span>
+    virtualHosts<span class="o">.</span><span class="s2">"</span><span class="si">${</span>dnsName<span class="si">}</span><span class="s2">"</span> <span class="o">=</span> <span class="p">{</span>
+      locations<span class="o">.</span><span class="s2">"/"</span><span class="o">.</span><span class="ss">extraConfig</span> <span class="o">=</span> <span class="s s-Multiline">''</span>
+<span class="s s-Multiline">        proxy_pass http://localhost:</span><span class="si">${</span><span class="nb">toString</span> nightscoutPort<span class="si">}</span><span class="s s-Multiline">;</span>
+<span class="s s-Multiline">      ''</span><span class="p">;</span>
+    <span class="p">};</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

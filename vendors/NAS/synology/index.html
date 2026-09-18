@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightscout in your Synology NAS &mdash; Nightscout Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=4adb3efd" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/NS-logo.png"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=187304be"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Building Nightscout on Raspberry Pi" href="../../raspberry-pi/raspberry-pi/" />
+    <link rel="prev" title="Nightscout on NixOS" href="../../VPS/nixos/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../" class="icon icon-home">
+            Nightscout Documentation
+              <img src="../../../_static/we are not waiting vertical.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/uploaders/">Supported Uploaders</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/new_user/">New Nightscout Users</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR DATABASE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/database/">Choose your database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mongodb/atlas/">MongoDB Atlas Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/database/">Railway Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/database/">Northflank Database</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CREATE YOUR WEB APP</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/platform/">Choose your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../azure/new_user/">Nightscout in Azure (Docker)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../northflank/new_user/">Nightscout in Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/new_user/">Nightscout in Render</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../railway/new_user/">Nightscout in Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/new_user/">Nightscout in Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../fly.io/new_user/">Nightscout in Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../google/new_user/">Nightscout in Google Cloud</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SETUP NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/profile_editor/">Setup your Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/setup/">Setup Uploaders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/downloaders/">Setup Downloaders - Followers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/wearable/">Nightscout on your Watch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/setup_variables/">Nightscout Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../uploader/xdripcarelink/">xDrip for CareLink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/dexcom_bridge/">Troubleshoot Dexcom Share</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">USE NIGHTSCOUT</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/discover/">Discover your Nightscout site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/reports/">Create Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/security/">Nightscout Security and Privacy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/admin_tools/">Admin Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/close_loop/">Closed loop systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/ifttt/">IFTTT Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/pushover/">Remote notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/troubleshoot/">Troubleshooting Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/update/">Update Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/dev_branch/">Deploy another version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/downgrade/">Downgrade Nightscout</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ADVANCED DIY</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/advanced/">Advanced Nightscout deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/ubuntu/">Building Nightscout in Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/docker/">Building Nightscout with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VPS/nixos/">Nightscout on NixOS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nightscout in your Synology NAS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nightscout-on-synology-ds220-complete-installation-guide">Nightscout on Synology DS220+ - Complete Installation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">1. Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#key-achievements">Key Achievements:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hardware-limitations-solutions">2. Hardware Limitations &amp; Solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">3. Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-configuration">4. Working Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-script">5. Installation Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-pitfalls-solutions">6. Common Pitfalls &amp; Solutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-librelink-url-format">a) LibreLink URL Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b-api-token-format">b) API Token Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-mongodb-version">c) MongoDB Version</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-docker-compose-cpu-limits">d) Docker Compose CPU Limits</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#verification-steps">7. Verification Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-check-container-status">a) Check Container Status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b-test-nightscout-api">b) Test Nightscout API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-check-librelink-logs">c) Check LibreLink Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-monitor-resource-usage">d) Monitor Resource Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#maintenance">8. Maintenance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#daily-backup-script">Daily Backup Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#useful-commands">Useful Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#synology-dsm-configuration">8. Synology DSM Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reverse-proxy-setup-for-https-access">Reverse Proxy Setup (for HTTPS access)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ssl-certificate">SSL Certificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#success-indicators">Success Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#credits-notes">Credits &amp; Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#special-notes">Special Notes:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#troubleshooting-checklist">Troubleshooting Checklist</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../raspberry-pi/raspberry-pi/">Building Nightscout on Raspberry Pi</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">VENDORS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/migrate/">Migration?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nightscout/multiadmin/">Multiple sites and support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../github/update/">Update GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/redeploy/">Redeploy with GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/github/">Troubleshoot GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/atlas/">Troubleshoot MongoDB Atlas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/azure/">Troubleshoot Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/northflank/">Troubleshoot Northflank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/railway/">Troubleshoot Railway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/heroku/">Troubleshoot Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/ecoplan/">Heroku Eco plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/hobbyplan/">Heroku Basic plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../heroku/mfa/">Heroku MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../update/upd_stack/">Update the Heroku stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/fly.io/">Troubleshoot Fly.io</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/google/">Troubleshoot Google Cloud Nightscout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshoot/render/">Troubleshoot Render</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">CLINICIANS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/home/">Nightscout for clinicians</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/setup/">Setup the main view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../clinicians/reports/">Nightscout reports</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">TRANSLATE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../translate/">Google Translate links</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../">Nightscout Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Nightscout in your Synology NAS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/vendors/NAS/synology.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nightscout-in-your-synology-nas">
+<h1>Nightscout in your Synology NAS<a class="headerlink" href="#nightscout-in-your-synology-nas" title="Link to this heading"></a></h1>
+</br>
+<p>A valid solution for knowledgeable people, some projects here:</p>
+<p><a class="reference external" href="https://t1d.dzienia.pl/nightscout_synology_tutorial/">https://t1d.dzienia.pl/nightscout_synology_tutorial/</a>.</p>
+<p><a class="reference external" href="https://github.com/vanelsberg/NightScoutSynology">https://github.com/vanelsberg/NightScoutSynology</a></p>
+</br>
+<section id="nightscout-on-synology-ds220-complete-installation-guide">
+<h2>Nightscout on Synology DS220+ - Complete Installation Guide<a class="headerlink" href="#nightscout-on-synology-ds220-complete-installation-guide" title="Link to this heading"></a></h2>
+<p><strong>Successfully Running Nightscout with LibreLink Bridge on Limited Hardware</strong></p>
+<p><em>A community guide based on real-world troubleshooting and successful deployment from Richard v.E.</em></p>
+<section id="table-of-contents">
+<h3>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Overview</p></li>
+<li><p>Hardware Limitations &amp; Solutions</p></li>
+<li><p>Prerequisites</p></li>
+<li><p>Working Configuration</p></li>
+<li><p>Installation Script</p></li>
+<li><p>Common Pitfalls &amp; Solutions</p></li>
+<li><p>Verification Steps</p></li>
+<li><p>Maintenance</p></li>
+<li><p>Synology DSM Configuration</p></li>
+</ol>
+</section>
+<section id="overview">
+<h3>1. Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
+<p>This guide documents a proven working configuration for running Nightscout with LibreLink Bridge on a Synology DS220+ NAS. After extensive troubleshooting, this setup has been running stable with real-time glucose updates every minute.</p>
+<section id="key-achievements">
+<h4>Key Achievements:<a class="headerlink" href="#key-achievements" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>MongoDB running stable on limited hardware</p></li>
+<li><p>LibreLink Bridge uploading data every minute</p></li>
+<li><p>No CPU compatibility errors</p></li>
+<li><p>Minimal resource usage</p></li>
+<li><p>Automatic recovery on failure</p></li>
+</ul>
+</section>
+</section>
+<section id="hardware-limitations-solutions">
+<h3>2. Hardware Limitations &amp; Solutions<a class="headerlink" href="#hardware-limitations-solutions" title="Link to this heading"></a></h3>
+<p><strong>DS220+ Specific Challenges:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Issue</p></th>
+<th class="head"><p>Solution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>No AVX CPU support</p></td>
+<td><p>Use MongoDB 3.6 (last version without AVX requirement)</p></td>
+</tr>
+<tr class="row-odd"><td><p>No CPU CFS scheduler</p></td>
+<td><p>Remove all CPU limits from Docker configs</p></td>
+</tr>
+<tr class="row-even"><td><p>Limited RAM</p></td>
+<td><p>Use memory limits only, optimize cache sizes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Docker Compose version</p></td>
+<td><p>Use version 3.3 with <code class="docutils literal notranslate"><span class="pre">mem_limit</span></code> instead of <code class="docutils literal notranslate"><span class="pre">deploy</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>MongoDB 3.6 is below the version officially supported by Nightscout: 15.0.8 and later require MongoDB 5.0 or later, and MongoDB 5.0 requires a CPU with AVX. This guide is a community workaround for NAS models without AVX and may stop working with a future Nightscout release. If your NAS supports AVX, use MongoDB 5.0 or 6.0 instead.</p>
+</div>
+<p><strong>Critical Discovery:</strong></p>
+<p><strong>DOES NOT WORK</strong> on DS220+</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">limits</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">'0.5'</span><span class="w"> </span><span class="c1"># Kernel doesn't support this!</span>
+</pre></div>
+</div>
+<p><strong>WORKS</strong> on DS220+</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mem_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400m</span><span class="w"> </span><span class="c1"># Only memory limits work</span>
+</pre></div>
+</div>
+</section>
+<section id="prerequisites">
+<h3>3. Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Synology DS220+ with DSM 7.x</strong></p></li>
+<li><p><strong>Docker &amp; Docker Compose installed</strong> via Package Center</p></li>
+<li><p>P<strong>ort 1337 available</strong> for Nightscout</p></li>
+<li><p><strong>LibreLink/LibreView account</strong> with follower access</p></li>
+<li><p><strong>Domain name</strong> (optional, for HTTPS access)</p></li>
+</ol>
+</section>
+<section id="working-configuration">
+<h3>4. Working Configuration<a class="headerlink" href="#working-configuration" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">'3.3'</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="c1"># MongoDB 3.6 - CRITICAL: Don't use newer versions!</span>
+<span class="w">  </span><span class="nt">mongodb</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo:3.6</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nightscout-mongodb</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">MONGO_INITDB_ROOT_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admin</span>
+<span class="w">      </span><span class="nt">MONGO_INITDB_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">SECURE_PASSWORD_HERE</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nightscout-net</span>
+<span class="w">    </span><span class="nt">mem_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400m</span>
+<span class="c1"># Optimized for DS220+ limited resources</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongod --smallfiles --oplogSize 128 --storageEngine wiredTiger --wiredTigerCacheSizeGB 0.25</span>
+
+<span class="c1"># Nightscout Application</span>
+<span class="w">  </span><span class="nt">nightscout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nightscout/cgm-remote-monitor:latest</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nightscout-app</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodb</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+
+<span class="c1"># MongoDB Connection</span>
+<span class="w">      </span><span class="nt">MONGODB_URI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodb://admin:[MONGO_PASSWORD]@mongodb:27017/nightscout?authSource=admin</span>
+
+<span class="c1"># API Configuration - CRITICAL: Save this!</span>
+<span class="w">      </span><span class="nt">API_SECRET</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">YOUR_API_SECRET_HERE</span><span class="p p-Indicator">]</span>
+
+<span class="c1"># Basic Settings</span>
+<span class="w">      </span><span class="nt">NODE_ENV</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Europe/Amsterdam</span>
+<span class="w">      </span><span class="nt">DISPLAY_UNITS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mmol</span><span class="w"> </span><span class="c1"># or mgdl</span>
+
+<span class="c1"># Minimal plugins for performance</span>
+<span class="w">      </span><span class="nt">ENABLE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">careportal basal iob cob bwp rawbg direction</span>
+
+<span class="c1"># Performance optimization for limited RAM</span>
+<span class="w">      </span><span class="nt">NODE_OPTIONS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--max-old-space-size=256</span>
+
+<span class="c1"># Required for local network access</span>
+<span class="w">      </span><span class="nt">INSECURE_USE_HTTP</span><span class="p">:</span><span class="w"> </span><span class="s">"true"</span>
+
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"1337:1337"</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nightscout-net</span>
+<span class="w">    </span><span class="nt">mem_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300m</span>
+
+<span class="c1"># LibreLink Bridge</span>
+
+<span class="w">  </span><span class="nt">librelink</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timoschlueter/nightscout-librelink-up:latest</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nightscout-librelink-up</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nightscout</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+
+<span class="c1"># LibreView Credentials</span>
+<span class="w">      </span><span class="nt">LINK_UP_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="s">"[YOUR_LIBREVIEW_EMAIL]"</span>
+<span class="w">      </span><span class="nt">LINK_UP_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">"[YOUR_LIBREVIEW_PASSWORD]"</span>
+<span class="w">      </span><span class="nt">LINK_UP_REGION</span><span class="p">:</span><span class="w"> </span><span class="s">"EU"</span><span class="w"> </span><span class="c1"># or US</span>
+
+<span class="c1"># CRITICAL: NO http:// prefix!</span>
+<span class="w">      </span><span class="nt">NIGHTSCOUT_URL</span><span class="p">:</span><span class="w"> </span><span class="s">"nightscout-app:1337"</span>
+
+<span class="c1"># CRITICAL: Must be SHA7 hash of APL_SECRET!</span>
+<span class="w">      </span><span class="nt">NIGHTSCOUT_API_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="s">"[SHA1_HASH_OF_API_SECRET]"</span>
+
+<span class="w">      </span><span class="nt">NIGHTSCOUT_DISABLE_HTTPS</span><span class="p">:</span><span class="w"> </span><span class="s">"true"</span>
+<span class="w">      </span><span class="nt">LOG_LEVEL</span><span class="p">:</span><span class="w"> </span><span class="s">"info"</span>
+
+<span class="c1"># Update interval in minutes</span>
+<span class="w">      </span><span class="nt">LINK_UP_TIME_INTERVAL</span><span class="p">:</span><span class="w"> </span><span class="s">"1"</span>
+
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nightscout-net</span>
+<span class="w">    </span><span class="nt">mem_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128m</span>
+
+<span class="w">  </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nightscout-net</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bridge</span>
+</pre></div>
+</div>
+</section>
+<section id="installation-script">
+<h3>5. Installation Script<a class="headerlink" href="#installation-script" title="Link to this heading"></a></h3>
+<p>Save this as <code class="docutils literal notranslate"><span class="pre">install_nightscout.sh</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Nightscout DS220+ Installer</span>
+
+<span class="c1"># Tested and working configuration</span>
+
+<span class="nv">BASE_DIR</span><span class="o">=</span><span class="s2">"/volume1/docker/nightscout"</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"============================================"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Nightscout DS220+ Installer"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"============================================"</span>
+
+<span class="c1"># Check root</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$EUID</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Please run as root: sudo </span><span class="nv">$0</span><span class="s2">"</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Cleanup old installations</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Step 1: Cleaning up old containers..."</span>
+docker<span class="w"> </span>stop<span class="w"> </span>nightscout-app<span class="w"> </span>nightscout-mongodb<span class="w"> </span>nightscout-librelink-up<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>nightscout-app<span class="w"> </span>nightscout-mongodb<span class="w"> </span>nightscout-librelink-up<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+docker<span class="w"> </span>network<span class="w"> </span>rm<span class="w"> </span>nightscout-net<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># Create directory</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Step 2: Creating directory structure..."</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$BASE_DIR</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$BASE_DIR</span>
+
+<span class="c1"># IMPORTANT. Generate SHA1 hash of your API_SECRET</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Step 3: Generating API token hash..."</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span>“Enter<span class="w"> </span>your<span class="w"> </span>API_SECRET:<span class="w"> </span><span class="s2">" API_SECRET</span>
+<span class="s2">APILHASH=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"</span><span class="nv">$API_SECRET</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>shalsum<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">' '</span><span class="w"> </span>-f1<span class="k">)</span>
+<span class="s2">echo "</span>SHA1<span class="w"> </span>hash:<span class="w"> </span><span class="nv">$API_HASH</span><span class="s2">"</span>
+<span class="s2">echo "</span>Save<span class="w"> </span>this<span class="w"> </span><span class="nb">hash</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>docker-compose.yml!<span class="s2">"</span>
+
+<span class="s2"># Create docker-compose.yml</span>
+<span class="s2">echo "</span>Step<span class="w"> </span><span class="m">4</span>:<span class="w"> </span>Creating<span class="w"> </span>docker-compose.ymil...<span class="s2">"</span>
+<span class="s2">echo "</span>Please<span class="w"> </span>edit<span class="w"> </span>docker-compose.yml<span class="w"> </span>and<span class="w"> </span>add:<span class="s2">"</span>
+<span class="s2">echo "</span><span class="w"> </span>-<span class="w"> </span>Your<span class="w"> </span>MongoDB<span class="w"> </span>password<span class="s2">"</span>
+<span class="s2">echo "</span><span class="w"> </span>-<span class="w"> </span>Your<span class="w"> </span>API_SECRET<span class="s2">"</span>
+<span class="s2">echo"</span><span class="w"> </span>-<span class="w"> </span>SHA1<span class="w"> </span>hash:<span class="w"> </span><span class="nv">$API_HASH</span><span class="s2">"</span>
+<span class="s2">echo "</span><span class="w"> </span>-<span class="w"> </span>Your<span class="w"> </span>LibreView<span class="w"> </span>credentials<span class="s2">"</span>
+
+<span class="s2"># Start containers</span>
+<span class="s2">echo "</span>Step<span class="w"> </span><span class="m">5</span>:<span class="w"> </span>Starting<span class="w"> </span>containers...<span class="s2">"</span>
+<span class="s2">docker-compose up -d</span>
+
+
+<span class="s2">echo "</span>Installation<span class="w"> </span>complete!<span class="s2">"</span>
+<span class="s2">echo "</span>Wait<span class="w"> </span><span class="m">2</span>-3<span class="w"> </span>minutes,<span class="w"> </span><span class="k">then</span><span class="w"> </span>test:<span class="w"> </span>http://localhost:1337<span class="s2">"</span>
+</pre></div>
+</div>
+</section>
+<section id="common-pitfalls-solutions">
+<h3>6. Common Pitfalls &amp; Solutions<a class="headerlink" href="#common-pitfalls-solutions" title="Link to this heading"></a></h3>
+<p><strong>CRITICAL ISSUES THAT WILL BREAK YOUR SETUP:</strong></p>
+<section id="a-librelink-url-format">
+<h4>a) LibreLink URL Format<a class="headerlink" href="#a-librelink-url-format" title="Link to this heading"></a></h4>
+<p><strong>WRONG</strong>: Causes <code class="docutils literal notranslate"><span class="pre">getaddrinfo</span> <span class="pre">ENOTFOUND</span> <span class="pre">http</span></code> error.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">NIGHTSCOUT_URL</span><span class="p">:</span><span class="w"> </span><span class="s">"http://nightscout-app:1337"</span>
+</pre></div>
+</div>
+<p><strong>CORRECT</strong>: No protocol prefix</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">NIGHTSCOUT_URL</span><span class="p">:</span><span class="w"> </span><span class="s">"nightscout-app:1337"</span>
+</pre></div>
+</div>
+</section>
+<section id="b-api-token-format">
+<h4>b) API Token Format<a class="headerlink" href="#b-api-token-format" title="Link to this heading"></a></h4>
+<p>yaml</p>
+<p><strong>WRONG</strong>: Plain text <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">NIGHTSCOUT_API_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="s">"YourApiSecretHere"</span>
+</pre></div>
+</div>
+<p><strong>CORRECT</strong>: SHA1 hash of <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">NIGHTSCOUT_API_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="s">"756a5977a6d0b10d219a81c8b5d923a2fcf97f36"</span>
+</pre></div>
+</div>
+<p>To generate SHA1 hash:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"YourApiSecretHere"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>shat1sum<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">' '</span><span class="w"> </span>-f1
+</pre></div>
+</div>
+</section>
+<section id="c-mongodb-version">
+<h4>c) MongoDB Version<a class="headerlink" href="#c-mongodb-version" title="Link to this heading"></a></h4>
+<p><strong>WRONG</strong>: MongoDB 5.0+ requires AVX support</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo:latest</span>
+</pre></div>
+</div>
+<p><strong>CORRECT</strong>: MongoDB 3.6 works without AVX</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongo:3.6</span>
+</pre></div>
+</div>
+</section>
+<section id="d-docker-compose-cpu-limits">
+<h4>d) Docker Compose CPU Limits<a class="headerlink" href="#d-docker-compose-cpu-limits" title="Link to this heading"></a></h4>
+<p><strong>WRONG</strong>: Causes <code class="docutils literal notranslate"><span class="pre">NanoCPUs</span> <span class="pre">cannot</span> <span class="pre">be</span> <span class="pre">set</span></code> error</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">limits</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">cpus</span><span class="p">:</span><span class="w"> </span><span class="s">'0.5'</span><span class="w"> </span><span class="c1"># Kernel doesn't support this!</span>
+</pre></div>
+</div>
+<p><strong>CORRECT</strong>: use <code class="docutils literal notranslate"><span class="pre">mem_linit</span></code> only</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mem_limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400m</span><span class="w"> </span><span class="c1"># Only memory limits work</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="verification-steps">
+<h3>7. Verification Steps<a class="headerlink" href="#verification-steps" title="Link to this heading"></a></h3>
+<section id="a-check-container-status">
+<h4>a) Check Container Status<a class="headerlink" href="#a-check-container-status" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps<span class="w"> </span>--format<span class="w"> </span><span class="s2">"table {{.Names}}\t{{.Status}}"</span>
+</pre></div>
+</div>
+<p>All three containers should show “Up X minutes”</p>
+</section>
+<section id="b-test-nightscout-api">
+<h4>b) Test Nightscout API<a class="headerlink" href="#b-test-nightscout-api" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># First get your API_SECRET hash</span>
+<span class="nv">API_HASH</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"YOUR_API_SECRET"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha1sum<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">' '</span><span class="w"> </span>-f1<span class="k">)</span>
+
+<span class="c1"># Test your API</span>
+curl<span class="w"> </span>-H<span class="w"> </span>“api-secret:<span class="w"> </span><span class="nv">$API_HASH</span><span class="s2">" http://localhost:1337/api/v1/entries.json</span>
+</pre></div>
+</div>
+<p>Should return JSON data or empty array <code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
+</section>
+<section id="c-check-librelink-logs">
+<h4>c) Check LibreLink Logs<a class="headerlink" href="#c-check-librelink-logs" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>logs<span class="w"> </span>nightscout-librelink-up<span class="w"> </span>--tail<span class="w"> </span><span class="m">10</span>
+</pre></div>
+</div>
+<p>Look for: <code class="docutils literal notranslate"><span class="pre">Upload</span> <span class="pre">of</span> <span class="pre">X</span> <span class="pre">measurements</span> <span class="pre">to</span> <span class="pre">Nightscout</span> <span class="pre">succeeded</span></code></p>
+</section>
+<section id="d-monitor-resource-usage">
+<h4>d) Monitor Resource Usage<a class="headerlink" href="#d-monitor-resource-usage" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>stats<span class="w"> </span>--no-stream
+</pre></div>
+</div>
+<p>Ensure memory usage stays under 80%</p>
+</section>
+</section>
+<section id="maintenance">
+<h3>8. Maintenance<a class="headerlink" href="#maintenance" title="Link to this heading"></a></h3>
+<section id="daily-backup-script">
+<h4>Daily Backup Script<a class="headerlink" href="#daily-backup-script" title="Link to this heading"></a></h4>
+<p>Save as <code class="docutils literal notranslate"><span class="pre">/volume1/docker/nightscout/backup.sh</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nv">BACKUP_DIR</span><span class="o">=</span><span class="s2">"/volume1/docker/nightscout_backups"</span>
+<span class="nv">DATE</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span>
+
+<span class="c1"># Create backup directory</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$BACKUP_DIR</span>
+
+<span class="c1"># Export MongoDB data</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>nightscout-mongodb<span class="w"> </span>mongodump<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--username<span class="w"> </span>admin<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--password<span class="w"> </span><span class="o">[</span>YOUR_MONGO_PASSWORD<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--authenticationDatabase<span class="w"> </span>admin<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--archive<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$BACKUP_DIR</span>/mongo_<span class="nv">$DATE</span>.archive
+
+<span class="c1"># Backup docker-compose</span>
+cp<span class="w"> </span>/volume1/docker/nightscout/docker-compose.yml<span class="w"> </span><span class="nv">$BACKUP_DIR</span>/
+
+<span class="nb">echo</span><span class="w"> </span>“Backup<span class="w"> </span>completed:<span class="w"> </span><span class="nv">$BACKUP_DIR</span><span class="s2">"</span>
+</pre></div>
+</div>
+</section>
+<section id="useful-commands">
+<h4>Useful Commands<a class="headerlink" href="#useful-commands" title="Link to this heading"></a></h4>
+<p>Restart all services:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/volume1/docker/nightscout<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker-compose<span class="w"> </span>restart
+</pre></div>
+</div>
+<p>View real-time logs:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>nightscout-librelink-up
+</pre></div>
+</div>
+<p>Check Nightscout web interface:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:1337
+</pre></div>
+</div>
+<p>Emergency reset:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>down<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</pre></div>
+</div>
+</section>
+</section>
+<section id="synology-dsm-configuration">
+<h3>8. Synology DSM Configuration<a class="headerlink" href="#synology-dsm-configuration" title="Link to this heading"></a></h3>
+<section id="reverse-proxy-setup-for-https-access">
+<h4>Reverse Proxy Setup (for HTTPS access)<a class="headerlink" href="#reverse-proxy-setup-for-https-access" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Control Panel -&gt; Application Portal -&gt; Reverse Proxy</p></li>
+<li><p>Create new rule:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Source: HTTPS, your-domain.com, 443</p></li>
+<li><p>Destination: HTTP, localhost, 1337</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Custom Header -&gt; Create -&gt; WebSocket</p></li>
+<li><p>Save</p></li>
+</ol>
+</section>
+<section id="ssl-certificate">
+<h4>SSL Certificate<a class="headerlink" href="#ssl-certificate" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Control Panel — Security — Certificate</p></li>
+<li><p>Add — Get from Let’s Encrypt</p></li>
+<li><p>Enter your domain</p></li>
+<li><p>Apply</p></li>
+</ol>
+</section>
+<section id="success-indicators">
+<h4>Success Indicators<a class="headerlink" href="#success-indicators" title="Link to this heading"></a></h4>
+<p>Your installation is successful when:</p>
+<ul class="simple">
+<li><p>All containers show “Up” status</p></li>
+<li><p>LibreLink logs show “Upload succeeded”</p></li>
+<li><p>API returns glucose data</p></li>
+<li><p>Web interface shows real-time glucose values</p></li>
+<li><p>Memory usage stays stable under 400MB per container</p></li>
+</ul>
+</section>
+</section>
+<section id="credits-notes">
+<h3>Credits &amp; Notes<a class="headerlink" href="#credits-notes" title="Link to this heading"></a></h3>
+<p>This guide is based on extensive real-world troubleshooting on a production DS220+ system. The configuration has been tested and proven stable with:</p>
+<ul class="simple">
+<li><p>Continuous uptime of 30+ days</p></li>
+<li><p>Real-time updates every minute</p></li>
+<li><p>Automatic recovery from network interruptions</p></li>
+<li><p>Minimal resource usage</p></li>
+</ul>
+<section id="special-notes">
+<h4>Special Notes:<a class="headerlink" href="#special-notes" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>The DS220+ CPU limitations require specific workarounds
+MongoDB 3.6 is the last stable version for this hardware</p></li>
+<li><p>SHA1 hashing of <code class="docutils literal notranslate"><span class="pre">API_SECRET</span></code> is mandatory for LibreLink Bridge
+Never include <code class="docutils literal notranslate"><span class="pre">http://</span></code> in <code class="docutils literal notranslate"><span class="pre">NIGHTSCOUT_URL</span></code></p></li>
+</ul>
+</section>
+<section id="troubleshooting-checklist">
+<h4>Troubleshooting Checklist<a class="headerlink" href="#troubleshooting-checklist" title="Link to this heading"></a></h4>
+<p>If things don’t work:</p>
+<ol class="arabic simple">
+<li><p>ls MongoDB 3.6 (not newer)?</p></li>
+<li><p>Is <code class="docutils literal notranslate"><span class="pre">NIGHTSCOUT_URL</span></code> without <code class="docutils literal notranslate"><span class="pre">http://</span></code>?</p></li>
+<li><p>Is <code class="docutils literal notranslate"><span class="pre">API_TOKEN</span></code> a SHA1 hash?</p></li>
+<li><p>Are all containers on same network?</p></li>
+<li><p>No CPU limits in docker-compose?</p></li>
+<li><p>Port 1337 not blocked?</p></li>
+</ol>
+<p><em>Last updated: September 2025 Tested on: Synology DS220+ with DSM 7.2 Working with: Nightscout 15.x, MongoDB 3.6, LibreLink Bridge 2.8</em></p>
+</br>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, #WeAreNotWaiting.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+code.literal {
+    color: #000000 !important;
+    background-color: #d3d3d3 !important;
+    font-size: 100%;
+}
+
+code {
+  white-space : pre-wrap !important;
+}
