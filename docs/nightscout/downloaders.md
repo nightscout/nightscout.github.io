@@ -95,6 +95,16 @@ Real-time glucose from Nightscout on Android and Wear OS, with home screen widge
 
 </br>
 
+### [CarbTrack](https://carbtrack.app/?utm_source=nightscout_docs&utm_medium=referral)
+
+<img src="/nightscout/img/IconPhone.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
+
+Meal logging app that reads glucose from Nightscout (read-only, entries only) and shows what each meal did to your glucose: baseline, peak, time to peak and total rise. Carbs can be estimated from a meal photo and edited. Not a medical device and gives no dosing advice. Available on [Google Play](https://play.google.com/store/apps/details?id=com.kouidev.carbtrack). Enter your Nightscout URL and, for a protected site, your API secret in Settings → Connected Devices.
+
+<img src="https://carbtrack.app/assets/meal-impact.webp" width="150px" />
+
+</br>
+
 ### [Nightwatch](https://github.com/StephenBlackWasAlreadyTaken/NightWatch/releases) (legacy)
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />
@@ -213,6 +223,16 @@ Commercial app: add Nightscout as a data source and type your Nightscout URL.
 Real-time glucose from Nightscout on iPhone and Apple Watch, with widgets, alerts and family following. [Download on the App Store](https://apps.apple.com/app/id6737151615), [setup guide](https://sugarsense.io/nightscout-troubleshooting).
 
 <img src="https://sugarsense.io/wp-content/uploads/2026/08/sugarsense-nightscout-ios.png" width="350px" />
+
+</br>
+
+### [CarbTrack](https://carbtrack.app/?utm_source=nightscout_docs&utm_medium=referral)
+
+<img src="/nightscout/img/IconPhone.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
+
+Meal logging app that reads glucose from Nightscout (read-only, entries only) and shows what each meal did to your glucose: baseline, peak, time to peak and total rise. Carbs can be estimated from a meal photo and edited. Not a medical device and gives no dosing advice. Available on the [App Store](https://apps.apple.com/us/app/carbtrack-glucose-tracker/id6768087854). Enter your Nightscout URL and, for a protected site, your API secret in Settings → Connected Devices.
+
+<img src="https://carbtrack.app/assets/meal-impact.webp" width="150px" />
 
 </br>
 
