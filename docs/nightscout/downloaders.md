@@ -220,7 +220,7 @@ Real-time glucose from Nightscout on iPhone and Apple Watch, with widgets, alert
 
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" />   <img src="/nightscout/img/LockOK.png" width="25px" />
 
-Glide keeps track of your repeated meals, so the next time you eat the exact same pizza, you know what pre-bolus worked last time. Live Activity, a phone call at night, photo carb estimates and family following. Free to download, with a subscription for the extras. [Setup guide](https://glidebg.com/nightscout).
+Glide shows a Nightscout site on iPhone and Apple Watch, with widgets, a Live Activity, alerts, family following and a free phone call at night on a low or when readings stop. It also keeps each meal next to the readings that followed. Free to download, with a subscription for the extras. [Setup guide](https://glidebg.com/nightscout).
 
 <img src="/nightscout/img/Follower13.png" width="150px" />
 
