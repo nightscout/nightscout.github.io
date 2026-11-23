@@ -111,7 +111,7 @@ Fly.io proposed a simple migration wizard from Heroku and you can create your ne
 * Reliable platform  
 
 **Cons**:  
-* **Free plan has been removed**  
+* Free plan for personal orgs ($5 of usage per month, credit card required) is enough for a Nightscout site  
 * **Maintaining your site requires the use of command line instructions, not very intuitive** 
 * **Doesn't include a database**  
 

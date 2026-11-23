@@ -17,10 +17,10 @@ Consider a hosted Nightscout service! Check for easier solutions [here](/index.m
 You can create your new Nightscout site in Fly.io.
 
 **Pros**:  
-* None  
+* Free plan for personal orgs: $5 of usage per month, enough for a Nightscout site  
 
 **Cons**:  
-* The Hobby free tier has been removed to pay-as-you-go
+* A credit card is required, even for the Free plan
 * **Maintaining your site requires the use of command line instructions, not very intuitive**  
 * Fly.io stores variables as secrets: you cannot read them  
 * Relying on the MongoDB Atlas database
@@ -61,7 +61,7 @@ Whenever requested, add one to prove you're a real person:
 
 </br>
 
-Nightscout will run on the smallest available machine below 5$ per month.
+Fly.io offers a Free plan for personal orgs with $5 of usage per month (up to 3 machines). Nightscout will run on the smallest available machine, well within this limit.
 
 See the pricing [here](https://fly.io/calculator?m=0_0_0_0_0&f=s&a=no_none&b=ams.100&r=shared_0_1_ams&t=10_100_5&u=0_1_100&g=1_shared_730_1_256_ams_0_0).
 
@@ -132,7 +132,7 @@ f) In services set the port to `1337`.
 
 </br>
 
-g) Make sure to select a `shared CPU 1x` with only `256MB` of memory to remain within the [free allowances](https://fly.io/docs/about/pricing/#free-allowances) limits.
+g) Make sure to select a `shared CPU 1x` with only `256MB` of memory to remain within the [Free plan](https://fly.io/docs/about/pricing/) limits.
 
 <img src="/vendors/fly.io/img/FlyIO11.png" width="600px" />
 

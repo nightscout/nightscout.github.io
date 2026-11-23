@@ -48,9 +48,9 @@ Northflank is also an option, simple of use and offering a migration utility. An
 
 ## **Fly.io**
 
-***Fly.io doesn't offers a free tier anymore and if you don't like typing commands on your computer you'll short be facing a hard stop.***
+***Fly.io offers a Free plan again for personal orgs ($5 of usage per month) but if you don't like typing commands on your computer you'll short be facing a hard stop.***
 
-Fly.io was immediately popular due to the ease of migration from Heroku (the migration wizard has been removed). Obviously the Hobby free tier was eventually abandoned to pay-as-you-go Now, if you want to maintain your site you'll have to use command line instructions in the web terminal. Technically, it is a good solution.
+Fly.io was immediately popular due to the ease of migration from Heroku (the migration wizard has been removed). The Hobby free tier was abandoned to pay-as-you-go, but a Free plan with $5 of monthly usage returned in November 2026. Still, if you want to maintain your site you'll have to use command line instructions in the web terminal. Technically, it is a good solution.
 
 ## [**Oracle Cloud**](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)
 
