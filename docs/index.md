@@ -148,71 +148,23 @@ Support: **_support_** at **_ns.10be.de_** or [https://10be.de/en/contact.html](
 
 Founded in 2022 by **Andy Low** - A type 1 diabetic web developer from Scotland, UK. Nightscout Pro offers a completely 'hands-off' approach to Nightscout hosting, meaning all you need to do is subscribe via the website, and your Nightscout site will be created for you, with little to no configuration needed. Your site will be set up in a 'default' configuration, which can be modified easily from their admin panel. Nightscout Pro offers full access to all Nightscout features, and you can get **support** via [Email](mailto:support@nightscoutpro.com), [Facebook](https://www.facebook.com/nightscoutpro) or [Discord](https://discord.gg/7hYrkqVavU).
 
-### [Serendipity Bio](https://serendipitybio.com)
+### Other providers (non-exhaustive list)
 
-[Pricing information.](https://serendipitybio.com/pricing)
+#### [Nightscout4u](https://www.nightscout4u.com)
 
-Serendipity provides instant deployment of Nightscout, literally.
-[Create](https://serendipitybio.com/pricing) your account and we'll launch your Nightscout server, launch your Mongo database and provide you a secure, shareable URL.
+#### [Serendipity Bio](https://serendipitybio.com)
 
-Never worry about Database size, reliability of your server and upgrading versions. Serendipity Bio fully manages your Nightscout server and database. Nightscout is configured for you automatically on start. Once launched you can use our UI to change your settings to your liking!
+#### [Nightscout-easy](https://www.nightscout-easy.ru)
 
-Find support documents [here](https://support.serendipitybio.com/) or [email](mailto:support@serendipitybio.com) us any time!
+#### [Opensource.clinic](https://www.opensource.clinic)
 
-Concerned about reliability or sustainability? Serendipity Bio is built using Amazon Web Services, which also hosts all your favorite websites like Netflix, Apple, AirBnB, and ESPN.
+#### [diab.ninja](https://diab.ninja)
 
-### [Nightscout4u](https://www.nightscout4u.com)
+#### [Nightscout Host](https://www.nightscout.host)
 
-[Pricing information.](https://www.nightscout4u.com/)
+#### [Dia.best](https://nightscout.dia.best/)
 
-Started its service in 2023 and offers a simple one-click hosted Nightscout service solution. It is possible to create and use multiple Nightscout instances with one account.
-
-The service is suitable for beginners to make their first steps and get used to Nightscout.
-
-### [Nightscout-easy](https://www.nightscout-easy.ru)
-
-[Pricing information.](https://nightscout-easy.ru/)
-
-Built by true enthusiasts who deeply understand the challenges faced by those using Nightscout. This understanding ensures that the service meets all user needs, providing a comfortable and convenient experience.
-
-Simple and intuitive control panel, automatic data backups, easy import and export of Nightscout data, option to choose between old and new versions of Nightscout, user-friendly interface for managing variables, detailed setup videos for xDrip and AndroidAPS, friendly tech support, always ready to help
-
-### [Opensource.clinic](https://www.opensource.clinic)
-
-[Pricing information.](https://www.opensource.clinic/pricing)
-
-Founded in 2024 by a medical doctor in the Netherlands, Opensource.clinic is dedicated to simplifying diabetes management through a reliable and user-friendly platform. Combining technical and medical expertise, the organization provides a fully supported hosted solution for Nightscout.
-
-Choosing Opensource.clinic offers several benefits: a quick setup with Nightscout typically ready within 1 to 2 hours, a 24/7 WhatsApp Helpdesk for both technical and medical questions, Nightscout servers hosted in NEN7510-certified data centers, payment via credit card or Google Pay, data import/export support, automatic backups, and a user-friendly personal dashboard for configuring Nightscout variables and analyzing your diabetes data.
-
-Higher-tier subscriptions offer personalized coaching from a dedicated team of healthcare and IT professionals experienced or trained in DIY looping. The support team is located across various time zones, ensuring round-the-clock assistance, and is currently available in English and Dutch. Please visit our [website](https://www.opensource.clinic/pricing) or contact us via [email](mailto:info@opensource.clinic) if you have any questions.
-
-### [diab.ninja](https://diab.ninja)
-
-[Pricing information](https://diab.ninja/en/#pricing)
-
-Launched in 2023 by **Michal Terbert**, a member of the Polish diabetes community and father of a child with Type 1 diabetes, diab.ninja is a platform designed to simplify the process of running and maintaining a Nightscout instance. The service removes most of the technical barriers typically associated with Nightscout setup and management.
-
-With diab.ninja, users can quickly deploy their own Nightscout environment and manage it through a dedicated web panel. The platform handles the infrastructure and deployment, allowing users to focus on their glucose data instead of server configuration.
-
-The platform is available in three language versions: Polish, English, and German (PL/EN/DE). In addition to hosting and management features, diab.ninja includes advanced modules for glucose data analysis, allowing users to generate glycemia reports and configure alerts based on Nightscout data.
-
-Support is available via email [email](mailto:kontakt@diab.ninja) or through the built-in ticketing system available in the user panel. The project continues to evolve with the goal of making Nightscout easier to use while providing more tools for understanding glucose trends.
 </br>
-
-### [Nightscout Host](https://www.nightscout.host)
-
-[Pricing information](https://www.nightscout.host/#pricing)
-
-Nightscout Host believes the internet already has enough 1-click, instant, unlimited services. What it doesn’t have enough of is something more personal.
-
-Fredrik — a Swedish senior software engineer and dad of a T1D daughter — reviews every signup personally and tests everything before handing it over. You don’t get a Nightscout in 60 seconds. You get one that actually works for you.
-
-Solution built for low-CO₂ impact. The good engineering came free. Instances across 6 regions in Europe and North America, CDN tweaked and located even closer to you for good, reliable performance.
-
-Direct support. No ticket queue.
-
-Contact: [say-hej@nightscout.host](mailto:say-hej@nightscout.host)
 
 ## How to Use These Docs
 

@@ -49,16 +49,6 @@ Facebook group [AndroidAPS Users](https://www.facebook.com/groups/AndroidAPSUser
 
 </br>
 
-### [Enhance-d : The Diabetes and Exercise App](https://www.enhance-d.com/app/download/)
-
-<img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockNO.png" width="25px" />
-
-Commercial app combining diabetes and exercise data, pulling glucose and carbohydrates from Nightscout. Available on [Google Play](https://play.google.com/store/apps/details?id=com.sestanteanalyticsag.enhancedv1) and the [App Store](https://apps.apple.com/us/app/enhance-d-diabetes-exercise/id6497331467).
-
-<img src="/nightscout/img/Enhance-d.png" width="150px" />
-
-</br>
-
 ### [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler)
 
 Available in [Google Play store](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler).
@@ -82,16 +72,6 @@ Receives glucose, IOB and COB values from **Nightscout** (pebble interface).
 Monitor your Nightscout glucose levels at night: dark UI, large readings and buttons.
 
 <img src="/nightscout/img/Follower10.png" width="150px" />
-
-</br>
-
-### [Sugar Sense](https://sugarsense.io)
-
-<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />       <img src="/nightscout/img/LockOK.png" width="25px" />
-
-Real-time glucose from Nightscout on Android and Wear OS, with home screen widgets, alerts and family following. [Get it on Google Play](https://play.google.com/store/apps/details?id=io.sugarsense.app), [setup guide](https://sugarsense.io/nightscout-troubleshooting).
-
-<img src="https://sugarsense.io/wp-content/uploads/2026/08/sugarsense-nightscout-android.png" width="350px" />
 
 </br>
 
@@ -195,24 +175,6 @@ Commercial app: add Nightscout as a data source and type your Nightscout URL.
 <img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
 
 <img src="/nightscout/img/Follower08.png" width="150px" />
-
-</br>
-
-### [Gluco-Tracker](https://apps.apple.com/it/app/gluco-tracker/id1526976290)
-
-<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />	<img src="/nightscout/img/LockOK.png" width="25px" />
-
-<img src="/nightscout/img/Follower09.png" width="150px" />
-
-</br>
-
-### [Sugar Sense](https://sugarsense.io)
-
-<img src="/nightscout/img/IconSW.png" width="25px" /><img src="/nightscout/img/IconPhone.png" width="25px" /><img src="/nightscout/img/IconTablet.png" width="25px" />       <img src="/nightscout/img/LockOK.png" width="25px" />
-
-Real-time glucose from Nightscout on iPhone and Apple Watch, with widgets, alerts and family following. [Download on the App Store](https://apps.apple.com/app/id6737151615), [setup guide](https://sugarsense.io/nightscout-troubleshooting).
-
-<img src="https://sugarsense.io/wp-content/uploads/2026/08/sugarsense-nightscout-ios.png" width="350px" />
 
 </br>
 
