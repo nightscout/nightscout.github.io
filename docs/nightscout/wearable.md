@@ -115,7 +115,7 @@ These watches are obsolete. If you still own one, an xDrip widget by Klaus3d3 is
 
 </br>
 
-## Xiaomi Mi Band & Amazfit (WatchDrip+)
+## Xiaomi Mi Band & Amazfit
 
 [WatchDrip+](https://watchdrip.org/) by Artem (bigdigital) is a companion app to [xDrip](https://github.com/NightscoutFoundation/xDrip/releases): it pushes glucose, delta, trend and treatment data to Xiaomi and Amazfit watches as soon as a new reading arrives. It can also get its data from AndroidAPS. See [Artem's blog](https://bigdigital.home.blog/) for setup instructions and the [GitHub repository](https://github.com/bigdigital/watchdrip) for downloads.
 
@@ -128,6 +128,8 @@ Currently supported devices:
 Check [watchdrip.org](https://watchdrip.org/) for the up-to-date device list.
 
 [GlucoDataHandler](#glucodatahandler) is an open source alternative also supporting Mi Band and Amazfit watches.
+
+[ZightScout](https://github.com/marcioamaro/ZightScout) by Marcio Amaro is a Zepp OS 3.0+ app reading glucose directly from your Nightscout site, with trend arrows, delta and vibration alerts. Install it from the App Store in the Zepp app ([Android](https://play.google.com/store/apps/details?id=com.huami.watch.hmwatchmanager), [iOS](https://apps.apple.com/app/zepp/id1127269366)) on your phone (Profile → Your Device → App Store). Check the [GitHub repository](https://github.com/marcioamaro/ZightScout#models-english) for the supported Amazfit models.
 
 </br>
 
